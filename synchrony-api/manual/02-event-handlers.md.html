@@ -1,0 +1,3097 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Synchrony modding API documentation</title>
+    <link rel="stylesheet" href="../ldoc_new.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Synchrony</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+
+
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/00-readme.md.html">00-readme</a></li>
+  <li><a href="../manual/01-events.md.html">01-events</a></li>
+  <li><strong>02-event-handlers</strong></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
+  <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
+  <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
+  <li><a href="../modules/necro.audio.Sound.html">necro.audio.Sound</a></li>
+  <li><a href="../modules/necro.audio.SoundGroups.html">necro.audio.SoundGroups</a></li>
+  <li><a href="../modules/necro.audio.TimeScale.html">necro.audio.TimeScale</a></li>
+  <li><a href="../modules/necro.audio.Voice.html">necro.audio.Voice</a></li>
+  <li><a href="../modules/necro.client.Chat.html">necro.client.Chat</a></li>
+  <li><a href="../modules/necro.client.ClientActionBuffer.html">necro.client.ClientActionBuffer</a></li>
+  <li><a href="../modules/necro.client.ClientEvents.html">necro.client.ClientEvents</a></li>
+  <li><a href="../modules/necro.client.FastForward.html">necro.client.FastForward</a></li>
+  <li><a href="../modules/necro.client.GameClient.html">necro.client.GameClient</a></li>
+  <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
+  <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
+  <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
+  <li><a href="../modules/necro.client.LevelTransition.html">necro.client.LevelTransition</a></li>
+  <li><a href="../modules/necro.client.Lobby.html">necro.client.Lobby</a></li>
+  <li><a href="../modules/necro.client.LocalCoop.html">necro.client.LocalCoop</a></li>
+  <li><a href="../modules/necro.client.NetClock.html">necro.client.NetClock</a></li>
+  <li><a href="../modules/necro.client.PlayerList.html">necro.client.PlayerList</a></li>
+  <li><a href="../modules/necro.client.Resources.html">necro.client.Resources</a></li>
+  <li><a href="../modules/necro.client.Rollback.html">necro.client.Rollback</a></li>
+  <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
+  <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
+  <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
+  <li><a href="../modules/necro.client.TurnSync.html">necro.client.TurnSync</a></li>
+  <li><a href="../modules/necro.client.TurnSyncRequest.html">necro.client.TurnSyncRequest</a></li>
+  <li><a href="../modules/necro.config.Config.html">necro.config.Config</a></li>
+  <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
+  <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
+  <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
+  <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
+  <li><a href="../modules/necro.cycles.Turn.html">necro.cycles.Turn</a></li>
+  <li><a href="../modules/necro.debug.Debug.html">necro.debug.Debug</a></li>
+  <li><a href="../modules/necro.debug.DebugDrawUtils.html">necro.debug.DebugDrawUtils</a></li>
+  <li><a href="../modules/necro.debug.DebugEval.html">necro.debug.DebugEval</a></li>
+  <li><a href="../modules/necro.debug.DebugVisuals.html">necro.debug.DebugVisuals</a></li>
+  <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
+  <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
+  <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
+  <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
+  <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
+  <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
+  <li><a href="../modules/necro.game.character.Descent.html">necro.game.character.Descent</a></li>
+  <li><a href="../modules/necro.game.character.Freeze.html">necro.game.character.Freeze</a></li>
+  <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
+  <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
+  <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
+  <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
+  <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
+  <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
+  <li><a href="../modules/necro.game.character.Team.html">necro.game.character.Team</a></li>
+  <li><a href="../modules/necro.game.character.Tickle.html">necro.game.character.Tickle</a></li>
+  <li><a href="../modules/necro.game.character.Trample.html">necro.game.character.Trample</a></li>
+  <li><a href="../modules/necro.game.data.Components.html">necro.game.data.Components</a></li>
+  <li><a href="../modules/necro.game.data.ContentLoader.html">necro.game.data.ContentLoader</a></li>
+  <li><a href="../modules/necro.game.data.CustomEntities.html">necro.game.data.CustomEntities</a></li>
+  <li><a href="../modules/necro.game.data.DungeonXMLLoader.html">necro.game.data.DungeonXMLLoader</a></li>
+  <li><a href="../modules/necro.game.data.EntityGenerator.html">necro.game.data.EntityGenerator</a></li>
+  <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
+  <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
+  <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
+  <li><a href="../modules/necro.game.data.LegacyCustomEntities.html">necro.game.data.LegacyCustomEntities</a></li>
+  <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
+  <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
+  <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
+  <li><a href="../modules/necro.game.data.core.PriceTagEntity.html">necro.game.data.core.PriceTagEntity</a></li>
+  <li><a href="../modules/necro.game.data.enemy.CommonEnemy.html">necro.game.data.enemy.CommonEnemy</a></li>
+  <li><a href="../modules/necro.game.data.item.CommonItem.html">necro.game.data.item.CommonItem</a></li>
+  <li><a href="../modules/necro.game.data.item.weapon.CommonWeapon.html">necro.game.data.item.weapon.CommonWeapon</a></li>
+  <li><a href="../modules/necro.game.data.spell.CommonSpell.html">necro.game.data.spell.CommonSpell</a></li>
+  <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
+  <li><a href="../modules/necro.game.enemy.Targeting.html">necro.game.enemy.Targeting</a></li>
+  <li><a href="../modules/necro.game.enemy.Tombstone.html">necro.game.enemy.Tombstone</a></li>
+  <li><a href="../modules/necro.game.enemy.ai.AI.html">necro.game.enemy.ai.AI</a></li>
+  <li><a href="../modules/necro.game.item.ActionItem.html">necro.game.item.ActionItem</a></li>
+  <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
+  <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
+  <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
+  <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
+  <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
+  <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
+  <li><a href="../modules/necro.game.level.LevelGenerator.html">necro.game.level.LevelGenerator</a></li>
+  <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
+  <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
+  <li><a href="../modules/necro.game.level.TestLevel.html">necro.game.level.TestLevel</a></li>
+  <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
+  <li><a href="../modules/necro.game.object.LightSource.html">necro.game.object.LightSource</a></li>
+  <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
+  <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
+  <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
+  <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
+  <li><a href="../modules/necro.game.object.RowMap.html">necro.game.object.RowMap</a></li>
+  <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
+  <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
+  <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
+  <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
+  <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
+  <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
+  <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
+  <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
+  <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
+  <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
+  <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
+  <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
+  <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
+  <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
+  <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
+  <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
+  <li><a href="../modules/necro.game.tile.DigMultiHit.html">necro.game.tile.DigMultiHit</a></li>
+  <li><a href="../modules/necro.game.tile.LevelExit.html">necro.game.tile.LevelExit</a></li>
+  <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
+  <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
+  <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
+  <li><a href="../modules/necro.game.tile.Sink.html">necro.game.tile.Sink</a></li>
+  <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
+  <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
+  <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
+  <li><a href="../modules/necro.game.tile.Vision.html">necro.game.tile.Vision</a></li>
+  <li><a href="../modules/necro.game.tile.WallLights.html">necro.game.tile.WallLights</a></li>
+  <li><a href="../modules/necro.game.trap.Trap.html">necro.game.trap.Trap</a></li>
+  <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
+  <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
+  <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
+  <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
+  <li><a href="../modules/necro.network.Netplay.html">necro.network.Netplay</a></li>
+  <li><a href="../modules/necro.render.AnimationTimer.html">necro.render.AnimationTimer</a></li>
+  <li><a href="../modules/necro.render.Camera.html">necro.render.Camera</a></li>
+  <li><a href="../modules/necro.render.CropImage.html">necro.render.CropImage</a></li>
+  <li><a href="../modules/necro.render.Overlay.html">necro.render.Overlay</a></li>
+  <li><a href="../modules/necro.render.Render.html">necro.render.Render</a></li>
+  <li><a href="../modules/necro.render.ScreenShake.html">necro.render.ScreenShake</a></li>
+  <li><a href="../modules/necro.render.UI.html">necro.render.UI</a></li>
+  <li><a href="../modules/necro.render.hud.BeatBarHUD.html">necro.render.hud.BeatBarHUD</a></li>
+  <li><a href="../modules/necro.render.hud.HUD.html">necro.render.hud.HUD</a></li>
+  <li><a href="../modules/necro.render.hud.HUDLayout.html">necro.render.hud.HUDLayout</a></li>
+  <li><a href="../modules/necro.render.hud.HeartbeatHUD.html">necro.render.hud.HeartbeatHUD</a></li>
+  <li><a href="../modules/necro.render.hud.inventory.InventoryHUD.html">necro.render.hud.inventory.InventoryHUD</a></li>
+  <li><a href="../modules/necro.render.level.Animations.html">necro.render.level.Animations</a></li>
+  <li><a href="../modules/necro.render.level.EquipmentSprite.html">necro.render.level.EquipmentSprite</a></li>
+  <li><a href="../modules/necro.render.level.FloorVisuals.html">necro.render.level.FloorVisuals</a></li>
+  <li><a href="../modules/necro.render.level.MoveAnimations.html">necro.render.level.MoveAnimations</a></li>
+  <li><a href="../modules/necro.render.level.ObjectRenderer.html">necro.render.level.ObjectRenderer</a></li>
+  <li><a href="../modules/necro.render.level.SpriteEffects.html">necro.render.level.SpriteEffects</a></li>
+  <li><a href="../modules/necro.render.level.TileRenderer.html">necro.render.level.TileRenderer</a></li>
+  <li><a href="../modules/necro.render.level.WallVisuals.html">necro.render.level.WallVisuals</a></li>
+  <li><a href="../modules/necro.server.GameServer.html">necro.server.GameServer</a></li>
+  <li><a href="../modules/necro.server.ServerActionBuffer.html">necro.server.ServerActionBuffer</a></li>
+  <li><a href="../modules/necro.server.ServerChat.html">necro.server.ServerChat</a></li>
+  <li><a href="../modules/necro.server.ServerClock.html">necro.server.ServerClock</a></li>
+  <li><a href="../modules/necro.server.ServerEvents.html">necro.server.ServerEvents</a></li>
+  <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
+  <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
+  <li><a href="../modules/necro.server.ServerPlayerList.html">necro.server.ServerPlayerList</a></li>
+  <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
+  <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
+  <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
+  <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
+  <li><a href="../modules/necro.server.ServerTurnSync.html">necro.server.ServerTurnSync</a></li>
+  <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
+  <li><a href="../modules/system.accel.Vision.html">system.accel.Vision</a></li>
+  <li><a href="../modules/system.debug.EntityDebug.html">system.debug.EntityDebug</a></li>
+  <li><a href="../modules/system.debug.ErrorHandler.html">system.debug.ErrorHandler</a></li>
+  <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
+  <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
+  <li><a href="../modules/system.debug.StackTrace.html">system.debug.StackTrace</a></li>
+  <li><a href="../modules/system.debug.StackTraceRules.html">system.debug.StackTraceRules</a></li>
+  <li><a href="../modules/system.events.AbstractSelector.html">system.events.AbstractSelector</a></li>
+  <li><a href="../modules/system.events.EntitySelector.html">system.events.EntitySelector</a></li>
+  <li><a href="../modules/system.events.EnumSelector.html">system.events.EnumSelector</a></li>
+  <li><a href="../modules/system.events.Events.html">system.events.Events</a></li>
+  <li><a href="../modules/system.events.MetaEvents.html">system.events.MetaEvents</a></li>
+  <li><a href="../modules/system.events.OrderedSelector.html">system.events.OrderedSelector</a></li>
+  <li><a href="../modules/system.game.Audio.html">system.game.Audio</a></li>
+  <li><a href="../modules/system.game.Bitmap.html">system.game.Bitmap</a></li>
+  <li><a href="../modules/system.game.Config.html">system.game.Config</a></li>
+  <li><a href="../modules/system.game.Entities.html">system.game.Entities</a></li>
+  <li><a href="../modules/system.game.EntitySchema.html">system.game.EntitySchema</a></li>
+  <li><a href="../modules/system.game.FileIO.html">system.game.FileIO</a></li>
+  <li><a href="../modules/system.game.Framebuffer.html">system.game.Framebuffer</a></li>
+  <li><a href="../modules/system.game.Graphics.html">system.game.Graphics</a></li>
+  <li><a href="../modules/system.game.Input.html">system.game.Input</a></li>
+  <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
+  <li><a href="../modules/system.game.Snapshots.html">system.game.Snapshots</a></li>
+  <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
+  <li><a href="../modules/system.game.Window.html">system.game.Window</a></li>
+  <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
+  <li><a href="../modules/system.mod.AssetSubstitutor.html">system.mod.AssetSubstitutor</a></li>
+  <li><a href="../modules/system.mod.ModLoader.html">system.mod.ModLoader</a></li>
+  <li><a href="../modules/system.mod.ScriptMetaInfo.html">system.mod.ScriptMetaInfo</a></li>
+  <li><a href="../modules/system.network.Client.html">system.network.Client</a></li>
+  <li><a href="../modules/system.network.Common.html">system.network.Common</a></li>
+  <li><a href="../modules/system.network.LocalTunnel.html">system.network.LocalTunnel</a></li>
+  <li><a href="../modules/system.network.ReliableHandler.html">system.network.ReliableHandler</a></li>
+  <li><a href="../modules/system.network.Server.html">system.network.Server</a></li>
+  <li><a href="../modules/system.utils.Array.html">system.utils.Array</a></li>
+  <li><a href="../modules/system.utils.BitUtilities.html">system.utils.BitUtilities</a></li>
+  <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
+  <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
+  <li><a href="../modules/system.utils.ListMerge.html">system.utils.ListMerge</a></li>
+  <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
+  <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
+  <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
+  <li><a href="../modules/system.utils.Timer.html">system.utils.Timer</a></li>
+  <li><a href="../modules/system.utils.Utilities.html">system.utils.Utilities</a></li>
+  <li><a href="../modules/system.utils.serial.LTN.html">system.utils.serial.LTN</a></li>
+  <li><a href="../modules/system.utils.serial.Serialization.html">system.utils.serial.Serialization</a></li>
+  <li><a href="../modules/system.utils.serial.Zlib.html">system.utils.serial.Zlib</a></li>
+</ul>
+<h2>Components</h2>
+<ul class="nowrap">
+  <li><a href="../components/MusicComponents.html">MusicComponents</a></li>
+  <li><a href="../components/RhythmComponents.html">RhythmComponents</a></li>
+  <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
+  <li><a href="../components/VoiceComponents.html">VoiceComponents</a></li>
+  <li><a href="../components/AIComponents.html">AIComponents</a></li>
+  <li><a href="../components/ActivationComponents.html">ActivationComponents</a></li>
+  <li><a href="../components/ApparitionComponents.html">ApparitionComponents</a></li>
+  <li><a href="../components/AttackComponents.html">AttackComponents</a></li>
+  <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
+  <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
+  <li><a href="../components/ConfusionComponents.html">ConfusionComponents</a></li>
+  <li><a href="../components/FreezeComponents.html">FreezeComponents</a></li>
+  <li><a href="../components/GrabComponents.html">GrabComponents</a></li>
+  <li><a href="../components/GrooveChainComponents.html">GrooveChainComponents</a></li>
+  <li><a href="../components/HealthComponents.html">HealthComponents</a></li>
+  <li><a href="../components/MoveOverrideComponents.html">MoveOverrideComponents</a></li>
+  <li><a href="../components/ParryComponents.html">ParryComponents</a></li>
+  <li><a href="../components/PerspectiveComponents.html">PerspectiveComponents</a></li>
+  <li><a href="../components/ProvokableComponents.html">ProvokableComponents</a></li>
+  <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
+  <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
+  <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
+  <li><a href="../components/TickleComponents.html">TickleComponents</a></li>
+  <li><a href="../components/TrampleComponents.html">TrampleComponents</a></li>
+  <li><a href="../components/CollisionComponents.html">CollisionComponents</a></li>
+  <li><a href="../components/CoreComponents.html">CoreComponents</a></li>
+  <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
+  <li><a href="../components/PositionComponents.html">PositionComponents</a></li>
+  <li><a href="../components/TileInteractionComponents.html">TileInteractionComponents</a></li>
+  <li><a href="../components/TileTransformationComponents.html">TileTransformationComponents</a></li>
+  <li><a href="../components/XMLMappingComponents.html">XMLMappingComponents</a></li>
+  <li><a href="../components/AnimationComponents.html">AnimationComponents</a></li>
+  <li><a href="../components/CharacterSpriteComponents.html">CharacterSpriteComponents</a></li>
+  <li><a href="../components/EffectComponents.html">EffectComponents</a></li>
+  <li><a href="../components/EquipmentSpriteComponents.html">EquipmentSpriteComponents</a></li>
+  <li><a href="../components/MinimapComponents.html">MinimapComponents</a></li>
+  <li><a href="../components/ParticleComponents.html">ParticleComponents</a></li>
+  <li><a href="../components/SpellEffectComponents.html">SpellEffectComponents</a></li>
+  <li><a href="../components/SpriteComponents.html">SpriteComponents</a></li>
+  <li><a href="../components/SwipeComponents.html">SwipeComponents</a></li>
+  <li><a href="../components/TextLabelComponents.html">TextLabelComponents</a></li>
+  <li><a href="../components/TweenComponents.html">TweenComponents</a></li>
+  <li><a href="../components/AffectorItemComponents.html">AffectorItemComponents</a></li>
+  <li><a href="../components/ConsumableComponents.html">ConsumableComponents</a></li>
+  <li><a href="../components/CurrencyComponents.html">CurrencyComponents</a></li>
+  <li><a href="../components/DefensiveItemComponents.html">DefensiveItemComponents</a></li>
+  <li><a href="../components/DigItemComponents.html">DigItemComponents</a></li>
+  <li><a href="../components/HealthItemComponents.html">HealthItemComponents</a></li>
+  <li><a href="../components/ItemComponents.html">ItemComponents</a></li>
+  <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
+  <li><a href="../components/LootItemComponents.html">LootItemComponents</a></li>
+  <li><a href="../components/MovementItemComponents.html">MovementItemComponents</a></li>
+  <li><a href="../components/OffensiveItemComponents.html">OffensiveItemComponents</a></li>
+  <li><a href="../components/PerspectiveItemComponents.html">PerspectiveItemComponents</a></li>
+  <li><a href="../components/PriceTagComponents.html">PriceTagComponents</a></li>
+  <li><a href="../components/ProtectiveItemComponents.html">ProtectiveItemComponents</a></li>
+  <li><a href="../components/RhythmItemComponents.html">RhythmItemComponents</a></li>
+  <li><a href="../components/SpellItemComponents.html">SpellItemComponents</a></li>
+  <li><a href="../components/WeaponComponents.html">WeaponComponents</a></li>
+  <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
+  <li><a href="../components/TrapComponents.html">TrapComponents</a></li>
+  <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
+  <li><a href="../components/LightComponents.html">LightComponents</a></li>
+  <li><a href="../components/VisibilityComponents.html">VisibilityComponents</a></li>
+  <li><a href="../components/VisionComponents.html">VisionComponents</a></li>
+  <li><a href="../components/WallLightComponents.html">WallLightComponents</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+
+<h1>Event handlers</h1>
+
+<p>Synchrony uses a large number of event handlers for its own game logic.
+These can be overwritten by calling <code>event.&lt;type&gt;.override</code> with the appropriate handler name.</p>
+
+<p>Example:</p>
+
+
+<pre>
+event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequence = <span class="number">1</span>}, <span class="keyword">function</span> (func, ev)
+    <span class="comment">-- Only play hit sound for more than 1 damage
+</span>    <span class="keyword">if</span> ev.damage &gt; <span class="number">1</span> <span class="keyword">then</span>
+        func(ev)
+    <span class="keyword">end</span>
+<span class="keyword">end</span>)
+</pre>
+
+<p><a name="aiAct"></a></p>
+<h2>aiAct</h2>
+
+<ul>
+    <li><code>clone</code></li>
+    <li><code>fleeDiagonal</code></li>
+    <li><code>fleeOrthogonal</code></li>
+    <li><code>fleeUnidirectional</code></li>
+    <li><code>goHome</code></li>
+    <li><code>idle</code></li>
+    <li><code>linear</code></li>
+    <li><code>liquidSeek</code></li>
+    <li><code>pattern</code></li>
+    <li><code>pawnAI</code></li>
+    <li><code>randomDiagonal</code></li>
+    <li><code>randomOrthogonal</code></li>
+    <li><code>randomUnidirectional</code></li>
+    <li><code>remappedSeek</code></li>
+    <li><code>seekDiagonal</code></li>
+    <li><code>seekOrthogonal</code></li>
+    <li><code>seekUnidirectional</code></li>
+</ul>
+
+<p><a name="animateObjects"></a></p>
+<h2>animateObjects</h2>
+
+<ul>
+    <li><code>applyActionDelayAnimations</code></li>
+    <li><code>applyCastSpellAnimations</code></li>
+    <li><code>applyChargeAnimations</code></li>
+    <li><code>applyDirectionalAnimations</code></li>
+    <li><code>applyDirectionalTellAnimations</code></li>
+    <li><code>applyEquipmentSpriteRow</code></li>
+    <li><code>applyGrabAnimations</code></li>
+    <li><code>applyNormalAnimations</code></li>
+    <li><code>applyParityAnimations</code></li>
+    <li><code>applyProvokeAnimations</code></li>
+    <li><code>applyRowWrap</code></li>
+    <li><code>applySilhouettes</code></li>
+    <li><code>applySpriteTextureShifts</code></li>
+    <li><code>applyTargetProximityAnimations</code></li>
+    <li><code>applyTellAnimations</code></li>
+    <li><code>applyTrapActivationAnimations</code></li>
+</ul>
+
+<p><a name="apparitionSpawn"></a></p>
+<h2>apparitionSpawn</h2>
+
+<ul>
+    <li><code>aggroApparition</code></li>
+    <li><code>checkCooldown</code></li>
+    <li><code>checkTargetSwarm</code></li>
+    <li><code>checkTargetTile</code></li>
+    <li><code>locateStalkTarget</code></li>
+    <li><code>resetCooldown</code></li>
+    <li><code>spawnApparition</code></li>
+</ul>
+
+<p><a name="autoCastProcess"></a></p>
+<h2>autoCastProcess</h2>
+
+<ul>
+    <li><code>activateCone</code></li>
+    <li><code>activateLinear</code></li>
+    <li><code>checkCooldown</code></li>
+    <li><code>checkLineOfSight</code></li>
+    <li><code>checkRevealed</code></li>
+    <li><code>checkTargetFreeze</code></li>
+    <li><code>performDirectionalAction</code></li>
+    <li><code>resetCooldown</code></li>
+</ul>
+
+<p><a name="clientAddAction"></a></p>
+<h2>clientAddAction</h2>
+
+<ul>
+    <li><code>deferTrapTargetTurn</code></li>
+    <li><code>setRollbackTurn</code></li>
+    <li><code>setTargetTurn</code></li>
+</ul>
+
+<p><a name="clientAddLocalAction"></a></p>
+<h2>clientAddLocalAction</h2>
+
+<ul>
+    <li><code>addActionToBuffer</code></li>
+    <li><code>checkTurnSync</code></li>
+    <li><code>sendLocalCoopNetworkMessage</code></li>
+    <li><code>sendNetworkMessage</code></li>
+</ul>
+
+<p><a name="clientChangeRoom"></a></p>
+<h2>clientChangeRoom</h2>
+
+<ul>
+    <li><code>beginFastForward</code></li>
+    <li><code>markRemoteModsUnloaded</code></li>
+</ul>
+
+<p><a name="clientConnect"></a></p>
+<h2>clientConnect</h2>
+
+<ul>
+    <li><code>clearLocalCoopPlayerIDs</code></li>
+    <li><code>clearPlayerListOnConnect</code></li>
+    <li><code>initGameState</code></li>
+    <li><code>resetNetworkClock</code></li>
+    <li><code>sendLoginMessage</code></li>
+</ul>
+
+<p><a name="clientDisconnect"></a></p>
+<h2>clientDisconnect</h2>
+
+<ul>
+    <li><code>clearLocalCoopPlayerIDs</code></li>
+    <li><code>clearPlayerListOnDisconnect</code></li>
+    <li><code>clearResources</code></li>
+    <li><code>clearTurnSyncRequests</code></li>
+    <li><code>closeConnection</code></li>
+    <li><code>disconnectMenu</code></li>
+    <li><code>markRemoteModsUnloaded</code></li>
+    <li><code>reloadLocalMods</code></li>
+    <li><code>resetFastForward</code></li>
+    <li><code>resetGameState</code></li>
+    <li><code>resetSinglePlayerFlag</code></li>
+</ul>
+
+<p><a name="clientLogIn"></a></p>
+<h2>clientLogIn</h2>
+
+<ul>
+    <li><code>clearLocalCoopPlayerIDs</code></li>
+    <li><code>enqueueModListInitialization</code></li>
+    <li><code>sendInitialResourceVersionMap</code></li>
+    <li><code>setLocalPlayerID</code></li>
+</ul>
+
+<p><a name="clientMessage"></a></p>
+<h2>clientMessage</h2>
+
+<ul>
+    <li><code>disconnectMessage</code></li>
+    <li><code>fireLocalPlayerAddCallback</code></li>
+    <li><code>fireLocalPlayerRemoveCallback</code></li>
+    <li><code>receiveChat</code></li>
+    <li><code>receiveFastForwardData</code></li>
+    <li><code>receiveGameState</code></li>
+    <li><code>receiveHost</code></li>
+    <li><code>receiveLatencyList</code></li>
+    <li><code>receiveLogin</code></li>
+    <li><code>receivePlayerAttribute</code></li>
+    <li><code>receivePlayerAttributeList</code></li>
+    <li><code>receivePlayerInput</code></li>
+    <li><code>receiveResource</code></li>
+    <li><code>receiveRoomChange</code></li>
+    <li><code>syncNetworkClock</code></li>
+    <li><code>turnSyncCompletion</code></li>
+    <li><code>turnSyncConfirmation</code></li>
+    <li><code>turnSyncRelease</code></li>
+    <li><code>turnSyncRequest</code></li>
+    <li><code>updateModHashList</code></li>
+</ul>
+
+<p><a name="clientPlayerList"></a></p>
+<h2>clientPlayerList</h2>
+
+<ul>
+    <li><code>clearAllReadyFlag</code></li>
+    <li><code>clearLocalCoopPlayerIDs</code></li>
+    <li><code>clearResourceTransferCache</code></li>
+    <li><code>clearSortedPlayerIDs</code></li>
+    <li><code>updateModHashList</code></li>
+</ul>
+
+<p><a name="clientTurnSyncBegin"></a></p>
+<h2>clientTurnSyncBegin</h2>
+
+<ul>
+    <li><code>pauseSpeedrunTimer</code></li>
+</ul>
+
+<p><a name="clientTurnSyncEnd"></a></p>
+<h2>clientTurnSyncEnd</h2>
+
+<ul>
+    <li><code>unpauseSpeedrunTimer</code></li>
+</ul>
+
+<p><a name="configLoad"></a></p>
+<h2>configLoad</h2>
+
+<ul>
+    <li><code>beatBarHUD</code></li>
+    <li><code>camera</code></li>
+    <li><code>client</code></li>
+    <li><code>gameWindow</code></li>
+    <li><code>heartbeatHUD</code></li>
+    <li><code>lastSelectedDungeon</code></li>
+    <li><code>lastSelectedMode</code></li>
+    <li><code>loadKeyBinds</code></li>
+    <li><code>loadSoundtrackPreferences</code></li>
+    <li><code>lobby</code></li>
+    <li><code>lobbySettings</code></li>
+    <li><code>mods</code></li>
+    <li><code>music</code></li>
+    <li><code>netJoin</code></li>
+    <li><code>screenShake</code></li>
+    <li><code>sound</code></li>
+    <li><code>ui</code></li>
+</ul>
+
+<p><a name="configSave"></a></p>
+<h2>configSave</h2>
+
+<ul>
+    <li><code>beatBarHUD</code></li>
+    <li><code>camera</code></li>
+    <li><code>client</code></li>
+    <li><code>gameWindow</code></li>
+    <li><code>heartbeatHUD</code></li>
+    <li><code>lastSelectedDungeon</code></li>
+    <li><code>lastSelectedMode</code></li>
+    <li><code>lobby</code></li>
+    <li><code>lobbySettings</code></li>
+    <li><code>mods</code></li>
+    <li><code>music</code></li>
+    <li><code>netJoin</code></li>
+    <li><code>saveKeyBinds</code></li>
+    <li><code>saveSoundtrackPreferences</code></li>
+    <li><code>screenShake</code></li>
+    <li><code>sound</code></li>
+    <li><code>ui</code></li>
+</ul>
+
+<p><a name="contentLoad"></a></p>
+<h2>contentLoad</h2>
+
+<ul>
+    <li><code>loadComponents</code></li>
+    <li><code>loadCustomEntities</code></li>
+    <li><code>loadGameXML</code></li>
+    <li><code>loadSoundXML</code></li>
+    <li><code>loadTileTypes</code></li>
+</ul>
+
+<p><a name="cycle"></a></p>
+<h2>cycle</h2>
+
+<ul>
+    <li><code>checkSteamCallbacks</code></li>
+    <li><code>collectErrors</code></li>
+    <li><code>collectPerformanceInfo</code></li>
+    <li><code>gameRender</code></li>
+    <li><code>gameStartup</code></li>
+    <li><code>gameTick</code></li>
+    <li><code>pollModifiedEventTypes</code></li>
+    <li><code>reloadAssetsAutomatically</code></li>
+    <li><code>updateInput</code></li>
+    <li><code>updateModCompilationProgress</code></li>
+</ul>
+
+<p><a name="ecsSchemaReloaded"></a></p>
+<h2>ecsSchemaReloaded</h2>
+
+<ul>
+    <li><code>clearAnimationCache</code></li>
+    <li><code>clearCurrencyCache</code></li>
+    <li><code>clearECSCache</code></li>
+    <li><code>clearLobbyCharacterCache</code></li>
+    <li><code>clearPlayerEntityListCache</code></li>
+    <li><code>clearSpellEntityCache</code></li>
+    <li><code>clearXMLMappings</code></li>
+    <li><code>entitySelector</code></li>
+</ul>
+
+<p><a name="entitySchemaLoadEnemy"></a></p>
+<h2>entitySchemaLoadEnemy</h2>
+
+<ul>
+    <li><code>animations</code></li>
+    <li><code>basicEnemyBehavior</code></li>
+    <li><code>bestiary</code></li>
+    <li><code>commonAttributes</code></li>
+    <li><code>enemySprite</code></li>
+    <li><code>mirrorLeftFacingSpritesheets</code></li>
+    <li><code>namedEnemyOverrides</code></li>
+    <li><code>soundEffects</code></li>
+    <li><code>statAttributes</code></li>
+    <li><code>tweeningAttributes</code></li>
+</ul>
+
+<p><a name="entitySchemaLoadItem"></a></p>
+<h2>entitySchemaLoadItem</h2>
+
+<ul>
+    <li><code>commonAttributes</code></li>
+    <li><code>currencyItems</code></li>
+    <li><code>foodItems</code></li>
+    <li><code>itemSlotOverrides</code></li>
+    <li><code>itemSprite</code></li>
+    <li><code>namedItemOverrides</code></li>
+    <li><code>spellActionItems</code></li>
+    <li><code>weaponMaterial</code></li>
+    <li><code>weaponPatternAxe</code></li>
+    <li><code>weaponPatternBlunderbuss</code></li>
+    <li><code>weaponPatternBow</code></li>
+    <li><code>weaponPatternBroadsword</code></li>
+    <li><code>weaponPatternCat</code></li>
+    <li><code>weaponPatternCrossbow</code></li>
+    <li><code>weaponPatternCutlass</code></li>
+    <li><code>weaponPatternDagger</code></li>
+    <li><code>weaponPatternFlail</code></li>
+    <li><code>weaponPatternGoldenLute</code></li>
+    <li><code>weaponPatternHarp</code></li>
+    <li><code>weaponPatternLongsword</code></li>
+    <li><code>weaponPatternRapier</code></li>
+    <li><code>weaponPatternRifle</code></li>
+    <li><code>weaponPatternSpear</code></li>
+    <li><code>weaponPatternStaff</code></li>
+    <li><code>weaponPatternWarhammer</code></li>
+    <li><code>weaponPatternWhip</code></li>
+    <li><code>weaponPostProcessingSteps</code></li>
+</ul>
+
+<p><a name="entitySchemaLoadNamedEnemy"></a></p>
+<h2>entitySchemaLoadNamedEnemy</h2>
+
+<ul>
+    <li><code>loadArmadillo</code></li>
+    <li><code>loadArmoredSkeleton</code></li>
+    <li><code>loadBanshee</code></li>
+    <li><code>loadBat</code></li>
+    <li><code>loadBishop</code></li>
+    <li><code>loadCauldron</code></li>
+    <li><code>loadClone</code></li>
+    <li><code>loadCrate</code></li>
+    <li><code>loadDirBat</code></li>
+    <li><code>loadDragon</code></li>
+    <li><code>loadFakeWall</code></li>
+    <li><code>loadFireElemental</code></li>
+    <li><code>loadGhast</code></li>
+    <li><code>loadGhost</code></li>
+    <li><code>loadGhoul</code></li>
+    <li><code>loadGoblinBomber</code></li>
+    <li><code>loadHellhound</code></li>
+    <li><code>loadIceElemental</code></li>
+    <li><code>loadKing</code></li>
+    <li><code>loadKnight</code></li>
+    <li><code>loadLeprechaun</code></li>
+    <li><code>loadLich</code></li>
+    <li><code>loadMinotaur</code></li>
+    <li><code>loadMole</code></li>
+    <li><code>loadMonkey</code></li>
+    <li><code>loadMushroom</code></li>
+    <li><code>loadMushroomExploding</code></li>
+    <li><code>loadMushroomLight</code></li>
+    <li><code>loadNightmare</code></li>
+    <li><code>loadPawn</code></li>
+    <li><code>loadPixie</code></li>
+    <li><code>loadQueen</code></li>
+    <li><code>loadRook</code></li>
+    <li><code>loadShopkeeper</code></li>
+    <li><code>loadSkeleton</code></li>
+    <li><code>loadSkeletonKnight</code></li>
+    <li><code>loadSkeletonmage</code></li>
+    <li><code>loadSlime</code></li>
+    <li><code>loadSpider</code></li>
+    <li><code>loadTarmonster</code></li>
+    <li><code>loadTrapCauldron</code></li>
+    <li><code>loadTrapChest</code></li>
+    <li><code>loadWaterBall</code></li>
+    <li><code>loadWight</code></li>
+    <li><code>loadWraith</code></li>
+    <li><code>loadYeti</code></li>
+    <li><code>loadZombie</code></li>
+</ul>
+
+<p><a name="entitySchemaLoadNamedItem"></a></p>
+<h2>entitySchemaLoadNamedItem</h2>
+
+<ul>
+    <li><code>BloodDrum</code></li>
+    <li><code>CharmBomb</code></li>
+    <li><code>CharmFrost</code></li>
+    <li><code>CharmGluttony</code></li>
+    <li><code>CharmGrenade</code></li>
+    <li><code>CharmLuck</code></li>
+    <li><code>CharmNazar</code></li>
+    <li><code>CharmProtection</code></li>
+    <li><code>CharmRisk</code></li>
+    <li><code>CharmStrength</code></li>
+    <li><code>CursedPotion</code></li>
+    <li><code>FeetBalletShoes</code></li>
+    <li><code>FeetBootsExplorers</code></li>
+    <li><code>FeetBootsLead</code></li>
+    <li><code>FeetBootsLeaping</code></li>
+    <li><code>FeetBootsLunging</code></li>
+    <li><code>FeetBootsPain</code></li>
+    <li><code>FeetBootsSpeed</code></li>
+    <li><code>FeetBootsStrength</code></li>
+    <li><code>FeetBootsWinged</code></li>
+    <li><code>FeetGlassSlippers</code></li>
+    <li><code>FeetGreaves</code></li>
+    <li><code>HeadBlastHelm</code></li>
+    <li><code>HeadCircletTelepathy</code></li>
+    <li><code>HeadCrownOfGreed</code></li>
+    <li><code>HeadCrownOfTeleportation</code></li>
+    <li><code>HeadCrownOfThorns</code></li>
+    <li><code>HeadGlassJaw</code></li>
+    <li><code>HeadHelm</code></li>
+    <li><code>HeadMinersCap</code></li>
+    <li><code>HeadMonocle</code></li>
+    <li><code>HeadSonar</code></li>
+    <li><code>HeadSpikedEars</code></li>
+    <li><code>HeadSunglasses</code></li>
+    <li><code>HeartTransplant</code></li>
+    <li><code>HolyWater</code></li>
+    <li><code>MiscCompass</code></li>
+    <li><code>MiscCoupon</code></li>
+    <li><code>MiscHeartContainer</code></li>
+    <li><code>MiscHeartContainer2</code></li>
+    <li><code>MiscHeartContainerCursed</code></li>
+    <li><code>MiscHeartContainerCursed2</code></li>
+    <li><code>MiscHeartContainerEmpty</code></li>
+    <li><code>MiscHeartContainerEmpty2</code></li>
+    <li><code>MiscMap</code></li>
+    <li><code>MiscMonkeyPaw</code></li>
+    <li><code>MiscPotion</code></li>
+    <li><code>Pickaxe</code></li>
+    <li><code>RingBecoming</code></li>
+    <li><code>RingCharisma</code></li>
+    <li><code>RingCourage</code></li>
+    <li><code>RingFrost</code></li>
+    <li><code>RingGold</code></li>
+    <li><code>RingLuck</code></li>
+    <li><code>RingMana</code></li>
+    <li><code>RingMight</code></li>
+    <li><code>RingPain</code></li>
+    <li><code>RingPeace</code></li>
+    <li><code>RingPhasing</code></li>
+    <li><code>RingPiercing</code></li>
+    <li><code>RingProtection</code></li>
+    <li><code>RingRegeneration</code></li>
+    <li><code>RingShadows</code></li>
+    <li><code>RingShielding</code></li>
+    <li><code>RingWar</code></li>
+    <li><code>RingWonder</code></li>
+    <li><code>ShovelBattle</code></li>
+    <li><code>ShovelBlood</code></li>
+    <li><code>ShovelCourage</code></li>
+    <li><code>ShovelGlass</code></li>
+    <li><code>ShovelObsidian</code></li>
+    <li><code>ShovelStrength</code></li>
+    <li><code>ThrowingStars</code></li>
+    <li><code>TorchForesight</code></li>
+    <li><code>TorchGlass</code></li>
+    <li><code>TorchInfernal</code></li>
+    <li><code>TorchObsidian</code></li>
+    <li><code>TorchStrength</code></li>
+    <li><code>TorchWalls</code></li>
+    <li><code>WarDrum</code></li>
+    <li><code>WeaponEli</code></li>
+    <li><code>WeaponFlower</code></li>
+</ul>
+
+<p><a name="entitySchemaLoadPlayer"></a></p>
+<h2>entitySchemaLoadPlayer</h2>
+
+<ul>
+    <li><code>addCharacterAnimation</code></li>
+    <li><code>addCharacterGraphics</code></li>
+    <li><code>addCharacterSounds</code></li>
+    <li><code>addCharacterSpecificData</code></li>
+    <li><code>addCommonCharacterComponents</code></li>
+</ul>
+
+<p><a name="entitySchemaLoadSlotItem"></a></p>
+<h2>entitySchemaLoadSlotItem</h2>
+
+<ul>
+    <li><code>bodyArmor</code></li>
+    <li><code>bomb</code></li>
+    <li><code>commonConsumable</code></li>
+    <li><code>shovelDigStrength</code></li>
+    <li><code>spell</code></li>
+    <li><code>torchBrightness</code></li>
+    <li><code>weaponCommonAttributes</code></li>
+</ul>
+
+<p><a name="error"></a></p>
+<h2>error</h2>
+
+<ul>
+    <li><code>displayErrorOverlay</code></li>
+    <li><code>displaySystemError</code></li>
+    <li><code>openScriptInEditor</code></li>
+</ul>
+
+<p><a name="eventHandlersChanged"></a></p>
+<h2>eventHandlersChanged</h2>
+
+<ul>
+    <li><code>inventoryHUDGroups</code></li>
+    <li><code>inventoryHUDSlots</code></li>
+    <li><code>reloadComponents</code></li>
+    <li><code>reloadCustomEntities</code></li>
+    <li><code>reloadGameXML</code></li>
+    <li><code>reloadTileTypes</code></li>
+    <li><code>updateMenu</code></li>
+</ul>
+
+<p><a name="exit"></a></p>
+<h2>exit</h2>
+
+<ul>
+    <li><code>cleanUpNecroLevelLibrary</code></li>
+    <li><code>saveConfig</code></li>
+</ul>
+
+<p><a name="fastForwardBegin"></a></p>
+<h2>fastForwardBegin</h2>
+
+<ul>
+    <li><code>enterPausedGame</code></li>
+</ul>
+
+<p><a name="fastForwardCancel"></a></p>
+<h2>fastForwardCancel</h2>
+
+<ul>
+    <li><code>removePendingFastForwardGameStates</code></li>
+</ul>
+
+<p><a name="fastForwardComplete"></a></p>
+<h2>fastForwardComplete</h2>
+
+<ul>
+    <li><code>openPauseMenu</code></li>
+    <li><code>resetAnimationTimer</code></li>
+    <li><code>snapCameraToTarget</code></li>
+    <li><code>updateVisMapInstantly</code></li>
+</ul>
+
+<p><a name="fastForwardLevel"></a></p>
+<h2>fastForwardLevel</h2>
+
+<ul>
+    <li><code>loadFastForwardReplay</code></li>
+    <li><code>switchFastForwardLevel</code></li>
+</ul>
+
+<p><a name="fastForwardQueueComplete"></a></p>
+<h2>fastForwardQueueComplete</h2>
+
+
+<p><a name="focusedPlayersChanged"></a></p>
+<h2>focusedPlayersChanged</h2>
+
+<ul>
+    <li><code>updateMusicLayerVolumes</code></li>
+</ul>
+
+<p><a name="frame"></a></p>
+<h2>frame</h2>
+
+<ul>
+    <li><code>aggroVisibleEnemies</code></li>
+    <li><code>updateFieldOfView</code></li>
+    <li><code>updateProvokableEntities</code></li>
+    <li><code>updateTileTransformations</code></li>
+</ul>
+
+<p><a name="gameStateBeginCountdown"></a></p>
+<h2>gameStateBeginCountdown</h2>
+
+<ul>
+    <li><code>closePauseMenu</code></li>
+    <li><code>initCountdownOverlay</code></li>
+</ul>
+
+<p><a name="gameStateEndCountdown"></a></p>
+<h2>gameStateEndCountdown</h2>
+
+<ul>
+    <li><code>clearCountdownOverlay</code></li>
+</ul>
+
+<p><a name="gameStateEnterLobby"></a></p>
+<h2>gameStateEnterLobby</h2>
+
+<ul>
+    <li><code>closeAllMenus</code></li>
+    <li><code>initializeLobby</code></li>
+    <li><code>playLobbyMusic</code></li>
+    <li><code>regenerateDungeon</code></li>
+</ul>
+
+<p><a name="gameStateLeaveLobby"></a></p>
+<h2>gameStateLeaveLobby</h2>
+
+<ul>
+    <li><code>resetReadyState</code></li>
+</ul>
+
+<p><a name="gameStateLevel"></a></p>
+<h2>gameStateLevel</h2>
+
+<ul>
+    <li><code>checkItemPickup</code></li>
+    <li><code>clearMinimapFramebuffer</code></li>
+    <li><code>clearObjects</code></li>
+    <li><code>clearTiles</code></li>
+    <li><code>connectTiles</code></li>
+    <li><code>createInitialSnapshot</code></li>
+    <li><code>disableTweens</code></li>
+    <li><code>findMarkerTiles</code></li>
+    <li><code>getCurrentLevelNumber</code></li>
+    <li><code>initPriceTags</code></li>
+    <li><code>initializeGlobalRandomState</code></li>
+    <li><code>initializeMinimap</code></li>
+    <li><code>initializeRhythmSettings</code></li>
+    <li><code>loadLevel</code></li>
+    <li><code>placePlayers</code></li>
+    <li><code>randomizeFloorVisuals</code></li>
+    <li><code>randomizeWallVisuals</code></li>
+    <li><code>removeBarriers</code></li>
+    <li><code>resetAnimationTimer</code></li>
+    <li><code>resetApparitionSpawnCooldowns</code></li>
+    <li><code>resetGrooveChainImmunity</code></li>
+    <li><code>resetItemPickupAnimations</code></li>
+    <li><code>resetLevelExitState</code></li>
+    <li><code>resetPendingTraps</code></li>
+    <li><code>resetSizeModifiers</code></li>
+    <li><code>resetSongEnd</code></li>
+    <li><code>resetTargetingTeams</code></li>
+    <li><code>resetTemporaryLevelVision</code></li>
+    <li><code>resetTimeScale</code></li>
+    <li><code>resetTurnID</code></li>
+    <li><code>restoreDescendedEntities</code></li>
+    <li><code>snapCameraToTarget</code></li>
+    <li><code>stopMusic</code></li>
+    <li><code>stopSounds</code></li>
+    <li><code>switchClientActionBuffer</code></li>
+    <li><code>transitionOverlays</code></li>
+    <li><code>turnSyncRelease</code></li>
+    <li><code>unfreezeEntities</code></li>
+    <li><code>updateAttachmentEntities</code></li>
+    <li><code>updateEntityVisibility</code></li>
+    <li><code>updateMusicLayerVolumes</code></li>
+    <li><code>updateSilhouetteState</code></li>
+    <li><code>updateVisMapInstantly</code></li>
+</ul>
+
+<p><a name="gameStateMainMenu"></a></p>
+<h2>gameStateMainMenu</h2>
+
+<ul>
+    <li><code>closeInGameLobby</code></li>
+    <li><code>closeNetworking</code></li>
+    <li><code>openMainMenu</code></li>
+    <li><code>playMainMenuMusic</code></li>
+</ul>
+
+<p><a name="gameStatePause"></a></p>
+<h2>gameStatePause</h2>
+
+<ul>
+    <li><code>openPauseMenu</code></li>
+    <li><code>pauseAnimationTimer</code></li>
+    <li><code>pauseMusic</code></li>
+</ul>
+
+<p><a name="gameStateReset"></a></p>
+<h2>gameStateReset</h2>
+
+<ul>
+    <li><code>cancelPendingLevelTransition</code></li>
+    <li><code>clearObjects</code></li>
+    <li><code>clearPlayerInputs</code></li>
+    <li><code>clearSnapshots</code></li>
+    <li><code>clearTiles</code></li>
+    <li><code>closeAllMenus</code></li>
+    <li><code>closeInGameLobby</code></li>
+    <li><code>releaseFastForward</code></li>
+    <li><code>removeAllOverlays</code></li>
+    <li><code>resetLevelExitState</code></li>
+    <li><code>resetPlayerEntityList</code></li>
+    <li><code>resetRhythmSettings</code></li>
+    <li><code>resetRunState</code></li>
+    <li><code>resetSpectators</code></li>
+    <li><code>resetSpeedrunTimer</code></li>
+    <li><code>turnSyncRelease</code></li>
+</ul>
+
+<p><a name="gameStateStart"></a></p>
+<h2>gameStateStart</h2>
+
+<ul>
+    <li><code>spawnPlayers</code></li>
+</ul>
+
+<p><a name="gameStateStop"></a></p>
+<h2>gameStateStop</h2>
+
+<ul>
+    <li><code>resetTimeScale</code></li>
+</ul>
+
+<p><a name="gameStateSyncTime"></a></p>
+<h2>gameStateSyncTime</h2>
+
+<ul>
+    <li><code>synchronizeSpeedrunTimer</code></li>
+</ul>
+
+<p><a name="gameStateUnpause"></a></p>
+<h2>gameStateUnpause</h2>
+
+<ul>
+    <li><code>closePauseMenu</code></li>
+    <li><code>resumeMusic</code></li>
+    <li><code>unpauseAnimationTimer</code></li>
+</ul>
+
+<p><a name="holderApplySpellUpgrade"></a></p>
+<h2>holderApplySpellUpgrade</h2>
+
+<ul>
+    <li><code>upgradeAnySpell</code></li>
+    <li><code>upgradeReusableSpell</code></li>
+</ul>
+
+<p><a name="holderBeginMoveOverride"></a></p>
+<h2>holderBeginMoveOverride</h2>
+
+<ul>
+    <li><code>cancelByItem</code></li>
+</ul>
+
+<p><a name="holderCheckAttack"></a></p>
+<h2>holderCheckAttack</h2>
+
+<ul>
+    <li><code>processWeapon</code></li>
+</ul>
+
+<p><a name="holderCheckGrab"></a></p>
+<h2>holderCheckGrab</h2>
+
+<ul>
+    <li><code>applyConditionalInvincibility</code></li>
+</ul>
+
+<p><a name="holderCheckMove"></a></p>
+<h2>holderCheckMove</h2>
+
+<ul>
+    <li><code>knockbackResistanceItem</code></li>
+</ul>
+
+<p><a name="holderCheckPurchase"></a></p>
+<h2>holderCheckPurchase</h2>
+
+<ul>
+    <li><code>applyBloodPurchasePriceOverride</code></li>
+    <li><code>applyPurchasePriceMultiplier</code></li>
+    <li><code>consumeItemOnPurchase</code></li>
+</ul>
+
+<p><a name="holderComputeDigStrength"></a></p>
+<h2>holderComputeDigStrength</h2>
+
+<ul>
+    <li><code>addShovelDigStrength</code></li>
+    <li><code>increaseByHolderGrooveChain</code></li>
+    <li><code>increaseDigStrength</code></li>
+</ul>
+
+<p><a name="holderDealDamage"></a></p>
+<h2>holderDealDamage</h2>
+
+<ul>
+    <li><code>applyBaseIncrease</code></li>
+    <li><code>applyBaseMultiplier</code></li>
+    <li><code>applyFinalMultiplier</code></li>
+    <li><code>applyLowHealthIncrease</code></li>
+    <li><code>applyPostDigIncrease</code></li>
+    <li><code>frozenDamageIncrease</code></li>
+    <li><code>inflictFreeze</code></li>
+    <li><code>overrideKnockback</code></li>
+    <li><code>performDashOnKill</code></li>
+    <li><code>resetDashOnKill</code></li>
+</ul>
+
+<p><a name="holderDig"></a></p>
+<h2>holderDig</h2>
+
+<ul>
+    <li><code>activateDamageIncrease</code></li>
+    <li><code>applyMultiHit</code></li>
+    <li><code>castSpellForWallEntity</code></li>
+    <li><code>checkSpellEntityCondition</code></li>
+    <li><code>consumeOnHighResistance</code></li>
+    <li><code>grantConditionalInvincibility</code></li>
+    <li><code>increaseRadiusByItem</code></li>
+    <li><code>inflictDamageOnHighResistance</code></li>
+    <li><code>overrideRadiusOnHighResistance</code></li>
+    <li><code>queueDashOnDig</code></li>
+    <li><code>spawnShovelSwipe</code></li>
+    <li><code>updateItemSprite</code></li>
+</ul>
+
+<p><a name="holderDirection"></a></p>
+<h2>holderDirection</h2>
+
+<ul>
+    <li><code>activateDigConditionalInvincibility</code></li>
+    <li><code>amplify</code></li>
+    <li><code>performDashOnDig</code></li>
+    <li><code>resetDashOnKill</code></li>
+</ul>
+
+<p><a name="holderGrooveChain"></a></p>
+<h2>holderGrooveChain</h2>
+
+<ul>
+    <li><code>applyItemImmunity</code></li>
+    <li><code>updateGrooveChainSprite</code></li>
+    <li><code>updateLightSource</code></li>
+    <li><code>updateVisionSource</code></li>
+</ul>
+
+<p><a name="holderHeal"></a></p>
+<h2>holderHeal</h2>
+
+<ul>
+    <li><code>checkGluttony</code></li>
+    <li><code>consumeGluttonyItem</code></li>
+    <li><code>updateWeaponConditionalDamageOnLowHealth</code></li>
+</ul>
+
+<p><a name="holderHotTileStep"></a></p>
+<h2>holderHotTileStep</h2>
+
+<ul>
+    <li><code>applyHotTileProtection</code></li>
+</ul>
+
+<p><a name="holderKill"></a></p>
+<h2>holderKill</h2>
+
+<ul>
+    <li><code>grantConditionalInvincibility</code></li>
+    <li><code>increaseCurrencyDropsByItem</code></li>
+    <li><code>incrementRegenerationKillCounter</code></li>
+    <li><code>queueDashOnKill</code></li>
+    <li><code>reduceSpellCooldown</code></li>
+</ul>
+
+<p><a name="holderMove"></a></p>
+<h2>holderMove</h2>
+
+<ul>
+    <li><code>autoDigSurroundingTiles</code></li>
+    <li><code>damageOnMove</code></li>
+    <li><code>forceSlidingTween</code></li>
+    <li><code>moveLightSourceItem</code></li>
+</ul>
+
+<p><a name="holderShrink"></a></p>
+<h2>holderShrink</h2>
+
+<ul>
+    <li><code>applyShrinkImmunity</code></li>
+</ul>
+
+<p><a name="holderSink"></a></p>
+<h2>holderSink</h2>
+
+<ul>
+    <li><code>cancelByItem</code></li>
+</ul>
+
+<p><a name="holderSpecialAction"></a></p>
+<h2>holderSpecialAction</h2>
+
+<ul>
+    <li><code>prepareThrow</code></li>
+    <li><code>reloadWeapon</code></li>
+    <li><code>toggleItem</code></li>
+</ul>
+
+<p><a name="holderTakeDamage"></a></p>
+<h2>holderTakeDamage</h2>
+
+<ul>
+    <li><code>amplifyMultiplicatively</code></li>
+    <li><code>applyArmor</code></li>
+    <li><code>applyConditionalInvincibility</code></li>
+    <li><code>applyDamageImmunityEarly</code></li>
+    <li><code>applyDamageImmunityFirst</code></li>
+    <li><code>applyDamageImmunityLast</code></li>
+    <li><code>applyDamageImmunityLate</code></li>
+    <li><code>applyGrooveChainArmor</code></li>
+    <li><code>applyLateArmor</code></li>
+    <li><code>applyTypedDamageImmunity</code></li>
+    <li><code>performWeaponParry</code></li>
+    <li><code>shatterFragileItems</code></li>
+    <li><code>updateWeaponConditionalDamageOnLowHealth</code></li>
+</ul>
+
+<p><a name="holderUnsink"></a></p>
+<h2>holderUnsink</h2>
+
+<ul>
+    <li><code>applyTilePreservationItem</code></li>
+    <li><code>applyUnsinkImmunityItem</code></li>
+</ul>
+
+<p><a name="holderUpdateAttackability"></a></p>
+<h2>holderUpdateAttackability</h2>
+
+<ul>
+    <li><code>applyItemFlags</code></li>
+</ul>
+
+<p><a name="holderUpdateEquipmentSprite"></a></p>
+<h2>holderUpdateEquipmentSprite</h2>
+
+<ul>
+    <li><code>useBodySpriteRow</code></li>
+    <li><code>useHeadSpriteRow</code></li>
+</ul>
+
+<p><a name="holderUpdatePerspective"></a></p>
+<h2>holderUpdatePerspective</h2>
+
+<ul>
+    <li><code>allTileRevealItem</code></li>
+    <li><code>bloodPurchasePriceOverrideItem</code></li>
+    <li><code>objectSilhouetteAllItem</code></li>
+    <li><code>objectSilhouetteItem</code></li>
+    <li><code>objectUnsilhouetteItem</code></li>
+    <li><code>objectVisibilityItem</code></li>
+    <li><code>objectVisionRadiusItem</code></li>
+    <li><code>priceTagCurrencyMultiplierItem</code></li>
+    <li><code>tileBrightnessRateItem</code></li>
+    <li><code>tileRevealItem</code></li>
+    <li><code>tileTargetArrowItem</code></li>
+    <li><code>tileVisionRadiusItem</code></li>
+</ul>
+
+<p><a name="holderUpdateRhythm"></a></p>
+<h2>holderUpdateRhythm</h2>
+
+<ul>
+    <li><code>subdivisionItem</code></li>
+</ul>
+
+<p><a name="inventoryAddItem"></a></p>
+<h2>inventoryAddItem</h2>
+
+<ul>
+    <li><code>animateItemPickup</code></li>
+    <li><code>attachItem</code></li>
+    <li><code>attachItemToSlot</code></li>
+    <li><code>convertOnPickup</code></li>
+    <li><code>dropPreviousItem</code></li>
+    <li><code>fireCollectEvent</code></li>
+    <li><code>fireEquipEvent</code></li>
+    <li><code>setItemVisibility</code></li>
+    <li><code>unmapItemPosition</code></li>
+    <li><code>updateSpellOpacity</code></li>
+</ul>
+
+<p><a name="inventoryCollectItem"></a></p>
+<h2>inventoryCollectItem</h2>
+
+<ul>
+    <li><code>consumeOnPickup</code></li>
+    <li><code>createFlyawayText</code></li>
+    <li><code>createStackFlyawayText</code></li>
+    <li><code>damageOnPickup</code></li>
+    <li><code>fireHolderCurrencyEvent</code></li>
+    <li><code>grantExtraItemOnFirstPickup</code></li>
+    <li><code>playItemPickupSound</code></li>
+</ul>
+
+<p><a name="inventoryDestroyItem"></a></p>
+<h2>inventoryDestroyItem</h2>
+
+<ul>
+    <li><code>despawnItem</code></li>
+    <li><code>detachItem</code></li>
+    <li><code>detachItemFromSlot</code></li>
+    <li><code>fireRemoveEvent</code></li>
+</ul>
+
+<p><a name="inventoryDropItem"></a></p>
+<h2>inventoryDropItem</h2>
+
+<ul>
+    <li><code>detachItem</code></li>
+    <li><code>detachItemFromSlot</code></li>
+    <li><code>fireRemoveEvent</code></li>
+    <li><code>setDroppedItemPosition</code></li>
+    <li><code>suppressItemPickup</code></li>
+</ul>
+
+<p><a name="inventoryEquipItem"></a></p>
+<h2>inventoryEquipItem</h2>
+
+<ul>
+    <li><code>enableHoverEffect</code></li>
+    <li><code>enableRadialVision</code></li>
+    <li><code>moveLightSource</code></li>
+    <li><code>resetConditionalDamageOnCurrencyGain</code></li>
+    <li><code>resetConditionalDamageOnLowHealth</code></li>
+    <li><code>updateAttackability</code></li>
+    <li><code>updateCharacterSpriteRow</code></li>
+    <li><code>updateGrooveChainSprite</code></li>
+    <li><code>updateLightSourceByGrooveChain</code></li>
+    <li><code>updatePerspective</code></li>
+    <li><code>updateRegenerationKillCounterIncrement</code></li>
+    <li><code>updateVisionSourceByGrooveChain</code></li>
+</ul>
+
+<p><a name="inventoryHUDRegisterElement"></a></p>
+<h2>inventoryHUDRegisterElement</h2>
+
+<ul>
+    <li><code>actions</code></li>
+    <li><code>charms</code></li>
+    <li><code>equipment</code></li>
+    <li><code>spells</code></li>
+</ul>
+
+<p><a name="inventoryHUDRegisterSlot"></a></p>
+<h2>inventoryHUDRegisterSlot</h2>
+
+<ul>
+    <li><code>action</code></li>
+    <li><code>body</code></li>
+    <li><code>bomb</code></li>
+    <li><code>feet</code></li>
+    <li><code>head</code></li>
+    <li><code>misc</code></li>
+    <li><code>reload</code></li>
+    <li><code>ring</code></li>
+    <li><code>shovel</code></li>
+    <li><code>spell</code></li>
+    <li><code>throw</code></li>
+    <li><code>toggle</code></li>
+    <li><code>torch</code></li>
+    <li><code>weapon</code></li>
+</ul>
+
+<p><a name="inventoryHUDRenderSlot"></a></p>
+<h2>inventoryHUDRenderSlot</h2>
+
+<ul>
+    <li><code>ammoCounter</code></li>
+    <li><code>computeSlotDimensions</code></li>
+    <li><code>itemOverlaySprite</code></li>
+    <li><code>itemSlotImage</code></li>
+    <li><code>itemSprite</code></li>
+    <li><code>keyBindings</code></li>
+    <li><code>regenerationKillCounter</code></li>
+    <li><code>renderLabels</code></li>
+    <li><code>spellCooldowns</code></li>
+    <li><code>stackQuantity</code></li>
+</ul>
+
+<p><a name="inventoryRemoveItem"></a></p>
+<h2>inventoryRemoveItem</h2>
+
+<ul>
+    <li><code>disableHoverEffect</code></li>
+    <li><code>disableRadialVision</code></li>
+    <li><code>updateAttackability</code></li>
+    <li><code>updateCharacterSpriteRow</code></li>
+    <li><code>updateGrooveChainSprite</code></li>
+    <li><code>updateLightSourceByGrooveChain</code></li>
+    <li><code>updatePerspective</code></li>
+    <li><code>updateRegenerationKillCounterIncrement</code></li>
+    <li><code>updateVisionSourceByGrooveChain</code></li>
+</ul>
+
+<p><a name="inventorySlotCapacity"></a></p>
+<h2>inventorySlotCapacity</h2>
+
+<ul>
+    <li><code>misc</code></li>
+    <li><code>spell</code></li>
+</ul>
+
+<p><a name="inventoryStackItem"></a></p>
+<h2>inventoryStackItem</h2>
+
+<ul>
+    <li><code>convertCurrencyItem</code></li>
+    <li><code>despawnMergedItem</code></li>
+    <li><code>fireCollectEvent</code></li>
+    <li><code>incrementItemStackQuantity</code></li>
+</ul>
+
+<p><a name="inventorySuppressItemPickup"></a></p>
+<h2>inventorySuppressItemPickup</h2>
+
+<ul>
+    <li><code>disableItemPickup</code></li>
+    <li><code>disableShadowVisibility</code></li>
+    <li><code>disableSpriteVisibility</code></li>
+</ul>
+
+<p><a name="inventoryUnsuppressItemPickup"></a></p>
+<h2>inventoryUnsuppressItemPickup</h2>
+
+<ul>
+    <li><code>enableItemPickup</code></li>
+    <li><code>enableShadowVisibility</code></li>
+    <li><code>enableSpriteVisibility</code></li>
+</ul>
+
+<p><a name="itemActivate"></a></p>
+<h2>itemActivate</h2>
+
+<ul>
+    <li><code>activateConsumable</code></li>
+    <li><code>castSpell</code></li>
+</ul>
+
+<p><a name="itemConsume"></a></p>
+<h2>itemConsume</h2>
+
+<ul>
+    <li><code>addCursedHealth</code></li>
+    <li><code>convertCurrencyItem</code></li>
+    <li><code>createDroppedItem</code></li>
+    <li><code>createFlyawayText</code></li>
+    <li><code>curseHealth</code></li>
+    <li><code>destroyItem</code></li>
+    <li><code>fireHolderCurrencyEvent</code></li>
+    <li><code>grantMapVision</code></li>
+    <li><code>healConsumer</code></li>
+    <li><code>ignoreRhythmTemporarily</code></li>
+    <li><code>increaseMaxHealth</code></li>
+    <li><code>playConsumptionSound</code></li>
+    <li><code>reduceStackSize</code></li>
+</ul>
+
+<p><a name="levelGenerate"></a></p>
+<h2>levelGenerate</h2>
+
+<ul>
+    <li><code>generateProceduralLevel</code></li>
+</ul>
+
+<p><a name="levelLoad"></a></p>
+<h2>levelLoad</h2>
+
+<ul>
+    <li><code>loadAreaBoundingBoxes</code></li>
+    <li><code>loadEntities</code></li>
+    <li><code>loadLevelTileMap</code></li>
+    <li><code>loadSegmentBoundingBoxes</code></li>
+    <li><code>placeLevelBorder</code></li>
+    <li><code>playLevelMusic</code></li>
+    <li><code>seedGlobalRandomStateByLevel</code></li>
+    <li><code>updateRunState</code></li>
+</ul>
+
+<p><a name="loadVirtualResource"></a></p>
+<h2>loadVirtualResource</h2>
+
+<ul>
+    <li><code>cropImage</code></li>
+</ul>
+
+<p><a name="localCoopPlayerAdded"></a></p>
+<h2>localCoopPlayerAdded</h2>
+
+<ul>
+    <li><code>assignLobbyCharacter</code></li>
+    <li><code>clearPlayerEntityCache</code></li>
+    <li><code>unspectateNewLocalPlayer</code></li>
+</ul>
+
+<p><a name="localCoopPlayerRemoved"></a></p>
+<h2>localCoopPlayerRemoved</h2>
+
+<ul>
+    <li><code>clearPlayerEntityCache</code></li>
+</ul>
+
+<p><a name="menu"></a></p>
+<h2>menu</h2>
+
+<ul>
+    <li><code>changeSoundtrack</code></li>
+    <li><code>confirm</code></li>
+    <li><code>gameError</code></li>
+    <li><code>lobbyDungeonSelector</code></li>
+    <li><code>lobbyMenu</code></li>
+    <li><code>lobbyModeSelector</code></li>
+    <li><code>lobbySeedEntry</code></li>
+    <li><code>lobbySettings</code></li>
+    <li><code>localCoop</code></li>
+    <li><code>main</code></li>
+    <li><code>messageBox</code></li>
+    <li><code>modConfig</code></li>
+    <li><code>modCreator</code></li>
+    <li><code>modList</code></li>
+    <li><code>modVersionSelector</code></li>
+    <li><code>networkConnecting</code></li>
+    <li><code>networkDisconnected</code></li>
+    <li><code>networkGameBrowser</code></li>
+    <li><code>networkHost</code></li>
+    <li><code>networkJoin</code></li>
+    <li><code>networkJoinUDP</code></li>
+    <li><code>networkModList</code></li>
+    <li><code>options</code></li>
+    <li><code>optionsAudio</code></li>
+    <li><code>optionsControls</code></li>
+    <li><code>optionsGame</code></li>
+    <li><code>optionsVideo</code></li>
+    <li><code>pause</code></li>
+    <li><code>retry</code></li>
+    <li><code>win</code></li>
+</ul>
+
+<p><a name="minimapUpdate"></a></p>
+<h2>minimapUpdate</h2>
+
+<ul>
+    <li><code>enqueueMinimapRender</code></li>
+</ul>
+
+<p><a name="modLoaded"></a></p>
+<h2>modLoaded</h2>
+
+<ul>
+    <li><code>addModScriptPath</code></li>
+</ul>
+
+<p><a name="modUnloaded"></a></p>
+<h2>modUnloaded</h2>
+
+<ul>
+    <li><code>removeModScriptPath</code></li>
+</ul>
+
+<p><a name="musicLayersUpdateVolume"></a></p>
+<h2>musicLayersUpdateVolume</h2>
+
+<ul>
+    <li><code>activateMainLayer</code></li>
+    <li><code>applyEntityProximityVolumeModifiers</code></li>
+    <li><code>applyTileProximityVolumeModifiers</code></li>
+    <li><code>muteAllLayers</code></li>
+</ul>
+
+<p><a name="musicPlay"></a></p>
+<h2>musicPlay</h2>
+
+<ul>
+    <li><code>resetPlayerBeatmaps</code></li>
+</ul>
+
+<p><a name="musicStop"></a></p>
+<h2>musicStop</h2>
+
+<ul>
+    <li><code>resetPlayerBeatmaps</code></li>
+</ul>
+
+<p><a name="musicTrack"></a></p>
+<h2>musicTrack</h2>
+
+<ul>
+    <li><code>originalSoundtrack</code></li>
+</ul>
+
+<p><a name="networkModMismatch"></a></p>
+<h2>networkModMismatch</h2>
+
+<ul>
+    <li><code>openModListOnMismatch</code></li>
+</ul>
+
+<p><a name="networkModUpdate"></a></p>
+<h2>networkModUpdate</h2>
+
+<ul>
+    <li><code>updateModList</code></li>
+</ul>
+
+<p><a name="objectApplyDamageImmunity"></a></p>
+<h2>objectApplyDamageImmunity</h2>
+
+<ul>
+    <li><code>activateBlinkEffect</code></li>
+    <li><code>addInvincibility</code></li>
+    <li><code>castSpell</code></li>
+    <li><code>consumeItem</code></li>
+    <li><code>flyaway</code></li>
+    <li><code>playSound</code></li>
+    <li><code>suppressDamage</code></li>
+</ul>
+
+<p><a name="objectBeginMoveOverride"></a></p>
+<h2>objectBeginMoveOverride</h2>
+
+<ul>
+    <li><code>enableRhythmAutoPlay</code></li>
+    <li><code>moveOverride</code></li>
+    <li><code>playChargeSound</code></li>
+    <li><code>startSwayAnimation</code></li>
+</ul>
+
+<p><a name="objectCheckAttack"></a></p>
+<h2>objectCheckAttack</h2>
+
+<ul>
+    <li><code>dwarfismSuppressAttack</code></li>
+</ul>
+
+<p><a name="objectCheckGrab"></a></p>
+<h2>objectCheckGrab</h2>
+
+<ul>
+    <li><code>checkGrabbability</code></li>
+    <li><code>performGrab</code></li>
+</ul>
+
+<p><a name="objectCheckMove"></a></p>
+<h2>objectCheckMove</h2>
+
+<ul>
+    <li><code>applyDefaultResult</code></li>
+    <li><code>checkBaseAttack</code></li>
+    <li><code>checkForPreAttackCollisions</code></li>
+    <li><code>checkForPreMoveCollisions</code></li>
+    <li><code>disallowMoveDuringDescent</code></li>
+    <li><code>inhibitFrozenMovement</code></li>
+    <li><code>inhibitMovementIfSunken</code></li>
+    <li><code>resistKnockbackWhileGrabbing</code></li>
+    <li><code>stasisOnMove</code></li>
+</ul>
+
+<p><a name="objectComputeDigStrength"></a></p>
+<h2>objectComputeDigStrength</h2>
+
+<ul>
+    <li><code>addMoveOverrideDigStrength</code></li>
+    <li><code>confusableDigStrength</code></li>
+    <li><code>dwarfismDigStrengthOverride</code></li>
+    <li><code>gigantismIncreaseDigRadius</code></li>
+    <li><code>gigantismIncreaseDigStrength</code></li>
+</ul>
+
+<p><a name="objectConfuse"></a></p>
+<h2>objectConfuse</h2>
+
+<ul>
+    <li><code>addConfusionTime</code></li>
+    <li><code>playConfusionVoice</code></li>
+</ul>
+
+<p><a name="objectControllerChanged"></a></p>
+<h2>objectControllerChanged</h2>
+
+<ul>
+    <li><code>assignPlayerID</code></li>
+    <li><code>playerPersistence</code></li>
+    <li><code>toggleAI</code></li>
+</ul>
+
+<p><a name="objectCurrency"></a></p>
+<h2>objectCurrency</h2>
+
+<ul>
+    <li><code>inflictDamage</code></li>
+</ul>
+
+<p><a name="objectDealDamage"></a></p>
+<h2>objectDealDamage</h2>
+
+<ul>
+    <li><code>applyDamageToTarget</code></li>
+    <li><code>applyGigantismMultiplier</code></li>
+    <li><code>attackSound</code></li>
+    <li><code>grabVictim</code></li>
+</ul>
+
+<p><a name="objectDeath"></a></p>
+<h2>objectDeath</h2>
+
+<ul>
+    <li><code>checkKillCredit</code></li>
+    <li><code>createTombstone</code></li>
+    <li><code>deathSound</code></li>
+    <li><code>dropCurrencyOnDeath</code></li>
+    <li><code>dropInventoryItems</code></li>
+    <li><code>genericDeathSound</code></li>
+    <li><code>gigantismCurrencyDropOverride</code></li>
+    <li><code>gigantismItemDrop</code></li>
+    <li><code>spellcastOnDeath</code></li>
+    <li><code>triggerKillEvent</code></li>
+</ul>
+
+<p><a name="objectDescentArrive"></a></p>
+<h2>objectDescentArrive</h2>
+
+<ul>
+    <li><code>applyPositionOffset</code></li>
+    <li><code>endDescent</code></li>
+    <li><code>inflictDamage</code></li>
+    <li><code>initializePosition</code></li>
+    <li><code>removeTargetTurn</code></li>
+    <li><code>restoreCollisionMask</code></li>
+    <li><code>restorePersistence</code></li>
+    <li><code>updateAttackability</code></li>
+</ul>
+
+<p><a name="objectDescentBegin"></a></p>
+<h2>objectDescentBegin</h2>
+
+<ul>
+    <li><code>activateDescent</code></li>
+    <li><code>addFadeout</code></li>
+    <li><code>disableCollisions</code></li>
+    <li><code>enqueueDescentEndAction</code></li>
+    <li><code>exitLevelTargetTurn</code></li>
+    <li><code>persistObject</code></li>
+    <li><code>playAnimation</code></li>
+    <li><code>playDescentSound</code></li>
+    <li><code>playDescentVoice</code></li>
+    <li><code>storeCollisionMask</code></li>
+    <li><code>updateAttackability</code></li>
+</ul>
+
+<p><a name="objectDescentEnd"></a></p>
+<h2>objectDescentEnd</h2>
+
+<ul>
+    <li><code>exitLevel</code></li>
+    <li><code>resetTargetTurnID</code></li>
+</ul>
+
+<p><a name="objectDespawn"></a></p>
+<h2>objectDespawn</h2>
+
+<ul>
+    <li><code>despawnCharacterHead</code></li>
+    <li><code>despawnObject</code></li>
+    <li><code>despawnPriceTags</code></li>
+    <li><code>detachController</code></li>
+    <li><code>detachFromGrabVictim</code></li>
+    <li><code>detachGrabber</code></li>
+    <li><code>detachItemBeforeDespawning</code></li>
+    <li><code>disableLightSource</code></li>
+    <li><code>finalizeObjectTangibility</code></li>
+    <li><code>unlockExitStairs</code></li>
+</ul>
+
+<p><a name="objectDig"></a></p>
+<h2>objectDig</h2>
+
+<ul>
+    <li><code>applyTileDigRadius</code></li>
+    <li><code>bounceCharacter</code></li>
+    <li><code>computeDigStrength</code></li>
+    <li><code>digSound</code></li>
+    <li><code>gigantismSuppressHighResistanceEffects</code></li>
+    <li><code>playDigFailSound</code></li>
+    <li><code>shakeScreenOnDig</code></li>
+    <li><code>tryBreakTile</code></li>
+</ul>
+
+<p><a name="objectDirection"></a></p>
+<h2>objectDirection</h2>
+
+<ul>
+    <li><code>applyConfusionDirectionReversal</code></li>
+    <li><code>attackGrabber</code></li>
+    <li><code>digWall</code></li>
+    <li><code>disallowActionDuringDescent</code></li>
+    <li><code>hasMoved</code></li>
+    <li><code>inhibitFrozenMovement</code></li>
+    <li><code>moveObject</code></li>
+    <li><code>moveOverride</code></li>
+    <li><code>moveOverrideDropGrooveChain</code></li>
+    <li><code>performInteraction</code></li>
+    <li><code>performTrample</code></li>
+    <li><code>performWeaponAttack</code></li>
+    <li><code>playHitChainVoice</code></li>
+    <li><code>preventMovementInStasis</code></li>
+    <li><code>remapMovement</code></li>
+    <li><code>resetBeatDelay</code></li>
+    <li><code>rotateDirection</code></li>
+    <li><code>setFacingDirection</code></li>
+    <li><code>shakeScreenOnAttack</code></li>
+    <li><code>shakeScreenOnWalk</code></li>
+    <li><code>spellcastOnMove</code></li>
+    <li><code>startMoveOverride</code></li>
+    <li><code>stasisUntilProvoked</code></li>
+    <li><code>stopMoveOverrideOnResult</code></li>
+    <li><code>unsinkFromLiquidTile</code></li>
+    <li><code>updateGrooveChain</code></li>
+    <li><code>updateHitChain</code></li>
+    <li><code>updatePattern</code></li>
+    <li><code>updatePreviousPosition</code></li>
+    <li><code>updateTrampleAI</code></li>
+</ul>
+
+<p><a name="objectEndMoveOverride"></a></p>
+<h2>objectEndMoveOverride</h2>
+
+<ul>
+    <li><code>disableRhythmAutoPlay</code></li>
+    <li><code>endSwayAnimation</code></li>
+    <li><code>moveOverride</code></li>
+    <li><code>playChargeStopSound</code></li>
+</ul>
+
+<p><a name="objectExitLevel"></a></p>
+<h2>objectExitLevel</h2>
+
+<ul>
+    <li><code>addDamageImmunity</code></li>
+    <li><code>checkLevelCompletion</code></li>
+    <li><code>grooveChainImmunity</code></li>
+    <li><code>setExitFlag</code></li>
+</ul>
+
+<p><a name="objectFacing"></a></p>
+<h2>objectFacing</h2>
+
+<ul>
+    <li><code>changeShieldDirection</code></li>
+    <li><code>confusedFacingDirection</code></li>
+    <li><code>confusedMoreOverrideFacingDirection</code></li>
+    <li><code>mirrorSpriteX</code></li>
+    <li><code>mirrorSpriteY</code></li>
+    <li><code>moveOverrideAdjustFacingDirection</code></li>
+    <li><code>redirectLinearAI</code></li>
+    <li><code>setFacingDirection</code></li>
+</ul>
+
+<p><a name="objectFreeze"></a></p>
+<h2>objectFreeze</h2>
+
+<ul>
+    <li><code>addFreezeTime</code></li>
+    <li><code>freezeAnimation</code></li>
+    <li><code>spawnFreezeAttachment</code></li>
+</ul>
+
+<p><a name="objectGrab"></a></p>
+<h2>objectGrab</h2>
+
+<ul>
+    <li><code>attachToVictim</code></li>
+    <li><code>denyGrooveChain</code></li>
+    <li><code>denyKillCredit</code></li>
+    <li><code>dropGrooveChain</code></li>
+    <li><code>increaseHealth</code></li>
+    <li><code>moveOntoVictim</code></li>
+    <li><code>overrideAI</code></li>
+    <li><code>playGrabAttackerSound</code></li>
+    <li><code>playGrabVictimSound</code></li>
+    <li><code>suppressCurrencyDrop</code></li>
+</ul>
+
+<p><a name="objectGrooveChain"></a></p>
+<h2>objectGrooveChain</h2>
+
+<ul>
+    <li><code>applyGrooveChainValues</code></li>
+    <li><code>applyImmunity</code></li>
+    <li><code>inflictDamage</code></li>
+    <li><code>playGrooveChainSound</code></li>
+</ul>
+
+<p><a name="objectGrow"></a></p>
+<h2>objectGrow</h2>
+
+<ul>
+    <li><code>activateGigantism</code></li>
+    <li><code>applyHealthMultiplier</code></li>
+    <li><code>modifyShadowScale</code></li>
+    <li><code>modifySpriteScale</code></li>
+    <li><code>resetDwarfism</code></li>
+    <li><code>setGigantismTimer</code></li>
+    <li><code>updateAttackability</code></li>
+</ul>
+
+<p><a name="objectHeal"></a></p>
+<h2>objectHeal</h2>
+
+<ul>
+    <li><code>activateBlinkEffect</code></li>
+    <li><code>addHealth</code></li>
+    <li><code>addMaxHealth</code></li>
+    <li><code>grantInvincibility</code></li>
+    <li><code>limitCursedHealth</code></li>
+    <li><code>limitMaxHealth</code></li>
+    <li><code>playHealingSound</code></li>
+    <li><code>processOverhealHealth</code></li>
+    <li><code>roundMaxHealth</code></li>
+    <li><code>roundOverhealHealth</code></li>
+    <li><code>uncurseHearts</code></li>
+</ul>
+
+<p><a name="objectHotTileStep"></a></p>
+<h2>objectHotTileStep</h2>
+
+<ul>
+    <li><code>gigantismHotTileProtection</code></li>
+    <li><code>increaseIdleTurnCounter</code></li>
+    <li><code>inflictIdleDamage</code></li>
+    <li><code>playHotTileDamageSound</code></li>
+    <li><code>playHotTileStepSound</code></li>
+    <li><code>playHotTileStepVoice</code></li>
+</ul>
+
+<p><a name="objectIntangible"></a></p>
+<h2>objectIntangible</h2>
+
+<ul>
+    <li><code>removeFromCollisionMap</code></li>
+    <li><code>removeFromObjectRowMap</code></li>
+    <li><code>removeFromTargetingTeam</code></li>
+    <li><code>removeObjectFromMap</code></li>
+</ul>
+
+<p><a name="objectInteract"></a></p>
+<h2>objectInteract</h2>
+
+<ul>
+    <li><code>checkPriceTag</code></li>
+    <li><code>selfDestruct</code></li>
+</ul>
+
+<p><a name="objectKill"></a></p>
+<h2>objectKill</h2>
+
+<ul>
+    <li><code>increaseGrooveChain</code></li>
+</ul>
+
+<p><a name="objectMove"></a></p>
+<h2>objectMove</h2>
+
+<ul>
+    <li><code>checkExitStairs</code></li>
+    <li><code>checkItemPickup</code></li>
+    <li><code>checkShrinkTile</code></li>
+    <li><code>enableHopTween</code></li>
+    <li><code>hasMoved</code></li>
+    <li><code>moveCollisionMap</code></li>
+    <li><code>moveGrabbed</code></li>
+    <li><code>moveGrabber</code></li>
+    <li><code>moveLightSource</code></li>
+    <li><code>moveObjectMapEntry</code></li>
+    <li><code>moveObjectMapRowEntry</code></li>
+    <li><code>readTileInfo</code></li>
+    <li><code>redirectMoveOverride</code></li>
+    <li><code>resetTileIdleCounter</code></li>
+    <li><code>sinkIntoLiquidTile</code></li>
+    <li><code>stasisOnApproach</code></li>
+    <li><code>updatePosition</code></li>
+    <li><code>updatePreviousPosition</code></li>
+    <li><code>updateTargetSquareDistance</code></li>
+    <li><code>walkSound</code></li>
+</ul>
+
+<p><a name="objectMoveResult"></a></p>
+<h2>objectMoveResult</h2>
+
+<ul>
+    <li><code>bounceTweenOnAttack</code></li>
+    <li><code>bounceTweenOnFail</code></li>
+    <li><code>performInnateAttack</code></li>
+    <li><code>unstasisOnAttack</code></li>
+</ul>
+
+<p><a name="objectParry"></a></p>
+<h2>objectParry</h2>
+
+<ul>
+    <li><code>applyKnockback</code></li>
+    <li><code>createFlyaway</code></li>
+    <li><code>playParrySound</code></li>
+    <li><code>suppressDamage</code></li>
+</ul>
+
+<p><a name="objectPostConvert"></a></p>
+<h2>objectPostConvert</h2>
+
+<ul>
+    <li><code>activateShield</code></li>
+    <li><code>addToRowMap</code></li>
+    <li><code>clearPlayerEntityCache</code></li>
+    <li><code>sinkIntoLiquidTile</code></li>
+    <li><code>updateAttackability</code></li>
+    <li><code>updateFacingDirection</code></li>
+</ul>
+
+<p><a name="objectPreConvert"></a></p>
+<h2>objectPreConvert</h2>
+
+<ul>
+    <li><code>removeFromRowMap</code></li>
+</ul>
+
+<p><a name="objectProvoke"></a></p>
+<h2>objectProvoke</h2>
+
+<ul>
+    <li><code>convertOnProvoke</code></li>
+    <li><code>deactivateMusicLayer</code></li>
+    <li><code>overrideAI</code></li>
+    <li><code>overrideAIByAttackerTeam</code></li>
+    <li><code>playVoiceLine</code></li>
+    <li><code>setProvokedFlag</code></li>
+    <li><code>updateAttackableFlags</code></li>
+</ul>
+
+<p><a name="objectReveal"></a></p>
+<h2>objectReveal</h2>
+
+<ul>
+    <li><code>deactivateTrample</code></li>
+    <li><code>initAutoCastCooldown</code></li>
+    <li><code>playRevealSound</code></li>
+    <li><code>revealShadow</code></li>
+    <li><code>revealSprite</code></li>
+</ul>
+
+<p><a name="objectShrink"></a></p>
+<h2>objectShrink</h2>
+
+<ul>
+    <li><code>activateDwarfism</code></li>
+    <li><code>modifyShadowScale</code></li>
+    <li><code>modifySpriteScale</code></li>
+    <li><code>playVoiceLine</code></li>
+    <li><code>resetGigantism</code></li>
+    <li><code>setDwarfismTimer</code></li>
+    <li><code>spawnFlyaway</code></li>
+    <li><code>suppressOnGigantism</code></li>
+</ul>
+
+<p><a name="objectSink"></a></p>
+<h2>objectSink</h2>
+
+<ul>
+    <li><code>playSinkAnimation</code></li>
+    <li><code>playSinkSound</code></li>
+    <li><code>sinkEntity</code></li>
+</ul>
+
+<p><a name="objectSongEnd"></a></p>
+<h2>objectSongEnd</h2>
+
+<ul>
+    <li><code>inflictDamage</code></li>
+    <li><code>spawnEntity</code></li>
+</ul>
+
+<p><a name="objectSpawn"></a></p>
+<h2>objectSpawn</h2>
+
+<ul>
+    <li><code>activateInitialDwarfism</code></li>
+    <li><code>activateInitialGigantism</code></li>
+    <li><code>applyZoneDependentActivationRadius</code></li>
+    <li><code>assignDefaultAI</code></li>
+    <li><code>checkShrinkTile</code></li>
+    <li><code>convertVocalEntity</code></li>
+    <li><code>enableLightSource</code></li>
+    <li><code>giveInitialEquipment</code></li>
+    <li><code>hideShadowIfUnrevealed</code></li>
+    <li><code>hideSpriteIfUnrevealed</code></li>
+    <li><code>initFacingDirection</code></li>
+    <li><code>initLightPosition</code></li>
+    <li><code>initSilhouette</code></li>
+    <li><code>initializeAttackableFlags</code></li>
+    <li><code>initializeObjectAttributes</code></li>
+    <li><code>initializeObjectHomePosition</code></li>
+    <li><code>initializeObjectPosition</code></li>
+    <li><code>initializeObjectPrevPosition</code></li>
+    <li><code>initializeObjectTangibility</code></li>
+    <li><code>initializeRandomState</code></li>
+    <li><code>mergeItemStack</code></li>
+    <li><code>offsetSpriteIfAboveWall</code></li>
+    <li><code>randomizeHoverEffect</code></li>
+    <li><code>selectRandomSpriteVariant</code></li>
+    <li><code>sinkIntoLiquidTile</code></li>
+    <li><code>spawnCharacterHead</code></li>
+    <li><code>spriteMimicTargetAttachmentParent</code></li>
+    <li><code>updateEquipmentSprite</code></li>
+</ul>
+
+<p><a name="objectSpecialAction"></a></p>
+<h2>objectSpecialAction</h2>
+
+<ul>
+    <li><code>despawnOnAct</code></li>
+    <li><code>faceTowardsTarget</code></li>
+    <li><code>hopInPlaceOnIdle</code></li>
+    <li><code>idle</code></li>
+    <li><code>innateSpellcasts</code></li>
+    <li><code>interceptActionDelay</code></li>
+    <li><code>moveOverride</code></li>
+    <li><code>playSpellcastAnimation</code></li>
+    <li><code>resetBeatDelay</code></li>
+    <li><code>resetHasMoved</code></li>
+    <li><code>resetPreviousPosition</code></li>
+    <li><code>updateGrooveChain</code></li>
+    <li><code>updatePattern</code></li>
+    <li><code>useActiveItem</code></li>
+</ul>
+
+<p><a name="objectTakeDamage"></a></p>
+<h2>objectTakeDamage</h2>
+
+<ul>
+    <li><code>activateBlinkEffect</code></li>
+    <li><code>applyBarrier</code></li>
+    <li><code>applyGigantismMultiplier</code></li>
+    <li><code>applyInvincibility</code></li>
+    <li><code>applyKnockback</code></li>
+    <li><code>applyLevelExitImmunity</code></li>
+    <li><code>applyShield</code></li>
+    <li><code>breakShield</code></li>
+    <li><code>castSpell</code></li>
+    <li><code>checkDeath</code></li>
+    <li><code>checkShieldDirection</code></li>
+    <li><code>convertOnShieldBreak</code></li>
+    <li><code>createBarrierFlyaway</code></li>
+    <li><code>drawScreenFlash</code></li>
+    <li><code>dropGrooveChain</code></li>
+    <li><code>genericHitSound</code></li>
+    <li><code>grabHitSound</code></li>
+    <li><code>grabProtection</code></li>
+    <li><code>grantInvincibility</code></li>
+    <li><code>hitSound</code></li>
+    <li><code>moveOverrideShield</code></li>
+    <li><code>performLowHealthConversion</code></li>
+    <li><code>playBarrierHitSound</code></li>
+    <li><code>playLowHealthSound</code></li>
+    <li><code>playShieldBreakSound</code></li>
+    <li><code>playShieldHitSound</code></li>
+    <li><code>provoke</code></li>
+    <li><code>redirectMoveOverride</code></li>
+    <li><code>reduceCursedHealth</code></li>
+    <li><code>reduceHealth</code></li>
+    <li><code>setKnockback</code></li>
+    <li><code>shakeScreenOnHit</code></li>
+    <li><code>shieldCastSpell</code></li>
+    <li><code>shieldDodge</code></li>
+    <li><code>shieldKnockback</code></li>
+    <li><code>shieldOverrideBeatDelay</code></li>
+    <li><code>shieldSetBeatDelay</code></li>
+    <li><code>showHealthBar</code></li>
+    <li><code>startMoveOverride</code></li>
+    <li><code>suppressedHitSound</code></li>
+    <li><code>switchToLowHealthAI</code></li>
+    <li><code>switchToLowHealthDelay</code></li>
+    <li><code>targetAttacker</code></li>
+    <li><code>thawFrozenObject</code></li>
+</ul>
+
+<p><a name="objectTangible"></a></p>
+<h2>objectTangible</h2>
+
+<ul>
+    <li><code>addObjectToMap</code></li>
+    <li><code>addToCollisionMap</code></li>
+    <li><code>addToObjectRowMap</code></li>
+    <li><code>addToTargetingTeam</code></li>
+</ul>
+
+<p><a name="objectTeamChange"></a></p>
+<h2>objectTeamChange</h2>
+
+<ul>
+    <li><code>changeTeam</code></li>
+    <li><code>updateTargeting</code></li>
+</ul>
+
+<p><a name="objectTickle"></a></p>
+<h2>objectTickle</h2>
+
+<ul>
+    <li><code>dropCurrency</code></li>
+    <li><code>dropItems</code></li>
+    <li><code>grantGrooveChain</code></li>
+    <li><code>grantKillCredit</code></li>
+</ul>
+
+<p><a name="objectTileChange"></a></p>
+<h2>objectTileChange</h2>
+
+<ul>
+    <li><code>deleteMultiHitDigAccumulator</code></li>
+    <li><code>deletePendingTransformationTimers</code></li>
+    <li><code>despawnOnWallRemoval</code></li>
+    <li><code>unsinkEntity</code></li>
+</ul>
+
+<p><a name="objectUnconfuse"></a></p>
+<h2>objectUnconfuse</h2>
+
+<ul>
+    <li><code>resetAggro</code></li>
+    <li><code>resetConfusionTime</code></li>
+</ul>
+
+<p><a name="objectUnfreeze"></a></p>
+<h2>objectUnfreeze</h2>
+
+<ul>
+    <li><code>addFreezeTime</code></li>
+</ul>
+
+<p><a name="objectUngrab"></a></p>
+<h2>objectUngrab</h2>
+
+<ul>
+    <li><code>decreaseHealth</code></li>
+    <li><code>detachFromVictim</code></li>
+    <li><code>giveKillCredit</code></li>
+    <li><code>grantGrooveChain</code></li>
+    <li><code>restoreAI</code></li>
+    <li><code>unsuppressCurrencyDrop</code></li>
+</ul>
+
+<p><a name="objectUngrow"></a></p>
+<h2>objectUngrow</h2>
+
+<ul>
+    <li><code>resetDwarfismTimer</code></li>
+    <li><code>resetGigantism</code></li>
+    <li><code>resetGigantismTimer</code></li>
+    <li><code>resetHealthMultiplier</code></li>
+    <li><code>resetShadowScale</code></li>
+    <li><code>resetSpriteScale</code></li>
+    <li><code>updateAttackability</code></li>
+</ul>
+
+<p><a name="objectUnshrink"></a></p>
+<h2>objectUnshrink</h2>
+
+<ul>
+    <li><code>playVoiceLine</code></li>
+    <li><code>resetDwarfism</code></li>
+    <li><code>resetShadowScale</code></li>
+    <li><code>resetSpriteScale</code></li>
+</ul>
+
+<p><a name="objectUnsink"></a></p>
+<h2>objectUnsink</h2>
+
+<ul>
+    <li><code>gigantismTilePreservation</code></li>
+    <li><code>gigantismUnsinkImmunity</code></li>
+    <li><code>hopInPlace</code></li>
+    <li><code>playUnsinkAnimation</code></li>
+    <li><code>playUnsinkSound</code></li>
+    <li><code>setActionResult</code></li>
+    <li><code>tilePreservation</code></li>
+    <li><code>transformLiquidTile</code></li>
+    <li><code>unsinkActionImmunity</code></li>
+    <li><code>unsinkEntity</code></li>
+</ul>
+
+<p><a name="objectUpdateAttackability"></a></p>
+<h2>objectUpdateAttackability</h2>
+
+<ul>
+    <li><code>applyEffectiveFlags</code></li>
+    <li><code>descentAttackProtection</code></li>
+    <li><code>gigantismAttackableFlags</code></li>
+    <li><code>initializeFlags</code></li>
+    <li><code>provokable</code></li>
+    <li><code>stasisAttackability</code></li>
+</ul>
+
+<p><a name="objectUpdateEquipmentSprite"></a></p>
+<h2>objectUpdateEquipmentSprite</h2>
+
+<ul>
+    <li><code>applyEquipmentSprite</code></li>
+</ul>
+
+<p><a name="objectUpdatePerspective"></a></p>
+<h2>objectUpdatePerspective</h2>
+
+<ul>
+    <li><code>fullObjectVision</code></li>
+    <li><code>fullTileVision</code></li>
+    <li><code>objectUnsilhouette</code></li>
+    <li><code>objectVisionRadius</code></li>
+    <li><code>objectVisionRadiusActivationRange</code></li>
+    <li><code>temporaryTileVision</code></li>
+    <li><code>tileVisionRadius</code></li>
+    <li><code>tileVisionRadiusActivationRange</code></li>
+</ul>
+
+<p><a name="objectUpdateRhythm"></a></p>
+<h2>objectUpdateRhythm</h2>
+
+<ul>
+    <li><code>autoPlay</code></li>
+    <li><code>ignoreRhythmInnate</code></li>
+    <li><code>ignoreRhythmTemporarily</code></li>
+    <li><code>subdivisionInnate</code></li>
+    <li><code>suspendRhythmWhileSpectating</code></li>
+</ul>
+
+<p><a name="objectVocalize"></a></p>
+<h2>objectVocalize</h2>
+
+<ul>
+    <li><code>modifyPitchDwarfism</code></li>
+    <li><code>modifyPitchGigantism</code></li>
+    <li><code>playSound</code></li>
+</ul>
+
+<p><a name="perspectiveUpdated"></a></p>
+<h2>perspectiveUpdated</h2>
+
+<ul>
+    <li><code>updateObjectVisibility</code></li>
+    <li><code>updateVisMap</code></li>
+</ul>
+
+<p><a name="priceTagCheck"></a></p>
+<h2>priceTagCheck</h2>
+
+<ul>
+    <li><code>checkActivity</code></li>
+    <li><code>checkPurchaseOnBuyer</code></li>
+    <li><code>checkSufficientCurrency</code></li>
+    <li><code>playUnaffordableSound</code></li>
+    <li><code>showUnaffordableFlyaway</code></li>
+</ul>
+
+<p><a name="priceTagPay"></a></p>
+<h2>priceTagPay</h2>
+
+<ul>
+    <li><code>payCurrency</code></li>
+    <li><code>payHealth</code></li>
+    <li><code>playPurchaseSound</code></li>
+    <li><code>removePriceTag</code></li>
+</ul>
+
+<p><a name="priceTagUpdate"></a></p>
+<h2>priceTagUpdate</h2>
+
+<ul>
+    <li><code>checkShopkeeperProximity</code></li>
+</ul>
+
+<p><a name="registerEnumEntries"></a></p>
+<h2>registerEnumEntries</h2>
+
+
+<p><a name="render"></a></p>
+<h2>render</h2>
+
+<ul>
+    <li><code>adjustCamera</code></li>
+    <li><code>clear</code></li>
+    <li><code>clearOldDebugVisuals</code></li>
+    <li><code>debugOverlay</code></li>
+    <li><code>drawCountdown</code></li>
+    <li><code>drawKeyRebinder</code></li>
+    <li><code>drawOverlayAboveHUD</code></li>
+    <li><code>drawOverlayBelowHUD</code></li>
+    <li><code>moveAnimations</code></li>
+    <li><code>renderChat</code></li>
+    <li><code>renderEffects</code></li>
+    <li><code>renderFloors</code></li>
+    <li><code>renderFlyaways</code></li>
+    <li><code>renderForegroundParticleSystems</code></li>
+    <li><code>renderHUD</code></li>
+    <li><code>renderHealthBars</code></li>
+    <li><code>renderItemLabels</code></li>
+    <li><code>renderLayeredRows</code></li>
+    <li><code>renderLobby</code></li>
+    <li><code>renderMenu</code></li>
+    <li><code>renderMenuOverlay</code></li>
+    <li><code>renderPlayerNames</code></li>
+    <li><code>renderPriceTags</code></li>
+    <li><code>renderShadows</code></li>
+    <li><code>renderSwipes</code></li>
+    <li><code>spriteAnimations</code></li>
+    <li><code>updateAnimationTimer</code></li>
+    <li><code>updateMimicSprites</code></li>
+    <li><code>updateObjectRenderingPerspective</code></li>
+</ul>
+
+<p><a name="renderEffects"></a></p>
+<h2>renderEffects</h2>
+
+<ul>
+    <li><code>animateFadeEffect</code></li>
+    <li><code>animateHoverEffect</code></li>
+    <li><code>applyBlinkEffect</code></li>
+    <li><code>applyCropOnDescentEffect</code></li>
+    <li><code>applyCropOnSinkEffect</code></li>
+    <li><code>applyFreezeEffect</code></li>
+    <li><code>applySpriteOffsetIfAboveWall</code></li>
+    <li><code>applySwayDuringMoveOverride</code></li>
+    <li><code>applyTileBrightnessEffect</code></li>
+</ul>
+
+<p><a name="renderGlobalHUD"></a></p>
+<h2>renderGlobalHUD</h2>
+
+<ul>
+    <li><code>renderBeatIndicators</code></li>
+    <li><code>renderHeartbeatHUD</code></li>
+    <li><code>renderLevelCounter</code></li>
+    <li><code>renderMinimap</code></li>
+    <li><code>renderPlayerHUDs</code></li>
+    <li><code>renderSpectatorHUD</code></li>
+    <li><code>renderSpeedrunTimer</code></li>
+</ul>
+
+<p><a name="renderPlayerHUD"></a></p>
+<h2>renderPlayerHUD</h2>
+
+<ul>
+    <li><code>renderCurrencyCounters</code></li>
+    <li><code>renderEquippedItems</code></li>
+    <li><code>renderGrooveChain</code></li>
+    <li><code>renderHealthBar</code></li>
+    <li><code>renderHeartbeatIndicatorHUD</code></li>
+</ul>
+
+<p><a name="resourceLoaded"></a></p>
+<h2>resourceLoaded</h2>
+
+<ul>
+    <li><code>updateModList</code></li>
+    <li><code>updateResourceVersion</code></li>
+</ul>
+
+<p><a name="serverChangeGameState"></a></p>
+<h2>serverChangeGameState</h2>
+
+<ul>
+    <li><code>broadcastStateChange</code></li>
+    <li><code>cancelFastForward</code></li>
+    <li><code>changeActionBufferLevel</code></li>
+    <li><code>computeTimestamp</code></li>
+    <li><code>setInitialSpawnCharacters</code></li>
+    <li><code>updateLobbyJoinability</code></li>
+    <li><code>updateRoom</code></li>
+</ul>
+
+<p><a name="serverChangeMaxPlayers"></a></p>
+<h2>serverChangeMaxPlayers</h2>
+
+<ul>
+    <li><code>updateLobbyJoinability</code></li>
+</ul>
+
+<p><a name="serverCheckLogIn"></a></p>
+<h2>serverCheckLogIn</h2>
+
+<ul>
+    <li><code>checkPlayerLimit</code></li>
+    <li><code>checkUsername</code></li>
+</ul>
+
+<p><a name="serverConnect"></a></p>
+<h2>serverConnect</h2>
+
+<ul>
+    <li><code>acceptOrRejectPlayer</code></li>
+    <li><code>reconnectLocalCoopPlayers</code></li>
+</ul>
+
+<p><a name="serverCreateRoom"></a></p>
+<h2>serverCreateRoom</h2>
+
+<ul>
+    <li><code>assignInitialGameState</code></li>
+    <li><code>createActionBuffer</code></li>
+    <li><code>createRoomEntry</code></li>
+    <li><code>createTurnSyncBuffer</code></li>
+</ul>
+
+<p><a name="serverDeleteRoom"></a></p>
+<h2>serverDeleteRoom</h2>
+
+<ul>
+    <li><code>deleteActionBuffer</code></li>
+    <li><code>deleteRoomEntry</code></li>
+    <li><code>deleteTurnSyncBuffer</code></li>
+</ul>
+
+<p><a name="serverDisconnect"></a></p>
+<h2>serverDisconnect</h2>
+
+<ul>
+    <li><code>disconnectLocalCoopPlayers</code></li>
+    <li><code>removeOrHideFromPlayerList</code></li>
+    <li><code>removePlayerFromRoom</code></li>
+    <li><code>sendLeaveMessage</code></li>
+</ul>
+
+<p><a name="serverEnterRoom"></a></p>
+<h2>serverEnterRoom</h2>
+
+<ul>
+    <li><code>addPlayerToRoomPlayerList</code></li>
+    <li><code>assignAndUpdateHost</code></li>
+    <li><code>assignPlayerRoomID</code></li>
+    <li><code>initFastForward</code></li>
+    <li><code>interceptLocalCoopPlayers</code></li>
+    <li><code>sendCurrentGameState</code></li>
+    <li><code>sendRoomChangePacket</code></li>
+    <li><code>synchronizeNetworkChannels</code></li>
+    <li><code>transferAllResources</code></li>
+</ul>
+
+<p><a name="serverLeaveRoom"></a></p>
+<h2>serverLeaveRoom</h2>
+
+<ul>
+    <li><code>addSpectateAction</code></li>
+    <li><code>assignPlayerRoomID</code></li>
+    <li><code>cancelAllResourceTransfers</code></li>
+    <li><code>cancelFastForward</code></li>
+    <li><code>interceptLocalCoopPlayers</code></li>
+    <li><code>reassignHost</code></li>
+    <li><code>removeFromTurnSyncs</code></li>
+    <li><code>removePlayerFromRoomPlayerList</code></li>
+    <li><code>sendRoomChangePacket</code></li>
+</ul>
+
+<p><a name="serverLogIn"></a></p>
+<h2>serverLogIn</h2>
+
+<ul>
+    <li><code>addPlayerToRoom</code></li>
+    <li><code>assignUsername</code></li>
+    <li><code>sendJoinMessage</code></li>
+    <li><code>sendPlayerID</code></li>
+    <li><code>setLoggedInFlag</code></li>
+    <li><code>updatePlayerList</code></li>
+</ul>
+
+<p><a name="serverMessage"></a></p>
+<h2>serverMessage</h2>
+
+<ul>
+    <li><code>acceptLogin</code></li>
+    <li><code>addLocalCoopPlayer</code></li>
+    <li><code>answerClockSync</code></li>
+    <li><code>broadcastChat</code></li>
+    <li><code>broadcastInputs</code></li>
+    <li><code>broadcastResource</code></li>
+    <li><code>broadcastTurnSyncRequest</code></li>
+    <li><code>completeTurnSync</code></li>
+    <li><code>confirmTurnSync</code></li>
+    <li><code>handleGameStateChange</code></li>
+    <li><code>receiveLocalCoopPlayerAttribute</code></li>
+    <li><code>receiveLocalCoopPlayerInput</code></li>
+    <li><code>receivePlayerAttribute</code></li>
+    <li><code>releaseTurnSync</code></li>
+    <li><code>removeLocalCoopPlayer</code></li>
+</ul>
+
+<p><a name="serverReset"></a></p>
+<h2>serverReset</h2>
+
+<ul>
+    <li><code>clearPlayerList</code></li>
+    <li><code>clearResourceTransferLists</code></li>
+    <li><code>closeSocket</code></li>
+    <li><code>removeTurnSyncs</code></li>
+    <li><code>resetActionBuffer</code></li>
+    <li><code>resetFastForwardTransfers</code></li>
+    <li><code>resetLobby</code></li>
+    <li><code>resetRooms</code></li>
+</ul>
+
+<p><a name="serverStart"></a></p>
+<h2>serverStart</h2>
+
+<ul>
+    <li><code>openSocket</code></li>
+    <li><code>resetServer</code></li>
+</ul>
+
+<p><a name="serverStop"></a></p>
+<h2>serverStop</h2>
+
+<ul>
+    <li><code>resetServer</code></li>
+</ul>
+
+<p><a name="serverTick"></a></p>
+<h2>serverTick</h2>
+
+<ul>
+    <li><code>checkTurnSyncTimeouts</code></li>
+    <li><code>processSocketEvents</code></li>
+    <li><code>updatePlayerLatencyList</code></li>
+    <li><code>updateSteamLobby</code></li>
+</ul>
+
+<p><a name="snapshotDrop"></a></p>
+<h2>snapshotDrop</h2>
+
+<ul>
+    <li><code>dropEntities</code></li>
+</ul>
+
+<p><a name="snapshotLoad"></a></p>
+<h2>snapshotLoad</h2>
+
+<ul>
+    <li><code>loadActiveOverlays</code></li>
+    <li><code>loadApparitionSpawnCooldowns</code></li>
+    <li><code>loadCollisionMap</code></li>
+    <li><code>loadEntities</code></li>
+    <li><code>loadGlobalRandomState</code></li>
+    <li><code>loadLevelExit</code></li>
+    <li><code>loadMinimap</code></li>
+    <li><code>loadObjectMap</code></li>
+    <li><code>loadObjectRows</code></li>
+    <li><code>loadPendingTraps</code></li>
+    <li><code>loadPlayerEntities</code></li>
+    <li><code>loadSpectators</code></li>
+    <li><code>loadTargetingTeams</code></li>
+    <li><code>loadTileMap</code></li>
+    <li><code>loadTimeScale</code></li>
+    <li><code>loadTurnID</code></li>
+    <li><code>loadVisMap</code></li>
+    <li><code>songEnd</code></li>
+</ul>
+
+<p><a name="snapshotSave"></a></p>
+<h2>snapshotSave</h2>
+
+<ul>
+    <li><code>saveActiveOverlays</code></li>
+    <li><code>saveApparitionSpawnCooldowns</code></li>
+    <li><code>saveCollisionMap</code></li>
+    <li><code>saveEntities</code></li>
+    <li><code>saveGlobalRandomState</code></li>
+    <li><code>saveLevelExit</code></li>
+    <li><code>saveMinimap</code></li>
+    <li><code>saveObjectMap</code></li>
+    <li><code>saveObjectRows</code></li>
+    <li><code>savePendingTraps</code></li>
+    <li><code>savePlayerEntities</code></li>
+    <li><code>saveSpectators</code></li>
+    <li><code>saveTargetingTeams</code></li>
+    <li><code>saveTileMap</code></li>
+    <li><code>saveTimeScale</code></li>
+    <li><code>saveTurnID</code></li>
+    <li><code>saveVisMap</code></li>
+    <li><code>songEnd</code></li>
+</ul>
+
+<p><a name="spellItemActivate"></a></p>
+<h2>spellItemActivate</h2>
+
+<ul>
+    <li><code>applyCasterDirection</code></li>
+    <li><code>applyExternalUpgrade</code></li>
+    <li><code>applySpellcastUpgrade</code></li>
+    <li><code>castSpell</code></li>
+    <li><code>payBloodCost</code></li>
+    <li><code>playSpellItemSound</code></li>
+    <li><code>playSpellItemVoice</code></li>
+    <li><code>resetKillCooldown</code></li>
+    <li><code>resetTimeCooldown</code></li>
+    <li><code>updateSpellItemOpacity</code></li>
+</ul>
+
+<p><a name="spellItemCooldown"></a></p>
+<h2>spellItemCooldown</h2>
+
+<ul>
+    <li><code>baseActivation</code></li>
+    <li><code>bloodMagic</code></li>
+    <li><code>kills</code></li>
+    <li><code>time</code></li>
+</ul>
+
+<p><a name="spellProcess"></a></p>
+<h2>spellProcess</h2>
+
+<ul>
+    <li><code>teleport</code></li>
+</ul>
+
+<p><a name="spellTargetArea"></a></p>
+<h2>spellTargetArea</h2>
+
+<ul>
+    <li><code>coneTarget</code></li>
+    <li><code>globalTarget</code></li>
+    <li><code>linearTarget</code></li>
+    <li><code>radialTarget</code></li>
+    <li><code>rectangularTarget</code></li>
+</ul>
+
+<p><a name="spellTeleportFilter"></a></p>
+<h2>spellTeleportFilter</h2>
+
+<ul>
+    <li><code>avoidTargetEntities</code></li>
+</ul>
+
+<p><a name="spellTeleportTarget"></a></p>
+<h2>spellTeleportTarget</h2>
+
+<ul>
+    <li><code>teleportToMarker</code></li>
+    <li><code>teleportToRandomTile</code></li>
+</ul>
+
+<p><a name="spellcast"></a></p>
+<h2>spellcast</h2>
+
+<ul>
+    <li><code>applyCasterBeatDelay</code></li>
+    <li><code>applyDirectionOffset</code></li>
+    <li><code>convertTiles</code></li>
+    <li><code>destroyItems</code></li>
+    <li><code>destroyTraps</code></li>
+    <li><code>destroyWalls</code></li>
+    <li><code>grantBarrier</code></li>
+    <li><code>inflictConfusion</code></li>
+    <li><code>inflictFreeze</code></li>
+    <li><code>inflictSpellDamage</code></li>
+    <li><code>knockback</code></li>
+    <li><code>modifySize</code></li>
+    <li><code>playSound</code></li>
+    <li><code>spawnCoreSwipe</code></li>
+    <li><code>spawnEntity</code></li>
+    <li><code>spawnMultiTileSwipes</code></li>
+    <li><code>spawnMulticastCopies</code></li>
+</ul>
+
+<p><a name="startup"></a></p>
+<h2>startup</h2>
+
+<ul>
+    <li><code>initCollisionMap</code></li>
+    <li><code>initGameState</code></li>
+    <li><code>initTileMap</code></li>
+    <li><code>initVisMap</code></li>
+    <li><code>initializeObjectRowMap</code></li>
+    <li><code>loadConfig</code></li>
+    <li><code>loadGameContent</code></li>
+    <li><code>loadMods</code></li>
+</ul>
+
+<p><a name="swipe"></a></p>
+<h2>swipe</h2>
+
+<ul>
+    <li><code>axe</code></li>
+    <li><code>blunderbuss</code></li>
+    <li><code>bow</code></li>
+    <li><code>broadsword</code></li>
+    <li><code>cat</code></li>
+    <li><code>dagger</code></li>
+    <li><code>enemy</code></li>
+    <li><code>flail</code></li>
+    <li><code>harp</code></li>
+    <li><code>longsword</code></li>
+    <li><code>rapier</code></li>
+    <li><code>shovel</code></li>
+    <li><code>spell</code></li>
+    <li><code>staff</code></li>
+    <li><code>trail</code></li>
+    <li><code>warhammer</code></li>
+    <li><code>whip</code></li>
+</ul>
+
+<p><a name="systemExit"></a></p>
+<h2>systemExit</h2>
+
+<ul>
+    <li><code>exitGame</code></li>
+</ul>
+
+<p><a name="tick"></a></p>
+<h2>tick</h2>
+
+<ul>
+    <li><code>applyRhythmSettings</code></li>
+    <li><code>checkSongEnd</code></li>
+    <li><code>checkTurnSync</code></li>
+    <li><code>cleanUpFlyawayEntities</code></li>
+    <li><code>cleanUpSwipeEntities</code></li>
+    <li><code>cleanUpTimedOutOverlays</code></li>
+    <li><code>debugDocs</code></li>
+    <li><code>debugKeys</code></li>
+    <li><code>fetchGeneratedLevels</code></li>
+    <li><code>handleChat</code></li>
+    <li><code>initializeModList</code></li>
+    <li><code>networkClient</code></li>
+    <li><code>networkServer</code></li>
+    <li><code>performLevelTransition</code></li>
+    <li><code>playCountdownSound</code></li>
+    <li><code>playerInput</code></li>
+    <li><code>processFastForward</code></li>
+    <li><code>processKeyRebinder</code></li>
+    <li><code>processLobby</code></li>
+    <li><code>processMenu</code></li>
+    <li><code>processSpectatorMode</code></li>
+    <li><code>processTurns</code></li>
+    <li><code>reloadGameContent</code></li>
+    <li><code>rollback</code></li>
+    <li><code>syncNetworkClock</code></li>
+    <li><code>syncNetworkGameState</code></li>
+    <li><code>timeOutTurnSyncRequests</code></li>
+    <li><code>updateAnimationTimer</code></li>
+    <li><code>updateAudioFilter</code></li>
+    <li><code>updateFocusedPlayers</code></li>
+    <li><code>updateMusic</code></li>
+    <li><code>updatePerspective</code></li>
+    <li><code>updateSounds</code></li>
+    <li><code>updateVisibility</code></li>
+</ul>
+
+<p><a name="tileChanged"></a></p>
+<h2>tileChanged</h2>
+
+<ul>
+    <li><code>createTransformationTimer</code></li>
+    <li><code>forwardTileChangeEventsToObjects</code></li>
+    <li><code>updateCollisionMap</code></li>
+    <li><code>updateTileMap</code></li>
+    <li><code>updateVisMapFlags</code></li>
+</ul>
+
+<p><a name="tileMapSizeChanged"></a></p>
+<h2>tileMapSizeChanged</h2>
+
+<ul>
+    <li><code>recreateLightSources</code></li>
+    <li><code>resetObjectMap</code></li>
+    <li><code>resetObjectRowMap</code></li>
+    <li><code>updateCollisionMap</code></li>
+    <li><code>updateMinimap</code></li>
+    <li><code>updateTileMap</code></li>
+    <li><code>updateVisMap</code></li>
+</ul>
+
+<p><a name="tileSchemaBuild"></a></p>
+<h2>tileSchemaBuild</h2>
+
+<ul>
+    <li><code>addAbstractTiles</code></li>
+    <li><code>addCatacombWall</code></li>
+    <li><code>addDecorativeFloors</code></li>
+    <li><code>addDirtWall</code></li>
+    <li><code>addFloor</code></li>
+    <li><code>addHazardFloors</code></li>
+    <li><code>addLevelBorder</code></li>
+    <li><code>addLiquidFloors</code></li>
+    <li><code>addLockedDoors</code></li>
+    <li><code>addMetalDoors</code></li>
+    <li><code>addRecededFloor</code></li>
+    <li><code>addRisingFloor</code></li>
+    <li><code>addShopWall</code></li>
+    <li><code>addStage</code></li>
+    <li><code>addStairs</code></li>
+    <li><code>addStoneWall</code></li>
+    <li><code>addUnbreakableWall</code></li>
+    <li><code>addWoodenDoors</code></li>
+    <li><code>inheritAbstractTiles</code></li>
+</ul>
+
+<p><a name="tileSchemaProcess"></a></p>
+<h2>tileSchemaProcess</h2>
+
+<ul>
+    <li><code>generateTiles</code></li>
+    <li><code>loadTiles</code></li>
+</ul>
+
+<p><a name="tileSchemaUpdate"></a></p>
+<h2>tileSchemaUpdate</h2>
+
+<ul>
+    <li><code>createFloorVisuals</code></li>
+    <li><code>createWallVisuals</code></li>
+    <li><code>translateLevelTiles</code></li>
+</ul>
+
+<p><a name="tramplePerform"></a></p>
+<h2>tramplePerform</h2>
+
+<ul>
+    <li><code>damageSurroundingObjects</code></li>
+    <li><code>digSurroundingTiles</code></li>
+</ul>
+
+<p><a name="trapArm"></a></p>
+<h2>trapArm</h2>
+
+<ul>
+    <li><code>armTrapImmediately</code></li>
+    <li><code>armTrapOnVictimMove</code></li>
+    <li><code>enforceMinimumDelay</code></li>
+</ul>
+
+<p><a name="trapTrigger"></a></p>
+<h2>trapTrigger</h2>
+
+<ul>
+    <li><code>applyAbsoluteMoveDirection</code></li>
+    <li><code>applyRelativeMoveDirection</code></li>
+    <li><code>armTrap</code></li>
+    <li><code>castSpell</code></li>
+    <li><code>crushTrap</code></li>
+    <li><code>descend</code></li>
+    <li><code>dropGrooveChain</code></li>
+    <li><code>inflictDamage</code></li>
+    <li><code>modifyTimeScale</code></li>
+    <li><code>moveVictim</code></li>
+    <li><code>playAnimation</code></li>
+    <li><code>playFailSound</code></li>
+    <li><code>playFirstTimeSound</code></li>
+    <li><code>playSuccessSound</code></li>
+    <li><code>removeFirstTimeFlag</code></li>
+    <li><code>scatterInventory</code></li>
+    <li><code>updateTargetFlags</code></li>
+</ul>
+
+<p><a name="turn"></a></p>
+<h2>turn</h2>
+
+<ul>
+    <li><code>activatePendingDigDamageIncreases</code></li>
+    <li><code>aggroOnActivation</code></li>
+    <li><code>applyMissedBeats</code></li>
+    <li><code>applyTileIdleDamage</code></li>
+    <li><code>checkCurrencyGainForConditionalDamage</code></li>
+    <li><code>checkDescentCompletion</code></li>
+    <li><code>checkLevelExitCondition</code></li>
+    <li><code>checkTrapTrigger</code></li>
+    <li><code>clearConversionList</code></li>
+    <li><code>clearDespawnList</code></li>
+    <li><code>computeAITargets</code></li>
+    <li><code>controlPlayer</code></li>
+    <li><code>convertObjects</code></li>
+    <li><code>convertTraps</code></li>
+    <li><code>decrementBeatDelay</code></li>
+    <li><code>despawnBarrierAttachments</code></li>
+    <li><code>despawnExpiredScreenShakes</code></li>
+    <li><code>despawnFreezeAttachments</code></li>
+    <li><code>despawnObjects</code></li>
+    <li><code>frame1</code></li>
+    <li><code>frame2</code></li>
+    <li><code>handleSongEnd</code></li>
+    <li><code>incrementBeatCounter</code></li>
+    <li><code>markSoundsForRollbackStop</code></li>
+    <li><code>moveOverride</code></li>
+    <li><code>moveOverrideOnSlipperyTile</code></li>
+    <li><code>processAIMovements</code></li>
+    <li><code>processApparitions</code></li>
+    <li><code>processAutoCasts</code></li>
+    <li><code>processDelayedActions</code></li>
+    <li><code>processFrozenEntities</code></li>
+    <li><code>processPendingTraps</code></li>
+    <li><code>processSizeModifiers</code></li>
+    <li><code>reduceBarrierTurnCounters</code></li>
+    <li><code>reduceConfusionTurnCounters</code></li>
+    <li><code>reduceInvincibilityCounters</code></li>
+    <li><code>reduceSpellCooldowns</code></li>
+    <li><code>resetConditionalInvincibility</code></li>
+    <li><code>resetSpellcastAnimation</code></li>
+    <li><code>resetWeaponParry</code></li>
+    <li><code>saveSnapshot</code></li>
+    <li><code>spawnLateJoinPlayers</code></li>
+    <li><code>togglePlayerSpectatorMode</code></li>
+    <li><code>unsuppressItems</code></li>
+    <li><code>updateAttachmentEntities</code></li>
+    <li><code>updateBarrierTimeoutBlinkEffect</code></li>
+    <li><code>updateConditionalInvincibilityBlink</code></li>
+    <li><code>updateDigItemSprites</code></li>
+    <li><code>updateEntityVisibility</code></li>
+    <li><code>updateEquipmentSpriteOverlay</code></li>
+    <li><code>updateFieldOfViewSecondary</code></li>
+    <li><code>updateFreezeTimeoutBlinkEffect</code></li>
+    <li><code>updateMinimap</code></li>
+    <li><code>updateMusicLayerVolumes</code></li>
+    <li><code>updatePriceTags</code></li>
+    <li><code>updateReloadableWeaponSprites</code></li>
+    <li><code>updateRhythm</code></li>
+    <li><code>updateSilhouetteState</code></li>
+    <li><code>updateStasisFade</code></li>
+    <li><code>updateTargetProximityFadeEffect</code></li>
+</ul>
+
+<p><a name="weaponAttack"></a></p>
+<h2>weaponAttack</h2>
+
+<ul>
+    <li><code>addExtraSwipes</code></li>
+    <li><code>addSwipeTrail</code></li>
+    <li><code>addSwipeTrailRayCast</code></li>
+    <li><code>addSwipeTrailThrow</code></li>
+    <li><code>applyConditionalDamage</code></li>
+    <li><code>applyDirectionalAttack</code></li>
+    <li><code>applyGrooveChainDamage</code></li>
+    <li><code>applyKnockback</code></li>
+    <li><code>applyNonDirectionalAttack</code></li>
+    <li><code>enableParry</code></li>
+    <li><code>flyaway</code></li>
+    <li><code>handleLoadedAttack</code></li>
+    <li><code>inflictConfusion</code></li>
+    <li><code>overrideBeatDelay</code></li>
+    <li><code>selectLoadedPattern</code></li>
+    <li><code>selectNormalPattern</code></li>
+    <li><code>sound</code></li>
+    <li><code>suppressDamage</code></li>
+    <li><code>throwWeapon</code></li>
+    <li><code>tickleTargets</code></li>
+    <li><code>wind</code></li>
+</ul>
+
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-11-11 00:05:17 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
