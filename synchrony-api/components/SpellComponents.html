@@ -102,7 +102,6 @@
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
   <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
-  <li><a href="../modules/necro.game.data.LegacyCustomEntities.html">necro.game.data.LegacyCustomEntities</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
@@ -136,6 +135,7 @@
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
+  <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
@@ -155,7 +155,6 @@
   <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
   <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
   <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
-  <li><a href="../modules/necro.game.tile.Sink.html">necro.game.tile.Sink</a></li>
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
@@ -260,6 +259,7 @@
   <li><a href="../components/AttackComponents.html">AttackComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
+  <li><a href="../components/CastComponents.html">CastComponents</a></li>
   <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
   <li><a href="../components/CharacterSpriteComponents.html">CharacterSpriteComponents</a></li>
   <li><a href="../components/CollisionComponents.html">CollisionComponents</a></li>
@@ -298,6 +298,7 @@
   <li><a href="../components/RhythmComponents.html">RhythmComponents</a></li>
   <li><a href="../components/RhythmItemComponents.html">RhythmItemComponents</a></li>
   <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
+  <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
   <li><strong>SpellComponents</strong></li>
@@ -356,7 +357,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastDespawnOnCollision">spellcastDespawnOnCollision</a></td>
+	<td class="name" nowrap><a href="#spellcastDespawnCaster">spellcastDespawnCaster</a></td>
 	<td class="summary">
 
 </td>
@@ -386,6 +387,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#spellcastFlyaway">spellcastFlyaway</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#spellcastGlobal">spellcastGlobal</a></td>
 	<td class="summary">
 
@@ -393,6 +400,18 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#spellcastGrantBarrier">spellcastGrantBarrier</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spellcastHeal">spellcastHeal</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spellcastHopInPlace">spellcastHopInPlace</a></td>
 	<td class="summary">
 
 </td>
@@ -411,6 +430,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#spellcastInflictFreeze">spellcastInflictFreeze</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spellcastKillCaster">spellcastKillCaster</a></td>
 	<td class="summary">
 
 </td>
@@ -452,6 +477,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#spellcastRequireDamageForFX">spellcastRequireDamageForFX</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#spellcastSpawnEntity">spellcastSpawnEntity</a></td>
 	<td class="summary">
 
@@ -470,7 +501,13 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastTeleportAvoidTargetEntities">spellcastTeleportAvoidTargetEntities</a></td>
+	<td class="name" nowrap><a href="#spellcastTeleportAvoidHostileEntities">spellcastTeleportAvoidHostileEntities</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spellcastTeleportMinimumDistance">spellcastTeleportMinimumDistance</a></td>
 	<td class="summary">
 
 </td>
@@ -573,8 +610,8 @@
 
 </dd>
     <dt>
-    <a name = "spellcastDespawnOnCollision"></a>
-    <strong>spellcastDespawnOnCollision</strong>
+    <a name = "spellcastDespawnCaster"></a>
+    <strong>spellcastDespawnCaster</strong>
     </dt>
     <dd>
 
@@ -582,12 +619,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">mask</span>
-         constant int32
-         (<em>default</em> collision.mask(collision.Group.SOLID))
-        </li>
-    </ul>
 
 
 
@@ -665,6 +696,28 @@
 
 </dd>
     <dt>
+    <a name = "spellcastFlyaway"></a>
+    <strong>spellcastFlyaway</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">text</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "spellcastGlobal"></a>
     <strong>spellcastGlobal</strong>
     </dt>
@@ -696,6 +749,48 @@
          (<em>default</em> 0)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastHeal"></a>
+    <strong>spellcastHeal</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">health</span>
+         constant int16
+         (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">invincibility</span>
+         constant int16
+         (<em>default</em> 1)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastHopInPlace"></a>
+    <strong>spellcastHopInPlace</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -786,6 +881,22 @@
          (<em>default</em> attack.mask(attack.Flag.DIRECT)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastKillCaster"></a>
+    <strong>spellcastKillCaster</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -953,6 +1064,22 @@
 
 </dd>
     <dt>
+    <a name = "spellcastRequireDamageForFX"></a>
+    <strong>spellcastRequireDamageForFX</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "spellcastSpawnEntity"></a>
     <strong>spellcastSpawnEntity</strong>
     </dt>
@@ -969,7 +1096,7 @@
         </li>
         <li><span class="parameter">delay</span>
          constant int16
-         (<em>default</em> 0)
+         (<em>default</em> 1)
         </li>
         <li><span class="parameter">distance</span>
          constant int16
@@ -977,7 +1104,27 @@
         </li>
         <li><span class="parameter">moveType</span>
          constant int32
-         (<em>default</em> 0)
+         (<em>default</em> move.Type.NORMAL)
+        </li>
+        <li><span class="parameter">collisionMask</span>
+         constant int32
+         (<em>default</em> collision.Group.SOLID)
+        </li>
+        <li><span class="parameter">skipCasterPosition</span>
+         constant bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">setAxis</span>
+         constant bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">attemptOffsets</span>
+         constant table
+         (<em>default</em> {{0)
+        </li>
+        <li><span class="parameter">attributes</span>
+         constant table
+         (<em>default</em> {})
         </li>
     </ul>
 
@@ -1025,8 +1172,30 @@
 
 </dd>
     <dt>
-    <a name = "spellcastTeleportAvoidTargetEntities"></a>
-    <strong>spellcastTeleportAvoidTargetEntities</strong>
+    <a name = "spellcastTeleportAvoidHostileEntities"></a>
+    <strong>spellcastTeleportAvoidHostileEntities</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">minimumDistance</span>
+         constant int16
+         (<em>default</em> 2)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastTeleportMinimumDistance"></a>
+    <strong>spellcastTeleportMinimumDistance</strong>
     </dt>
     <dd>
 
@@ -1147,7 +1316,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-14 15:07:16 </i>
+<i style="float:right;">Last updated 2020-11-27 13:24:25 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

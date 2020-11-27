@@ -102,7 +102,6 @@
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
   <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
-  <li><a href="../modules/necro.game.data.LegacyCustomEntities.html">necro.game.data.LegacyCustomEntities</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
@@ -136,6 +135,7 @@
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
+  <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
@@ -155,7 +155,6 @@
   <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
   <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
   <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
-  <li><a href="../modules/necro.game.tile.Sink.html">necro.game.tile.Sink</a></li>
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
@@ -314,7 +313,9 @@
   <li><a href="../components/SpellItemComponents.html">SpellItemComponents</a></li>
   <li><a href="../components/WeaponComponents.html">WeaponComponents</a></li>
   <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
+  <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/TrapComponents.html">TrapComponents</a></li>
+  <li><a href="../components/CastComponents.html">CastComponents</a></li>
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
   <li><a href="../components/LightComponents.html">LightComponents</a></li>
   <li><a href="../components/VisibilityComponents.html">VisibilityComponents</a></li>
@@ -338,7 +339,19 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#fovAddCircle">fovAddCircle (x, y, radius)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#fovAddRaycast">fovAddRaycast (x, y)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#fovClear">fovClear ()</a></td>
 	<td class="summary">
 
 </td>
@@ -350,13 +363,67 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#lightApplyRadial">lightApplyRadial (x, y, innerRadius, outerRadius, multiplier)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#perspectiveAddCircle">perspectiveAddCircle (x, y, radius)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#perspectiveClear">perspectiveClear ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#perspectiveFill">perspectiveFill ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#setAttributes">setAttributes (attributes)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#setClippingRectangle">setClippingRectangle (x, y, width, height)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setLightMap">setLightMap (lightMap, width, height)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#setVisMap">setVisMap (visMap, width, height)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#shadowAddCircle">shadowAddCircle (x, y, radius)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#shadowClear">shadowClear ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#updateLightMap">updateLightMap (increaseTicks, decreaseTicks)</a></td>
 	<td class="summary">
 
 </td>
@@ -370,6 +437,40 @@
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "fovAddCircle"></a>
+    <strong>fovAddCircle (x, y, radius)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+
+
+
+        </li>
+        <li><span class="parameter">y</span>
+
+
+
+        </li>
+        <li><span class="parameter">radius</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
     <dt>
     <a name = "fovAddRaycast"></a>
     <strong>fovAddRaycast (x, y)</strong>
@@ -400,8 +501,134 @@
 
 </dd>
     <dt>
+    <a name = "fovClear"></a>
+    <strong>fovClear ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "fovReveal"></a>
     <strong>fovReveal ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lightApplyRadial"></a>
+    <strong>lightApplyRadial (x, y, innerRadius, outerRadius, multiplier)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+
+
+
+        </li>
+        <li><span class="parameter">y</span>
+
+
+
+        </li>
+        <li><span class="parameter">innerRadius</span>
+
+
+
+        </li>
+        <li><span class="parameter">outerRadius</span>
+
+
+
+        </li>
+        <li><span class="parameter">multiplier</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "perspectiveAddCircle"></a>
+    <strong>perspectiveAddCircle (x, y, radius)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+
+
+
+        </li>
+        <li><span class="parameter">y</span>
+
+
+
+        </li>
+        <li><span class="parameter">radius</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "perspectiveClear"></a>
+    <strong>perspectiveClear ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "perspectiveFill"></a>
+    <strong>perspectiveFill ()</strong>
     </dt>
     <dd>
 
@@ -428,6 +655,79 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">attributes</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setClippingRectangle"></a>
+    <strong>setClippingRectangle (x, y, width, height)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+
+
+
+        </li>
+        <li><span class="parameter">y</span>
+
+
+
+        </li>
+        <li><span class="parameter">width</span>
+
+
+
+        </li>
+        <li><span class="parameter">height</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setLightMap"></a>
+    <strong>setLightMap (lightMap, width, height)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lightMap</span>
+
+
+
+        </li>
+        <li><span class="parameter">width</span>
+
+
+
+        </li>
+        <li><span class="parameter">height</span>
 
 
 
@@ -473,6 +773,85 @@
 
 
 </dd>
+    <dt>
+    <a name = "shadowAddCircle"></a>
+    <strong>shadowAddCircle (x, y, radius)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+
+
+
+        </li>
+        <li><span class="parameter">y</span>
+
+
+
+        </li>
+        <li><span class="parameter">radius</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "shadowClear"></a>
+    <strong>shadowClear ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "updateLightMap"></a>
+    <strong>updateLightMap (increaseTicks, decreaseTicks)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">increaseTicks</span>
+
+
+
+        </li>
+        <li><span class="parameter">decreaseTicks</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
 </dl>
 
 
@@ -480,7 +859,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-14 15:07:16 </i>
+<i style="float:right;">Last updated 2020-11-27 13:24:25 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

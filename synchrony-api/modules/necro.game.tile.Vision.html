@@ -102,7 +102,6 @@
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
   <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
-  <li><a href="../modules/necro.game.data.LegacyCustomEntities.html">necro.game.data.LegacyCustomEntities</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
@@ -136,6 +135,7 @@
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
+  <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
@@ -155,7 +155,6 @@
   <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
   <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
   <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
-  <li><a href="../modules/necro.game.tile.Sink.html">necro.game.tile.Sink</a></li>
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
@@ -314,7 +313,9 @@
   <li><a href="../components/SpellItemComponents.html">SpellItemComponents</a></li>
   <li><a href="../components/WeaponComponents.html">WeaponComponents</a></li>
   <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
+  <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/TrapComponents.html">TrapComponents</a></li>
+  <li><a href="../components/CastComponents.html">CastComponents</a></li>
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
   <li><a href="../components/LightComponents.html">LightComponents</a></li>
   <li><a href="../components/VisibilityComponents.html">VisibilityComponents</a></li>
@@ -338,7 +339,13 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#addLightSource">addLightSource (x, y, innerRadius, outerRadius)</a></td>
+	<td class="name" nowrap><a href="#addLightSource">addLightSource (position, light)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#clearLightSources">clearLightSources ()</a></td>
 	<td class="summary">
 
 </td>
@@ -374,7 +381,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#moveLightSource">moveLightSource (x1, y1, x2, y2, innerRadius, outerRadius)</a></td>
+	<td class="name" nowrap><a href="#isVisuallyLit">isVisuallyLit (x, y)</a></td>
 	<td class="summary">
 
 </td>
@@ -386,7 +393,13 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#removeLightSource">removeLightSource (x, y, innerRadius, outerRadius)</a></td>
+	<td class="name" nowrap><a href="#removeLightSource">removeLightSource (position, light)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#unreveal">unreveal (x, y)</a></td>
 	<td class="summary">
 
 </td>
@@ -402,7 +415,7 @@
     <dl class="function">
     <dt>
     <a name = "addLightSource"></a>
-    <strong>addLightSource (x, y, innerRadius, outerRadius)</strong>
+    <strong>addLightSource (position, light)</strong>
     </dt>
     <dd>
 
@@ -412,27 +425,33 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">x</span>
+        <li><span class="parameter">position</span>
 
 
 
         </li>
-        <li><span class="parameter">y</span>
-
-
-
-        </li>
-        <li><span class="parameter">innerRadius</span>
-
-
-
-        </li>
-        <li><span class="parameter">outerRadius</span>
+        <li><span class="parameter">light</span>
 
 
 
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "clearLightSources"></a>
+    <strong>clearLightSources ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -585,8 +604,8 @@
 
 </dd>
     <dt>
-    <a name = "moveLightSource"></a>
-    <strong>moveLightSource (x1, y1, x2, y2, innerRadius, outerRadius)</strong>
+    <a name = "isVisuallyLit"></a>
+    <strong>isVisuallyLit (x, y)</strong>
     </dt>
     <dd>
 
@@ -596,32 +615,12 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">x1</span>
+        <li><span class="parameter">x</span>
 
 
 
         </li>
-        <li><span class="parameter">y1</span>
-
-
-
-        </li>
-        <li><span class="parameter">x2</span>
-
-
-
-        </li>
-        <li><span class="parameter">y2</span>
-
-
-
-        </li>
-        <li><span class="parameter">innerRadius</span>
-
-
-
-        </li>
-        <li><span class="parameter">outerRadius</span>
+        <li><span class="parameter">y</span>
 
 
 
@@ -651,7 +650,36 @@
 </dd>
     <dt>
     <a name = "removeLightSource"></a>
-    <strong>removeLightSource (x, y, innerRadius, outerRadius)</strong>
+    <strong>removeLightSource (position, light)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">position</span>
+
+
+
+        </li>
+        <li><span class="parameter">light</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "unreveal"></a>
+    <strong>unreveal (x, y)</strong>
     </dt>
     <dd>
 
@@ -671,16 +699,6 @@
 
 
         </li>
-        <li><span class="parameter">innerRadius</span>
-
-
-
-        </li>
-        <li><span class="parameter">outerRadius</span>
-
-
-
-        </li>
     </ul>
 
 
@@ -695,7 +713,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-14 15:07:16 </i>
+<i style="float:right;">Last updated 2020-11-27 13:24:25 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

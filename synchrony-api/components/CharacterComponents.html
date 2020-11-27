@@ -102,7 +102,6 @@
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
   <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
-  <li><a href="../modules/necro.game.data.LegacyCustomEntities.html">necro.game.data.LegacyCustomEntities</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
@@ -136,6 +135,7 @@
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
+  <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
@@ -155,7 +155,6 @@
   <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
   <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
   <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
-  <li><a href="../modules/necro.game.tile.Sink.html">necro.game.tile.Sink</a></li>
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
@@ -260,6 +259,7 @@
   <li><a href="../components/AttackComponents.html">AttackComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
+  <li><a href="../components/CastComponents.html">CastComponents</a></li>
   <li><strong>CharacterComponents</strong></li>
   <li><a href="../components/CharacterSpriteComponents.html">CharacterSpriteComponents</a></li>
   <li><a href="../components/CollisionComponents.html">CollisionComponents</a></li>
@@ -298,6 +298,7 @@
   <li><a href="../components/RhythmComponents.html">RhythmComponents</a></li>
   <li><a href="../components/RhythmItemComponents.html">RhythmItemComponents</a></li>
   <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
+  <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
@@ -374,13 +375,25 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#conductive">conductive</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#controllable">controllable</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#despawnOnAct">despawnOnAct</a></td>
+	<td class="name" nowrap><a href="#convertOnDeath">convertOnDeath</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dieOnMovementFail">dieOnMovementFail</a></td>
 	<td class="summary">
 
 </td>
@@ -422,6 +435,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#inhibitOnFacingChange">inhibitOnFacingChange</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#innateSpellcasts">innateSpellcasts</a></td>
 	<td class="summary">
 
@@ -458,19 +477,31 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastOnDeath">spellcastOnDeath</a></td>
+	<td class="name" nowrap><a href="#spawnCap">spawnCap</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastOnMove">spellcastOnMove</a></td>
+	<td class="name" nowrap><a href="#spawnable">spawnable</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#targetable">targetable</a></td>
+	<td class="name" nowrap><a href="#stasisApproacher">stasisApproacher</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#stunOnDig">stunOnDig</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#swapEntitiesOnDeath">swapEntitiesOnDeath</a></td>
 	<td class="summary">
 
 </td>
@@ -483,6 +514,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#turnOnMoveFail">turnOnMoveFail</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#wired">wired</a></td>
 	<td class="summary">
 
 </td>
@@ -626,12 +663,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
 
 
 
@@ -650,6 +681,28 @@
 
     <ul>
         <li><span class="parameter">canAct</span>
+          bool
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "conductive"></a>
+    <strong>conductive</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">electrified</span>
           bool
          (<em>default</em> false)
         </li>
@@ -683,8 +736,24 @@
 
 </dd>
     <dt>
-    <a name = "despawnOnAct"></a>
-    <strong>despawnOnAct</strong>
+    <a name = "convertOnDeath"></a>
+    <strong>convertOnDeath</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dieOnMovementFail"></a>
+    <strong>dieOnMovementFail</strong>
     </dt>
     <dd>
 
@@ -833,6 +902,22 @@
 
 </dd>
     <dt>
+    <a name = "inhibitOnFacingChange"></a>
+    <strong>inhibitOnFacingChange</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "innateSpellcasts"></a>
     <strong>innateSpellcasts</strong>
     </dt>
@@ -965,8 +1050,8 @@
 
 </dd>
     <dt>
-    <a name = "spellcastOnDeath"></a>
-    <strong>spellcastOnDeath</strong>
+    <a name = "spawnCap"></a>
+    <strong>spawnCap</strong>
     </dt>
     <dd>
 
@@ -975,9 +1060,9 @@
 
 
     <ul>
-        <li><span class="parameter">name</span>
-         constant string
-         (<em>default</em> "")
+        <li><span class="parameter">counter</span>
+          int8
+         (<em>default</em> 0)
         </li>
     </ul>
 
@@ -987,8 +1072,8 @@
 
 </dd>
     <dt>
-    <a name = "spellcastOnMove"></a>
-    <strong>spellcastOnMove</strong>
+    <a name = "spawnable"></a>
+    <strong>spawnable</strong>
     </dt>
     <dd>
 
@@ -997,9 +1082,9 @@
 
 
     <ul>
-        <li><span class="parameter">name</span>
-         constant string
-         (<em>default</em> "")
+        <li><span class="parameter">forwardKillCredit</span>
+         constant bool
+         (<em>default</em> true)
         </li>
     </ul>
 
@@ -1009,8 +1094,8 @@
 
 </dd>
     <dt>
-    <a name = "targetable"></a>
-    <strong>targetable</strong>
+    <a name = "stasisApproacher"></a>
+    <strong>stasisApproacher</strong>
     </dt>
     <dd>
 
@@ -1018,6 +1103,54 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "stunOnDig"></a>
+    <strong>stunOnDig</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">delay</span>
+          int16
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "swapEntitiesOnDeath"></a>
+    <strong>swapEntitiesOnDeath</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">sound</span>
+         constant string
+         (<em>default</em> "teleport")
+        </li>
+        <li><span class="parameter">flyaway</span>
+         constant string
+         (<em>default</em> "Teleported!")
+        </li>
+    </ul>
 
 
 
@@ -1068,6 +1201,28 @@
 
 
 </dd>
+    <dt>
+    <a name = "wired"></a>
+    <strong>wired</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">active</span>
+          bool
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
 </dl>
 
 
@@ -1075,7 +1230,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-14 15:07:16 </i>
+<i style="float:right;">Last updated 2020-11-27 13:24:25 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
