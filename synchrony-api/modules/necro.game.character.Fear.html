@@ -40,6 +40,7 @@
 </ul>
 <h2>Modules</h2>
 <ul class="nowrap">
+  <li><a href="../modules/necro.audio.AudioFilter.html">necro.audio.AudioFilter</a></li>
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
@@ -84,6 +85,7 @@
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
   <li><a href="../modules/necro.game.character.Descent.html">necro.game.character.Descent</a></li>
+  <li><strong>necro.game.character.Fear</strong></li>
   <li><a href="../modules/necro.game.character.Freeze.html">necro.game.character.Freeze</a></li>
   <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
@@ -102,7 +104,6 @@
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
   <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
-  <li><a href="../modules/necro.game.data.LegacyCustomEntities.html">necro.game.data.LegacyCustomEntities</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
@@ -122,6 +123,7 @@
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
+  <li><a href="../modules/necro.game.level.BossFight.html">necro.game.level.BossFight</a></li>
   <li><a href="../modules/necro.game.level.LevelGenerator.html">necro.game.level.LevelGenerator</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
@@ -156,7 +158,6 @@
   <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
   <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
   <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
-  <li><strong>necro.game.tile.Sink</strong></li>
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
@@ -205,6 +206,7 @@
   <li><a href="../modules/system.accel.Vision.html">system.accel.Vision</a></li>
   <li><a href="../modules/system.debug.EntityDebug.html">system.debug.EntityDebug</a></li>
   <li><a href="../modules/system.debug.ErrorHandler.html">system.debug.ErrorHandler</a></li>
+  <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
   <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
   <li><a href="../modules/system.debug.StackTrace.html">system.debug.StackTrace</a></li>
@@ -253,6 +255,7 @@
 </ul>
 <h2>Components</h2>
 <ul class="nowrap">
+  <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
   <li><a href="../components/MusicComponents.html">MusicComponents</a></li>
   <li><a href="../components/RhythmComponents.html">RhythmComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
@@ -329,7 +332,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.tile.Sink</code></h1>
+<h1>Module <code>necro.game.character.Fear</code></h1>
 <p>
 
 </p>
@@ -341,13 +344,7 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#sinkEntity">sinkEntity (entity)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#unsinkEntity">unsinkEntity (entity)</a></td>
+	<td class="name" nowrap><a href="#isFeared">isFeared (entity)</a></td>
 	<td class="summary">
 
 </td>
@@ -362,32 +359,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "sinkEntity"></a>
-    <strong>sinkEntity (entity)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">entity</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "unsinkEntity"></a>
-    <strong>unsinkEntity (entity)</strong>
+    <a name = "isFeared"></a>
+    <strong>isFeared (entity)</strong>
     </dt>
     <dd>
 
@@ -416,7 +389,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-27 13:20:12 </i>
+<i style="float:right;">Last updated 2020-12-19 13:55:56 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

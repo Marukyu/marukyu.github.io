@@ -40,6 +40,7 @@
 </ul>
 <h2>Modules</h2>
 <ul class="nowrap">
+  <li><a href="../modules/necro.audio.AudioFilter.html">necro.audio.AudioFilter</a></li>
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
@@ -84,6 +85,7 @@
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
   <li><a href="../modules/necro.game.character.Descent.html">necro.game.character.Descent</a></li>
+  <li><a href="../modules/necro.game.character.Fear.html">necro.game.character.Fear</a></li>
   <li><a href="../modules/necro.game.character.Freeze.html">necro.game.character.Freeze</a></li>
   <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
@@ -121,6 +123,7 @@
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
+  <li><a href="../modules/necro.game.level.BossFight.html">necro.game.level.BossFight</a></li>
   <li><a href="../modules/necro.game.level.LevelGenerator.html">necro.game.level.LevelGenerator</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
@@ -203,6 +206,7 @@
   <li><a href="../modules/system.accel.Vision.html">system.accel.Vision</a></li>
   <li><a href="../modules/system.debug.EntityDebug.html">system.debug.EntityDebug</a></li>
   <li><a href="../modules/system.debug.ErrorHandler.html">system.debug.ErrorHandler</a></li>
+  <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
   <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
   <li><a href="../modules/system.debug.StackTrace.html">system.debug.StackTrace</a></li>
@@ -257,6 +261,7 @@
   <li><a href="../components/AnimationComponents.html">AnimationComponents</a></li>
   <li><a href="../components/ApparitionComponents.html">ApparitionComponents</a></li>
   <li><a href="../components/AttackComponents.html">AttackComponents</a></li>
+  <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
   <li><a href="../components/CastComponents.html">CastComponents</a></li>
@@ -351,12 +356,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#provokableAIOverrideTeamSpecific">provokableAIOverrideTeamSpecific</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#provokableAttackableFlags">provokableAttackableFlags</a></td>
 	<td class="summary">
 
@@ -364,6 +363,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#provokableConvert">provokableConvert</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#provokableFearOtherTeams">provokableFearOtherTeams</a></td>
 	<td class="summary">
 
 </td>
@@ -444,32 +449,6 @@
          constant int16
          (<em>default</em> 0)
         </li>
-        <li><span class="parameter">firstHitOnly</span>
-         constant bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "provokableAIOverrideTeamSpecific"></a>
-    <strong>provokableAIOverrideTeamSpecific</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">teams</span>
-         constant table
-         (<em>default</em> {})
-        </li>
     </ul>
 
 
@@ -526,6 +505,28 @@
 
 </dd>
     <dt>
+    <a name = "provokableFearOtherTeams"></a>
+    <strong>provokableFearOtherTeams</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">team</span>
+         constant int16
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "provokeOnHit"></a>
     <strong>provokeOnHit</strong>
     </dt>
@@ -539,6 +540,10 @@
         <li><span class="parameter">physicalDamageOnly</span>
          constant bool
          (<em>default</em> false)
+        </li>
+        <li><span class="parameter">minimumDamage</span>
+         constant int16
+         (<em>default</em> 0)
         </li>
     </ul>
 
@@ -561,6 +566,10 @@
         <li><span class="parameter">distance</span>
          constant float
          (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">delay</span>
+         constant bool
+         (<em>default</em> false)
         </li>
     </ul>
 
@@ -636,7 +645,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-11-27 19:26:31 </i>
+<i style="float:right;">Last updated 2020-12-19 13:55:56 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
