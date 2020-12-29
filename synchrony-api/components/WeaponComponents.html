@@ -102,6 +102,7 @@
   <li><a href="../modules/necro.game.data.DungeonXMLLoader.html">necro.game.data.DungeonXMLLoader</a></li>
   <li><a href="../modules/necro.game.data.EntityGenerator.html">necro.game.data.EntityGenerator</a></li>
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
+  <li><a href="../modules/necro.game.data.EntityPostProcessor.html">necro.game.data.EntityPostProcessor</a></li>
   <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
@@ -111,6 +112,7 @@
   <li><a href="../modules/necro.game.data.enemy.CommonEnemy.html">necro.game.data.enemy.CommonEnemy</a></li>
   <li><a href="../modules/necro.game.data.item.CommonItem.html">necro.game.data.item.CommonItem</a></li>
   <li><a href="../modules/necro.game.data.item.weapon.CommonWeapon.html">necro.game.data.item.weapon.CommonWeapon</a></li>
+  <li><a href="../modules/necro.game.data.migration.Migration.html">necro.game.data.migration.Migration</a></li>
   <li><a href="../modules/necro.game.data.spell.CommonSpell.html">necro.game.data.spell.CommonSpell</a></li>
   <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
   <li><a href="../modules/necro.game.enemy.Targeting.html">necro.game.enemy.Targeting</a></li>
@@ -140,6 +142,7 @@
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
   <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
+  <li><a href="../modules/necro.game.system.Earthquake.html">necro.game.system.Earthquake</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
@@ -205,7 +208,6 @@
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.Vision.html">system.accel.Vision</a></li>
   <li><a href="../modules/system.debug.EntityDebug.html">system.debug.EntityDebug</a></li>
-  <li><a href="../modules/system.debug.ErrorHandler.html">system.debug.ErrorHandler</a></li>
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
   <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
@@ -241,6 +243,7 @@
   <li><a href="../modules/system.network.Server.html">system.network.Server</a></li>
   <li><a href="../modules/system.utils.Array.html">system.utils.Array</a></li>
   <li><a href="../modules/system.utils.BitUtilities.html">system.utils.BitUtilities</a></li>
+  <li><a href="../modules/system.utils.CircularBuffer.html">system.utils.CircularBuffer</a></li>
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
   <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
   <li><a href="../modules/system.utils.ListMerge.html">system.utils.ListMerge</a></li>
@@ -465,6 +468,114 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#weaponTickle">weaponTickle</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponType">weaponType</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeAxe">weaponTypeAxe</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeBlunderbuss">weaponTypeBlunderbuss</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeBow">weaponTypeBow</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeBroadsword">weaponTypeBroadsword</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeCat">weaponTypeCat</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeCrossbow">weaponTypeCrossbow</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeCutlass">weaponTypeCutlass</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeDagger">weaponTypeDagger</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeFlail">weaponTypeFlail</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeHarp">weaponTypeHarp</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeLongsword">weaponTypeLongsword</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeRapier">weaponTypeRapier</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeRifle">weaponTypeRifle</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeSpear">weaponTypeSpear</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeStaff">weaponTypeStaff</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeWarhammer">weaponTypeWarhammer</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#weaponTypeWhip">weaponTypeWhip</a></td>
 	<td class="summary">
 
 </td>
@@ -896,6 +1007,300 @@
 
 
 </dd>
+    <dt>
+    <a name = "weaponType"></a>
+    <strong>weaponType</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">name</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeAxe"></a>
+    <strong>weaponTypeAxe</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeBlunderbuss"></a>
+    <strong>weaponTypeBlunderbuss</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeBow"></a>
+    <strong>weaponTypeBow</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeBroadsword"></a>
+    <strong>weaponTypeBroadsword</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeCat"></a>
+    <strong>weaponTypeCat</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeCrossbow"></a>
+    <strong>weaponTypeCrossbow</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeCutlass"></a>
+    <strong>weaponTypeCutlass</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeDagger"></a>
+    <strong>weaponTypeDagger</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeFlail"></a>
+    <strong>weaponTypeFlail</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeHarp"></a>
+    <strong>weaponTypeHarp</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeLongsword"></a>
+    <strong>weaponTypeLongsword</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeRapier"></a>
+    <strong>weaponTypeRapier</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeRifle"></a>
+    <strong>weaponTypeRifle</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeSpear"></a>
+    <strong>weaponTypeSpear</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeStaff"></a>
+    <strong>weaponTypeStaff</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeWarhammer"></a>
+    <strong>weaponTypeWarhammer</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponTypeWhip"></a>
+    <strong>weaponTypeWhip</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
 </dl>
 
 
@@ -903,7 +1308,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-12-19 13:55:56 </i>
+<i style="float:right;">Last updated 2020-12-29 13:28:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
