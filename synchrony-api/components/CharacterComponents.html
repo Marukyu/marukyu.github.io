@@ -81,6 +81,7 @@
   <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
+  <li><a href="../modules/necro.game.character.Apparition.html">necro.game.character.Apparition</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
@@ -409,6 +410,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#damageCountdown">damageCountdown</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#dieOnMovementFail">dieOnMovementFail</a></td>
 	<td class="summary">
 
@@ -512,6 +519,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#shoplifter">shoplifter</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spawnApparitions">spawnApparitions</a></td>
 	<td class="summary">
 
 </td>
@@ -816,6 +829,56 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "damageCountdown"></a>
+    <strong>damageCountdown</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">damage</span>
+         constant int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">penetration</span>
+         constant int8
+         (<em>default</em> damage.Penetration.PHASING)
+        </li>
+        <li><span class="parameter">type</span>
+         constant int8
+         (<em>default</em> damage.Type.SUICIDE)
+        </li>
+        <li><span class="parameter">countdownReset</span>
+         constant int8
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">countdown</span>
+          int8
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">tick</span>
+          bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">tickNextBeat</span>
+          bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">sounds</span>
+         constant table
+         (<em>default</em> {})
+        </li>
+    </ul>
 
 
 
@@ -1198,6 +1261,28 @@
         <li><span class="parameter">active</span>
           bool
          (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spawnApparitions"></a>
+    <strong>spawnApparitions</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">component</span>
+         constant string
+         (<em>default</em> "")
         </li>
     </ul>
 

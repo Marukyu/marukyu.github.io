@@ -81,6 +81,7 @@
   <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
+  <li><a href="../modules/necro.game.character.Apparition.html">necro.game.character.Apparition</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
@@ -382,9 +383,10 @@
 
 <ul>
     <li><code>position</code></li>
-    <li><code>checkCooldown</code></li>
     <li><code>checkTile</code></li>
     <li><code>checkSwarm</code></li>
+    <li><code>checkDistance</code></li>
+    <li><code>checkCooldown</code></li>
     <li><code>spawn</code></li>
     <li><code>reveal</code></li>
     <li><code>resetCooldown</code></li>
@@ -787,6 +789,7 @@
     <li><code>markers</code></li>
     <li><code>descent</code></li>
     <li><code>players</code></li>
+    <li><code>damageCountdown</code></li>
     <li><code>rhythm</code></li>
     <li><code>musicLayers</code></li>
     <li><code>priceTags</code></li>
@@ -1171,6 +1174,7 @@
     <li><code>hitChain</code></li>
     <li><code>ai</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>damageCountdown</code></li>
     <li><code>sound</code></li>
     <li><code>screenShake</code></li>
 </ul>
@@ -1342,6 +1346,7 @@
 <ul>
     <li><code>extraCurrency</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>damageCountdown</code></li>
     <li><code>cooldownMultiplier</code></li>
     <li><code>cooldown</code></li>
     <li><code>regeneration</code></li>
@@ -1538,6 +1543,7 @@
     <li><code>hasMoved</code></li>
     <li><code>moveOverride</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>damageCountdown</code></li>
 </ul>
 
 
@@ -1801,8 +1807,10 @@
 <ul>
     <li><code>damage</code></li>
     <li><code>wire</code></li>
+    <li><code>damageCountdown</code></li>
     <li><code>grantExtra</code></li>
     <li><code>currency</code></li>
+    <li><code>apparition</code></li>
     <li><code>sound</code></li>
     <li><code>flyaway</code></li>
     <li><code>consume</code></li>
@@ -1953,6 +1961,7 @@
     <li><code>maxHealth</code></li>
     <li><code>heal</code></li>
     <li><code>cursedHealth</code></li>
+    <li><code>damageCountdown</code></li>
     <li><code>perspective</code></li>
     <li><code>rhythm</code></li>
     <li><code>flyaway</code></li>
@@ -2386,6 +2395,7 @@
     <li><code>hitChain</code></li>
     <li><code>ai</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>damageCountdown</code></li>
     <li><code>sound</code></li>
     <li><code>screenShake</code></li>
 </ul>
@@ -2557,6 +2567,7 @@
 <ul>
     <li><code>extraCurrency</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>damageCountdown</code></li>
     <li><code>cooldownMultiplier</code></li>
     <li><code>cooldown</code></li>
     <li><code>regeneration</code></li>
@@ -2753,6 +2764,7 @@
     <li><code>hasMoved</code></li>
     <li><code>moveOverride</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>damageCountdown</code></li>
 </ul>
 
 
@@ -3131,6 +3143,7 @@
     <li><code>equipment</code></li>
     <li><code>grooveChain</code></li>
     <li><code>heartbeatIndicator</code></li>
+    <li><code>damageCountdown</code></li>
 </ul>
 
 
@@ -3459,6 +3472,7 @@
     <li><code>inflictDamage</code></li>
     <li><code>inflictEarthquake</code></li>
     <li><code>convertTiles</code></li>
+    <li><code>apparition</code></li>
     <li><code>reveal</code></li>
     <li><code>aggro</code></li>
     <li><code>heal</code></li>
@@ -3520,6 +3534,7 @@
     <li><code>rollback</code></li>
     <li><code>rhythm</code></li>
     <li><code>songEnd</code></li>
+    <li><code>inputControls</code></li>
     <li><code>input</code></li>
     <li><code>spectator</code></li>
     <li><code>playerFocus</code></li>
@@ -3655,6 +3670,7 @@
     <li><code>playerActions</code></li>
     <li><code>frame1</code></li>
     <li><code>freeze</code></li>
+    <li><code>preAIActions</code></li>
     <li><code>aiActions</code></li>
     <li><code>postAIActions</code></li>
     <li><code>floorHazards</code></li>

@@ -81,6 +81,7 @@
   <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
+  <li><a href="../modules/necro.game.character.Apparition.html">necro.game.character.Apparition</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
@@ -419,6 +420,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>checkCooldown</code></li>
+    <li><code>checkTargetDistance</code></li>
     <li><code>checkTargetSwarm</code></li>
     <li><code>checkTargetTile</code></li>
     <li><code>locateStalkTarget</code></li>
@@ -1093,6 +1095,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>createInitialSnapshot</code></li>
     <li><code>disableTweens</code></li>
     <li><code>findMarkerTiles</code></li>
+    <li><code>forceSpawnApparition</code></li>
     <li><code>getCurrentLevelNumber</code></li>
     <li><code>initPriceTags</code></li>
     <li><code>initialTargeting</code></li>
@@ -1110,6 +1113,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>removeMoveOverride</code></li>
     <li><code>resetAnimationTimer</code></li>
     <li><code>resetApparitionSpawnCooldowns</code></li>
+    <li><code>resetDamageCountdown</code></li>
     <li><code>resetGrooveChainImmunity</code></li>
     <li><code>resetItemPickupAnimations</code></li>
     <li><code>resetLevelExitState</code></li>
@@ -1703,8 +1707,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>damageOnCurrencyPickup</code></li>
     <li><code>damageOnPickup</code></li>
     <li><code>fireHolderCurrencyEvent</code></li>
+    <li><code>forceSpawnApparition</code></li>
     <li><code>grantExtraItemOnFirstPickup</code></li>
     <li><code>playItemPickupSound</code></li>
+    <li><code>resetDamageCountdown</code></li>
     <li><code>updateWired</code></li>
     <li><code>updateWiredImmunity</code></li>
 </ul>
@@ -1894,6 +1900,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>increaseMaxHealth</code></li>
     <li><code>playConsumptionSound</code></li>
     <li><code>reduceStackSize</code></li>
+    <li><code>resetDamageCountdown</code></li>
 </ul>
 
 
@@ -2191,6 +2198,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyDamageToTarget</code></li>
     <li><code>applyGigantismMultiplier</code></li>
     <li><code>attackSound</code></li>
+    <li><code>baseDamageIncrease</code></li>
     <li><code>explosiveDamageOverride</code></li>
     <li><code>forwardToCaster</code></li>
     <li><code>lungeDoubleDamage</code></li>
@@ -2303,6 +2311,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectDirection</h2>
 
 <ul>
+    <li><code>activateDamageCountdown</code></li>
     <li><code>amplify</code></li>
     <li><code>animationCycling</code></li>
     <li><code>applyConfusion</code></li>
@@ -2507,6 +2516,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkPriceTag</code></li>
     <li><code>checkRequeue</code></li>
     <li><code>overrideResult</code></li>
+    <li><code>resetDamageCountdown</code></li>
     <li><code>selfDestruct</code></li>
     <li><code>soundInteract</code></li>
     <li><code>takeDamage</code></li>
@@ -2518,6 +2528,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>increaseGrooveChain</code></li>
+    <li><code>resetDamageCountdown</code></li>
 </ul>
 
 
@@ -2728,6 +2739,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectSpecialAction</h2>
 
 <ul>
+    <li><code>activateDamageCountdown</code></li>
     <li><code>delayChargeTarget</code></li>
     <li><code>faceTowardsTarget</code></li>
     <li><code>hopInPlaceOnIdle</code></li>
@@ -3137,6 +3149,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>renderCurrencyCounters</code></li>
+    <li><code>renderDamageCountdown</code></li>
     <li><code>renderEquippedItems</code></li>
     <li><code>renderGrooveChain</code></li>
     <li><code>renderHealthBar</code></li>
@@ -3506,6 +3519,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>screenFlashGlobal</code></li>
     <li><code>screenFlashTargets</code></li>
     <li><code>screenShake</code></li>
+    <li><code>spawnApparitions</code></li>
     <li><code>spawnCoreSwipe</code></li>
     <li><code>spawnEntity</code></li>
     <li><code>spawnMultiTileSwipes</code></li>
@@ -3602,6 +3616,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateAnimationTimer</code></li>
     <li><code>updateAudioFilter</code></li>
     <li><code>updateFocusedPlayers</code></li>
+    <li><code>updateInputControls</code></li>
     <li><code>updateMusic</code></li>
     <li><code>updateNetworkModReadiness</code></li>
     <li><code>updatePerspective</code></li>
@@ -3766,6 +3781,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>provokeOnBeatCounter</code></li>
     <li><code>reduceBarrierTurnCounters</code></li>
     <li><code>reduceConfusionTurnCounters</code></li>
+    <li><code>reduceDamageCountdown</code></li>
     <li><code>reduceFearTurnCounters</code></li>
     <li><code>reduceInvincibilityCounters</code></li>
     <li><code>reduceSpellCooldowns</code></li>
