@@ -134,7 +134,6 @@
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
   <li><a href="../modules/necro.game.level.TestLevel.html">necro.game.level.TestLevel</a></li>
   <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
-  <li><a href="../modules/necro.game.object.LightSource.html">necro.game.object.LightSource</a></li>
   <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
@@ -167,9 +166,10 @@
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
-  <li><a href="../modules/necro.game.tile.Vision.html">necro.game.tile.Vision</a></li>
-  <li><a href="../modules/necro.game.tile.WallLights.html">necro.game.tile.WallLights</a></li>
   <li><a href="../modules/necro.game.trap.Trap.html">necro.game.trap.Trap</a></li>
+  <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
+  <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
+  <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
   <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
@@ -209,7 +209,7 @@
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/necro.server.ServerTurnSync.html">necro.server.ServerTurnSync</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
-  <li><a href="../modules/system.accel.Vision.html">system.accel.Vision</a></li>
+  <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.EntityDebug.html">system.debug.EntityDebug</a></li>
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
@@ -350,7 +350,13 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#add">add (entity, currencyType, amount)</a></td>
+	<td class="name" nowrap><a href="#add">add (entity, currencyType, amount, item)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#collect">collect (entity, currencyType, amount)</a></td>
 	<td class="summary">
 
 </td>
@@ -374,19 +380,25 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#hasComponent">hasComponent (entity, currencyType)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#lookUpEntityType">lookUpEntityType (currencyType, amount)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#set">set (entity, currencyType, amount)</a></td>
+	<td class="name" nowrap><a href="#set">set (entity, currencyType, amount, item)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#subtract">subtract (entity, currencyType, amount)</a></td>
+	<td class="name" nowrap><a href="#subtract">subtract (entity, currencyType, amount, item)</a></td>
 	<td class="summary">
 
 </td>
@@ -402,7 +414,46 @@
     <dl class="function">
     <dt>
     <a name = "add"></a>
-    <strong>add (entity, currencyType, amount)</strong>
+    <strong>add (entity, currencyType, amount, item)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+
+
+
+        </li>
+        <li><span class="parameter">currencyType</span>
+
+
+
+        </li>
+        <li><span class="parameter">amount</span>
+
+
+
+        </li>
+        <li><span class="parameter">item</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "collect"></a>
+    <strong>collect (entity, currencyType, amount)</strong>
     </dt>
     <dd>
 
@@ -532,6 +583,35 @@
 
 </dd>
     <dt>
+    <a name = "hasComponent"></a>
+    <strong>hasComponent (entity, currencyType)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+
+
+
+        </li>
+        <li><span class="parameter">currencyType</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "lookUpEntityType"></a>
     <strong>lookUpEntityType (currencyType, amount)</strong>
     </dt>
@@ -562,7 +642,7 @@
 </dd>
     <dt>
     <a name = "set"></a>
-    <strong>set (entity, currencyType, amount)</strong>
+    <strong>set (entity, currencyType, amount, item)</strong>
     </dt>
     <dd>
 
@@ -583,6 +663,11 @@
 
         </li>
         <li><span class="parameter">amount</span>
+
+
+
+        </li>
+        <li><span class="parameter">item</span>
 
 
 
@@ -596,7 +681,7 @@
 </dd>
     <dt>
     <a name = "subtract"></a>
-    <strong>subtract (entity, currencyType, amount)</strong>
+    <strong>subtract (entity, currencyType, amount, item)</strong>
     </dt>
     <dd>
 
@@ -617,6 +702,11 @@
 
         </li>
         <li><span class="parameter">amount</span>
+
+
+
+        </li>
+        <li><span class="parameter">item</span>
 
 
 

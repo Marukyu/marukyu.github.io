@@ -134,7 +134,6 @@
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
   <li><a href="../modules/necro.game.level.TestLevel.html">necro.game.level.TestLevel</a></li>
   <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
-  <li><a href="../modules/necro.game.object.LightSource.html">necro.game.object.LightSource</a></li>
   <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
@@ -167,9 +166,10 @@
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
-  <li><a href="../modules/necro.game.tile.Vision.html">necro.game.tile.Vision</a></li>
-  <li><a href="../modules/necro.game.tile.WallLights.html">necro.game.tile.WallLights</a></li>
   <li><a href="../modules/necro.game.trap.Trap.html">necro.game.trap.Trap</a></li>
+  <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
+  <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
+  <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
   <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
@@ -209,7 +209,7 @@
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/necro.server.ServerTurnSync.html">necro.server.ServerTurnSync</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
-  <li><a href="../modules/system.accel.Vision.html">system.accel.Vision</a></li>
+  <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.EntityDebug.html">system.debug.EntityDebug</a></li>
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
@@ -350,6 +350,18 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#diamondCounter">diamondCounter</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#goldCounter">goldCounter</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#inflictDamageOnCurrencyGain">inflictDamageOnCurrencyGain</a></td>
 	<td class="summary">
 
@@ -430,6 +442,50 @@
     <h2 class="section-header "><a name="Components"></a>Components</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "diamondCounter"></a>
+    <strong>diamondCounter</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">amount</span>
+          int32
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "goldCounter"></a>
+    <strong>goldCounter</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">amount</span>
+          int32
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
     <dt>
     <a name = "inflictDamageOnCurrencyGain"></a>
     <strong>inflictDamageOnCurrencyGain</strong>
@@ -538,6 +594,12 @@
 
 
 
+    <ul>
+        <li><span class="parameter">currencyType</span>
+         constant string
+         (<em>default</em> currency.Type.GOLD)
+        </li>
+    </ul>
 
 
 
