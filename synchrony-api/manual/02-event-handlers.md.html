@@ -384,6 +384,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>animationCycling</code></li>
+    <li><code>animationRandomVariant</code></li>
     <li><code>applyActionDelayAnimations</code></li>
     <li><code>applyCaptiveAudienceEffect</code></li>
     <li><code>applyCastSpellAnimations</code></li>
@@ -1037,6 +1038,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>aggro</code></li>
     <li><code>convertObjects</code></li>
     <li><code>convertOnBossProvoke</code></li>
+    <li><code>resetKnockbackImmunity</code></li>
     <li><code>updateEntityVisibility</code></li>
     <li><code>updateFieldOfView</code></li>
     <li><code>updateProvokableEntities</code></li>
@@ -1137,7 +1139,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>turnSyncRelease</code></li>
     <li><code>unfreezeEntities</code></li>
     <li><code>updateAttachmentEntities</code></li>
-    <li><code>updateEntityVisibility</code></li>
     <li><code>updateMusicLayerVolumes</code></li>
     <li><code>updateStasisFade</code></li>
     <li><code>updateVisMapInstantly</code></li>
@@ -1413,6 +1414,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>applyItemImmunity</code></li>
+    <li><code>applyItemMaximize</code></li>
     <li><code>updateGrooveChainSprite</code></li>
     <li><code>updateVisionSource</code></li>
 </ul>
@@ -2116,9 +2118,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectCheckAttack</h2>
 
 <ul>
+    <li><code>buildElectricityQueue</code></li>
     <li><code>dwarfismSuppressAttack</code></li>
-    <li><code>electricArc</code></li>
     <li><code>performAttack</code></li>
+    <li><code>processElectricityQueue</code></li>
 </ul>
 
 
@@ -2165,6 +2168,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>confusableDigStrength</code></li>
     <li><code>dwarfismDigStrengthOverride</code></li>
     <li><code>gigantismIncreaseDigStrength</code></li>
+    <li><code>innateDigStrength</code></li>
 </ul>
 
 
@@ -2663,8 +2667,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deactivateTrample</code></li>
     <li><code>initAutoCastCooldown</code></li>
     <li><code>playRevealSound</code></li>
-    <li><code>revealShadow</code></li>
-    <li><code>revealSprite</code></li>
 </ul>
 
 
@@ -2711,8 +2713,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyZoneDependentActivationRadius</code></li>
     <li><code>convertVocalEntity</code></li>
     <li><code>giveInitialEquipment</code></li>
-    <li><code>hideShadowIfUnrevealed</code></li>
-    <li><code>hideSpriteIfUnrevealed</code></li>
     <li><code>initFacingDirection</code></li>
     <li><code>initializeAttackableFlags</code></li>
     <li><code>initializeObjectAttributes</code></li>
@@ -2784,6 +2784,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deepBluesTeleport</code></li>
     <li><code>drawScreenFlash</code></li>
     <li><code>dropGrooveChain</code></li>
+    <li><code>fortissimoleBurrowing</code></li>
     <li><code>genericHitSound</code></li>
     <li><code>grabHitSound</code></li>
     <li><code>grabProtection</code></li>
@@ -3034,6 +3035,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>moveOverride</code></li>
     <li><code>processDelayedActions</code></li>
     <li><code>seekWhileConfused</code></li>
+    <li><code>shieldDodge</code></li>
     <li><code>spawnOnCharge</code></li>
     <li><code>startMoveOverride</code></li>
     <li><code>tentacleTeleports</code></li>
@@ -3528,6 +3530,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnEntity</code></li>
     <li><code>spawnMultiTileSwipes</code></li>
     <li><code>spawnMulticastCopies</code></li>
+    <li><code>spawnTrailSwipe</code></li>
     <li><code>spellFlyaway</code></li>
     <li><code>spellHopInPlace</code></li>
     <li><code>targetTiles</code></li>
@@ -3557,7 +3560,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>axe</code></li>
     <li><code>blunderbuss</code></li>
     <li><code>bolt</code></li>
-    <li><code>bow</code></li>
     <li><code>broadsword</code></li>
     <li><code>cat</code></li>
     <li><code>dagger</code></li>
@@ -3849,9 +3851,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>addExtraSwipes</code></li>
-    <li><code>addSwipeTrail</code></li>
     <li><code>addSwipeTrailRayCast</code></li>
-    <li><code>addSwipeTrailThrow</code></li>
     <li><code>applyDirectionalAttack</code></li>
     <li><code>applyKnockback</code></li>
     <li><code>enableParry</code></li>
