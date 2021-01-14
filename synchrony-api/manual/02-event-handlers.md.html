@@ -1100,11 +1100,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initPriceTags</code></li>
     <li><code>initialTargeting</code></li>
     <li><code>initializeMinimap</code></li>
+    <li><code>initializePendingObjectList</code></li>
     <li><code>initializeRhythmSettings</code></li>
     <li><code>itemHealOnLevelChange</code></li>
     <li><code>levelStartFrame</code></li>
     <li><code>loadLevel</code></li>
     <li><code>placePlayers</code></li>
+    <li><code>processPendingObjects</code></li>
     <li><code>randomizeFloorVisuals</code></li>
     <li><code>randomizeWallVisuals</code></li>
     <li><code>removeBarrier</code></li>
@@ -1174,10 +1176,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearTiles</code></li>
     <li><code>closeAllMenus</code></li>
     <li><code>closeInGameLobby</code></li>
+    <li><code>initializePendingObjectList</code></li>
+    <li><code>processPendingObjects</code></li>
     <li><code>releaseFastForward</code></li>
     <li><code>removeAllOverlays</code></li>
     <li><code>resetLevelExitState</code></li>
-    <li><code>resetPendingConversions</code></li>
     <li><code>resetPlayerEntityList</code></li>
     <li><code>resetRhythmSettings</code></li>
     <li><code>resetRunState</code></li>
@@ -3756,7 +3759,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkDescentCompletion</code></li>
     <li><code>checkLevelExitCondition</code></li>
     <li><code>checkTrapTrigger</code></li>
-    <li><code>clearDespawnList</code></li>
     <li><code>congaLineColorChange</code></li>
     <li><code>controlPlayer</code></li>
     <li><code>convertTraps</code></li>
@@ -3768,6 +3770,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>handleSongEnd</code></li>
     <li><code>increaseItemCombo</code></li>
     <li><code>incrementBeatCounter</code></li>
+    <li><code>initializePendingObjectList</code></li>
     <li><code>markSoundsForRollbackStop</code></li>
     <li><code>moveOverrideOnSlipperyTile</code></li>
     <li><code>postAIFrame</code></li>
@@ -3777,6 +3780,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processApparitions</code></li>
     <li><code>processAutoCasts</code></li>
     <li><code>processFrozenEntities</code></li>
+    <li><code>processPendingObjects</code></li>
     <li><code>processPendingTraps</code></li>
     <li><code>processSizeModifiers</code></li>
     <li><code>provokeOnBeatCounter</code></li>
