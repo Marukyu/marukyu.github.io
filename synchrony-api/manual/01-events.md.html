@@ -92,11 +92,12 @@
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
   <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
+  <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
+  <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
   <li><a href="../modules/necro.game.character.Team.html">necro.game.character.Team</a></li>
   <li><a href="../modules/necro.game.character.Tickle.html">necro.game.character.Tickle</a></li>
-  <li><a href="../modules/necro.game.character.Trample.html">necro.game.character.Trample</a></li>
   <li><a href="../modules/necro.game.data.Components.html">necro.game.data.Components</a></li>
   <li><a href="../modules/necro.game.data.ContentLoader.html">necro.game.data.ContentLoader</a></li>
   <li><a href="../modules/necro.game.data.CustomEntities.html">necro.game.data.CustomEntities</a></li>
@@ -967,12 +968,17 @@
     <li><code>descent</code></li>
     <li><code>sunken</code></li>
     <li><code>knockback</code></li>
+    <li><code>windVoice</code></li>
     <li><code>unstasisOnCollision</code></li>
-    <li><code>attackCollision</code></li>
+    <li><code>attackCheck</code></li>
+    <li><code>attackMove</code></li>
+    <li><code>attackSound</code></li>
+    <li><code>attackTriggers</code></li>
     <li><code>attack</code></li>
     <li><code>collision</code></li>
     <li><code>stasisOnMove</code></li>
     <li><code>success</code></li>
+    <li><code>tween</code></li>
 </ul>
 
 
@@ -1145,7 +1151,7 @@
     <li><code>stun</code></li>
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
-    <li><code>bounce</code></li>
+    <li><code>tween</code></li>
     <li><code>screenShake</code></li>
 </ul>
 
@@ -1171,20 +1177,13 @@
     <li><code>unsink</code></li>
     <li><code>weaponAttack</code></li>
     <li><code>interact</code></li>
-    <li><code>preDigAmplify</code></li>
-    <li><code>dig</code></li>
-    <li><code>digEffect</code></li>
     <li><code>amplify</code></li>
     <li><code>move</code></li>
     <li><code>moveOverrideSlide</code></li>
     <li><code>rotate</code></li>
     <li><code>beatDelay</code></li>
-    <li><code>trample</code></li>
     <li><code>spellcast</code></li>
-    <li><code>stopMoveOverride</code></li>
-    <li><code>hitChain</code></li>
     <li><code>ai</code></li>
-    <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>sound</code></li>
     <li><code>screenShake</code></li>
@@ -1199,7 +1198,6 @@
     <li><code>provoke</code></li>
     <li><code>health</code></li>
     <li><code>cursedHealth</code></li>
-    <li><code>healthBar</code></li>
     <li><code>death</code></li>
 </ul>
 
@@ -1241,10 +1239,11 @@
 <h2>holderFreeze</h2>
 
 <ul>
-    <li><code>attachment</code></li>
     <li><code>sprite</code></li>
     <li><code>freeze</code></li>
     <li><code>preventActions</code></li>
+    <li><code>attackability</code></li>
+    <li><code>attachment</code></li>
 </ul>
 
 
@@ -1342,7 +1341,6 @@
 <h2>holderInteract</h2>
 
 <ul>
-    <li><code>requeue</code></li>
     <li><code>priceTag</code></li>
     <li><code>activate</code></li>
     <li><code>selfDestruct</code></li>
@@ -1371,6 +1369,7 @@
 <h2>holderMove</h2>
 
 <ul>
+    <li><code>moveType</code></li>
     <li><code>tween</code></li>
     <li><code>autoDig</code></li>
     <li><code>position</code></li>
@@ -1380,6 +1379,7 @@
     <li><code>collision</code></li>
     <li><code>targeting</code></li>
     <li><code>damage</code></li>
+    <li><code>partial</code></li>
     <li><code>itemPickup</code></li>
     <li><code>attachments</code></li>
     <li><code>light</code></li>
@@ -1387,8 +1387,8 @@
     <li><code>stasis</code></li>
     <li><code>tileEffects</code></li>
     <li><code>tileIdle</code></li>
-    <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
+    <li><code>camera</code></li>
     <li><code>sound</code></li>
     <li><code>hasMoved</code></li>
 </ul>
@@ -1398,10 +1398,14 @@
 <h2>holderMoveResult</h2>
 
 <ul>
-    <li><code>move</code></li>
-    <li><code>preAttack</code></li>
-    <li><code>innateAttack</code></li>
-    <li><code>tween</code></li>
+    <li><code>dig</code></li>
+    <li><code>digEffect</code></li>
+    <li><code>trample</code></li>
+    <li><code>spellcast</code></li>
+    <li><code>grooveChain</code></li>
+    <li><code>hitChain</code></li>
+    <li><code>beatDelay</code></li>
+    <li><code>stopMoveOverride</code></li>
 </ul>
 
 
@@ -1458,6 +1462,7 @@
     <li><code>ai</code></li>
     <li><code>fear</code></li>
     <li><code>convert</code></li>
+    <li><code>beatDelay</code></li>
     <li><code>preventActions</code></li>
 </ul>
 
@@ -1539,22 +1544,18 @@
 <ul>
     <li><code>previousPosition</code></li>
     <li><code>actionDelay</code></li>
-    <li><code>tween</code></li>
     <li><code>idle</code></li>
     <li><code>innate</code></li>
     <li><code>bomb</code></li>
     <li><code>item</code></li>
+    <li><code>reload</code></li>
     <li><code>toggle</code></li>
     <li><code>throw</code></li>
-    <li><code>reload</code></li>
     <li><code>despawn</code></li>
     <li><code>animation</code></li>
-    <li><code>faceTarget</code></li>
-    <li><code>beatDelay</code></li>
     <li><code>ai</code></li>
     <li><code>hasMoved</code></li>
     <li><code>moveOverride</code></li>
-    <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
 </ul>
 
@@ -1597,7 +1598,6 @@
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
     <li><code>screenFlash</code></li>
-    <li><code>healthBar</code></li>
     <li><code>target</code></li>
     <li><code>ai</code></li>
     <li><code>conditionalDamage</code></li>
@@ -1656,14 +1656,6 @@
 <ul>
     <li><code>confusion</code></li>
     <li><code>deaggro</code></li>
-</ul>
-
-
-<p><a name="holderUnfreeze"></a></p>
-<h2>holderUnfreeze</h2>
-
-<ul>
-    <li><code>thaw</code></li>
 </ul>
 
 
@@ -2191,12 +2183,17 @@
     <li><code>descent</code></li>
     <li><code>sunken</code></li>
     <li><code>knockback</code></li>
+    <li><code>windVoice</code></li>
     <li><code>unstasisOnCollision</code></li>
-    <li><code>attackCollision</code></li>
+    <li><code>attackCheck</code></li>
+    <li><code>attackMove</code></li>
+    <li><code>attackSound</code></li>
+    <li><code>attackTriggers</code></li>
     <li><code>attack</code></li>
     <li><code>collision</code></li>
     <li><code>stasisOnMove</code></li>
     <li><code>success</code></li>
+    <li><code>tween</code></li>
 </ul>
 
 
@@ -2369,7 +2366,7 @@
     <li><code>stun</code></li>
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
-    <li><code>bounce</code></li>
+    <li><code>tween</code></li>
     <li><code>screenShake</code></li>
 </ul>
 
@@ -2395,20 +2392,13 @@
     <li><code>unsink</code></li>
     <li><code>weaponAttack</code></li>
     <li><code>interact</code></li>
-    <li><code>preDigAmplify</code></li>
-    <li><code>dig</code></li>
-    <li><code>digEffect</code></li>
     <li><code>amplify</code></li>
     <li><code>move</code></li>
     <li><code>moveOverrideSlide</code></li>
     <li><code>rotate</code></li>
     <li><code>beatDelay</code></li>
-    <li><code>trample</code></li>
     <li><code>spellcast</code></li>
-    <li><code>stopMoveOverride</code></li>
-    <li><code>hitChain</code></li>
     <li><code>ai</code></li>
-    <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>sound</code></li>
     <li><code>screenShake</code></li>
@@ -2423,7 +2413,6 @@
     <li><code>provoke</code></li>
     <li><code>health</code></li>
     <li><code>cursedHealth</code></li>
-    <li><code>healthBar</code></li>
     <li><code>death</code></li>
 </ul>
 
@@ -2465,10 +2454,11 @@
 <h2>objectFreeze</h2>
 
 <ul>
-    <li><code>attachment</code></li>
     <li><code>sprite</code></li>
     <li><code>freeze</code></li>
     <li><code>preventActions</code></li>
+    <li><code>attackability</code></li>
+    <li><code>attachment</code></li>
 </ul>
 
 
@@ -2566,7 +2556,6 @@
 <h2>objectInteract</h2>
 
 <ul>
-    <li><code>requeue</code></li>
     <li><code>priceTag</code></li>
     <li><code>activate</code></li>
     <li><code>selfDestruct</code></li>
@@ -2595,6 +2584,7 @@
 <h2>objectMove</h2>
 
 <ul>
+    <li><code>moveType</code></li>
     <li><code>tween</code></li>
     <li><code>autoDig</code></li>
     <li><code>position</code></li>
@@ -2604,6 +2594,7 @@
     <li><code>collision</code></li>
     <li><code>targeting</code></li>
     <li><code>damage</code></li>
+    <li><code>partial</code></li>
     <li><code>itemPickup</code></li>
     <li><code>attachments</code></li>
     <li><code>light</code></li>
@@ -2611,8 +2602,8 @@
     <li><code>stasis</code></li>
     <li><code>tileEffects</code></li>
     <li><code>tileIdle</code></li>
-    <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
+    <li><code>camera</code></li>
     <li><code>sound</code></li>
     <li><code>hasMoved</code></li>
 </ul>
@@ -2622,10 +2613,14 @@
 <h2>objectMoveResult</h2>
 
 <ul>
-    <li><code>move</code></li>
-    <li><code>preAttack</code></li>
-    <li><code>innateAttack</code></li>
-    <li><code>tween</code></li>
+    <li><code>dig</code></li>
+    <li><code>digEffect</code></li>
+    <li><code>trample</code></li>
+    <li><code>spellcast</code></li>
+    <li><code>grooveChain</code></li>
+    <li><code>hitChain</code></li>
+    <li><code>beatDelay</code></li>
+    <li><code>stopMoveOverride</code></li>
 </ul>
 
 
@@ -2682,6 +2677,7 @@
     <li><code>ai</code></li>
     <li><code>fear</code></li>
     <li><code>convert</code></li>
+    <li><code>beatDelay</code></li>
     <li><code>preventActions</code></li>
 </ul>
 
@@ -2763,22 +2759,18 @@
 <ul>
     <li><code>previousPosition</code></li>
     <li><code>actionDelay</code></li>
-    <li><code>tween</code></li>
     <li><code>idle</code></li>
     <li><code>innate</code></li>
     <li><code>bomb</code></li>
     <li><code>item</code></li>
+    <li><code>reload</code></li>
     <li><code>toggle</code></li>
     <li><code>throw</code></li>
-    <li><code>reload</code></li>
     <li><code>despawn</code></li>
     <li><code>animation</code></li>
-    <li><code>faceTarget</code></li>
-    <li><code>beatDelay</code></li>
     <li><code>ai</code></li>
     <li><code>hasMoved</code></li>
     <li><code>moveOverride</code></li>
-    <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
 </ul>
 
@@ -2821,7 +2813,6 @@
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
     <li><code>screenFlash</code></li>
-    <li><code>healthBar</code></li>
     <li><code>target</code></li>
     <li><code>ai</code></li>
     <li><code>conditionalDamage</code></li>
@@ -2880,14 +2871,6 @@
 <ul>
     <li><code>confusion</code></li>
     <li><code>deaggro</code></li>
-</ul>
-
-
-<p><a name="objectUnfreeze"></a></p>
-<h2>objectUnfreeze</h2>
-
-<ul>
-    <li><code>thaw</code></li>
 </ul>
 
 
@@ -3032,14 +3015,14 @@
 <h2>preAI</h2>
 
 <ul>
-    <li><code>boss</code></li>
-    <li><code>dodge</code></li>
     <li><code>remap</code></li>
+    <li><code>aiChange</code></li>
     <li><code>startCharge</code></li>
-    <li><code>confusion</code></li>
-    <li><code>attackWhenPossible</code></li>
-    <li><code>actionDelay</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>moveRestriction</code></li>
+    <li><code>beatDelay</code></li>
+    <li><code>actionDelay</code></li>
+    <li><code>specialAction</code></li>
     <li><code>fear</code></li>
 </ul>
 
@@ -3627,15 +3610,6 @@
 </ul>
 
 
-<p><a name="tramplePerform"></a></p>
-<h2>tramplePerform</h2>
-
-<ul>
-    <li><code>dig</code></li>
-    <li><code>damage</code></li>
-</ul>
-
-
 <p><a name="trapArm"></a></p>
 <h2>trapArm</h2>
 
@@ -3702,6 +3676,7 @@
     <li><code>frame2</code></li>
     <li><code>updateAttachments</code></li>
     <li><code>updateVisualObjects</code></li>
+    <li><code>updateVisualObjectsLate</code></li>
     <li><code>minimap</code></li>
     <li><code>rhythm</code></li>
     <li><code>musicLayers</code></li>

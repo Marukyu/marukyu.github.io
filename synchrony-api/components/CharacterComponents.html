@@ -92,11 +92,12 @@
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
   <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
+  <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
+  <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
   <li><a href="../modules/necro.game.character.Team.html">necro.game.character.Team</a></li>
   <li><a href="../modules/necro.game.character.Tickle.html">necro.game.character.Tickle</a></li>
-  <li><a href="../modules/necro.game.character.Trample.html">necro.game.character.Trample</a></li>
   <li><a href="../modules/necro.game.data.Components.html">necro.game.data.Components</a></li>
   <li><a href="../modules/necro.game.data.ContentLoader.html">necro.game.data.ContentLoader</a></li>
   <li><a href="../modules/necro.game.data.CustomEntities.html">necro.game.data.CustomEntities</a></li>
@@ -362,6 +363,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#attackOnPartialMove">attackOnPartialMove</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#beatCounter">beatCounter</a></td>
 	<td class="summary">
 
@@ -416,7 +423,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#dieOnMovementFail">dieOnMovementFail</a></td>
+	<td class="name" nowrap><a href="#digOnPartialMove">digOnPartialMove</a></td>
 	<td class="summary">
 
 </td>
@@ -619,21 +626,13 @@
          constant table
          (<em>default</em> {})
         </li>
-        <li><span class="parameter">preserveBeatDelay</span>
-         constant bool
-         (<em>default</em> false)
-        </li>
-        <li><span class="parameter">beatDelay</span>
+        <li><span class="parameter">delay</span>
           int16
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">currentAction</span>
           int8
          (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">cancellable</span>
-          bool
-         (<em>default</em> false)
         </li>
     </ul>
 
@@ -658,6 +657,22 @@
          (<em>default</em> 0)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "attackOnPartialMove"></a>
+    <strong>attackOnPartialMove</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -886,8 +901,8 @@
 
 </dd>
     <dt>
-    <a name = "dieOnMovementFail"></a>
-    <strong>dieOnMovementFail</strong>
+    <a name = "digOnPartialMove"></a>
+    <strong>digOnPartialMove</strong>
     </dt>
     <dd>
 
@@ -895,6 +910,12 @@
 
 
 
+    <ul>
+        <li><span class="parameter">strength</span>
+         constant int8
+         (<em>default</em> 0)
+        </li>
+    </ul>
 
 
 

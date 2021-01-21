@@ -92,7 +92,7 @@
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
   <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
-  <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
+  <li><strong>necro.game.character.Provokable</strong></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
   <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
@@ -126,7 +126,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
-  <li><strong>necro.game.item.ItemPickup</strong></li>
+  <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
   <li><a href="../modules/necro.game.level.BossFight.html">necro.game.level.BossFight</a></li>
@@ -339,7 +339,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.item.ItemPickup</code></h1>
+<h1>Module <code>necro.game.character.Provokable</code></h1>
 <p>
 
 </p>
@@ -351,13 +351,19 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#suppress">suppress (item)</a></td>
+	<td class="name" nowrap><a href="#provoke">provoke (entity, params)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#unsuppress">unsuppress (item)</a></td>
+	<td class="name" nowrap><a href="#setProvoke">setProvoke (entity, provoke, params)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#unprovoke">unprovoke (entity, params)</a></td>
 	<td class="summary">
 
 </td>
@@ -372,8 +378,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "suppress"></a>
-    <strong>suppress (item)</strong>
+    <a name = "provoke"></a>
+    <strong>provoke (entity, params)</strong>
     </dt>
     <dd>
 
@@ -383,7 +389,12 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">item</span>
+        <li><span class="parameter">entity</span>
+
+
+
+        </li>
+        <li><span class="parameter">params</span>
 
 
 
@@ -396,8 +407,8 @@
 
 </dd>
     <dt>
-    <a name = "unsuppress"></a>
-    <strong>unsuppress (item)</strong>
+    <a name = "setProvoke"></a>
+    <strong>setProvoke (entity, provoke, params)</strong>
     </dt>
     <dd>
 
@@ -407,7 +418,46 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">item</span>
+        <li><span class="parameter">entity</span>
+
+
+
+        </li>
+        <li><span class="parameter">provoke</span>
+
+
+
+        </li>
+        <li><span class="parameter">params</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "unprovoke"></a>
+    <strong>unprovoke (entity, params)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+
+
+
+        </li>
+        <li><span class="parameter">params</span>
 
 
 
