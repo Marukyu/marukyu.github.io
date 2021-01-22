@@ -972,6 +972,7 @@
     <li><code>unstasisOnCollision</code></li>
     <li><code>attackCheck</code></li>
     <li><code>attackMove</code></li>
+    <li><code>attackCollision</code></li>
     <li><code>attackSound</code></li>
     <li><code>attackTriggers</code></li>
     <li><code>attack</code></li>
@@ -1168,7 +1169,6 @@
     <li><code>attackGrabber</code></li>
     <li><code>remap</code></li>
     <li><code>moveOverrideGrooveChain</code></li>
-    <li><code>startMoveOverride</code></li>
     <li><code>moveOverride</code></li>
     <li><code>confusion</code></li>
     <li><code>preFacing</code></li>
@@ -1177,13 +1177,20 @@
     <li><code>unsink</code></li>
     <li><code>weaponAttack</code></li>
     <li><code>interact</code></li>
+    <li><code>preDigAmplify</code></li>
+    <li><code>dig</code></li>
+    <li><code>digEffect</code></li>
     <li><code>amplify</code></li>
     <li><code>move</code></li>
     <li><code>moveOverrideSlide</code></li>
     <li><code>rotate</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>trample</code></li>
     <li><code>spellcast</code></li>
+    <li><code>stopMoveOverride</code></li>
+    <li><code>hitChain</code></li>
     <li><code>ai</code></li>
+    <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>sound</code></li>
     <li><code>screenShake</code></li>
@@ -1341,6 +1348,7 @@
 <h2>holderInteract</h2>
 
 <ul>
+    <li><code>requeue</code></li>
     <li><code>priceTag</code></li>
     <li><code>activate</code></li>
     <li><code>selfDestruct</code></li>
@@ -1387,6 +1395,7 @@
     <li><code>stasis</code></li>
     <li><code>tileEffects</code></li>
     <li><code>tileIdle</code></li>
+    <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
     <li><code>camera</code></li>
     <li><code>sound</code></li>
@@ -1402,6 +1411,7 @@
     <li><code>digEffect</code></li>
     <li><code>trample</code></li>
     <li><code>spellcast</code></li>
+    <li><code>autocast</code></li>
     <li><code>grooveChain</code></li>
     <li><code>hitChain</code></li>
     <li><code>beatDelay</code></li>
@@ -1544,6 +1554,7 @@
 <ul>
     <li><code>previousPosition</code></li>
     <li><code>actionDelay</code></li>
+    <li><code>tween</code></li>
     <li><code>idle</code></li>
     <li><code>innate</code></li>
     <li><code>bomb</code></li>
@@ -1553,10 +1564,13 @@
     <li><code>throw</code></li>
     <li><code>despawn</code></li>
     <li><code>animation</code></li>
+    <li><code>faceTarget</code></li>
+    <li><code>beatDelay</code></li>
     <li><code>ai</code></li>
     <li><code>hasMoved</code></li>
     <li><code>moveOverride</code></li>
     <li><code>damageCountdown</code></li>
+    <li><code>grooveChain</code></li>
 </ul>
 
 
@@ -1598,6 +1612,7 @@
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
     <li><code>screenFlash</code></li>
+    <li><code>healthBar</code></li>
     <li><code>target</code></li>
     <li><code>ai</code></li>
     <li><code>conditionalDamage</code></li>
@@ -1698,18 +1713,11 @@
 <h2>holderUnsink</h2>
 
 <ul>
+    <li><code>immunity</code></li>
     <li><code>sound</code></li>
     <li><code>animation</code></li>
     <li><code>unsink</code></li>
     <li><code>tile</code></li>
-</ul>
-
-
-<p><a name="holderUnsinkImmunity"></a></p>
-<h2>holderUnsinkImmunity</h2>
-
-<ul>
-    <li><code>immunity</code></li>
 </ul>
 
 
@@ -2187,6 +2195,7 @@
     <li><code>unstasisOnCollision</code></li>
     <li><code>attackCheck</code></li>
     <li><code>attackMove</code></li>
+    <li><code>attackCollision</code></li>
     <li><code>attackSound</code></li>
     <li><code>attackTriggers</code></li>
     <li><code>attack</code></li>
@@ -2383,7 +2392,6 @@
     <li><code>attackGrabber</code></li>
     <li><code>remap</code></li>
     <li><code>moveOverrideGrooveChain</code></li>
-    <li><code>startMoveOverride</code></li>
     <li><code>moveOverride</code></li>
     <li><code>confusion</code></li>
     <li><code>preFacing</code></li>
@@ -2392,13 +2400,20 @@
     <li><code>unsink</code></li>
     <li><code>weaponAttack</code></li>
     <li><code>interact</code></li>
+    <li><code>preDigAmplify</code></li>
+    <li><code>dig</code></li>
+    <li><code>digEffect</code></li>
     <li><code>amplify</code></li>
     <li><code>move</code></li>
     <li><code>moveOverrideSlide</code></li>
     <li><code>rotate</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>trample</code></li>
     <li><code>spellcast</code></li>
+    <li><code>stopMoveOverride</code></li>
+    <li><code>hitChain</code></li>
     <li><code>ai</code></li>
+    <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>sound</code></li>
     <li><code>screenShake</code></li>
@@ -2556,6 +2571,7 @@
 <h2>objectInteract</h2>
 
 <ul>
+    <li><code>requeue</code></li>
     <li><code>priceTag</code></li>
     <li><code>activate</code></li>
     <li><code>selfDestruct</code></li>
@@ -2602,6 +2618,7 @@
     <li><code>stasis</code></li>
     <li><code>tileEffects</code></li>
     <li><code>tileIdle</code></li>
+    <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
     <li><code>camera</code></li>
     <li><code>sound</code></li>
@@ -2617,6 +2634,7 @@
     <li><code>digEffect</code></li>
     <li><code>trample</code></li>
     <li><code>spellcast</code></li>
+    <li><code>autocast</code></li>
     <li><code>grooveChain</code></li>
     <li><code>hitChain</code></li>
     <li><code>beatDelay</code></li>
@@ -2759,6 +2777,7 @@
 <ul>
     <li><code>previousPosition</code></li>
     <li><code>actionDelay</code></li>
+    <li><code>tween</code></li>
     <li><code>idle</code></li>
     <li><code>innate</code></li>
     <li><code>bomb</code></li>
@@ -2768,10 +2787,13 @@
     <li><code>throw</code></li>
     <li><code>despawn</code></li>
     <li><code>animation</code></li>
+    <li><code>faceTarget</code></li>
+    <li><code>beatDelay</code></li>
     <li><code>ai</code></li>
     <li><code>hasMoved</code></li>
     <li><code>moveOverride</code></li>
     <li><code>damageCountdown</code></li>
+    <li><code>grooveChain</code></li>
 </ul>
 
 
@@ -2813,6 +2835,7 @@
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
     <li><code>screenFlash</code></li>
+    <li><code>healthBar</code></li>
     <li><code>target</code></li>
     <li><code>ai</code></li>
     <li><code>conditionalDamage</code></li>
@@ -2913,6 +2936,7 @@
 <h2>objectUnsink</h2>
 
 <ul>
+    <li><code>immunity</code></li>
     <li><code>sound</code></li>
     <li><code>animation</code></li>
     <li><code>unsink</code></li>
@@ -2923,9 +2947,6 @@
 <p><a name="objectUnsinkImmunity"></a></p>
 <h2>objectUnsinkImmunity</h2>
 
-<ul>
-    <li><code>immunity</code></li>
-</ul>
 
 
 <p><a name="objectUpdateAttackability"></a></p>
@@ -3015,9 +3036,13 @@
 <h2>preAI</h2>
 
 <ul>
+    <li><code>boss</code></li>
+    <li><code>dodge</code></li>
     <li><code>remap</code></li>
     <li><code>aiChange</code></li>
     <li><code>startCharge</code></li>
+    <li><code>confusion</code></li>
+    <li><code>attackWhenPossible</code></li>
     <li><code>moveOverride</code></li>
     <li><code>moveRestriction</code></li>
     <li><code>beatDelay</code></li>

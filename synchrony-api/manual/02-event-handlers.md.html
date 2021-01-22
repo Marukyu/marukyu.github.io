@@ -1614,11 +1614,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="holderUnsink"></a></p>
 <h2>holderUnsink</h2>
 
-
-
-<p><a name="holderUnsinkImmunity"></a></p>
-<h2>holderUnsinkImmunity</h2>
-
 <ul>
     <li><code>itemUnsinkImmunity</code></li>
 </ul>
@@ -2322,6 +2317,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>activateDamageCountdown</code></li>
     <li><code>amplify</code></li>
+    <li><code>amplifyFirstMove</code></li>
     <li><code>animationCycling</code></li>
     <li><code>applyConfusion</code></li>
     <li><code>attackGrabber</code></li>
@@ -2342,7 +2338,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>performInteraction</code></li>
     <li><code>performWeaponAttack</code></li>
     <li><code>playHitChainVoice</code></li>
-    <li><code>remapFirstMove</code></li>
     <li><code>remapMovement</code></li>
     <li><code>resetHasMoved</code></li>
     <li><code>rotateDirection</code></li>
@@ -2546,7 +2541,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>hasMoved</code></li>
     <li><code>hola</code></li>
     <li><code>moveCollisionMap</code></li>
-    <li><code>moveCount</code></li>
     <li><code>moveGrabber</code></li>
     <li><code>moveLightSource</code></li>
     <li><code>moveObjectMapEntry</code></li>
@@ -2585,7 +2579,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>castOnMoveResult</code></li>
+    <li><code>delayChargeTarget</code></li>
     <li><code>digWall</code></li>
+    <li><code>firstMove</code></li>
     <li><code>performTrample</code></li>
     <li><code>resetBeatDelay</code></li>
     <li><code>stopMoveOverrideOnResult</code></li>
@@ -2741,7 +2737,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>activateDamageCountdown</code></li>
-    <li><code>delayChargeTarget</code></li>
     <li><code>hopInPlaceOnIdle</code></li>
     <li><code>idle</code></li>
     <li><code>innateSpellcasts</code></li>
@@ -2911,6 +2906,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectUnsink</h2>
 
 <ul>
+    <li><code>hopInPlace</code></li>
+    <li><code>innateImmunity</code></li>
     <li><code>playUnsinkAnimation</code></li>
     <li><code>playUnsinkSound</code></li>
     <li><code>transformLiquidTile</code></li>
@@ -2923,7 +2920,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>gigantismUnsinkImmunity</code></li>
-    <li><code>innateImmunity</code></li>
 </ul>
 
 
