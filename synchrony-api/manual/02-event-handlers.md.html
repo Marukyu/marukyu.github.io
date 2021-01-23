@@ -1377,10 +1377,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>holderDirection</h2>
 
 <ul>
-    <li><code>activateDigConditionalInvincibility</code></li>
     <li><code>amplify</code></li>
     <li><code>itemCastOnAttack</code></li>
-    <li><code>performDashOnDig</code></li>
 </ul>
 
 
@@ -1486,6 +1484,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="holderMoveResult"></a></p>
 <h2>holderMoveResult</h2>
 
+<ul>
+    <li><code>activateDigConditionalInvincibility</code></li>
+    <li><code>performDashOnDig</code></li>
+</ul>
 
 
 <p><a name="holderParry"></a></p>
@@ -1593,6 +1595,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <p><a name="holderUnconfuse"></a></p>
 <h2>holderUnconfuse</h2>
+
+
+
+<p><a name="holderUnfreeze"></a></p>
+<h2>holderUnfreeze</h2>
 
 
 
@@ -2347,7 +2354,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnOnDirection</code></li>
     <li><code>stasisUntilProvoked</code></li>
     <li><code>unsinkOnDirection</code></li>
-    <li><code>updatePattern</code></li>
     <li><code>updatePreviousPosition</code></li>
     <li><code>wiredRotate</code></li>
     <li><code>wiredRotatePost</code></li>
@@ -2405,12 +2411,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectFreeze</h2>
 
 <ul>
+    <li><code>addFreezeTime</code></li>
     <li><code>freezeAnimation</code></li>
-    <li><code>freezeAttackableFlags</code></li>
-    <li><code>freezeStackingQuirk</code></li>
     <li><code>preventActions</code></li>
-    <li><code>setFreezeTime</code></li>
     <li><code>spawnFreezeAttachment</code></li>
+    <li><code>stackDuration</code></li>
+    <li><code>updateAttackableFlags</code></li>
 </ul>
 
 
@@ -2583,10 +2589,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>digWall</code></li>
     <li><code>firstMove</code></li>
     <li><code>performTrample</code></li>
+    <li><code>processAutoCasts</code></li>
     <li><code>resetBeatDelay</code></li>
     <li><code>stopMoveOverrideOnResult</code></li>
     <li><code>updateGrooveChain</code></li>
     <li><code>updateHitChain</code></li>
+    <li><code>updatePattern</code></li>
 </ul>
 
 
@@ -2745,7 +2753,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playSpellcastAnimation</code></li>
     <li><code>resetHasMoved</code></li>
     <li><code>resetPreviousPosition</code></li>
-    <li><code>updatePattern</code></li>
     <li><code>useActiveItem</code></li>
 </ul>
 
@@ -2860,6 +2867,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>resetAggro</code></li>
     <li><code>resetConfusionTime</code></li>
+</ul>
+
+
+<p><a name="objectUnfreeze"></a></p>
+<h2>objectUnfreeze</h2>
+
+<ul>
+    <li><code>despawnFreezeAttachment</code></li>
+    <li><code>resetFreezeTime</code></li>
+    <li><code>updateAttackableFlags</code></li>
 </ul>
 
 
@@ -3735,6 +3752,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyTileIdleDamage</code></li>
     <li><code>checkCurrencyGainForConditionalDamage</code></li>
     <li><code>checkDescentCompletion</code></li>
+    <li><code>checkItemPickup</code></li>
     <li><code>checkLevelExitCondition</code></li>
     <li><code>checkTrapTrigger</code></li>
     <li><code>controlPlayer</code></li>
@@ -3756,7 +3774,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>preBossFreeze</code></li>
     <li><code>processAIMovements</code></li>
     <li><code>processApparitions</code></li>
-    <li><code>processAutoCasts</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>processPendingTraps</code></li>
     <li><code>processSizeModifiers</code></li>
