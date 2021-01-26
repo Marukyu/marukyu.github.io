@@ -44,7 +44,7 @@
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
-  <li><strong>necro.audio.Sound</strong></li>
+  <li><a href="../modules/necro.audio.Sound.html">necro.audio.Sound</a></li>
   <li><a href="../modules/necro.audio.SoundGroups.html">necro.audio.SoundGroups</a></li>
   <li><a href="../modules/necro.audio.TimeScale.html">necro.audio.TimeScale</a></li>
   <li><a href="../modules/necro.audio.Voice.html">necro.audio.Voice</a></li>
@@ -245,7 +245,7 @@
   <li><a href="../modules/system.network.Common.html">system.network.Common</a></li>
   <li><a href="../modules/system.network.LocalTunnel.html">system.network.LocalTunnel</a></li>
   <li><a href="../modules/system.network.ReliableHandler.html">system.network.ReliableHandler</a></li>
-  <li><a href="../modules/system.network.ReliablePassthrough.html">system.network.ReliablePassthrough</a></li>
+  <li><strong>system.network.ReliablePassthrough</strong></li>
   <li><a href="../modules/system.network.Server.html">system.network.Server</a></li>
   <li><a href="../modules/system.utils.Array.html">system.utils.Array</a></li>
   <li><a href="../modules/system.utils.BitUtilities.html">system.utils.BitUtilities</a></li>
@@ -342,7 +342,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.audio.Sound</code></h1>
+<h1>Module <code>system.network.ReliablePassthrough</code></h1>
 <p>
 
 </p>
@@ -354,73 +354,7 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#getFilter">getFilter ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getSoundVolume">getSoundVolume ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#isAsyncLoadingEnabled">isAsyncLoadingEnabled ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#play">play (soundGroup, x, y, volume, pitch)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#playUI">playUI (soundGroup, volume, pitch)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#resetGameSounds">resetGameSounds ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#scaleVolume">scaleVolume (value)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#setAsyncLoadingEnabled">setAsyncLoadingEnabled (async)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#setFilter">setFilter (filter)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#setSoundVolume">setSoundVolume (vol)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#startRollback">startRollback ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#stopRollback">stopRollback ()</a></td>
+	<td class="name" nowrap><a href="#new">new (sendUnreliable, sendReliable)</a></td>
 	<td class="summary">
 
 </td>
@@ -435,56 +369,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "getFilter"></a>
-    <strong>getFilter ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getSoundVolume"></a>
-    <strong>getSoundVolume ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "isAsyncLoadingEnabled"></a>
-    <strong>isAsyncLoadingEnabled ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "play"></a>
-    <strong>play (soundGroup, x, y, volume, pitch)</strong>
+    <a name = "new"></a>
+    <strong>new (sendUnreliable, sendReliable)</strong>
     </dt>
     <dd>
 
@@ -494,210 +380,17 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">soundGroup</span>
+        <li><span class="parameter">sendUnreliable</span>
 
 
 
         </li>
-        <li><span class="parameter">x</span>
-
-
-
-        </li>
-        <li><span class="parameter">y</span>
-
-
-
-        </li>
-        <li><span class="parameter">volume</span>
-
-
-
-        </li>
-        <li><span class="parameter">pitch</span>
+        <li><span class="parameter">sendReliable</span>
 
 
 
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "playUI"></a>
-    <strong>playUI (soundGroup, volume, pitch)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">soundGroup</span>
-
-
-
-        </li>
-        <li><span class="parameter">volume</span>
-
-
-
-        </li>
-        <li><span class="parameter">pitch</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "resetGameSounds"></a>
-    <strong>resetGameSounds ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "scaleVolume"></a>
-    <strong>scaleVolume (value)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">value</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setAsyncLoadingEnabled"></a>
-    <strong>setAsyncLoadingEnabled (async)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">async</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setFilter"></a>
-    <strong>setFilter (filter)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">filter</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setSoundVolume"></a>
-    <strong>setSoundVolume (vol)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">vol</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "startRollback"></a>
-    <strong>startRollback ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "stopRollback"></a>
-    <strong>stopRollback ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 
