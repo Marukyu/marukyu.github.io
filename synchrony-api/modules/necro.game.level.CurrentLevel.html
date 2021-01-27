@@ -90,7 +90,7 @@
   <li><a href="../modules/necro.game.character.Fear.html">necro.game.character.Fear</a></li>
   <li><a href="../modules/necro.game.character.Freeze.html">necro.game.character.Freeze</a></li>
   <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
-  <li><strong>necro.game.character.Health</strong></li>
+  <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
   <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
@@ -131,7 +131,7 @@
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
   <li><a href="../modules/necro.game.level.BossFight.html">necro.game.level.BossFight</a></li>
-  <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
+  <li><strong>necro.game.level.CurrentLevel</strong></li>
   <li><a href="../modules/necro.game.level.LevelGenerator.html">necro.game.level.LevelGenerator</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
@@ -342,7 +342,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.character.Health</code></h1>
+<h1>Module <code>necro.game.level.CurrentLevel</code></h1>
 <p>
 
 </p>
@@ -354,37 +354,43 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#addCursed">addCursed (entity, cursedHealth)</a></td>
+	<td class="name" nowrap><a href="#getBossType">getBossType ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#curseHealth">curseHealth (entity, cursedHealth)</a></td>
+	<td class="name" nowrap><a href="#getDepth">getDepth ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getRemainingRegenerationKills">getRemainingRegenerationKills (entity)</a></td>
+	<td class="name" nowrap><a href="#getFloor">getFloor ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#heal">heal (parameters)</a></td>
+	<td class="name" nowrap><a href="#getNumber">getNumber ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#increaseMaxHealth">increaseMaxHealth (entity, amount, healer)</a></td>
+	<td class="name" nowrap><a href="#getZone">getZone ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#incrementRegenerationKillCounter">incrementRegenerationKillCounter (entity, amount)</a></td>
+	<td class="name" nowrap><a href="#isBoss">isBoss ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isRegularFloor">isRegularFloor ()</a></td>
 	<td class="summary">
 
 </td>
@@ -399,8 +405,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "addCursed"></a>
-    <strong>addCursed (entity, cursedHealth)</strong>
+    <a name = "getBossType"></a>
+    <strong>getBossType ()</strong>
     </dt>
     <dd>
 
@@ -408,19 +414,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">entity</span>
-
-
-
-        </li>
-        <li><span class="parameter">cursedHealth</span>
-
-
-
-        </li>
-    </ul>
 
 
 
@@ -428,8 +421,8 @@
 
 </dd>
     <dt>
-    <a name = "curseHealth"></a>
-    <strong>curseHealth (entity, cursedHealth)</strong>
+    <a name = "getDepth"></a>
+    <strong>getDepth ()</strong>
     </dt>
     <dd>
 
@@ -437,19 +430,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">entity</span>
-
-
-
-        </li>
-        <li><span class="parameter">cursedHealth</span>
-
-
-
-        </li>
-    </ul>
 
 
 
@@ -457,8 +437,8 @@
 
 </dd>
     <dt>
-    <a name = "getRemainingRegenerationKills"></a>
-    <strong>getRemainingRegenerationKills (entity)</strong>
+    <a name = "getFloor"></a>
+    <strong>getFloor ()</strong>
     </dt>
     <dd>
 
@@ -466,14 +446,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">entity</span>
-
-
-
-        </li>
-    </ul>
 
 
 
@@ -481,8 +453,8 @@
 
 </dd>
     <dt>
-    <a name = "heal"></a>
-    <strong>heal (parameters)</strong>
+    <a name = "getNumber"></a>
+    <strong>getNumber ()</strong>
     </dt>
     <dd>
 
@@ -490,14 +462,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">parameters</span>
-
-
-
-        </li>
-    </ul>
 
 
 
@@ -505,8 +469,8 @@
 
 </dd>
     <dt>
-    <a name = "increaseMaxHealth"></a>
-    <strong>increaseMaxHealth (entity, amount, healer)</strong>
+    <a name = "getZone"></a>
+    <strong>getZone ()</strong>
     </dt>
     <dd>
 
@@ -514,24 +478,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">entity</span>
-
-
-
-        </li>
-        <li><span class="parameter">amount</span>
-
-
-
-        </li>
-        <li><span class="parameter">healer</span>
-
-
-
-        </li>
-    </ul>
 
 
 
@@ -539,8 +485,8 @@
 
 </dd>
     <dt>
-    <a name = "incrementRegenerationKillCounter"></a>
-    <strong>incrementRegenerationKillCounter (entity, amount)</strong>
+    <a name = "isBoss"></a>
+    <strong>isBoss ()</strong>
     </dt>
     <dd>
 
@@ -548,19 +494,22 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">entity</span>
 
 
 
-        </li>
-        <li><span class="parameter">amount</span>
+
+
+</dd>
+    <dt>
+    <a name = "isRegularFloor"></a>
+    <strong>isRegularFloor ()</strong>
+    </dt>
+    <dd>
 
 
 
-        </li>
-    </ul>
+
+
 
 
 

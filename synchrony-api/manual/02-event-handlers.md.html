@@ -131,6 +131,7 @@
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
   <li><a href="../modules/necro.game.level.BossFight.html">necro.game.level.BossFight</a></li>
+  <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
   <li><a href="../modules/necro.game.level.LevelGenerator.html">necro.game.level.LevelGenerator</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
@@ -253,7 +254,6 @@
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
   <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
-  <li><a href="../modules/system.utils.ListMerge.html">system.utils.ListMerge</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
@@ -670,6 +670,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearPlayerEntityListCache</code></li>
     <li><code>clearXMLMappings</code></li>
     <li><code>entitySelector</code></li>
+    <li><code>invalidateObjectSelectorCache</code></li>
 </ul>
 
 
@@ -968,6 +969,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>eventHandlersChanged</h2>
 
 <ul>
+    <li><code>invalidateObjectSelectorEntityEventCache</code></li>
+    <li><code>invalidateObjectSelectorItemEventCache</code></li>
     <li><code>inventoryHUDGroups</code></li>
     <li><code>inventoryHUDSlots</code></li>
     <li><code>reloadComponents</code></li>
@@ -1179,6 +1182,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>cancelPendingLevelTransition</code></li>
+    <li><code>clearCurrentLevelInfo</code></li>
     <li><code>clearObjects</code></li>
     <li><code>clearPlayerInputs</code></li>
     <li><code>clearSnapshots</code></li>
@@ -1555,6 +1559,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="holderStasis"></a></p>
+<h2>holderStasis</h2>
+
+
+
 <p><a name="holderTakeDamage"></a></p>
 <h2>holderTakeDamage</h2>
 
@@ -1902,6 +1911,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>levelLoad</h2>
 
 <ul>
+    <li><code>assignCurrentLevelInfo</code></li>
     <li><code>bossFloor</code></li>
     <li><code>congaLine</code></li>
     <li><code>loadAreaBoundingBoxes</code></li>
@@ -2130,6 +2140,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkForPreMoveCollisions</code></li>
     <li><code>checkInnateAttack</code></li>
     <li><code>disallowMoveDuringDescent</code></li>
+    <li><code>disappearOnAttack</code></li>
     <li><code>grabVictim</code></li>
     <li><code>inhibitFrozenMovement</code></li>
     <li><code>inhibitHeavy</code></li>
@@ -2339,6 +2350,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnOnDirection</code></li>
     <li><code>stasisUntilProvoked</code></li>
     <li><code>unsinkOnDirection</code></li>
+    <li><code>updatePreviousPosition</code></li>
     <li><code>wiredRotate</code></li>
     <li><code>wiredRotatePost</code></li>
 </ul>
@@ -2577,7 +2589,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>performTrample</code></li>
     <li><code>processAutoCasts</code></li>
     <li><code>resetBeatDelay</code></li>
-    <li><code>resetPreviousPosition</code></li>
     <li><code>stopMoveOverrideOnResult</code></li>
     <li><code>updateGrooveChain</code></li>
     <li><code>updateHitChain</code></li>
@@ -2713,6 +2724,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>mergeItemStack</code></li>
     <li><code>offsetSpriteIfAboveWall</code></li>
     <li><code>provokeOnWallRemoval</code></li>
+    <li><code>randomInitialFacingDirection</code></li>
     <li><code>randomizeHoverEffect</code></li>
     <li><code>randomizeTentacleTeleports</code></li>
     <li><code>selectRandomSpriteVariant</code></li>
@@ -2741,7 +2753,19 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>moveOverride</code></li>
     <li><code>playSpellcastAnimation</code></li>
     <li><code>resetHasMoved</code></li>
+    <li><code>resetPreviousPosition</code></li>
     <li><code>useActiveItem</code></li>
+</ul>
+
+
+<p><a name="objectStasis"></a></p>
+<h2>objectStasis</h2>
+
+<ul>
+    <li><code>stasisAI</code></li>
+    <li><code>stasisAttackability</code></li>
+    <li><code>stasisHideHealthBar</code></li>
+    <li><code>voiceUnstasis</code></li>
 </ul>
 
 
