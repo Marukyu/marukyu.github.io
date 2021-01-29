@@ -88,6 +88,7 @@
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
   <li><a href="../modules/necro.game.character.Descent.html">necro.game.character.Descent</a></li>
   <li><a href="../modules/necro.game.character.Fear.html">necro.game.character.Fear</a></li>
+  <li><a href="../modules/necro.game.character.Follower.html">necro.game.character.Follower</a></li>
   <li><a href="../modules/necro.game.character.Freeze.html">necro.game.character.Freeze</a></li>
   <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
@@ -522,7 +523,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastRequireDamageForFX">spellcastRequireDamageForFX</a></td>
+	<td class="name" nowrap><a href="#spellcastRequireTargetForFX">spellcastRequireTargetForFX</a></td>
 	<td class="summary">
 
 </td>
@@ -1007,7 +1008,7 @@
          constant bool
          (<em>default</em> false)
         </li>
-        <li><span class="parameter">directionless</span>
+        <li><span class="parameter">useCastDirection</span>
          constant bool
          (<em>default</em> false)
         </li>
@@ -1277,8 +1278,8 @@
 
 </dd>
     <dt>
-    <a name = "spellcastRequireDamageForFX"></a>
-    <strong>spellcastRequireDamageForFX</strong>
+    <a name = "spellcastRequireTargetForFX"></a>
+    <strong>spellcastRequireTargetForFX</strong>
     </dt>
     <dd>
 
@@ -1479,6 +1480,10 @@
 
 
     <ul>
+        <li><span class="parameter">attackFlags</span>
+         constant int32
+         (<em>default</em> attack.Flag.CHARACTER + attack.Flag.IGNORE_TEAM)
+        </li>
         <li><span class="parameter">moveType</span>
          constant int32
          (<em>default</em> move.Type.TELEPORT)

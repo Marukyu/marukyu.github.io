@@ -88,6 +88,7 @@
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
   <li><a href="../modules/necro.game.character.Descent.html">necro.game.character.Descent</a></li>
   <li><a href="../modules/necro.game.character.Fear.html">necro.game.character.Fear</a></li>
+  <li><a href="../modules/necro.game.character.Follower.html">necro.game.character.Follower</a></li>
   <li><a href="../modules/necro.game.character.Freeze.html">necro.game.character.Freeze</a></li>
   <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
@@ -462,6 +463,24 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#followed">followed</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#follower">follower</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#followerCollectGold">followerCollectGold</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#hasMoved">hasMoved</a></td>
 	<td class="summary">
 
@@ -540,6 +559,18 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#setFacingOnDirection">setFacingOnDirection</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setFacingOnMove">setFacingOnMove</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#shoplifter">shoplifter</a></td>
 	<td class="summary">
 
@@ -600,7 +631,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#stunOnDig">stunOnDig</a></td>
+	<td class="name" nowrap><a href="#stunOnResults">stunOnResults</a></td>
 	<td class="summary">
 
 </td>
@@ -1068,6 +1099,80 @@
 
 </dd>
     <dt>
+    <a name = "followed"></a>
+    <strong>followed</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">followers</span>
+          table
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "follower"></a>
+    <strong>follower</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">dx</span>
+          int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">dy</span>
+          int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">parent</span>
+          entityID
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "followerCollectGold"></a>
+    <strong>followerCollectGold</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">minQuantityForHeal</span>
+         constant int16
+         (<em>default</em> 25)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "hasMoved"></a>
     <strong>hasMoved</strong>
     </dt>
@@ -1340,6 +1445,38 @@
 
 </dd>
     <dt>
+    <a name = "setFacingOnDirection"></a>
+    <strong>setFacingOnDirection</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setFacingOnMove"></a>
+    <strong>setFacingOnMove</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "shoplifter"></a>
     <strong>shoplifter</strong>
     </dt>
@@ -1578,8 +1715,8 @@
 
 </dd>
     <dt>
-    <a name = "stunOnDig"></a>
-    <strong>stunOnDig</strong>
+    <a name = "stunOnResults"></a>
+    <strong>stunOnResults</strong>
     </dt>
     <dd>
 
@@ -1588,9 +1725,9 @@
 
 
     <ul>
-        <li><span class="parameter">delay</span>
-          int16
-         (<em>default</em> 0)
+        <li><span class="parameter">duration</span>
+         constant table
+         (<em>default</em> {})
         </li>
     </ul>
 
