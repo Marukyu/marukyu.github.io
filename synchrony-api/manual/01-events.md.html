@@ -785,7 +785,7 @@
     <li><code>turnID</code></li>
     <li><code>music</code></li>
     <li><code>objects</code></li>
-    <li><code>cacheClear</code></li>
+    <li><code>clearVisuals</code></li>
     <li><code>initPendingObjects</code></li>
     <li><code>resetTeams</code></li>
     <li><code>perspective</code></li>
@@ -859,7 +859,7 @@
     <li><code>lobby</code></li>
     <li><code>currentLevel</code></li>
     <li><code>objects</code></li>
-    <li><code>cacheClear</code></li>
+    <li><code>clearVisuals</code></li>
     <li><code>initPendingObjects</code></li>
     <li><code>tiles</code></li>
     <li><code>players</code></li>
@@ -1073,6 +1073,7 @@
     <li><code>currencyDrop</code></li>
     <li><code>itemDrop</code></li>
     <li><code>spellcast</code></li>
+    <li><code>runState</code></li>
     <li><code>tombstone</code></li>
     <li><code>kill</code></li>
 </ul>
@@ -1179,9 +1180,9 @@
     <li><code>remap</code></li>
     <li><code>moveOverrideGrooveChain</code></li>
     <li><code>moveOverride</code></li>
-    <li><code>confusion</code></li>
     <li><code>preFacing</code></li>
     <li><code>facing</code></li>
+    <li><code>confusion</code></li>
     <li><code>stasis</code></li>
     <li><code>unsink</code></li>
     <li><code>item</code></li>
@@ -1193,7 +1194,7 @@
     <li><code>amplify</code></li>
     <li><code>move</code></li>
     <li><code>moveOverrideSlide</code></li>
-    <li><code>rotate</code></li>
+    <li><code>facingLate</code></li>
     <li><code>beatDelay</code></li>
     <li><code>trample</code></li>
     <li><code>spellcast</code></li>
@@ -1291,6 +1292,7 @@
     <li><code>sound</code></li>
     <li><code>flyaway</code></li>
     <li><code>damage</code></li>
+    <li><code>shatter</code></li>
     <li><code>multiplier</code></li>
     <li><code>light</code></li>
     <li><code>sprite</code></li>
@@ -1429,10 +1431,11 @@
     <li><code>autoCast</code></li>
     <li><code>ai</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>ranged</code></li>
     <li><code>hitChain</code></li>
+    <li><code>beatDelay</code></li>
     <li><code>stopMoveOverride</code></li>
     <li><code>stun</code></li>
-    <li><code>beatDelay</code></li>
 </ul>
 
 
@@ -1899,6 +1902,7 @@
     <li><code>attackable</code></li>
     <li><code>conditionalDamage</code></li>
     <li><code>health</code></li>
+    <li><code>healthLate</code></li>
     <li><code>regenKillCount</code></li>
     <li><code>holderSprite</code></li>
     <li><code>sprite</code></li>
@@ -2310,6 +2314,7 @@
     <li><code>currencyDrop</code></li>
     <li><code>itemDrop</code></li>
     <li><code>spellcast</code></li>
+    <li><code>runState</code></li>
     <li><code>tombstone</code></li>
     <li><code>kill</code></li>
 </ul>
@@ -2416,9 +2421,9 @@
     <li><code>remap</code></li>
     <li><code>moveOverrideGrooveChain</code></li>
     <li><code>moveOverride</code></li>
-    <li><code>confusion</code></li>
     <li><code>preFacing</code></li>
     <li><code>facing</code></li>
+    <li><code>confusion</code></li>
     <li><code>stasis</code></li>
     <li><code>unsink</code></li>
     <li><code>item</code></li>
@@ -2430,7 +2435,7 @@
     <li><code>amplify</code></li>
     <li><code>move</code></li>
     <li><code>moveOverrideSlide</code></li>
-    <li><code>rotate</code></li>
+    <li><code>facingLate</code></li>
     <li><code>beatDelay</code></li>
     <li><code>trample</code></li>
     <li><code>spellcast</code></li>
@@ -2528,6 +2533,7 @@
     <li><code>sound</code></li>
     <li><code>flyaway</code></li>
     <li><code>damage</code></li>
+    <li><code>shatter</code></li>
     <li><code>multiplier</code></li>
     <li><code>light</code></li>
     <li><code>sprite</code></li>
@@ -2666,10 +2672,11 @@
     <li><code>autoCast</code></li>
     <li><code>ai</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>ranged</code></li>
     <li><code>hitChain</code></li>
+    <li><code>beatDelay</code></li>
     <li><code>stopMoveOverride</code></li>
     <li><code>stun</code></li>
-    <li><code>beatDelay</code></li>
 </ul>
 
 
@@ -2995,11 +3002,6 @@
     <li><code>unsink</code></li>
     <li><code>tile</code></li>
 </ul>
-
-
-<p><a name="objectUnsinkImmunity"></a></p>
-<h2>objectUnsinkImmunity</h2>
-
 
 
 <p><a name="objectUpdateAttackability"></a></p>
@@ -3505,6 +3507,7 @@
     <li><code>destroyTraps</code></li>
     <li><code>destroyWalls</code></li>
     <li><code>spawnEntity</code></li>
+    <li><code>grantCurrency</code></li>
     <li><code>knockback</code></li>
     <li><code>inflictDamage</code></li>
     <li><code>inflictEarthquake</code></li>

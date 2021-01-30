@@ -1126,8 +1126,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>randomizeWallVisuals</code></li>
     <li><code>removeBarrier</code></li>
     <li><code>removeConfusion</code></li>
+    <li><code>removeFlyawayEntities</code></li>
     <li><code>removeFreeze</code></li>
     <li><code>removeMoveOverride</code></li>
+    <li><code>removeSwipes</code></li>
     <li><code>resetAnimationTimer</code></li>
     <li><code>resetApparitionSpawnCooldowns</code></li>
     <li><code>resetDamageCountdown</code></li>
@@ -1195,6 +1197,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processPendingObjects</code></li>
     <li><code>releaseFastForward</code></li>
     <li><code>removeAllOverlays</code></li>
+    <li><code>removeFlyawayEntities</code></li>
+    <li><code>removeSwipss</code></li>
     <li><code>resetLevelExitState</code></li>
     <li><code>resetPlayerEntityList</code></li>
     <li><code>resetRhythmSettings</code></li>
@@ -1301,7 +1305,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>increaseByHolderGrooveChain</code></li>
     <li><code>increaseDigStrength</code></li>
     <li><code>increaseDigStrengthCapped</code></li>
-    <li><code>upgradeOnHighReistance</code></li>
+    <li><code>upgradeOnHighResistance</code></li>
 </ul>
 
 
@@ -1429,6 +1433,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>applyItemImmunity</code></li>
     <li><code>applyItemMaximize</code></li>
+    <li><code>shatterOnMissedBeat</code></li>
     <li><code>updateVisionSource</code></li>
 </ul>
 
@@ -1485,6 +1490,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>autoDigSurroundingTiles</code></li>
     <li><code>damageOnMove</code></li>
+    <li><code>damageOnUntoggledMovement</code></li>
     <li><code>forceSlidingTween</code></li>
     <li><code>moveLightItem</code></li>
     <li><code>updateRadialVisionOnItem</code></li>
@@ -1498,6 +1504,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>activateDigConditionalInvincibility</code></li>
     <li><code>performDashOnDig</code></li>
+    <li><code>setRangedFlag</code></li>
 </ul>
 
 
@@ -1764,6 +1771,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>enableHoverEffect</code></li>
     <li><code>enableRadialVision</code></li>
+    <li><code>healOnFirstPickup</code></li>
     <li><code>increaseMaxHealthOnPickup</code></li>
     <li><code>resetConditionalDamageOnCurrencyGain</code></li>
     <li><code>resetConditionalDamageOnLowHealth</code></li>
@@ -2228,6 +2236,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>genericDeathSound</code></li>
     <li><code>gigantismCurrencyDropOverride</code></li>
     <li><code>gigantismItemDrop</code></li>
+    <li><code>markShopkeeperDeath</code></li>
     <li><code>spawnOnDeath</code></li>
     <li><code>swapEntitiesOnDeath</code></li>
     <li><code>triggerKillEvent</code></li>
@@ -2250,6 +2259,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>removeTargetTurn</code></li>
     <li><code>restoreCollisionMask</code></li>
     <li><code>restorePersistence</code></li>
+    <li><code>shadowVisibility</code></li>
     <li><code>updateAttackability</code></li>
 </ul>
 
@@ -2328,7 +2338,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>attackGrabber</code></li>
     <li><code>castOnVisibleDirection</code></li>
     <li><code>castle</code></li>
-    <li><code>confusedMoreOverrideInvertDirection</code></li>
     <li><code>delayOffWallMoves</code></li>
     <li><code>disallowActionDuringDescent</code></li>
     <li><code>flyingSeek</code></li>
@@ -2346,6 +2355,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>remapMovement</code></li>
     <li><code>resetHasMoved</code></li>
     <li><code>rotateDirection</code></li>
+    <li><code>setFacing</code></li>
     <li><code>setFacingOnDirection</code></li>
     <li><code>shakeScreenOnAttack</code></li>
     <li><code>shakeScreenOnWalk</code></li>
@@ -2945,20 +2955,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectUnsink</h2>
 
 <ul>
+    <li><code>gigantismUnsinkImmunity</code></li>
     <li><code>hopInPlace</code></li>
     <li><code>innateImmunity</code></li>
     <li><code>playUnsinkAnimation</code></li>
     <li><code>playUnsinkSound</code></li>
     <li><code>transformLiquidTile</code></li>
     <li><code>unsinkEntity</code></li>
-</ul>
-
-
-<p><a name="objectUnsinkImmunity"></a></p>
-<h2>objectUnsinkImmunity</h2>
-
-<ul>
-    <li><code>gigantismUnsinkImmunity</code></li>
 </ul>
 
 
@@ -3102,39 +3105,44 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>registerDynamicGlobals</h2>
 
 <ul>
-    <li><code>1__activeOverlays</code></li>
-    <li><code>1__bossFlawless</code></li>
-    <li><code>1__bossPending</code></li>
-    <li><code>1__collisionMap</code></li>
-    <li><code>1__colorBuffer</code></li>
-    <li><code>1__currentTurnID</code></li>
-    <li><code>1__exitedPlayers</code></li>
-    <li><code>1__fovMap</code></li>
-    <li><code>1__globalRandom</code></li>
-    <li><code>1__inverseTeams</code></li>
-    <li><code>1__levelBounds</code></li>
-    <li><code>1__levelCompleted</code></li>
-    <li><code>1__levelExitUnlocked</code></li>
-    <li><code>1__nextRegionID</code></li>
-    <li><code>1__objectPositions</code></li>
-    <li><code>1__offset</code></li>
-    <li><code>1__outOfBoundsObjects</code></li>
-    <li><code>1__pendingTraps</code></li>
-    <li><code>1__playerCharacterTypes</code></li>
-    <li><code>1__playerEntityIDs</code></li>
-    <li><code>1__revealMap</code></li>
-    <li><code>1__rows</code></li>
-    <li><code>1__scalePoints</code></li>
-    <li><code>1__scaleRegions</code></li>
-    <li><code>1__segments</code></li>
-    <li><code>1__songEndLocalPlayers</code></li>
-    <li><code>1__songEndPlayers</code></li>
-    <li><code>1__songEnded</code></li>
-    <li><code>1__spawnCooldowns</code></li>
-    <li><code>1__spectators</code></li>
-    <li><code>1__teams</code></li>
-    <li><code>1__tileMap</code></li>
-    <li><code>1__visMap</code></li>
+    <li><code>1_Apparition_spawnCooldowns</code></li>
+    <li><code>1_BossFight_bossFlawless</code></li>
+    <li><code>1_BossFight_bossPending</code></li>
+    <li><code>1_Collision_collisionMap</code></li>
+    <li><code>1_Flyaway_activeFlyaways</code></li>
+    <li><code>1_Flyaway_nextID</code></li>
+    <li><code>1_LevelExit_exitedPlayers</code></li>
+    <li><code>1_LevelExit_levelCompleted</code></li>
+    <li><code>1_LevelExit_levelExitUnlocked</code></li>
+    <li><code>1_Map_objectPositions</code></li>
+    <li><code>1_Map_outOfBoundsObjects</code></li>
+    <li><code>1_Minimap_colorBuffer</code></li>
+    <li><code>1_Overlay_activeOverlays</code></li>
+    <li><code>1_Player_playerCharacterTypes</code></li>
+    <li><code>1_Player_playerEntityIDs</code></li>
+    <li><code>1_RNG_globalRandom</code></li>
+    <li><code>1_RowMap_offset</code></li>
+    <li><code>1_RowMap_rows</code></li>
+    <li><code>1_RunState_state</code></li>
+    <li><code>1_Segment_segments</code></li>
+    <li><code>1_SongEnd_songEndLocalPlayers</code></li>
+    <li><code>1_SongEnd_songEndPlayers</code></li>
+    <li><code>1_SongEnd_songEnded</code></li>
+    <li><code>1_Spectator_spectators</code></li>
+    <li><code>1_Swipe_activeSwipes</code></li>
+    <li><code>1_Swipe_nextID</code></li>
+    <li><code>1_Targeting_inverseTeams</code></li>
+    <li><code>1_Targeting_teams</code></li>
+    <li><code>1_Tile_levelBounds</code></li>
+    <li><code>1_Tile_tileMap</code></li>
+    <li><code>1_TimeScale_nextRegionID</code></li>
+    <li><code>1_TimeScale_scalePoints</code></li>
+    <li><code>1_TimeScale_scaleRegions</code></li>
+    <li><code>1_Trap_pendingTraps</code></li>
+    <li><code>1_Turn_currentTurnID</code></li>
+    <li><code>1_Vision_fovMap</code></li>
+    <li><code>1_Vision_revealMap</code></li>
+    <li><code>1_Vision_visMap</code></li>
 </ul>
 
 
@@ -3536,6 +3544,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>destroyWalls</code></li>
     <li><code>globalTarget</code></li>
     <li><code>grantBarrier</code></li>
+    <li><code>grantCurrency</code></li>
     <li><code>heal</code></li>
     <li><code>healCasterPerTarget</code></li>
     <li><code>inflictConfusion</code></li>
@@ -3625,7 +3634,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkSongEnd</code></li>
     <li><code>checkTurnSync</code></li>
     <li><code>cleanUpFlyawayEntities</code></li>
-    <li><code>cleanUpSwipeEntities</code></li>
+    <li><code>cleanUpSwipes</code></li>
     <li><code>cleanUpTimedOutOverlays</code></li>
     <li><code>debugDocs</code></li>
     <li><code>debugKeys</code></li>
