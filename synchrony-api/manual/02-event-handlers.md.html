@@ -376,7 +376,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>liquidSeek</code></li>
     <li><code>pattern</code></li>
     <li><code>pawnAI</code></li>
-    <li><code>randomOrthogonal</code></li>
+    <li><code>random</code></li>
     <li><code>seek</code></li>
     <li><code>seekBiased</code></li>
     <li><code>seekLazy</code></li>
@@ -419,6 +419,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyTrapActivationAnimations</code></li>
     <li><code>applyWireAnimations</code></li>
     <li><code>applyWiredAnimations</code></li>
+    <li><code>freezeAnimationFrame</code></li>
 </ul>
 
 
@@ -1050,6 +1051,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>convertObjects</code></li>
     <li><code>convertOnBossProvoke</code></li>
     <li><code>endSpawnInvicibility</code></li>
+    <li><code>provokeOnWallRemoval</code></li>
     <li><code>resetKnockbackImmunity</code></li>
     <li><code>updateEntityVisibility</code></li>
     <li><code>updateFieldOfView</code></li>
@@ -1199,6 +1201,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>removeAllOverlays</code></li>
     <li><code>removeFlyawayEntities</code></li>
     <li><code>removeSwipss</code></li>
+    <li><code>resetBossFlags</code></li>
     <li><code>resetLevelExitState</code></li>
     <li><code>resetPlayerEntityList</code></li>
     <li><code>resetRhythmSettings</code></li>
@@ -2159,7 +2162,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>performInnateAttack</code></li>
     <li><code>resistKnockbackWhileGrabbing</code></li>
     <li><code>stasisOnMove</code></li>
-    <li><code>unstasisOnCollision</code></li>
+    <li><code>unburrow</code></li>
     <li><code>windVoice</code></li>
 </ul>
 
@@ -2177,6 +2180,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>confusableDigStrength</code></li>
     <li><code>dwarfismDigStrengthOverride</code></li>
     <li><code>gigantismIncreaseDigStrength</code></li>
+    <li><code>inhibitFearedDigs</code></li>
     <li><code>innateDigStrength</code></li>
 </ul>
 
@@ -2420,7 +2424,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>addFreezeTime</code></li>
-    <li><code>freezeAnimation</code></li>
     <li><code>preventActions</code></li>
     <li><code>spawnFreezeAttachment</code></li>
     <li><code>stackDuration</code></li>
@@ -2432,6 +2435,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectGrab</h2>
 
 <ul>
+    <li><code>allowCharacterCollisions</code></li>
     <li><code>attachToVictim</code></li>
     <li><code>castOnGrab</code></li>
     <li><code>denyGrooveChain</code></li>
@@ -2633,9 +2637,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>addToRowMap</code></li>
     <li><code>assignDefaultAI</code></li>
     <li><code>clearPlayerEntityCache</code></li>
-    <li><code>freezeAnimation</code></li>
     <li><code>moveOverride</code></li>
     <li><code>postConvertBeatDelay</code></li>
+    <li><code>postConvertFreezeAnimation</code></li>
     <li><code>soundPostConvert</code></li>
     <li><code>spawnAttachment</code></li>
     <li><code>updateAttackability</code></li>
@@ -2740,7 +2744,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initializeRandomState</code></li>
     <li><code>mergeItemStack</code></li>
     <li><code>offsetSpriteIfAboveWall</code></li>
-    <li><code>provokeOnWallRemoval</code></li>
     <li><code>randomInitialFacingDirection</code></li>
     <li><code>randomizeHoverEffect</code></li>
     <li><code>randomizeTentacleTeleports</code></li>
@@ -2835,6 +2838,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>shieldSetBeatDelay</code></li>
     <li><code>shieldedHitVoice</code></li>
     <li><code>spawnOnHit</code></li>
+    <li><code>spawnWallsOnHit</code></li>
     <li><code>squishVoice</code></li>
     <li><code>startMoveOverride</code></li>
     <li><code>targetAttacker</code></li>
@@ -2883,7 +2887,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnOnWallRemoval</code></li>
     <li><code>despawnOnWireRemoval</code></li>
     <li><code>offWallConvert</code></li>
-    <li><code>provokeOnWallRemoval</code></li>
     <li><code>teleportOnWallRemoval</code></li>
     <li><code>updateShrink</code></li>
     <li><code>updateSunken</code></li>
@@ -2921,6 +2924,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>grabAttachment</code></li>
     <li><code>grantGrooveChain</code></li>
     <li><code>removeConfusion</code></li>
+    <li><code>resetCollision</code></li>
     <li><code>restoreAI</code></li>
     <li><code>unsuppressCurrencyDrop</code></li>
 </ul>
@@ -3021,7 +3025,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>applyTileWire</code></li>
     <li><code>saveWireLevel</code></li>
-    <li><code>unwiredConvert</code></li>
     <li><code>wiredConvert</code></li>
 </ul>
 
@@ -3198,7 +3201,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyClonkingSpriteOffset</code></li>
     <li><code>applyCropOnDescentEffect</code></li>
     <li><code>applyCropOnSinkEffect</code></li>
-    <li><code>applyFreezeEffect</code></li>
     <li><code>applySpriteOffsetIfAboveWall</code></li>
     <li><code>applySwayDuringMoveOverride</code></li>
     <li><code>applyTentacleTellSpriteOffset</code></li>
@@ -3539,6 +3541,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>curseHealth</code></li>
     <li><code>deathMetalSpawn</code></li>
     <li><code>despawnCaster</code></li>
+    <li><code>destroyCurrency</code></li>
     <li><code>destroyItems</code></li>
     <li><code>destroyTraps</code></li>
     <li><code>destroyWalls</code></li>
