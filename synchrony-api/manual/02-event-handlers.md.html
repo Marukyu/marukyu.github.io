@@ -841,6 +841,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>entitySchemaLoadNamedItem</h2>
 
 <ul>
+    <li><code>BagHolding</code></li>
     <li><code>BloodDrum</code></li>
     <li><code>CharmBomb</code></li>
     <li><code>CharmFrost</code></li>
@@ -881,7 +882,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>HeadSpikedEars</code></li>
     <li><code>HeadSunglasses</code></li>
     <li><code>HeartTransplant</code></li>
+    <li><code>Holster</code></li>
     <li><code>HolyWater</code></li>
+    <li><code>HudBackpack</code></li>
     <li><code>MiscCompass</code></li>
     <li><code>MiscCoupon</code></li>
     <li><code>MiscHeartContainer</code></li>
@@ -1569,6 +1572,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>prepareThrow</code></li>
     <li><code>reloadWeapon</code></li>
     <li><code>toggleItem</code></li>
+    <li><code>useHolster</code></li>
 </ul>
 
 
@@ -1721,6 +1725,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>dropPreviousItem</code></li>
     <li><code>fireCollectEvent</code></li>
     <li><code>fireEquipEvent</code></li>
+    <li><code>holster</code></li>
     <li><code>setItemVisibility</code></li>
     <li><code>unmapItemPosition</code></li>
     <li><code>updateHoldableRadialLightSource</code></li>
@@ -1747,8 +1752,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
-<p><a name="inventoryDestroyItem"></a></p>
-<h2>inventoryDestroyItem</h2>
+<p><a name="inventoryDetachItem"></a></p>
+<h2>inventoryDetachItem</h2>
 
 <ul>
     <li><code>detachItem</code></li>
@@ -1761,9 +1766,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>inventoryDropItem</h2>
 
 <ul>
-    <li><code>detachItem</code></li>
-    <li><code>detachItemFromSlot</code></li>
-    <li><code>fireRemoveEvent</code></li>
+    <li><code>fireDetachEvent</code></li>
     <li><code>setDroppedItemPosition</code></li>
 </ul>
 
@@ -1772,6 +1775,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>inventoryEquipItem</h2>
 
 <ul>
+    <li><code>dropBagContents</code></li>
     <li><code>enableHoverEffect</code></li>
     <li><code>enableRadialVision</code></li>
     <li><code>healOnFirstPickup</code></li>
@@ -1844,6 +1848,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>decreaseMaxHealthOnDrop</code></li>
     <li><code>disableHoverEffect</code></li>
     <li><code>disableRadialVision</code></li>
+    <li><code>dropHolsteredItem</code></li>
     <li><code>suppressItemPickup</code></li>
     <li><code>updateAttackability</code></li>
     <li><code>updateCharacterSpriteRow</code></li>
@@ -1860,6 +1865,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>inventorySlotCapacity</h2>
 
 <ul>
+    <li><code>action</code></li>
     <li><code>misc</code></li>
     <li><code>spell</code></li>
 </ul>
