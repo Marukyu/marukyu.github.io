@@ -302,12 +302,11 @@
   <li><a href="../components/XMLMappingComponents.html">XMLMappingComponents</a></li>
   <li><a href="../components/AnimationComponents.html">AnimationComponents</a></li>
   <li><a href="../components/CharacterSpriteComponents.html">CharacterSpriteComponents</a></li>
-  <li><a href="../components/EffectComponents.html">EffectComponents</a></li>
   <li><a href="../components/EquipmentSpriteComponents.html">EquipmentSpriteComponents</a></li>
   <li><a href="../components/MinimapComponents.html">MinimapComponents</a></li>
   <li><a href="../components/ParticleComponents.html">ParticleComponents</a></li>
-  <li><a href="../components/SpellEffectComponents.html">SpellEffectComponents</a></li>
   <li><a href="../components/SpriteComponents.html">SpriteComponents</a></li>
+  <li><a href="../components/SpriteEffectComponents.html">SpriteEffectComponents</a></li>
   <li><a href="../components/SwipeComponents.html">SwipeComponents</a></li>
   <li><a href="../components/TextLabelComponents.html">TextLabelComponents</a></li>
   <li><a href="../components/TweenComponents.html">TweenComponents</a></li>
@@ -398,6 +397,7 @@
     <li><code>spawn</code></li>
     <li><code>reveal</code></li>
     <li><code>resetCooldown</code></li>
+    <li><code>delete</code></li>
 </ul>
 
 
@@ -734,9 +734,11 @@
     <li><code>actability</code></li>
     <li><code>flags</code></li>
     <li><code>provoke</code></li>
+    <li><code>mergeItemStacks</code></li>
     <li><code>convertObjects</code></li>
     <li><code>levelExit</code></li>
     <li><code>tileTransformations</code></li>
+    <li><code>delayedCasts</code></li>
 </ul>
 
 
@@ -793,6 +795,7 @@
     <li><code>statusEffects</code></li>
     <li><code>segments</code></li>
     <li><code>tiles</code></li>
+    <li><code>spawnPlayers</code></li>
     <li><code>level</code></li>
     <li><code>tileVisuals</code></li>
     <li><code>levelBorder</code></li>
@@ -800,6 +803,7 @@
     <li><code>markers</code></li>
     <li><code>descent</code></li>
     <li><code>players</code></li>
+    <li><code>placePlayers</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>rhythm</code></li>
     <li><code>musicLayers</code></li>
@@ -1041,6 +1045,8 @@
 <h2>holderCurrency</h2>
 
 <ul>
+    <li><code>multiplier</code></li>
+    <li><code>flyaway</code></li>
     <li><code>damage</code></li>
     <li><code>counter</code></li>
 </ul>
@@ -1399,6 +1405,7 @@
     <li><code>tween</code></li>
     <li><code>facing</code></li>
     <li><code>autoDig</code></li>
+    <li><code>autoCollect</code></li>
     <li><code>position</code></li>
     <li><code>previousPosition</code></li>
     <li><code>damage</code></li>
@@ -1560,6 +1567,7 @@
     <li><code>sizeModifier</code></li>
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
+    <li><code>sound</code></li>
     <li><code>activationRange</code></li>
     <li><code>spawnExtras</code></li>
     <li><code>lightPosition</code></li>
@@ -1911,6 +1919,7 @@
     <li><code>healthLate</code></li>
     <li><code>regenKillCount</code></li>
     <li><code>holderSprite</code></li>
+    <li><code>freeze</code></li>
     <li><code>sprite</code></li>
     <li><code>dropContent</code></li>
 </ul>
@@ -1975,9 +1984,9 @@
 <h2>inventoryStackItem</h2>
 
 <ul>
+    <li><code>collect</code></li>
     <li><code>stack</code></li>
     <li><code>convert</code></li>
-    <li><code>collect</code></li>
     <li><code>despawn</code></li>
 </ul>
 
@@ -2289,6 +2298,8 @@
 <h2>objectCurrency</h2>
 
 <ul>
+    <li><code>multiplier</code></li>
+    <li><code>flyaway</code></li>
     <li><code>damage</code></li>
     <li><code>counter</code></li>
 </ul>
@@ -2647,6 +2658,7 @@
     <li><code>tween</code></li>
     <li><code>facing</code></li>
     <li><code>autoDig</code></li>
+    <li><code>autoCollect</code></li>
     <li><code>position</code></li>
     <li><code>previousPosition</code></li>
     <li><code>damage</code></li>
@@ -2808,6 +2820,7 @@
     <li><code>sizeModifier</code></li>
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
+    <li><code>sound</code></li>
     <li><code>activationRange</code></li>
     <li><code>spawnExtras</code></li>
     <li><code>lightPosition</code></li>
@@ -3538,6 +3551,14 @@
 </ul>
 
 
+<p><a name="spellcheck"></a></p>
+<h2>spellcheck</h2>
+
+<ul>
+    <li><code>runState</code></li>
+</ul>
+
+
 <p><a name="startup"></a></p>
 <h2>startup</h2>
 
@@ -3733,8 +3754,10 @@
     <li><code>trapConversions</code></li>
     <li><code>beatDelay</code></li>
     <li><code>beatCounter</code></li>
+    <li><code>castOnBeatCounter</code></li>
     <li><code>unsuppressItemPickup</code></li>
     <li><code>statusEffects</code></li>
+    <li><code>currencyDrain</code></li>
     <li><code>nextTurnEffect</code></li>
     <li><code>priceTags</code></li>
     <li><code>itemPickup</code></li>
