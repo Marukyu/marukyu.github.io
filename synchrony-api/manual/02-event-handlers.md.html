@@ -1215,7 +1215,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetSpectators</code></li>
     <li><code>resetSpeedrunTimer</code></li>
     <li><code>seedGlobalRandomState</code></li>
+    <li><code>suppressSounds</code></li>
     <li><code>turnSyncRelease</code></li>
+    <li><code>unsuppressSounds</code></li>
 </ul>
 
 
@@ -1583,6 +1585,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="holderSpectate"></a></p>
+<h2>holderSpectate</h2>
+
+
+
 <p><a name="holderStasis"></a></p>
 <h2>holderStasis</h2>
 
@@ -1630,6 +1637,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 
 
+<p><a name="holderTryCollectItem"></a></p>
+<h2>holderTryCollectItem</h2>
+
+
+
 <p><a name="holderUnconfuse"></a></p>
 <h2>holderUnconfuse</h2>
 
@@ -1661,6 +1673,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>itemUnsinkImmunity</code></li>
 </ul>
+
+
+<p><a name="holderUnspectate"></a></p>
+<h2>holderUnspectate</h2>
+
 
 
 <p><a name="holderUpdateAttackability"></a></p>
@@ -2798,6 +2815,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="objectSpectate"></a></p>
+<h2>objectSpectate</h2>
+
+<ul>
+    <li><code>makeIntangible</code></li>
+    <li><code>updateSpectatorState</code></li>
+</ul>
+
+
 <p><a name="objectStasis"></a></p>
 <h2>objectStasis</h2>
 
@@ -2914,6 +2940,17 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="objectTryCollectItem"></a></p>
+<h2>objectTryCollectItem</h2>
+
+<ul>
+    <li><code>checkCursedSlot</code></li>
+    <li><code>checkItem</code></li>
+    <li><code>checkPriceTag</code></li>
+    <li><code>collectItem</code></li>
+</ul>
+
+
 <p><a name="objectUnconfuse"></a></p>
 <h2>objectUnconfuse</h2>
 
@@ -2985,6 +3022,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playUnsinkSound</code></li>
     <li><code>transformLiquidTile</code></li>
     <li><code>unsinkEntity</code></li>
+</ul>
+
+
+<p><a name="objectUnspectate"></a></p>
+<h2>objectUnspectate</h2>
+
+<ul>
+    <li><code>moveToVacantTile</code></li>
+    <li><code>restoreTangibility</code></li>
+    <li><code>updateSpectatorState</code></li>
 </ul>
 
 
@@ -3899,6 +3946,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>applyAudioFilterToAttacker</code></li>
+</ul>
+
+
+<p><a name="updateFocusedEntities"></a></p>
+<h2>updateFocusedEntities</h2>
+
+<ul>
+    <li><code>addLocalPlayers</code></li>
+    <li><code>addSpectatorTargets</code></li>
+    <li><code>removeIntangibleEntities</code></li>
 </ul>
 
 
