@@ -144,6 +144,7 @@
   <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
   <li><a href="../modules/necro.game.object.RowMap.html">necro.game.object.RowMap</a></li>
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
+  <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
   <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
@@ -292,7 +293,6 @@
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
   <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
   <li><a href="../components/TickleComponents.html">TickleComponents</a></li>
-  <li><a href="../components/TrampleComponents.html">TrampleComponents</a></li>
   <li><a href="../components/CollisionComponents.html">CollisionComponents</a></li>
   <li><a href="../components/CoreComponents.html">CoreComponents</a></li>
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
@@ -331,6 +331,7 @@
   <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/TrapComponents.html">TrapComponents</a></li>
   <li><a href="../components/CastComponents.html">CastComponents</a></li>
+  <li><a href="../components/SpellCheckComponents.html">SpellCheckComponents</a></li>
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
   <li><a href="../components/LightComponents.html">LightComponents</a></li>
   <li><a href="../components/VisibilityComponents.html">VisibilityComponents</a></li>
@@ -727,6 +728,7 @@
 <h2>frame</h2>
 
 <ul>
+    <li><code>delayedCasts</code></li>
     <li><code>fieldOfView</code></li>
     <li><code>entityVisibility</code></li>
     <li><code>minimap</code></li>
@@ -738,7 +740,6 @@
     <li><code>convertObjects</code></li>
     <li><code>levelExit</code></li>
     <li><code>tileTransformations</code></li>
-    <li><code>delayedCasts</code></li>
 </ul>
 
 
@@ -1437,9 +1438,9 @@
 <h2>holderMoveResult</h2>
 
 <ul>
+    <li><code>trample</code></li>
     <li><code>dig</code></li>
     <li><code>digEffect</code></li>
-    <li><code>trample</code></li>
     <li><code>spellcast</code></li>
     <li><code>autoCast</code></li>
     <li><code>ai</code></li>
@@ -1904,6 +1905,7 @@
 <h2>inventoryCollectItem</h2>
 
 <ul>
+    <li><code>singleChoice</code></li>
     <li><code>convert</code></li>
     <li><code>damage</code></li>
     <li><code>wire</code></li>
@@ -2720,9 +2722,9 @@
 <h2>objectMoveResult</h2>
 
 <ul>
+    <li><code>trample</code></li>
     <li><code>dig</code></li>
     <li><code>digEffect</code></li>
-    <li><code>trample</code></li>
     <li><code>spellcast</code></li>
     <li><code>autoCast</code></li>
     <li><code>ai</code></li>
@@ -3537,6 +3539,14 @@
 </ul>
 
 
+<p><a name="spellCheck"></a></p>
+<h2>spellCheck</h2>
+
+<ul>
+    <li><code>runState</code></li>
+</ul>
+
+
 <p><a name="spellItemActivate"></a></p>
 <h2>spellItemActivate</h2>
 
@@ -3610,14 +3620,6 @@
     <li><code>suppress</code></li>
     <li><code>sound</code></li>
     <li><code>graphics</code></li>
-</ul>
-
-
-<p><a name="spellcheck"></a></p>
-<h2>spellcheck</h2>
-
-<ul>
-    <li><code>runState</code></li>
 </ul>
 
 
