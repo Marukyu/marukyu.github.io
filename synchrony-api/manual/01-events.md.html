@@ -93,6 +93,7 @@
   <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
   <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
+  <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
@@ -1079,8 +1080,8 @@
     <li><code>credit</code></li>
     <li><code>sound</code></li>
     <li><code>boss</code></li>
-    <li><code>gigantismCurrency</code></li>
     <li><code>gigantismItem</code></li>
+    <li><code>gigantismCurrency</code></li>
     <li><code>currencyDrop</code></li>
     <li><code>itemDrop</code></li>
     <li><code>spellcast</code></li>
@@ -1146,12 +1147,13 @@
 <h2>holderDespawn</h2>
 
 <ul>
+    <li><code>objectRowMap</code></li>
     <li><code>light</code></li>
     <li><code>tileEffects</code></li>
     <li><code>disengage</code></li>
     <li><code>inventory</code></li>
-    <li><code>despawnExtras</code></li>
     <li><code>intangible</code></li>
+    <li><code>despawnExtras</code></li>
     <li><code>spawnCap</code></li>
     <li><code>despawnEntity</code></li>
     <li><code>existenceChecks</code></li>
@@ -1364,6 +1366,7 @@
 <h2>holderIntangible</h2>
 
 <ul>
+    <li><code>extras</code></li>
     <li><code>objectMap</code></li>
     <li><code>objectRowMap</code></li>
     <li><code>collision</code></li>
@@ -1392,7 +1395,10 @@
 <h2>holderKill</h2>
 
 <ul>
+    <li><code>currencyBase</code></li>
+    <li><code>currencyMultiply</code></li>
     <li><code>extraCurrency</code></li>
+    <li><code>currencyDrop</code></li>
     <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>cooldownMultiplier</code></li>
@@ -1426,6 +1432,7 @@
     <li><code>stasis</code></li>
     <li><code>tileEffects</code></li>
     <li><code>tileIdle</code></li>
+    <li><code>followers</code></li>
     <li><code>damageLate</code></li>
     <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
@@ -1583,6 +1590,7 @@
     <li><code>merge</code></li>
     <li><code>upgrade</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>objectRowMap</code></li>
 </ul>
 
 
@@ -1687,6 +1695,7 @@
 <h2>holderTangible</h2>
 
 <ul>
+    <li><code>extras</code></li>
     <li><code>objectMap</code></li>
     <li><code>objectRowMap</code></li>
     <li><code>collision</code></li>
@@ -1712,6 +1721,7 @@
     <li><code>dropItems</code></li>
     <li><code>grooveChain</code></li>
     <li><code>killCredit</code></li>
+    <li><code>damage</code></li>
 </ul>
 
 
@@ -2368,8 +2378,8 @@
     <li><code>credit</code></li>
     <li><code>sound</code></li>
     <li><code>boss</code></li>
-    <li><code>gigantismCurrency</code></li>
     <li><code>gigantismItem</code></li>
+    <li><code>gigantismCurrency</code></li>
     <li><code>currencyDrop</code></li>
     <li><code>itemDrop</code></li>
     <li><code>spellcast</code></li>
@@ -2435,12 +2445,13 @@
 <h2>objectDespawn</h2>
 
 <ul>
+    <li><code>objectRowMap</code></li>
     <li><code>light</code></li>
     <li><code>tileEffects</code></li>
     <li><code>disengage</code></li>
     <li><code>inventory</code></li>
-    <li><code>despawnExtras</code></li>
     <li><code>intangible</code></li>
+    <li><code>despawnExtras</code></li>
     <li><code>spawnCap</code></li>
     <li><code>despawnEntity</code></li>
     <li><code>existenceChecks</code></li>
@@ -2653,6 +2664,7 @@
 <h2>objectIntangible</h2>
 
 <ul>
+    <li><code>extras</code></li>
     <li><code>objectMap</code></li>
     <li><code>objectRowMap</code></li>
     <li><code>collision</code></li>
@@ -2681,7 +2693,10 @@
 <h2>objectKill</h2>
 
 <ul>
+    <li><code>currencyBase</code></li>
+    <li><code>currencyMultiply</code></li>
     <li><code>extraCurrency</code></li>
+    <li><code>currencyDrop</code></li>
     <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>cooldownMultiplier</code></li>
@@ -2715,6 +2730,7 @@
     <li><code>stasis</code></li>
     <li><code>tileEffects</code></li>
     <li><code>tileIdle</code></li>
+    <li><code>followers</code></li>
     <li><code>damageLate</code></li>
     <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
@@ -2872,6 +2888,7 @@
     <li><code>merge</code></li>
     <li><code>upgrade</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>objectRowMap</code></li>
 </ul>
 
 
@@ -2976,6 +2993,7 @@
 <h2>objectTangible</h2>
 
 <ul>
+    <li><code>extras</code></li>
     <li><code>objectMap</code></li>
     <li><code>objectRowMap</code></li>
     <li><code>collision</code></li>
@@ -3001,6 +3019,7 @@
     <li><code>dropItems</code></li>
     <li><code>grooveChain</code></li>
     <li><code>killCredit</code></li>
+    <li><code>damage</code></li>
 </ul>
 
 
@@ -3879,6 +3898,24 @@
     <li><code>targetCaster</code></li>
     <li><code>activation</code></li>
     <li><code>boss</code></li>
+</ul>
+
+
+<p><a name="visibility"></a></p>
+<h2>visibility</h2>
+
+<ul>
+    <li><code>visibleWhenRevealed</code></li>
+    <li><code>silhouetteDefault</code></li>
+    <li><code>visibleByPerspective</code></li>
+    <li><code>silhouetteShadowed</code></li>
+    <li><code>unsilhouetteByPerspective</code></li>
+    <li><code>silhouetteByPerspective</code></li>
+    <li><code>visibleByProximity</code></li>
+    <li><code>hiddenByPickupSuppression</code></li>
+    <li><code>hiddenUntilProximity</code></li>
+    <li><code>rowMap</code></li>
+    <li><code>pastVisibility</code></li>
 </ul>
 
 

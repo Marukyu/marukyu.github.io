@@ -93,6 +93,7 @@
   <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
   <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
+  <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
@@ -355,18 +356,6 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#tickleDropDeathCurrency">tickleDropDeathCurrency</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#tickleGrantGrooveChain">tickleGrantGrooveChain</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#tickleGrantKillCredit">tickleGrantKillCredit</a></td>
 	<td class="summary">
 
@@ -374,6 +363,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#tickleScatterInventory">tickleScatterInventory</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tickleTakeDamage">tickleTakeDamage</a></td>
 	<td class="summary">
 
 </td>
@@ -388,38 +383,6 @@
 
     <dl class="function">
     <dt>
-    <a name = "tickleDropDeathCurrency"></a>
-    <strong>tickleDropDeathCurrency</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "tickleGrantGrooveChain"></a>
-    <strong>tickleGrantGrooveChain</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "tickleGrantKillCredit"></a>
     <strong>tickleGrantKillCredit</strong>
     </dt>
@@ -429,6 +392,12 @@
 
 
 
+    <ul>
+        <li><span class="parameter">mask</span>
+         constant int32
+         (<em>default</em> kill.Credit.mask(kill.Credit.CURRENCY)
+        </li>
+    </ul>
 
 
 
@@ -455,6 +424,22 @@
          (<em>default</em> collision.Type.NONE)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "tickleTakeDamage"></a>
+    <strong>tickleTakeDamage</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 

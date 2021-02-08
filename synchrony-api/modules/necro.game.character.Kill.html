@@ -93,12 +93,12 @@
   <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
   <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
   <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
-  <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
+  <li><strong>necro.game.character.Kill</strong></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
-  <li><strong>necro.game.character.Stasis</strong></li>
+  <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
   <li><a href="../modules/necro.game.character.Team.html">necro.game.character.Team</a></li>
   <li><a href="../modules/necro.game.character.Tickle.html">necro.game.character.Tickle</a></li>
   <li><a href="../modules/necro.game.data.Components.html">necro.game.data.Components</a></li>
@@ -344,7 +344,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.character.Stasis</code></h1>
+<h1>Module <code>necro.game.character.Kill</code></h1>
 <p>
 
 </p>
@@ -353,10 +353,10 @@
 </p>
 
 
-<h2><a href="#Functions">Functions</a></h2>
+<h2><a href="#Tables">Tables</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#setStasis">setStasis (entity, active)</a></td>
+	<td class="name" nowrap><a href="#Credit">Credit</a></td>
 	<td class="summary">
 
 </td>
@@ -367,12 +367,12 @@
 <br/>
 
 
-    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
 
     <dl class="function">
     <dt>
-    <a name = "setStasis"></a>
-    <strong>setStasis (entity, active)</strong>
+    <a name = "Credit"></a>
+    <strong>Credit</strong>
     </dt>
     <dd>
 
@@ -380,17 +380,28 @@
 
 
 
-    <h3>Parameters:</h3>
+    <h3>Fields:</h3>
     <ul>
-        <li><span class="parameter">entity</span>
-
-
-
+        <li><span class="parameter">CURRENCY</span>
+         1
         </li>
-        <li><span class="parameter">active</span>
-
-
-
+        <li><span class="parameter">GROOVE_CHAIN</span>
+         2
+        </li>
+        <li><span class="parameter">SPELL_COOLDOWN</span>
+         4
+        </li>
+        <li><span class="parameter">REGENERATION</span>
+         8
+        </li>
+        <li><span class="parameter">DAMAGE_COUNTDOWN</span>
+         16
+        </li>
+        <li><span class="parameter">INVINCIBILITY</span>
+         32
+        </li>
+        <li><span class="parameter">DASH</span>
+         64
         </li>
     </ul>
 
