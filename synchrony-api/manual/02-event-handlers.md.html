@@ -381,6 +381,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>random</code></li>
     <li><code>seek</code></li>
     <li><code>seekBiased</code></li>
+    <li><code>seekL2</code></li>
     <li><code>seekLazy</code></li>
 </ul>
 
@@ -392,6 +393,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>animationCycling</code></li>
     <li><code>animationRandomVariant</code></li>
     <li><code>applyActionDelayAnimations</code></li>
+    <li><code>applyBellAnimations</code></li>
     <li><code>applyCaptiveAudienceEffect</code></li>
     <li><code>applyCastSpellAnimations</code></li>
     <li><code>applyChargeAnimations</code></li>
@@ -675,6 +677,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearXMLMappings</code></li>
     <li><code>entitySelector</code></li>
     <li><code>invalidateObjectSelectorCache</code></li>
+    <li><code>resetObjectRowMap</code></li>
 </ul>
 
 
@@ -760,6 +763,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadBanshee</code></li>
     <li><code>loadBat</code></li>
     <li><code>loadBeetle</code></li>
+    <li><code>loadBell</code></li>
     <li><code>loadBishop</code></li>
     <li><code>loadBlademaster</code></li>
     <li><code>loadCauldron</code></li>
@@ -767,6 +771,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadCongaLine</code></li>
     <li><code>loadCoralRiff</code></li>
     <li><code>loadCrate</code></li>
+    <li><code>loadDeadRinger</code></li>
     <li><code>loadDeathMetal</code></li>
     <li><code>loadDevil</code></li>
     <li><code>loadDirBat</code></li>
@@ -2148,9 +2153,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectBeginMoveOverride</h2>
 
 <ul>
+    <li><code>chargeSprite</code></li>
     <li><code>enableRhythmAutoPlay</code></li>
     <li><code>moveOverride</code></li>
     <li><code>playChargeSound</code></li>
+    <li><code>playChargeVoice</code></li>
     <li><code>startSwayAnimation</code></li>
 </ul>
 
@@ -2276,6 +2283,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>genericDeathSound</code></li>
     <li><code>gigantismCurrencyDropOverride</code></li>
     <li><code>gigantismItemDrop</code></li>
+    <li><code>killBossOnDeath</code></li>
     <li><code>markShopkeeperDeath</code></li>
     <li><code>spawnOnDeath</code></li>
     <li><code>swapEntitiesOnDeath</code></li>
@@ -2426,6 +2434,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectEndMoveOverride</h2>
 
 <ul>
+    <li><code>chargeSprite</code></li>
     <li><code>disableRhythmAutoPlay</code></li>
     <li><code>endSwayAnimation</code></li>
     <li><code>moveOverride</code></li>
@@ -2449,6 +2458,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>changeShieldDirection</code></li>
+    <li><code>deadRingerFacing</code></li>
     <li><code>mirrorSpriteX</code></li>
     <li><code>mirrorSpriteY</code></li>
     <li><code>moveOverrideSpriteMirror</code></li>
@@ -2642,6 +2652,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectMoveResult</h2>
 
 <ul>
+    <li><code>breakBellsOnCharge</code></li>
     <li><code>castAfterMoves</code></li>
     <li><code>castOnAttackResult</code></li>
     <li><code>castOnMoveResult</code></li>
@@ -2794,6 +2805,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>setStasis</code></li>
     <li><code>sleep</code></li>
     <li><code>spawnAttachment</code></li>
+    <li><code>spawnBells</code></li>
     <li><code>spriteMimicTargetAttachmentParent</code></li>
     <li><code>tentacleFacing</code></li>
     <li><code>updateEquipmentSprite</code></li>
@@ -2878,6 +2890,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playShieldBreakSound</code></li>
     <li><code>playShieldHitSound</code></li>
     <li><code>provoke</code></li>
+    <li><code>redirectDeadRingerCharge</code></li>
     <li><code>redirectMoveOverride</code></li>
     <li><code>reduceCursedHealth</code></li>
     <li><code>reduceHealth</code></li>
@@ -2890,6 +2903,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>shieldKnockback</code></li>
     <li><code>shieldSetBeatDelay</code></li>
     <li><code>shieldedHitVoice</code></li>
+    <li><code>spawnMiniboss</code></li>
     <li><code>spawnOnHit</code></li>
     <li><code>spawnWallsOnHit</code></li>
     <li><code>squishVoice</code></li>
@@ -3140,6 +3154,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>shieldDodge</code></li>
     <li><code>spawnOnCharge</code></li>
     <li><code>startMoveOverride</code></li>
+    <li><code>strikeBell</code></li>
+    <li><code>supercharge</code></li>
+    <li><code>targetOffset</code></li>
     <li><code>tentacleTeleports</code></li>
     <li><code>trampleAIOverride</code></li>
     <li><code>useRemappedMovement</code></li>
@@ -3274,9 +3291,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>animateHoverEffect</code></li>
     <li><code>animateTargetProximityFadeEffect</code></li>
     <li><code>applyBlinkEffect</code></li>
-    <li><code>applyClonkingSpriteOffset</code></li>
     <li><code>applyCropOnDescentEffect</code></li>
     <li><code>applyCropOnSinkEffect</code></li>
+    <li><code>applyDynamicSpriteOffset</code></li>
     <li><code>applySpriteOffsetIfAboveWall</code></li>
     <li><code>applySwayDuringMoveOverride</code></li>
     <li><code>applyTentacleTellSpriteOffset</code></li>
@@ -3692,6 +3709,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>broadsword</code></li>
     <li><code>cat</code></li>
     <li><code>dagger</code></li>
+    <li><code>drtrail</code></li>
     <li><code>enemy</code></li>
     <li><code>flail</code></li>
     <li><code>flash</code></li>
@@ -3983,6 +4001,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>targetCaster</code></li>
     <li><code>targetNearestHostileEntity</code></li>
     <li><code>targetNearestPlayer</code></li>
+    <li><code>targetNextBell</code></li>
 </ul>
 
 
@@ -4020,6 +4039,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>selectNormalPattern</code></li>
     <li><code>sound</code></li>
     <li><code>suppressDamage</code></li>
+    <li><code>throwHolder</code></li>
     <li><code>throwWeapon</code></li>
     <li><code>tickleTargets</code></li>
     <li><code>weaponCastOnAttack</code></li>
