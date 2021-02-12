@@ -133,7 +133,7 @@
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
-  <li><a href="../modules/necro.game.level.BossFight.html">necro.game.level.BossFight</a></li>
+  <li><a href="../modules/necro.game.level.Boss.html">necro.game.level.Boss</a></li>
   <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
   <li><a href="../modules/necro.game.level.LevelGenerator.html">necro.game.level.LevelGenerator</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
@@ -768,6 +768,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadBlademaster</code></li>
     <li><code>loadCauldron</code></li>
     <li><code>loadClone</code></li>
+    <li><code>loadConductor</code></li>
     <li><code>loadCongaLine</code></li>
     <li><code>loadCoralRiff</code></li>
     <li><code>loadCrate</code></li>
@@ -784,6 +785,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadFakeWall</code></li>
     <li><code>loadFireElemental</code></li>
     <li><code>loadFortissimole</code></li>
+    <li><code>loadFrankensteinway</code></li>
     <li><code>loadGargoyle</code></li>
     <li><code>loadGhast</code></li>
     <li><code>loadGhost</code></li>
@@ -791,6 +793,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadGoblin</code></li>
     <li><code>loadGoblinBomber</code></li>
     <li><code>loadGoblinSentry</code></li>
+    <li><code>loadGoldenLuteBody</code></li>
+    <li><code>loadGoldenLuteHead</code></li>
     <li><code>loadGolem</code></li>
     <li><code>loadGoolem</code></li>
     <li><code>loadGorgon</code></li>
@@ -810,6 +814,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadMummy</code></li>
     <li><code>loadMushroom</code></li>
     <li><code>loadMushroomLight</code></li>
+    <li><code>loadNecrodancer</code></li>
     <li><code>loadNightmare</code></li>
     <li><code>loadOgre</code></li>
     <li><code>loadOrc</code></li>
@@ -2311,7 +2316,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>restoreCollisionMask</code></li>
     <li><code>restoreHover</code></li>
     <li><code>restorePersistence</code></li>
-    <li><code>shadowVisibility</code></li>
+    <li><code>restoreVisibility</code></li>
     <li><code>updateAttackability</code></li>
 </ul>
 
@@ -3202,8 +3207,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>1_Apparition_spawnCooldowns</code></li>
-    <li><code>1_BossFight_bossFlawless</code></li>
-    <li><code>1_BossFight_bossPending</code></li>
+    <li><code>1_Boss_bossFlawless</code></li>
+    <li><code>1_Boss_bossPending</code></li>
     <li><code>1_Collision_collisionMap</code></li>
     <li><code>1_Flyaway_activeFlyaways</code></li>
     <li><code>1_Flyaway_nextID</code></li>
@@ -3583,8 +3588,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>spellCheck</h2>
 
 <ul>
+    <li><code>spellCheckBossFloor</code></li>
     <li><code>spellCheckLimitPerRun</code></li>
-    <li><code>spellCheckUnrevealed</code></li>
+    <li><code>spellCheckRevealed</code></li>
     <li><code>spellCheckWasVisible</code></li>
 </ul>
 
