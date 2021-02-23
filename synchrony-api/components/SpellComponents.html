@@ -96,6 +96,7 @@
   <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
+  <li><a href="../modules/necro.game.character.Rhythm.html">necro.game.character.Rhythm</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
   <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
@@ -538,6 +539,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#spellcastOzuma">spellcastOzuma</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#spellcastRadial">spellcastRadial</a></td>
 	<td class="summary">
 
@@ -784,6 +791,10 @@
         <li><span class="parameter">type</span>
          constant string
          (<em>default</em> currency.Type.GOLD)
+        </li>
+        <li><span class="parameter">requirePoverty</span>
+         constant bool
+         (<em>default</em> false)
         </li>
     </ul>
 
@@ -1237,6 +1248,14 @@
          constant int8
          (<em>default</em> 0)
         </li>
+        <li><span class="parameter">attackFlags</span>
+         constant int32
+         (<em>default</em> attack.Flag.unmask(commonFlags)
+        </li>
+        <li><span class="parameter">moveType</span>
+         constant int32
+         (<em>default</em> move.Flag.mask(move.Type.KNOCKBACK)
+        </li>
     </ul>
 
 
@@ -1324,6 +1343,22 @@
          (<em>default</em> 0)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastOzuma"></a>
+    <strong>spellcastOzuma</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 

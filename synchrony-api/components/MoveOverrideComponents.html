@@ -96,6 +96,7 @@
   <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
+  <li><a href="../modules/necro.game.character.Rhythm.html">necro.game.character.Rhythm</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
   <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
@@ -358,61 +359,49 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#moveOverride">moveOverride</a></td>
+	<td class="name" nowrap><a href="#charge">charge</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#moveOverrideChargeOnSlipperyTile">moveOverrideChargeOnSlipperyTile</a></td>
+	<td class="name" nowrap><a href="#chargeDigStrength">chargeDigStrength</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#moveOverrideChargeTarget">moveOverrideChargeTarget</a></td>
+	<td class="name" nowrap><a href="#chargePostConvert">chargePostConvert</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#moveOverrideDigStrength">moveOverrideDigStrength</a></td>
+	<td class="name" nowrap><a href="#chargeRedirect">chargeRedirect</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#moveOverrideDropGrooveChainOnDirectionalAction">moveOverrideDropGrooveChainOnDirectionalAction</a></td>
+	<td class="name" nowrap><a href="#chargeShield">chargeShield</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#moveOverridePostConvert">moveOverridePostConvert</a></td>
+	<td class="name" nowrap><a href="#chargeStopOnResults">chargeStopOnResults</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#moveOverrideRedirect">moveOverrideRedirect</a></td>
+	<td class="name" nowrap><a href="#slideOnSlipperyTile">slideOnSlipperyTile</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#moveOverrideRhythmAutoPlay">moveOverrideRhythmAutoPlay</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#moveOverrideShield">moveOverrideShield</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#moveOverrideStopOnResults">moveOverrideStopOnResults</a></td>
+	<td class="name" nowrap><a href="#slideRhythmAutoPlay">slideRhythmAutoPlay</a></td>
 	<td class="summary">
 
 </td>
@@ -427,8 +416,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "moveOverride"></a>
-    <strong>moveOverride</strong>
+    <a name = "charge"></a>
+    <strong>charge</strong>
     </dt>
     <dd>
 
@@ -441,60 +430,14 @@
           bool
          (<em>default</em> false)
         </li>
-        <li><span class="parameter">x</span>
+        <li><span class="parameter">direction</span>
           int8
          (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">y</span>
-          int8
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">moveType</span>
-         constant int32
-         (<em>default</em> move.Type.NORMAL)
-        </li>
-        <li><span class="parameter">useBasicMovement</span>
-         constant bool
-         (<em>default</em> false)
         </li>
         <li><span class="parameter">startOnHit</span>
          constant bool
          (<em>default</em> false)
         </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "moveOverrideChargeOnSlipperyTile"></a>
-    <strong>moveOverrideChargeOnSlipperyTile</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "moveOverrideChargeTarget"></a>
-    <strong>moveOverrideChargeTarget</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
         <li><span class="parameter">diagonal</span>
          constant bool
          (<em>default</em> false)
@@ -505,7 +448,7 @@
         </li>
         <li><span class="parameter">maxDistance</span>
          constant int16
-         (<em>default</em> 6)
+         (<em>default</em> 0)
         </li>
         <li><span class="parameter">maxBeatDelay</span>
          constant int16
@@ -519,8 +462,8 @@
 
 </dd>
     <dt>
-    <a name = "moveOverrideDigStrength"></a>
-    <strong>moveOverrideDigStrength</strong>
+    <a name = "chargeDigStrength"></a>
+    <strong>chargeDigStrength</strong>
     </dt>
     <dd>
 
@@ -545,8 +488,8 @@
 
 </dd>
     <dt>
-    <a name = "moveOverrideDropGrooveChainOnDirectionalAction"></a>
-    <strong>moveOverrideDropGrooveChainOnDirectionalAction</strong>
+    <a name = "chargePostConvert"></a>
+    <strong>chargePostConvert</strong>
     </dt>
     <dd>
 
@@ -561,24 +504,8 @@
 
 </dd>
     <dt>
-    <a name = "moveOverridePostConvert"></a>
-    <strong>moveOverridePostConvert</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "moveOverrideRedirect"></a>
-    <strong>moveOverrideRedirect</strong>
+    <a name = "chargeRedirect"></a>
+    <strong>chargeRedirect</strong>
     </dt>
     <dd>
 
@@ -607,24 +534,8 @@
 
 </dd>
     <dt>
-    <a name = "moveOverrideRhythmAutoPlay"></a>
-    <strong>moveOverrideRhythmAutoPlay</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "moveOverrideShield"></a>
-    <strong>moveOverrideShield</strong>
+    <a name = "chargeShield"></a>
+    <strong>chargeShield</strong>
     </dt>
     <dd>
 
@@ -661,8 +572,8 @@
 
 </dd>
     <dt>
-    <a name = "moveOverrideStopOnResults"></a>
-    <strong>moveOverrideStopOnResults</strong>
+    <a name = "chargeStopOnResults"></a>
+    <strong>chargeStopOnResults</strong>
     </dt>
     <dd>
 
@@ -675,6 +586,48 @@
         ={
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "slideOnSlipperyTile"></a>
+    <strong>slideOnSlipperyTile</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">direction</span>
+          int8
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">moveType</span>
+         constant int32
+         (<em>default</em> move.Type.SLIDE)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "slideRhythmAutoPlay"></a>
+    <strong>slideRhythmAutoPlay</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 

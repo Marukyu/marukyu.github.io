@@ -96,6 +96,7 @@
   <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
+  <li><a href="../modules/necro.game.character.Rhythm.html">necro.game.character.Rhythm</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
   <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
@@ -733,7 +734,7 @@
 <ul>
     <li><code>delayedCasts</code></li>
     <li><code>fieldOfView</code></li>
-    <li><code>entityVisibility</code></li>
+    <li><code>updateRevealed</code></li>
     <li><code>minimap</code></li>
     <li><code>aggro</code></li>
     <li><code>actability</code></li>
@@ -944,13 +945,21 @@
 </ul>
 
 
-<p><a name="holderBeginMoveOverride"></a></p>
-<h2>holderBeginMoveOverride</h2>
+<p><a name="holderBeginCharge"></a></p>
+<h2>holderBeginCharge</h2>
+
+<ul>
+    <li><code>charge</code></li>
+    <li><code>sprite</code></li>
+    <li><code>sound</code></li>
+</ul>
+
+
+<p><a name="holderBeginSlide"></a></p>
+<h2>holderBeginSlide</h2>
 
 <ul>
     <li><code>itemCancel</code></li>
-    <li><code>moveOverride</code></li>
-    <li><code>sprite</code></li>
     <li><code>sound</code></li>
     <li><code>rhythm</code></li>
     <li><code>sway</code></li>
@@ -1023,6 +1032,7 @@
     <li><code>innateDigStrength</code></li>
     <li><code>shovel</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>charge</code></li>
     <li><code>increaseCapped</code></li>
     <li><code>increase</code></li>
     <li><code>dwarfism</code></li>
@@ -1091,6 +1101,7 @@
     <li><code>currencyDrop</code></li>
     <li><code>itemDrop</code></li>
     <li><code>spellcast</code></li>
+    <li><code>timeScale</code></li>
     <li><code>runState</code></li>
     <li><code>tombstone</code></li>
     <li><code>kill</code></li>
@@ -1202,6 +1213,7 @@
     <li><code>remap</code></li>
     <li><code>moveOverrideGrooveChain</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>slide</code></li>
     <li><code>preFacing</code></li>
     <li><code>facing</code></li>
     <li><code>confusion</code></li>
@@ -1243,13 +1255,20 @@
 </ul>
 
 
-<p><a name="holderEndMoveOverride"></a></p>
-<h2>holderEndMoveOverride</h2>
+<p><a name="holderEndCharge"></a></p>
+<h2>holderEndCharge</h2>
 
 <ul>
-    <li><code>moveOverride</code></li>
+    <li><code>charge</code></li>
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
+</ul>
+
+
+<p><a name="holderEndSlide"></a></p>
+<h2>holderEndSlide</h2>
+
+<ul>
     <li><code>rhythm</code></li>
     <li><code>sway</code></li>
 </ul>
@@ -1444,6 +1463,7 @@
     <li><code>damageLate</code></li>
     <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
+    <li><code>redirectCharge</code></li>
     <li><code>spell</code></li>
     <li><code>camera</code></li>
     <li><code>sound</code></li>
@@ -1466,6 +1486,7 @@
     <li><code>hitChain</code></li>
     <li><code>beatDelay</code></li>
     <li><code>stopMoveOverride</code></li>
+    <li><code>stopCharge</code></li>
     <li><code>stun</code></li>
 </ul>
 
@@ -1495,6 +1516,7 @@
     <li><code>ai</code></li>
     <li><code>beatDelay</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>charge</code></li>
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
 </ul>
@@ -1625,6 +1647,7 @@
     <li><code>ai</code></li>
     <li><code>hasMoved</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>slide</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>grooveChain</code></li>
 </ul>
@@ -1681,6 +1704,7 @@
     <li><code>provoke</code></li>
     <li><code>shatter</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>redirectCharge</code></li>
     <li><code>health</code></li>
     <li><code>cursedHealth</code></li>
     <li><code>healthConvert</code></li>
@@ -2247,13 +2271,21 @@
 </ul>
 
 
-<p><a name="objectBeginMoveOverride"></a></p>
-<h2>objectBeginMoveOverride</h2>
+<p><a name="objectBeginCharge"></a></p>
+<h2>objectBeginCharge</h2>
+
+<ul>
+    <li><code>charge</code></li>
+    <li><code>sprite</code></li>
+    <li><code>sound</code></li>
+</ul>
+
+
+<p><a name="objectBeginSlide"></a></p>
+<h2>objectBeginSlide</h2>
 
 <ul>
     <li><code>itemCancel</code></li>
-    <li><code>moveOverride</code></li>
-    <li><code>sprite</code></li>
     <li><code>sound</code></li>
     <li><code>rhythm</code></li>
     <li><code>sway</code></li>
@@ -2326,6 +2358,7 @@
     <li><code>innateDigStrength</code></li>
     <li><code>shovel</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>charge</code></li>
     <li><code>increaseCapped</code></li>
     <li><code>increase</code></li>
     <li><code>dwarfism</code></li>
@@ -2394,6 +2427,7 @@
     <li><code>currencyDrop</code></li>
     <li><code>itemDrop</code></li>
     <li><code>spellcast</code></li>
+    <li><code>timeScale</code></li>
     <li><code>runState</code></li>
     <li><code>tombstone</code></li>
     <li><code>kill</code></li>
@@ -2505,6 +2539,7 @@
     <li><code>remap</code></li>
     <li><code>moveOverrideGrooveChain</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>slide</code></li>
     <li><code>preFacing</code></li>
     <li><code>facing</code></li>
     <li><code>confusion</code></li>
@@ -2546,13 +2581,20 @@
 </ul>
 
 
-<p><a name="objectEndMoveOverride"></a></p>
-<h2>objectEndMoveOverride</h2>
+<p><a name="objectEndCharge"></a></p>
+<h2>objectEndCharge</h2>
 
 <ul>
-    <li><code>moveOverride</code></li>
+    <li><code>charge</code></li>
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
+</ul>
+
+
+<p><a name="objectEndSlide"></a></p>
+<h2>objectEndSlide</h2>
+
+<ul>
     <li><code>rhythm</code></li>
     <li><code>sway</code></li>
 </ul>
@@ -2747,6 +2789,7 @@
     <li><code>damageLate</code></li>
     <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
+    <li><code>redirectCharge</code></li>
     <li><code>spell</code></li>
     <li><code>camera</code></li>
     <li><code>sound</code></li>
@@ -2769,6 +2812,7 @@
     <li><code>hitChain</code></li>
     <li><code>beatDelay</code></li>
     <li><code>stopMoveOverride</code></li>
+    <li><code>stopCharge</code></li>
     <li><code>stun</code></li>
 </ul>
 
@@ -2798,6 +2842,7 @@
     <li><code>ai</code></li>
     <li><code>beatDelay</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>charge</code></li>
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
 </ul>
@@ -2928,6 +2973,7 @@
     <li><code>ai</code></li>
     <li><code>hasMoved</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>slide</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>grooveChain</code></li>
 </ul>
@@ -2984,6 +3030,7 @@
     <li><code>provoke</code></li>
     <li><code>shatter</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>redirectCharge</code></li>
     <li><code>health</code></li>
     <li><code>cursedHealth</code></li>
     <li><code>healthConvert</code></li>
@@ -3237,9 +3284,11 @@
     <li><code>parryCounterAttack</code></li>
     <li><code>beatDelay</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>charge</code></li>
     <li><code>actionDelay</code></li>
     <li><code>specialAction</code></li>
     <li><code>fear</code></li>
+    <li><code>facing</code></li>
 </ul>
 
 
@@ -3650,6 +3699,7 @@
     <li><code>targeting</code></li>
     <li><code>screenFlash</code></li>
     <li><code>despawnCaster</code></li>
+    <li><code>ozuma</code></li>
     <li><code>destroyItems</code></li>
     <li><code>destroyTraps</code></li>
     <li><code>destroyWalls</code></li>
@@ -3831,6 +3881,7 @@
     <li><code>timeScale</code></li>
     <li><code>descend</code></li>
     <li><code>animation</code></li>
+    <li><code>flyaway</code></li>
     <li><code>sound</code></li>
     <li><code>targetFlags</code></li>
     <li><code>arm</code></li>
