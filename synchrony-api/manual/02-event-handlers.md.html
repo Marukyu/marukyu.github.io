@@ -131,6 +131,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
+  <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
@@ -250,6 +251,7 @@
   <li><a href="../modules/system.mod.ScriptMetaInfo.html">system.mod.ScriptMetaInfo</a></li>
   <li><a href="../modules/system.network.Client.html">system.network.Client</a></li>
   <li><a href="../modules/system.network.Common.html">system.network.Common</a></li>
+  <li><a href="../modules/system.network.IPC.html">system.network.IPC</a></li>
   <li><a href="../modules/system.network.LocalTunnel.html">system.network.LocalTunnel</a></li>
   <li><a href="../modules/system.network.ReliableHandler.html">system.network.ReliableHandler</a></li>
   <li><a href="../modules/system.network.ReliablePassthrough.html">system.network.ReliablePassthrough</a></li>
@@ -661,6 +663,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>gameRender</code></li>
     <li><code>gameStartup</code></li>
     <li><code>gameTick</code></li>
+    <li><code>pollIPCMessages</code></li>
     <li><code>pollModifiedEventTypes</code></li>
     <li><code>reloadAssetsAutomatically</code></li>
     <li><code>updateInput</code></li>
@@ -731,10 +734,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>commonAttributes</code></li>
     <li><code>currencyItems</code></li>
     <li><code>foodItems</code></li>
+    <li><code>itemPools</code></li>
     <li><code>itemSlotOverrides</code></li>
     <li><code>itemSprite</code></li>
     <li><code>namedItemOverrides</code></li>
+    <li><code>spawnLeprechaunFromCoins</code></li>
     <li><code>spellActionItems</code></li>
+    <li><code>uncertainty</code></li>
     <li><code>weaponMaterial</code></li>
     <li><code>weaponPatternAxe</code></li>
     <li><code>weaponPatternBlunderbuss</code></li>
@@ -1130,12 +1136,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>connectTiles</code></li>
     <li><code>connectTravelRunes</code></li>
     <li><code>createInitialSnapshot</code></li>
+    <li><code>darkness</code></li>
     <li><code>detachInitialLevelSounds</code></li>
     <li><code>disableTweens</code></li>
     <li><code>entityVisibility</code></li>
     <li><code>findMarkerTiles</code></li>
     <li><code>forceSpawnApparition</code></li>
-    <li><code>getCurrentLevelNumber</code></li>
     <li><code>initPriceTags</code></li>
     <li><code>initialTargeting</code></li>
     <li><code>initializeMinimap</code></li>
@@ -1938,6 +1944,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="ipcMessageReceived"></a></p>
+<h2>ipcMessageReceived</h2>
+
+
+
 <p><a name="itemActivate"></a></p>
 <h2>itemActivate</h2>
 
@@ -2305,12 +2316,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectDeath</h2>
 
 <ul>
+    <li><code>activateSacrifice</code></li>
     <li><code>bossDeath</code></li>
     <li><code>castOnDeath</code></li>
     <li><code>checkKillCredit</code></li>
     <li><code>convertOnDeath</code></li>
     <li><code>createTombstone</code></li>
     <li><code>deathSound</code></li>
+    <li><code>despawnOtherFlawlessChests</code></li>
     <li><code>dropInventoryItems</code></li>
     <li><code>genericDeathSound</code></li>
     <li><code>gigantismCurrencyDropOverride</code></li>
@@ -2824,6 +2837,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyZoneDependentActivationRadius</code></li>
     <li><code>autoReveal</code></li>
     <li><code>convertVocalEntity</code></li>
+    <li><code>createChanceContent</code></li>
+    <li><code>createUncertaintyRing</code></li>
     <li><code>freezeMonkeyLikes</code></li>
     <li><code>giveInitialEquipment</code></li>
     <li><code>initFacingDirection</code></li>
@@ -2840,6 +2855,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>randomizeTentacleTeleports</code></li>
     <li><code>scalingHealth</code></li>
     <li><code>selectRandomSpriteVariant</code></li>
+    <li><code>setPriceTag</code></li>
     <li><code>setStasis</code></li>
     <li><code>sleep</code></li>
     <li><code>spawnAttachment</code></li>
@@ -2897,6 +2913,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectTakeDamage</h2>
 
 <ul>
+    <li><code>activatePain</code></li>
     <li><code>applyBarrier</code></li>
     <li><code>applyGigantismMultiplier</code></li>
     <li><code>applyInvincibility</code></li>
@@ -3137,6 +3154,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>autoPlay</code></li>
     <li><code>ignoreRhythmInnate</code></li>
     <li><code>ignoreRhythmTemporarily</code></li>
+    <li><code>skipEveryNth</code></li>
     <li><code>subdivisionInnate</code></li>
     <li><code>suspendRhythmWhileSpectating</code></li>
 </ul>
@@ -3260,6 +3278,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_SongEnd_songEnded</code></li>
     <li><code>1_Spectator_spectators</code></li>
     <li><code>1_Swipe_activeSwipes</code></li>
+    <li><code>1_Swipe_activeSwipesBack</code></li>
     <li><code>1_Swipe_nextID</code></li>
     <li><code>1_Targeting_inverseTeams</code></li>
     <li><code>1_Targeting_teams</code></li>
@@ -3295,6 +3314,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>drawOverlayAboveHUD</code></li>
     <li><code>drawOverlayBelowHUD</code></li>
     <li><code>moveAnimations</code></li>
+    <li><code>renderBackLayerSwipes</code></li>
     <li><code>renderChat</code></li>
     <li><code>renderDecals</code></li>
     <li><code>renderEffects</code></li>
@@ -3574,9 +3594,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>chance</code></li>
     <li><code>darkness</code></li>
     <li><code>glass</code></li>
+    <li><code>pain</code></li>
     <li><code>peace</code></li>
     <li><code>rhythm</code></li>
     <li><code>risk</code></li>
+    <li><code>sacrifice</code></li>
     <li><code>space</code></li>
     <li><code>uncertainty</code></li>
     <li><code>war</code></li>
@@ -4075,6 +4097,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>handleLoadedAttack</code></li>
     <li><code>inflictConfusion</code></li>
     <li><code>overrideBeatDelay</code></li>
+    <li><code>screenFlash</code></li>
     <li><code>selectLoadedPattern</code></li>
     <li><code>selectNormalPattern</code></li>
     <li><code>sound</code></li>

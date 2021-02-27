@@ -131,6 +131,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
+  <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
@@ -250,6 +251,7 @@
   <li><a href="../modules/system.mod.ScriptMetaInfo.html">system.mod.ScriptMetaInfo</a></li>
   <li><a href="../modules/system.network.Client.html">system.network.Client</a></li>
   <li><a href="../modules/system.network.Common.html">system.network.Common</a></li>
+  <li><a href="../modules/system.network.IPC.html">system.network.IPC</a></li>
   <li><a href="../modules/system.network.LocalTunnel.html">system.network.LocalTunnel</a></li>
   <li><a href="../modules/system.network.ReliableHandler.html">system.network.ReliableHandler</a></li>
   <li><a href="../modules/system.network.ReliablePassthrough.html">system.network.ReliablePassthrough</a></li>
@@ -551,6 +553,7 @@
     <li><code>metaEvents</code></li>
     <li><code>steam</code></li>
     <li><code>input</code></li>
+    <li><code>ipc</code></li>
     <li><code>tick</code></li>
     <li><code>render</code></li>
     <li><code>errors</code></li>
@@ -608,6 +611,7 @@
 
 <ul>
     <li><code>common</code></li>
+    <li><code>itemPools</code></li>
     <li><code>graphics</code></li>
     <li><code>weaponPattern</code></li>
     <li><code>weaponMaterial</code></li>
@@ -617,6 +621,7 @@
     <li><code>slotOverrides</code></li>
     <li><code>namedOverrides</code></li>
     <li><code>weaponPostProcess</code></li>
+    <li><code>uncertainty</code></li>
 </ul>
 
 
@@ -804,6 +809,7 @@
     <li><code>tiles</code></li>
     <li><code>spawnPlayers</code></li>
     <li><code>level</code></li>
+    <li><code>darkness</code></li>
     <li><code>tileVisuals</code></li>
     <li><code>levelBorder</code></li>
     <li><code>tileConnections</code></li>
@@ -1104,6 +1110,7 @@
     <li><code>timeScale</code></li>
     <li><code>runState</code></li>
     <li><code>tombstone</code></li>
+    <li><code>sacrificeShrine</code></li>
     <li><code>kill</code></li>
 </ul>
 
@@ -1700,6 +1707,7 @@
     <li><code>armor</code></li>
     <li><code>armorLate</code></li>
     <li><code>gigantism</code></li>
+    <li><code>painShrine</code></li>
     <li><code>thaw</code></li>
     <li><code>provoke</code></li>
     <li><code>shatter</code></li>
@@ -2074,15 +2082,20 @@
 </ul>
 
 
+<p><a name="ipcMessageReceived"></a></p>
+<h2>ipcMessageReceived</h2>
+
+
+
 <p><a name="itemActivate"></a></p>
 <h2>itemActivate</h2>
 
 <ul>
+    <li><code>combo</code></li>
     <li><code>sound</code></li>
     <li><code>hopInPlace</code></li>
     <li><code>screenFlash</code></li>
     <li><code>damage</code></li>
-    <li><code>combo</code></li>
     <li><code>conditionalDamage</code></li>
     <li><code>conditionalDigStrength</code></li>
     <li><code>spell</code></li>
@@ -2430,6 +2443,7 @@
     <li><code>timeScale</code></li>
     <li><code>runState</code></li>
     <li><code>tombstone</code></li>
+    <li><code>sacrificeShrine</code></li>
     <li><code>kill</code></li>
 </ul>
 
@@ -3026,6 +3040,7 @@
     <li><code>armor</code></li>
     <li><code>armorLate</code></li>
     <li><code>gigantism</code></li>
+    <li><code>painShrine</code></li>
     <li><code>thaw</code></li>
     <li><code>provoke</code></li>
     <li><code>shatter</code></li>
@@ -3349,6 +3364,7 @@
     <li><code>decals</code></li>
     <li><code>shadows</code></li>
     <li><code>priceTags</code></li>
+    <li><code>swipesBack</code></li>
     <li><code>objects</code></li>
     <li><code>itemLabels</code></li>
     <li><code>swipes</code></li>
@@ -4004,6 +4020,7 @@
     <li><code>tickle</code></li>
     <li><code>swipe</code></li>
     <li><code>sound</code></li>
+    <li><code>screenFlash</code></li>
     <li><code>noDamage</code></li>
 </ul>
 
