@@ -177,6 +177,8 @@
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
   <li><a href="../modules/necro.game.trap.Trap.html">necro.game.trap.Trap</a></li>
   <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
+  <li><a href="../modules/necro.game.vision.SegmentVisibility.html">necro.game.vision.SegmentVisibility</a></li>
+  <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
@@ -748,6 +750,7 @@
     <li><code>mergeItemStacks</code></li>
     <li><code>convertObjects</code></li>
     <li><code>levelExit</code></li>
+    <li><code>ozuma</code></li>
     <li><code>tileTransformations</code></li>
 </ul>
 
@@ -1432,6 +1435,7 @@
     <li><code>currencyBase</code></li>
     <li><code>currencyMultiply</code></li>
     <li><code>extraCurrency</code></li>
+    <li><code>currencyMinimum</code></li>
     <li><code>currencyDrop</code></li>
     <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
@@ -1613,6 +1617,7 @@
     <li><code>visibility</code></li>
     <li><code>facing</code></li>
     <li><code>ai</code></li>
+    <li><code>stasis</code></li>
     <li><code>random</code></li>
     <li><code>items</code></li>
     <li><code>sizeModifier</code></li>
@@ -1900,7 +1905,7 @@
     <li><code>brightnessRate</code></li>
     <li><code>objectVision</code></li>
     <li><code>visionRadius</code></li>
-    <li><code>targetOverlay</code></li>
+    <li><code>targetPointer</code></li>
     <li><code>label</code></li>
 </ul>
 
@@ -2765,6 +2770,7 @@
     <li><code>currencyBase</code></li>
     <li><code>currencyMultiply</code></li>
     <li><code>extraCurrency</code></li>
+    <li><code>currencyMinimum</code></li>
     <li><code>currencyDrop</code></li>
     <li><code>grooveChain</code></li>
     <li><code>damageCountdown</code></li>
@@ -2946,6 +2952,7 @@
     <li><code>visibility</code></li>
     <li><code>facing</code></li>
     <li><code>ai</code></li>
+    <li><code>stasis</code></li>
     <li><code>random</code></li>
     <li><code>items</code></li>
     <li><code>sizeModifier</code></li>
@@ -3233,7 +3240,7 @@
     <li><code>brightnessRate</code></li>
     <li><code>objectVision</code></li>
     <li><code>visionRadius</code></li>
-    <li><code>targetOverlay</code></li>
+    <li><code>targetPointer</code></li>
     <li><code>label</code></li>
 </ul>
 
@@ -3280,6 +3287,7 @@
 <ul>
     <li><code>vision</code></li>
     <li><code>visibility</code></li>
+    <li><code>targetPointer</code></li>
 </ul>
 
 
@@ -3414,6 +3422,7 @@
     <li><code>players</code></li>
     <li><code>timer</code></li>
     <li><code>levelCounter</code></li>
+    <li><code>targetPointer</code></li>
     <li><code>spectator</code></li>
 </ul>
 
@@ -3657,6 +3666,9 @@
 
 <ul>
     <li><code>flags</code></li>
+    <li><code>targets</code></li>
+    <li><code>items</code></li>
+    <li><code>health</code></li>
     <li><code>limit</code></li>
 </ul>
 
@@ -3711,11 +3723,11 @@
 
 <ul>
     <li><code>multicast</code></li>
+    <li><code>chaincast</code></li>
     <li><code>offset</code></li>
     <li><code>targeting</code></li>
     <li><code>screenFlash</code></li>
     <li><code>despawnCaster</code></li>
-    <li><code>ozuma</code></li>
     <li><code>destroyItems</code></li>
     <li><code>destroyTraps</code></li>
     <li><code>destroyWalls</code></li>
@@ -3726,6 +3738,7 @@
     <li><code>inflictEarthquake</code></li>
     <li><code>convertItems</code></li>
     <li><code>convertTiles</code></li>
+    <li><code>shrine</code></li>
     <li><code>apparition</code></li>
     <li><code>reveal</code></li>
     <li><code>aggro</code></li>
@@ -3794,6 +3807,7 @@
     <li><code>playerFocus</code></li>
     <li><code>animationTimer</code></li>
     <li><code>turn</code></li>
+    <li><code>segmentVisibility</code></li>
     <li><code>gameOver</code></li>
     <li><code>chat</code></li>
     <li><code>menu</code></li>
@@ -3821,6 +3835,7 @@
     <li><code>collision</code></li>
     <li><code>entityEvents</code></li>
     <li><code>transformation</code></li>
+    <li><code>targetPointer</code></li>
 </ul>
 
 
@@ -3834,6 +3849,7 @@
     <li><code>minimap</code></li>
     <li><code>objectMap</code></li>
     <li><code>collision</code></li>
+    <li><code>targetPointer</code></li>
 </ul>
 
 

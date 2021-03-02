@@ -177,6 +177,8 @@
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
   <li><a href="../modules/necro.game.trap.Trap.html">necro.game.trap.Trap</a></li>
   <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
+  <li><a href="../modules/necro.game.vision.SegmentVisibility.html">necro.game.vision.SegmentVisibility</a></li>
+  <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
@@ -373,6 +375,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#spellcastChainCast">spellcastChainCast</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#spellcastCone">spellcastCone</a></td>
 	<td class="summary">
 
@@ -469,6 +477,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#spellcastGrantRandomItem">spellcastGrantRandomItem</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#spellcastHeal">spellcastHeal</a></td>
 	<td class="summary">
 
@@ -553,12 +567,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastOzuma">spellcastOzuma</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#spellcastRadial">spellcastRadial</a></td>
 	<td class="summary">
 
@@ -601,7 +609,19 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#spellcastShrineEffects">spellcastShrineEffects</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#spellcastSpawnApparitions">spellcastSpawnApparitions</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spellcastSpawnBombs">spellcastSpawnBombs</a></td>
 	<td class="summary">
 
 </td>
@@ -701,6 +721,28 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastChainCast"></a>
+    <strong>spellcastChainCast</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">spells</span>
+         constant table
+         (<em>default</em> {})
+        </li>
+    </ul>
 
 
 
@@ -1027,6 +1069,28 @@
         <li><span class="parameter">amount</span>
          constant int32
          (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastGrantRandomItem"></a>
+    <strong>spellcastGrantRandomItem</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">component</span>
+         constant string
+         (<em>default</em> "")
         </li>
     </ul>
 
@@ -1396,22 +1460,6 @@
 
 </dd>
     <dt>
-    <a name = "spellcastOzuma"></a>
-    <strong>spellcastOzuma</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "spellcastRadial"></a>
     <strong>spellcastRadial</strong>
     </dt>
@@ -1562,6 +1610,28 @@
 
 </dd>
     <dt>
+    <a name = "spellcastShrineEffects"></a>
+    <strong>spellcastShrineEffects</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">shrine</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "spellcastSpawnApparitions"></a>
     <strong>spellcastSpawnApparitions</strong>
     </dt>
@@ -1577,6 +1647,22 @@
          (<em>default</em> "")
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastSpawnBombs"></a>
+    <strong>spellcastSpawnBombs</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 

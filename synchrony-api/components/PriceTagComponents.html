@@ -177,6 +177,8 @@
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
   <li><a href="../modules/necro.game.trap.Trap.html">necro.game.trap.Trap</a></li>
   <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
+  <li><a href="../modules/necro.game.vision.SegmentVisibility.html">necro.game.vision.SegmentVisibility</a></li>
+  <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
@@ -361,6 +363,12 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#magicTile">magicTile</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#priceTag">priceTag</a></td>
 	<td class="summary">
 
@@ -397,6 +405,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#secretShopkeeper">secretShopkeeper</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#shopkeeper">shopkeeper</a></td>
 	<td class="summary">
 
@@ -411,6 +425,40 @@
     <h2 class="section-header "><a name="Components"></a>Components</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "magicTile"></a>
+    <strong>magicTile</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">slot</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">shopkeeper</span>
+          entityID
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">targetX</span>
+          int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">targetY</span>
+          int16
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
     <dt>
     <a name = "priceTag"></a>
     <strong>priceTag</strong>
@@ -544,6 +592,40 @@
     <ul>
         <li><span class="parameter">priceTag</span>
           entityID
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "secretShopkeeper"></a>
+    <strong>secretShopkeeper</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">type</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">tileX</span>
+         constant int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">tileY</span>
+         constant int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">price</span>
+          int32
          (<em>default</em> 0)
         </li>
     </ul>
