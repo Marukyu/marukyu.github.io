@@ -41,6 +41,7 @@
 <h2>Modules</h2>
 <ul class="nowrap">
   <li><a href="../modules/necro.audio.AudioFilter.html">necro.audio.AudioFilter</a></li>
+  <li><a href="../modules/necro.audio.AudioLoop.html">necro.audio.AudioLoop</a></li>
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
@@ -124,7 +125,6 @@
   <li><a href="../modules/necro.game.data.tile.MinimapTheme.html">necro.game.data.tile.MinimapTheme</a></li>
   <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
   <li><a href="../modules/necro.game.enemy.Targeting.html">necro.game.enemy.Targeting</a></li>
-  <li><a href="../modules/necro.game.enemy.Tombstone.html">necro.game.enemy.Tombstone</a></li>
   <li><a href="../modules/necro.game.enemy.ai.AI.html">necro.game.enemy.ai.AI</a></li>
   <li><a href="../modules/necro.game.item.ActionItem.html">necro.game.item.ActionItem</a></li>
   <li><a href="../modules/necro.game.item.AffectorItem.html">necro.game.item.AffectorItem</a></li>
@@ -276,6 +276,7 @@
 <h2>Components</h2>
 <ul class="nowrap">
   <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
+  <li><a href="../components/AudioLoopComponents.html">AudioLoopComponents</a></li>
   <li><a href="../components/MusicComponents.html">MusicComponents</a></li>
   <li><a href="../components/RhythmComponents.html">RhythmComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
@@ -292,12 +293,12 @@
   <li><a href="../components/GrabComponents.html">GrabComponents</a></li>
   <li><a href="../components/GrooveChainComponents.html">GrooveChainComponents</a></li>
   <li><a href="../components/HealthComponents.html">HealthComponents</a></li>
-  <li><a href="../components/MoveOverrideComponents.html">MoveOverrideComponents</a></li>
   <li><a href="../components/ParryComponents.html">ParryComponents</a></li>
   <li><a href="../components/PerspectiveComponents.html">PerspectiveComponents</a></li>
   <li><a href="../components/ProvokableComponents.html">ProvokableComponents</a></li>
   <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
+  <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
   <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
   <li><a href="../components/TickleComponents.html">TickleComponents</a></li>
@@ -326,7 +327,6 @@
   <li><a href="../components/HealthItemComponents.html">HealthItemComponents</a></li>
   <li><a href="../components/ItemComponents.html">ItemComponents</a></li>
   <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
-  <li><a href="../components/LootItemComponents.html">LootItemComponents</a></li>
   <li><a href="../components/MovementItemComponents.html">MovementItemComponents</a></li>
   <li><a href="../components/OffensiveItemComponents.html">OffensiveItemComponents</a></li>
   <li><a href="../components/PerspectiveItemComponents.html">PerspectiveItemComponents</a></li>
@@ -381,7 +381,19 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#isPlaying">isPlaying (soundRefID)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#play">play (soundGroup, x, y, volume, pitch)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#playLoop">playLoop (soundGroup, x, y, volume, pitch)</a></td>
 	<td class="summary">
 
 </td>
@@ -417,13 +429,37 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#setPosition">setPosition (soundRefID, x, y)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#setSoundVolume">setSoundVolume (vol)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#setVolume">setVolume (soundRefID, volume)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#startRollback">startRollback ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#stop">stop (soundRefID)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#stopLoopingSounds">stopLoopingSounds ()</a></td>
 	<td class="summary">
 
 </td>
@@ -492,8 +528,76 @@
 
 </dd>
     <dt>
+    <a name = "isPlaying"></a>
+    <strong>isPlaying (soundRefID)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">soundRefID</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "play"></a>
     <strong>play (soundGroup, x, y, volume, pitch)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">soundGroup</span>
+
+
+
+        </li>
+        <li><span class="parameter">x</span>
+
+
+
+        </li>
+        <li><span class="parameter">y</span>
+
+
+
+        </li>
+        <li><span class="parameter">volume</span>
+
+
+
+        </li>
+        <li><span class="parameter">pitch</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "playLoop"></a>
+    <strong>playLoop (soundGroup, x, y, volume, pitch)</strong>
     </dt>
     <dd>
 
@@ -658,6 +762,40 @@
 
 </dd>
     <dt>
+    <a name = "setPosition"></a>
+    <strong>setPosition (soundRefID, x, y)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">soundRefID</span>
+
+
+
+        </li>
+        <li><span class="parameter">x</span>
+
+
+
+        </li>
+        <li><span class="parameter">y</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "setSoundVolume"></a>
     <strong>setSoundVolume (vol)</strong>
     </dt>
@@ -682,8 +820,77 @@
 
 </dd>
     <dt>
+    <a name = "setVolume"></a>
+    <strong>setVolume (soundRefID, volume)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">soundRefID</span>
+
+
+
+        </li>
+        <li><span class="parameter">volume</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "startRollback"></a>
     <strong>startRollback ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "stop"></a>
+    <strong>stop (soundRefID)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">soundRefID</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "stopLoopingSounds"></a>
+    <strong>stopLoopingSounds ()</strong>
     </dt>
     <dd>
 

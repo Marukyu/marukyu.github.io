@@ -41,6 +41,7 @@
 <h2>Modules</h2>
 <ul class="nowrap">
   <li><a href="../modules/necro.audio.AudioFilter.html">necro.audio.AudioFilter</a></li>
+  <li><a href="../modules/necro.audio.AudioLoop.html">necro.audio.AudioLoop</a></li>
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
@@ -124,7 +125,6 @@
   <li><a href="../modules/necro.game.data.tile.MinimapTheme.html">necro.game.data.tile.MinimapTheme</a></li>
   <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
   <li><a href="../modules/necro.game.enemy.Targeting.html">necro.game.enemy.Targeting</a></li>
-  <li><a href="../modules/necro.game.enemy.Tombstone.html">necro.game.enemy.Tombstone</a></li>
   <li><a href="../modules/necro.game.enemy.ai.AI.html">necro.game.enemy.ai.AI</a></li>
   <li><a href="../modules/necro.game.item.ActionItem.html">necro.game.item.ActionItem</a></li>
   <li><a href="../modules/necro.game.item.AffectorItem.html">necro.game.item.AffectorItem</a></li>
@@ -276,6 +276,7 @@
 <h2>Components</h2>
 <ul class="nowrap">
   <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
+  <li><a href="../components/AudioLoopComponents.html">AudioLoopComponents</a></li>
   <li><a href="../components/MusicComponents.html">MusicComponents</a></li>
   <li><a href="../components/RhythmComponents.html">RhythmComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
@@ -292,12 +293,12 @@
   <li><a href="../components/GrabComponents.html">GrabComponents</a></li>
   <li><a href="../components/GrooveChainComponents.html">GrooveChainComponents</a></li>
   <li><a href="../components/HealthComponents.html">HealthComponents</a></li>
-  <li><a href="../components/MoveOverrideComponents.html">MoveOverrideComponents</a></li>
   <li><a href="../components/ParryComponents.html">ParryComponents</a></li>
   <li><a href="../components/PerspectiveComponents.html">PerspectiveComponents</a></li>
   <li><a href="../components/ProvokableComponents.html">ProvokableComponents</a></li>
   <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
+  <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
   <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
   <li><a href="../components/TickleComponents.html">TickleComponents</a></li>
@@ -326,7 +327,6 @@
   <li><a href="../components/HealthItemComponents.html">HealthItemComponents</a></li>
   <li><a href="../components/ItemComponents.html">ItemComponents</a></li>
   <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
-  <li><a href="../components/LootItemComponents.html">LootItemComponents</a></li>
   <li><a href="../components/MovementItemComponents.html">MovementItemComponents</a></li>
   <li><a href="../components/OffensiveItemComponents.html">OffensiveItemComponents</a></li>
   <li><a href="../components/PerspectiveItemComponents.html">PerspectiveItemComponents</a></li>
@@ -732,6 +732,7 @@
 
 <ul>
     <li><code>musicLayers</code></li>
+    <li><code>audioLoop</code></li>
 </ul>
 
 
@@ -867,6 +868,7 @@
 <ul>
     <li><code>menu</code></li>
     <li><code>animations</code></li>
+    <li><code>sounds</code></li>
     <li><code>music</code></li>
 </ul>
 
@@ -927,6 +929,7 @@
 <ul>
     <li><code>menu</code></li>
     <li><code>animations</code></li>
+    <li><code>sounds</code></li>
     <li><code>music</code></li>
 </ul>
 
@@ -1019,6 +1022,7 @@
     <li><code>attackSound</code></li>
     <li><code>collision</code></li>
     <li><code>stasisOnMove</code></li>
+    <li><code>magicTile</code></li>
     <li><code>success</code></li>
     <li><code>tween</code></li>
 </ul>
@@ -1105,6 +1109,7 @@
     <li><code>credit</code></li>
     <li><code>sound</code></li>
     <li><code>boss</code></li>
+    <li><code>crateLootUpgrade</code></li>
     <li><code>gigantismItem</code></li>
     <li><code>gigantismCurrency</code></li>
     <li><code>currencyDrop</code></li>
@@ -1182,6 +1187,7 @@
     <li><code>inventory</code></li>
     <li><code>intangible</code></li>
     <li><code>despawnExtras</code></li>
+    <li><code>audioLoop</code></li>
     <li><code>spawnCap</code></li>
     <li><code>despawnEntity</code></li>
     <li><code>existenceChecks</code></li>
@@ -1478,6 +1484,7 @@
     <li><code>spell</code></li>
     <li><code>camera</code></li>
     <li><code>sound</code></li>
+    <li><code>audioLoop</code></li>
     <li><code>hasMoved</code></li>
 </ul>
 
@@ -1624,6 +1631,7 @@
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
+    <li><code>audioLoop</code></li>
     <li><code>activationRange</code></li>
     <li><code>spawnExtras</code></li>
     <li><code>lightPosition</code></li>
@@ -1722,15 +1730,18 @@
     <li><code>cursedHealth</code></li>
     <li><code>healthConvert</code></li>
     <li><code>grooveChain</code></li>
-    <li><code>spell</code></li>
     <li><code>sprite</code></li>
+    <li><code>audioFilter</code></li>
     <li><code>sound</code></li>
+    <li><code>audioLoopStart</code></li>
+    <li><code>audioLoopTarget</code></li>
     <li><code>screenFlash</code></li>
     <li><code>healthBar</code></li>
     <li><code>target</code></li>
     <li><code>ai</code></li>
     <li><code>conditionalDamage</code></li>
     <li><code>death</code></li>
+    <li><code>spell</code></li>
     <li><code>knockback</code></li>
     <li><code>spellLate</code></li>
     <li><code>screenShake</code></li>
@@ -2354,6 +2365,7 @@
     <li><code>attackSound</code></li>
     <li><code>collision</code></li>
     <li><code>stasisOnMove</code></li>
+    <li><code>magicTile</code></li>
     <li><code>success</code></li>
     <li><code>tween</code></li>
 </ul>
@@ -2440,6 +2452,7 @@
     <li><code>credit</code></li>
     <li><code>sound</code></li>
     <li><code>boss</code></li>
+    <li><code>crateLootUpgrade</code></li>
     <li><code>gigantismItem</code></li>
     <li><code>gigantismCurrency</code></li>
     <li><code>currencyDrop</code></li>
@@ -2517,6 +2530,7 @@
     <li><code>inventory</code></li>
     <li><code>intangible</code></li>
     <li><code>despawnExtras</code></li>
+    <li><code>audioLoop</code></li>
     <li><code>spawnCap</code></li>
     <li><code>despawnEntity</code></li>
     <li><code>existenceChecks</code></li>
@@ -2813,6 +2827,7 @@
     <li><code>spell</code></li>
     <li><code>camera</code></li>
     <li><code>sound</code></li>
+    <li><code>audioLoop</code></li>
     <li><code>hasMoved</code></li>
 </ul>
 
@@ -2959,6 +2974,7 @@
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
     <li><code>sound</code></li>
+    <li><code>audioLoop</code></li>
     <li><code>activationRange</code></li>
     <li><code>spawnExtras</code></li>
     <li><code>lightPosition</code></li>
@@ -3057,15 +3073,18 @@
     <li><code>cursedHealth</code></li>
     <li><code>healthConvert</code></li>
     <li><code>grooveChain</code></li>
-    <li><code>spell</code></li>
     <li><code>sprite</code></li>
+    <li><code>audioFilter</code></li>
     <li><code>sound</code></li>
+    <li><code>audioLoopStart</code></li>
+    <li><code>audioLoopTarget</code></li>
     <li><code>screenFlash</code></li>
     <li><code>healthBar</code></li>
     <li><code>target</code></li>
     <li><code>ai</code></li>
     <li><code>conditionalDamage</code></li>
     <li><code>death</code></li>
+    <li><code>spell</code></li>
     <li><code>knockback</code></li>
     <li><code>spellLate</code></li>
     <li><code>screenShake</code></li>
@@ -3321,6 +3340,8 @@
 <ul>
     <li><code>active</code></li>
     <li><code>buyer</code></li>
+    <li><code>invertMultiplier</code></li>
+    <li><code>ignoreMultiplier</code></li>
     <li><code>currency</code></li>
     <li><code>sound</code></li>
     <li><code>flyaway</code></li>
@@ -3335,6 +3356,7 @@
     <li><code>health</code></li>
     <li><code>sound</code></li>
     <li><code>remove</code></li>
+    <li><code>multiplyCost</code></li>
 </ul>
 
 
@@ -3808,6 +3830,7 @@
     <li><code>animationTimer</code></li>
     <li><code>turn</code></li>
     <li><code>segmentVisibility</code></li>
+    <li><code>visibility</code></li>
     <li><code>gameOver</code></li>
     <li><code>chat</code></li>
     <li><code>menu</code></li>
@@ -4016,8 +4039,8 @@
     <li><code>visibleByProximity</code></li>
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenUntilProximity</code></li>
+    <li><code>segmentVisibility</code></li>
     <li><code>rowMap</code></li>
-    <li><code>pastVisibility</code></li>
 </ul>
 
 

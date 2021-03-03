@@ -41,6 +41,7 @@
 <h2>Modules</h2>
 <ul class="nowrap">
   <li><a href="../modules/necro.audio.AudioFilter.html">necro.audio.AudioFilter</a></li>
+  <li><a href="../modules/necro.audio.AudioLoop.html">necro.audio.AudioLoop</a></li>
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
@@ -124,7 +125,6 @@
   <li><a href="../modules/necro.game.data.tile.MinimapTheme.html">necro.game.data.tile.MinimapTheme</a></li>
   <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
   <li><a href="../modules/necro.game.enemy.Targeting.html">necro.game.enemy.Targeting</a></li>
-  <li><a href="../modules/necro.game.enemy.Tombstone.html">necro.game.enemy.Tombstone</a></li>
   <li><a href="../modules/necro.game.enemy.ai.AI.html">necro.game.enemy.ai.AI</a></li>
   <li><a href="../modules/necro.game.item.ActionItem.html">necro.game.item.ActionItem</a></li>
   <li><a href="../modules/necro.game.item.AffectorItem.html">necro.game.item.AffectorItem</a></li>
@@ -282,6 +282,7 @@
   <li><a href="../components/ApparitionComponents.html">ApparitionComponents</a></li>
   <li><a href="../components/AttackComponents.html">AttackComponents</a></li>
   <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
+  <li><a href="../components/AudioLoopComponents.html">AudioLoopComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
   <li><a href="../components/CastComponents.html">CastComponents</a></li>
@@ -305,9 +306,7 @@
   <li><strong>ItemComponents</strong></li>
   <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
   <li><a href="../components/LightComponents.html">LightComponents</a></li>
-  <li><a href="../components/LootItemComponents.html">LootItemComponents</a></li>
   <li><a href="../components/MinimapComponents.html">MinimapComponents</a></li>
-  <li><a href="../components/MoveOverrideComponents.html">MoveOverrideComponents</a></li>
   <li><a href="../components/MovementItemComponents.html">MovementItemComponents</a></li>
   <li><a href="../components/MusicComponents.html">MusicComponents</a></li>
   <li><a href="../components/OffensiveItemComponents.html">OffensiveItemComponents</a></li>
@@ -325,6 +324,7 @@
   <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
+  <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/SpellCheckComponents.html">SpellCheckComponents</a></li>
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
   <li><a href="../components/SpellItemComponents.html">SpellItemComponents</a></li>
@@ -423,12 +423,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#itemEnchantPool">itemEnchantPool</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#itemGrantItemOnFirstPickup">itemGrantItemOnFirstPickup</a></td>
 	<td class="summary">
 
@@ -448,6 +442,36 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#itemPickupSound">itemPickupSound</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemPoolEnchant">itemPoolEnchant</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemPoolTransmute">itemPoolTransmute</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemPoolUncertainty">itemPoolUncertainty</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemPoolWar">itemPoolWar</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemPrice">itemPrice</a></td>
 	<td class="summary">
 
 </td>
@@ -484,24 +508,6 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#itemToggleable">itemToggleable</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemTransmutePool">itemTransmutePool</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemUncertainRing">itemUncertainRing</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#weaponUncertain">weaponUncertain</a></td>
 	<td class="summary">
 
 </td>
@@ -822,22 +828,6 @@
 
 </dd>
     <dt>
-    <a name = "itemEnchantPool"></a>
-    <strong>itemEnchantPool</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "itemGrantItemOnFirstPickup"></a>
     <strong>itemGrantItemOnFirstPickup</strong>
     </dt>
@@ -919,6 +909,92 @@
         <li><span class="parameter">sound</span>
          constant string
          (<em>default</em> "pickupGeneral")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemPoolEnchant"></a>
+    <strong>itemPoolEnchant</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemPoolTransmute"></a>
+    <strong>itemPoolTransmute</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemPoolUncertainty"></a>
+    <strong>itemPoolUncertainty</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemPoolWar"></a>
+    <strong>itemPoolWar</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemPrice"></a>
+    <strong>itemPrice</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">coins</span>
+         constant int32
+         (<em>default</em> 0)
         </li>
     </ul>
 
@@ -1069,54 +1145,6 @@
          (<em>default</em> "ext/gui/hud_slot_boots.png")
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemTransmutePool"></a>
-    <strong>itemTransmutePool</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemUncertainRing"></a>
-    <strong>itemUncertainRing</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "weaponUncertain"></a>
-    <strong>weaponUncertain</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 
