@@ -163,7 +163,6 @@
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
-  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
   <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
@@ -798,6 +797,7 @@
 
 <ul>
     <li><code>init</code></li>
+    <li><code>resetLevelVariables</code></li>
     <li><code>random</code></li>
     <li><code>turnID</code></li>
     <li><code>music</code></li>
@@ -878,6 +878,7 @@
 
 <ul>
     <li><code>init</code></li>
+    <li><code>resetRunVariables</code></li>
     <li><code>menu</code></li>
     <li><code>lobby</code></li>
     <li><code>currentLevel</code></li>
@@ -1119,6 +1120,7 @@
     <li><code>runState</code></li>
     <li><code>tombstone</code></li>
     <li><code>sacrificeShrine</code></li>
+    <li><code>existenceChecks</code></li>
     <li><code>kill</code></li>
 </ul>
 
@@ -1620,6 +1622,7 @@
 <ul>
     <li><code>attributes</code></li>
     <li><code>position</code></li>
+    <li><code>shopSize</code></li>
     <li><code>tangible</code></li>
     <li><code>visibility</code></li>
     <li><code>facing</code></li>
@@ -1706,7 +1709,6 @@
     <li><code>grantInvincibility</code></li>
     <li><code>setKnockback</code></li>
     <li><code>suppressTypedLate</code></li>
-    <li><code>amplify</code></li>
     <li><code>barrier</code></li>
     <li><code>suppressFirst</code></li>
     <li><code>suppressEarly</code></li>
@@ -1719,7 +1721,9 @@
     <li><code>shieldEffect</code></li>
     <li><code>armor</code></li>
     <li><code>armorLate</code></li>
+    <li><code>amplify</code></li>
     <li><code>gigantism</code></li>
+    <li><code>armorMinimumDamage</code></li>
     <li><code>painShrine</code></li>
     <li><code>thaw</code></li>
     <li><code>provoke</code></li>
@@ -1899,6 +1903,14 @@
 </ul>
 
 
+<p><a name="holderUpdateCollision"></a></p>
+<h2>holderUpdateCollision</h2>
+
+<ul>
+    <li><code>item</code></li>
+</ul>
+
+
 <p><a name="holderUpdateEquipmentSprite"></a></p>
 <h2>holderUpdateEquipmentSprite</h2>
 
@@ -1978,6 +1990,7 @@
 <h2>inventoryCollectItem</h2>
 
 <ul>
+    <li><code>arena</code></li>
     <li><code>singleChoice</code></li>
     <li><code>convert</code></li>
     <li><code>damage</code></li>
@@ -2028,6 +2041,7 @@
     <li><code>holderSprite</code></li>
     <li><code>freeze</code></li>
     <li><code>sprite</code></li>
+    <li><code>collision</code></li>
     <li><code>dropContent</code></li>
 </ul>
 
@@ -2079,6 +2093,7 @@
     <li><code>sprite</code></li>
     <li><code>suppress</code></li>
     <li><code>dropContent</code></li>
+    <li><code>collision</code></li>
 </ul>
 
 
@@ -2462,6 +2477,7 @@
     <li><code>runState</code></li>
     <li><code>tombstone</code></li>
     <li><code>sacrificeShrine</code></li>
+    <li><code>existenceChecks</code></li>
     <li><code>kill</code></li>
 </ul>
 
@@ -2963,6 +2979,7 @@
 <ul>
     <li><code>attributes</code></li>
     <li><code>position</code></li>
+    <li><code>shopSize</code></li>
     <li><code>tangible</code></li>
     <li><code>visibility</code></li>
     <li><code>facing</code></li>
@@ -3049,7 +3066,6 @@
     <li><code>grantInvincibility</code></li>
     <li><code>setKnockback</code></li>
     <li><code>suppressTypedLate</code></li>
-    <li><code>amplify</code></li>
     <li><code>barrier</code></li>
     <li><code>suppressFirst</code></li>
     <li><code>suppressEarly</code></li>
@@ -3062,7 +3078,9 @@
     <li><code>shieldEffect</code></li>
     <li><code>armor</code></li>
     <li><code>armorLate</code></li>
+    <li><code>amplify</code></li>
     <li><code>gigantism</code></li>
+    <li><code>armorMinimumDamage</code></li>
     <li><code>painShrine</code></li>
     <li><code>thaw</code></li>
     <li><code>provoke</code></li>
@@ -3242,6 +3260,14 @@
 </ul>
 
 
+<p><a name="objectUpdateCollision"></a></p>
+<h2>objectUpdateCollision</h2>
+
+<ul>
+    <li><code>item</code></li>
+</ul>
+
+
 <p><a name="objectUpdateEquipmentSprite"></a></p>
 <h2>objectUpdateEquipmentSprite</h2>
 
@@ -3397,6 +3423,8 @@
     <li><code>swipesBack</code></li>
     <li><code>objects</code></li>
     <li><code>itemLabels</code></li>
+    <li><code>itemStackSizes</code></li>
+    <li><code>secretShopLabels</code></li>
     <li><code>swipes</code></li>
     <li><code>healthBars</code></li>
     <li><code>playerNames</code></li>
