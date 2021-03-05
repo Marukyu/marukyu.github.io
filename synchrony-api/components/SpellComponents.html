@@ -163,6 +163,7 @@
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
   <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
@@ -283,6 +284,7 @@
   <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
   <li><a href="../components/AudioLoopComponents.html">AudioLoopComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
+  <li><a href="../components/BeatDelayComponents.html">BeatDelayComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
   <li><a href="../components/CastComponents.html">CastComponents</a></li>
   <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
@@ -638,6 +640,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#spellcastTargetHome">spellcastTargetHome</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#spellcastTargetTiles">spellcastTargetTiles</a></td>
 	<td class="summary">
 
@@ -662,25 +670,19 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastTeleportTargetMarker">spellcastTeleportTargetMarker</a></td>
+	<td class="name" nowrap><a href="#spellcastTeleportToHome">spellcastTeleportToHome</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastTeleportTargetRandom">spellcastTeleportTargetRandom</a></td>
+	<td class="name" nowrap><a href="#spellcastTeleportToMarker">spellcastTeleportToMarker</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellcastTeleportToHomePosition">spellcastTeleportToHomePosition</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spellcastTeleportWithinShop">spellcastTeleportWithinShop</a></td>
+	<td class="name" nowrap><a href="#spellcastTeleportToSegment">spellcastTeleportToSegment</a></td>
 	<td class="summary">
 
 </td>
@@ -1737,6 +1739,22 @@
 
 </dd>
     <dt>
+    <a name = "spellcastTargetHome"></a>
+    <strong>spellcastTargetHome</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "spellcastTargetTiles"></a>
     <strong>spellcastTargetTiles</strong>
     </dt>
@@ -1776,6 +1794,10 @@
         <li><span class="parameter">moveType</span>
          constant int32
          (<em>default</em> move.Type.TELEPORT)
+        </li>
+        <li><span class="parameter">collision</span>
+         constant int32
+         (<em>default</em> collision.mask(collision.Group.SOLID)
         </li>
     </ul>
 
@@ -1829,8 +1851,24 @@
 
 </dd>
     <dt>
-    <a name = "spellcastTeleportTargetMarker"></a>
-    <strong>spellcastTeleportTargetMarker</strong>
+    <a name = "spellcastTeleportToHome"></a>
+    <strong>spellcastTeleportToHome</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellcastTeleportToMarker"></a>
+    <strong>spellcastTeleportToMarker</strong>
     </dt>
     <dd>
 
@@ -1859,8 +1897,8 @@
 
 </dd>
     <dt>
-    <a name = "spellcastTeleportTargetRandom"></a>
-    <strong>spellcastTeleportTargetRandom</strong>
+    <a name = "spellcastTeleportToSegment"></a>
+    <strong>spellcastTeleportToSegment</strong>
     </dt>
     <dd>
 
@@ -1869,47 +1907,11 @@
 
 
     <ul>
-        <li><span class="parameter">mask</span>
-         constant int32
-         (<em>default</em> collision.mask(collision.Group.SOLID)
-        </li>
         <li><span class="parameter">segment</span>
          constant int32
          (<em>default</em> 1)
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spellcastTeleportToHomePosition"></a>
-    <strong>spellcastTeleportToHomePosition</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spellcastTeleportWithinShop"></a>
-    <strong>spellcastTeleportWithinShop</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 

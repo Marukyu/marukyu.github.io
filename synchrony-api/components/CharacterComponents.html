@@ -163,6 +163,7 @@
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
   <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
@@ -283,6 +284,7 @@
   <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
   <li><a href="../components/AudioLoopComponents.html">AudioLoopComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
+  <li><a href="../components/BeatDelayComponents.html">BeatDelayComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
   <li><a href="../components/CastComponents.html">CastComponents</a></li>
   <li><strong>CharacterComponents</strong></li>
@@ -362,37 +364,7 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#actionDelay">actionDelay</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#amplifiedMovement">amplifiedMovement</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#attackOnPartialMove">attackOnPartialMove</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#beatCounter">beatCounter</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#beatDelay">beatDelay</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#beatDelayBypass">beatDelayBypass</a></td>
 	<td class="summary">
 
 </td>
@@ -410,19 +382,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#conductive">conductive</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#controllable">controllable</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#convertOnDeath">convertOnDeath</a></td>
 	<td class="summary">
 
 </td>
@@ -434,25 +394,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#despawnOnShrinerFight">despawnOnShrinerFight</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#digOnPartialMove">digOnPartialMove</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#enemy">enemy</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#exitDamageImmunity">exitDamageImmunity</a></td>
 	<td class="summary">
 
 </td>
@@ -531,12 +473,6 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#playableCharacter">playableCharacter</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#postConvertBeatDelay">postConvertBeatDelay</a></td>
 	<td class="summary">
 
 </td>
@@ -656,12 +592,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#stunOnResults">stunOnResults</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#swapEntitiesOnDeath">swapEntitiesOnDeath</a></td>
 	<td class="summary">
 
@@ -669,12 +599,6 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#takeDamageOnUntoggledMovement">takeDamageOnUntoggledMovement</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#team">team</a></td>
 	<td class="summary">
 
 </td>
@@ -701,36 +625,6 @@
 
     <dl class="function">
     <dt>
-    <a name = "actionDelay"></a>
-    <strong>actionDelay</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">actions</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-        <li><span class="parameter">delay</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">currentAction</span>
-          int8
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "amplifiedMovement"></a>
     <strong>amplifiedMovement</strong>
     </dt>
@@ -744,98 +638,6 @@
         <li><span class="parameter">distance</span>
           int16
          (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "attackOnPartialMove"></a>
-    <strong>attackOnPartialMove</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">damageMultiplier</span>
-         constant int8
-         (<em>default</em> 1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "beatCounter"></a>
-    <strong>beatCounter</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">counter</span>
-          int32
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "beatDelay"></a>
-    <strong>beatDelay</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">interval</span>
-         constant int16
-         (<em>default</em> 1)
-        </li>
-        <li><span class="parameter">counter</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "beatDelayBypass"></a>
-    <strong>beatDelayBypass</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">actions</span>
-         constant table
-         (<em>default</em> {})
         </li>
     </ul>
 
@@ -883,28 +685,6 @@
 
 </dd>
     <dt>
-    <a name = "conductive"></a>
-    <strong>conductive</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">electrified</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "controllable"></a>
     <strong>controllable</strong>
     </dt>
@@ -923,22 +703,6 @@
         ={
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "convertOnDeath"></a>
-    <strong>convertOnDeath</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 
@@ -996,44 +760,6 @@
 
 </dd>
     <dt>
-    <a name = "despawnOnShrinerFight"></a>
-    <strong>despawnOnShrinerFight</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "digOnPartialMove"></a>
-    <strong>digOnPartialMove</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">strength</span>
-         constant int8
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "enemy"></a>
     <strong>enemy</strong>
     </dt>
@@ -1043,28 +769,6 @@
 
 
 
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "exitDamageImmunity"></a>
-    <strong>exitDamageImmunity</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
 
 
 
@@ -1338,32 +1042,6 @@
     <ul>
         <li><span class="parameter">lobbyOrder</span>
          constant int32
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "postConvertBeatDelay"></a>
-    <strong>postConvertBeatDelay</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">counter</span>
-         constant int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">extra</span>
-         constant int16
          (<em>default</em> 0)
         </li>
     </ul>
@@ -1782,28 +1460,6 @@
 
 </dd>
     <dt>
-    <a name = "stunOnResults"></a>
-    <strong>stunOnResults</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">duration</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "swapEntitiesOnDeath"></a>
     <strong>swapEntitiesOnDeath</strong>
     </dt>
@@ -1851,28 +1507,6 @@
         <li><span class="parameter">type</span>
          constant int8
          (<em>default</em> damage.Type.BLOOD)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "team"></a>
-    <strong>team</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">id</span>
-          int8
-         (<em>default</em> 0)
         </li>
     </ul>
 

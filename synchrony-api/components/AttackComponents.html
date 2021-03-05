@@ -163,6 +163,7 @@
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
   <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
@@ -283,6 +284,7 @@
   <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
   <li><a href="../components/AudioLoopComponents.html">AudioLoopComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
+  <li><a href="../components/BeatDelayComponents.html">BeatDelayComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
   <li><a href="../components/CastComponents.html">CastComponents</a></li>
   <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
@@ -362,6 +364,12 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#attackOnPartialMove">attackOnPartialMove</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#attackable">attackable</a></td>
 	<td class="summary">
 
@@ -416,7 +424,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#tileIdleDamageReceiver">tileIdleDamageReceiver</a></td>
+	<td class="name" nowrap><a href="#team">team</a></td>
 	<td class="summary">
 
 </td>
@@ -430,6 +438,28 @@
     <h2 class="section-header "><a name="Components"></a>Components</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "attackOnPartialMove"></a>
+    <strong>attackOnPartialMove</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">damageMultiplier</span>
+         constant int8
+         (<em>default</em> 1)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
     <dt>
     <a name = "attackable"></a>
     <strong>attackable</strong>
@@ -663,8 +693,8 @@
 
 </dd>
     <dt>
-    <a name = "tileIdleDamageReceiver"></a>
-    <strong>tileIdleDamageReceiver</strong>
+    <a name = "team"></a>
+    <strong>team</strong>
     </dt>
     <dd>
 
@@ -673,8 +703,8 @@
 
 
     <ul>
-        <li><span class="parameter">idleTurnCount</span>
-          int16
+        <li><span class="parameter">id</span>
+          int8
          (<em>default</em> 0)
         </li>
     </ul>

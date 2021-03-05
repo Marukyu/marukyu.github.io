@@ -163,6 +163,7 @@
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
   <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
@@ -285,6 +286,7 @@
   <li><a href="../components/ApparitionComponents.html">ApparitionComponents</a></li>
   <li><a href="../components/AttackComponents.html">AttackComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
+  <li><a href="../components/BeatDelayComponents.html">BeatDelayComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
   <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
   <li><a href="../components/ConfusionComponents.html">ConfusionComponents</a></li>
@@ -692,11 +694,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>entitySchemaCollectMigrations</h2>
 
 <ul>
-    <li><code>0.11</code></li>
     <li><code>0.14</code></li>
     <li><code>0.16</code></li>
     <li><code>0.18</code></li>
-    <li><code>0.7</code></li>
+    <li><code>0.20</code></li>
 </ul>
 
 
@@ -1065,6 +1066,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 
 
+<p><a name="focusedEntityTeleport"></a></p>
+<h2>focusedEntityTeleport</h2>
+
+<ul>
+    <li><code>snapCamera</code></li>
+    <li><code>updateListeners</code></li>
+</ul>
+
+
 <p><a name="focusedPlayersChanged"></a></p>
 <h2>focusedPlayersChanged</h2>
 
@@ -1083,6 +1093,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>convertObjects</code></li>
     <li><code>convertOnBossProvoke</code></li>
     <li><code>endSpawnInvicibility</code></li>
+    <li><code>healOnFrame</code></li>
     <li><code>mergeItemStacks</code></li>
     <li><code>ozuma</code></li>
     <li><code>processDelayaedCasts</code></li>
@@ -2329,7 +2340,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>bossDeath</code></li>
     <li><code>castOnDeath</code></li>
     <li><code>checkKillCredit</code></li>
-    <li><code>convertOnDeath</code></li>
     <li><code>crateLootUpgrade</code></li>
     <li><code>createTombstone</code></li>
     <li><code>deathSound</code></li>
@@ -2409,7 +2419,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnAttachment</code></li>
     <li><code>despawnFollowers</code></li>
     <li><code>despawnObject</code></li>
-    <li><code>despawnPriceTags</code></li>
     <li><code>detachController</code></li>
     <li><code>detachFromGrabVictim</code></li>
     <li><code>detachGrabber</code></li>
@@ -2622,6 +2631,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectIntangible</h2>
 
 <ul>
+    <li><code>despawnPriceTags</code></li>
     <li><code>disableLightSource</code></li>
     <li><code>followerTangibility</code></li>
     <li><code>preventActions</code></li>
@@ -2854,11 +2864,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>convertVocalEntity</code></li>
     <li><code>createChanceContent</code></li>
     <li><code>createUncertaintyRing</code></li>
-    <li><code>determineShopSize</code></li>
     <li><code>freezeMonkeyLikes</code></li>
     <li><code>giveInitialEquipment</code></li>
     <li><code>initFacingDirection</code></li>
     <li><code>initializeAttackableFlags</code></li>
+    <li><code>initializeHomeArea</code></li>
     <li><code>initializeObjectAttributes</code></li>
     <li><code>initializeObjectHomePosition</code></li>
     <li><code>initializeObjectPosition</code></li>
@@ -3266,7 +3276,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>payCurrency</code></li>
     <li><code>payHealth</code></li>
     <li><code>playPurchaseSound</code></li>
-    <li><code>removePriceTag</code></li>
 </ul>
 
 
@@ -3317,7 +3326,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>3_LevelExit_exitedPlayers</code></li>
     <li><code>3_LevelExit_levelCompleted</code></li>
     <li><code>3_LevelExit_levelExitUnlocked</code></li>
-    <li><code>3_SecretRoom_secretRoomEnemiesAlive</code></li>
     <li><code>3_Swipe_activeSwipes</code></li>
     <li><code>3_Swipe_activeSwipesBack</code></li>
     <li><code>3_Swipe_nextID</code></li>
@@ -3364,6 +3372,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderSecretShopLabels</code></li>
     <li><code>renderShadows</code></li>
     <li><code>renderSwipes</code></li>
+    <li><code>renderWorldLabels</code></li>
     <li><code>spriteAnimations</code></li>
     <li><code>updateAnimationTimer</code></li>
     <li><code>updateMimicSprites</code></li>
@@ -3390,6 +3399,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyVibrateEffect</code></li>
     <li><code>beatDelaySpritePosition</code></li>
     <li><code>chargeSpritePosition</code></li>
+    <li><code>resetOpacity</code></li>
 </ul>
 
 
@@ -3714,8 +3724,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>spellTeleportFilter</h2>
 
 <ul>
+    <li><code>avoidCollisions</code></li>
     <li><code>avoidHostileEntities</code></li>
-    <li><code>maximizeDistance</code></li>
 </ul>
 
 
@@ -3723,11 +3733,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>spellTeleportTarget</h2>
 
 <ul>
-    <li><code>teleportToHomePosition</code></li>
+    <li><code>shuffle</code></li>
+    <li><code>sortByDistance</code></li>
+    <li><code>teleportToHome</code></li>
     <li><code>teleportToMarker</code></li>
-    <li><code>teleportToRandomTile</code></li>
     <li><code>teleportToRow</code></li>
-    <li><code>teleportWithinShop</code></li>
+    <li><code>teleportToSegment</code></li>
 </ul>
 
 
@@ -3785,6 +3796,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnTrailSwipe</code></li>
     <li><code>spellFlyaway</code></li>
     <li><code>spellHopInPlace</code></li>
+    <li><code>targetHome</code></li>
     <li><code>targetTiles</code></li>
     <li><code>teleport</code></li>
 </ul>

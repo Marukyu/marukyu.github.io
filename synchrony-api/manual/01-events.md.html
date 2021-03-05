@@ -163,6 +163,7 @@
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
   <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
@@ -285,6 +286,7 @@
   <li><a href="../components/ApparitionComponents.html">ApparitionComponents</a></li>
   <li><a href="../components/AttackComponents.html">AttackComponents</a></li>
   <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
+  <li><a href="../components/BeatDelayComponents.html">BeatDelayComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
   <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
   <li><a href="../components/ConfusionComponents.html">ConfusionComponents</a></li>
@@ -726,6 +728,15 @@
 </ul>
 
 
+<p><a name="focusedEntityTeleport"></a></p>
+<h2>focusedEntityTeleport</h2>
+
+<ul>
+    <li><code>snapCamera</code></li>
+    <li><code>updateListeners</code></li>
+</ul>
+
+
 <p><a name="focusedPlayersChanged"></a></p>
 <h2>focusedPlayersChanged</h2>
 
@@ -742,6 +753,7 @@
     <li><code>delayedCasts</code></li>
     <li><code>fieldOfView</code></li>
     <li><code>updateRevealed</code></li>
+    <li><code>heal</code></li>
     <li><code>minimap</code></li>
     <li><code>aggro</code></li>
     <li><code>actability</code></li>
@@ -1622,7 +1634,7 @@
 <ul>
     <li><code>attributes</code></li>
     <li><code>position</code></li>
-    <li><code>shopSize</code></li>
+    <li><code>homeArea</code></li>
     <li><code>tangible</code></li>
     <li><code>visibility</code></li>
     <li><code>facing</code></li>
@@ -2979,7 +2991,7 @@
 <ul>
     <li><code>attributes</code></li>
     <li><code>position</code></li>
-    <li><code>shopSize</code></li>
+    <li><code>homeArea</code></li>
     <li><code>tangible</code></li>
     <li><code>visibility</code></li>
     <li><code>facing</code></li>
@@ -3381,7 +3393,6 @@
     <li><code>currency</code></li>
     <li><code>health</code></li>
     <li><code>sound</code></li>
-    <li><code>remove</code></li>
     <li><code>multiplyCost</code></li>
 </ul>
 
@@ -3419,6 +3430,7 @@
     <li><code>floors</code></li>
     <li><code>decals</code></li>
     <li><code>shadows</code></li>
+    <li><code>worldLabels</code></li>
     <li><code>priceTags</code></li>
     <li><code>swipesBack</code></li>
     <li><code>objects</code></li>
@@ -3448,6 +3460,7 @@
 <h2>renderEffects</h2>
 
 <ul>
+    <li><code>opacity</code></li>
     <li><code>fade</code></li>
     <li><code>tileBrightness</code></li>
     <li><code>hover</code></li>
@@ -3755,7 +3768,7 @@
 
 <ul>
     <li><code>entityProximity</code></li>
-    <li><code>distance</code></li>
+    <li><code>collision</code></li>
 </ul>
 
 
@@ -3764,7 +3777,12 @@
 
 <ul>
     <li><code>marker</code></li>
-    <li><code>random</code></li>
+    <li><code>home</code></li>
+    <li><code>segment</code></li>
+    <li><code>shop</code></li>
+    <li><code>row</code></li>
+    <li><code>distance</code></li>
+    <li><code>shuffle</code></li>
 </ul>
 
 
