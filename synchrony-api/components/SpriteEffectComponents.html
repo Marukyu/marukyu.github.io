@@ -162,6 +162,7 @@
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
+  <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
   <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
@@ -325,6 +326,7 @@
   <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
+  <li><a href="../components/SpawnComponents.html">SpawnComponents</a></li>
   <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/SpellCheckComponents.html">SpellCheckComponents</a></li>
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
@@ -370,12 +372,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#barrierTimeoutBlinkEffect">barrierTimeoutBlinkEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#blinkEffect">blinkEffect</a></td>
 	<td class="summary">
 
@@ -401,12 +397,6 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#fadeToTileBrightnessEffect">fadeToTileBrightnessEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#freezeTimeoutBlinkEffect">freezeTimeoutBlinkEffect</a></td>
 	<td class="summary">
 
 </td>
@@ -449,6 +439,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#opacityEffect">opacityEffect</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#scaleEffect">scaleEffect</a></td>
 	<td class="summary">
 
 </td>
@@ -550,6 +546,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#statusTimeoutBlinkEffect">statusTimeoutBlinkEffect</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#targetProximityFadeEffect">targetProximityFadeEffect</a></td>
 	<td class="summary">
 
@@ -582,28 +584,6 @@
         <li><span class="parameter">active</span>
           bool
          (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "barrierTimeoutBlinkEffect"></a>
-    <strong>barrierTimeoutBlinkEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">remainingTurns</span>
-         constant int16
-         (<em>default</em> 1)
         </li>
     </ul>
 
@@ -740,28 +720,6 @@
 
 
 
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "freezeTimeoutBlinkEffect"></a>
-    <strong>freezeTimeoutBlinkEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">remainingTurns</span>
-         constant int16
-         (<em>default</em> 1)
-        </li>
-    </ul>
 
 
 
@@ -928,6 +886,22 @@
          (<em>default</em> 255)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "scaleEffect"></a>
+    <strong>scaleEffect</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -1185,6 +1159,10 @@
          constant float
          (<em>default</em> 0.6)
         </li>
+        <li><span class="parameter">blinkPeriod</span>
+         constant int32
+         (<em>default</em> 166667)
+        </li>
     </ul>
 
 
@@ -1206,6 +1184,10 @@
         <li><span class="parameter">scale</span>
          constant float
          (<em>default</em> 1.5)
+        </li>
+        <li><span class="parameter">blinkPeriod</span>
+         constant int32
+         (<em>default</em> 166667)
         </li>
     </ul>
 
@@ -1316,6 +1298,32 @@
         <li><span class="parameter">ignoreFrozen</span>
          constant bool
          (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "statusTimeoutBlinkEffect"></a>
+    <strong>statusTimeoutBlinkEffect</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">component</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">remainingTurns</span>
+         constant int16
+         (<em>default</em> 1)
         </li>
     </ul>
 

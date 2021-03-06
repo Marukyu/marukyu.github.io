@@ -162,6 +162,7 @@
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
+  <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
   <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
@@ -325,6 +326,7 @@
   <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
+  <li><a href="../components/SpawnComponents.html">SpawnComponents</a></li>
   <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/SpellCheckComponents.html">SpellCheckComponents</a></li>
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
@@ -437,6 +439,18 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#itemHopInPlace">itemHopInPlace</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemIgnoreSingleChoice">itemIgnoreSingleChoice</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemPickupAnimation">itemPickupAnimation</a></td>
 	<td class="summary">
 
 </td>
@@ -665,10 +679,6 @@
           bool
          (<em>default</em> false)
         </li>
-        <li><span class="parameter">pickupTurn</span>
-          int32
-         (<em>default</em> -1)
-        </li>
         <li><span class="parameter">singleChoice</span>
           int32
          (<em>default</em> 0)
@@ -890,6 +900,68 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemIgnoreSingleChoice"></a>
+    <strong>itemIgnoreSingleChoice</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemPickupAnimation"></a>
+    <strong>itemPickupAnimation</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">factor</span>
+         constant float
+         (<em>default</em> 0.8)
+        </li>
+        <li><span class="parameter">duration</span>
+         constant int32
+         (<em>default</em> 500000)
+        </li>
+        <li><span class="parameter">animationTurn</span>
+          int32
+         (<em>default</em> -1)
+        </li>
+        <li><span class="parameter">x</span>
+          float
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">y</span>
+          float
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">width</span>
+          float
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">height</span>
+          float
+         (<em>default</em> 0)
+        </li>
+    </ul>
 
 
 

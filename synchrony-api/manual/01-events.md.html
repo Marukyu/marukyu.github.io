@@ -162,6 +162,7 @@
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
+  <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
   <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
@@ -299,6 +300,7 @@
   <li><a href="../components/ProvokableComponents.html">ProvokableComponents</a></li>
   <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
+  <li><a href="../components/SpawnComponents.html">SpawnComponents</a></li>
   <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
   <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
@@ -415,8 +417,8 @@
 <h2>autoCastProcess</h2>
 
 <ul>
-    <li><code>checkCooldown</code></li>
     <li><code>checkRevealed</code></li>
+    <li><code>checkCooldown</code></li>
     <li><code>checkTargetFreeze</code></li>
     <li><code>checkLinear</code></li>
     <li><code>checkCone</code></li>
@@ -1128,12 +1130,14 @@
     <li><code>currencyDrop</code></li>
     <li><code>itemDrop</code></li>
     <li><code>spellcast</code></li>
+    <li><code>provoke</code></li>
     <li><code>timeScale</code></li>
     <li><code>runState</code></li>
     <li><code>tombstone</code></li>
     <li><code>sacrificeShrine</code></li>
     <li><code>existenceChecks</code></li>
     <li><code>kill</code></li>
+    <li><code>swapEntities</code></li>
 </ul>
 
 
@@ -1239,7 +1243,6 @@
     <li><code>actionDelay</code></li>
     <li><code>frozen</code></li>
     <li><code>descent</code></li>
-    <li><code>attackGrabber</code></li>
     <li><code>remap</code></li>
     <li><code>moveOverrideGrooveChain</code></li>
     <li><code>moveOverride</code></li>
@@ -1247,6 +1250,7 @@
     <li><code>preFacing</code></li>
     <li><code>facing</code></li>
     <li><code>confusion</code></li>
+    <li><code>attackGrabber</code></li>
     <li><code>stasis</code></li>
     <li><code>unsink</code></li>
     <li><code>item</code></li>
@@ -1579,6 +1583,7 @@
     <li><code>convert</code></li>
     <li><code>beatDelay</code></li>
     <li><code>preventActions</code></li>
+    <li><code>startFight</code></li>
 </ul>
 
 
@@ -1756,6 +1761,7 @@
     <li><code>target</code></li>
     <li><code>ai</code></li>
     <li><code>conditionalDamage</code></li>
+    <li><code>revive</code></li>
     <li><code>death</code></li>
     <li><code>spell</code></li>
     <li><code>knockback</code></li>
@@ -1817,6 +1823,7 @@
     <li><code>cursedSlot</code></li>
     <li><code>holster</code></li>
     <li><code>priceTag</code></li>
+    <li><code>ignoreSingleChoice</code></li>
     <li><code>add</code></li>
 </ul>
 
@@ -1955,6 +1962,16 @@
     <li><code>subdivision</code></li>
     <li><code>subdivisionItem</code></li>
     <li><code>spectator</code></li>
+</ul>
+
+
+<p><a name="holderUpdateScale"></a></p>
+<h2>holderUpdateScale</h2>
+
+<ul>
+    <li><code>multiply</code></li>
+    <li><code>sprite</code></li>
+    <li><code>shadow</code></li>
 </ul>
 
 
@@ -2485,12 +2502,14 @@
     <li><code>currencyDrop</code></li>
     <li><code>itemDrop</code></li>
     <li><code>spellcast</code></li>
+    <li><code>provoke</code></li>
     <li><code>timeScale</code></li>
     <li><code>runState</code></li>
     <li><code>tombstone</code></li>
     <li><code>sacrificeShrine</code></li>
     <li><code>existenceChecks</code></li>
     <li><code>kill</code></li>
+    <li><code>swapEntities</code></li>
 </ul>
 
 
@@ -2596,7 +2615,6 @@
     <li><code>actionDelay</code></li>
     <li><code>frozen</code></li>
     <li><code>descent</code></li>
-    <li><code>attackGrabber</code></li>
     <li><code>remap</code></li>
     <li><code>moveOverrideGrooveChain</code></li>
     <li><code>moveOverride</code></li>
@@ -2604,6 +2622,7 @@
     <li><code>preFacing</code></li>
     <li><code>facing</code></li>
     <li><code>confusion</code></li>
+    <li><code>attackGrabber</code></li>
     <li><code>stasis</code></li>
     <li><code>unsink</code></li>
     <li><code>item</code></li>
@@ -2936,6 +2955,7 @@
     <li><code>convert</code></li>
     <li><code>beatDelay</code></li>
     <li><code>preventActions</code></li>
+    <li><code>startFight</code></li>
 </ul>
 
 
@@ -3113,6 +3133,7 @@
     <li><code>target</code></li>
     <li><code>ai</code></li>
     <li><code>conditionalDamage</code></li>
+    <li><code>revive</code></li>
     <li><code>death</code></li>
     <li><code>spell</code></li>
     <li><code>knockback</code></li>
@@ -3174,6 +3195,7 @@
     <li><code>cursedSlot</code></li>
     <li><code>holster</code></li>
     <li><code>priceTag</code></li>
+    <li><code>ignoreSingleChoice</code></li>
     <li><code>add</code></li>
 </ul>
 
@@ -3312,6 +3334,16 @@
     <li><code>subdivision</code></li>
     <li><code>subdivisionItem</code></li>
     <li><code>spectator</code></li>
+</ul>
+
+
+<p><a name="objectUpdateScale"></a></p>
+<h2>objectUpdateScale</h2>
+
+<ul>
+    <li><code>multiply</code></li>
+    <li><code>sprite</code></li>
+    <li><code>shadow</code></li>
 </ul>
 
 
@@ -3466,6 +3498,7 @@
     <li><code>hover</code></li>
     <li><code>wallOffset</code></li>
     <li><code>blink</code></li>
+    <li><code>scale</code></li>
     <li><code>freeze</code></li>
     <li><code>sink</code></li>
     <li><code>descent</code></li>
@@ -3781,6 +3814,7 @@
     <li><code>segment</code></li>
     <li><code>shop</code></li>
     <li><code>row</code></li>
+    <li><code>ignore</code></li>
     <li><code>distance</code></li>
     <li><code>shuffle</code></li>
 </ul>
@@ -4009,6 +4043,7 @@
     <li><code>missedBeat</code></li>
     <li><code>playerActions</code></li>
     <li><code>frame1</code></li>
+    <li><code>freezeTickDown</code></li>
     <li><code>freeze</code></li>
     <li><code>preAIActions</code></li>
     <li><code>aiActions</code></li>

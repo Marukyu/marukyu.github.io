@@ -130,7 +130,7 @@
   <li><a href="../modules/necro.game.item.AffectorItem.html">necro.game.item.AffectorItem</a></li>
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
-  <li><strong>necro.game.item.Inventory</strong></li>
+  <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
   <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
@@ -162,7 +162,7 @@
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
-  <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
+  <li><strong>necro.game.system.StatusEffect</strong></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
   <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
@@ -354,7 +354,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.item.Inventory</code></h1>
+<h1>Module <code>necro.game.system.StatusEffect</code></h1>
 <p>
 
 </p>
@@ -366,97 +366,13 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#add">add (item, holder, silent)</a></td>
+	<td class="name" nowrap><a href="#isVisuallyActive">isVisuallyActive (status, blinkPeriod)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#clear">clear (holder)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#destroy">destroy (item)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#drop">drop (item)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#dropSlot">dropSlot (holder, slot, keepItems)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#fireEvent">fireEvent (eventTypeName, parameter)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#formatQuantity">formatQuantity (quantity)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getItemInSlot">getItemInSlot (holder, slot, index)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getItemInUncursedSlot">getItemInUncursedSlot (holder, slot, index)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getItems">getItems (holder)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getItemsInSlot">getItemsInSlot (holder, slot)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getSlotCapacity">getSlotCapacity (holder, slot)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#grant">grant (itemType, holder)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#isCursedSlot">isCursedSlot (holder, slot)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#scatter">scatter (holder, offsets, collisionMask)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#swapWithHolster">swapWithHolster (holder, bag)</a></td>
+	<td class="name" nowrap><a href="#register">register (component, endEvent, turnOrder)</a></td>
 	<td class="summary">
 
 </td>
@@ -471,8 +387,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "add"></a>
-    <strong>add (item, holder, silent)</strong>
+    <a name = "isVisuallyActive"></a>
+    <strong>isVisuallyActive (status, blinkPeriod)</strong>
     </dt>
     <dd>
 
@@ -482,17 +398,12 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">item</span>
+        <li><span class="parameter">status</span>
 
 
 
         </li>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">silent</span>
+        <li><span class="parameter">blinkPeriod</span>
 
 
 
@@ -505,8 +416,8 @@
 
 </dd>
     <dt>
-    <a name = "clear"></a>
-    <strong>clear (holder)</strong>
+    <a name = "register"></a>
+    <strong>register (component, endEvent, turnOrder)</strong>
     </dt>
     <dd>
 
@@ -516,413 +427,17 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">holder</span>
+        <li><span class="parameter">component</span>
 
 
 
         </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "destroy"></a>
-    <strong>destroy (item)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">item</span>
+        <li><span class="parameter">endEvent</span>
 
 
 
         </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "drop"></a>
-    <strong>drop (item)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">item</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "dropSlot"></a>
-    <strong>dropSlot (holder, slot, keepItems)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-        <li><span class="parameter">keepItems</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "fireEvent"></a>
-    <strong>fireEvent (eventTypeName, parameter)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">eventTypeName</span>
-
-
-
-        </li>
-        <li><span class="parameter">parameter</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "formatQuantity"></a>
-    <strong>formatQuantity (quantity)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">quantity</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getItemInSlot"></a>
-    <strong>getItemInSlot (holder, slot, index)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-        <li><span class="parameter">index</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getItemInUncursedSlot"></a>
-    <strong>getItemInUncursedSlot (holder, slot, index)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-        <li><span class="parameter">index</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getItems"></a>
-    <strong>getItems (holder)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getItemsInSlot"></a>
-    <strong>getItemsInSlot (holder, slot)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getSlotCapacity"></a>
-    <strong>getSlotCapacity (holder, slot)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "grant"></a>
-    <strong>grant (itemType, holder)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">itemType</span>
-
-
-
-        </li>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "isCursedSlot"></a>
-    <strong>isCursedSlot (holder, slot)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "scatter"></a>
-    <strong>scatter (holder, offsets, collisionMask)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">offsets</span>
-
-
-
-        </li>
-        <li><span class="parameter">collisionMask</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "swapWithHolster"></a>
-    <strong>swapWithHolster (holder, bag)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">holder</span>
-
-
-
-        </li>
-        <li><span class="parameter">bag</span>
+        <li><span class="parameter">turnOrder</span>
 
 
 

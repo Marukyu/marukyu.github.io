@@ -162,6 +162,7 @@
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
+  <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
   <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
@@ -325,6 +326,7 @@
   <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
+  <li><a href="../components/SpawnComponents.html">SpawnComponents</a></li>
   <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/SpellCheckComponents.html">SpellCheckComponents</a></li>
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
@@ -526,61 +528,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spawnCap">spawnCap</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spawnOnCharge">spawnOnCharge</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spawnOnDeath">spawnOnDeath</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spawnOnDirection">spawnOnDirection</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spawnOnHit">spawnOnHit</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spawnPrep">spawnPrep</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#spawnWallsOnHit">spawnWallsOnHit</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spawnable">spawnable</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spawnableForwardDamageCredit">spawnableForwardDamageCredit</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#startShrinerFightOnDeath">startShrinerFightOnDeath</a></td>
 	<td class="summary">
 
 </td>
@@ -1210,158 +1158,6 @@
 
 </dd>
     <dt>
-    <a name = "spawnCap"></a>
-    <strong>spawnCap</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">counter</span>
-          int8
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnOnCharge"></a>
-    <strong>spawnOnCharge</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">type</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-        <li><span class="parameter">sound</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-        <li><span class="parameter">attributes</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnOnDeath"></a>
-    <strong>spawnOnDeath</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">type</span>
-          string
-         (<em>default</em> "")
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnOnDirection"></a>
-    <strong>spawnOnDirection</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">types</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-        <li><span class="parameter">sound</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnOnHit"></a>
-    <strong>spawnOnHit</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">type</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-        <li><span class="parameter">bypassPenetration</span>
-         constant int8
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnPrep"></a>
-    <strong>spawnPrep</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-        <li><span class="parameter">sound</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "spawnWallsOnHit"></a>
     <strong>spawnWallsOnHit</strong>
     </dt>
@@ -1377,66 +1173,6 @@
          (<em>default</em> true)
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnable"></a>
-    <strong>spawnable</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">caster</span>
-          entityID
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnableForwardDamageCredit"></a>
-    <strong>spawnableForwardDamageCredit</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> true)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "startShrinerFightOnDeath"></a>
-    <strong>startShrinerFightOnDeath</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 
@@ -1470,6 +1206,10 @@
 
 
     <ul>
+        <li><span class="parameter">component</span>
+         constant string
+         (<em>default</em> "item")
+        </li>
         <li><span class="parameter">sound</span>
          constant string
          (<em>default</em> "teleport")

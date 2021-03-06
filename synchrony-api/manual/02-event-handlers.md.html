@@ -162,6 +162,7 @@
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
+  <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
   <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
@@ -299,6 +300,7 @@
   <li><a href="../components/ProvokableComponents.html">ProvokableComponents</a></li>
   <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
+  <li><a href="../components/SpawnComponents.html">SpawnComponents</a></li>
   <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
   <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
@@ -1145,25 +1147,32 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>gameStateLevel</h2>
 
 <ul>
+    <li><code>barrierReset</code></li>
     <li><code>bossFloor</code></li>
     <li><code>captureAudience</code></li>
     <li><code>checkItemPickup</code></li>
     <li><code>clearMinimapFramebuffer</code></li>
     <li><code>clearObjects</code></li>
     <li><code>clearSegments</code></li>
+    <li><code>confusableReset</code></li>
     <li><code>connectTiles</code></li>
     <li><code>connectTravelRunes</code></li>
     <li><code>createInitialSnapshot</code></li>
     <li><code>darkness</code></li>
     <li><code>detachInitialLevelSounds</code></li>
     <li><code>disableTweens</code></li>
+    <li><code>dwarfismReset</code></li>
+    <li><code>fearableReset</code></li>
     <li><code>findMarkerTiles</code></li>
     <li><code>forceSpawnApparition</code></li>
+    <li><code>freezableReset</code></li>
+    <li><code>gigantismReset</code></li>
     <li><code>initPriceTags</code></li>
     <li><code>initialTargeting</code></li>
     <li><code>initializeMinimap</code></li>
     <li><code>initializePendingObjectList</code></li>
     <li><code>initializeRhythmSettings</code></li>
+    <li><code>invincibilityReset</code></li>
     <li><code>itemHealOnLevelChange</code></li>
     <li><code>levelStartFrame</code></li>
     <li><code>loadLevel</code></li>
@@ -1171,9 +1180,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processPendingObjects</code></li>
     <li><code>randomizeFloorVisuals</code></li>
     <li><code>randomizeWallVisuals</code></li>
-    <li><code>removeBarrier</code></li>
-    <li><code>removeConfusion</code></li>
-    <li><code>removeFreeze</code></li>
     <li><code>resetAnimationTimer</code></li>
     <li><code>resetApparitionSpawnCooldowns</code></li>
     <li><code>resetDamageCountdown</code></li>
@@ -1183,7 +1189,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetLevelVariables</code></li>
     <li><code>resetPendingTraps</code></li>
     <li><code>resetShoplifting</code></li>
-    <li><code>resetSizeModifiers</code></li>
     <li><code>resetSongEnd</code></li>
     <li><code>resetSounds</code></li>
     <li><code>resetTargetingTeams</code></li>
@@ -1198,7 +1203,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>switchClientActionBuffer</code></li>
     <li><code>transitionOverlays</code></li>
     <li><code>turnSyncRelease</code></li>
-    <li><code>unfreezeEntities</code></li>
     <li><code>updateAttachmentEntities</code></li>
     <li><code>updateMusicLayerVolumes</code></li>
     <li><code>updateStasisFade</code></li>
@@ -1687,6 +1691,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>holster</code></li>
+    <li><code>ignoreSingleChoice</code></li>
 </ul>
 
 
@@ -1777,6 +1782,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>subdivisionItem</code></li>
 </ul>
+
+
+<p><a name="holderUpdateScale"></a></p>
+<h2>holderUpdateScale</h2>
+
 
 
 <p><a name="holderUpdateWireLevel"></a></p>
@@ -2351,8 +2361,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>gigantismItemDrop</code></li>
     <li><code>killBossOnDeath</code></li>
     <li><code>markShopkeeperDeath</code></li>
+    <li><code>provokeOnShrineDeath</code></li>
     <li><code>spawnOnDeath</code></li>
-    <li><code>startShrinerFight</code></li>
     <li><code>swapEntitiesOnDeath</code></li>
     <li><code>timeScale</code></li>
     <li><code>triggerKillEvent</code></li>
@@ -2587,10 +2597,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectGrow</h2>
 
 <ul>
-    <li><code>activateGigantism</code></li>
     <li><code>applyHealthMultiplier</code></li>
-    <li><code>modifyShadowScale</code></li>
-    <li><code>modifySpriteScale</code></li>
     <li><code>resetDwarfism</code></li>
     <li><code>setGigantismTimer</code></li>
     <li><code>updateAttackability</code></li>
@@ -2682,6 +2689,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>digOnPartialMove</code></li>
     <li><code>followerCollectGold</code></li>
     <li><code>fortissimoleSpawn</code></li>
+    <li><code>gigantismWalkSound</code></li>
     <li><code>hasMoved</code></li>
     <li><code>hola</code></li>
     <li><code>markPendingMerge</code></li>
@@ -2805,6 +2813,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>setProvokedFlag</code></li>
     <li><code>setWallTorchVisibility</code></li>
     <li><code>shieldBreakOnProvoke</code></li>
+    <li><code>startShrinerFight</code></li>
     <li><code>updateAttackableFlags</code></li>
 </ul>
 
@@ -2813,7 +2822,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectReveal</h2>
 
 <ul>
-    <li><code>initAutoCastCooldown</code></li>
     <li><code>playRevealSound</code></li>
 </ul>
 
@@ -2822,11 +2830,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectShrink</h2>
 
 <ul>
-    <li><code>activateDwarfism</code></li>
-    <li><code>modifyShadowScale</code></li>
-    <li><code>modifySpriteScale</code></li>
     <li><code>playVoiceLine</code></li>
-    <li><code>resetGigantism</code></li>
     <li><code>setDwarfismTimer</code></li>
     <li><code>spawnFlyaway</code></li>
     <li><code>suppressOnGigantism</code></li>
@@ -2859,6 +2863,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>activateInitialDwarfism</code></li>
     <li><code>activateInitialGigantism</code></li>
+    <li><code>applyDepthMultiplier</code></li>
     <li><code>applyZoneDependentActivationRadius</code></li>
     <li><code>autoReveal</code></li>
     <li><code>convertVocalEntity</code></li>
@@ -3094,12 +3099,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectUngrow</h2>
 
 <ul>
-    <li><code>resetDwarfismTimer</code></li>
     <li><code>resetGigantism</code></li>
-    <li><code>resetGigantismTimer</code></li>
     <li><code>resetHealthMultiplier</code></li>
-    <li><code>resetShadowScale</code></li>
-    <li><code>resetSpriteScale</code></li>
     <li><code>updateAttackability</code></li>
 </ul>
 
@@ -3109,9 +3110,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>playVoiceLine</code></li>
-    <li><code>resetDwarfism</code></li>
-    <li><code>resetShadowScale</code></li>
-    <li><code>resetSpriteScale</code></li>
+    <li><code>resetDwarfismTimer</code></li>
 </ul>
 
 
@@ -3193,6 +3192,17 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>skipEveryNth</code></li>
     <li><code>subdivisionInnate</code></li>
     <li><code>suspendRhythmWhileSpectating</code></li>
+</ul>
+
+
+<p><a name="objectUpdateScale"></a></p>
+<h2>objectUpdateScale</h2>
+
+<ul>
+    <li><code>applyScaleToShadow</code></li>
+    <li><code>applyScaleToSprite</code></li>
+    <li><code>spriteDwarfismScale</code></li>
+    <li><code>spriteGigantismScale</code></li>
 </ul>
 
 
@@ -3400,6 +3410,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>beatDelaySpritePosition</code></li>
     <li><code>chargeSpritePosition</code></li>
     <li><code>resetOpacity</code></li>
+    <li><code>updateSpriteScales</code></li>
 </ul>
 
 
@@ -3733,6 +3744,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>spellTeleportTarget</h2>
 
 <ul>
+    <li><code>ignoreComponent</code></li>
     <li><code>shuffle</code></li>
     <li><code>sortByDistance</code></li>
     <li><code>teleportToHome</code></li>
@@ -4024,23 +4036,30 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>activatePendingDigDamageIncreases</code></li>
     <li><code>applyMissedBeats</code></li>
     <li><code>applyTileIdleDamage</code></li>
+    <li><code>barrierTickDown</code></li>
     <li><code>castOnBeatCounter</code></li>
     <li><code>checkCurrencyGainForConditionalDamage</code></li>
     <li><code>checkDescentCompletion</code></li>
     <li><code>checkItemPickup</code></li>
     <li><code>checkLevelExitCondition</code></li>
     <li><code>checkTrapTrigger</code></li>
+    <li><code>confusableTickDown</code></li>
     <li><code>controlPlayer</code></li>
     <li><code>convertTraps</code></li>
     <li><code>currencyDrain</code></li>
     <li><code>despawnBarrierAttachments</code></li>
     <li><code>despawnExpiredScreenShakes</code></li>
     <li><code>despawnObjects</code></li>
+    <li><code>dwarfismTickDown</code></li>
+    <li><code>fearableTickDown</code></li>
     <li><code>freezablePreventActions</code></li>
+    <li><code>freezableTickDown</code></li>
+    <li><code>gigantismTickDown</code></li>
     <li><code>handleSongEnd</code></li>
     <li><code>increaseItemCombo</code></li>
     <li><code>incrementBeatCounter</code></li>
     <li><code>initializePendingObjectList</code></li>
+    <li><code>invincibilityTickDown</code></li>
     <li><code>markSoundsForRollbackStop</code></li>
     <li><code>pastVisibility</code></li>
     <li><code>postAIFrame</code></li>
@@ -4051,13 +4070,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processFirepigs</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>processPendingTraps</code></li>
-    <li><code>processSizeModifiers</code></li>
     <li><code>provokeOnBeatCounter</code></li>
-    <li><code>reduceBarrierTurnCounters</code></li>
-    <li><code>reduceConfusionTurnCounters</code></li>
     <li><code>reduceDamageCountdown</code></li>
-    <li><code>reduceFearTurnCounters</code></li>
-    <li><code>reduceInvincibilityCounters</code></li>
+    <li><code>reduceDeadRingerBellCooldown</code></li>
     <li><code>reduceSpellCooldowns</code></li>
     <li><code>resetConditionalInvincibility</code></li>
     <li><code>resetGrabbedStatus</code></li>
@@ -4072,14 +4087,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>togglePlayerSpectatorMode</code></li>
     <li><code>unsuppressItems</code></li>
     <li><code>updateAttachmentEntities</code></li>
-    <li><code>updateBarrierTimeoutBlinkEffect</code></li>
     <li><code>updateCharacterTargets</code></li>
     <li><code>updateComboableItemSprites</code></li>
     <li><code>updateConditionalDamageItemSprites</code></li>
     <li><code>updateConditionalInvincibilityBlink</code></li>
     <li><code>updateDigItemSprites</code></li>
     <li><code>updateEquipmentSpriteOverlay</code></li>
-    <li><code>updateFreezeTimeoutBlinkEffect</code></li>
     <li><code>updateGrooveChainSprites</code></li>
     <li><code>updateMinimap</code></li>
     <li><code>updateMusicLayerVolumes</code></li>
@@ -4087,6 +4100,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateReloadableWeaponSprites</code></li>
     <li><code>updateRhythm</code></li>
     <li><code>updateStasisFade</code></li>
+    <li><code>updateStatusTimeoutBlinkEffect</code></li>
     <li><code>vibrateOnActionDelay</code></li>
     <li><code>vibrateOnTell</code></li>
     <li><code>voiceTell</code></li>
