@@ -70,8 +70,9 @@
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
   <li><a href="../modules/necro.client.TurnSync.html">necro.client.TurnSync</a></li>
   <li><a href="../modules/necro.client.TurnSyncRequest.html">necro.client.TurnSyncRequest</a></li>
-  <li><a href="../modules/necro.config.Config.html">necro.config.Config</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
+  <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
+  <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
@@ -115,7 +116,6 @@
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
-  <li><a href="../modules/necro.game.data.core.PriceTagEntity.html">necro.game.data.core.PriceTagEntity</a></li>
   <li><a href="../modules/necro.game.data.enemy.CommonEnemy.html">necro.game.data.enemy.CommonEnemy</a></li>
   <li><a href="../modules/necro.game.data.item.CommonItem.html">necro.game.data.item.CommonItem</a></li>
   <li><a href="../modules/necro.game.data.item.weapon.CommonWeapon.html">necro.game.data.item.weapon.CommonWeapon</a></li>
@@ -183,6 +183,7 @@
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
+  <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
   <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
   <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
@@ -372,18 +373,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getSetting">getSetting (settingName)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getSettings">getSettings ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#getViewCenter">getViewCenter ()</a></td>
 	<td class="summary">
 
@@ -426,18 +415,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setMode">setMode (mode)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#setSetting">setSetting (settingName, value)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#snapToTarget">snapToTarget ()</a></td>
 	<td class="summary">
 
@@ -456,6 +433,15 @@
 </td>
 	</tr>
 </table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Mode">Mode</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+</table>
 
 <br/>
 <br/>
@@ -467,46 +453,6 @@
     <dt>
     <a name = "getMode"></a>
     <strong>getMode ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getSetting"></a>
-    <strong>getSetting (settingName)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">settingName</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getSettings"></a>
-    <strong>getSettings ()</strong>
     </dt>
     <dd>
 
@@ -641,59 +587,6 @@
 
 </dd>
     <dt>
-    <a name = "setMode"></a>
-    <strong>setMode (mode)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">mode</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setSetting"></a>
-    <strong>setSetting (settingName, value)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">settingName</span>
-
-
-
-        </li>
-        <li><span class="parameter">value</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "snapToTarget"></a>
     <strong>snapToTarget ()</strong>
     </dt>
@@ -754,6 +647,44 @@
 
 
 
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Mode"></a>
+    <strong>Mode</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">FIXED</span>
+         1
+        </li>
+        <li><span class="parameter">TRACK_LOCAL_PLAYER</span>
+         2
+        </li>
+        <li><span class="parameter">TRACK_ALL_PLAYERS</span>
+         3
+        </li>
+        <li><span class="parameter">MAP_OVERVIEW</span>
+         4
+        </li>
+        <li><span class="parameter">REVEALED_MAP_OVERVIEW</span>
+         5
         </li>
     </ul>
 

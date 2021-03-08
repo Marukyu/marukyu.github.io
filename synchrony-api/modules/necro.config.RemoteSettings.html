@@ -71,7 +71,7 @@
   <li><a href="../modules/necro.client.TurnSync.html">necro.client.TurnSync</a></li>
   <li><a href="../modules/necro.client.TurnSyncRequest.html">necro.client.TurnSyncRequest</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
-  <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
+  <li><strong>necro.config.RemoteSettings</strong></li>
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
@@ -261,7 +261,7 @@
   <li><a href="../modules/system.network.ReliablePassthrough.html">system.network.ReliablePassthrough</a></li>
   <li><a href="../modules/system.network.Server.html">system.network.Server</a></li>
   <li><a href="../modules/system.utils.Array.html">system.utils.Array</a></li>
-  <li><strong>system.utils.BitUtilities</strong></li>
+  <li><a href="../modules/system.utils.BitUtilities.html">system.utils.BitUtilities</a></li>
   <li><a href="../modules/system.utils.CircularBuffer.html">system.utils.CircularBuffer</a></li>
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
@@ -355,7 +355,7 @@
 
 <div id="content">
 
-<h1>Module <code>system.utils.BitUtilities</code></h1>
+<h1>Module <code>necro.config.RemoteSettings</code></h1>
 <p>
 
 </p>
@@ -367,55 +367,49 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#genRange">genRange (offset, size)</a></td>
+	<td class="name" nowrap><a href="#getLocalOverrideValue">getLocalOverrideValue (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#get">get (bitset, offset)</a></td>
+	<td class="name" nowrap><a href="#hasPermissions">hasPermissions ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getRange">getRange (bitset, offset, size)</a></td>
+	<td class="name" nowrap><a href="#isLocallyOverridden">isLocallyOverridden (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getSignedRange">getSignedRange (bitset, offset, size)</a></td>
+	<td class="name" nowrap><a href="#isRemotelyOverridden">isRemotelyOverridden (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#set">set (bitset, offset, value)</a></td>
+	<td class="name" nowrap><a href="#reset">reset ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setBool">setBool (bitset, offset, boolValue)</a></td>
+	<td class="name" nowrap><a href="#resetLocalOverrideValue">resetLocalOverrideValue (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setRange">setRange (bitset, offset, size, value)</a></td>
+	<td class="name" nowrap><a href="#setLocalOverrideValue">setLocalOverrideValue (key, value)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setSignedRange">setSignedRange (bitset, offset, size, value)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#test">test (bitset, offset)</a></td>
+	<td class="name" nowrap><a href="#upload">upload ()</a></td>
 	<td class="summary">
 
 </td>
@@ -430,8 +424,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "genRange"></a>
-    <strong>genRange (offset, size)</strong>
+    <a name = "getLocalOverrideValue"></a>
+    <strong>getLocalOverrideValue (key)</strong>
     </dt>
     <dd>
 
@@ -441,12 +435,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
+        <li><span class="parameter">key</span>
 
 
 
@@ -459,8 +448,24 @@
 
 </dd>
     <dt>
-    <a name = "get"></a>
-    <strong>get (bitset, offset)</strong>
+    <a name = "hasPermissions"></a>
+    <strong>hasPermissions ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isLocallyOverridden"></a>
+    <strong>isLocallyOverridden (key)</strong>
     </dt>
     <dd>
 
@@ -470,12 +475,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
+        <li><span class="parameter">key</span>
 
 
 
@@ -488,8 +488,8 @@
 
 </dd>
     <dt>
-    <a name = "getRange"></a>
-    <strong>getRange (bitset, offset, size)</strong>
+    <a name = "isRemotelyOverridden"></a>
+    <strong>isRemotelyOverridden (key)</strong>
     </dt>
     <dd>
 
@@ -499,17 +499,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
+        <li><span class="parameter">key</span>
 
 
 
@@ -522,8 +512,24 @@
 
 </dd>
     <dt>
-    <a name = "getSignedRange"></a>
-    <strong>getSignedRange (bitset, offset, size)</strong>
+    <a name = "reset"></a>
+    <strong>reset ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "resetLocalOverrideValue"></a>
+    <strong>resetLocalOverrideValue (key)</strong>
     </dt>
     <dd>
 
@@ -533,17 +539,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
+        <li><span class="parameter">key</span>
 
 
 
@@ -556,8 +552,8 @@
 
 </dd>
     <dt>
-    <a name = "set"></a>
-    <strong>set (bitset, offset, value)</strong>
+    <a name = "setLocalOverrideValue"></a>
+    <strong>setLocalOverrideValue (key, value)</strong>
     </dt>
     <dd>
 
@@ -567,12 +563,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
+        <li><span class="parameter">key</span>
 
 
 
@@ -590,8 +581,8 @@
 
 </dd>
     <dt>
-    <a name = "setBool"></a>
-    <strong>setBool (bitset, offset, boolValue)</strong>
+    <a name = "upload"></a>
+    <strong>upload ()</strong>
     </dt>
     <dd>
 
@@ -599,131 +590,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">boolValue</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setRange"></a>
-    <strong>setRange (bitset, offset, size, value)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
-
-
-
-        </li>
-        <li><span class="parameter">value</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setSignedRange"></a>
-    <strong>setSignedRange (bitset, offset, size, value)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
-
-
-
-        </li>
-        <li><span class="parameter">value</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "test"></a>
-    <strong>test (bitset, offset)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-    </ul>
 
 
 

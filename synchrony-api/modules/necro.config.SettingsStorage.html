@@ -72,7 +72,7 @@
   <li><a href="../modules/necro.client.TurnSyncRequest.html">necro.client.TurnSyncRequest</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
-  <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
+  <li><strong>necro.config.SettingsStorage</strong></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
@@ -261,7 +261,7 @@
   <li><a href="../modules/system.network.ReliablePassthrough.html">system.network.ReliablePassthrough</a></li>
   <li><a href="../modules/system.network.Server.html">system.network.Server</a></li>
   <li><a href="../modules/system.utils.Array.html">system.utils.Array</a></li>
-  <li><strong>system.utils.BitUtilities</strong></li>
+  <li><a href="../modules/system.utils.BitUtilities.html">system.utils.BitUtilities</a></li>
   <li><a href="../modules/system.utils.CircularBuffer.html">system.utils.CircularBuffer</a></li>
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
@@ -355,7 +355,7 @@
 
 <div id="content">
 
-<h1>Module <code>system.utils.BitUtilities</code></h1>
+<h1>Module <code>necro.config.SettingsStorage</code></h1>
 <p>
 
 </p>
@@ -367,55 +367,157 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#genRange">genRange (offset, size)</a></td>
+	<td class="name" nowrap><a href="#get">get (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#get">get (bitset, offset)</a></td>
+	<td class="name" nowrap><a href="#getAction">getAction (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getRange">getRange (bitset, offset, size)</a></td>
+	<td class="name" nowrap><a href="#getChoiceMapping">getChoiceMapping (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getSignedRange">getSignedRange (bitset, offset, size)</a></td>
+	<td class="name" nowrap><a href="#getChoices">getChoices (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#set">set (bitset, offset, value)</a></td>
+	<td class="name" nowrap><a href="#getDefaultValue">getDefaultValue (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setBool">setBool (bitset, offset, boolValue)</a></td>
+	<td class="name" nowrap><a href="#getEnableIf">getEnableIf (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setRange">setRange (bitset, offset, size, value)</a></td>
+	<td class="name" nowrap><a href="#getEntryOrder">getEntryOrder (key)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setSignedRange">setSignedRange (bitset, offset, size, value)</a></td>
+	<td class="name" nowrap><a href="#getFormattedValue">getFormattedValue (key, value)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#test">test (bitset, offset)</a></td>
+	<td class="name" nowrap><a href="#getFormatter">getFormatter (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getMaxLength">getMaxLength (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getName">getName (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getNumericParameters">getNumericParameters (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getOrder">getOrder (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getScope">getScope (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTreeKey">getTreeKey (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getType">getType (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getValueDescription">getValueDescription (key, value)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getVisibility">getVisibility (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isValid">isValid (key)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#listKeys">listKeys (prefix, scopes)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#load">load (scopes)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#register">register (parameters)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#registerVirtual">registerVirtual (parameters)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#save">save (scopes)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#set">set (key, value)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#unregisterVirtual">unregisterVirtual (id)</a></td>
 	<td class="summary">
 
 </td>
@@ -430,37 +532,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "genRange"></a>
-    <strong>genRange (offset, size)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "get"></a>
-    <strong>get (bitset, offset)</strong>
+    <strong>get (key)</strong>
     </dt>
     <dd>
 
@@ -470,12 +543,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
+        <li><span class="parameter">key</span>
 
 
 
@@ -488,8 +556,8 @@
 
 </dd>
     <dt>
-    <a name = "getRange"></a>
-    <strong>getRange (bitset, offset, size)</strong>
+    <a name = "getAction"></a>
+    <strong>getAction (key)</strong>
     </dt>
     <dd>
 
@@ -499,17 +567,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
+        <li><span class="parameter">key</span>
 
 
 
@@ -522,8 +580,8 @@
 
 </dd>
     <dt>
-    <a name = "getSignedRange"></a>
-    <strong>getSignedRange (bitset, offset, size)</strong>
+    <a name = "getChoiceMapping"></a>
+    <strong>getChoiceMapping (key)</strong>
     </dt>
     <dd>
 
@@ -533,17 +591,526 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
+        <li><span class="parameter">key</span>
 
 
 
         </li>
-        <li><span class="parameter">offset</span>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getChoices"></a>
+    <strong>getChoices (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
 
 
 
         </li>
-        <li><span class="parameter">size</span>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getDefaultValue"></a>
+    <strong>getDefaultValue (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getEnableIf"></a>
+    <strong>getEnableIf (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getEntryOrder"></a>
+    <strong>getEntryOrder (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getFormattedValue"></a>
+    <strong>getFormattedValue (key, value)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+        <li><span class="parameter">value</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getFormatter"></a>
+    <strong>getFormatter (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getMaxLength"></a>
+    <strong>getMaxLength (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getName"></a>
+    <strong>getName (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getNumericParameters"></a>
+    <strong>getNumericParameters (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getOrder"></a>
+    <strong>getOrder (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getScope"></a>
+    <strong>getScope (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getTreeKey"></a>
+    <strong>getTreeKey (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getType"></a>
+    <strong>getType (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getValueDescription"></a>
+    <strong>getValueDescription (key, value)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+        <li><span class="parameter">value</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getVisibility"></a>
+    <strong>getVisibility (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isValid"></a>
+    <strong>isValid (key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "listKeys"></a>
+    <strong>listKeys (prefix, scopes)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">prefix</span>
+
+
+
+        </li>
+        <li><span class="parameter">scopes</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "load"></a>
+    <strong>load (scopes)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">scopes</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "register"></a>
+    <strong>register (parameters)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">parameters</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "registerVirtual"></a>
+    <strong>registerVirtual (parameters)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">parameters</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "save"></a>
+    <strong>save (scopes)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">scopes</span>
 
 
 
@@ -557,7 +1124,7 @@
 </dd>
     <dt>
     <a name = "set"></a>
-    <strong>set (bitset, offset, value)</strong>
+    <strong>set (key, value)</strong>
     </dt>
     <dd>
 
@@ -567,12 +1134,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
+        <li><span class="parameter">key</span>
 
 
 
@@ -590,8 +1152,8 @@
 
 </dd>
     <dt>
-    <a name = "setBool"></a>
-    <strong>setBool (bitset, offset, boolValue)</strong>
+    <a name = "unregisterVirtual"></a>
+    <strong>unregisterVirtual (id)</strong>
     </dt>
     <dd>
 
@@ -601,124 +1163,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">boolValue</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setRange"></a>
-    <strong>setRange (bitset, offset, size, value)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
-
-
-
-        </li>
-        <li><span class="parameter">value</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setSignedRange"></a>
-    <strong>setSignedRange (bitset, offset, size, value)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
-
-
-
-        </li>
-        <li><span class="parameter">size</span>
-
-
-
-        </li>
-        <li><span class="parameter">value</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "test"></a>
-    <strong>test (bitset, offset)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">bitset</span>
-
-
-
-        </li>
-        <li><span class="parameter">offset</span>
+        <li><span class="parameter">id</span>
 
 
 

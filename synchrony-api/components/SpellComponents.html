@@ -70,8 +70,9 @@
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
   <li><a href="../modules/necro.client.TurnSync.html">necro.client.TurnSync</a></li>
   <li><a href="../modules/necro.client.TurnSyncRequest.html">necro.client.TurnSyncRequest</a></li>
-  <li><a href="../modules/necro.config.Config.html">necro.config.Config</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
+  <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
+  <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
@@ -115,7 +116,6 @@
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
-  <li><a href="../modules/necro.game.data.core.PriceTagEntity.html">necro.game.data.core.PriceTagEntity</a></li>
   <li><a href="../modules/necro.game.data.enemy.CommonEnemy.html">necro.game.data.enemy.CommonEnemy</a></li>
   <li><a href="../modules/necro.game.data.item.CommonItem.html">necro.game.data.item.CommonItem</a></li>
   <li><a href="../modules/necro.game.data.item.weapon.CommonWeapon.html">necro.game.data.item.weapon.CommonWeapon</a></li>
@@ -183,6 +183,7 @@
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
+  <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
   <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
   <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
@@ -1021,6 +1022,10 @@
          constant string
          (<em>default</em> "")
         </li>
+        <li><span class="parameter">offsetY</span>
+         constant int16
+         (<em>default</em> 0)
+        </li>
     </ul>
 
 
@@ -1136,6 +1141,10 @@
         <li><span class="parameter">invincibility</span>
          constant int16
          (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">silent</span>
+         constant bool
+         (<em>default</em> false)
         </li>
     </ul>
 
