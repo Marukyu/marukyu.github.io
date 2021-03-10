@@ -653,6 +653,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>0.16</code></li>
     <li><code>0.18</code></li>
     <li><code>0.20</code></li>
+    <li><code>0.21</code></li>
 </ul>
 
 
@@ -1051,7 +1052,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkItemPickup</code></li>
     <li><code>convertObjects</code></li>
     <li><code>convertOnBossProvoke</code></li>
-    <li><code>deleteHeldCurrency</code></li>
     <li><code>endSpawnInvicibility</code></li>
     <li><code>healOnFrame</code></li>
     <li><code>mergeItemStacks</code></li>
@@ -1792,7 +1792,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>damageOnPickup</code></li>
     <li><code>deleteApparitions</code></li>
     <li><code>forceSpawnApparition</code></li>
-    <li><code>grantExtraItemOnFirstPickup</code></li>
+    <li><code>grantBonusItem</code></li>
     <li><code>playItemPickupSound</code></li>
     <li><code>resetDamageCountdown</code></li>
     <li><code>singleChoice</code></li>
@@ -2238,6 +2238,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resistKnockbackWhileGrabbing</code></li>
     <li><code>stasisOnMove</code></li>
     <li><code>stealGoldOnAttack</code></li>
+    <li><code>telefrag</code></li>
     <li><code>unburrow</code></li>
     <li><code>windVoice</code></li>
 </ul>
@@ -2315,6 +2316,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deathSound</code></li>
     <li><code>despawnOtherFlawlessChests</code></li>
     <li><code>dropInventoryItems</code></li>
+    <li><code>endAmbush</code></li>
     <li><code>endSecretShopFight</code></li>
     <li><code>genericDeathSound</code></li>
     <li><code>gigantismCurrencyDropOverride</code></li>
@@ -2340,6 +2342,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>applyPositionOffset</code></li>
+    <li><code>createAmbush</code></li>
     <li><code>endDescent</code></li>
     <li><code>inflictDamage</code></li>
     <li><code>initializePosition</code></li>
@@ -2378,6 +2381,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>exitLevel</code></li>
     <li><code>resetTargetTurnID</code></li>
+    <li><code>saveMinibosses</code></li>
 </ul>
 
 
@@ -2674,17 +2678,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>stasisWalkSound</code></li>
     <li><code>stepDamage</code></li>
     <li><code>tentacleFacing</code></li>
+    <li><code>trapVocalize</code></li>
     <li><code>updatePosition</code></li>
     <li><code>updatePreviousPosition</code></li>
     <li><code>updateRadialVision</code></li>
     <li><code>updateRaycastVision</code></li>
     <li><code>updateShrink</code></li>
     <li><code>updateSunken</code></li>
-    <li><code>updateTargetPosition</code></li>
-    <li><code>updateTargetSquareDistance</code></li>
     <li><code>updateWired</code></li>
     <li><code>voiceFirstMove</code></li>
-    <li><code>voiceTeleport</code></li>
     <li><code>walkSound</code></li>
     <li><code>wiredRotate</code></li>
 </ul>
@@ -2728,21 +2730,25 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectPostConvert</h2>
 
 <ul>
-    <li><code>activateShield</code></li>
     <li><code>addToRowMap</code></li>
-    <li><code>assignDefaultAI</code></li>
+    <li><code>aiidReset</code></li>
+    <li><code>animationFreezeEffectactiveReset</code></li>
     <li><code>charge</code></li>
     <li><code>clearPlayerEntityCache</code></li>
+    <li><code>itemsuppressPickupReset</code></li>
     <li><code>postConvertBeatDelay</code></li>
-    <li><code>postConvertFreezeAnimation</code></li>
+    <li><code>removeItemBeforeConverting</code></li>
+    <li><code>shieldactiveReset</code></li>
     <li><code>soundPostConvert</code></li>
     <li><code>spawnAttachment</code></li>
+    <li><code>spriteheightReset</code></li>
+    <li><code>spritewidthReset</code></li>
     <li><code>updateAttackability</code></li>
     <li><code>updateFacingDirection</code></li>
     <li><code>updateShrink</code></li>
-    <li><code>updateSpriteSize</code></li>
     <li><code>updateSunken</code></li>
     <li><code>updateWired</code></li>
+    <li><code>weaponReloadableammoReset</code></li>
 </ul>
 
 
@@ -2752,6 +2758,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>despawnAttachment</code></li>
     <li><code>removeFromRowMap</code></li>
+    <li><code>removeItemBeforeConverting</code></li>
     <li><code>soundPreConvert</code></li>
 </ul>
 
@@ -3332,6 +3339,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>3_Overlay_activeOverlays</code></li>
     <li><code>3_RNG_seededRandom</code></li>
     <li><code>3_RunState_state</code></li>
+    <li><code>4_Ambush_savedTiles</code></li>
     <li><code>4_Boss_bossFlawless</code></li>
     <li><code>4_Boss_bossPending</code></li>
     <li><code>4_Flyaway_activeFlyaways</code></li>
@@ -3795,6 +3803,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>modifySize</code></li>
     <li><code>playSound</code></li>
     <li><code>playSoundRepeated</code></li>
+    <li><code>processPendingConversions</code></li>
     <li><code>radialTarget</code></li>
     <li><code>rectangularTarget</code></li>
     <li><code>requireTargetForFX</code></li>
@@ -4136,7 +4145,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>activatePlayableCharacters</code></li>
     <li><code>copyMasterActivationWhileAtHome</code></li>
-    <li><code>rebuildTargetPositionCache</code></li>
     <li><code>setGameObjectActive</code></li>
     <li><code>targetCaster</code></li>
     <li><code>targetNearestHostileEntity</code></li>
