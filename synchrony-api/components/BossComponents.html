@@ -668,6 +668,16 @@
 
 
 
+    <ul>
+        <li><span class="parameter">far</span>
+         constant int32
+         (<em>default</em> ai.Type.SEEK_BIASED)
+        </li>
+        <li><span class="parameter">close</span>
+         constant int32
+         (<em>default</em> ai.Type.FLEE)
+        </li>
+    </ul>
 
 
 
@@ -1219,11 +1229,19 @@
 
 
     <ul>
-        <li><span class="parameter">pendingShortSummon</span>
-          bool
-         (<em>default</em> false)
+        <li><span class="parameter">phase</span>
+         constant int8
+         (<em>default</em> 1)
         </li>
         <li><span class="parameter">subphase</span>
+          int8
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">lastAction</span>
+          int8
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">cooldown</span>
           int8
          (<em>default</em> 0)
         </li>
