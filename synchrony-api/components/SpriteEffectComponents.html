@@ -153,6 +153,7 @@
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
   <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
+  <li><a href="../modules/necro.game.system.Delay.html">necro.game.system.Delay</a></li>
   <li><a href="../modules/necro.game.system.Earthquake.html">necro.game.system.Earthquake</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
@@ -1080,6 +1081,10 @@
 
 
     <ul>
+        <li><span class="parameter">descentType</span>
+         constant int32
+         (<em>default</em> descent.Type.TRAPDOOR)
+        </li>
         <li><span class="parameter">anticipationDuration</span>
          constant float
          (<em>default</em> 0.1)
@@ -1091,6 +1096,10 @@
         <li><span class="parameter">cropOffset</span>
          constant float
          (<em>default</em> 3)
+        </li>
+        <li><span class="parameter">active</span>
+          bool
+         (<em>default</em> false)
         </li>
         <li><span class="parameter">animationTurn</span>
           int32

@@ -153,6 +153,7 @@
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
   <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
+  <li><a href="../modules/necro.game.system.Delay.html">necro.game.system.Delay</a></li>
   <li><a href="../modules/necro.game.system.Earthquake.html">necro.game.system.Earthquake</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
@@ -373,7 +374,25 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#descentActivateOnTile">descentActivateOnTile</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#descentAmbush">descentAmbush</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentAttackableFlags">descentAttackableFlags</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentCollisionMask">descentCollisionMask</a></td>
 	<td class="summary">
 
 </td>
@@ -385,7 +404,31 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#descentDamageImmunity">descentDamageImmunity</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentDeleteOnCompletion">descentDeleteOnCompletion</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#descentExitLevel">descentExitLevel</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentIntangibleOnCompletion">descentIntangibleOnCompletion</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentLockMovement">descentLockMovement</a></td>
 	<td class="summary">
 
 </td>
@@ -404,6 +447,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#descentPositionOffset">descentPositionOffset</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentSpectateOnCompletion">descentSpectateOnCompletion</a></td>
 	<td class="summary">
 
 </td>
@@ -432,7 +481,31 @@
           bool
          (<em>default</em> false)
         </li>
+        <li><span class="parameter">complete</span>
+          bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">type</span>
+          int32
+         (<em>default</em> 0)
+        </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentActivateOnTile"></a>
+    <strong>descentActivateOnTile</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -449,6 +522,66 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentAttackableFlags"></a>
+    <strong>descentAttackableFlags</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">add</span>
+         constant int32
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">remove</span>
+         constant int32
+         (<em>default</em> attack.Flag.ALL)
+        </li>
+        <li><span class="parameter">active</span>
+          bool
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentCollisionMask"></a>
+    <strong>descentCollisionMask</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">add</span>
+         constant int32
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">remove</span>
+         constant int32
+         (<em>default</em> collision.Group.SOLID)
+        </li>
+        <li><span class="parameter">storedCollisionMask</span>
+          int32
+         (<em>default</em> 0)
+        </li>
+    </ul>
 
 
 
@@ -486,6 +619,44 @@
 
 </dd>
     <dt>
+    <a name = "descentDamageImmunity"></a>
+    <strong>descentDamageImmunity</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">active</span>
+          bool
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentDeleteOnCompletion"></a>
+    <strong>descentDeleteOnCompletion</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "descentExitLevel"></a>
     <strong>descentExitLevel</strong>
     </dt>
@@ -495,16 +666,44 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentIntangibleOnCompletion"></a>
+    <strong>descentIntangibleOnCompletion</strong>
+    </dt>
+    <dd>
+
+
+
+
+
     <ul>
-        <li><span class="parameter">targetTurnID</span>
-          int32
-         (<em>default</em> -1)
-        </li>
-        <li><span class="parameter">duration</span>
-         constant float
-         (<em>default</em> 2.25)
+        <li><span class="parameter">storedTangibility</span>
+          bool
+         (<em>default</em> false)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentLockMovement"></a>
+    <strong>descentLockMovement</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -521,20 +720,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">fadeOutDuration</span>
-         constant float
-         (<em>default</em> 2.5)
-        </li>
-        <li><span class="parameter">fadeInDuration</span>
-         constant float
-         (<em>default</em> 0.25)
-        </li>
-        <li><span class="parameter">color</span>
-         constant int32
-         (<em>default</em> color.BLACK)
-        </li>
-    </ul>
 
 
 
@@ -555,10 +740,6 @@
         <li><span class="parameter">storedPersistence</span>
           bool
          (<em>default</em> false)
-        </li>
-        <li><span class="parameter">storedCollisionMask</span>
-          int32
-         (<em>default</em> collision.Type.NONE)
         </li>
     </ul>
 
@@ -589,6 +770,28 @@
         <li><span class="parameter">collisionMask</span>
          constant int32
          (<em>default</em> collision.Group.SOLID)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentSpectateOnCompletion"></a>
+    <strong>descentSpectateOnCompletion</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">storedSpectator</span>
+          bool
+         (<em>default</em> false)
         </li>
     </ul>
 

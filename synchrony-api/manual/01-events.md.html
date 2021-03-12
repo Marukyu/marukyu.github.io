@@ -153,6 +153,7 @@
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
   <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
+  <li><a href="../modules/necro.game.system.Delay.html">necro.game.system.Delay</a></li>
   <li><a href="../modules/necro.game.system.Earthquake.html">necro.game.system.Earthquake</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
@@ -550,6 +551,11 @@
     <li><code>errors</code></li>
     <li><code>performance</code></li>
 </ul>
+
+
+<p><a name="delayExpired"></a></p>
+<h2>delayExpired</h2>
+
 
 
 <p><a name="ecsSchemaReloaded"></a></p>
@@ -1023,6 +1029,7 @@
     <li><code>attackCheck</code></li>
     <li><code>attackMove</code></li>
     <li><code>attackCollision</code></li>
+    <li><code>attackTween</code></li>
     <li><code>attackTriggers</code></li>
     <li><code>attack</code></li>
     <li><code>attackSound</code></li>
@@ -1030,6 +1037,7 @@
     <li><code>stasisOnMove</code></li>
     <li><code>magicTile</code></li>
     <li><code>success</code></li>
+    <li><code>failTween</code></li>
     <li><code>tween</code></li>
 </ul>
 
@@ -1153,6 +1161,8 @@
     <li><code>animation</code></li>
     <li><code>collision</code></li>
     <li><code>attackable</code></li>
+    <li><code>tangible</code></li>
+    <li><code>spectator</code></li>
     <li><code>damage</code></li>
     <li><code>ambush</code></li>
 </ul>
@@ -1166,12 +1176,16 @@
     <li><code>targetTurn</code></li>
     <li><code>storeCollision</code></li>
     <li><code>collision</code></li>
+    <li><code>interaction</code></li>
+    <li><code>grooveChain</code></li>
+    <li><code>damageImmunity</code></li>
     <li><code>attackable</code></li>
     <li><code>persistence</code></li>
     <li><code>hover</code></li>
     <li><code>sound</code></li>
     <li><code>voice</code></li>
     <li><code>overlay</code></li>
+    <li><code>music</code></li>
     <li><code>animation</code></li>
     <li><code>endAction</code></li>
 </ul>
@@ -1181,8 +1195,12 @@
 <h2>holderDescentEnd</h2>
 
 <ul>
+    <li><code>complete</code></li>
     <li><code>targetTurn</code></li>
     <li><code>ambush</code></li>
+    <li><code>intangible</code></li>
+    <li><code>spectator</code></li>
+    <li><code>delete</code></li>
     <li><code>exitLevel</code></li>
 </ul>
 
@@ -1420,6 +1438,7 @@
 <h2>holderIntangible</h2>
 
 <ul>
+    <li><code>focusedEntities</code></li>
     <li><code>ungrab</code></li>
     <li><code>extras</code></li>
     <li><code>objectMap</code></li>
@@ -1478,6 +1497,7 @@
     <li><code>objectMap</code></li>
     <li><code>collision</code></li>
     <li><code>damage</code></li>
+    <li><code>damageLate</code></li>
     <li><code>readTileInfo</code></li>
     <li><code>targeting</code></li>
     <li><code>partial</code></li>
@@ -1489,7 +1509,7 @@
     <li><code>tileEffects</code></li>
     <li><code>tileIdle</code></li>
     <li><code>followers</code></li>
-    <li><code>damageLate</code></li>
+    <li><code>takeCurseDamage</code></li>
     <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
     <li><code>redirectCharge</code></li>
@@ -1698,9 +1718,11 @@
 <h2>holderSpectate</h2>
 
 <ul>
+    <li><code>checkDescent</code></li>
     <li><code>player</code></li>
     <li><code>spectator</code></li>
     <li><code>intangible</code></li>
+    <li><code>descent</code></li>
 </ul>
 
 
@@ -1733,6 +1755,7 @@
     <li><code>suppressLate</code></li>
     <li><code>suppressLast</code></li>
     <li><code>shieldDirection</code></li>
+    <li><code>shieldOncePerFrame</code></li>
     <li><code>shieldBreak</code></li>
     <li><code>shield</code></li>
     <li><code>shieldDodge</code></li>
@@ -1744,6 +1767,7 @@
     <li><code>armorMinimumDamage</code></li>
     <li><code>painShrine</code></li>
     <li><code>thaw</code></li>
+    <li><code>freeze</code></li>
     <li><code>provoke</code></li>
     <li><code>shatter</code></li>
     <li><code>moveOverride</code></li>
@@ -1775,6 +1799,7 @@
 <h2>holderTangible</h2>
 
 <ul>
+    <li><code>focusedEntities</code></li>
     <li><code>extras</code></li>
     <li><code>objectMap</code></li>
     <li><code>objectRowMap</code></li>
@@ -1900,6 +1925,7 @@
 <h2>holderUnspectate</h2>
 
 <ul>
+    <li><code>checkDescent</code></li>
     <li><code>player</code></li>
     <li><code>spectator</code></li>
     <li><code>tangible</code></li>
@@ -2123,6 +2149,7 @@
     <li><code>regenKillCount</code></li>
     <li><code>holderSprite</code></li>
     <li><code>sprite</code></li>
+    <li><code>convert</code></li>
     <li><code>suppress</code></li>
     <li><code>dropContent</code></li>
     <li><code>collision</code></li>
@@ -2412,6 +2439,7 @@
     <li><code>attackCheck</code></li>
     <li><code>attackMove</code></li>
     <li><code>attackCollision</code></li>
+    <li><code>attackTween</code></li>
     <li><code>attackTriggers</code></li>
     <li><code>attack</code></li>
     <li><code>attackSound</code></li>
@@ -2419,6 +2447,7 @@
     <li><code>stasisOnMove</code></li>
     <li><code>magicTile</code></li>
     <li><code>success</code></li>
+    <li><code>failTween</code></li>
     <li><code>tween</code></li>
 </ul>
 
@@ -2542,6 +2571,8 @@
     <li><code>animation</code></li>
     <li><code>collision</code></li>
     <li><code>attackable</code></li>
+    <li><code>tangible</code></li>
+    <li><code>spectator</code></li>
     <li><code>damage</code></li>
     <li><code>ambush</code></li>
 </ul>
@@ -2555,12 +2586,16 @@
     <li><code>targetTurn</code></li>
     <li><code>storeCollision</code></li>
     <li><code>collision</code></li>
+    <li><code>interaction</code></li>
+    <li><code>grooveChain</code></li>
+    <li><code>damageImmunity</code></li>
     <li><code>attackable</code></li>
     <li><code>persistence</code></li>
     <li><code>hover</code></li>
     <li><code>sound</code></li>
     <li><code>voice</code></li>
     <li><code>overlay</code></li>
+    <li><code>music</code></li>
     <li><code>animation</code></li>
     <li><code>endAction</code></li>
 </ul>
@@ -2570,8 +2605,12 @@
 <h2>objectDescentEnd</h2>
 
 <ul>
+    <li><code>complete</code></li>
     <li><code>targetTurn</code></li>
     <li><code>ambush</code></li>
+    <li><code>intangible</code></li>
+    <li><code>spectator</code></li>
+    <li><code>delete</code></li>
     <li><code>exitLevel</code></li>
 </ul>
 
@@ -2809,6 +2848,7 @@
 <h2>objectIntangible</h2>
 
 <ul>
+    <li><code>focusedEntities</code></li>
     <li><code>ungrab</code></li>
     <li><code>extras</code></li>
     <li><code>objectMap</code></li>
@@ -2867,6 +2907,7 @@
     <li><code>objectMap</code></li>
     <li><code>collision</code></li>
     <li><code>damage</code></li>
+    <li><code>damageLate</code></li>
     <li><code>readTileInfo</code></li>
     <li><code>targeting</code></li>
     <li><code>partial</code></li>
@@ -2878,7 +2919,7 @@
     <li><code>tileEffects</code></li>
     <li><code>tileIdle</code></li>
     <li><code>followers</code></li>
-    <li><code>damageLate</code></li>
+    <li><code>takeCurseDamage</code></li>
     <li><code>tweenOverride</code></li>
     <li><code>redirectMoveOverride</code></li>
     <li><code>redirectCharge</code></li>
@@ -3087,9 +3128,11 @@
 <h2>objectSpectate</h2>
 
 <ul>
+    <li><code>checkDescent</code></li>
     <li><code>player</code></li>
     <li><code>spectator</code></li>
     <li><code>intangible</code></li>
+    <li><code>descent</code></li>
 </ul>
 
 
@@ -3122,6 +3165,7 @@
     <li><code>suppressLate</code></li>
     <li><code>suppressLast</code></li>
     <li><code>shieldDirection</code></li>
+    <li><code>shieldOncePerFrame</code></li>
     <li><code>shieldBreak</code></li>
     <li><code>shield</code></li>
     <li><code>shieldDodge</code></li>
@@ -3133,6 +3177,7 @@
     <li><code>armorMinimumDamage</code></li>
     <li><code>painShrine</code></li>
     <li><code>thaw</code></li>
+    <li><code>freeze</code></li>
     <li><code>provoke</code></li>
     <li><code>shatter</code></li>
     <li><code>moveOverride</code></li>
@@ -3164,6 +3209,7 @@
 <h2>objectTangible</h2>
 
 <ul>
+    <li><code>focusedEntities</code></li>
     <li><code>extras</code></li>
     <li><code>objectMap</code></li>
     <li><code>objectRowMap</code></li>
@@ -3289,6 +3335,7 @@
 <h2>objectUnspectate</h2>
 
 <ul>
+    <li><code>checkDescent</code></li>
     <li><code>player</code></li>
     <li><code>spectator</code></li>
     <li><code>tangible</code></li>
@@ -3427,8 +3474,7 @@
 <h2>priceTagCheck</h2>
 
 <ul>
-    <li><code>active</code></li>
-    <li><code>buyer</code></li>
+    <li><code>checkPurchaseOnBuyer</code></li>
     <li><code>invertMultiplier</code></li>
     <li><code>ignoreMultiplier</code></li>
     <li><code>currency</code></li>
@@ -3443,8 +3489,9 @@
 <ul>
     <li><code>currency</code></li>
     <li><code>health</code></li>
-    <li><code>sound</code></li>
     <li><code>multiplyCost</code></li>
+    <li><code>sound</code></li>
+    <li><code>flyaway</code></li>
 </ul>
 
 
@@ -3485,6 +3532,7 @@
     <li><code>priceTags</code></li>
     <li><code>swipesBack</code></li>
     <li><code>objects</code></li>
+    <li><code>contents</code></li>
     <li><code>itemLabels</code></li>
     <li><code>itemStackSizes</code></li>
     <li><code>secretShopLabels</code></li>
@@ -4059,6 +4107,7 @@
     <li><code>spawnPlayers</code></li>
     <li><code>resetAnimations</code></li>
     <li><code>pendingTraps</code></li>
+    <li><code>pendingDelays</code></li>
     <li><code>targeting</code></li>
     <li><code>invincibility</code></li>
     <li><code>spectator</code></li>
@@ -4086,6 +4135,7 @@
     <li><code>priceTags</code></li>
     <li><code>itemPickup</code></li>
     <li><code>updateAttachments</code></li>
+    <li><code>updateItems</code></li>
     <li><code>frame2</code></li>
     <li><code>updateVisualObjects</code></li>
     <li><code>updateVisualObjectsLate</code></li>

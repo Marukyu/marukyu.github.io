@@ -153,6 +153,7 @@
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
   <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
+  <li><a href="../modules/necro.game.system.Delay.html">necro.game.system.Delay</a></li>
   <li><a href="../modules/necro.game.system.Earthquake.html">necro.game.system.Earthquake</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
@@ -446,7 +447,7 @@
         </li>
         <li><span class="parameter">moveType</span>
          constant int32
-         (<em>default</em> move.Type.NORMAL + move.Flag.TWEEN_QUARTIC)
+         (<em>default</em> move.Flag.mask(move.Type.NORMAL)
         </li>
         <li><span class="parameter">sound</span>
          constant string
@@ -491,6 +492,16 @@
 
 
 
+    <ul>
+        <li><span class="parameter">moveType</span>
+         constant int32
+         (<em>default</em> move.Flag.mask(move.Type.NORMAL)
+        </li>
+        <li><span class="parameter">orthogonalize</span>
+         constant bool
+         (<em>default</em> true)
+        </li>
+    </ul>
 
 
 
