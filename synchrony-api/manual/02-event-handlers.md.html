@@ -499,8 +499,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>beginFastForward</code></li>
-    <li><code>clearActionBuffer</code></li>
     <li><code>markRemoteModsUnloaded</code></li>
+    <li><code>resetActionBuffer</code></li>
 </ul>
 
 
@@ -528,6 +528,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>disconnectMenu</code></li>
     <li><code>markRemoteModsUnloaded</code></li>
     <li><code>reloadLocalMods</code></li>
+    <li><code>resetActionBuffer</code></li>
     <li><code>resetFastForward</code></li>
     <li><code>resetGameState</code></li>
     <li><code>resetLobbySpectatorPreferences</code></li>
@@ -1070,7 +1071,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>mergeItemStacks</code></li>
     <li><code>ozuma</code></li>
     <li><code>processDelayaedCasts</code></li>
-    <li><code>processMagicTiles</code></li>
     <li><code>provokeOnWallRemoval</code></li>
     <li><code>resetKnockbackImmunity</code></li>
     <li><code>resetShieldFrameBypass</code></li>
@@ -1160,6 +1160,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetLevelVariables</code></li>
     <li><code>resetPendingTraps</code></li>
     <li><code>resetShoplifting</code></li>
+    <li><code>resetSlides</code></li>
     <li><code>resetSongEnd</code></li>
     <li><code>resetSounds</code></li>
     <li><code>resetTargetingTeams</code></li>
@@ -1208,9 +1209,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>cancelPendingLevelTransition</code></li>
+    <li><code>clearActionBuffer</code></li>
     <li><code>clearCurrentLevelInfo</code></li>
     <li><code>clearObjects</code></li>
-    <li><code>clearPlayerInputs</code></li>
     <li><code>clearSnapshots</code></li>
     <li><code>closeAllMenus</code></li>
     <li><code>closeInGameLobby</code></li>
@@ -1917,7 +1918,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>disableRadialVision</code></li>
     <li><code>dropBagContents</code></li>
     <li><code>dropHolsteredItem</code></li>
-    <li><code>suppressItemPickup</code></li>
     <li><code>updateAttackability</code></li>
     <li><code>updateCollision</code></li>
     <li><code>updateHoldableRadialLightSource</code></li>
@@ -2799,6 +2799,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>setDecorTentacleTangibility</code></li>
     <li><code>setProvokedFlag</code></li>
     <li><code>setThroneVisibility</code></li>
+    <li><code>spawnNecroDancerMiniboss</code></li>
     <li><code>startShrinerFight</code></li>
     <li><code>updateAttackableFlags</code></li>
 </ul>
@@ -2952,6 +2953,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>castOnShieldHit</code></li>
     <li><code>chargeShield</code></li>
     <li><code>checkDeath</code></li>
+    <li><code>checkShieldDamageBypass</code></li>
     <li><code>checkShieldDirection</code></li>
     <li><code>checkShieldFrameBypass</code></li>
     <li><code>convertOnShieldBreak</code></li>
@@ -4081,6 +4083,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playFailSound</code></li>
     <li><code>playFirstTimeSound</code></li>
     <li><code>playSuccessSound</code></li>
+    <li><code>processMagicTile</code></li>
     <li><code>removeFirstTimeFlag</code></li>
     <li><code>scatterInventory</code></li>
     <li><code>trapVocalize</code></li>
