@@ -132,7 +132,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
-  <li><strong>necro.game.item.ItemGeneration</strong></li>
+  <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
@@ -270,7 +270,7 @@
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
   <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
-  <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
+  <li><strong>system.utils.Fallback</strong></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
@@ -360,7 +360,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.item.ItemGeneration</code></h1>
+<h1>Module <code>system.utils.Fallback</code></h1>
 <p>
 
 </p>
@@ -372,19 +372,31 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#markSeen">markSeen (item, count)</a></td>
+	<td class="name" nowrap><a href="#create">create (tbl)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#unweightedChoice">unweightedChoice (channel, slot, ...)</a></td>
+	<td class="name" nowrap><a href="#getTable">getTable ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#weightedChoice">weightedChoice (channel, chanceType, levelBonus, slot, ...)</a></td>
+	<td class="name" nowrap><a href="#getZero">getZero ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isFalse">isFalse ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#null">null ()</a></td>
 	<td class="summary">
 
 </td>
@@ -399,8 +411,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "markSeen"></a>
-    <strong>markSeen (item, count)</strong>
+    <a name = "create"></a>
+    <strong>create (tbl)</strong>
     </dt>
     <dd>
 
@@ -410,12 +422,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">item</span>
-
-
-
-        </li>
-        <li><span class="parameter">count</span>
+        <li><span class="parameter">tbl</span>
 
 
 
@@ -428,8 +435,8 @@
 
 </dd>
     <dt>
-    <a name = "unweightedChoice"></a>
-    <strong>unweightedChoice (channel, slot, ...)</strong>
+    <a name = "getTable"></a>
+    <strong>getTable ()</strong>
     </dt>
     <dd>
 
@@ -437,24 +444,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">channel</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-        <li><span class="parameter">...</span>
-
-
-
-        </li>
-    </ul>
 
 
 
@@ -462,8 +451,8 @@
 
 </dd>
     <dt>
-    <a name = "weightedChoice"></a>
-    <strong>weightedChoice (channel, chanceType, levelBonus, slot, ...)</strong>
+    <a name = "getZero"></a>
+    <strong>getZero ()</strong>
     </dt>
     <dd>
 
@@ -471,34 +460,38 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">channel</span>
 
 
 
-        </li>
-        <li><span class="parameter">chanceType</span>
+
+
+</dd>
+    <dt>
+    <a name = "isFalse"></a>
+    <strong>isFalse ()</strong>
+    </dt>
+    <dd>
 
 
 
-        </li>
-        <li><span class="parameter">levelBonus</span>
 
 
 
-        </li>
-        <li><span class="parameter">slot</span>
 
 
 
-        </li>
-        <li><span class="parameter">...</span>
+
+</dd>
+    <dt>
+    <a name = "null"></a>
+    <strong>null ()</strong>
+    </dt>
+    <dd>
 
 
 
-        </li>
-    </ul>
+
+
 
 
 

@@ -214,6 +214,8 @@
   <li><a href="../modules/necro.server.ServerActionBuffer.html">necro.server.ServerActionBuffer</a></li>
   <li><a href="../modules/necro.server.ServerChat.html">necro.server.ServerChat</a></li>
   <li><a href="../modules/necro.server.ServerClock.html">necro.server.ServerClock</a></li>
+  <li><a href="../modules/necro.server.ServerCommandLine.html">necro.server.ServerCommandLine</a></li>
+  <li><a href="../modules/necro.server.ServerConductor.html">necro.server.ServerConductor</a></li>
   <li><a href="../modules/necro.server.ServerEvents.html">necro.server.ServerEvents</a></li>
   <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
   <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
@@ -268,6 +270,7 @@
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
   <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
+  <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
@@ -408,6 +411,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>animationRandomVariant</code></li>
     <li><code>applyActionDelayAnimations</code></li>
     <li><code>applyBellAnimations</code></li>
+    <li><code>applyBlinkAnimations</code></li>
     <li><code>applyCaptiveAudienceEffect</code></li>
     <li><code>applyCastSpellAnimations</code></li>
     <li><code>applyChargeAnimations</code></li>
@@ -543,7 +547,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>clearLocalCoopPlayerIDs</code></li>
-    <li><code>enqueueModListInitialization</code></li>
     <li><code>sendInitialResourceVersionMap</code></li>
     <li><code>setLocalPlayerID</code></li>
 </ul>
@@ -588,6 +591,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="clientResourcesReady"></a></p>
+<h2>clientResourcesReady</h2>
+
+<ul>
+    <li><code>updateRemoteModList</code></li>
+    <li><code>uploadRemoteSettings</code></li>
+</ul>
+
+
 <p><a name="clientTurnSyncBegin"></a></p>
 <h2>clientTurnSyncBegin</h2>
 
@@ -601,6 +613,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>unpauseSpeedrunTimer</code></li>
+</ul>
+
+
+<p><a name="consoleInput"></a></p>
+<h2>consoleInput</h2>
+
+<ul>
+    <li><code>handleServerInput</code></li>
 </ul>
 
 
@@ -627,6 +647,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>gameRender</code></li>
     <li><code>gameStartup</code></li>
     <li><code>gameTick</code></li>
+    <li><code>handleConsoleInput</code></li>
     <li><code>pollIPCMessages</code></li>
     <li><code>pollModifiedEventTypes</code></li>
     <li><code>reloadAssetsAutomatically</code></li>
@@ -652,6 +673,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearCurrencyCache</code></li>
     <li><code>clearECSCache</code></li>
     <li><code>clearLobbyCharacterCache</code></li>
+    <li><code>clearPerspectiveCache</code></li>
     <li><code>clearPlayerEntityListCache</code></li>
     <li><code>clearXMLMappings</code></li>
     <li><code>entitySelector</code></li>
@@ -1742,6 +1764,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>allTileRevealItem</code></li>
     <li><code>bloodPurchasePriceOverrideItem</code></li>
     <li><code>contentsVision</code></li>
+    <li><code>objectMinimapVisionItem</code></li>
     <li><code>objectSilhouetteItem</code></li>
     <li><code>objectUnsilhouetteItem</code></li>
     <li><code>objectVisibilityItem</code></li>
@@ -1810,6 +1833,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>damageOnPickup</code></li>
     <li><code>deleteApparitions</code></li>
     <li><code>forceSpawnApparition</code></li>
+    <li><code>gimmeThatLute</code></li>
     <li><code>grantBonusItem</code></li>
     <li><code>playItemPickupSound</code></li>
     <li><code>resetDamageCountdown</code></li>
@@ -2349,6 +2373,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>swapEntitiesOnDeath</code></li>
     <li><code>timeScale</code></li>
     <li><code>triggerKillEvent</code></li>
+    <li><code>voiceTaunt</code></li>
 </ul>
 
 
@@ -2463,6 +2488,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>interceptActionDelay</code></li>
     <li><code>moveGrabbed</code></li>
     <li><code>moveObject</code></li>
+    <li><code>necrodancerFacing</code></li>
     <li><code>parryCooldown</code></li>
     <li><code>parryCounterAttack</code></li>
     <li><code>performInteraction</code></li>
@@ -2880,6 +2906,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>scalingHealth</code></li>
     <li><code>selectRandomSpriteVariant</code></li>
     <li><code>setPriceTag</code></li>
+    <li><code>setSlimeDirection</code></li>
     <li><code>setStasis</code></li>
     <li><code>sleep</code></li>
     <li><code>spawnAttachment</code></li>
@@ -3223,6 +3250,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>modifyPitchDwarfism</code></li>
     <li><code>modifyPitchGigantism</code></li>
+    <li><code>omnipresentVoice</code></li>
     <li><code>playSound</code></li>
 </ul>
 
@@ -3325,6 +3353,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_input</code></li>
     <li><code>1_input.controllers</code></li>
     <li><code>1_input.keys</code></li>
+    <li><code>1_level.generator.characterBitmaskOverride</code></li>
+    <li><code>1_level.generator.level.generator</code></li>
     <li><code>1_lobby.selector</code></li>
     <li><code>1_lobby.selector.characters</code></li>
     <li><code>1_lobby.selector.dungeon</code></li>
@@ -3340,6 +3370,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_net.join.udp.ip</code></li>
     <li><code>1_net.join.udp.port</code></li>
     <li><code>1_net.rejoinToken</code></li>
+    <li><code>1_net.server.conductor.autoJoin</code></li>
+    <li><code>1_net.server.conductor.levelGenerator</code></li>
+    <li><code>1_net.server.conductor.net.server.conductor</code></li>
+    <li><code>1_net.server.dedicated.autoStart</code></li>
+    <li><code>1_net.server.dedicated.maxLocalCoopPlayers</code></li>
+    <li><code>1_net.server.dedicated.maxPlayers</code></li>
+    <li><code>1_net.server.dedicated.net.server.dedicated</code></li>
+    <li><code>1_net.server.dedicated.port</code></li>
     <li><code>1_net.username</code></li>
     <li><code>1_video</code></li>
     <li><code>1_video.capsLock</code></li>
@@ -3352,7 +3390,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>2_Collision_collisionMap</code></li>
     <li><code>2_Map_objectPositions</code></li>
     <li><code>2_Map_outOfBoundsObjects</code></li>
-    <li><code>2_Minimap_colorBuffer</code></li>
     <li><code>2_Player_playerCharacterTypes</code></li>
     <li><code>2_Player_playerEntityIDs</code></li>
     <li><code>2_RNG_globalRandom</code></li>
@@ -3413,6 +3450,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>drawOverlayBelowHUD</code></li>
     <li><code>moveAnimations</code></li>
     <li><code>renderBackLayerSwipes</code></li>
+    <li><code>renderBackgroundParticleSystems</code></li>
     <li><code>renderChat</code></li>
     <li><code>renderContents</code></li>
     <li><code>renderDecals</code></li>
@@ -3454,6 +3492,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyDynamicSpriteOffset</code></li>
     <li><code>applySlideSway</code></li>
     <li><code>applySpriteOffsetIfAboveWall</code></li>
+    <li><code>applySpriteOffsetIfInsideWall</code></li>
     <li><code>applyTentacleTellSpriteOffset</code></li>
     <li><code>applyTileBrightnessEffect</code></li>
     <li><code>applyVibrateEffect</code></li>
@@ -3547,6 +3586,19 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>acceptOrRejectPlayer</code></li>
     <li><code>checkBanList</code></li>
     <li><code>reconnectLocalCoopPlayers</code></li>
+</ul>
+
+
+<p><a name="serverConsoleCommand"></a></p>
+<h2>serverConsoleCommand</h2>
+
+<ul>
+    <li><code>c</code></li>
+    <li><code>cond</code></li>
+    <li><code>conductor</code></li>
+    <li><code>exit</code></li>
+    <li><code>help</code></li>
+    <li><code>list</code></li>
 </ul>
 
 
@@ -3685,6 +3737,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>checkTurnSyncTimeouts</code></li>
+    <li><code>conductor</code></li>
     <li><code>processSocketEvents</code></li>
     <li><code>updatePlayerLatencyList</code></li>
     <li><code>updateSteamLobby</code></li>
@@ -3841,11 +3894,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>knockback</code></li>
     <li><code>linearTarget</code></li>
     <li><code>modifySize</code></li>
+    <li><code>particles</code></li>
     <li><code>playSound</code></li>
     <li><code>playSoundRepeated</code></li>
+    <li><code>playVoice</code></li>
     <li><code>processPendingConversions</code></li>
     <li><code>radialTarget</code></li>
-    <li><code>reanimate</code></li>
     <li><code>rectangularTarget</code></li>
     <li><code>requireTargetForFX</code></li>
     <li><code>revealAllEnemies</code></li>
@@ -3862,6 +3916,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnTrailSwipe</code></li>
     <li><code>spellFlyaway</code></li>
     <li><code>spellHopInPlace</code></li>
+    <li><code>spellcastReanimate</code></li>
+    <li><code>spellcastRise</code></li>
     <li><code>targetHome</code></li>
     <li><code>targetTiles</code></li>
     <li><code>teleport</code></li>
@@ -3879,6 +3935,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadGameContent</code></li>
     <li><code>loadMods</code></li>
     <li><code>loadSettings</code></li>
+    <li><code>startServer</code></li>
 </ul>
 
 
@@ -3943,7 +4000,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>fetchGeneratedLevels</code></li>
     <li><code>handleChat</code></li>
     <li><code>initializeMinimap</code></li>
-    <li><code>initializeModList</code></li>
     <li><code>networkClient</code></li>
     <li><code>networkServer</code></li>
     <li><code>performLevelTransition</code></li>
@@ -4115,6 +4171,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>currencyDrain</code></li>
     <li><code>despawnBarrierAttachments</code></li>
     <li><code>despawnExpiredScreenShakes</code></li>
+    <li><code>despawnNecrodancerTraps</code></li>
     <li><code>despawnObjects</code></li>
     <li><code>dwarfismTickDown</code></li>
     <li><code>fearableTickDown</code></li>

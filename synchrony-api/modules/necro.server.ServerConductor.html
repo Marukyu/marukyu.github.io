@@ -132,7 +132,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
-  <li><strong>necro.game.item.ItemGeneration</strong></li>
+  <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
@@ -215,7 +215,7 @@
   <li><a href="../modules/necro.server.ServerChat.html">necro.server.ServerChat</a></li>
   <li><a href="../modules/necro.server.ServerClock.html">necro.server.ServerClock</a></li>
   <li><a href="../modules/necro.server.ServerCommandLine.html">necro.server.ServerCommandLine</a></li>
-  <li><a href="../modules/necro.server.ServerConductor.html">necro.server.ServerConductor</a></li>
+  <li><strong>necro.server.ServerConductor</strong></li>
   <li><a href="../modules/necro.server.ServerEvents.html">necro.server.ServerEvents</a></li>
   <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
   <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
@@ -360,7 +360,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.item.ItemGeneration</code></h1>
+<h1>Module <code>necro.server.ServerConductor</code></h1>
 <p>
 
 </p>
@@ -372,19 +372,19 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#markSeen">markSeen (item, count)</a></td>
+	<td class="name" nowrap><a href="#connect">connect ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#unweightedChoice">unweightedChoice (channel, slot, ...)</a></td>
+	<td class="name" nowrap><a href="#disconnect">disconnect ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#weightedChoice">weightedChoice (channel, chanceType, levelBonus, slot, ...)</a></td>
+	<td class="name" nowrap><a href="#isConnected">isConnected ()</a></td>
 	<td class="summary">
 
 </td>
@@ -399,8 +399,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "markSeen"></a>
-    <strong>markSeen (item, count)</strong>
+    <a name = "connect"></a>
+    <strong>connect ()</strong>
     </dt>
     <dd>
 
@@ -408,19 +408,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">item</span>
-
-
-
-        </li>
-        <li><span class="parameter">count</span>
-
-
-
-        </li>
-    </ul>
 
 
 
@@ -428,8 +415,8 @@
 
 </dd>
     <dt>
-    <a name = "unweightedChoice"></a>
-    <strong>unweightedChoice (channel, slot, ...)</strong>
+    <a name = "disconnect"></a>
+    <strong>disconnect ()</strong>
     </dt>
     <dd>
 
@@ -437,24 +424,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">channel</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-        <li><span class="parameter">...</span>
-
-
-
-        </li>
-    </ul>
 
 
 
@@ -462,8 +431,8 @@
 
 </dd>
     <dt>
-    <a name = "weightedChoice"></a>
-    <strong>weightedChoice (channel, chanceType, levelBonus, slot, ...)</strong>
+    <a name = "isConnected"></a>
+    <strong>isConnected ()</strong>
     </dt>
     <dd>
 
@@ -471,34 +440,6 @@
 
 
 
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">channel</span>
-
-
-
-        </li>
-        <li><span class="parameter">chanceType</span>
-
-
-
-        </li>
-        <li><span class="parameter">levelBonus</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-        <li><span class="parameter">...</span>
-
-
-
-        </li>
-    </ul>
 
 
 

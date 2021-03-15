@@ -214,6 +214,8 @@
   <li><a href="../modules/necro.server.ServerActionBuffer.html">necro.server.ServerActionBuffer</a></li>
   <li><a href="../modules/necro.server.ServerChat.html">necro.server.ServerChat</a></li>
   <li><a href="../modules/necro.server.ServerClock.html">necro.server.ServerClock</a></li>
+  <li><a href="../modules/necro.server.ServerCommandLine.html">necro.server.ServerCommandLine</a></li>
+  <li><a href="../modules/necro.server.ServerConductor.html">necro.server.ServerConductor</a></li>
   <li><a href="../modules/necro.server.ServerEvents.html">necro.server.ServerEvents</a></li>
   <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
   <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
@@ -268,6 +270,7 @@
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
   <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
+  <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
@@ -381,7 +384,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getVacantTiles">getVacantTiles (x, y, minDistance, maxDistance, radius, noAlign, mask)</a></td>
+	<td class="name" nowrap><a href="#getVacantTiles">getVacantTiles (entity, minDistance, maxDistance, radius, noAlign, mask)</a></td>
 	<td class="summary">
 
 </td>
@@ -485,7 +488,7 @@
 </dd>
     <dt>
     <a name = "getVacantTiles"></a>
-    <strong>getVacantTiles (x, y, minDistance, maxDistance, radius, noAlign, mask)</strong>
+    <strong>getVacantTiles (entity, minDistance, maxDistance, radius, noAlign, mask)</strong>
     </dt>
     <dd>
 
@@ -495,12 +498,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">x</span>
-
-
-
-        </li>
-        <li><span class="parameter">y</span>
+        <li><span class="parameter">entity</span>
 
 
 
@@ -632,6 +630,9 @@
         </li>
         <li><span class="parameter">LUCK</span>
          16384
+        </li>
+        <li><span class="parameter">CRATE</span>
+         32768
         </li>
     </ul>
 
