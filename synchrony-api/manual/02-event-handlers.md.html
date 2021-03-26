@@ -1146,7 +1146,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>bossFloor</code></li>
     <li><code>cancelLevelTransitionCooldown</code></li>
     <li><code>captureAudience</code></li>
-    <li><code>checkItemPickup</code></li>
     <li><code>clearMinimapFramebuffer</code></li>
     <li><code>clearObjects</code></li>
     <li><code>clearSegments</code></li>
@@ -1645,6 +1644,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>holderTakeDamage</h2>
 
 <ul>
+    <li><code>amplifyAdditivel</code></li>
     <li><code>amplifyMultiplicatively</code></li>
     <li><code>applyArmor</code></li>
     <li><code>applyConditionalInvincibility</code></li>
@@ -1905,6 +1905,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>head</code></li>
     <li><code>hud</code></li>
     <li><code>misc</code></li>
+    <li><code>potion</code></li>
     <li><code>reload</code></li>
     <li><code>ring</code></li>
     <li><code>shovel</code></li>
@@ -2341,7 +2342,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectDealDamage</h2>
 
 <ul>
-    <li><code>applyDamageToTarget</code></li>
     <li><code>applyGigantismMultiplier</code></li>
     <li><code>baseDamageIncrease</code></li>
     <li><code>explosiveDamageOverride</code></li>
@@ -2397,7 +2397,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>inflictDamage</code></li>
     <li><code>initializePosition</code></li>
     <li><code>restoreCollisionMask</code></li>
-    <li><code>restoreHover</code></li>
     <li><code>restorePersistence</code></li>
     <li><code>restoreTangibility</code></li>
     <li><code>restoreVisibility</code></li>
@@ -2431,11 +2430,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectDescentEnd</h2>
 
 <ul>
+    <li><code>collectCurrency</code></li>
     <li><code>completeDescent</code></li>
     <li><code>delete</code></li>
     <li><code>enableSpectatorMode</code></li>
     <li><code>exitLevel</code></li>
     <li><code>makeIntangible</code></li>
+    <li><code>restoreHover</code></li>
     <li><code>saveMinibosses</code></li>
 </ul>
 
@@ -2789,7 +2790,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearPlayerEntityCache</code></li>
     <li><code>postConvertBeatDelay</code></li>
     <li><code>removeItemBeforeConverting</code></li>
-    <li><code>shieldactiveReset</code></li>
     <li><code>soundPostConvert</code></li>
     <li><code>spawnAttachment</code></li>
     <li><code>spriteSheetframeXReset</code></li>
