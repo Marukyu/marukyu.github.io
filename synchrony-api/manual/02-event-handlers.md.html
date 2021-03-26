@@ -647,6 +647,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>gameStartup</code></li>
     <li><code>gameTick</code></li>
     <li><code>handleConsoleInput</code></li>
+    <li><code>loadLocalMods</code></li>
+    <li><code>loadNetworkMods</code></li>
     <li><code>pollIPCMessages</code></li>
     <li><code>pollModifiedEventTypes</code></li>
     <li><code>reloadAssetsAutomatically</code></li>
@@ -2152,6 +2154,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="modsChanged"></a></p>
+<h2>modsChanged</h2>
+
+<ul>
+    <li><code>reloadAssets</code></li>
+    <li><code>updateModList</code></li>
+    <li><code>updateRemoteSettings</code></li>
+</ul>
+
+
 <p><a name="musicLayersUpdateVolume"></a></p>
 <h2>musicLayersUpdateVolume</h2>
 
@@ -3349,12 +3361,24 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_audio.soundtrack.theme.lobby</code></li>
     <li><code>1_audio.soundtrack.theme.menu</code></li>
     <li><code>1_audio.soundtrack.vocals</code></li>
+    <li><code>1_beatmap</code></li>
+    <li><code>1_beatmap.beatInputTimePersistence</code></li>
+    <li><code>1_beatmap.cooldownCumulativeMax</code></li>
+    <li><code>1_beatmap.cooldownFactor</code></li>
+    <li><code>1_beatmap.cooldownMax</code></li>
+    <li><code>1_beatmap.cooldownMin</code></li>
+    <li><code>1_beatmap.missedBeatToleranceFactor</code></li>
+    <li><code>1_beatmap.missedBeatToleranceMax</code></li>
+    <li><code>1_beatmap.missedBeatToleranceMin</code></li>
+    <li><code>1_beatmap.syncOffsetRhythmToggle</code></li>
+    <li><code>1_beatmap.syncOffsetUnsuspend</code></li>
     <li><code>1_camera</code></li>
     <li><code>1_camera.adjustmentFactorCenter</code></li>
     <li><code>1_camera.adjustmentFactorSize</code></li>
     <li><code>1_camera.lockedWhilePaused</code></li>
     <li><code>1_camera.mode</code></li>
     <li><code>1_camera.splitPlayerViewMultiplier</code></li>
+    <li><code>1_config.showAdvanced</code></li>
     <li><code>1_descent</code></li>
     <li><code>1_descent.defaultDuration</code></li>
     <li><code>1_descent.exitRequirementMaximum</code></li>
@@ -3395,6 +3419,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_video.hud.scale</code></li>
     <li><code>1_video.hud.showBeatBars</code></li>
     <li><code>1_video.hud.showHeart</code></li>
+    <li><code>1_video.playerNameRenderDistance</code></li>
     <li><code>1_video.screenShake</code></li>
     <li><code>1_video.viewMultiplier</code></li>
     <li><code>2_Apparition_spawnCooldowns</code></li>
@@ -3439,11 +3464,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_Tile_levelBounds</code></li>
     <li><code>4_Tile_tileMap</code></li>
 </ul>
-
-
-<p><a name="registerEnumEntries"></a></p>
-<h2>registerEnumEntries</h2>
-
 
 
 <p><a name="render"></a></p>
