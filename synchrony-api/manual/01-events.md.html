@@ -142,6 +142,7 @@
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
   <li><a href="../modules/necro.game.level.TestLevel.html">necro.game.level.TestLevel</a></li>
+  <li><a href="../modules/necro.game.level.Wire.html">necro.game.level.Wire</a></li>
   <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
   <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
@@ -157,7 +158,6 @@
   <li><a href="../modules/necro.game.system.Delay.html">necro.game.system.Delay</a></li>
   <li><a href="../modules/necro.game.system.Earthquake.html">necro.game.system.Earthquake</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
-  <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
   <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
   <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
@@ -207,6 +207,7 @@
   <li><a href="../modules/necro.render.level.FloorVisuals.html">necro.render.level.FloorVisuals</a></li>
   <li><a href="../modules/necro.render.level.MoveAnimations.html">necro.render.level.MoveAnimations</a></li>
   <li><a href="../modules/necro.render.level.ObjectRenderer.html">necro.render.level.ObjectRenderer</a></li>
+  <li><a href="../modules/necro.render.level.ParticleRenderer.html">necro.render.level.ParticleRenderer</a></li>
   <li><a href="../modules/necro.render.level.SpriteEffects.html">necro.render.level.SpriteEffects</a></li>
   <li><a href="../modules/necro.render.level.TileRenderer.html">necro.render.level.TileRenderer</a></li>
   <li><a href="../modules/necro.render.level.WallVisuals.html">necro.render.level.WallVisuals</a></li>
@@ -440,7 +441,7 @@
 <h2>clientAddAction</h2>
 
 <ul>
-    <li><code>trapTargetTurn</code></li>
+    <li><code>delayTargetTurn</code></li>
     <li><code>targetTurn</code></li>
     <li><code>rollback</code></li>
 </ul>
@@ -1446,6 +1447,7 @@
     <li><code>invincibility</code></li>
     <li><code>sound</code></li>
     <li><code>sprite</code></li>
+    <li><code>particles</code></li>
     <li><code>uncurse</code></li>
     <li><code>gluttony</code></li>
     <li><code>maxHealth</code></li>
@@ -1612,6 +1614,7 @@
     <li><code>moveOverride</code></li>
     <li><code>charge</code></li>
     <li><code>sprite</code></li>
+    <li><code>light</code></li>
     <li><code>sound</code></li>
 </ul>
 
@@ -1623,6 +1626,7 @@
     <li><code>objectMap</code></li>
     <li><code>despawnExtras</code></li>
     <li><code>inventory</code></li>
+    <li><code>light</code></li>
     <li><code>sound</code></li>
 </ul>
 
@@ -1640,6 +1644,7 @@
     <li><code>ai</code></li>
     <li><code>fear</code></li>
     <li><code>convert</code></li>
+    <li><code>knockback</code></li>
     <li><code>beatDelay</code></li>
     <li><code>preventActions</code></li>
     <li><code>startFight</code></li>
@@ -1696,13 +1701,13 @@
 <h2>holderSpawn</h2>
 
 <ul>
+    <li><code>visibility</code></li>
     <li><code>attributes</code></li>
     <li><code>healthBonus</code></li>
     <li><code>position</code></li>
     <li><code>homeArea</code></li>
     <li><code>followerCollectGold</code></li>
     <li><code>tangible</code></li>
-    <li><code>visibility</code></li>
     <li><code>facing</code></li>
     <li><code>ai</code></li>
     <li><code>stasis</code></li>
@@ -1811,8 +1816,8 @@
     <li><code>armorMinimumDamage</code></li>
     <li><code>painShrine</code></li>
     <li><code>thaw</code></li>
-    <li><code>freeze</code></li>
     <li><code>provoke</code></li>
+    <li><code>freeze</code></li>
     <li><code>shatter</code></li>
     <li><code>moveOverride</code></li>
     <li><code>redirectCharge</code></li>
@@ -2886,6 +2891,7 @@
     <li><code>invincibility</code></li>
     <li><code>sound</code></li>
     <li><code>sprite</code></li>
+    <li><code>particles</code></li>
     <li><code>uncurse</code></li>
     <li><code>gluttony</code></li>
     <li><code>maxHealth</code></li>
@@ -3052,6 +3058,7 @@
     <li><code>moveOverride</code></li>
     <li><code>charge</code></li>
     <li><code>sprite</code></li>
+    <li><code>light</code></li>
     <li><code>sound</code></li>
 </ul>
 
@@ -3063,6 +3070,7 @@
     <li><code>objectMap</code></li>
     <li><code>despawnExtras</code></li>
     <li><code>inventory</code></li>
+    <li><code>light</code></li>
     <li><code>sound</code></li>
 </ul>
 
@@ -3080,6 +3088,7 @@
     <li><code>ai</code></li>
     <li><code>fear</code></li>
     <li><code>convert</code></li>
+    <li><code>knockback</code></li>
     <li><code>beatDelay</code></li>
     <li><code>preventActions</code></li>
     <li><code>startFight</code></li>
@@ -3136,13 +3145,13 @@
 <h2>objectSpawn</h2>
 
 <ul>
+    <li><code>visibility</code></li>
     <li><code>attributes</code></li>
     <li><code>healthBonus</code></li>
     <li><code>position</code></li>
     <li><code>homeArea</code></li>
     <li><code>followerCollectGold</code></li>
     <li><code>tangible</code></li>
-    <li><code>visibility</code></li>
     <li><code>facing</code></li>
     <li><code>ai</code></li>
     <li><code>stasis</code></li>
@@ -3251,8 +3260,8 @@
     <li><code>armorMinimumDamage</code></li>
     <li><code>painShrine</code></li>
     <li><code>thaw</code></li>
-    <li><code>freeze</code></li>
     <li><code>provoke</code></li>
+    <li><code>freeze</code></li>
     <li><code>shatter</code></li>
     <li><code>moveOverride</code></li>
     <li><code>redirectCharge</code></li>
@@ -4293,6 +4302,7 @@
     <li><code>visibleByProximity</code></li>
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenUntilProximity</code></li>
+    <li><code>hiddenByTileBrightness</code></li>
     <li><code>segmentVisibility</code></li>
     <li><code>rowMap</code></li>
 </ul>

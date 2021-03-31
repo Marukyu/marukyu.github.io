@@ -142,6 +142,7 @@
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
   <li><a href="../modules/necro.game.level.TestLevel.html">necro.game.level.TestLevel</a></li>
+  <li><a href="../modules/necro.game.level.Wire.html">necro.game.level.Wire</a></li>
   <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
   <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
@@ -157,7 +158,6 @@
   <li><a href="../modules/necro.game.system.Delay.html">necro.game.system.Delay</a></li>
   <li><a href="../modules/necro.game.system.Earthquake.html">necro.game.system.Earthquake</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
-  <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
   <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
   <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
@@ -207,6 +207,7 @@
   <li><a href="../modules/necro.render.level.FloorVisuals.html">necro.render.level.FloorVisuals</a></li>
   <li><a href="../modules/necro.render.level.MoveAnimations.html">necro.render.level.MoveAnimations</a></li>
   <li><a href="../modules/necro.render.level.ObjectRenderer.html">necro.render.level.ObjectRenderer</a></li>
+  <li><a href="../modules/necro.render.level.ParticleRenderer.html">necro.render.level.ParticleRenderer</a></li>
   <li><a href="../modules/necro.render.level.SpriteEffects.html">necro.render.level.SpriteEffects</a></li>
   <li><a href="../modules/necro.render.level.TileRenderer.html">necro.render.level.TileRenderer</a></li>
   <li><a href="../modules/necro.render.level.WallVisuals.html">necro.render.level.WallVisuals</a></li>
@@ -440,7 +441,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyTellAnimations</code></li>
     <li><code>applyTrapActivationAnimations</code></li>
     <li><code>applyTrapArmedAnimations</code></li>
-    <li><code>applyWireAnimations</code></li>
     <li><code>applyWiredAnimations</code></li>
     <li><code>freezeAnimationFrame</code></li>
 </ul>
@@ -483,7 +483,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>deferDelayedTurn</code></li>
-    <li><code>deferTrapTargetTurn</code></li>
     <li><code>setRollbackTurn</code></li>
     <li><code>setTargetTurn</code></li>
 </ul>
@@ -666,6 +665,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>descentEnd</code></li>
     <li><code>descentMusicFade</code></li>
+    <li><code>despawn</code></li>
+    <li><code>trap</code></li>
 </ul>
 
 
@@ -1183,13 +1184,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>randomizeFloorVisuals</code></li>
     <li><code>randomizeWallVisuals</code></li>
     <li><code>resetAnimationTimer</code></li>
-    <li><code>resetApparitionSpawnCooldowns</code></li>
     <li><code>resetDamageCountdown</code></li>
     <li><code>resetGrooveChainImmunity</code></li>
     <li><code>resetItemPickupAnimations</code></li>
     <li><code>resetLevelExitState</code></li>
     <li><code>resetLevelVariables</code></li>
-    <li><code>resetPendingTraps</code></li>
     <li><code>resetSlides</code></li>
     <li><code>resetSounds</code></li>
     <li><code>resetTargetingTeams</code></li>
@@ -2268,7 +2267,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>buildElectricityQueue</code></li>
     <li><code>dwarfismSuppressAttack</code></li>
     <li><code>performAttack</code></li>
-    <li><code>processElectricityQueue</code></li>
 </ul>
 
 
@@ -2650,6 +2648,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>grantInvincibility</code></li>
     <li><code>limitCursedHealth</code></li>
     <li><code>limitMaxHealth</code></li>
+    <li><code>playHealParticles</code></li>
     <li><code>playHealingSound</code></li>
     <li><code>processOverhealHealth</code></li>
     <li><code>roundMaxHealth</code></li>
@@ -2815,6 +2814,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>animationFreezeEffectactiveReset</code></li>
     <li><code>charge</code></li>
     <li><code>clearPlayerEntityCache</code></li>
+    <li><code>enableLightSource</code></li>
     <li><code>postConvertBeatDelay</code></li>
     <li><code>soundPostConvert</code></li>
     <li><code>spawnAttachment</code></li>
@@ -2836,6 +2836,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>despawnAttachment</code></li>
     <li><code>detachItemBeforeConverting</code></li>
+    <li><code>disableLightSource</code></li>
     <li><code>removeFromRowMap</code></li>
     <li><code>soundPreConvert</code></li>
 </ul>
@@ -2848,6 +2849,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>castOnProvoke</code></li>
     <li><code>convertOnProvoke</code></li>
     <li><code>deactivateMusicLayer</code></li>
+    <li><code>knockback</code></li>
     <li><code>overrideAI</code></li>
     <li><code>playVoiceLine</code></li>
     <li><code>preventActions</code></li>
@@ -2910,7 +2912,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>activateInitialGigantism</code></li>
     <li><code>applyDepthMultiplier</code></li>
     <li><code>applyZoneDependentActivationRadius</code></li>
-    <li><code>autoReveal</code></li>
     <li><code>convertVocalEntity</code></li>
     <li><code>createChanceContent</code></li>
     <li><code>createUncertaintyRing</code></li>
@@ -2919,6 +2920,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>freezeMonkeyLikes</code></li>
     <li><code>giveInitialEquipment</code></li>
     <li><code>healthBonusAgainstPlayer</code></li>
+    <li><code>hideUntilLit</code></li>
     <li><code>initFacingDirection</code></li>
     <li><code>initializeAttackableFlags</code></li>
     <li><code>initializeHomeArea</code></li>
@@ -2935,6 +2937,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>randomInitialFacingDirection</code></li>
     <li><code>randomizeHoverEffect</code></li>
     <li><code>randomizeTentacleTeleports</code></li>
+    <li><code>reveal</code></li>
     <li><code>scalingHealth</code></li>
     <li><code>selectRandomSpriteVariant</code></li>
     <li><code>setPriceTag</code></li>
@@ -3439,7 +3442,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_video.playerNameRenderDistance</code></li>
     <li><code>1_video.screenShake</code></li>
     <li><code>1_video.viewMultiplier</code></li>
-    <li><code>2_Apparition_spawnCooldowns</code></li>
     <li><code>2_Collision_collisionMap</code></li>
     <li><code>2_Map_objectPositions</code></li>
     <li><code>2_Map_outOfBoundsObjects</code></li>
@@ -3455,7 +3457,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>2_TimeScale_nextRegionID</code></li>
     <li><code>2_TimeScale_scalePoints</code></li>
     <li><code>2_TimeScale_scaleRegions</code></li>
-    <li><code>2_Trap_pendingTraps</code></li>
     <li><code>2_Turn_currentTurnID</code></li>
     <li><code>2_Vision_fovMap</code></li>
     <li><code>2_Vision_revealMap</code></li>
@@ -3464,6 +3465,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>3_RNG_seededRandom</code></li>
     <li><code>3_RunState_state</code></li>
     <li><code>4_Ambush_savedTiles</code></li>
+    <li><code>4_Apparition_spawnCooldowns</code></li>
     <li><code>4_Boss_bossFlawless</code></li>
     <li><code>4_Boss_bossPending</code></li>
     <li><code>4_Boss_noPlayerHasActed</code></li>
@@ -3526,7 +3528,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>renderEffects</h2>
 
 <ul>
-    <li><code>animateDisappearEffect</code></li>
     <li><code>animateFadeEffect</code></li>
     <li><code>animateHoverEffect</code></li>
     <li><code>animateTargetProximityFadeEffect</code></li>
@@ -3940,7 +3941,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>destroyItems</code></li>
     <li><code>destroyTraps</code></li>
     <li><code>destroyWalls</code></li>
-    <li><code>disappearCaster</code></li>
     <li><code>enchantWeapon</code></li>
     <li><code>grantBarrier</code></li>
     <li><code>grantCurrency</code></li>
@@ -4188,7 +4188,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>castSpell</code></li>
     <li><code>crushTrap</code></li>
     <li><code>descend</code></li>
-    <li><code>despawnSelf</code></li>
     <li><code>dropGrooveChain</code></li>
     <li><code>flyaway</code></li>
     <li><code>inflictDamage</code></li>
@@ -4249,7 +4248,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processFirepigs</code></li>
     <li><code>processPendingDelays</code></li>
     <li><code>processPendingObjects</code></li>
-    <li><code>processPendingTraps</code></li>
     <li><code>provokeOnBeatCounter</code></li>
     <li><code>reduceDamageCountdown</code></li>
     <li><code>reduceDeadRingerBellCooldown</code></li>
@@ -4325,6 +4323,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>hiddenByPickupSuppression</code></li>
+    <li><code>hiddenByTileBrightness</code></li>
     <li><code>hiddenUntilProximity</code></li>
     <li><code>rowMap</code></li>
     <li><code>segmentVisibility</code></li>
