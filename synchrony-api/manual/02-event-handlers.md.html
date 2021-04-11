@@ -186,17 +186,25 @@
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
+  <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
+  <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
+  <li><a href="../modules/necro.mod.ModListProvider.html">necro.mod.ModListProvider</a></li>
+  <li><a href="../modules/necro.mod.ModPortal.html">necro.mod.ModPortal</a></li>
+  <li><a href="../modules/necro.mod.ModTemplate.html">necro.mod.ModTemplate</a></li>
   <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
   <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
   <li><a href="../modules/necro.network.Netplay.html">necro.network.Netplay</a></li>
   <li><a href="../modules/necro.render.AnimationTimer.html">necro.render.AnimationTimer</a></li>
   <li><a href="../modules/necro.render.Camera.html">necro.render.Camera</a></li>
-  <li><a href="../modules/necro.render.CropImage.html">necro.render.CropImage</a></li>
   <li><a href="../modules/necro.render.Overlay.html">necro.render.Overlay</a></li>
   <li><a href="../modules/necro.render.Render.html">necro.render.Render</a></li>
   <li><a href="../modules/necro.render.ScreenShake.html">necro.render.ScreenShake</a></li>
   <li><a href="../modules/necro.render.UI.html">necro.render.UI</a></li>
+  <li><a href="../modules/necro.render.filter.CommonFilter.html">necro.render.filter.CommonFilter</a></li>
+  <li><a href="../modules/necro.render.filter.CropFilter.html">necro.render.filter.CropFilter</a></li>
+  <li><a href="../modules/necro.render.filter.GrayscaleFilter.html">necro.render.filter.GrayscaleFilter</a></li>
+  <li><a href="../modules/necro.render.filter.HSVFilter.html">necro.render.filter.HSVFilter</a></li>
   <li><a href="../modules/necro.render.hud.BeatBarHUD.html">necro.render.hud.BeatBarHUD</a></li>
   <li><a href="../modules/necro.render.hud.HUD.html">necro.render.hud.HUD</a></li>
   <li><a href="../modules/necro.render.hud.HUDLayout.html">necro.render.hud.HUDLayout</a></li>
@@ -241,6 +249,7 @@
   <li><a href="../modules/system.events.Events.html">system.events.Events</a></li>
   <li><a href="../modules/system.events.MetaEvents.html">system.events.MetaEvents</a></li>
   <li><a href="../modules/system.events.OrderedSelector.html">system.events.OrderedSelector</a></li>
+  <li><a href="../modules/system.file.Storage.html">system.file.Storage</a></li>
   <li><a href="../modules/system.game.Audio.html">system.game.Audio</a></li>
   <li><a href="../modules/system.game.Bitmap.html">system.game.Bitmap</a></li>
   <li><a href="../modules/system.game.Config.html">system.game.Config</a></li>
@@ -250,6 +259,7 @@
   <li><a href="../modules/system.game.Framebuffer.html">system.game.Framebuffer</a></li>
   <li><a href="../modules/system.game.Graphics.html">system.game.Graphics</a></li>
   <li><a href="../modules/system.game.Input.html">system.game.Input</a></li>
+  <li><a href="../modules/system.game.Screenshot.html">system.game.Screenshot</a></li>
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
   <li><a href="../modules/system.game.Snapshots.html">system.game.Snapshots</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
@@ -655,6 +665,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>pollModifiedEventTypes</code></li>
     <li><code>processHTTPRequests</code></li>
     <li><code>reloadAssetsAutomatically</code></li>
+    <li><code>takeScreenshot</code></li>
     <li><code>updateInput</code></li>
     <li><code>updateModCompilationProgress</code></li>
 </ul>
@@ -2076,7 +2087,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>loadVirtualResource</h2>
 
 <ul>
-    <li><code>cropImage</code></li>
+    <li><code>cropFilter</code></li>
+    <li><code>grayscaleFilter</code></li>
+    <li><code>hsvFilter</code></li>
 </ul>
 
 
@@ -2113,9 +2126,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>localCoop</code></li>
     <li><code>main</code></li>
     <li><code>messageBox</code></li>
+    <li><code>modCompiler</code></li>
     <li><code>modConfig</code></li>
     <li><code>modCreator</code></li>
+    <li><code>modGrid</code></li>
     <li><code>modList</code></li>
+    <li><code>modPriorityChanger</code></li>
     <li><code>modVersionSelector</code></li>
     <li><code>networkConnecting</code></li>
     <li><code>networkDisconnected</code></li>
@@ -2124,7 +2140,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>networkJoin</code></li>
     <li><code>networkJoinUDP</code></li>
     <li><code>networkModList</code></li>
-    <li><code>options</code></li>
     <li><code>optionsControls</code></li>
     <li><code>optionsGame</code></li>
     <li><code>pause</code></li>
@@ -2148,7 +2163,25 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>addModScriptPath</code></li>
+    <li><code>invalidateCachedImages</code></li>
     <li><code>registerVirtualSettingsGroup</code></li>
+</ul>
+
+
+<p><a name="modPortalDownloadCompleted"></a></p>
+<h2>modPortalDownloadCompleted</h2>
+
+<ul>
+    <li><code>updateModGrid</code></li>
+    <li><code>updateModList</code></li>
+</ul>
+
+
+<p><a name="modPortalReady"></a></p>
+<h2>modPortalReady</h2>
+
+<ul>
+    <li><code>updateModGrid</code></li>
 </ul>
 
 
@@ -2156,6 +2189,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>modUnloaded</h2>
 
 <ul>
+    <li><code>invalidateCachedImages</code></li>
     <li><code>removeModScriptPath</code></li>
     <li><code>unregisterVirtualSettingsGroup</code></li>
 </ul>
@@ -3411,14 +3445,33 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_input</code></li>
     <li><code>1_input.controllers</code></li>
     <li><code>1_input.keys</code></li>
+    <li><code>1_level.generator</code></li>
     <li><code>1_level.generator.characterBitmaskOverride</code></li>
-    <li><code>1_level.generator.level.generator</code></li>
     <li><code>1_lobby.selector</code></li>
     <li><code>1_lobby.selector.characters</code></li>
     <li><code>1_lobby.selector.dungeon</code></li>
     <li><code>1_lobby.selector.mode</code></li>
+    <li><code>1_misc</code></li>
     <li><code>1_mod</code></li>
+    <li><code>1_modCompiler.patchLevel</code></li>
+    <li><code>1_modGrid.useLegacyModMenu</code></li>
+    <li><code>1_modGrid.viewSettings</code></li>
+    <li><code>1_modLoader.auto</code></li>
+    <li><code>1_modLoader.imageCache</code></li>
+    <li><code>1_modLoader.imageCache.remoteCacheRetention</code></li>
+    <li><code>1_modLoader.imageCache.remoteCacheRetryDelay</code></li>
+    <li><code>1_modLoader.imageCache.remoteCacheTimes</code></li>
     <li><code>1_modLoader.list</code></li>
+    <li><code>1_modLoader.portal</code></li>
+    <li><code>1_modLoader.portal.lingerDuration</code></li>
+    <li><code>1_modLoader.portal.url.api.base</code></li>
+    <li><code>1_modLoader.portal.url.api.modInfo</code></li>
+    <li><code>1_modLoader.portal.url.api.modList</code></li>
+    <li><code>1_modLoader.portal.url.api.modVersionInfo</code></li>
+    <li><code>1_modLoader.portal.url.api.modVersionList</code></li>
+    <li><code>1_modLoader.portal.url.storage.base</code></li>
+    <li><code>1_modLoader.portal.url.storage.image</code></li>
+    <li><code>1_modLoader.portal.url.storage.package</code></li>
     <li><code>1_net.host</code></li>
     <li><code>1_net.host.maxPlayers</code></li>
     <li><code>1_net.host.serverType</code></li>
@@ -3428,15 +3481,18 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_net.join.udp.ip</code></li>
     <li><code>1_net.join.udp.port</code></li>
     <li><code>1_net.rejoinToken</code></li>
+    <li><code>1_net.server.conductor</code></li>
     <li><code>1_net.server.conductor.autoJoin</code></li>
     <li><code>1_net.server.conductor.levelGenerator</code></li>
-    <li><code>1_net.server.conductor.net.server.conductor</code></li>
+    <li><code>1_net.server.dedicated</code></li>
     <li><code>1_net.server.dedicated.autoStart</code></li>
     <li><code>1_net.server.dedicated.maxLocalCoopPlayers</code></li>
     <li><code>1_net.server.dedicated.maxPlayers</code></li>
-    <li><code>1_net.server.dedicated.net.server.dedicated</code></li>
     <li><code>1_net.server.dedicated.port</code></li>
     <li><code>1_net.username</code></li>
+    <li><code>1_options.credits</code></li>
+    <li><code>1_options.gameplayControls</code></li>
+    <li><code>1_options.menuControls</code></li>
     <li><code>1_rollback</code></li>
     <li><code>1_rollback.limit.enabled</code></li>
     <li><code>1_rollback.limit.future</code></li>
@@ -3519,6 +3575,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderLobby</code></li>
     <li><code>renderMenu</code></li>
     <li><code>renderMenuOverlay</code></li>
+    <li><code>renderModDownloadProgress</code></li>
     <li><code>renderPlayerNames</code></li>
     <li><code>renderPriceTags</code></li>
     <li><code>renderSecretShopLabels</code></li>
@@ -3999,6 +4056,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadGameContent</code></li>
     <li><code>loadMods</code></li>
     <li><code>loadSettings</code></li>
+    <li><code>mountModImageCache</code></li>
+    <li><code>registerModPortalDownloadPath</code></li>
     <li><code>startServer</code></li>
 </ul>
 
@@ -4064,6 +4123,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>fetchGeneratedLevels</code></li>
     <li><code>handleChat</code></li>
     <li><code>initializeMinimap</code></li>
+    <li><code>lazyLoadModImages</code></li>
     <li><code>networkClient</code></li>
     <li><code>networkServer</code></li>
     <li><code>performLevelTransition</code></li>
@@ -4073,6 +4133,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processKeyRebinder</code></li>
     <li><code>processLobby</code></li>
     <li><code>processMenu</code></li>
+    <li><code>processModDownloads</code></li>
     <li><code>processSpectatorMode</code></li>
     <li><code>processTurns</code></li>
     <li><code>reloadGameContent</code></li>
@@ -4368,6 +4429,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>tickleTargets</code></li>
     <li><code>weaponCastOnAttack</code></li>
     <li><code>weaponShove</code></li>
+</ul>
+
+
+<p><a name="windowFocusChanged"></a></p>
+<h2>windowFocusChanged</h2>
+
+<ul>
+    <li><code>updateModGrid</code></li>
+    <li><code>updateMusicVolume</code></li>
+    <li><code>updateNetworkModList</code></li>
 </ul>
 
 

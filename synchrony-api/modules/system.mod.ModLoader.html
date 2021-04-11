@@ -186,17 +186,25 @@
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
+  <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
+  <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
+  <li><a href="../modules/necro.mod.ModListProvider.html">necro.mod.ModListProvider</a></li>
+  <li><a href="../modules/necro.mod.ModPortal.html">necro.mod.ModPortal</a></li>
+  <li><a href="../modules/necro.mod.ModTemplate.html">necro.mod.ModTemplate</a></li>
   <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
   <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
   <li><a href="../modules/necro.network.Netplay.html">necro.network.Netplay</a></li>
   <li><a href="../modules/necro.render.AnimationTimer.html">necro.render.AnimationTimer</a></li>
   <li><a href="../modules/necro.render.Camera.html">necro.render.Camera</a></li>
-  <li><a href="../modules/necro.render.CropImage.html">necro.render.CropImage</a></li>
   <li><a href="../modules/necro.render.Overlay.html">necro.render.Overlay</a></li>
   <li><a href="../modules/necro.render.Render.html">necro.render.Render</a></li>
   <li><a href="../modules/necro.render.ScreenShake.html">necro.render.ScreenShake</a></li>
   <li><a href="../modules/necro.render.UI.html">necro.render.UI</a></li>
+  <li><a href="../modules/necro.render.filter.CommonFilter.html">necro.render.filter.CommonFilter</a></li>
+  <li><a href="../modules/necro.render.filter.CropFilter.html">necro.render.filter.CropFilter</a></li>
+  <li><a href="../modules/necro.render.filter.GrayscaleFilter.html">necro.render.filter.GrayscaleFilter</a></li>
+  <li><a href="../modules/necro.render.filter.HSVFilter.html">necro.render.filter.HSVFilter</a></li>
   <li><a href="../modules/necro.render.hud.BeatBarHUD.html">necro.render.hud.BeatBarHUD</a></li>
   <li><a href="../modules/necro.render.hud.HUD.html">necro.render.hud.HUD</a></li>
   <li><a href="../modules/necro.render.hud.HUDLayout.html">necro.render.hud.HUDLayout</a></li>
@@ -241,6 +249,7 @@
   <li><a href="../modules/system.events.Events.html">system.events.Events</a></li>
   <li><a href="../modules/system.events.MetaEvents.html">system.events.MetaEvents</a></li>
   <li><a href="../modules/system.events.OrderedSelector.html">system.events.OrderedSelector</a></li>
+  <li><a href="../modules/system.file.Storage.html">system.file.Storage</a></li>
   <li><a href="../modules/system.game.Audio.html">system.game.Audio</a></li>
   <li><a href="../modules/system.game.Bitmap.html">system.game.Bitmap</a></li>
   <li><a href="../modules/system.game.Config.html">system.game.Config</a></li>
@@ -250,6 +259,7 @@
   <li><a href="../modules/system.game.Framebuffer.html">system.game.Framebuffer</a></li>
   <li><a href="../modules/system.game.Graphics.html">system.game.Graphics</a></li>
   <li><a href="../modules/system.game.Input.html">system.game.Input</a></li>
+  <li><a href="../modules/system.game.Screenshot.html">system.game.Screenshot</a></li>
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
   <li><a href="../modules/system.game.Snapshots.html">system.game.Snapshots</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
@@ -374,19 +384,43 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#addDirectoryBasePath">addDirectoryBasePath (basePath)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#addPackageBasePath">addPackageBasePath (basePath)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#compile">compile (path, callbacks)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#create">create (path, modInfo)</a></td>
+	<td class="name" nowrap><a href="#create">create (path, modInfo, templateFiles)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#createModDirectory">createModDirectory ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#findMatchingVersion">findMatchingVersion (versions, target)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#generatePackageFilename">generatePackageFilename (name, version)</a></td>
 	<td class="summary">
 
 </td>
@@ -452,6 +486,24 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#peek">peek (modEntry, filename)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#removeDirectoryBasePath">removeDirectoryBasePath (basePath)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#removePackageBasePath">removePackageBasePath (basePath)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#validateModDisplayName">validateModDisplayName (displayName)</a></td>
 	<td class="summary">
 
@@ -469,6 +521,12 @@
 
 </td>
 	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#writeModInfo">writeModInfo (path, modInfo)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
 </table>
 
 <br/>
@@ -478,6 +536,54 @@
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "addDirectoryBasePath"></a>
+    <strong>addDirectoryBasePath (basePath)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">basePath</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "addPackageBasePath"></a>
+    <strong>addPackageBasePath (basePath)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">basePath</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
     <dt>
     <a name = "compile"></a>
     <strong>compile (path, callbacks)</strong>
@@ -509,7 +615,7 @@
 </dd>
     <dt>
     <a name = "create"></a>
-    <strong>create (path, modInfo)</strong>
+    <strong>create (path, modInfo, templateFiles)</strong>
     </dt>
     <dd>
 
@@ -525,6 +631,11 @@
 
         </li>
         <li><span class="parameter">modInfo</span>
+
+
+
+        </li>
+        <li><span class="parameter">templateFiles</span>
 
 
 
@@ -546,6 +657,64 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "findMatchingVersion"></a>
+    <strong>findMatchingVersion (versions, target)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">versions</span>
+
+
+
+        </li>
+        <li><span class="parameter">target</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "generatePackageFilename"></a>
+    <strong>generatePackageFilename (name, version)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+
+
+
+        </li>
+        <li><span class="parameter">version</span>
+
+
+
+        </li>
+    </ul>
 
 
 
@@ -777,6 +946,83 @@
 
 </dd>
     <dt>
+    <a name = "peek"></a>
+    <strong>peek (modEntry, filename)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modEntry</span>
+
+
+
+        </li>
+        <li><span class="parameter">filename</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "removeDirectoryBasePath"></a>
+    <strong>removeDirectoryBasePath (basePath)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">basePath</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "removePackageBasePath"></a>
+    <strong>removePackageBasePath (basePath)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">basePath</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "validateModDisplayName"></a>
     <strong>validateModDisplayName (displayName)</strong>
     </dt>
@@ -837,6 +1083,35 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">version</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "writeModInfo"></a>
+    <strong>writeModInfo (path, modInfo)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+
+
+
+        </li>
+        <li><span class="parameter">modInfo</span>
 
 
 

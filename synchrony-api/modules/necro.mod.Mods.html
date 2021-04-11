@@ -186,17 +186,25 @@
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
+  <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
+  <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
+  <li><a href="../modules/necro.mod.ModListProvider.html">necro.mod.ModListProvider</a></li>
+  <li><a href="../modules/necro.mod.ModPortal.html">necro.mod.ModPortal</a></li>
+  <li><a href="../modules/necro.mod.ModTemplate.html">necro.mod.ModTemplate</a></li>
   <li><strong>necro.mod.Mods</strong></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
   <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
   <li><a href="../modules/necro.network.Netplay.html">necro.network.Netplay</a></li>
   <li><a href="../modules/necro.render.AnimationTimer.html">necro.render.AnimationTimer</a></li>
   <li><a href="../modules/necro.render.Camera.html">necro.render.Camera</a></li>
-  <li><a href="../modules/necro.render.CropImage.html">necro.render.CropImage</a></li>
   <li><a href="../modules/necro.render.Overlay.html">necro.render.Overlay</a></li>
   <li><a href="../modules/necro.render.Render.html">necro.render.Render</a></li>
   <li><a href="../modules/necro.render.ScreenShake.html">necro.render.ScreenShake</a></li>
   <li><a href="../modules/necro.render.UI.html">necro.render.UI</a></li>
+  <li><a href="../modules/necro.render.filter.CommonFilter.html">necro.render.filter.CommonFilter</a></li>
+  <li><a href="../modules/necro.render.filter.CropFilter.html">necro.render.filter.CropFilter</a></li>
+  <li><a href="../modules/necro.render.filter.GrayscaleFilter.html">necro.render.filter.GrayscaleFilter</a></li>
+  <li><a href="../modules/necro.render.filter.HSVFilter.html">necro.render.filter.HSVFilter</a></li>
   <li><a href="../modules/necro.render.hud.BeatBarHUD.html">necro.render.hud.BeatBarHUD</a></li>
   <li><a href="../modules/necro.render.hud.HUD.html">necro.render.hud.HUD</a></li>
   <li><a href="../modules/necro.render.hud.HUDLayout.html">necro.render.hud.HUDLayout</a></li>
@@ -241,6 +249,7 @@
   <li><a href="../modules/system.events.Events.html">system.events.Events</a></li>
   <li><a href="../modules/system.events.MetaEvents.html">system.events.MetaEvents</a></li>
   <li><a href="../modules/system.events.OrderedSelector.html">system.events.OrderedSelector</a></li>
+  <li><a href="../modules/system.file.Storage.html">system.file.Storage</a></li>
   <li><a href="../modules/system.game.Audio.html">system.game.Audio</a></li>
   <li><a href="../modules/system.game.Bitmap.html">system.game.Bitmap</a></li>
   <li><a href="../modules/system.game.Config.html">system.game.Config</a></li>
@@ -250,6 +259,7 @@
   <li><a href="../modules/system.game.Framebuffer.html">system.game.Framebuffer</a></li>
   <li><a href="../modules/system.game.Graphics.html">system.game.Graphics</a></li>
   <li><a href="../modules/system.game.Input.html">system.game.Input</a></li>
+  <li><a href="../modules/system.game.Screenshot.html">system.game.Screenshot</a></li>
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
   <li><a href="../modules/system.game.Snapshots.html">system.game.Snapshots</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
@@ -398,7 +408,25 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#findMatchingVersion">findMatchingVersion (modName, version, package)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#findUnpackagedVersion">findUnpackagedVersion (modName, targetVersion)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#getDisplayName">getDisplayName (modName)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getMetadata">getMetadata (modName, key)</a></td>
 	<td class="summary">
 
 </td>
@@ -417,6 +445,18 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#isLoaded">isLoaded (modName)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isLoadedAsPackage">isLoadedAsPackage (modName)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#listAllMods">listAllMods ()</a></td>
 	<td class="summary">
 
 </td>
@@ -489,6 +529,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#validateModVersion">validateModVersion (version)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#writeModInfo">writeModInfo (modName, modInfo)</a></td>
 	<td class="summary">
 
 </td>
@@ -596,6 +642,69 @@
 
 </dd>
     <dt>
+    <a name = "findMatchingVersion"></a>
+    <strong>findMatchingVersion (modName, version, package)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modName</span>
+
+
+
+        </li>
+        <li><span class="parameter">version</span>
+
+
+
+        </li>
+        <li><span class="parameter">package</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "findUnpackagedVersion"></a>
+    <strong>findUnpackagedVersion (modName, targetVersion)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modName</span>
+
+
+
+        </li>
+        <li><span class="parameter">targetVersion</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "getDisplayName"></a>
     <strong>getDisplayName (modName)</strong>
     </dt>
@@ -608,6 +717,35 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">modName</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getMetadata"></a>
+    <strong>getMetadata (modName, key)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modName</span>
+
+
+
+        </li>
+        <li><span class="parameter">key</span>
 
 
 
@@ -685,6 +823,46 @@
 
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isLoadedAsPackage"></a>
+    <strong>isLoadedAsPackage (modName)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modName</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "listAllMods"></a>
+    <strong>listAllMods ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -964,6 +1142,35 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">version</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "writeModInfo"></a>
+    <strong>writeModInfo (modName, modInfo)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modName</span>
+
+
+
+        </li>
+        <li><span class="parameter">modInfo</span>
 
 
 
