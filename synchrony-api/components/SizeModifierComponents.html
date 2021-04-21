@@ -591,6 +591,10 @@
 
 
     <ul>
+        <li><span class="parameter">bypassFlags</span>
+         constant int32
+         (<em>default</em> damage.Flag.SELF_DAMAGE)
+        </li>
         <li><span class="parameter">multiplier</span>
          constant float
          (<em>default</em> 2)
@@ -640,8 +644,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">multiplier</span>
          constant int8
@@ -817,6 +821,10 @@
 
 
     <ul>
+        <li><span class="parameter">bypassFlags</span>
+         constant int32
+         (<em>default</em> damage.Flag.SELF_DAMAGE)
+        </li>
         <li><span class="parameter">multiplier</span>
          constant float
          (<em>default</em> 0.5)

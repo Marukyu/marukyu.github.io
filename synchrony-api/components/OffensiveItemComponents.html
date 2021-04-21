@@ -450,7 +450,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#itemDamagePenetration">itemDamagePenetration</a></td>
+	<td class="name" nowrap><a href="#itemDamageFlags">itemDamageFlags</a></td>
 	<td class="summary">
 
 </td>
@@ -494,8 +494,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">increase</span>
          constant int16
@@ -520,8 +520,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">minimumDigStrength</span>
          constant int8
@@ -558,8 +558,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">multiplier</span>
          constant int16
@@ -584,8 +584,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">multiplier</span>
          constant int16
@@ -610,8 +610,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">distance</span>
          constant int8
@@ -636,8 +636,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">multipliers</span>
          constant table
@@ -666,8 +666,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">increase</span>
          constant int16
@@ -769,8 +769,8 @@
 
 </dd>
     <dt>
-    <a name = "itemDamagePenetration"></a>
-    <strong>itemDamagePenetration</strong>
+    <a name = "itemDamageFlags"></a>
+    <strong>itemDamageFlags</strong>
     </dt>
     <dd>
 
@@ -780,11 +780,11 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
-        <li><span class="parameter">penetration</span>
-         constant int8
+        <li><span class="parameter">addedFlags</span>
+         constant int32
          (<em>default</em> 0)
         </li>
     </ul>
@@ -806,8 +806,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
         <li><span class="parameter">duration</span>
          constant int8
@@ -836,8 +836,8 @@
 
     <ul>
         <li><span class="parameter">damageType</span>
-         constant int8
-         (<em>default</em> damage.Type.PHYSICAL)
+         constant int32
+         (<em>default</em> damage.Flag.STRENGTH_BASED)
         </li>
     </ul>
 

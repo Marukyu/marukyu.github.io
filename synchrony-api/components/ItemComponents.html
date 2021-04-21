@@ -721,13 +721,13 @@
          constant int32
          (<em>default</em> collision.Type.NONE)
         </li>
+        <li><span class="parameter">bypassFlags</span>
+         constant int32
+         (<em>default</em> 0)
+        </li>
         <li><span class="parameter">requireGrooveChain</span>
          constant bool
          (<em>default</em> false)
-        </li>
-        <li><span class="parameter">dropOnEarthquake</span>
-         constant bool
-         (<em>default</em> true)
         </li>
     </ul>
 
@@ -915,17 +915,13 @@
 
 
     <ul>
-        <li><span class="parameter">type</span>
-         constant int8
-         (<em>default</em> damage.Type.BLOOD)
-        </li>
-        <li><span class="parameter">penetration</span>
-         constant int8
-         (<em>default</em> damage.Penetration.PHASING)
-        </li>
         <li><span class="parameter">damage</span>
          constant int16
          (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">type</span>
+         constant int32
+         (<em>default</em> damage.Type.BLOOD)
         </li>
     </ul>
 
