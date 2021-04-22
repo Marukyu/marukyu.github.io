@@ -99,6 +99,7 @@
   <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
+  <li><a href="../modules/necro.game.character.Respawn.html">necro.game.character.Respawn</a></li>
   <li><a href="../modules/necro.game.character.Rhythm.html">necro.game.character.Rhythm</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
@@ -396,6 +397,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#damageTypeVulnerability">damageTypeVulnerability</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#grantInvincibilityOnHit">grantInvincibilityOnHit</a></td>
 	<td class="summary">
 
@@ -445,6 +452,24 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#regenerationKillCounter">regenerationKillCounter</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#respawn">respawn</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#respawnAutomatically">respawnAutomatically</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#respawnOnLevelTransition">respawnOnLevelTransition</a></td>
 	<td class="summary">
 
 </td>
@@ -502,6 +527,40 @@
          (<em>default</em> 1)
         </li>
         <li><span class="parameter">roundDownThreshold</span>
+         constant int16
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "damageTypeVulnerability"></a>
+    <strong>damageTypeVulnerability</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">requiredFlags</span>
+         constant int32
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">minimumDamageTaken</span>
+         constant int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">bypassFlags</span>
+         constant int32
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">knockbackOnBypass</span>
          constant int16
          (<em>default</em> 0)
         </li>
@@ -732,6 +791,60 @@
          (<em>default</em> 0)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "respawn"></a>
+    <strong>respawn</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">pending</span>
+          bool
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "respawnAutomatically"></a>
+    <strong>respawnAutomatically</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "respawnOnLevelTransition"></a>
+    <strong>respawnOnLevelTransition</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 

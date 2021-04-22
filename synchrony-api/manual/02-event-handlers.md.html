@@ -99,6 +99,7 @@
   <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
   <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
   <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
+  <li><a href="../modules/necro.game.character.Respawn.html">necro.game.character.Respawn</a></li>
   <li><a href="../modules/necro.game.character.Rhythm.html">necro.game.character.Rhythm</a></li>
   <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
   <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
@@ -1220,6 +1221,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetTickDelta</code></li>
     <li><code>resetTimeScale</code></li>
     <li><code>resetTurnID</code></li>
+    <li><code>respawnOnLevelTransition</code></li>
     <li><code>restoreDescendedEntities</code></li>
     <li><code>snapCameraToTarget</code></li>
     <li><code>spawnPlayers</code></li>
@@ -2346,7 +2348,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetPrevposOnInhibit</code></li>
     <li><code>resistKnockbackWhileGrabbing</code></li>
     <li><code>stasisOnMove</code></li>
-    <li><code>stealGoldOnAttack</code></li>
     <li><code>telefrag</code></li>
     <li><code>unburrow</code></li>
     <li><code>windVoice</code></li>
@@ -2407,6 +2408,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>baseDamageIncrease</code></li>
     <li><code>explosiveDamageOverride</code></li>
     <li><code>forwardToCaster</code></li>
+    <li><code>stealGoldOnAttack</code></li>
     <li><code>teleportingBombs</code></li>
 </ul>
 
@@ -2433,6 +2435,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>killBossOnDeath</code></li>
     <li><code>markShopkeeperDeath</code></li>
     <li><code>provokeOnShrineDeath</code></li>
+    <li><code>setRespawn</code></li>
     <li><code>spawnDecorTentacle</code></li>
     <li><code>spawnOnDeath</code></li>
     <li><code>timeScale</code></li>
@@ -3075,6 +3078,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deepBluesTeleport</code></li>
     <li><code>drawScreenFlash</code></li>
     <li><code>dropGrooveChain</code></li>
+    <li><code>followerProtectedByParent</code></li>
     <li><code>fortissimoleBurrowing</code></li>
     <li><code>genericHitSound</code></li>
     <li><code>grabHitSound</code></li>
@@ -3507,6 +3511,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_options.credits</code></li>
     <li><code>1_options.gameplayControls</code></li>
     <li><code>1_options.menuControls</code></li>
+    <li><code>1_respawn</code></li>
+    <li><code>1_respawn.respawnHealFlat</code></li>
+    <li><code>1_respawn.respawnHealPercent</code></li>
+    <li><code>1_respawn.respawnMinContainers</code></li>
+    <li><code>1_respawn.respawnMode</code></li>
     <li><code>1_rollback</code></li>
     <li><code>1_rollback.limit.enabled</code></li>
     <li><code>1_rollback.limit.future</code></li>
@@ -4313,6 +4322,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnObjects</code></li>
     <li><code>dwarfismTickDown</code></li>
     <li><code>fearableTickDown</code></li>
+    <li><code>followerDamageParentWhileDead</code></li>
     <li><code>freezablePreventActions</code></li>
     <li><code>freezableTickDown</code></li>
     <li><code>gigantismTickDown</code></li>
@@ -4365,6 +4375,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateStatusTimeoutBlinkEffect</code></li>
     <li><code>vibrateOnActionDelay</code></li>
     <li><code>vibrateOnTell</code></li>
+    <li><code>voiceEnemyProximity</code></li>
     <li><code>voiceTell</code></li>
 </ul>
 
