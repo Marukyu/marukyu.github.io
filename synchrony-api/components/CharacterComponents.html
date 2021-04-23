@@ -318,6 +318,7 @@
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
   <li><a href="../components/DigItemComponents.html">DigItemComponents</a></li>
   <li><a href="../components/EquipmentSpriteComponents.html">EquipmentSpriteComponents</a></li>
+  <li><a href="../components/FollowerComponents.html">FollowerComponents</a></li>
   <li><a href="../components/FreezeComponents.html">FreezeComponents</a></li>
   <li><a href="../components/GrabComponents.html">GrabComponents</a></li>
   <li><a href="../components/GrooveChainComponents.html">GrooveChainComponents</a></li>
@@ -409,12 +410,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#characterWithFollower">characterWithFollower</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#controllable">controllable</a></td>
 	<td class="summary">
 
@@ -440,36 +435,6 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#facingDirection">facingDirection</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#followed">followed</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#follower">follower</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#followerCollectGold">followerCollectGold</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#followerDamageParentWhileDead">followerDamageParentWhileDead</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#followerProtectedByParent">followerProtectedByParent</a></td>
 	<td class="summary">
 
 </td>
@@ -720,32 +685,6 @@
 
 </dd>
     <dt>
-    <a name = "characterWithFollower"></a>
-    <strong>characterWithFollower</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">followerType</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-        <li><span class="parameter">followerID</span>
-          entityID
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "controllable"></a>
     <strong>controllable</strong>
     </dt>
@@ -870,126 +809,6 @@
          (<em>default</em> 0)
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "followed"></a>
-    <strong>followed</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">followers</span>
-          table
-         (<em>default</em> {})
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "follower"></a>
-    <strong>follower</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">usePrevPos</span>
-         constant bool
-         (<em>default</em> false)
-        </li>
-        <li><span class="parameter">dx</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">dy</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">parent</span>
-          entityID
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "followerCollectGold"></a>
-    <strong>followerCollectGold</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">minQuantityForHeal</span>
-         constant int16
-         (<em>default</em> 25)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "followerDamageParentWhileDead"></a>
-    <strong>followerDamageParentWhileDead</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">damage</span>
-         constant table
-         (<em>default</em> { 1)
-        </li>
-        <li><span class="parameter">type</span>
-         constant int32
-         (<em>default</em> damage.Type.SUICIDE)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "followerProtectedByParent"></a>
-    <strong>followerProtectedByParent</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 

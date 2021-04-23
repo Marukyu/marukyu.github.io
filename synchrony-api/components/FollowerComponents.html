@@ -318,7 +318,7 @@
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
   <li><a href="../components/DigItemComponents.html">DigItemComponents</a></li>
   <li><a href="../components/EquipmentSpriteComponents.html">EquipmentSpriteComponents</a></li>
-  <li><a href="../components/FollowerComponents.html">FollowerComponents</a></li>
+  <li><strong>FollowerComponents</strong></li>
   <li><a href="../components/FreezeComponents.html">FreezeComponents</a></li>
   <li><a href="../components/GrabComponents.html">GrabComponents</a></li>
   <li><a href="../components/GrooveChainComponents.html">GrooveChainComponents</a></li>
@@ -352,7 +352,7 @@
   <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
   <li><a href="../components/SpellItemComponents.html">SpellItemComponents</a></li>
   <li><a href="../components/SpriteComponents.html">SpriteComponents</a></li>
-  <li><strong>SpriteEffectComponents</strong></li>
+  <li><a href="../components/SpriteEffectComponents.html">SpriteEffectComponents</a></li>
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
   <li><a href="../components/SwipeComponents.html">SwipeComponents</a></li>
   <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
@@ -374,7 +374,7 @@
 
 <div id="content">
 
-<h1>Script <code>SpriteEffectComponents</code></h1>
+<h1>Script <code>FollowerComponents</code></h1>
 <p>
 
 </p>
@@ -386,199 +386,37 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#animationFreezeEffect">animationFreezeEffect</a></td>
+	<td class="name" nowrap><a href="#characterWithFollower">characterWithFollower</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#blinkEffect">blinkEffect</a></td>
+	<td class="name" nowrap><a href="#followed">followed</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#darkenToTileBrightnessEffect">darkenToTileBrightnessEffect</a></td>
+	<td class="name" nowrap><a href="#follower">follower</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#fadeEffect">fadeEffect</a></td>
+	<td class="name" nowrap><a href="#followerCollectGold">followerCollectGold</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#fadeToTileBrightnessEffect">fadeToTileBrightnessEffect</a></td>
+	<td class="name" nowrap><a href="#followerDamageParentWhileDead">followerDamageParentWhileDead</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hoverEffect">hoverEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#hoverEffectDisableOnDescent">hoverEffectDisableOnDescent</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#invincibilityBlinkEffect">invincibilityBlinkEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemConditionalInvincibilityBlinkEffect">itemConditionalInvincibilityBlinkEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemHolderFadeEffect">itemHolderFadeEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemHolderHoverEffect">itemHolderHoverEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#opacityEffect">opacityEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#scaleEffect">scaleEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#screenShakeEffect">screenShakeEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#screenShakeOnAttack">screenShakeOnAttack</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#screenShakeOnDig">screenShakeOnDig</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#screenShakeOnHit">screenShakeOnHit</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#screenShakeOnWalk">screenShakeOnWalk</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#screenShakeStandalone">screenShakeStandalone</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#slideSwayEffect">slideSwayEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteCropOnDescent">spriteCropOnDescent</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteCropOnSink">spriteCropOnSink</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteDwarfismScale">spriteDwarfismScale</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteGigantismScale">spriteGigantismScale</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteOffsetIfAboveWall">spriteOffsetIfAboveWall</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteOffsetIfInsideWall">spriteOffsetIfInsideWall</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteOffsetPerFrame">spriteOffsetPerFrame</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteVibrate">spriteVibrate</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteVibrateOnActionDelay">spriteVibrateOnActionDelay</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#spriteVibrateOnTell">spriteVibrateOnTell</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#stasisFade">stasisFade</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#statusTimeoutBlinkEffect">statusTimeoutBlinkEffect</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#targetProximityFadeEffect">targetProximityFadeEffect</a></td>
+	<td class="name" nowrap><a href="#followerProtectedByParent">followerProtectedByParent</a></td>
 	<td class="summary">
 
 </td>
@@ -593,8 +431,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "animationFreezeEffect"></a>
-    <strong>animationFreezeEffect</strong>
+    <a name = "characterWithFollower"></a>
+    <strong>characterWithFollower</strong>
     </dt>
     <dd>
 
@@ -603,789 +441,13 @@
 
 
     <ul>
-        <li><span class="parameter">frameX</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "blinkEffect"></a>
-    <strong>blinkEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">intervalOn</span>
-         constant int32
-         (<em>default</em> 100000)
-        </li>
-        <li><span class="parameter">intervalOff</span>
-         constant int32
-         (<em>default</em> 100000)
-        </li>
-        <li><span class="parameter">duration</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">animationTurn</span>
-          int32
-         (<em>default</em> -1)
-        </li>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "darkenToTileBrightnessEffect"></a>
-    <strong>darkenToTileBrightnessEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "fadeEffect"></a>
-    <strong>fadeEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">fadedOpacity</span>
-         constant int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">animationDuration</span>
-         constant int16
-         (<em>default</em> 150)
-        </li>
-        <li><span class="parameter">animationTurn</span>
-          int32
-         (<em>default</em> -1)
-        </li>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "fadeToTileBrightnessEffect"></a>
-    <strong>fadeToTileBrightnessEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "hoverEffect"></a>
-    <strong>hoverEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> true)
-        </li>
-        <li><span class="parameter">offset</span>
-         constant int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">amplitude</span>
-         constant float
-         (<em>default</em> 2.5)
-        </li>
-        <li><span class="parameter">exponent</span>
-         constant float
-         (<em>default</em> 1.5)
-        </li>
-        <li><span class="parameter">period</span>
-         constant int16
-         (<em>default</em> 1000)
-        </li>
-        <li><span class="parameter">timeStart</span>
-          float
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">timeFreeze</span>
-          float
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "hoverEffectDisableOnDescent"></a>
-    <strong>hoverEffectDisableOnDescent</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">storedHover</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "invincibilityBlinkEffect"></a>
-    <strong>invincibilityBlinkEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">duration</span>
-         constant int16
-         (<em>default</em> 450)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemConditionalInvincibilityBlinkEffect"></a>
-    <strong>itemConditionalInvincibilityBlinkEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">duration</span>
-         constant int16
-         (<em>default</em> 450)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemHolderFadeEffect"></a>
-    <strong>itemHolderFadeEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemHolderHoverEffect"></a>
-    <strong>itemHolderHoverEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "opacityEffect"></a>
-    <strong>opacityEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">baseOpacity</span>
-         constant int16
-         (<em>default</em> 255)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "scaleEffect"></a>
-    <strong>scaleEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "screenShakeEffect"></a>
-    <strong>screenShakeEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">range</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">intensity</span>
-          int16
-         (<em>default</em> 15)
-        </li>
-        <li><span class="parameter">duration</span>
-          int16
-         (<em>default</em> 75)
-        </li>
-        <li><span class="parameter">turn</span>
-          int32
-         (<em>default</em> -1)
-        </li>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "screenShakeOnAttack"></a>
-    <strong>screenShakeOnAttack</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "screenShakeOnDig"></a>
-    <strong>screenShakeOnDig</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "screenShakeOnHit"></a>
-    <strong>screenShakeOnHit</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "screenShakeOnWalk"></a>
-    <strong>screenShakeOnWalk</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "screenShakeStandalone"></a>
-    <strong>screenShakeStandalone</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "slideSwayEffect"></a>
-    <strong>slideSwayEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">angle</span>
-         constant float
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">swayAmplitude</span>
-         constant float
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">swayDuration</span>
-         constant int16
-         (<em>default</em> 1000)
-        </li>
-        <li><span class="parameter">startupDuration</span>
-         constant int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">decayDuration</span>
-         constant int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">animationTurn</span>
-          int32
-         (<em>default</em> -1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteCropOnDescent"></a>
-    <strong>spriteCropOnDescent</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">descentType</span>
-         constant int32
-         (<em>default</em> descent.Type.TRAPDOOR)
-        </li>
-        <li><span class="parameter">anticipationDuration</span>
-         constant float
-         (<em>default</em> 0.1)
-        </li>
-        <li><span class="parameter">anticipationHeight</span>
-         constant float
-         (<em>default</em> 6)
-        </li>
-        <li><span class="parameter">cropOffset</span>
-         constant float
-         (<em>default</em> 3)
-        </li>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-        <li><span class="parameter">animationTurn</span>
-          int32
-         (<em>default</em> -1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteCropOnSink"></a>
-    <strong>spriteCropOnSink</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">sinkDistance</span>
-         constant int16
-         (<em>default</em> 6)
-        </li>
-        <li><span class="parameter">animationDuration</span>
-         constant int16
-         (<em>default</em> 50)
-        </li>
-        <li><span class="parameter">animationTurn</span>
-          int32
-         (<em>default</em> -1)
-        </li>
-        <li><span class="parameter">startCrop</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">endCrop</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">animationDelay</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteDwarfismScale"></a>
-    <strong>spriteDwarfismScale</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">scale</span>
-         constant float
-         (<em>default</em> 0.6)
-        </li>
-        <li><span class="parameter">blinkPeriod</span>
-         constant int32
-         (<em>default</em> 166667)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteGigantismScale"></a>
-    <strong>spriteGigantismScale</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">scale</span>
-         constant float
-         (<em>default</em> 1.5)
-        </li>
-        <li><span class="parameter">blinkPeriod</span>
-         constant int32
-         (<em>default</em> 166667)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteOffsetIfAboveWall"></a>
-    <strong>spriteOffsetIfAboveWall</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">offsetY</span>
-         constant float
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteOffsetIfInsideWall"></a>
-    <strong>spriteOffsetIfInsideWall</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">offsetY</span>
-         constant float
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteOffsetPerFrame"></a>
-    <strong>spriteOffsetPerFrame</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">offsetX</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-        <li><span class="parameter">offsetY</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteVibrate"></a>
-    <strong>spriteVibrate</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> true)
-        </li>
-        <li><span class="parameter">period</span>
-         constant int16
-         (<em>default</em> 50)
-        </li>
-        <li><span class="parameter">x</span>
-         constant int16
-         (<em>default</em> 1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteVibrateOnActionDelay"></a>
-    <strong>spriteVibrateOnActionDelay</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">maxDelay</span>
-         constant int8
-         (<em>default</em> 1)
-        </li>
-        <li><span class="parameter">action</span>
-         constant int8
-         (<em>default</em> action.Special.SPELL_1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spriteVibrateOnTell"></a>
-    <strong>spriteVibrateOnTell</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "stasisFade"></a>
-    <strong>stasisFade</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">ignoreFrozen</span>
-         constant bool
-         (<em>default</em> false)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "statusTimeoutBlinkEffect"></a>
-    <strong>statusTimeoutBlinkEffect</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">component</span>
+        <li><span class="parameter">followerType</span>
          constant string
          (<em>default</em> "")
         </li>
-        <li><span class="parameter">remainingTurns</span>
-         constant int16
-         (<em>default</em> 1)
+        <li><span class="parameter">followerID</span>
+          entityID
+         (<em>default</em> 0)
         </li>
     </ul>
 
@@ -1395,8 +457,8 @@
 
 </dd>
     <dt>
-    <a name = "targetProximityFadeEffect"></a>
-    <strong>targetProximityFadeEffect</strong>
+    <a name = "followed"></a>
+    <strong>followed</strong>
     </dt>
     <dd>
 
@@ -1405,11 +467,109 @@
 
 
     <ul>
-        <li><span class="parameter">distance</span>
-         constant float
-         (<em>default</em> 1)
+        <li><span class="parameter">followers</span>
+          table
+         (<em>default</em> {})
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "follower"></a>
+    <strong>follower</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">usePrevPos</span>
+         constant bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">dx</span>
+          int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">dy</span>
+          int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">parent</span>
+          entityID
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "followerCollectGold"></a>
+    <strong>followerCollectGold</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">minQuantityForHeal</span>
+         constant int16
+         (<em>default</em> 25)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "followerDamageParentWhileDead"></a>
+    <strong>followerDamageParentWhileDead</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">damageRatio</span>
+         constant float
+         (<em>default</em> 0.2)
+        </li>
+        <li><span class="parameter">type</span>
+         constant int32
+         (<em>default</em> damage.Type.SUICIDE)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "followerProtectedByParent"></a>
+    <strong>followerProtectedByParent</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
