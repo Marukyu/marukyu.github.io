@@ -54,6 +54,7 @@
   <li><a href="../modules/necro.client.ClientEvents.html">necro.client.ClientEvents</a></li>
   <li><a href="../modules/necro.client.FastForward.html">necro.client.FastForward</a></li>
   <li><a href="../modules/necro.client.GameClient.html">necro.client.GameClient</a></li>
+  <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
   <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
   <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
   <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
@@ -68,8 +69,6 @@
   <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
   <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
-  <li><a href="../modules/necro.client.TurnSync.html">necro.client.TurnSync</a></li>
-  <li><a href="../modules/necro.client.TurnSyncRequest.html">necro.client.TurnSyncRequest</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
@@ -139,7 +138,6 @@
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
   <li><a href="../modules/necro.game.level.Boss.html">necro.game.level.Boss</a></li>
   <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
-  <li><a href="../modules/necro.game.level.LevelGenerator.html">necro.game.level.LevelGenerator</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
   <li><a href="../modules/necro.game.level.TestLevel.html">necro.game.level.TestLevel</a></li>
@@ -234,7 +232,6 @@
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
-  <li><a href="../modules/necro.server.ServerTurnSync.html">necro.server.ServerTurnSync</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.DebugDump.html">system.debug.DebugDump</a></li>
@@ -329,6 +326,7 @@
   <li><a href="../components/CoreComponents.html">CoreComponents</a></li>
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
   <li><a href="../components/PositionComponents.html">PositionComponents</a></li>
+  <li><a href="../components/RunStateComponents.html">RunStateComponents</a></li>
   <li><a href="../components/TileInteractionComponents.html">TileInteractionComponents</a></li>
   <li><a href="../components/TileTransformationComponents.html">TileTransformationComponents</a></li>
   <li><a href="../components/XMLMappingComponents.html">XMLMappingComponents</a></li>
@@ -505,7 +503,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>addActionToBuffer</code></li>
-    <li><code>checkTurnSync</code></li>
     <li><code>enforceRollbackLimit</code></li>
     <li><code>sendLocalCoopNetworkMessage</code></li>
     <li><code>sendNetworkMessage</code></li>
@@ -541,13 +538,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearLocalCoopPlayerIDs</code></li>
     <li><code>clearPlayerListOnDisconnect</code></li>
     <li><code>clearResources</code></li>
-    <li><code>clearTurnSyncRequests</code></li>
     <li><code>closeConnection</code></li>
     <li><code>disconnectMenu</code></li>
     <li><code>markRemoteModsUnloaded</code></li>
     <li><code>reloadLocalMods</code></li>
     <li><code>resetActionBuffer</code></li>
     <li><code>resetFastForward</code></li>
+    <li><code>resetGameSession</code></li>
     <li><code>resetGameState</code></li>
     <li><code>resetLobbySpectatorPreferences</code></li>
     <li><code>resetRemoteSettings</code></li>
@@ -584,10 +581,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>receiveResource</code></li>
     <li><code>receiveRoomChange</code></li>
     <li><code>syncNetworkClock</code></li>
-    <li><code>turnSyncCompletion</code></li>
-    <li><code>turnSyncConfirmation</code></li>
-    <li><code>turnSyncRelease</code></li>
-    <li><code>turnSyncRequest</code></li>
     <li><code>updateModHashList</code></li>
 </ul>
 
@@ -611,22 +604,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>updateRemoteModList</code></li>
     <li><code>uploadRemoteSettings</code></li>
-</ul>
-
-
-<p><a name="clientTurnSyncBegin"></a></p>
-<h2>clientTurnSyncBegin</h2>
-
-<ul>
-    <li><code>pauseSpeedrunTimer</code></li>
-</ul>
-
-
-<p><a name="clientTurnSyncEnd"></a></p>
-<h2>clientTurnSyncEnd</h2>
-
-<ul>
-    <li><code>unpauseSpeedrunTimer</code></li>
 </ul>
 
 
@@ -1161,16 +1138,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>closeAllMenus</code></li>
     <li><code>initializeLobby</code></li>
     <li><code>playLobbyMusic</code></li>
-    <li><code>regenerateDungeon</code></li>
 </ul>
 
 
 <p><a name="gameStateLeaveLobby"></a></p>
 <h2>gameStateLeaveLobby</h2>
 
-<ul>
-    <li><code>resetReadyState</code></li>
-</ul>
 
 
 <p><a name="gameStateLevel"></a></p>
@@ -1179,7 +1152,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>barrierReset</code></li>
     <li><code>bossFloor</code></li>
-    <li><code>cancelLevelTransitionCooldown</code></li>
     <li><code>captureAudience</code></li>
     <li><code>clearMinimapFramebuffer</code></li>
     <li><code>clearObjects</code></li>
@@ -1230,7 +1202,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>stopMusic</code></li>
     <li><code>switchClientActionBuffer</code></li>
     <li><code>transitionOverlays</code></li>
-    <li><code>turnSyncRelease</code></li>
     <li><code>updateAttachmentEntities</code></li>
     <li><code>updateMusicLayerVolumes</code></li>
     <li><code>updateStasisFade</code></li>
@@ -1264,7 +1235,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>gameStateReset</h2>
 
 <ul>
-    <li><code>cancelPendingLevelTransition</code></li>
     <li><code>clearActionBuffer</code></li>
     <li><code>clearCurrentLevelInfo</code></li>
     <li><code>clearObjects</code></li>
@@ -1281,7 +1251,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetSpeedrunTimer</code></li>
     <li><code>seedGlobalRandomState</code></li>
     <li><code>suppressSounds</code></li>
-    <li><code>turnSyncRelease</code></li>
     <li><code>unsuppressSounds</code></li>
 </ul>
 
@@ -2132,11 +2101,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>changeSoundtrack</code></li>
     <li><code>confirm</code></li>
     <li><code>credits</code></li>
+    <li><code>fileSelector</code></li>
     <li><code>gameError</code></li>
-    <li><code>lobbyDungeonSelector</code></li>
     <li><code>lobbyMenu</code></li>
     <li><code>lobbyModeSelector</code></li>
-    <li><code>lobbySeedEntry</code></li>
     <li><code>localCoop</code></li>
     <li><code>main</code></li>
     <li><code>messageBox</code></li>
@@ -2159,6 +2127,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>pause</code></li>
     <li><code>powerSettings</code></li>
     <li><code>retry</code></li>
+    <li><code>seedEntry</code></li>
     <li><code>settings</code></li>
     <li><code>win</code></li>
 </ul>
@@ -3463,6 +3432,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_descent.exitRequirementMinimum</code></li>
     <li><code>1_descent.exitRequirementPercentage</code></li>
     <li><code>1_descent.levelTransitionDelay</code></li>
+    <li><code>1_gameSession</code></li>
+    <li><code>1_gameSession.levelTransitionDelay</code></li>
+    <li><code>1_gameSession.minimumLevelTransitionDelay</code></li>
+    <li><code>1_gameSession.minimumStartDelay</code></li>
+    <li><code>1_gameSession.restartDelay</code></li>
+    <li><code>1_gameSession.startDelay</code></li>
+    <li><code>1_gameSession.transitionTimeout</code></li>
     <li><code>1_input</code></li>
     <li><code>1_input.controllers</code></li>
     <li><code>1_input.keys</code></li>
@@ -3472,6 +3448,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_lobby.selector.characters</code></li>
     <li><code>1_lobby.selector.dungeon</code></li>
     <li><code>1_lobby.selector.mode</code></li>
+    <li><code>1_menu.allowDirectionalConfirmation</code></li>
     <li><code>1_misc</code></li>
     <li><code>1_mod</code></li>
     <li><code>1_modCompiler.patchLevel</code></li>
@@ -3504,7 +3481,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_net.rejoinToken</code></li>
     <li><code>1_net.server.conductor</code></li>
     <li><code>1_net.server.conductor.autoJoin</code></li>
-    <li><code>1_net.server.conductor.levelGenerator</code></li>
     <li><code>1_net.server.dedicated</code></li>
     <li><code>1_net.server.dedicated.autoStart</code></li>
     <li><code>1_net.server.dedicated.maxLocalCoopPlayers</code></li>
@@ -3749,7 +3725,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>assignInitialGameState</code></li>
     <li><code>createActionBuffer</code></li>
     <li><code>createRoomEntry</code></li>
-    <li><code>createTurnSyncBuffer</code></li>
 </ul>
 
 
@@ -3759,7 +3734,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>deleteActionBuffer</code></li>
     <li><code>deleteRoomEntry</code></li>
-    <li><code>deleteTurnSyncBuffer</code></li>
 </ul>
 
 
@@ -3799,7 +3773,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>cancelFastForward</code></li>
     <li><code>interceptLocalCoopPlayers</code></li>
     <li><code>reassignHost</code></li>
-    <li><code>removeFromTurnSyncs</code></li>
     <li><code>removePlayerFromRoomPlayerList</code></li>
     <li><code>sendRoomChangePacket</code></li>
 </ul>
@@ -3828,14 +3801,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>broadcastChat</code></li>
     <li><code>broadcastInputs</code></li>
     <li><code>broadcastResource</code></li>
-    <li><code>broadcastTurnSyncRequest</code></li>
-    <li><code>completeTurnSync</code></li>
-    <li><code>confirmTurnSync</code></li>
     <li><code>handleGameStateChange</code></li>
     <li><code>receiveLocalCoopPlayerAttribute</code></li>
     <li><code>receiveLocalCoopPlayerInput</code></li>
     <li><code>receivePlayerAttribute</code></li>
-    <li><code>releaseTurnSync</code></li>
     <li><code>removeLocalCoopPlayer</code></li>
 </ul>
 
@@ -3847,7 +3816,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearPlayerList</code></li>
     <li><code>clearResourceTransferLists</code></li>
     <li><code>closeSocket</code></li>
-    <li><code>removeTurnSyncs</code></li>
     <li><code>resetActionBuffer</code></li>
     <li><code>resetFastForwardTransfers</code></li>
     <li><code>resetLobby</code></li>
@@ -3876,7 +3844,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>serverTick</h2>
 
 <ul>
-    <li><code>checkTurnSyncTimeouts</code></li>
     <li><code>conductor</code></li>
     <li><code>processSocketEvents</code></li>
     <li><code>updatePlayerLatencyList</code></li>
@@ -4139,7 +4106,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>applyRhythmSettings</code></li>
     <li><code>checkSongEnd</code></li>
-    <li><code>checkTurnSync</code></li>
     <li><code>cleanUpFlyawayEntities</code></li>
     <li><code>cleanUpSwipes</code></li>
     <li><code>cleanUpTimedOutOverlays</code></li>
@@ -4152,7 +4118,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>lazyLoadModImages</code></li>
     <li><code>networkClient</code></li>
     <li><code>networkServer</code></li>
-    <li><code>performLevelTransition</code></li>
     <li><code>playCountdownSound</code></li>
     <li><code>playerInput</code></li>
     <li><code>processFastForward</code></li>
@@ -4164,9 +4129,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processTurns</code></li>
     <li><code>reloadGameContent</code></li>
     <li><code>rollback</code></li>
+    <li><code>startRunWhenReady</code></li>
     <li><code>syncNetworkClock</code></li>
     <li><code>syncNetworkGameState</code></li>
-    <li><code>timeOutTurnSyncRequests</code></li>
     <li><code>updateAnimationTimer</code></li>
     <li><code>updateAudioFilter</code></li>
     <li><code>updateEquipmentSpriteRow</code></li>

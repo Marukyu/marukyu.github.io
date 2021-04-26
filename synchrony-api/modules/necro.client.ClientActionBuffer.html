@@ -54,6 +54,7 @@
   <li><a href="../modules/necro.client.ClientEvents.html">necro.client.ClientEvents</a></li>
   <li><a href="../modules/necro.client.FastForward.html">necro.client.FastForward</a></li>
   <li><a href="../modules/necro.client.GameClient.html">necro.client.GameClient</a></li>
+  <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
   <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
   <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
   <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
@@ -68,8 +69,6 @@
   <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
   <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
-  <li><a href="../modules/necro.client.TurnSync.html">necro.client.TurnSync</a></li>
-  <li><a href="../modules/necro.client.TurnSyncRequest.html">necro.client.TurnSyncRequest</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
@@ -139,7 +138,6 @@
   <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
   <li><a href="../modules/necro.game.level.Boss.html">necro.game.level.Boss</a></li>
   <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
-  <li><a href="../modules/necro.game.level.LevelGenerator.html">necro.game.level.LevelGenerator</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
   <li><a href="../modules/necro.game.level.TestLevel.html">necro.game.level.TestLevel</a></li>
@@ -234,7 +232,6 @@
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
-  <li><a href="../modules/necro.server.ServerTurnSync.html">necro.server.ServerTurnSync</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.DebugDump.html">system.debug.DebugDump</a></li>
@@ -329,6 +326,7 @@
   <li><a href="../components/CoreComponents.html">CoreComponents</a></li>
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
   <li><a href="../components/PositionComponents.html">PositionComponents</a></li>
+  <li><a href="../components/RunStateComponents.html">RunStateComponents</a></li>
   <li><a href="../components/TileInteractionComponents.html">TileInteractionComponents</a></li>
   <li><a href="../components/TileTransformationComponents.html">TileTransformationComponents</a></li>
   <li><a href="../components/XMLMappingComponents.html">XMLMappingComponents</a></li>
@@ -398,6 +396,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#checkSequenceSync">checkSequenceSync (sequenceSync)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#clear">clear ()</a></td>
 	<td class="summary">
 
@@ -428,12 +432,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getModificationCount">getModificationCount ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#getNextBufferID">getNextBufferID ()</a></td>
 	<td class="summary">
 
@@ -453,6 +451,18 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#hasAction">hasAction (playerID, turnID)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isRollbackPending">isRollbackPending ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isSequenceSyncActive">isSequenceSyncActive ()</a></td>
 	<td class="summary">
 
 </td>
@@ -532,6 +542,30 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "checkSequenceSync"></a>
+    <strong>checkSequenceSync (sequenceSync)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">sequenceSync</span>
+
+
+
+        </li>
+    </ul>
 
 
 
@@ -658,22 +692,6 @@
 
 </dd>
     <dt>
-    <a name = "getModificationCount"></a>
-    <strong>getModificationCount ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "getNextBufferID"></a>
     <strong>getNextBufferID ()</strong>
     </dt>
@@ -762,6 +780,38 @@
 
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isRollbackPending"></a>
+    <strong>isRollbackPending ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isSequenceSyncActive"></a>
+    <strong>isSequenceSyncActive ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
