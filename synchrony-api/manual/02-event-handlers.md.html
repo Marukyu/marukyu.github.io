@@ -698,6 +698,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>0.20</code></li>
     <li><code>0.21</code></li>
     <li><code>0.24</code></li>
+    <li><code>0.25</code></li>
 </ul>
 
 
@@ -1009,7 +1010,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>invalidateObjectSelectorEntityEventCache</code></li>
     <li><code>invalidateObjectSelectorItemEventCache</code></li>
     <li><code>inventoryHUDGroups</code></li>
-    <li><code>inventoryHUDSlots</code></li>
     <li><code>reloadComponents</code></li>
     <li><code>reloadCustomEntities</code></li>
     <li><code>reloadGameXML</code></li>
@@ -1482,6 +1482,20 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 
 
+<p><a name="holderGetActionItem"></a></p>
+<h2>holderGetActionItem</h2>
+
+<ul>
+    <li><code>emptyBackpack</code></li>
+    <li><code>prepareThrow</code></li>
+    <li><code>reloadFullWeapon</code></li>
+    <li><code>reloadWeapon</code></li>
+    <li><code>replaceActionVisual</code></li>
+    <li><code>toggleItem</code></li>
+    <li><code>useHolster</code></li>
+</ul>
+
+
 <p><a name="holderGrab"></a></p>
 <h2>holderGrab</h2>
 
@@ -1566,7 +1580,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>activateDigConditionalInvincibility</code></li>
-    <li><code>convertSlot</code></li>
     <li><code>performDashOnDig</code></li>
     <li><code>setRangedFlag</code></li>
 </ul>
@@ -1626,12 +1639,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="holderSpecialAction"></a></p>
 <h2>holderSpecialAction</h2>
 
-<ul>
-    <li><code>prepareThrow</code></li>
-    <li><code>reloadWeapon</code></li>
-    <li><code>toggleItem</code></li>
-    <li><code>useHolster</code></li>
-</ul>
 
 
 <p><a name="holderSpectate"></a></p>
@@ -1888,36 +1895,28 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
-<p><a name="inventoryHUDRegisterElement"></a></p>
-<h2>inventoryHUDRegisterElement</h2>
+<p><a name="inventoryHUDRegister"></a></p>
+<h2>inventoryHUDRegister</h2>
 
 <ul>
     <li><code>actions</code></li>
+    <li><code>actions1</code></li>
+    <li><code>actions2</code></li>
+    <li><code>actions3</code></li>
+    <li><code>actions4</code></li>
     <li><code>charms</code></li>
+    <li><code>charms1</code></li>
     <li><code>equipment</code></li>
+    <li><code>equipment1</code></li>
+    <li><code>equipment2</code></li>
+    <li><code>equipment3</code></li>
+    <li><code>equipment4</code></li>
+    <li><code>equipment5</code></li>
+    <li><code>equipment6</code></li>
+    <li><code>equipment7</code></li>
     <li><code>spells</code></li>
-</ul>
-
-
-<p><a name="inventoryHUDRegisterSlot"></a></p>
-<h2>inventoryHUDRegisterSlot</h2>
-
-<ul>
-    <li><code>action</code></li>
-    <li><code>body</code></li>
-    <li><code>bomb</code></li>
-    <li><code>feet</code></li>
-    <li><code>head</code></li>
-    <li><code>hud</code></li>
-    <li><code>misc</code></li>
-    <li><code>reload</code></li>
-    <li><code>ring</code></li>
-    <li><code>shovel</code></li>
-    <li><code>spell</code></li>
-    <li><code>throw</code></li>
-    <li><code>toggle</code></li>
-    <li><code>torch</code></li>
-    <li><code>weapon</code></li>
+    <li><code>spells1</code></li>
+    <li><code>spells2</code></li>
 </ul>
 
 
@@ -2000,9 +1999,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deployFollower</code></li>
     <li><code>hopInPlace</code></li>
     <li><code>itemCombo</code></li>
+    <li><code>prepareThrow</code></li>
+    <li><code>reloadWeapon</code></li>
     <li><code>screenFlashCaster</code></li>
     <li><code>sound</code></li>
     <li><code>soundCombo</code></li>
+    <li><code>toggleItem</code></li>
+    <li><code>useHolster</code></li>
 </ul>
 
 
@@ -2222,7 +2225,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>musicTrack</h2>
 
 <ul>
-    <li><code>originalSoundtrack</code></li>
+    <li><code>boss</code></li>
+    <li><code>coralRiffInstruments</code></li>
+    <li><code>fortissimoleRap</code></li>
+    <li><code>special</code></li>
+    <li><code>variant</code></li>
+    <li><code>zone</code></li>
 </ul>
 
 
@@ -2519,7 +2527,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectDirection</h2>
 
 <ul>
-    <li><code>activateDamageCountdown</code></li>
     <li><code>amplify</code></li>
     <li><code>amplifyFirstMove</code></li>
     <li><code>animationCycling</code></li>
@@ -2614,6 +2621,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnFreezeAttachment</code></li>
     <li><code>stackDuration</code></li>
     <li><code>updateAttackableFlags</code></li>
+</ul>
+
+
+<p><a name="objectGetActionItem"></a></p>
+<h2>objectGetActionItem</h2>
+
+<ul>
+    <li><code>slotItems</code></li>
 </ul>
 
 
@@ -2986,7 +3001,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectSpecialAction</h2>
 
 <ul>
-    <li><code>activateDamageCountdown</code></li>
     <li><code>hopInPlaceOnIdle</code></li>
     <li><code>idle</code></li>
     <li><code>innateSpellcasts</code></li>

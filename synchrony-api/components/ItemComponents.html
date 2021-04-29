@@ -534,6 +534,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#itemReplaceActionVisual">itemReplaceActionVisual</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#itemResetDamageCountdown">itemResetDamageCountdown</a></td>
 	<td class="summary">
 
@@ -785,6 +791,10 @@
          constant int8
          (<em>default</em> 1)
         </li>
+        <li><span class="parameter">slotImage</span>
+         constant string
+         (<em>default</em> "ext/gui/hud_slot_action2_empty.png")
+        </li>
     </ul>
 
 
@@ -991,6 +1001,14 @@
           entityID
          (<em>default</em> 0)
         </li>
+        <li><span class="parameter">slotImage</span>
+         constant string
+         (<em>default</em> "ext/gui/hud_slot_weapon2.png")
+        </li>
+        <li><span class="parameter">emptySlotImage</span>
+         constant string
+         (<em>default</em> "ext/gui/hud_slot_weapon2_empty.png")
+        </li>
     </ul>
 
 
@@ -1173,6 +1191,32 @@
 
 </dd>
     <dt>
+    <a name = "itemReplaceActionVisual"></a>
+    <strong>itemReplaceActionVisual</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">source</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">target</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "itemResetDamageCountdown"></a>
     <strong>itemResetDamageCountdown</strong>
     </dt>
@@ -1309,11 +1353,11 @@
           bool
          (<em>default</em> true)
         </li>
-        <li><span class="parameter">sound</span>
+        <li><span class="parameter">activeSlotImage</span>
          constant string
-         (<em>default</em> "bounceTrap")
+         (<em>default</em> "ext/gui/hud_slot_boots.png")
         </li>
-        <li><span class="parameter">inactiveTexture</span>
+        <li><span class="parameter">inactiveSlotImage</span>
          constant string
          (<em>default</em> "ext/gui/hud_slot_boots.png")
         </li>
