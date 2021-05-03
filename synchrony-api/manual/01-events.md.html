@@ -77,9 +77,10 @@
   <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
   <li><a href="../modules/necro.cycles.Turn.html">necro.cycles.Turn</a></li>
-  <li><a href="../modules/necro.debug.Debug.html">necro.debug.Debug</a></li>
+  <li><a href="../modules/necro.debug.DebugCommands.html">necro.debug.DebugCommands</a></li>
   <li><a href="../modules/necro.debug.DebugDrawUtils.html">necro.debug.DebugDrawUtils</a></li>
   <li><a href="../modules/necro.debug.DebugEval.html">necro.debug.DebugEval</a></li>
+  <li><a href="../modules/necro.debug.DebugOverlay.html">necro.debug.DebugOverlay</a></li>
   <li><a href="../modules/necro.debug.DebugVisuals.html">necro.debug.DebugVisuals</a></li>
   <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
@@ -253,6 +254,7 @@
   <li><a href="../modules/system.game.Config.html">system.game.Config</a></li>
   <li><a href="../modules/system.game.Entities.html">system.game.Entities</a></li>
   <li><a href="../modules/system.game.EntitySchema.html">system.game.EntitySchema</a></li>
+  <li><a href="../modules/system.game.EntityTypeCache.html">system.game.EntityTypeCache</a></li>
   <li><a href="../modules/system.game.FileIO.html">system.game.FileIO</a></li>
   <li><a href="../modules/system.game.Framebuffer.html">system.game.Framebuffer</a></li>
   <li><a href="../modules/system.game.Graphics.html">system.game.Graphics</a></li>
@@ -578,6 +580,11 @@
 </ul>
 
 
+<p><a name="debugCommand"></a></p>
+<h2>debugCommand</h2>
+
+
+
 <p><a name="debugPrint"></a></p>
 <h2>debugPrint</h2>
 
@@ -780,6 +787,7 @@
 
 <ul>
     <li><code>delayedCasts</code></li>
+    <li><code>updateItems</code></li>
     <li><code>itemPickup</code></li>
     <li><code>fieldOfView</code></li>
     <li><code>updateRevealed</code></li>
@@ -874,7 +882,6 @@
     <li><code>itemPickup</code></li>
     <li><code>tweens</code></li>
     <li><code>grooveChain</code></li>
-    <li><code>vision</code></li>
     <li><code>visibility</code></li>
     <li><code>apparition</code></li>
     <li><code>traps</code></li>
@@ -886,6 +893,7 @@
     <li><code>minimap</code></li>
     <li><code>regeneration</code></li>
     <li><code>frame</code></li>
+    <li><code>vision</code></li>
     <li><code>levelExit</code></li>
     <li><code>overlay</code></li>
     <li><code>timeScale</code></li>
@@ -1284,6 +1292,8 @@
     <li><code>breakTile</code></li>
     <li><code>spell</code></li>
     <li><code>swipe</code></li>
+    <li><code>flyaway</code></li>
+    <li><code>consumeKey</code></li>
     <li><code>conditionalInvincibility</code></li>
     <li><code>dash</code></li>
     <li><code>damageIncrease</code></li>
@@ -1523,11 +1533,13 @@
 <ul>
     <li><code>requeue</code></li>
     <li><code>tween</code></li>
+    <li><code>consumeItem</code></li>
     <li><code>priceTag</code></li>
     <li><code>activate</code></li>
     <li><code>selfDestruct</code></li>
     <li><code>attack</code></li>
     <li><code>sound</code></li>
+    <li><code>graphics</code></li>
     <li><code>result</code></li>
 </ul>
 
@@ -2149,6 +2161,7 @@
 <ul>
     <li><code>detach</code></li>
     <li><code>detachSlot</code></li>
+    <li><code>light</code></li>
     <li><code>remove</code></li>
 </ul>
 
@@ -2319,6 +2332,7 @@
 <h2>lightSourceUpdate</h2>
 
 <ul>
+    <li><code>setHolder</code></li>
     <li><code>old</code></li>
     <li><code>activation</code></li>
     <li><code>position</code></li>
@@ -2769,6 +2783,8 @@
     <li><code>breakTile</code></li>
     <li><code>spell</code></li>
     <li><code>swipe</code></li>
+    <li><code>flyaway</code></li>
+    <li><code>consumeKey</code></li>
     <li><code>conditionalInvincibility</code></li>
     <li><code>dash</code></li>
     <li><code>damageIncrease</code></li>
@@ -3008,11 +3024,13 @@
 <ul>
     <li><code>requeue</code></li>
     <li><code>tween</code></li>
+    <li><code>consumeItem</code></li>
     <li><code>priceTag</code></li>
     <li><code>activate</code></li>
     <li><code>selfDestruct</code></li>
     <li><code>attack</code></li>
     <li><code>sound</code></li>
+    <li><code>graphics</code></li>
     <li><code>result</code></li>
 </ul>
 
