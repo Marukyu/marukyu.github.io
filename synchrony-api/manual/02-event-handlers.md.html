@@ -116,6 +116,7 @@
   <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
+  <li><a href="../modules/necro.game.data.SavefileXML.html">necro.game.data.SavefileXML</a></li>
   <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
   <li><a href="../modules/necro.game.data.enemy.CommonEnemy.html">necro.game.data.enemy.CommonEnemy</a></li>
@@ -3459,6 +3460,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_camera.segmentVisibility.spectator</code></li>
     <li><code>1_camera.splitPlayerViewMultiplier</code></li>
     <li><code>1_config.showAdvanced</code></li>
+    <li><code>1_config.xmlImport</code></li>
     <li><code>1_descent</code></li>
     <li><code>1_descent.defaultDuration</code></li>
     <li><code>1_descent.exitRequirementMaximum</code></li>
@@ -3475,6 +3477,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_input</code></li>
     <li><code>1_input.controllers</code></li>
     <li><code>1_input.keys</code></li>
+    <li><code>1_latency</code></li>
+    <li><code>1_latency.audio</code></li>
+    <li><code>1_latency.video</code></li>
     <li><code>1_level.generator</code></li>
     <li><code>1_level.generator.characterBitmaskOverride</code></li>
     <li><code>1_lobby.selector</code></li>
@@ -3607,6 +3612,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderHUD</code></li>
     <li><code>renderHealthBars</code></li>
     <li><code>renderItemStackSizes</code></li>
+    <li><code>renderLatencyCalibrationBeatBars</code></li>
     <li><code>renderLayeredRows</code></li>
     <li><code>renderLobby</code></li>
     <li><code>renderMenu</code></li>
@@ -4077,6 +4083,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>startup</h2>
 
 <ul>
+    <li><code>importSettingsFromSaveFileXML</code></li>
     <li><code>initCollisionMap</code></li>
     <li><code>initGameState</code></li>
     <li><code>initTileMap</code></li>
