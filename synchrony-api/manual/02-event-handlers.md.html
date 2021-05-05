@@ -159,6 +159,7 @@
   <li><a href="../modules/necro.game.system.Delay.html">necro.game.system.Delay</a></li>
   <li><a href="../modules/necro.game.system.Earthquake.html">necro.game.system.Earthquake</a></li>
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
+  <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
   <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
   <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
@@ -1212,6 +1213,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>respawnOnLevelTransition</code></li>
     <li><code>restoreDescendedEntities</code></li>
     <li><code>snapCameraToTarget</code></li>
+    <li><code>spawnDad</code></li>
     <li><code>spawnPlayers</code></li>
     <li><code>stopMusic</code></li>
     <li><code>switchClientActionBuffer</code></li>
@@ -2051,7 +2053,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>levelLoad</h2>
 
 <ul>
-    <li><code>assignButtonGroups</code></li>
     <li><code>assignCurrentLevelInfo</code></li>
     <li><code>congaLine</code></li>
     <li><code>loadEntities</code></li>
@@ -2385,6 +2386,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectCurrency</h2>
 
 <ul>
+    <li><code>forwardCurrencyToController</code></li>
     <li><code>showCurrencyFlyaway</code></li>
     <li><code>updateCurrencyCounter</code></li>
 </ul>
@@ -2420,6 +2422,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>endAmbush</code></li>
     <li><code>endSecretShopFight</code></li>
     <li><code>finalizeObjectTangibility</code></li>
+    <li><code>forwardDeathToController</code></li>
     <li><code>genericDeathSound</code></li>
     <li><code>gigantismCurrencyDropOverride</code></li>
     <li><code>gigantismItemDrop</code></li>
@@ -3183,6 +3186,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkItem</code></li>
     <li><code>checkPriceTag</code></li>
     <li><code>collectItem</code></li>
+    <li><code>noLuteForDad</code></li>
 </ul>
 
 
@@ -4328,6 +4332,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkDescentTiles</code></li>
     <li><code>checkTrapTrigger</code></li>
     <li><code>confusableTickDown</code></li>
+    <li><code>controlDad</code></li>
     <li><code>controlPlayer</code></li>
     <li><code>convertTraps</code></li>
     <li><code>currencyDrain</code></li>
@@ -4406,6 +4411,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>updateFocusedEntities</h2>
 
 <ul>
+    <li><code>addLocalDads</code></li>
     <li><code>addLocalPlayers</code></li>
     <li><code>addSpectatorTargets</code></li>
     <li><code>removeIntangibleEntities</code></li>
