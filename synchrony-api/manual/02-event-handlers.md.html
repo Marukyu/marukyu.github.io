@@ -590,12 +590,22 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="clientMessageP2P"></a></p>
+<h2>clientMessageP2P</h2>
+
+<ul>
+    <li><code>receiveLocalCoopPlayerInput</code></li>
+    <li><code>receivePlayerInput</code></li>
+</ul>
+
+
 <p><a name="clientPlayerList"></a></p>
 <h2>clientPlayerList</h2>
 
 <ul>
     <li><code>clearAllReadyFlag</code></li>
     <li><code>clearLocalCoopPlayerIDs</code></li>
+    <li><code>clearPeerCache</code></li>
     <li><code>clearResourceTransferCache</code></li>
     <li><code>clearSortedPlayerIDs</code></li>
     <li><code>updateModHashList</code></li>
@@ -3515,6 +3525,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_modLoader.portal.url.storage.base</code></li>
     <li><code>1_modLoader.portal.url.storage.image</code></li>
     <li><code>1_modLoader.portal.url.storage.package</code></li>
+    <li><code>1_net.enableP2P</code></li>
     <li><code>1_net.host</code></li>
     <li><code>1_net.host.maxPlayers</code></li>
     <li><code>1_net.host.serverType</code></li>
