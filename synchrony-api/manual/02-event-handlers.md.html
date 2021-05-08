@@ -135,6 +135,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
+  <li><a href="../modules/necro.game.item.ItemBans.html">necro.game.item.ItemBans</a></li>
   <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
@@ -143,7 +144,6 @@
   <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
-  <li><a href="../modules/necro.game.level.TestLevel.html">necro.game.level.TestLevel</a></li>
   <li><a href="../modules/necro.game.level.Wire.html">necro.game.level.Wire</a></li>
   <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
   <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
@@ -755,6 +755,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>diamonds</code></li>
     <li><code>disableBrokenObsidianSwipes</code></li>
     <li><code>foodItems</code></li>
+    <li><code>itemBans</code></li>
     <li><code>itemPools</code></li>
     <li><code>itemSlotOverrides</code></li>
     <li><code>itemSprite</code></li>
@@ -1188,7 +1189,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>forceSpawnApparition</code></li>
     <li><code>freezableReset</code></li>
     <li><code>gigantismReset</code></li>
-    <li><code>initPriceTags</code></li>
     <li><code>initialTargeting</code></li>
     <li><code>initializePendingObjectList</code></li>
     <li><code>initializeRhythmSettings</code></li>
@@ -1213,7 +1213,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetTemporaryLevelVision</code></li>
     <li><code>resetTickDelta</code></li>
     <li><code>resetTileAnimations</code></li>
-    <li><code>resetTimeScale</code></li>
     <li><code>resetTurnID</code></li>
     <li><code>respawnOnLevelTransition</code></li>
     <li><code>restoreDescendedEntities</code></li>
@@ -1279,9 +1278,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="gameStateStop"></a></p>
 <h2>gameStateStop</h2>
 
-<ul>
-    <li><code>resetTimeScale</code></li>
-</ul>
 
 
 <p><a name="gameStateSyncTime"></a></p>
@@ -2986,6 +2982,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>healthBonusAgainstPlayer</code></li>
     <li><code>hideUntilLit</code></li>
     <li><code>initFacingDirection</code></li>
+    <li><code>initPriceTag</code></li>
     <li><code>initializeAttackableFlags</code></li>
     <li><code>initializeHomeArea</code></li>
     <li><code>initializeObjectAttributes</code></li>
@@ -3186,10 +3183,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectTryCollectItem</h2>
 
 <ul>
+    <li><code>checkCursedItems</code></li>
     <li><code>checkCursedSlot</code></li>
     <li><code>checkItem</code></li>
     <li><code>checkPriceTag</code></li>
     <li><code>collectItem</code></li>
+    <li><code>itemBans</code></li>
     <li><code>noLuteForDad</code></li>
 </ul>
 
@@ -3566,9 +3565,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>2_Spectator_spectators</code></li>
     <li><code>2_Targeting_inverseTeams</code></li>
     <li><code>2_Targeting_teams</code></li>
-    <li><code>2_TimeScale_nextRegionID</code></li>
-    <li><code>2_TimeScale_scalePoints</code></li>
-    <li><code>2_TimeScale_scaleRegions</code></li>
     <li><code>2_Turn_currentTurnID</code></li>
     <li><code>2_Vision_fovMap</code></li>
     <li><code>2_Vision_revealMap</code></li>
@@ -3591,6 +3587,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_Swipe_nextID</code></li>
     <li><code>4_Tile_levelBounds</code></li>
     <li><code>4_Tile_tileMap</code></li>
+    <li><code>4_TimeScale_nextRegionID</code></li>
+    <li><code>4_TimeScale_scalePoints</code></li>
+    <li><code>4_TimeScale_scaleRegions</code></li>
 </ul>
 
 
