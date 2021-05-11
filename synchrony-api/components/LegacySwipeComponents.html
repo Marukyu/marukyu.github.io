@@ -298,7 +298,7 @@
 <h2>Components</h2>
 <ul class="nowrap">
   <li><a href="../components/AIComponents.html">AIComponents</a></li>
-  <li><strong>ActivationComponents</strong></li>
+  <li><a href="../components/ActivationComponents.html">ActivationComponents</a></li>
   <li><a href="../components/AffectorItemComponents.html">AffectorItemComponents</a></li>
   <li><a href="../components/AnimationComponents.html">AnimationComponents</a></li>
   <li><a href="../components/ApparitionComponents.html">ApparitionComponents</a></li>
@@ -329,7 +329,7 @@
   <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
   <li><a href="../components/ItemComponents.html">ItemComponents</a></li>
   <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
-  <li><a href="../components/LegacySwipeComponents.html">LegacySwipeComponents</a></li>
+  <li><strong>LegacySwipeComponents</strong></li>
   <li><a href="../components/LightComponents.html">LightComponents</a></li>
   <li><a href="../components/MinimapComponents.html">MinimapComponents</a></li>
   <li><a href="../components/MovementItemComponents.html">MovementItemComponents</a></li>
@@ -378,7 +378,7 @@
 
 <div id="content">
 
-<h1>Script <code>ActivationComponents</code></h1>
+<h1>Script <code>LegacySwipeComponents</code></h1>
 <p>
 
 </p>
@@ -390,37 +390,31 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#activationRange">activationRange</a></td>
+	<td class="name" nowrap><a href="#spellcastMultiTileSwipe">spellcastMultiTileSwipe</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#aggro">aggro</a></td>
+	<td class="name" nowrap><a href="#spellcastSwipe">spellcastSwipe</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#copyActivation">copyActivation</a></td>
+	<td class="name" nowrap><a href="#spellcastSwipeTrail">spellcastSwipeTrail</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#copyActivationFromCaster">copyActivationFromCaster</a></td>
+	<td class="name" nowrap><a href="#weaponSwipeMultiple">weaponSwipeMultiple</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#deaggroOnUnconfuse">deaggroOnUnconfuse</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#preAIAggro">preAIAggro</a></td>
+	<td class="name" nowrap><a href="#weaponSwipeTrail">weaponSwipeTrail</a></td>
 	<td class="summary">
 
 </td>
@@ -435,8 +429,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "activationRange"></a>
-    <strong>activationRange</strong>
+    <a name = "spellcastMultiTileSwipe"></a>
+    <strong>spellcastMultiTileSwipe</strong>
     </dt>
     <dd>
 
@@ -444,12 +438,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">radius</span>
-          int16
-         (<em>default</em> -1)
-        </li>
-    </ul>
 
 
 
@@ -457,8 +445,8 @@
 
 </dd>
     <dt>
-    <a name = "aggro"></a>
-    <strong>aggro</strong>
+    <a name = "spellcastSwipe"></a>
+    <strong>spellcastSwipe</strong>
     </dt>
     <dd>
 
@@ -467,68 +455,44 @@
 
 
     <ul>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
+        <li><span class="parameter">textures</span>
+         constant table
+         (<em>default</em> {})
         </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "copyActivation"></a>
-    <strong>copyActivation</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">activator</span>
-          entityID
+        <li><span class="parameter">width</span>
+         constant float
+         (<em>default</em> 24)
+        </li>
+        <li><span class="parameter">height</span>
+         constant float
+         (<em>default</em> 24)
+        </li>
+        <li><span class="parameter">frameCount</span>
+         constant int16
+         (<em>default</em> 2)
+        </li>
+        <li><span class="parameter">duration</span>
+         constant int16
+         (<em>default</em> 150)
+        </li>
+        <li><span class="parameter">offsetX</span>
+         constant float
          (<em>default</em> 0)
         </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "copyActivationFromCaster"></a>
-    <strong>copyActivationFromCaster</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "deaggroOnUnconfuse"></a>
-    <strong>deaggroOnUnconfuse</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">active</span>
-          bool
+        <li><span class="parameter">offsetY</span>
+         constant float
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">scale</span>
+         constant float
+         (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">diagonalScale</span>
+         constant float
+         (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">backLayer</span>
+         constant bool
          (<em>default</em> false)
         </li>
     </ul>
@@ -539,8 +503,8 @@
 
 </dd>
     <dt>
-    <a name = "preAIAggro"></a>
-    <strong>preAIAggro</strong>
+    <a name = "spellcastSwipeTrail"></a>
+    <strong>spellcastSwipeTrail</strong>
     </dt>
     <dd>
 
@@ -548,6 +512,84 @@
 
 
 
+    <ul>
+        <li><span class="parameter">type</span>
+         constant string
+         (<em>default</em> "trail")
+        </li>
+        <li><span class="parameter">collisionMask</span>
+         constant int32
+         (<em>default</em> collision.Group.WEAPON_CLEARANCE)
+        </li>
+        <li><span class="parameter">maxDistance</span>
+         constant int16
+         (<em>default</em> 100)
+        </li>
+        <li><span class="parameter">skipFinalTile</span>
+         constant bool
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponSwipeMultiple"></a>
+    <strong>weaponSwipeMultiple</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">type</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">data</span>
+         constant table
+         (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "weaponSwipeTrail"></a>
+    <strong>weaponSwipeTrail</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">type</span>
+         constant string
+         (<em>default</em> "trail")
+        </li>
+        <li><span class="parameter">requireLoadedAttack</span>
+         constant bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">requireThrow</span>
+         constant bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">skipFinalTile</span>
+         constant bool
+         (<em>default</em> false)
+        </li>
+    </ul>
 
 
 
