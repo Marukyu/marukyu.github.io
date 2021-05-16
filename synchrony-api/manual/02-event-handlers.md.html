@@ -81,6 +81,7 @@
   <li><a href="../modules/necro.debug.DebugDrawUtils.html">necro.debug.DebugDrawUtils</a></li>
   <li><a href="../modules/necro.debug.DebugEval.html">necro.debug.DebugEval</a></li>
   <li><a href="../modules/necro.debug.DebugOverlay.html">necro.debug.DebugOverlay</a></li>
+  <li><a href="../modules/necro.debug.DebugRollback.html">necro.debug.DebugRollback</a></li>
   <li><a href="../modules/necro.debug.DebugVisuals.html">necro.debug.DebugVisuals</a></li>
   <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
@@ -498,6 +499,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>clientAddAction</h2>
 
 <ul>
+    <li><code>addToRollbackDebugger</code></li>
     <li><code>deferDelayedTurn</code></li>
     <li><code>deferRollbackTurn</code></li>
     <li><code>setRollbackTurn</code></li>
@@ -1219,6 +1221,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetItemPickupAnimations</code></li>
     <li><code>resetLevelExitState</code></li>
     <li><code>resetLevelVariables</code></li>
+    <li><code>resetRollbackDebugger</code></li>
     <li><code>resetSlides</code></li>
     <li><code>resetSongEnd</code></li>
     <li><code>resetSounds</code></li>
@@ -1234,6 +1237,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnPlayers</code></li>
     <li><code>stopMusic</code></li>
     <li><code>switchClientActionBuffer</code></li>
+    <li><code>syncMusicTime</code></li>
     <li><code>transitionOverlays</code></li>
     <li><code>updateAttachmentEntities</code></li>
     <li><code>updateMusicLayerVolumes</code></li>
@@ -1279,6 +1283,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>releaseFastForward</code></li>
     <li><code>resetPlayerEntityList</code></li>
     <li><code>resetRhythmSettings</code></li>
+    <li><code>resetRollbackDebugger</code></li>
     <li><code>resetRunVariables</code></li>
     <li><code>resetSpectators</code></li>
     <li><code>resetSpeedrunTimer</code></li>
@@ -3334,6 +3339,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>ignoreRhythmTemporarily</code></li>
     <li><code>skipEveryNth</code></li>
     <li><code>subdivisionInnate</code></li>
+    <li><code>suspendRhythmWhileDead</code></li>
     <li><code>suspendRhythmWhileSpectating</code></li>
 </ul>
 
