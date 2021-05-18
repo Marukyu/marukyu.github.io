@@ -439,7 +439,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#trapChangeTargetFlagsOnTrigger">trapChangeTargetFlagsOnTrigger</a></td>
+	<td class="name" nowrap><a href="#trapConvert">trapConvert</a></td>
 	<td class="summary">
 
 </td>
@@ -596,10 +596,6 @@
           bool
          (<em>default</em> true)
         </li>
-        <li><span class="parameter">firstTime</span>
-          bool
-         (<em>default</em> true)
-        </li>
         <li><span class="parameter">targetFlags</span>
           int32
          (<em>default</em> attack.mask(attack.Flag.TRAP))
@@ -726,8 +722,8 @@
 
 </dd>
     <dt>
-    <a name = "trapChangeTargetFlagsOnTrigger"></a>
-    <strong>trapChangeTargetFlagsOnTrigger</strong>
+    <a name = "trapConvert"></a>
+    <strong>trapConvert</strong>
     </dt>
     <dd>
 
@@ -736,13 +732,9 @@
 
 
     <ul>
-        <li><span class="parameter">add</span>
-         constant int32
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">remove</span>
-         constant int32
-         (<em>default</em> 0)
+        <li><span class="parameter">targetType</span>
+         constant string
+         (<em>default</em> "")
         </li>
     </ul>
 
