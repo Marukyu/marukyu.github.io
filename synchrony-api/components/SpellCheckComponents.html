@@ -411,13 +411,19 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellCheckHealth">spellCheckHealth</a></td>
+	<td class="name" nowrap><a href="#spellCheckEmptySlot">spellCheckEmptySlot</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spellCheckItemInSlot">spellCheckItemInSlot</a></td>
+	<td class="name" nowrap><a href="#spellCheckHasItem">spellCheckHasItem</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spellCheckHealth">spellCheckHealth</a></td>
 	<td class="summary">
 
 </td>
@@ -524,6 +530,58 @@
 
 </dd>
     <dt>
+    <a name = "spellCheckEmptySlot"></a>
+    <strong>spellCheckEmptySlot</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">slot</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">value</span>
+         constant bool
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spellCheckHasItem"></a>
+    <strong>spellCheckHasItem</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">item</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">value</span>
+         constant bool
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "spellCheckHealth"></a>
     <strong>spellCheckHealth</strong>
     </dt>
@@ -541,32 +599,6 @@
         <li><span class="parameter">max</span>
          constant int16
          (<em>default</em> -1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spellCheckItemInSlot"></a>
-    <strong>spellCheckItemInSlot</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">slot</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-        <li><span class="parameter">item</span>
-         constant string
-         (<em>default</em> "")
         </li>
     </ul>
 
