@@ -152,7 +152,6 @@
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
   <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
-  <li><a href="../modules/necro.game.object.RowMap.html">necro.game.object.RowMap</a></li>
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
@@ -178,7 +177,6 @@
   <li><a href="../modules/necro.game.tile.DigMultiHit.html">necro.game.tile.DigMultiHit</a></li>
   <li><a href="../modules/necro.game.tile.LevelExit.html">necro.game.tile.LevelExit</a></li>
   <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
-  <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
   <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
@@ -214,6 +212,7 @@
   <li><a href="../modules/necro.render.hud.HUD.html">necro.render.hud.HUD</a></li>
   <li><a href="../modules/necro.render.hud.HUDLayout.html">necro.render.hud.HUDLayout</a></li>
   <li><a href="../modules/necro.render.hud.HeartbeatHUD.html">necro.render.hud.HeartbeatHUD</a></li>
+  <li><a href="../modules/necro.render.hud.Minimap.html">necro.render.hud.Minimap</a></li>
   <li><a href="../modules/necro.render.hud.inventory.InventoryHUD.html">necro.render.hud.inventory.InventoryHUD</a></li>
   <li><a href="../modules/necro.render.level.Animations.html">necro.render.level.Animations</a></li>
   <li><a href="../modules/necro.render.level.EquipmentSprite.html">necro.render.level.EquipmentSprite</a></li>
@@ -1459,6 +1458,7 @@
     <li><code>collision</code></li>
     <li><code>move</code></li>
     <li><code>attach</code></li>
+    <li><code>rowOrder</code></li>
     <li><code>cast</code></li>
     <li><code>sound</code></li>
     <li><code>grooveChain</code></li>
@@ -1993,6 +1993,7 @@
 
 <ul>
     <li><code>detach</code></li>
+    <li><code>rowOrder</code></li>
     <li><code>collision</code></li>
     <li><code>statusEffects</code></li>
     <li><code>ai</code></li>
@@ -2395,14 +2396,6 @@
 <p><a name="menu"></a></p>
 <h2>menu</h2>
 
-
-
-<p><a name="minimapUpdate"></a></p>
-<h2>minimapUpdate</h2>
-
-<ul>
-    <li><code>render</code></li>
-</ul>
 
 
 <p><a name="modLoaded"></a></p>
@@ -2958,6 +2951,7 @@
     <li><code>collision</code></li>
     <li><code>move</code></li>
     <li><code>attach</code></li>
+    <li><code>rowOrder</code></li>
     <li><code>cast</code></li>
     <li><code>sound</code></li>
     <li><code>grooveChain</code></li>
@@ -3492,6 +3486,7 @@
 
 <ul>
     <li><code>detach</code></li>
+    <li><code>rowOrder</code></li>
     <li><code>collision</code></li>
     <li><code>statusEffects</code></li>
     <li><code>ai</code></li>
@@ -3734,6 +3729,7 @@
     <li><code>priceTags</code></li>
     <li><code>swipesBack</code></li>
     <li><code>particlesBack</code></li>
+    <li><code>rowMap</code></li>
     <li><code>objects</code></li>
     <li><code>contents</code></li>
     <li><code>itemLabels</code></li>
@@ -4205,9 +4201,9 @@
     <li><code>playerFocus</code></li>
     <li><code>animationTimer</code></li>
     <li><code>turn</code></li>
+    <li><code>updateVisualObjects</code></li>
     <li><code>segmentVisibility</code></li>
     <li><code>visibility</code></li>
-    <li><code>updateVisualObjects</code></li>
     <li><code>minimap</code></li>
     <li><code>gameOver</code></li>
     <li><code>chat</code></li>
@@ -4416,6 +4412,18 @@
 </ul>
 
 
+<p><a name="updateVisuals"></a></p>
+<h2>updateVisuals</h2>
+
+<ul>
+    <li><code>equipmentSpriteRow</code></li>
+    <li><code>targetProximityFadeEffect</code></li>
+    <li><code>segmentVisibility</code></li>
+    <li><code>visibility</code></li>
+    <li><code>minimap</code></li>
+</ul>
+
+
 <p><a name="visibility"></a></p>
 <h2>visibility</h2>
 
@@ -4432,6 +4440,7 @@
     <li><code>hiddenByTileBrightness</code></li>
     <li><code>visibilityCopyFromParent</code></li>
     <li><code>segmentVisibility</code></li>
+    <li><code>renderRadius</code></li>
     <li><code>unsilhouetteInvisible</code></li>
     <li><code>fullyVisible</code></li>
     <li><code>healthBarVisibility</code></li>

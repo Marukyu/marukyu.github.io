@@ -152,7 +152,6 @@
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
   <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
-  <li><a href="../modules/necro.game.object.RowMap.html">necro.game.object.RowMap</a></li>
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
@@ -178,7 +177,6 @@
   <li><a href="../modules/necro.game.tile.DigMultiHit.html">necro.game.tile.DigMultiHit</a></li>
   <li><a href="../modules/necro.game.tile.LevelExit.html">necro.game.tile.LevelExit</a></li>
   <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
-  <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
   <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
@@ -214,6 +212,7 @@
   <li><a href="../modules/necro.render.hud.HUD.html">necro.render.hud.HUD</a></li>
   <li><a href="../modules/necro.render.hud.HUDLayout.html">necro.render.hud.HUDLayout</a></li>
   <li><a href="../modules/necro.render.hud.HeartbeatHUD.html">necro.render.hud.HeartbeatHUD</a></li>
+  <li><a href="../modules/necro.render.hud.Minimap.html">necro.render.hud.Minimap</a></li>
   <li><a href="../modules/necro.render.hud.inventory.InventoryHUD.html">necro.render.hud.inventory.InventoryHUD</a></li>
   <li><a href="../modules/necro.render.level.Animations.html">necro.render.level.Animations</a></li>
   <li><a href="../modules/necro.render.level.EquipmentSprite.html">necro.render.level.EquipmentSprite</a></li>
@@ -713,7 +712,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearXMLMappings</code></li>
     <li><code>entitySelector</code></li>
     <li><code>invalidateObjectSelectorCache</code></li>
-    <li><code>resetObjectRowMap</code></li>
 </ul>
 
 
@@ -2077,6 +2075,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>assignCurrentLevelInfo</code></li>
+    <li><code>checkBackgroundWalls</code></li>
     <li><code>congaLine</code></li>
     <li><code>loadEntities</code></li>
     <li><code>loadLevelTileMap</code></li>
@@ -2168,14 +2167,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>seedEntry</code></li>
     <li><code>settings</code></li>
     <li><code>win</code></li>
-</ul>
-
-
-<p><a name="minimapUpdate"></a></p>
-<h2>minimapUpdate</h2>
-
-<ul>
-    <li><code>enqueueMinimapRender</code></li>
 </ul>
 
 
@@ -2540,7 +2531,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>detachController</code></li>
     <li><code>detachItemBeforeDespawning</code></li>
     <li><code>provokeOnAddsDeath</code></li>
-    <li><code>removeFromRowMap</code></li>
     <li><code>stopAudioLoop</code></li>
     <li><code>unlockStairsFromMiniboss</code></li>
     <li><code>unlockStairsFromSarcophagus</code></li>
@@ -2681,6 +2671,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>denyKillCredit</code></li>
     <li><code>dropGrooveChain</code></li>
     <li><code>grabAttachment</code></li>
+    <li><code>grabRowOrder</code></li>
     <li><code>increaseHealth</code></li>
     <li><code>inflictConfusion</code></li>
     <li><code>moveOntoVictim</code></li>
@@ -2818,7 +2809,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>moveGrabber</code></li>
     <li><code>moveLightSource</code></li>
     <li><code>moveObjectMapEntry</code></li>
-    <li><code>moveObjectMapRowEntry</code></li>
     <li><code>offWallConvert</code></li>
     <li><code>parityWalkSound</code></li>
     <li><code>promote</code></li>
@@ -2890,7 +2880,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>addItemAfterConverting</code></li>
-    <li><code>addToRowMap</code></li>
     <li><code>aiidReset</code></li>
     <li><code>animationFreezeEffectactiveReset</code></li>
     <li><code>charge</code></li>
@@ -2898,6 +2887,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>enableLightSource</code></li>
     <li><code>itemStackquantityReset</code></li>
     <li><code>postConvertBeatDelay</code></li>
+    <li><code>rowOrderzReset</code></li>
     <li><code>soundPostConvert</code></li>
     <li><code>spawnAttachment</code></li>
     <li><code>spellCooldownKillsremainingKillsReset</code></li>
@@ -2922,7 +2912,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnAttachment</code></li>
     <li><code>detachItemBeforeConverting</code></li>
     <li><code>disableLightSource</code></li>
-    <li><code>removeFromRowMap</code></li>
     <li><code>soundPreConvert</code></li>
 </ul>
 
@@ -3247,6 +3236,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>removeConfusion</code></li>
     <li><code>resetCollision</code></li>
     <li><code>restoreAI</code></li>
+    <li><code>ungrabRowOrder</code></li>
 </ul>
 
 
@@ -3590,8 +3580,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>2_Player_playerCharacterTypes</code></li>
     <li><code>2_Player_playerEntityIDs</code></li>
     <li><code>2_RNG_globalRandom</code></li>
-    <li><code>2_RowMap_offset</code></li>
-    <li><code>2_RowMap_rows</code></li>
     <li><code>2_Segment_segments</code></li>
     <li><code>2_Spectator_spectators</code></li>
     <li><code>2_Targeting_inverseTeams</code></li>
@@ -3663,6 +3651,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderPlayerNames</code></li>
     <li><code>renderPriceTags</code></li>
     <li><code>renderSecretShopLabels</code></li>
+    <li><code>renderShadows</code></li>
     <li><code>renderShrineHintLabels</code></li>
     <li><code>renderSwipes</code></li>
     <li><code>renderWorldLabels</code></li>
@@ -3679,7 +3668,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>animateFadeEffect</code></li>
     <li><code>animateHoverEffect</code></li>
-    <li><code>animateTargetProximityFadeEffect</code></li>
     <li><code>applyBlinkEffect</code></li>
     <li><code>applyCropOnDescentEffect</code></li>
     <li><code>applyCropOnSinkEffect</code></li>
@@ -4204,10 +4192,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>cleanUpTimedOutOverlays</code></li>
     <li><code>debugDocs</code></li>
     <li><code>debugKeys</code></li>
-    <li><code>entityVisibility</code></li>
     <li><code>fetchGeneratedLevels</code></li>
     <li><code>handleChat</code></li>
-    <li><code>initializeMinimap</code></li>
     <li><code>lazyLoadModImages</code></li>
     <li><code>networkClient</code></li>
     <li><code>networkServer</code></li>
@@ -4227,14 +4213,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>syncNetworkGameState</code></li>
     <li><code>updateAnimationTimer</code></li>
     <li><code>updateAudioFilter</code></li>
-    <li><code>updateEquipmentSpriteRow</code></li>
     <li><code>updateFocusedPlayers</code></li>
     <li><code>updateInputControls</code></li>
     <li><code>updateMusic</code></li>
     <li><code>updateNetworkModReadiness</code></li>
-    <li><code>updateSegmentVisibility</code></li>
     <li><code>updateSounds</code></li>
     <li><code>updateVisibility</code></li>
+    <li><code>updateVisualObjects</code></li>
 </ul>
 
 
@@ -4258,7 +4243,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>recreateLightSources</code></li>
     <li><code>resetObjectMap</code></li>
-    <li><code>resetObjectRowMap</code></li>
     <li><code>updateCollisionMap</code></li>
     <li><code>updateMinimap</code></li>
     <li><code>updateTargetPointer</code></li>
@@ -4473,6 +4457,18 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="updateVisuals"></a></p>
+<h2>updateVisuals</h2>
+
+<ul>
+    <li><code>entityVisibility</code></li>
+    <li><code>equipmentSpriteRow</code></li>
+    <li><code>minimap</code></li>
+    <li><code>segmentVisibility</code></li>
+    <li><code>targetProximityFadeEffect</code></li>
+</ul>
+
+
 <p><a name="visibility"></a></p>
 <h2>visibility</h2>
 
@@ -4482,7 +4478,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenByTileBrightness</code></li>
     <li><code>hiddenUntilProximity</code></li>
-    <li><code>rowMap</code></li>
+    <li><code>renderRadius</code></li>
     <li><code>segmentVisibility</code></li>
     <li><code>silhouetteByPerspective</code></li>
     <li><code>silhouetteDefault</code></li>
