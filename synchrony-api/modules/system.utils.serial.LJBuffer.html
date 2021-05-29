@@ -54,7 +54,7 @@
   <li><a href="../modules/necro.client.ClientEvents.html">necro.client.ClientEvents</a></li>
   <li><a href="../modules/necro.client.FastForward.html">necro.client.FastForward</a></li>
   <li><a href="../modules/necro.client.GameClient.html">necro.client.GameClient</a></li>
-  <li><strong>necro.client.GameSession</strong></li>
+  <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
   <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
   <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
   <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
@@ -293,7 +293,7 @@
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
   <li><a href="../modules/system.utils.Timer.html">system.utils.Timer</a></li>
   <li><a href="../modules/system.utils.Utilities.html">system.utils.Utilities</a></li>
-  <li><a href="../modules/system.utils.serial.LJBuffer.html">system.utils.serial.LJBuffer</a></li>
+  <li><strong>system.utils.serial.LJBuffer</strong></li>
   <li><a href="../modules/system.utils.serial.LTN.html">system.utils.serial.LTN</a></li>
   <li><a href="../modules/system.utils.serial.Serialization.html">system.utils.serial.Serialization</a></li>
   <li><a href="../modules/system.utils.serial.ZStandard.html">system.utils.serial.ZStandard</a></li>
@@ -382,7 +382,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.client.GameSession</code></h1>
+<h1>Module <code>system.utils.serial.LJBuffer</code></h1>
 <p>
 
 </p>
@@ -394,70 +394,13 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#getCurrentMode">getCurrentMode ()</a></td>
+	<td class="name" nowrap><a href="#determinize">determinize (str)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getCurrentModeID">getCurrentModeID ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getDungeonSeed">getDungeonSeed ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#goToLevel">goToLevel (levelNumber, delay)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#isLevelAvailable">isLevelAvailable (levelNumber)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#nextLevel">nextLevel (delay)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#registerMode">registerMode (modeData)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#restart">restart (delay)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#start">start (parameters, delay)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-</table>
-<h2><a href="#Tables">Tables</a></h2>
-<table class="function_list">
-	<tr>
-	<td class="name" nowrap><a href="#Mode">Mode</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#SeedMode">SeedMode</a></td>
+	<td class="name" nowrap><a href="#safeEncode">safeEncode (value)</a></td>
 	<td class="summary">
 
 </td>
@@ -472,56 +415,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "getCurrentMode"></a>
-    <strong>getCurrentMode ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getCurrentModeID"></a>
-    <strong>getCurrentModeID ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getDungeonSeed"></a>
-    <strong>getDungeonSeed ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "goToLevel"></a>
-    <strong>goToLevel (levelNumber, delay)</strong>
+    <a name = "determinize"></a>
+    <strong>determinize (str)</strong>
     </dt>
     <dd>
 
@@ -531,12 +426,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">levelNumber</span>
-
-
-
-        </li>
-        <li><span class="parameter">delay</span>
+        <li><span class="parameter">str</span>
 
 
 
@@ -549,8 +439,8 @@
 
 </dd>
     <dt>
-    <a name = "isLevelAvailable"></a>
-    <strong>isLevelAvailable (levelNumber)</strong>
+    <a name = "safeEncode"></a>
+    <strong>safeEncode (value)</strong>
     </dt>
     <dd>
 
@@ -560,171 +450,10 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">levelNumber</span>
+        <li><span class="parameter">value</span>
 
 
 
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "nextLevel"></a>
-    <strong>nextLevel (delay)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">delay</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "registerMode"></a>
-    <strong>registerMode (modeData)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">modeData</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "restart"></a>
-    <strong>restart (delay)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">delay</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "start"></a>
-    <strong>start (parameters, delay)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">parameters</span>
-
-
-
-        </li>
-        <li><span class="parameter">delay</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-</dl>
-    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
-
-    <dl class="function">
-    <dt>
-    <a name = "Mode"></a>
-    <strong>Mode</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Fields:</h3>
-    <ul>
-        <li><span class="parameter">AllZones</span>
-         "AllZones"
-        </li>
-        <li><span class="parameter">AllZonesSeeded</span>
-         "AllZonesSeeded"
-        </li>
-        <li><span class="parameter">CustomDungeon</span>
-         "CustomDungeon"
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "SeedMode"></a>
-    <strong>SeedMode</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Fields:</h3>
-    <ul>
-        <li><span class="parameter">NONE</span>
-         0
-        </li>
-        <li><span class="parameter">RANDOM</span>
-         1
-        </li>
-        <li><span class="parameter">MANUAL</span>
-         2
         </li>
     </ul>
 
