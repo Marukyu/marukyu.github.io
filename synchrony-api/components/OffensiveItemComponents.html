@@ -400,12 +400,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#itemAttackBaseDamageIncreaseOnDig">itemAttackBaseDamageIncreaseOnDig</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#itemAttackBaseDamageMultiplier">itemAttackBaseDamageMultiplier</a></td>
 	<td class="summary">
 
@@ -443,6 +437,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#itemConditionalDamageOnCurrencyGain">itemConditionalDamageOnCurrencyGain</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemConditionalDamageOnDig">itemConditionalDamageOnDig</a></td>
 	<td class="summary">
 
 </td>
@@ -510,44 +510,6 @@
         <li><span class="parameter">increase</span>
          constant int16
          (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemAttackBaseDamageIncreaseOnDig"></a>
-    <strong>itemAttackBaseDamageIncreaseOnDig</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">damageType</span>
-         constant int32
-         (<em>default</em> damage.Flag.STRENGTH_BASED)
-        </li>
-        <li><span class="parameter">minimumDigStrength</span>
-         constant int8
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">increase</span>
-         constant int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">pending</span>
-          bool
-         (<em>default</em> false)
-        </li>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
         </li>
     </ul>
 
@@ -687,9 +649,9 @@
          constant bool
          (<em>default</em> false)
         </li>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> false)
+        <li><span class="parameter">remainingTurns</span>
+          int16
+         (<em>default</em> 0)
         </li>
     </ul>
 
@@ -729,8 +691,26 @@
          constant string
          (<em>default</em> currency.Type.GOLD)
         </li>
-        <li><span class="parameter">quantity</span>
-          int32
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemConditionalDamageOnDig"></a>
+    <strong>itemConditionalDamageOnDig</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">minimumDigStrength</span>
+         constant int8
          (<em>default</em> 0)
         </li>
     </ul>
@@ -753,7 +733,7 @@
     <ul>
         <li><span class="parameter">threshold</span>
          constant int16
-         (<em>default</em> 0)
+         (<em>default</em> 1)
         </li>
     </ul>
 
@@ -772,6 +752,12 @@
 
 
 
+    <ul>
+        <li><span class="parameter">threshold</span>
+         constant int8
+         (<em>default</em> 0)
+        </li>
+    </ul>
 
 
 
