@@ -462,6 +462,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyTellAnimations</code></li>
     <li><code>applyTrapActivationAnimations</code></li>
     <li><code>applyTrapArmedAnimations</code></li>
+    <li><code>applyWireAnimation</code></li>
     <li><code>applyWiredAnimations</code></li>
     <li><code>freezeAnimationFrame</code></li>
 </ul>
@@ -496,6 +497,46 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>performAction</code></li>
     <li><code>resetCooldown</code></li>
     <li><code>selectDirectionalAction</code></li>
+</ul>
+
+
+<p><a name="bossFightEnd"></a></p>
+<h2>bossFightEnd</h2>
+
+<ul>
+    <li><code>clearHazards</code></li>
+    <li><code>createExitRoom</code></li>
+    <li><code>deleteEnemies</code></li>
+    <li><code>flawlessChests</code></li>
+    <li><code>flyaway</code></li>
+    <li><code>gold</code></li>
+    <li><code>revealLevel</code></li>
+    <li><code>screenFlash</code></li>
+    <li><code>sound</code></li>
+</ul>
+
+
+<p><a name="bossFightStart"></a></p>
+<h2>bossFightStart</h2>
+
+<ul>
+    <li><code>closeTheDoors</code></li>
+    <li><code>deleteStartingRoomEntities</code></li>
+    <li><code>moveSpawn</code></li>
+    <li><code>revealAll</code></li>
+    <li><code>sound</code></li>
+    <li><code>teleportPlayers</code></li>
+</ul>
+
+
+<p><a name="bossSummon"></a></p>
+<h2>bossSummon</h2>
+
+<ul>
+    <li><code>aggro</code></li>
+    <li><code>currencyDrop</code></li>
+    <li><code>killCredit</code></li>
+    <li><code>spawnLight</code></li>
 </ul>
 
 
@@ -2425,7 +2466,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>activateSacrifice</code></li>
-    <li><code>bossDeath</code></li>
+    <li><code>bossFightEnd</code></li>
     <li><code>castOnDeath</code></li>
     <li><code>checkExitCondition</code></li>
     <li><code>checkKillCredit</code></li>
@@ -3601,6 +3642,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_Boss_bossFlawless</code></li>
     <li><code>4_Boss_bossPending</code></li>
     <li><code>4_Boss_noPlayerHasActed</code></li>
+    <li><code>4_Boss_spawnCount</code></li>
     <li><code>4_Delay_pendingDelays</code></li>
     <li><code>4_Flyaway_activeFlyaways</code></li>
     <li><code>4_Flyaway_nextID</code></li>
