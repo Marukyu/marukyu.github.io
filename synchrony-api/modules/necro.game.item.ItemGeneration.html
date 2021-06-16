@@ -66,9 +66,14 @@
   <li><a href="../modules/necro.client.PlayerList.html">necro.client.PlayerList</a></li>
   <li><a href="../modules/necro.client.Resources.html">necro.client.Resources</a></li>
   <li><a href="../modules/necro.client.Rollback.html">necro.client.Rollback</a></li>
+  <li><a href="../modules/necro.client.Room.html">necro.client.Room</a></li>
   <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
   <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
+  <li><a href="../modules/necro.client.replay.Replay.html">necro.client.replay.Replay</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayControls.html">necro.client.replay.ReplayControls</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
@@ -77,6 +82,7 @@
   <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
   <li><a href="../modules/necro.cycles.Turn.html">necro.cycles.Turn</a></li>
+  <li><a href="../modules/necro.cycles.VisualUpdate.html">necro.cycles.VisualUpdate</a></li>
   <li><a href="../modules/necro.debug.DebugCommands.html">necro.debug.DebugCommands</a></li>
   <li><a href="../modules/necro.debug.DebugDrawUtils.html">necro.debug.DebugDrawUtils</a></li>
   <li><a href="../modules/necro.debug.DebugEval.html">necro.debug.DebugEval</a></li>
@@ -235,6 +241,7 @@
   <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
   <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
   <li><a href="../modules/necro.server.ServerPlayerList.html">necro.server.ServerPlayerList</a></li>
+  <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
   <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
@@ -293,6 +300,7 @@
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
   <li><a href="../modules/system.utils.Timer.html">system.utils.Timer</a></li>
+  <li><a href="../modules/system.utils.Try.html">system.utils.Try</a></li>
   <li><a href="../modules/system.utils.Utilities.html">system.utils.Utilities</a></li>
   <li><a href="../modules/system.utils.serial.LJBuffer.html">system.utils.serial.LJBuffer</a></li>
   <li><a href="../modules/system.utils.serial.LTN.html">system.utils.serial.LTN</a></li>
@@ -338,7 +346,6 @@
   <li><a href="../components/PositionComponents.html">PositionComponents</a></li>
   <li><a href="../components/RunStateComponents.html">RunStateComponents</a></li>
   <li><a href="../components/TileInteractionComponents.html">TileInteractionComponents</a></li>
-  <li><a href="../components/TileTransformationComponents.html">TileTransformationComponents</a></li>
   <li><a href="../components/XMLMappingComponents.html">XMLMappingComponents</a></li>
   <li><a href="../components/AnimationComponents.html">AnimationComponents</a></li>
   <li><a href="../components/CharacterSpriteComponents.html">CharacterSpriteComponents</a></li>
@@ -367,6 +374,7 @@
   <li><a href="../components/RhythmItemComponents.html">RhythmItemComponents</a></li>
   <li><a href="../components/SpellItemComponents.html">SpellItemComponents</a></li>
   <li><a href="../components/WeaponComponents.html">WeaponComponents</a></li>
+  <li><a href="../components/DigComponents.html">DigComponents</a></li>
   <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
   <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/TrapComponents.html">TrapComponents</a></li>
@@ -376,7 +384,6 @@
   <li><a href="../components/LightComponents.html">LightComponents</a></li>
   <li><a href="../components/VisibilityComponents.html">VisibilityComponents</a></li>
   <li><a href="../components/VisionComponents.html">VisionComponents</a></li>
-  <li><a href="../components/WallLightComponents.html">WallLightComponents</a></li>
 </ul>
 
 </div>
@@ -395,13 +402,19 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#choice">choice (args)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#markSeen">markSeen (item, count, state)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#transmute">transmute (item, channel, chanceType, levelBonus, slot, ...)</a></td>
+	<td class="name" nowrap><a href="#randomPlayer">randomPlayer (channel)</a></td>
 	<td class="summary">
 
 </td>
@@ -419,6 +432,15 @@
 </td>
 	</tr>
 </table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#MarkSeenOnPickup">MarkSeenOnPickup</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+</table>
 
 <br/>
 <br/>
@@ -427,6 +449,30 @@
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "choice"></a>
+    <strong>choice (args)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">args</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
     <dt>
     <a name = "markSeen"></a>
     <strong>markSeen (item, count, state)</strong>
@@ -462,8 +508,8 @@
 
 </dd>
     <dt>
-    <a name = "transmute"></a>
-    <strong>transmute (item, channel, chanceType, levelBonus, slot, ...)</strong>
+    <a name = "randomPlayer"></a>
+    <strong>randomPlayer (channel)</strong>
     </dt>
     <dd>
 
@@ -473,32 +519,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">item</span>
-
-
-
-        </li>
         <li><span class="parameter">channel</span>
-
-
-
-        </li>
-        <li><span class="parameter">chanceType</span>
-
-
-
-        </li>
-        <li><span class="parameter">levelBonus</span>
-
-
-
-        </li>
-        <li><span class="parameter">slot</span>
-
-
-
-        </li>
-        <li><span class="parameter">...</span>
 
 
 
@@ -580,6 +601,35 @@
 
 
 
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "MarkSeenOnPickup"></a>
+    <strong>MarkSeenOnPickup</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">ALWAYS</span>
+         1
+        </li>
+        <li><span class="parameter">NEVER</span>
+         2
         </li>
     </ul>
 

@@ -66,9 +66,14 @@
   <li><a href="../modules/necro.client.PlayerList.html">necro.client.PlayerList</a></li>
   <li><a href="../modules/necro.client.Resources.html">necro.client.Resources</a></li>
   <li><a href="../modules/necro.client.Rollback.html">necro.client.Rollback</a></li>
+  <li><a href="../modules/necro.client.Room.html">necro.client.Room</a></li>
   <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
   <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
+  <li><a href="../modules/necro.client.replay.Replay.html">necro.client.replay.Replay</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayControls.html">necro.client.replay.ReplayControls</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
@@ -77,6 +82,7 @@
   <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
   <li><a href="../modules/necro.cycles.Turn.html">necro.cycles.Turn</a></li>
+  <li><a href="../modules/necro.cycles.VisualUpdate.html">necro.cycles.VisualUpdate</a></li>
   <li><a href="../modules/necro.debug.DebugCommands.html">necro.debug.DebugCommands</a></li>
   <li><a href="../modules/necro.debug.DebugDrawUtils.html">necro.debug.DebugDrawUtils</a></li>
   <li><a href="../modules/necro.debug.DebugEval.html">necro.debug.DebugEval</a></li>
@@ -235,6 +241,7 @@
   <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
   <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
   <li><a href="../modules/necro.server.ServerPlayerList.html">necro.server.ServerPlayerList</a></li>
+  <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
   <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
@@ -293,6 +300,7 @@
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
   <li><a href="../modules/system.utils.Timer.html">system.utils.Timer</a></li>
+  <li><a href="../modules/system.utils.Try.html">system.utils.Try</a></li>
   <li><a href="../modules/system.utils.Utilities.html">system.utils.Utilities</a></li>
   <li><a href="../modules/system.utils.serial.LJBuffer.html">system.utils.serial.LJBuffer</a></li>
   <li><a href="../modules/system.utils.serial.LTN.html">system.utils.serial.LTN</a></li>
@@ -323,6 +331,7 @@
   <li><a href="../components/CurrencyComponents.html">CurrencyComponents</a></li>
   <li><a href="../components/DefensiveItemComponents.html">DefensiveItemComponents</a></li>
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
+  <li><a href="../components/DigComponents.html">DigComponents</a></li>
   <li><a href="../components/DigItemComponents.html">DigItemComponents</a></li>
   <li><a href="../components/EquipmentSpriteComponents.html">EquipmentSpriteComponents</a></li>
   <li><a href="../components/FollowerComponents.html">FollowerComponents</a></li>
@@ -368,13 +377,11 @@
   <li><a href="../components/TextLabelComponents.html">TextLabelComponents</a></li>
   <li><a href="../components/TickleComponents.html">TickleComponents</a></li>
   <li><a href="../components/TileInteractionComponents.html">TileInteractionComponents</a></li>
-  <li><a href="../components/TileTransformationComponents.html">TileTransformationComponents</a></li>
   <li><a href="../components/TrapComponents.html">TrapComponents</a></li>
   <li><a href="../components/TweenComponents.html">TweenComponents</a></li>
   <li><a href="../components/VisibilityComponents.html">VisibilityComponents</a></li>
   <li><a href="../components/VisionComponents.html">VisionComponents</a></li>
   <li><a href="../components/VoiceComponents.html">VoiceComponents</a></li>
-  <li><a href="../components/WallLightComponents.html">WallLightComponents</a></li>
   <li><a href="../components/WeaponComponents.html">WeaponComponents</a></li>
   <li><a href="../components/XMLMappingComponents.html">XMLMappingComponents</a></li>
 </ul>
@@ -1417,6 +1424,10 @@
         <li><span class="parameter">distance</span>
          constant float
          (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">fadedOpacity</span>
+         constant int16
+         (<em>default</em> 0)
         </li>
     </ul>
 
