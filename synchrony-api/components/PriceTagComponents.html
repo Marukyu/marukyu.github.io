@@ -402,12 +402,6 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#magicTile">magicTile</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#priceTag">priceTag</a></td>
 	<td class="summary">
 
@@ -491,6 +485,48 @@
 
 </td>
 	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#transactionDeleteItem">transactionDeleteItem</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#transactionFlyaway">transactionFlyaway</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#transactionSellItem">transactionSellItem</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#transactionSound">transactionSound</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#transactionSpawnItem">transactionSpawnItem</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#transactionTeleportClient">transactionTeleportClient</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#trapTransaction">trapTransaction</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
 </table>
 
 <br/>
@@ -500,40 +536,6 @@
     <h2 class="section-header "><a name="Components"></a>Components</h2>
 
     <dl class="function">
-    <dt>
-    <a name = "magicTile"></a>
-    <strong>magicTile</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">slot</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-        <li><span class="parameter">shopkeeper</span>
-          entityID
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">targetX</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">targetY</span>
-          int16
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
     <dt>
     <a name = "priceTag"></a>
     <strong>priceTag</strong>
@@ -828,6 +830,174 @@
         <li><span class="parameter">stolenShopkeepers</span>
           table
          (<em>default</em> {})
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "transactionDeleteItem"></a>
+    <strong>transactionDeleteItem</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">errorFlyaway</span>
+         constant string
+         (<em>default</em> "You have no item in that slot!")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "transactionFlyaway"></a>
+    <strong>transactionFlyaway</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">text</span>
+         constant string
+         (<em>default</em> "Success!")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "transactionSellItem"></a>
+    <strong>transactionSellItem</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">errorFlyaway</span>
+         constant string
+         (<em>default</em> "I won't buy that!")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "transactionSound"></a>
+    <strong>transactionSound</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">sound</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "transactionSpawnItem"></a>
+    <strong>transactionSpawnItem</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">chanceType</span>
+         constant string
+         (<em>default</em> "secret")
+        </li>
+        <li><span class="parameter">levelBonus</span>
+         constant int8
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">errorFlyaway</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "transactionTeleportClient"></a>
+    <strong>transactionTeleportClient</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "trapTransaction"></a>
+    <strong>trapTransaction</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">slot</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">shopkeeper</span>
+          entityID
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">targetX</span>
+          int16
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">targetY</span>
+          int16
+         (<em>default</em> 0)
         </li>
     </ul>
 
