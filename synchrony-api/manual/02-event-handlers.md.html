@@ -701,7 +701,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>updateAnimationTimeScale</code></li>
     <li><code>updateSpectatorHUD</code></li>
-    <li><code>updateSpeedrunTimeScale</code></li>
 </ul>
 
 
@@ -1255,6 +1254,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>closeAllMenus</code></li>
     <li><code>initializeLobby</code></li>
     <li><code>playLobbyMusic</code></li>
+    <li><code>resetRoomAttributes</code></li>
 </ul>
 
 
@@ -1267,6 +1267,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>gameStateLevel</h2>
 
 <ul>
+    <li><code>addLevelTime</code></li>
     <li><code>barrierReset</code></li>
     <li><code>bossFloor</code></li>
     <li><code>captureAudience</code></li>
@@ -1386,14 +1387,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="gameStateStop"></a></p>
 <h2>gameStateStop</h2>
 
-
-
-<p><a name="gameStateSyncTime"></a></p>
-<h2>gameStateSyncTime</h2>
-
-<ul>
-    <li><code>synchronizeSpeedrunTimer</code></li>
-</ul>
 
 
 <p><a name="gameStateUnpause"></a></p>
@@ -2146,6 +2139,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playConsumptionSound</code></li>
     <li><code>reduceStackSize</code></li>
     <li><code>resetDamageCountdown</code></li>
+</ul>
+
+
+<p><a name="levelComplete"></a></p>
+<h2>levelComplete</h2>
+
+<ul>
+    <li><code>finalizeSpeedrunTimer</code></li>
+    <li><code>switchToNextLevel</code></li>
 </ul>
 
 
@@ -3705,6 +3707,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>3_Overlay_activeOverlays</code></li>
     <li><code>3_RNG_seededRandom</code></li>
     <li><code>3_RunState_state</code></li>
+    <li><code>3_SpeedrunTimer_currentLevelCompletionTurn</code></li>
     <li><code>4_Ambush_savedTiles</code></li>
     <li><code>4_Apparition_spawnCooldowns</code></li>
     <li><code>4_Boss_bossFlawless</code></li>
