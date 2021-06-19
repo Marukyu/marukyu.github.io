@@ -1305,7 +1305,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetItemPickupAnimations</code></li>
     <li><code>resetLevelExitState</code></li>
     <li><code>resetLevelVariables</code></li>
-    <li><code>resetPendingTransition</code></li>
     <li><code>resetRollbackDebugger</code></li>
     <li><code>resetSlides</code></li>
     <li><code>resetSongEnd</code></li>
@@ -1314,6 +1313,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetTemporaryLevelVision</code></li>
     <li><code>resetTickDelta</code></li>
     <li><code>resetTileAnimations</code></li>
+    <li><code>resetTransitionLockout</code></li>
     <li><code>resetTurnID</code></li>
     <li><code>respawnOnLevelTransition</code></li>
     <li><code>restoreDescendedEntities</code></li>
@@ -1326,6 +1326,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>syncMusicTime</code></li>
     <li><code>transitionOverlays</code></li>
     <li><code>updateAttachmentEntities</code></li>
+    <li><code>updateCurrentLevelInfo</code></li>
     <li><code>updateMusicLayerVolumes</code></li>
     <li><code>updateStasisFade</code></li>
     <li><code>updateVisMapInstantly</code></li>
@@ -1372,7 +1373,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetReplayPlaybackState</code></li>
     <li><code>resetRhythmSettings</code></li>
     <li><code>resetRollbackDebugger</code></li>
-    <li><code>resetRunStartTargetTime</code></li>
     <li><code>resetRunVariables</code></li>
     <li><code>resetSpectatorHUD</code></li>
     <li><code>resetSpectators</code></li>
@@ -3685,7 +3685,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_video.hud.splitBottomMargin</code></li>
     <li><code>1_video.itemHints</code></li>
     <li><code>1_video.itemHintsDistance</code></li>
-    <li><code>1_video.itemName</code></li>
+    <li><code>1_video.itemNames</code></li>
     <li><code>1_video.lazyWireFlash</code></li>
     <li><code>1_video.playerNameRenderDistance</code></li>
     <li><code>1_video.screenFlash</code></li>
@@ -4040,6 +4040,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>receivePlayerAttribute</code></li>
     <li><code>receiveRoomAttribute</code></li>
     <li><code>removeLocalCoopPlayer</code></li>
+    <li><code>sequenceSync</code></li>
 </ul>
 
 
@@ -4389,6 +4390,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playCountdownSound</code></li>
     <li><code>playerInput</code></li>
     <li><code>processFastForward</code></li>
+    <li><code>processGameSession</code></li>
     <li><code>processKeyRebinder</code></li>
     <li><code>processLobby</code></li>
     <li><code>processMenu</code></li>
@@ -4399,7 +4401,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processTurns</code></li>
     <li><code>reloadGameContent</code></li>
     <li><code>rollback</code></li>
-    <li><code>startRunWhenReady</code></li>
     <li><code>syncNetworkClock</code></li>
     <li><code>syncNetworkGameState</code></li>
     <li><code>updateAnimationTimer</code></li>
