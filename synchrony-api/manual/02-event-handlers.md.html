@@ -340,6 +340,7 @@
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
   <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
   <li><a href="../components/TickleComponents.html">TickleComponents</a></li>
+  <li><a href="../components/AttachmentComponents.html">AttachmentComponents</a></li>
   <li><a href="../components/CollisionComponents.html">CollisionComponents</a></li>
   <li><a href="../components/CoreComponents.html">CoreComponents</a></li>
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
@@ -808,6 +809,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>0.26</code></li>
     <li><code>0.28</code></li>
     <li><code>0.29</code></li>
+    <li><code>0.30</code></li>
 </ul>
 
 
@@ -1331,7 +1333,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateAttachmentEntities</code></li>
     <li><code>updateCurrentLevelInfo</code></li>
     <li><code>updateMusicLayerVolumes</code></li>
-    <li><code>updateStasisFade</code></li>
     <li><code>updateVisMapInstantly</code></li>
 </ul>
 
@@ -2740,9 +2741,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>addFreezeTime</code></li>
+    <li><code>animationFreezeEffect</code></li>
+    <li><code>hasActedFix</code></li>
     <li><code>preventActions</code></li>
     <li><code>spawnFreezeAttachment</code></li>
-    <li><code>stackDuration</code></li>
     <li><code>updateAttackableFlags</code></li>
 </ul>
 
@@ -2944,6 +2946,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>digWall</code></li>
     <li><code>disappearOnCollision</code></li>
     <li><code>firstMove</code></li>
+    <li><code>hasActed</code></li>
     <li><code>moveOnAttack</code></li>
     <li><code>necroDancerPhase2</code></li>
     <li><code>playerHasActed</code></li>
@@ -2980,7 +2983,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>enableLightSource</code></li>
     <li><code>postConvertBeatDelay</code></li>
     <li><code>resetAiId</code></li>
-    <li><code>resetAnimationFreezeEffectActive</code></li>
+    <li><code>resetAnimationFreezeEffectNeedUpdate</code></li>
     <li><code>resetItemStackQuantity</code></li>
     <li><code>resetRowOrderZ</code></li>
     <li><code>resetSpellCooldownKillsRemainingKills</code></li>
@@ -3117,7 +3120,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnAttachment</code></li>
     <li><code>spawnBells</code></li>
     <li><code>spawnFollower</code></li>
-    <li><code>spriteMimicTargetAttachmentParent</code></li>
     <li><code>startAudioLoop</code></li>
     <li><code>tentacleFacing</code></li>
     <li><code>useCloneSprite</code></li>
@@ -3229,6 +3231,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnWallsOnHit</code></li>
     <li><code>squishVoice</code></li>
     <li><code>startAudioLoop</code></li>
+    <li><code>stasisShield</code></li>
     <li><code>swapEntitiesOnDeath</code></li>
     <li><code>targetAttacker</code></li>
     <li><code>thawFrozenObject</code></li>
@@ -3744,6 +3747,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>adjustCamera</code></li>
+    <li><code>attachmentCopyAnimation</code></li>
+    <li><code>attachmentCopyShadowPosition</code></li>
+    <li><code>attachmentCopySpriteEffects</code></li>
+    <li><code>attachmentCopySpritePosition</code></li>
     <li><code>clear</code></li>
     <li><code>clearOldDebugVisuals</code></li>
     <li><code>debugOverlay</code></li>
@@ -3781,7 +3788,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderWorldLabels</code></li>
     <li><code>spriteAnimations</code></li>
     <li><code>updateAnimationTimer</code></li>
-    <li><code>updateMimicSprites</code></li>
     <li><code>updateObjectRenderingPerspective</code></li>
 </ul>
 
@@ -4613,27 +4619,21 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>slideOnSlipperyTile</code></li>
     <li><code>spawnLateJoinPlayers</code></li>
     <li><code>spawnPrep</code></li>
+    <li><code>stun</code></li>
     <li><code>togglePlayerSpectatorMode</code></li>
     <li><code>unsuppressItems</code></li>
     <li><code>updateAttachmentEntities</code></li>
+    <li><code>updateAutoDespawnBlinkEffect</code></li>
     <li><code>updateCharacterTargets</code></li>
-    <li><code>updateComboableItemSprites</code></li>
     <li><code>updateConditionalDamage</code></li>
-    <li><code>updateConditionalDamageItemSprites</code></li>
     <li><code>updateConditionalInvincibilityBlink</code></li>
-    <li><code>updateEquipmentSpriteOverlay</code></li>
-    <li><code>updateGrooveChainSprites</code></li>
     <li><code>updateMusicLayerVolumes</code></li>
     <li><code>updatePriceTags</code></li>
-    <li><code>updateReloadableWeaponSprites</code></li>
     <li><code>updateReturningTarget</code></li>
     <li><code>updateReturningTargetAfterTraps</code></li>
     <li><code>updateRhythm</code></li>
-    <li><code>updateStackItemSprites</code></li>
     <li><code>updateStasisFade</code></li>
     <li><code>updateStatusTimeoutBlinkEffect</code></li>
-    <li><code>vibrateOnActionDelay</code></li>
-    <li><code>vibrateOnTell</code></li>
     <li><code>voiceEnemyProximity</code></li>
     <li><code>voiceTell</code></li>
 </ul>
@@ -4680,6 +4680,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>equipmentSpriteRow</code></li>
     <li><code>minimap</code></li>
     <li><code>segmentVisibility</code></li>
+    <li><code>updateComboableItemSprites</code></li>
+    <li><code>updateConditionalDamageItemSprites</code></li>
+    <li><code>updateEquipmentSpriteOverlay</code></li>
+    <li><code>updateGrooveChainSprites</code></li>
+    <li><code>updateReloadableWeaponSprites</code></li>
+    <li><code>updateStackItemSprites</code></li>
+    <li><code>vibrateOnActionDelay</code></li>
+    <li><code>vibrateOnTell</code></li>
 </ul>
 
 
@@ -4692,6 +4700,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenByTileBrightness</code></li>
     <li><code>hiddenUntilProximity</code></li>
+    <li><code>hideCurrency</code></li>
     <li><code>renderRadius</code></li>
     <li><code>segmentVisibility</code></li>
     <li><code>silhouetteByPerspective</code></li>
