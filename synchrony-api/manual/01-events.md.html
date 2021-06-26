@@ -634,6 +634,7 @@
 <h2>contentLoad</h2>
 
 <ul>
+    <li><code>reset</code></li>
     <li><code>sounds</code></li>
     <li><code>postSounds</code></li>
     <li><code>tiles</code></li>
@@ -704,6 +705,7 @@
 <h2>entitySchemaLoadEnemy</h2>
 
 <ul>
+    <li><code>randomizer</code></li>
     <li><code>common</code></li>
     <li><code>graphics</code></li>
     <li><code>bestiary</code></li>
@@ -962,6 +964,7 @@
     <li><code>tiles</code></li>
     <li><code>spawnPlayers</code></li>
     <li><code>level</code></li>
+    <li><code>introText</code></li>
     <li><code>gameSession</code></li>
     <li><code>darkness</code></li>
     <li><code>tileVisuals</code></li>
@@ -1084,6 +1087,21 @@
     <li><code>sounds</code></li>
     <li><code>music</code></li>
     <li><code>replay</code></li>
+</ul>
+
+
+<p><a name="getIntroText"></a></p>
+<h2>getIntroText</h2>
+
+<ul>
+    <li><code>default</code></li>
+    <li><code>story</code></li>
+    <li><code>deathless</code></li>
+    <li><code>noReturn</code></li>
+    <li><code>hard</code></li>
+    <li><code>phasing</code></li>
+    <li><code>randomizer</code></li>
+    <li><code>mystery</code></li>
 </ul>
 
 
@@ -1432,12 +1450,12 @@
     <li><code>item</code></li>
     <li><code>weaponAttack</code></li>
     <li><code>castSpellAnimation</code></li>
-    <li><code>interact</code></li>
     <li><code>preDigAmplify</code></li>
     <li><code>dig</code></li>
     <li><code>digEffect</code></li>
     <li><code>amplify</code></li>
     <li><code>move</code></li>
+    <li><code>interact</code></li>
     <li><code>moveOverrideSlide</code></li>
     <li><code>facingLate</code></li>
     <li><code>beatDelay</code></li>
@@ -2061,8 +2079,7 @@
     <li><code>blockDuplicates</code></li>
     <li><code>holster</code></li>
     <li><code>add</code></li>
-    <li><code>sound</code></li>
-    <li><code>flyaway</code></li>
+    <li><code>pickupEffects</code></li>
 </ul>
 
 
@@ -2953,12 +2970,12 @@
     <li><code>item</code></li>
     <li><code>weaponAttack</code></li>
     <li><code>castSpellAnimation</code></li>
-    <li><code>interact</code></li>
     <li><code>preDigAmplify</code></li>
     <li><code>dig</code></li>
     <li><code>digEffect</code></li>
     <li><code>amplify</code></li>
     <li><code>move</code></li>
+    <li><code>interact</code></li>
     <li><code>moveOverrideSlide</code></li>
     <li><code>facingLate</code></li>
     <li><code>beatDelay</code></li>
@@ -3582,8 +3599,7 @@
     <li><code>blockDuplicates</code></li>
     <li><code>holster</code></li>
     <li><code>add</code></li>
-    <li><code>sound</code></li>
-    <li><code>flyaway</code></li>
+    <li><code>pickupEffects</code></li>
 </ul>
 
 
@@ -3771,6 +3787,16 @@
     <li><code>vision</code></li>
     <li><code>visibility</code></li>
     <li><code>targetPointer</code></li>
+</ul>
+
+
+<p><a name="pickupEffects"></a></p>
+<h2>pickupEffects</h2>
+
+<ul>
+    <li><code>sound</code></li>
+    <li><code>flyaway</code></li>
+    <li><code>animation</code></li>
 </ul>
 
 
@@ -4666,6 +4692,7 @@
     <li><code>visibleByProximity</code></li>
     <li><code>visibilityTargetFocus</code></li>
     <li><code>visibilityHideOnTargetPosition</code></li>
+    <li><code>visibilityTileRequirement</code></li>
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenUntilProximity</code></li>
     <li><code>hiddenByTileBrightness</code></li>

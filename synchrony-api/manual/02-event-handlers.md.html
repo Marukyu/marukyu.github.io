@@ -721,6 +721,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>contentLoad</h2>
 
 <ul>
+    <li><code>clearRandomizerChannel</code></li>
     <li><code>loadComponents</code></li>
     <li><code>loadCustomEntities</code></li>
     <li><code>loadGameXML</code></li>
@@ -827,6 +828,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>enemySprite</code></li>
     <li><code>mirrorLeftFacingSpritesheets</code></li>
     <li><code>namedEnemyOverrides</code></li>
+    <li><code>randomizer</code></li>
     <li><code>soundEffects</code></li>
     <li><code>statAttributes</code></li>
     <li><code>tweeningAttributes</code></li>
@@ -1302,6 +1304,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initialTargeting</code></li>
     <li><code>initializePendingObjectList</code></li>
     <li><code>initializeRhythmSettings</code></li>
+    <li><code>introText</code></li>
     <li><code>invincibilityReset</code></li>
     <li><code>itemHealOnLevelChange</code></li>
     <li><code>levelStartFrame</code></li>
@@ -1410,6 +1413,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resumeLoopingSounds</code></li>
     <li><code>resumeMusic</code></li>
     <li><code>unpauseAnimationTimer</code></li>
+</ul>
+
+
+<p><a name="getIntroText"></a></p>
+<h2>getIntroText</h2>
+
+<ul>
+    <li><code>default</code></li>
+    <li><code>noReturn</code></li>
+    <li><code>randomizer</code></li>
 </ul>
 
 
@@ -1957,7 +1970,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>inventoryAddItem</h2>
 
 <ul>
-    <li><code>animateItemPickup</code></li>
     <li><code>attachItem</code></li>
     <li><code>attachItemToSlot</code></li>
     <li><code>dropPreviousItem</code></li>
@@ -2877,7 +2889,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>activateShrine</code></li>
-    <li><code>attack</code></li>
     <li><code>bounceTweenOnInteractor</code></li>
     <li><code>checkPriceTag</code></li>
     <li><code>consumeItem</code></li>
@@ -3325,7 +3336,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>teleportOnWallRemoval</code></li>
     <li><code>updateSunken</code></li>
     <li><code>updateWired</code></li>
-    <li><code>visibleOnWallRemoval</code></li>
     <li><code>wallRemovalSound</code></li>
 </ul>
 
@@ -3339,10 +3349,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkItem</code></li>
     <li><code>checkPriceTag</code></li>
     <li><code>collectItem</code></li>
-    <li><code>createFlyawayText</code></li>
     <li><code>itemBans</code></li>
     <li><code>noLuteForDad</code></li>
-    <li><code>playItemPickupSound</code></li>
+    <li><code>playPickupEffects</code></li>
 </ul>
 
 
@@ -3524,6 +3533,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="pickupEffects"></a></p>
+<h2>pickupEffects</h2>
+
+<ul>
+    <li><code>animation</code></li>
+    <li><code>flyaway</code></li>
+    <li><code>sound</code></li>
+</ul>
+
+
 <p><a name="preAI"></a></p>
 <h2>preAI</h2>
 
@@ -3655,6 +3674,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_gameplay.markSeen</code></li>
     <li><code>1_gameplay.modifiers</code></li>
     <li><code>1_gameplay.modifiers.noReturn</code></li>
+    <li><code>1_gameplay.modifiers.randomizer</code></li>
     <li><code>1_input</code></li>
     <li><code>1_input.controllers</code></li>
     <li><code>1_input.keys</code></li>
@@ -4759,6 +4779,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>visibilityCopyFromParent</code></li>
     <li><code>visibilityHideOnTargetPosition</code></li>
     <li><code>visibilityTargetFocus</code></li>
+    <li><code>visibilityTileRequirement</code></li>
     <li><code>visibleByPerspective</code></li>
     <li><code>visibleByProximity</code></li>
     <li><code>visibleWhenRevealed</code></li>
