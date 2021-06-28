@@ -121,7 +121,6 @@
   <li><a href="../modules/necro.game.data.EntityGenerator.html">necro.game.data.EntityGenerator</a></li>
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
   <li><a href="../modules/necro.game.data.EntityPostProcessor.html">necro.game.data.EntityPostProcessor</a></li>
-  <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.SavefileXML.html">necro.game.data.SavefileXML</a></li>
@@ -249,7 +248,6 @@
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.DebugDump.html">system.debug.DebugDump</a></li>
-  <li><a href="../modules/system.debug.EntityDebug.html">system.debug.EntityDebug</a></li>
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
   <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
@@ -267,14 +265,12 @@
   <li><a href="../modules/system.game.Config.html">system.game.Config</a></li>
   <li><a href="../modules/system.game.Entities.html">system.game.Entities</a></li>
   <li><a href="../modules/system.game.EntitySchema.html">system.game.EntitySchema</a></li>
-  <li><a href="../modules/system.game.EntityTypeCache.html">system.game.EntityTypeCache</a></li>
   <li><a href="../modules/system.game.FileIO.html">system.game.FileIO</a></li>
   <li><a href="../modules/system.game.Framebuffer.html">system.game.Framebuffer</a></li>
   <li><a href="../modules/system.game.Graphics.html">system.game.Graphics</a></li>
   <li><a href="../modules/system.game.Input.html">system.game.Input</a></li>
   <li><a href="../modules/system.game.Screenshot.html">system.game.Screenshot</a></li>
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
-  <li><a href="../modules/system.game.Snapshots.html">system.game.Snapshots</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
   <li><a href="../modules/system.game.Window.html">system.game.Window</a></li>
   <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
@@ -722,12 +718,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>clearRandomizerChannel</code></li>
-    <li><code>loadComponents</code></li>
-    <li><code>loadCustomEntities</code></li>
-    <li><code>loadGameXML</code></li>
+    <li><code>entitySchema</code></li>
     <li><code>loadSoundXML</code></li>
     <li><code>loadTileTypes</code></li>
-    <li><code>voiceFallbacks</code></li>
 </ul>
 
 
@@ -788,8 +781,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>clearAnimationCache</code></li>
     <li><code>clearCurrencyCache</code></li>
-    <li><code>clearECSCache</code></li>
-    <li><code>clearEntityTypeCache</code></li>
     <li><code>clearLobbyCharacterCache</code></li>
     <li><code>clearPerspectiveCache</code></li>
     <li><code>clearPlayerEntityListCache</code></li>
@@ -797,6 +788,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>entitySelector</code></li>
     <li><code>invalidateObjectSelectorCache</code></li>
     <li><code>recomputeInitial</code></li>
+    <li><code>updateEntities</code></li>
 </ul>
 
 
@@ -814,6 +806,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>0.28</code></li>
     <li><code>0.29</code></li>
     <li><code>0.30</code></li>
+</ul>
+
+
+<p><a name="entitySchemaGenerate"></a></p>
+<h2>entitySchemaGenerate</h2>
+
+<ul>
+    <li><code>components</code></li>
+    <li><code>loadCustomEntites</code></li>
+    <li><code>loadEntitesFromGameXML</code></li>
 </ul>
 
 
@@ -842,7 +844,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyMigrations</code></li>
     <li><code>applyNamedOverrides</code></li>
     <li><code>componentDependencies</code></li>
-    <li><code>transformToDefinition</code></li>
     <li><code>validateComponents</code></li>
     <li><code>weaponPostProcessingSteps</code></li>
 </ul>
@@ -1134,10 +1135,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>invalidateObjectSelectorEntityEventCache</code></li>
     <li><code>invalidateObjectSelectorItemEventCache</code></li>
     <li><code>inventoryHUDGroups</code></li>
-    <li><code>reloadComponents</code></li>
-    <li><code>reloadCustomEntities</code></li>
-    <li><code>reloadGameXML</code></li>
     <li><code>reloadMigrations</code></li>
+    <li><code>reloadSchemaOnComponentChange</code></li>
+    <li><code>reloadSchemaOnEntityChange</code></li>
     <li><code>reloadTileTypes</code></li>
     <li><code>updateMenu</code></li>
 </ul>
@@ -4214,9 +4214,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="snapshotDrop"></a></p>
 <h2>snapshotDrop</h2>
 
-<ul>
-    <li><code>dropEntities</code></li>
-</ul>
 
 
 <p><a name="snapshotLoad"></a></p>
@@ -4447,7 +4444,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>reloadCustomEntities</code></li>
-    <li><code>reloadXMLEntities</code></li>
 </ul>
 
 

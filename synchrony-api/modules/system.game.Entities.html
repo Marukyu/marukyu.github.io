@@ -121,7 +121,6 @@
   <li><a href="../modules/necro.game.data.EntityGenerator.html">necro.game.data.EntityGenerator</a></li>
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
   <li><a href="../modules/necro.game.data.EntityPostProcessor.html">necro.game.data.EntityPostProcessor</a></li>
-  <li><a href="../modules/necro.game.data.EntitySchemaInjector.html">necro.game.data.EntitySchemaInjector</a></li>
   <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
   <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
   <li><a href="../modules/necro.game.data.SavefileXML.html">necro.game.data.SavefileXML</a></li>
@@ -249,7 +248,6 @@
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.DebugDump.html">system.debug.DebugDump</a></li>
-  <li><a href="../modules/system.debug.EntityDebug.html">system.debug.EntityDebug</a></li>
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
   <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
@@ -267,14 +265,12 @@
   <li><a href="../modules/system.game.Config.html">system.game.Config</a></li>
   <li><strong>system.game.Entities</strong></li>
   <li><a href="../modules/system.game.EntitySchema.html">system.game.EntitySchema</a></li>
-  <li><a href="../modules/system.game.EntityTypeCache.html">system.game.EntityTypeCache</a></li>
   <li><a href="../modules/system.game.FileIO.html">system.game.FileIO</a></li>
   <li><a href="../modules/system.game.Framebuffer.html">system.game.Framebuffer</a></li>
   <li><a href="../modules/system.game.Graphics.html">system.game.Graphics</a></li>
   <li><a href="../modules/system.game.Input.html">system.game.Input</a></li>
   <li><a href="../modules/system.game.Screenshot.html">system.game.Screenshot</a></li>
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
-  <li><a href="../modules/system.game.Snapshots.html">system.game.Snapshots</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
   <li><a href="../modules/system.game.Window.html">system.game.Window</a></li>
   <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
@@ -405,13 +401,13 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#clearEntityCache">clearEntityCache ()</a></td>
+	<td class="name" nowrap><a href="#convert">convert (entity, targetTypeName)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#convert">convert (entity, targetTypeNameOrID)</a></td>
+	<td class="name" nowrap><a href="#deserializeState">deserializeState (serializedState)</a></td>
 	<td class="summary">
 
 </td>
@@ -423,7 +419,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#entitiesWithComponents">entitiesWithComponents (components)</a></td>
+	<td class="name" nowrap><a href="#entitiesWithComponents">entitiesWithComponents (componentNames)</a></td>
 	<td class="summary">
 
 </td>
@@ -435,7 +431,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getEntitiesByType">getEntitiesByType (entityTypeNameOrID)</a></td>
+	<td class="name" nowrap><a href="#getEntitiesByType">getEntitiesByType (typeName)</a></td>
 	<td class="summary">
 
 </td>
@@ -447,49 +443,37 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getEntityPrototype">getEntityPrototype (entityTypeNameOrID)</a></td>
+	<td class="name" nowrap><a href="#getEntityPrototype">getEntityPrototype (typeName)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getEntityTypeID">getEntityTypeID (entity)</a></td>
+	<td class="name" nowrap><a href="#getEntityTypeID">getEntityTypeID (entityID)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getEntityTypeName">getEntityTypeName (entityOrTypeID)</a></td>
+	<td class="name" nowrap><a href="#getEntityTypeName">getEntityTypeName (entity)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getEntityTypesWithComponents">getEntityTypesWithComponents (components)</a></td>
+	<td class="name" nowrap><a href="#getEntityTypesWithComponents">getEntityTypesWithComponents (componentList)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getLiveEntityTypesWithComponents">getLiveEntityTypesWithComponents (components)</a></td>
+	<td class="name" nowrap><a href="#isValidEntityType">isValidEntityType (typeName)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#isValidEntityType">isValidEntityType (entityTypeNameOrID)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#liveTypesWithComponents">liveTypesWithComponents (components)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#prototypesWithComponents">prototypesWithComponents (components)</a></td>
+	<td class="name" nowrap><a href="#prototypesWithComponents">prototypesWithComponents (componentList)</a></td>
 	<td class="summary">
 
 </td>
@@ -501,25 +485,31 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#resolveEntityType">resolveEntityType (entityTypeNameOrID)</a></td>
+	<td class="name" nowrap><a href="#resolveEntityType">resolveEntityType (typeName)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spawn">spawn (entityTypeNameOrID)</a></td>
+	<td class="name" nowrap><a href="#serializeState">serializeState ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#typeHasComponent">typeHasComponent (entityTypeNameOrID, componentName)</a></td>
+	<td class="name" nowrap><a href="#spawn">spawn (typeName)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#typesWithComponents">typesWithComponents (components)</a></td>
+	<td class="name" nowrap><a href="#typeHasComponent">typeHasComponent (typeName, componentName)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#typesWithComponents">typesWithComponents (componentList)</a></td>
 	<td class="summary">
 
 </td>
@@ -534,24 +524,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "clearEntityCache"></a>
-    <strong>clearEntityCache ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "convert"></a>
-    <strong>convert (entity, targetTypeNameOrID)</strong>
+    <strong>convert (entity, targetTypeName)</strong>
     </dt>
     <dd>
 
@@ -566,7 +540,31 @@
 
 
         </li>
-        <li><span class="parameter">targetTypeNameOrID</span>
+        <li><span class="parameter">targetTypeName</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "deserializeState"></a>
+    <strong>deserializeState (serializedState)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">serializedState</span>
 
 
 
@@ -604,7 +602,7 @@
 </dd>
     <dt>
     <a name = "entitiesWithComponents"></a>
-    <strong>entitiesWithComponents (components)</strong>
+    <strong>entitiesWithComponents (componentNames)</strong>
     </dt>
     <dd>
 
@@ -614,7 +612,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">components</span>
+        <li><span class="parameter">componentNames</span>
 
 
 
@@ -652,7 +650,7 @@
 </dd>
     <dt>
     <a name = "getEntitiesByType"></a>
-    <strong>getEntitiesByType (entityTypeNameOrID)</strong>
+    <strong>getEntitiesByType (typeName)</strong>
     </dt>
     <dd>
 
@@ -662,7 +660,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">entityTypeNameOrID</span>
+        <li><span class="parameter">typeName</span>
 
 
 
@@ -700,7 +698,7 @@
 </dd>
     <dt>
     <a name = "getEntityPrototype"></a>
-    <strong>getEntityPrototype (entityTypeNameOrID)</strong>
+    <strong>getEntityPrototype (typeName)</strong>
     </dt>
     <dd>
 
@@ -710,7 +708,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">entityTypeNameOrID</span>
+        <li><span class="parameter">typeName</span>
 
 
 
@@ -724,7 +722,31 @@
 </dd>
     <dt>
     <a name = "getEntityTypeID"></a>
-    <strong>getEntityTypeID (entity)</strong>
+    <strong>getEntityTypeID (entityID)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entityID</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getEntityTypeName"></a>
+    <strong>getEntityTypeName (entity)</strong>
     </dt>
     <dd>
 
@@ -747,32 +769,8 @@
 
 </dd>
     <dt>
-    <a name = "getEntityTypeName"></a>
-    <strong>getEntityTypeName (entityOrTypeID)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">entityOrTypeID</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "getEntityTypesWithComponents"></a>
-    <strong>getEntityTypesWithComponents (components)</strong>
+    <strong>getEntityTypesWithComponents (componentList)</strong>
     </dt>
     <dd>
 
@@ -782,31 +780,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">components</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getLiveEntityTypesWithComponents"></a>
-    <strong>getLiveEntityTypesWithComponents (components)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">components</span>
+        <li><span class="parameter">componentList</span>
 
 
 
@@ -820,7 +794,7 @@
 </dd>
     <dt>
     <a name = "isValidEntityType"></a>
-    <strong>isValidEntityType (entityTypeNameOrID)</strong>
+    <strong>isValidEntityType (typeName)</strong>
     </dt>
     <dd>
 
@@ -830,31 +804,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">entityTypeNameOrID</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "liveTypesWithComponents"></a>
-    <strong>liveTypesWithComponents (components)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">components</span>
+        <li><span class="parameter">typeName</span>
 
 
 
@@ -868,7 +818,7 @@
 </dd>
     <dt>
     <a name = "prototypesWithComponents"></a>
-    <strong>prototypesWithComponents (components)</strong>
+    <strong>prototypesWithComponents (componentList)</strong>
     </dt>
     <dd>
 
@@ -878,7 +828,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">components</span>
+        <li><span class="parameter">componentList</span>
 
 
 
@@ -908,7 +858,7 @@
 </dd>
     <dt>
     <a name = "resolveEntityType"></a>
-    <strong>resolveEntityType (entityTypeNameOrID)</strong>
+    <strong>resolveEntityType (typeName)</strong>
     </dt>
     <dd>
 
@@ -918,7 +868,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">entityTypeNameOrID</span>
+        <li><span class="parameter">typeName</span>
 
 
 
@@ -931,8 +881,24 @@
 
 </dd>
     <dt>
+    <a name = "serializeState"></a>
+    <strong>serializeState ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "spawn"></a>
-    <strong>spawn (entityTypeNameOrID)</strong>
+    <strong>spawn (typeName)</strong>
     </dt>
     <dd>
 
@@ -942,7 +908,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">entityTypeNameOrID</span>
+        <li><span class="parameter">typeName</span>
 
 
 
@@ -956,7 +922,7 @@
 </dd>
     <dt>
     <a name = "typeHasComponent"></a>
-    <strong>typeHasComponent (entityTypeNameOrID, componentName)</strong>
+    <strong>typeHasComponent (typeName, componentName)</strong>
     </dt>
     <dd>
 
@@ -966,7 +932,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">entityTypeNameOrID</span>
+        <li><span class="parameter">typeName</span>
 
 
 
@@ -985,7 +951,7 @@
 </dd>
     <dt>
     <a name = "typesWithComponents"></a>
-    <strong>typesWithComponents (components)</strong>
+    <strong>typesWithComponents (componentList)</strong>
     </dt>
     <dd>
 
@@ -995,7 +961,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">components</span>
+        <li><span class="parameter">componentList</span>
 
 
 
