@@ -413,7 +413,6 @@
     <li><code>provoke</code></li>
     <li><code>stasis</code></li>
     <li><code>tell</code></li>
-    <li><code>directionalTell</code></li>
     <li><code>dynamicSprite</code></li>
     <li><code>charge</code></li>
     <li><code>grab</code></li>
@@ -422,7 +421,10 @@
     <li><code>spell</code></li>
     <li><code>boss</code></li>
     <li><code>trapActivation</code></li>
+    <li><code>wired</code></li>
     <li><code>custom</code></li>
+    <li><code>directionalSpriteChange</code></li>
+    <li><code>parrySpriteChange</code></li>
     <li><code>silhouette</code></li>
     <li><code>equipment</code></li>
     <li><code>cycling</code></li>
@@ -686,6 +688,7 @@
 <h2>ecsSchemaReloaded</h2>
 
 <ul>
+    <li><code>deleteDeadEntities</code></li>
     <li><code>updateECS</code></li>
     <li><code>clearCache</code></li>
 </ul>
@@ -724,6 +727,7 @@
     <li><code>sounds</code></li>
     <li><code>overrides</code></li>
     <li><code>namedOverrides</code></li>
+    <li><code>postProcess</code></li>
 </ul>
 
 
@@ -786,6 +790,7 @@
     <li><code>animation</code></li>
     <li><code>extra</code></li>
     <li><code>overrides</code></li>
+    <li><code>namedOverrides</code></li>
 </ul>
 
 
@@ -1462,6 +1467,7 @@
     <li><code>dig</code></li>
     <li><code>digEffect</code></li>
     <li><code>amplify</code></li>
+    <li><code>moveGrabbed</code></li>
     <li><code>move</code></li>
     <li><code>interact</code></li>
     <li><code>moveOverrideSlide</code></li>
@@ -1667,7 +1673,6 @@
 
 <ul>
     <li><code>requeue</code></li>
-    <li><code>tween</code></li>
     <li><code>consumeItem</code></li>
     <li><code>priceTag</code></li>
     <li><code>activate</code></li>
@@ -1675,6 +1680,7 @@
     <li><code>attack</code></li>
     <li><code>sound</code></li>
     <li><code>graphics</code></li>
+    <li><code>tween</code></li>
     <li><code>result</code></li>
 </ul>
 
@@ -1742,6 +1748,8 @@
 
 <ul>
     <li><code>convertSlot</code></li>
+    <li><code>facing</code></li>
+    <li><code>facingLate</code></li>
     <li><code>trample</code></li>
     <li><code>dig</code></li>
     <li><code>digEffect</code></li>
@@ -1999,6 +2007,7 @@
     <li><code>freeze</code></li>
     <li><code>shatter</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>startCharge</code></li>
     <li><code>redirectCharge</code></li>
     <li><code>health</code></li>
     <li><code>cursedHealth</code></li>
@@ -2984,6 +2993,7 @@
     <li><code>dig</code></li>
     <li><code>digEffect</code></li>
     <li><code>amplify</code></li>
+    <li><code>moveGrabbed</code></li>
     <li><code>move</code></li>
     <li><code>interact</code></li>
     <li><code>moveOverrideSlide</code></li>
@@ -3189,7 +3199,6 @@
 
 <ul>
     <li><code>requeue</code></li>
-    <li><code>tween</code></li>
     <li><code>consumeItem</code></li>
     <li><code>priceTag</code></li>
     <li><code>activate</code></li>
@@ -3197,6 +3206,7 @@
     <li><code>attack</code></li>
     <li><code>sound</code></li>
     <li><code>graphics</code></li>
+    <li><code>tween</code></li>
     <li><code>result</code></li>
 </ul>
 
@@ -3264,6 +3274,8 @@
 
 <ul>
     <li><code>convertSlot</code></li>
+    <li><code>facing</code></li>
+    <li><code>facingLate</code></li>
     <li><code>trample</code></li>
     <li><code>dig</code></li>
     <li><code>digEffect</code></li>
@@ -3521,6 +3533,7 @@
     <li><code>freeze</code></li>
     <li><code>shatter</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>startCharge</code></li>
     <li><code>redirectCharge</code></li>
     <li><code>health</code></li>
     <li><code>cursedHealth</code></li>
@@ -4597,6 +4610,7 @@
     <li><code>spectator</code></li>
     <li><code>missedBeat</code></li>
     <li><code>damageCountdown</code></li>
+    <li><code>startCharge</code></li>
     <li><code>controlDad</code></li>
     <li><code>playerActions</code></li>
     <li><code>frame1</code></li>
