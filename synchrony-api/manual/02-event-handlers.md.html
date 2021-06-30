@@ -448,7 +448,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyClonkTellAnimations</code></li>
     <li><code>applyCongaAnimations</code></li>
     <li><code>applyDirectionalAnimations</code></li>
-    <li><code>applyDynamicSpriteAnimations</code></li>
     <li><code>applyEquipmentSpriteRow</code></li>
     <li><code>applyGrabAnimations</code></li>
     <li><code>applyNormalAnimations</code></li>
@@ -1735,6 +1734,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>activateDigConditionalInvincibility</code></li>
+    <li><code>currencyDrain</code></li>
     <li><code>performDashOnDig</code></li>
     <li><code>setRangedFlag</code></li>
 </ul>
@@ -2671,7 +2671,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>cancelBounceTween</code></li>
     <li><code>computeDigStrength</code></li>
-    <li><code>digSound</code></li>
+    <li><code>digVoice</code></li>
     <li><code>gigantismDigRadius</code></li>
     <li><code>playDigFailSound</code></li>
     <li><code>shakeScreenOnDig</code></li>
@@ -3029,6 +3029,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetAnimationFreezeEffectNeedUpdate</code></li>
     <li><code>resetHoverEffectActive</code></li>
     <li><code>resetItemStackQuantity</code></li>
+    <li><code>resetPositionalSpriteOffsetX</code></li>
+    <li><code>resetPositionalSpriteOffsetY</code></li>
     <li><code>resetRegenerationKillCounterTotalIncrement</code></li>
     <li><code>resetRowOrderZ</code></li>
     <li><code>resetSpellCooldownKillsRemainingKills</code></li>
@@ -3342,7 +3344,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>teleportOnWallRemoval</code></li>
     <li><code>updateSunken</code></li>
     <li><code>updateWired</code></li>
-    <li><code>wallRemovalSound</code></li>
 </ul>
 
 
@@ -3420,6 +3421,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>gigantismUnsinkImmunity</code></li>
+    <li><code>grabberImmunity</code></li>
     <li><code>hopInPlace</code></li>
     <li><code>innateImmunity</code></li>
     <li><code>playUnsinkAnimation</code></li>
@@ -3870,7 +3872,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyBlinkEffect</code></li>
     <li><code>applyCropOnDescentEffect</code></li>
     <li><code>applyCropOnSinkEffect</code></li>
-    <li><code>applyDynamicSpriteOffset</code></li>
     <li><code>applyRandomOffset</code></li>
     <li><code>applySlideSway</code></li>
     <li><code>applySpriteOffsetIfAboveWall</code></li>
@@ -4518,11 +4519,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>digChain</code></li>
     <li><code>digEntity</code></li>
+    <li><code>digSound</code></li>
     <li><code>doorHinges</code></li>
     <li><code>drops</code></li>
+    <li><code>finalDigSound</code></li>
     <li><code>multiHit</code></li>
     <li><code>setTileType</code></li>
-    <li><code>sound</code></li>
     <li><code>unreveal</code></li>
 </ul>
 
@@ -4646,7 +4648,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>controlDad</code></li>
     <li><code>controlPlayer</code></li>
     <li><code>convertTraps</code></li>
-    <li><code>currencyDrain</code></li>
     <li><code>descendItems</code></li>
     <li><code>despawnBarrierAttachments</code></li>
     <li><code>despawnExpiredScreenShakes</code></li>
@@ -4756,6 +4757,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateConditionalDamageItemSprites</code></li>
     <li><code>updateEquipmentSpriteOverlay</code></li>
     <li><code>updateGrooveChainSprites</code></li>
+    <li><code>updatePerspectiveVisionRadius</code></li>
     <li><code>updateReloadableWeaponSprites</code></li>
     <li><code>updateStackItemSprites</code></li>
     <li><code>vibrateOnActionDelay</code></li>
