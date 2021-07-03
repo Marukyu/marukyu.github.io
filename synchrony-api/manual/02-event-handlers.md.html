@@ -829,6 +829,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>commonAttributes</code></li>
     <li><code>enemySprite</code></li>
     <li><code>mirrorLeftFacingSpritesheets</code></li>
+    <li><code>mystery</code></li>
     <li><code>namedEnemyOverrides</code></li>
     <li><code>randomizer</code></li>
     <li><code>soundEffects</code></li>
@@ -862,6 +863,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>itemPools</code></li>
     <li><code>itemSlotOverrides</code></li>
     <li><code>itemSprite</code></li>
+    <li><code>mystery</code></li>
     <li><code>namedItemOverrides</code></li>
     <li><code>spawnLeprechaunFromCoins</code></li>
     <li><code>spellActionItems</code></li>
@@ -974,6 +976,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadSuperSecretShopkeeper</code></li>
     <li><code>loadTarmonster</code></li>
     <li><code>loadTentacle</code></li>
+    <li><code>loadToughsarcophagus</code></li>
     <li><code>loadTransmogrifier</code></li>
     <li><code>loadTrapCauldron</code></li>
     <li><code>loadTrapChest</code></li>
@@ -989,6 +992,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="entitySchemaLoadNamedEntity"></a></p>
 <h2>entitySchemaLoadNamedEntity</h2>
 
+<ul>
+    <li><code>mysteryFireball</code></li>
+    <li><code>mysteryThrone</code></li>
+</ul>
 
 
 <p><a name="entitySchemaLoadNamedItem"></a></p>
@@ -1382,6 +1389,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearSnapshots</code></li>
     <li><code>closeAllMenus</code></li>
     <li><code>closeInGameLobby</code></li>
+    <li><code>hardMode</code></li>
     <li><code>initializePendingObjectList</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>releaseFastForward</code></li>
@@ -1422,6 +1430,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>default</code></li>
+    <li><code>hard</code></li>
+    <li><code>mystery</code></li>
     <li><code>noReturn</code></li>
     <li><code>randomizer</code></li>
 </ul>
@@ -2991,6 +3001,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playerHasActed</code></li>
     <li><code>processAutoCasts</code></li>
     <li><code>resetBeatDelay</code></li>
+    <li><code>spawnCapBeatDelay</code></li>
     <li><code>stopSuperCharge</code></li>
     <li><code>stunOnResults</code></li>
     <li><code>trampleAIOverride</code></li>
@@ -3083,7 +3094,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>setBeatDelay</code></li>
     <li><code>setDecorTentacleTangibility</code></li>
     <li><code>setProvokedFlag</code></li>
-    <li><code>setThroneVisibility</code></li>
     <li><code>spawnNecroDancerMiniboss</code></li>
     <li><code>startShrinerFight</code></li>
     <li><code>updateAttackableFlags</code></li>
@@ -3685,6 +3695,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_gameplay</code></li>
     <li><code>1_gameplay.markSeen</code></li>
     <li><code>1_gameplay.modifiers</code></li>
+    <li><code>1_gameplay.modifiers.hard</code></li>
+    <li><code>1_gameplay.modifiers.mystery</code></li>
     <li><code>1_gameplay.modifiers.noReturn</code></li>
     <li><code>1_gameplay.modifiers.randomizer</code></li>
     <li><code>1_input</code></li>
@@ -3954,6 +3966,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadRemoteSettings</code></li>
     <li><code>updateModList</code></li>
     <li><code>updateResourceVersion</code></li>
+</ul>
+
+
+<p><a name="runStateInit"></a></p>
+<h2>runStateInit</h2>
+
+<ul>
+    <li><code>hardMode</code></li>
+    <li><code>seenItems</code></li>
 </ul>
 
 
@@ -4432,6 +4453,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>knight</code></li>
     <li><code>knight_red</code></li>
     <li><code>longsword</code></li>
+    <li><code>mysteryShovel</code></li>
     <li><code>pulse</code></li>
     <li><code>rainbow</code></li>
     <li><code>rapier</code></li>
@@ -4783,7 +4805,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenByTileBrightness</code></li>
     <li><code>hiddenUntilProximity</code></li>
-    <li><code>hideCurrency</code></li>
+    <li><code>hideEntities</code></li>
     <li><code>renderRadius</code></li>
     <li><code>segmentVisibility</code></li>
     <li><code>silhouetteByPerspective</code></li>
