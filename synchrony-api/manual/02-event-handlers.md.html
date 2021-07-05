@@ -79,7 +79,8 @@
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
-  <li><a href="../modules/necro.cycles.Render.html">necro.cycles.Render</a></li>
+  <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
+  <li><a href="../modules/necro.cycles.RenderUI.html">necro.cycles.RenderUI</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
   <li><a href="../modules/necro.cycles.Turn.html">necro.cycles.Turn</a></li>
   <li><a href="../modules/necro.cycles.VisualUpdate.html">necro.cycles.VisualUpdate</a></li>
@@ -93,6 +94,7 @@
   <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
+  <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
   <li><a href="../modules/necro.game.character.Apparition.html">necro.game.character.Apparition</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
@@ -1238,7 +1240,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>hiddenUntilProximity</code></li>
     <li><code>mergeItemStacks</code></li>
     <li><code>ozuma</code></li>
-    <li><code>processDelayaedCasts</code></li>
+    <li><code>processDelayedCasts</code></li>
     <li><code>provokeOnWallRemoval</code></li>
     <li><code>rearmTraps</code></li>
     <li><code>resetKnockbackImmunity</code></li>
@@ -2668,8 +2670,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>detachItemBeforeDespawning</code></li>
     <li><code>provokeOnAddsDeath</code></li>
     <li><code>stopAudioLoop</code></li>
-    <li><code>unlockStairsFromMiniboss</code></li>
-    <li><code>unlockStairsFromSarcophagus</code></li>
+    <li><code>unlockStairs</code></li>
 </ul>
 
 
@@ -3071,6 +3072,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnAttachment</code></li>
     <li><code>detachItemBeforeConverting</code></li>
     <li><code>disableLightSource</code></li>
+    <li><code>endSlidePreConvert</code></li>
     <li><code>removeMultiTileCollision</code></li>
     <li><code>removeMultiTileObjectFromMap</code></li>
     <li><code>soundPreConvert</code></li>
@@ -3816,7 +3818,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_DigMultiHit_accumulators</code></li>
     <li><code>4_Flyaway_activeFlyaways</code></li>
     <li><code>4_Flyaway_nextID</code></li>
-    <li><code>4_LevelExit_levelCompleted</code></li>
     <li><code>4_LevelExit_levelExitUnlocked</code></li>
     <li><code>4_Marker_markers</code></li>
     <li><code>4_Segment_segments</code></li>
@@ -3839,18 +3840,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>attachmentCopyAnimation</code></li>
     <li><code>attachmentCopySpriteEffects</code></li>
     <li><code>attachmentCopySpritePosition</code></li>
-    <li><code>clear</code></li>
-    <li><code>clearOldDebugVisuals</code></li>
-    <li><code>debugOverlay</code></li>
-    <li><code>displayAsyncErrorOverlay</code></li>
-    <li><code>drawCountdown</code></li>
-    <li><code>drawKeyRebinder</code></li>
     <li><code>drawOverlayAboveHUD</code></li>
     <li><code>drawOverlayBelowHUD</code></li>
     <li><code>moveAnimations</code></li>
     <li><code>renderBackLayerSwipes</code></li>
     <li><code>renderBackgroundParticleSystems</code></li>
-    <li><code>renderChat</code></li>
     <li><code>renderContents</code></li>
     <li><code>renderDecals</code></li>
     <li><code>renderEffects</code></li>
@@ -3861,12 +3855,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderHealthBars</code></li>
     <li><code>renderItemHintLabels</code></li>
     <li><code>renderItemStackSizes</code></li>
-    <li><code>renderLatencyCalibrationBeatBars</code></li>
     <li><code>renderLayeredRows</code></li>
-    <li><code>renderLobby</code></li>
-    <li><code>renderMenu</code></li>
-    <li><code>renderMenuOverlay</code></li>
-    <li><code>renderModDownloadProgress</code></li>
     <li><code>renderPlayerNames</code></li>
     <li><code>renderPriceTags</code></li>
     <li><code>renderSecretShopLabels</code></li>
@@ -3942,6 +3931,27 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderGrooveChain</code></li>
     <li><code>renderHealthBar</code></li>
     <li><code>renderHeartbeatIndicatorHUD</code></li>
+</ul>
+
+
+<p><a name="renderUI"></a></p>
+<h2>renderUI</h2>
+
+<ul>
+    <li><code>clear</code></li>
+    <li><code>clearOldDebugVisuals</code></li>
+    <li><code>debugOverlay</code></li>
+    <li><code>displayAsyncErrorOverlay</code></li>
+    <li><code>drawCountdown</code></li>
+    <li><code>drawKeyRebinder</code></li>
+    <li><code>fastForwardSkipGameRender</code></li>
+    <li><code>renderChat</code></li>
+    <li><code>renderGame</code></li>
+    <li><code>renderLatencyCalibrationBeatBars</code></li>
+    <li><code>renderLobby</code></li>
+    <li><code>renderMenu</code></li>
+    <li><code>renderMenuOverlay</code></li>
+    <li><code>renderModDownloadProgress</code></li>
 </ul>
 
 
