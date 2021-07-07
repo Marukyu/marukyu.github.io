@@ -807,6 +807,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>0.29</code></li>
     <li><code>0.30</code></li>
     <li><code>0.31</code></li>
+    <li><code>0.32</code></li>
 </ul>
 
 
@@ -2009,8 +2010,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetDamageCountdown</code></li>
     <li><code>singleChoice</code></li>
     <li><code>startArenaFight</code></li>
-    <li><code>updateWired</code></li>
-    <li><code>updateWiredImmunity</code></li>
 </ul>
 
 
@@ -2020,7 +2019,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>detachItem</code></li>
     <li><code>detachItemFromSlot</code></li>
-    <li><code>fireRemoveEvent</code></li>
+    <li><code>fireUnequipEvent</code></li>
     <li><code>updateHoldableRadialLightSource</code></li>
 </ul>
 
@@ -2041,6 +2040,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deleteApparitions</code></li>
     <li><code>enableHoverEffect</code></li>
     <li><code>enableRadialVision</code></li>
+    <li><code>equip</code></li>
     <li><code>forceSpawnApparition</code></li>
     <li><code>freezeMonkeyLikes</code></li>
     <li><code>healOnFirstPickup</code></li>
@@ -2048,9 +2048,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetConditionalDamage</code></li>
     <li><code>updateAttackability</code></li>
     <li><code>updateCollision</code></li>
+    <li><code>updateHoldableRadialLightSource</code></li>
     <li><code>updatePerspective</code></li>
     <li><code>updateRegenerationKillCounterIncrement</code></li>
     <li><code>updateVisionSourceByGrooveChain</code></li>
+    <li><code>updateWired</code></li>
+    <li><code>updateWiredImmunity</code></li>
 </ul>
 
 
@@ -2098,27 +2101,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
-<p><a name="inventoryRemoveItem"></a></p>
-<h2>inventoryRemoveItem</h2>
-
-<ul>
-    <li><code>convertOnDrop</code></li>
-    <li><code>decreaseMaxHealthOnDrop</code></li>
-    <li><code>disableHoverEffect</code></li>
-    <li><code>disableRadialVision</code></li>
-    <li><code>dropBagContents</code></li>
-    <li><code>dropHolsteredItem</code></li>
-    <li><code>resetThrowable</code></li>
-    <li><code>updateAttackability</code></li>
-    <li><code>updateCollision</code></li>
-    <li><code>updatePerspective</code></li>
-    <li><code>updateRegenerationKillCounterIncrement</code></li>
-    <li><code>updateVisionSourceByGrooveChain</code></li>
-    <li><code>updateWired</code></li>
-    <li><code>updateWiredImmunity</code></li>
-</ul>
-
-
 <p><a name="inventorySlotCapacity"></a></p>
 <h2>inventorySlotCapacity</h2>
 
@@ -2137,6 +2119,29 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnMergedItem</code></li>
     <li><code>fireCollectEvent</code></li>
     <li><code>incrementItemStackQuantity</code></li>
+</ul>
+
+
+<p><a name="inventoryUnequipItem"></a></p>
+<h2>inventoryUnequipItem</h2>
+
+<ul>
+    <li><code>convertOnDrop</code></li>
+    <li><code>decreaseMaxHealthOnDrop</code></li>
+    <li><code>disableHoverEffect</code></li>
+    <li><code>disableRadialVision</code></li>
+    <li><code>dropBagContents</code></li>
+    <li><code>dropHolsteredItem</code></li>
+    <li><code>resetThrowable</code></li>
+    <li><code>unequip</code></li>
+    <li><code>updateAttackability</code></li>
+    <li><code>updateCollision</code></li>
+    <li><code>updateHoldableRadialLightSource</code></li>
+    <li><code>updatePerspective</code></li>
+    <li><code>updateRegenerationKillCounterIncrement</code></li>
+    <li><code>updateVisionSourceByGrooveChain</code></li>
+    <li><code>updateWired</code></li>
+    <li><code>updateWiredImmunity</code></li>
 </ul>
 
 
@@ -2923,7 +2928,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>increaseGrooveChain</code></li>
     <li><code>incrementRegenerationKillCounter</code></li>
     <li><code>minimumCurrencyDrop</code></li>
-    <li><code>reduceCarriedSpellCooldowns</code></li>
     <li><code>resetDamageCountdown</code></li>
 </ul>
 
@@ -3034,8 +3038,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>charge</code></li>
     <li><code>equipItems</code></li>
     <li><code>postConvertBeatDelay</code></li>
+    <li><code>postConvertBeatInterval</code></li>
     <li><code>resetAiId</code></li>
     <li><code>resetAnimationFreezeEffectNeedUpdate</code></li>
+    <li><code>resetBeatDelayInterval</code></li>
     <li><code>resetHoverEffectActive</code></li>
     <li><code>resetItemStackQuantity</code></li>
     <li><code>resetPositionalSpriteOffsetX</code></li>
@@ -3148,7 +3154,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deleteApparitions</code></li>
     <li><code>followerCollectGold</code></li>
     <li><code>freezeMonkeyLikes</code></li>
-    <li><code>giveInitialEquipment</code></li>
+    <li><code>giveInitialInventory</code></li>
     <li><code>healthBonusAgainstPlayer</code></li>
     <li><code>hideUntilLit</code></li>
     <li><code>initFacingDirection</code></li>
@@ -3241,6 +3247,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyKnockback</code></li>
     <li><code>applyPendingRespawnImmunity</code></li>
     <li><code>applyShield</code></li>
+    <li><code>applySpawnInvincibility</code></li>
     <li><code>armorMinimumDamage</code></li>
     <li><code>beatDelayShield</code></li>
     <li><code>bounceTweenOnHit</code></li>

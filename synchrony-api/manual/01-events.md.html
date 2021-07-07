@@ -637,8 +637,8 @@
     <li><code>reset</code></li>
     <li><code>sounds</code></li>
     <li><code>postSounds</code></li>
-    <li><code>tiles</code></li>
     <li><code>entitySchema</code></li>
+    <li><code>tiles</code></li>
     <li><code>components</code></li>
     <li><code>xmlEntities</code></li>
     <li><code>customEntities</code></li>
@@ -2301,10 +2301,10 @@
     <li><code>unmap</code></li>
     <li><code>attach</code></li>
     <li><code>attachSlot</code></li>
-    <li><code>light</code></li>
     <li><code>dropSlot</code></li>
     <li><code>collect</code></li>
     <li><code>equip</code></li>
+    <li><code>light</code></li>
     <li><code>sprite</code></li>
     <li><code>animation</code></li>
 </ul>
@@ -2337,8 +2337,9 @@
 <ul>
     <li><code>detach</code></li>
     <li><code>detachSlot</code></li>
-    <li><code>light</code></li>
     <li><code>remove</code></li>
+    <li><code>unequip</code></li>
+    <li><code>light</code></li>
 </ul>
 
 
@@ -2358,6 +2359,7 @@
 <h2>inventoryEquipItem</h2>
 
 <ul>
+    <li><code>equip</code></li>
     <li><code>wire</code></li>
     <li><code>light</code></li>
     <li><code>apparition</code></li>
@@ -2403,26 +2405,6 @@
 </ul>
 
 
-<p><a name="inventoryRemoveItem"></a></p>
-<h2>inventoryRemoveItem</h2>
-
-<ul>
-    <li><code>wire</code></li>
-    <li><code>light</code></li>
-    <li><code>perspective</code></li>
-    <li><code>attackable</code></li>
-    <li><code>health</code></li>
-    <li><code>regenKillCount</code></li>
-    <li><code>holderSprite</code></li>
-    <li><code>sprite</code></li>
-    <li><code>convert</code></li>
-    <li><code>suppress</code></li>
-    <li><code>resetItem</code></li>
-    <li><code>dropContent</code></li>
-    <li><code>collision</code></li>
-</ul>
-
-
 <p><a name="inventorySlotCapacity"></a></p>
 <h2>inventorySlotCapacity</h2>
 
@@ -2436,6 +2418,27 @@
     <li><code>collect</code></li>
     <li><code>convert</code></li>
     <li><code>despawn</code></li>
+</ul>
+
+
+<p><a name="inventoryUnequipItem"></a></p>
+<h2>inventoryUnequipItem</h2>
+
+<ul>
+    <li><code>unequip</code></li>
+    <li><code>wire</code></li>
+    <li><code>light</code></li>
+    <li><code>perspective</code></li>
+    <li><code>attackable</code></li>
+    <li><code>health</code></li>
+    <li><code>regenKillCount</code></li>
+    <li><code>holderSprite</code></li>
+    <li><code>sprite</code></li>
+    <li><code>convert</code></li>
+    <li><code>suppress</code></li>
+    <li><code>resetItem</code></li>
+    <li><code>dropContent</code></li>
+    <li><code>collision</code></li>
 </ul>
 
 
@@ -4650,10 +4653,10 @@
     <li><code>animationTimer</code></li>
     <li><code>initPendingObjects</code></li>
     <li><code>spawnPlayers</code></li>
-    <li><code>resetAnimations</code></li>
     <li><code>pendingTraps</code></li>
     <li><code>pendingDelays</code></li>
     <li><code>targeting</code></li>
+    <li><code>resetAnimations</code></li>
     <li><code>invincibility</code></li>
     <li><code>spectator</code></li>
     <li><code>missedBeat</code></li>
