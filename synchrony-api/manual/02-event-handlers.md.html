@@ -453,6 +453,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyDirectionalAnimations</code></li>
     <li><code>applyEquipmentSpriteRow</code></li>
     <li><code>applyGrabAnimations</code></li>
+    <li><code>applyHUDAnimations</code></li>
     <li><code>applyNormalAnimations</code></li>
     <li><code>applyParityAnimations</code></li>
     <li><code>applyParryVulnerabilityAnimations</code></li>
@@ -2002,6 +2003,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>fireEquipEvent</code></li>
     <li><code>unmapItemPosition</code></li>
     <li><code>updateHoldableRadialLightSource</code></li>
+    <li><code>useHUDSprite</code></li>
 </ul>
 
 
@@ -2011,7 +2013,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>addCurrency</code></li>
     <li><code>consumeOnPickup</code></li>
-    <li><code>convertOnPickup</code></li>
     <li><code>damageOnCurrencyPickup</code></li>
     <li><code>damageOnPickup</code></li>
     <li><code>gimmeThatLute</code></li>
@@ -2030,6 +2031,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>detachItem</code></li>
     <li><code>detachItemFromSlot</code></li>
     <li><code>fireUnequipEvent</code></li>
+    <li><code>resetHUDSprite</code></li>
     <li><code>updateHoldableRadialLightSource</code></li>
 </ul>
 
@@ -2138,7 +2140,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>inventoryUnequipItem</h2>
 
 <ul>
-    <li><code>convertOnDrop</code></li>
     <li><code>decreaseMaxHealthOnDrop</code></li>
     <li><code>disableHoverEffect</code></li>
     <li><code>disableRadialVision</code></li>
@@ -3833,6 +3834,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>2_Vision_fovMap</code></li>
     <li><code>2_Vision_revealMap</code></li>
     <li><code>2_Vision_visMap</code></li>
+    <li><code>3_LevelExit_levelExitUnlocked</code></li>
     <li><code>3_Map_objectPositions</code></li>
     <li><code>3_Map_outOfBoundsObjects</code></li>
     <li><code>3_Overlay_activeOverlays</code></li>
@@ -3849,7 +3851,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_DigMultiHit_accumulators</code></li>
     <li><code>4_Flyaway_activeFlyaways</code></li>
     <li><code>4_Flyaway_nextID</code></li>
-    <li><code>4_LevelExit_levelExitUnlocked</code></li>
     <li><code>4_Marker_markers</code></li>
     <li><code>4_Segment_segments</code></li>
     <li><code>4_Swipe_activeSwipes</code></li>
@@ -4883,6 +4884,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>enableParry</code></li>
     <li><code>grooveChainSwipeRow</code></li>
     <li><code>handleLoadedAttack</code></li>
+    <li><code>handleThrowAttack</code></li>
     <li><code>inflictConfusion</code></li>
     <li><code>overrideBeatDelay</code></li>
     <li><code>screenFlash</code></li>
