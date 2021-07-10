@@ -77,6 +77,7 @@
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
+  <li><a href="../modules/necro.config.SettingsPresets.html">necro.config.SettingsPresets</a></li>
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
@@ -95,7 +96,6 @@
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
-  <li><a href="../modules/necro.game.character.Apparition.html">necro.game.character.Apparition</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
@@ -192,6 +192,7 @@
   <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
   <li><a href="../modules/necro.game.vision.SegmentVisibility.html">necro.game.vision.SegmentVisibility</a></li>
   <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
+  <li><a href="../modules/necro.game.vision.Visibility.html">necro.game.vision.Visibility</a></li>
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
@@ -427,37 +428,31 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#apparitionSpawnLightCheck">apparitionSpawnLightCheck</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#apparitionSpawnNearTarget">apparitionSpawnNearTarget</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#apparitionSpawnOnEarthquake">apparitionSpawnOnEarthquake</a></td>
+	<td class="name" nowrap><a href="#apparitionSpawnOnReveal">apparitionSpawnOnReveal</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#apparitionSpawnOnEnemyVision">apparitionSpawnOnEnemyVision</a></td>
+	<td class="name" nowrap><a href="#apparitionSpawnProximityCheck">apparitionSpawnProximityCheck</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#apparitionSpawnOnItemVision">apparitionSpawnOnItemVision</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#apparitionSpawnOnStalk">apparitionSpawnOnStalk</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#apparitionStalkTarget">apparitionStalkTarget</a></td>
+	<td class="name" nowrap><a href="#itemSpawnApparitions">itemSpawnApparitions</a></td>
 	<td class="summary">
 
 </td>
@@ -482,9 +477,13 @@
 
 
     <ul>
-        <li><span class="parameter">spawned</span>
+        <li><span class="parameter">appeared</span>
           bool
          (<em>default</em> false)
+        </li>
+        <li><span class="parameter">deletionRadius</span>
+         constant float
+         (<em>default</em> 3)
         </li>
     </ul>
 
@@ -505,11 +504,7 @@
 
     <ul>
         <li><span class="parameter">radius</span>
-         constant int
-         (<em>default</em> 3)
-        </li>
-        <li><span class="parameter">maximumEnemyCount</span>
-         constant int
+         constant float
          (<em>default</em> 0)
         </li>
     </ul>
@@ -568,6 +563,22 @@
 
 </dd>
     <dt>
+    <a name = "apparitionSpawnLightCheck"></a>
+    <strong>apparitionSpawnLightCheck</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "apparitionSpawnNearTarget"></a>
     <strong>apparitionSpawnNearTarget</strong>
     </dt>
@@ -582,121 +593,73 @@
          constant int
          (<em>default</em> 1)
         </li>
-        <li><span class="parameter">relativeDirection</span>
-         constant int
-         (<em>default</em> 1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "apparitionSpawnOnEarthquake"></a>
-    <strong>apparitionSpawnOnEarthquake</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">deletionRadius</span>
-         constant int
-         (<em>default</em> 1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "apparitionSpawnOnEnemyVision"></a>
-    <strong>apparitionSpawnOnEnemyVision</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">deletionRadius</span>
-         constant int
-         (<em>default</em> 1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "apparitionSpawnOnItemVision"></a>
-    <strong>apparitionSpawnOnItemVision</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">deletionRadius</span>
-         constant int
-         (<em>default</em> 1)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "apparitionSpawnOnStalk"></a>
-    <strong>apparitionSpawnOnStalk</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "apparitionStalkTarget"></a>
-    <strong>apparitionStalkTarget</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">activationRadius</span>
-         constant int
-         (<em>default</em> 1)
-        </li>
         <li><span class="parameter">flipDistances</span>
           bool
          (<em>default</em> false)
         </li>
-        <li><span class="parameter">target</span>
-          entityID
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "apparitionSpawnOnReveal"></a>
+    <strong>apparitionSpawnOnReveal</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "apparitionSpawnProximityCheck"></a>
+    <strong>apparitionSpawnProximityCheck</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">radius</span>
+         constant float
          (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">active</span>
+          bool
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemSpawnApparitions"></a>
+    <strong>itemSpawnApparitions</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">component</span>
+         constant string
+         (<em>default</em> "")
         </li>
     </ul>
 

@@ -77,6 +77,7 @@
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
+  <li><a href="../modules/necro.config.SettingsPresets.html">necro.config.SettingsPresets</a></li>
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
@@ -95,7 +96,6 @@
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
-  <li><a href="../modules/necro.game.character.Apparition.html">necro.game.character.Apparition</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
@@ -192,6 +192,7 @@
   <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
   <li><a href="../modules/necro.game.vision.SegmentVisibility.html">necro.game.vision.SegmentVisibility</a></li>
   <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
+  <li><a href="../modules/necro.game.vision.Visibility.html">necro.game.vision.Visibility</a></li>
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
@@ -443,14 +444,15 @@
 
 <ul>
     <li><code>position</code></li>
-    <li><code>checkTile</code></li>
+    <li><code>checkCollision</code></li>
+    <li><code>checkLight</code></li>
+    <li><code>checkCooldown</code></li>
+    <li><code>checkProximity</code></li>
     <li><code>checkSwarm</code></li>
     <li><code>checkDistance</code></li>
-    <li><code>checkCooldown</code></li>
-    <li><code>spawn</code></li>
+    <li><code>apparition</code></li>
     <li><code>reveal</code></li>
     <li><code>resetCooldown</code></li>
-    <li><code>delete</code></li>
 </ul>
 
 
@@ -795,6 +797,7 @@
     <li><code>extra</code></li>
     <li><code>overrides</code></li>
     <li><code>namedOverrides</code></li>
+    <li><code>phasing</code></li>
 </ul>
 
 
@@ -964,7 +967,6 @@
     <li><code>currentLevel</code></li>
     <li><code>speedrunTimer</code></li>
     <li><code>replaySave</code></li>
-    <li><code>resetLevelVariables</code></li>
     <li><code>random</code></li>
     <li><code>levelTransition</code></li>
     <li><code>turnID</code></li>
@@ -980,6 +982,7 @@
     <li><code>segments</code></li>
     <li><code>tiles</code></li>
     <li><code>spawnPlayers</code></li>
+    <li><code>resetLevelVariables</code></li>
     <li><code>level</code></li>
     <li><code>introText</code></li>
     <li><code>gameSession</code></li>
@@ -1634,6 +1637,7 @@
     <li><code>gluttony</code></li>
     <li><code>maxHealth</code></li>
     <li><code>health</code></li>
+    <li><code>cursedHealth</code></li>
     <li><code>overhealConsume</code></li>
     <li><code>overhealRounding</code></li>
     <li><code>overheal</code></li>
@@ -1668,6 +1672,8 @@
     <li><code>objectRowMap</code></li>
     <li><code>collision</code></li>
     <li><code>light</code></li>
+    <li><code>levelExit</code></li>
+    <li><code>existenceChecks</code></li>
     <li><code>targeting</code></li>
     <li><code>character</code></li>
 </ul>
@@ -1801,6 +1807,7 @@
     <li><code>ai</code></li>
     <li><code>moveOverride</code></li>
     <li><code>resetFields</code></li>
+    <li><code>updateCollision</code></li>
     <li><code>tangible</code></li>
     <li><code>perspective</code></li>
     <li><code>inventory</code></li>
@@ -1855,6 +1862,7 @@
 <h2>holderReveal</h2>
 
 <ul>
+    <li><code>apparition</code></li>
     <li><code>sound</code></li>
     <li><code>cooldown</code></li>
     <li><code>trample</code></li>
@@ -1907,6 +1915,7 @@
     <li><code>position</code></li>
     <li><code>overrides</code></li>
     <li><code>healthBonus</code></li>
+    <li><code>apparition</code></li>
     <li><code>homeArea</code></li>
     <li><code>followerCollectGold</code></li>
     <li><code>tangible</code></li>
@@ -2061,7 +2070,9 @@
     <li><code>objectRowMap</code></li>
     <li><code>collision</code></li>
     <li><code>light</code></li>
+    <li><code>levelExit</code></li>
     <li><code>targeting</code></li>
+    <li><code>apparition</code></li>
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
 </ul>
@@ -2219,6 +2230,7 @@
 
 <ul>
     <li><code>item</code></li>
+    <li><code>setMask</code></li>
 </ul>
 
 
@@ -2492,6 +2504,8 @@
 
 <ul>
     <li><code>speedrunTimer</code></li>
+    <li><code>deathless</code></li>
+    <li><code>winScreen</code></li>
     <li><code>nextLevel</code></li>
 </ul>
 
@@ -3174,6 +3188,7 @@
     <li><code>gluttony</code></li>
     <li><code>maxHealth</code></li>
     <li><code>health</code></li>
+    <li><code>cursedHealth</code></li>
     <li><code>overhealConsume</code></li>
     <li><code>overhealRounding</code></li>
     <li><code>overheal</code></li>
@@ -3208,6 +3223,8 @@
     <li><code>objectRowMap</code></li>
     <li><code>collision</code></li>
     <li><code>light</code></li>
+    <li><code>levelExit</code></li>
+    <li><code>existenceChecks</code></li>
     <li><code>targeting</code></li>
     <li><code>character</code></li>
 </ul>
@@ -3341,6 +3358,7 @@
     <li><code>ai</code></li>
     <li><code>moveOverride</code></li>
     <li><code>resetFields</code></li>
+    <li><code>updateCollision</code></li>
     <li><code>tangible</code></li>
     <li><code>perspective</code></li>
     <li><code>inventory</code></li>
@@ -3395,6 +3413,7 @@
 <h2>objectReveal</h2>
 
 <ul>
+    <li><code>apparition</code></li>
     <li><code>sound</code></li>
     <li><code>cooldown</code></li>
     <li><code>trample</code></li>
@@ -3447,6 +3466,7 @@
     <li><code>position</code></li>
     <li><code>overrides</code></li>
     <li><code>healthBonus</code></li>
+    <li><code>apparition</code></li>
     <li><code>homeArea</code></li>
     <li><code>followerCollectGold</code></li>
     <li><code>tangible</code></li>
@@ -3601,7 +3621,9 @@
     <li><code>objectRowMap</code></li>
     <li><code>collision</code></li>
     <li><code>light</code></li>
+    <li><code>levelExit</code></li>
     <li><code>targeting</code></li>
+    <li><code>apparition</code></li>
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
 </ul>
@@ -3759,6 +3781,7 @@
 
 <ul>
     <li><code>item</code></li>
+    <li><code>setMask</code></li>
 </ul>
 
 
@@ -3874,6 +3897,7 @@
     <li><code>specialAction</code></li>
     <li><code>fear</code></li>
     <li><code>facing</code></li>
+    <li><code>idleOnPhasing</code></li>
 </ul>
 
 
@@ -3990,6 +4014,7 @@
     <li><code>heartbeat</code></li>
     <li><code>minimap</code></li>
     <li><code>players</code></li>
+    <li><code>winCount</code></li>
     <li><code>timer</code></li>
     <li><code>levelCounter</code></li>
     <li><code>targetPointer</code></li>
@@ -4031,6 +4056,7 @@
     <li><code>clear</code></li>
     <li><code>fastForward</code></li>
     <li><code>renderGame</code></li>
+    <li><code>winScreen</code></li>
     <li><code>lobby</code></li>
     <li><code>menu</code></li>
     <li><code>menuOverlay</code></li>
@@ -4477,6 +4503,7 @@
 <h2>tick</h2>
 
 <ul>
+    <li><code>config</code></li>
     <li><code>gameContent</code></li>
     <li><code>debugKeys</code></li>
     <li><code>windowSize</code></li>
@@ -4552,6 +4579,7 @@
     <li><code>drops</code></li>
     <li><code>digEntity</code></li>
     <li><code>doorHinges</code></li>
+    <li><code>travelRune</code></li>
 </ul>
 
 
@@ -4664,6 +4692,7 @@
     <li><code>startCharge</code></li>
     <li><code>controlDad</code></li>
     <li><code>playerActions</code></li>
+    <li><code>apparitions</code></li>
     <li><code>frame1</code></li>
     <li><code>freezeTickDown</code></li>
     <li><code>freeze</code></li>
@@ -4769,7 +4798,6 @@
     <li><code>visibleByProximity</code></li>
     <li><code>visibilityTargetFocus</code></li>
     <li><code>visibilityHideOnTargetPosition</code></li>
-    <li><code>visibilityTileRequirement</code></li>
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenUntilProximity</code></li>
     <li><code>hiddenByTileBrightness</code></li>

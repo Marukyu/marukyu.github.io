@@ -77,6 +77,7 @@
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
+  <li><a href="../modules/necro.config.SettingsPresets.html">necro.config.SettingsPresets</a></li>
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
@@ -95,7 +96,6 @@
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
-  <li><a href="../modules/necro.game.character.Apparition.html">necro.game.character.Apparition</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
@@ -192,6 +192,7 @@
   <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
   <li><a href="../modules/necro.game.vision.SegmentVisibility.html">necro.game.vision.SegmentVisibility</a></li>
   <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
+  <li><a href="../modules/necro.game.vision.Visibility.html">necro.game.vision.Visibility</a></li>
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
@@ -481,14 +482,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>apparitionSpawn</h2>
 
 <ul>
+    <li><code>apparition</code></li>
+    <li><code>checkCollision</code></li>
     <li><code>checkCooldown</code></li>
-    <li><code>checkTargetDistance</code></li>
+    <li><code>checkDistance</code></li>
+    <li><code>checkLight</code></li>
+    <li><code>checkProximity</code></li>
     <li><code>checkTargetSwarm</code></li>
-    <li><code>checkTargetTile</code></li>
     <li><code>locateStalkTarget</code></li>
     <li><code>resetCooldown</code></li>
     <li><code>revealApparition</code></li>
-    <li><code>spawnApparition</code></li>
 </ul>
 
 
@@ -831,6 +834,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>bestiary</code></li>
     <li><code>commonAttributes</code></li>
     <li><code>enemySprite</code></li>
+    <li><code>idleOnTargetCollision</code></li>
     <li><code>mirrorLeftFacingSpritesheets</code></li>
     <li><code>mystery</code></li>
     <li><code>namedEnemyOverrides</code></li>
@@ -914,6 +918,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadConjurer</code></li>
     <li><code>loadCoralRiff</code></li>
     <li><code>loadCrate</code></li>
+    <li><code>loadCursedWraith</code></li>
     <li><code>loadDeadRinger</code></li>
     <li><code>loadDeathMetal</code></li>
     <li><code>loadDevil</code></li>
@@ -1113,6 +1118,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>addCommonCharacterComponents</code></li>
     <li><code>addNoReturnComponents</code></li>
     <li><code>nocturnaBat</code></li>
+    <li><code>phasing</code></li>
 </ul>
 
 
@@ -1159,7 +1165,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>cleanUpNecroLevelLibrary</code></li>
-    <li><code>resetRemoteSettings</code></li>
     <li><code>saveSettings</code></li>
 </ul>
 
@@ -1276,6 +1281,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>closeAllMenus</code></li>
+    <li><code>disableWinScreen</code></li>
     <li><code>initializeLobby</code></li>
     <li><code>playLobbyMusic</code></li>
     <li><code>resetRoomAttributes</code></li>
@@ -1307,7 +1313,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>dwarfismReset</code></li>
     <li><code>fearableReset</code></li>
     <li><code>findMarkerTiles</code></li>
-    <li><code>forceSpawnApparition</code></li>
     <li><code>freezableReset</code></li>
     <li><code>gigantismReset</code></li>
     <li><code>initPriceTags</code></li>
@@ -1344,6 +1349,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetTurnID</code></li>
     <li><code>respawnOnLevelTransition</code></li>
     <li><code>restoreDescendedEntities</code></li>
+    <li><code>skipLevelExit</code></li>
     <li><code>snapCameraToTarget</code></li>
     <li><code>spawnDad</code></li>
     <li><code>spawnPlayers</code></li>
@@ -1392,6 +1398,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearSnapshots</code></li>
     <li><code>closeAllMenus</code></li>
     <li><code>closeInGameLobby</code></li>
+    <li><code>disableWinScreen</code></li>
     <li><code>hardMode</code></li>
     <li><code>initializePendingObjectList</code></li>
     <li><code>processPendingObjects</code></li>
@@ -1432,10 +1439,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>getIntroText</h2>
 
 <ul>
+    <li><code>deathless</code></li>
     <li><code>default</code></li>
     <li><code>hard</code></li>
     <li><code>mystery</code></li>
     <li><code>noReturn</code></li>
+    <li><code>phasing</code></li>
     <li><code>randomizer</code></li>
 </ul>
 
@@ -1921,6 +1930,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>itemCollision</code></li>
+    <li><code>itemCollisionCheckOnMove</code></li>
 </ul>
 
 
@@ -2041,13 +2051,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>enableHoverEffect</code></li>
     <li><code>enableRadialVision</code></li>
     <li><code>equip</code></li>
-    <li><code>forceSpawnApparition</code></li>
+    <li><code>forceApparitions</code></li>
     <li><code>freezeMonkeyLikes</code></li>
     <li><code>healOnFirstPickup</code></li>
     <li><code>increaseMaxHealthOnPickup</code></li>
+    <li><code>itemHolderZOffset</code></li>
     <li><code>resetConditionalDamage</code></li>
     <li><code>updateAttackability</code></li>
     <li><code>updateCollision</code></li>
+    <li><code>updateCollisionCheckOnMove</code></li>
     <li><code>updateHoldableRadialLightSource</code></li>
     <li><code>updatePerspective</code></li>
     <li><code>updateRegenerationKillCounterIncrement</code></li>
@@ -2132,10 +2144,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>disableRadialVision</code></li>
     <li><code>dropBagContents</code></li>
     <li><code>dropHolsteredItem</code></li>
+    <li><code>itemHolderZOffset</code></li>
     <li><code>resetThrowable</code></li>
     <li><code>unequip</code></li>
     <li><code>updateAttackability</code></li>
     <li><code>updateCollision</code></li>
+    <li><code>updateCollisionCheckOnMove</code></li>
     <li><code>updateHoldableRadialLightSource</code></li>
     <li><code>updatePerspective</code></li>
     <li><code>updateRegenerationKillCounterIncrement</code></li>
@@ -2198,8 +2212,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>levelComplete</h2>
 
 <ul>
+    <li><code>deathless</code></li>
     <li><code>finalizeSpeedrunTimer</code></li>
     <li><code>switchToNextLevel</code></li>
+    <li><code>winScreen</code></li>
 </ul>
 
 
@@ -2308,6 +2324,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>retry</code></li>
     <li><code>seedEntry</code></li>
     <li><code>settings</code></li>
+    <li><code>settingsPresets</code></li>
+    <li><code>textEntry</code></li>
     <li><code>win</code></li>
 </ul>
 
@@ -2355,7 +2373,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>reloadAssets</code></li>
     <li><code>updateModList</code></li>
-    <li><code>updateRemoteSettings</code></li>
 </ul>
 
 
@@ -2576,7 +2593,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deathSound</code></li>
     <li><code>despawnOtherFlawlessChests</code></li>
     <li><code>dropInventoryItems</code></li>
-    <li><code>endAmbush</code></li>
     <li><code>finalizeObjectTangibility</code></li>
     <li><code>forwardDeathToController</code></li>
     <li><code>genericDeathSound</code></li>
@@ -2673,9 +2689,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnObject</code></li>
     <li><code>detachController</code></li>
     <li><code>detachItemBeforeDespawning</code></li>
-    <li><code>provokeOnAddsDeath</code></li>
     <li><code>stopAudioLoop</code></li>
-    <li><code>unlockStairs</code></li>
 </ul>
 
 
@@ -2853,6 +2867,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectHeal</h2>
 
 <ul>
+    <li><code>addCursedHealth</code></li>
     <li><code>addHealth</code></li>
     <li><code>addMaxHealth</code></li>
     <li><code>grantInvincibility</code></li>
@@ -2888,13 +2903,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>detachFromGrabVictim</code></li>
     <li><code>detachGrabber</code></li>
     <li><code>disableLightSource</code></li>
+    <li><code>endAmbush</code></li>
     <li><code>followerTangibility</code></li>
     <li><code>preventActions</code></li>
+    <li><code>provokeOnAddsDeath</code></li>
     <li><code>removeFromCollisionMap</code></li>
     <li><code>removeFromTargetingTeam</code></li>
     <li><code>removeMultiTileCollision</code></li>
     <li><code>removeMultiTileObjectFromMap</code></li>
     <li><code>removeObjectFromMap</code></li>
+    <li><code>unlockStairs</code></li>
     <li><code>updateFocusedEntities</code></li>
 </ul>
 
@@ -3061,6 +3079,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnAttachment</code></li>
     <li><code>tangible</code></li>
     <li><code>updateAttackability</code></li>
+    <li><code>updateCollision</code></li>
     <li><code>updateFacingDirection</code></li>
     <li><code>updatePerspective</code></li>
 </ul>
@@ -3105,6 +3124,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectReveal</h2>
 
 <ul>
+    <li><code>forceApparition</code></li>
     <li><code>playRevealSound</code></li>
 </ul>
 
@@ -3153,6 +3173,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>darkness</code></li>
     <li><code>deleteApparitions</code></li>
     <li><code>followerCollectGold</code></li>
+    <li><code>forceApparition</code></li>
     <li><code>freezeMonkeyLikes</code></li>
     <li><code>giveInitialInventory</code></li>
     <li><code>healthBonusAgainstPlayer</code></li>
@@ -3322,9 +3343,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>addToCollisionMap</code></li>
     <li><code>addToTargetingTeam</code></li>
     <li><code>followerTangibility</code></li>
+    <li><code>forceApparitions</code></li>
     <li><code>initializeLightSource</code></li>
     <li><code>markPendingMerge</code></li>
     <li><code>offsetSpriteIfAboveWall</code></li>
+    <li><code>unlockStairs</code></li>
     <li><code>updateFocusedEntities</code></li>
     <li><code>updateSunken</code></li>
     <li><code>updateWired</code></li>
@@ -3477,6 +3500,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="objectUpdateCollision"></a></p>
 <h2>objectUpdateCollision</h2>
 
+<ul>
+    <li><code>setCheckOnAttack</code></li>
+    <li><code>setCheckOnMove</code></li>
+    <li><code>setCollisionMask</code></li>
+</ul>
 
 
 <p><a name="objectUpdateEquipmentSprite"></a></p>
@@ -3580,6 +3608,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>faceTarget</code></li>
     <li><code>fear</code></li>
     <li><code>fortissimoleBurrowing</code></li>
+    <li><code>idleOnPhasing</code></li>
     <li><code>luteBodyForceUp</code></li>
     <li><code>luteHeadFollowsBody</code></li>
     <li><code>necrodancerAIChange</code></li>
@@ -3680,7 +3709,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_camera.splitPlayerViewMultiplier</code></li>
     <li><code>1_chat.visible</code></li>
     <li><code>1_config.showAdvanced</code></li>
-    <li><code>1_config.xmlImport</code></li>
     <li><code>1_descent</code></li>
     <li><code>1_descent.defaultDuration</code></li>
     <li><code>1_descent.exitRequirementMaximum</code></li>
@@ -3697,9 +3725,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_gameplay</code></li>
     <li><code>1_gameplay.markSeen</code></li>
     <li><code>1_gameplay.modifiers</code></li>
+    <li><code>1_gameplay.modifiers.deathless</code></li>
     <li><code>1_gameplay.modifiers.hard</code></li>
     <li><code>1_gameplay.modifiers.mystery</code></li>
     <li><code>1_gameplay.modifiers.noReturn</code></li>
+    <li><code>1_gameplay.modifiers.phasing</code></li>
     <li><code>1_gameplay.modifiers.randomizer</code></li>
     <li><code>1_input</code></li>
     <li><code>1_input.controllers</code></li>
@@ -3757,6 +3787,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_options.credits</code></li>
     <li><code>1_options.gameplayControls</code></li>
     <li><code>1_options.menuControls</code></li>
+    <li><code>1_presetsMenu.openPresetMenu</code></li>
     <li><code>1_replay.autoSave.durationThreshold</code></li>
     <li><code>1_replay.autoSave.filenameFormat</code></li>
     <li><code>1_replay.autoSave.mode</code></li>
@@ -3878,6 +3909,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyBlinkEffect</code></li>
     <li><code>applyCropOnDescentEffect</code></li>
     <li><code>applyCropOnSinkEffect</code></li>
+    <li><code>applyNoReturnEffects</code></li>
     <li><code>applyRandomOffset</code></li>
     <li><code>applySlideSway</code></li>
     <li><code>applySpriteOffsetIfAboveWall</code></li>
@@ -3886,6 +3918,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyTileBrightnessEffect</code></li>
     <li><code>applyVibrateEffect</code></li>
     <li><code>frozenChargerFacing</code></li>
+    <li><code>holderFadeEffect</code></li>
     <li><code>resetOpacity</code></li>
     <li><code>spriteOffsetPerFrame</code></li>
     <li><code>targetProximityFadeEffect</code></li>
@@ -3905,6 +3938,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderSpectatorHUD</code></li>
     <li><code>renderSpeedrunTimer</code></li>
     <li><code>renderTargetPointer</code></li>
+    <li><code>renderWinCount</code></li>
 </ul>
 
 
@@ -3952,6 +3986,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderMenu</code></li>
     <li><code>renderMenuOverlay</code></li>
     <li><code>renderModDownloadProgress</code></li>
+    <li><code>renderSettingsMenuOverlay</code></li>
+    <li><code>winScreen</code></li>
 </ul>
 
 
@@ -4245,6 +4281,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>glass</code></li>
     <li><code>pain</code></li>
     <li><code>peace</code></li>
+    <li><code>phasing</code></li>
     <li><code>rhythm</code></li>
     <li><code>risk</code></li>
     <li><code>sacrifice</code></li>
@@ -4407,7 +4444,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>screenFlashTargets</code></li>
     <li><code>screenShake</code></li>
     <li><code>shrineEffects</code></li>
-    <li><code>spawnApparitions</code></li>
     <li><code>spawnBombs</code></li>
     <li><code>spawnCoreSwipe</code></li>
     <li><code>spawnEntity</code></li>
@@ -4531,6 +4567,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateInputControls</code></li>
     <li><code>updateMusic</code></li>
     <li><code>updateNetworkModReadiness</code></li>
+    <li><code>updateSettings</code></li>
     <li><code>updateSounds</code></li>
     <li><code>updateVisibility</code></li>
     <li><code>updateVisualObjects</code></li>
@@ -4563,6 +4600,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>finalDigSound</code></li>
     <li><code>multiHit</code></li>
     <li><code>setTileType</code></li>
+    <li><code>travelRune</code></li>
     <li><code>unreveal</code></li>
 </ul>
 
@@ -4827,7 +4865,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>visibilityCopyFromParent</code></li>
     <li><code>visibilityHideOnTargetPosition</code></li>
     <li><code>visibilityTargetFocus</code></li>
-    <li><code>visibilityTileRequirement</code></li>
     <li><code>visibleByPerspective</code></li>
     <li><code>visibleByProximity</code></li>
     <li><code>visibleWhenRevealed</code></li>

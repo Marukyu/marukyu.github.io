@@ -77,6 +77,7 @@
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
+  <li><a href="../modules/necro.config.SettingsPresets.html">necro.config.SettingsPresets</a></li>
   <li><strong>necro.config.SettingsStorage</strong></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
@@ -95,7 +96,6 @@
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
-  <li><a href="../modules/necro.game.character.Apparition.html">necro.game.character.Apparition</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
@@ -192,6 +192,7 @@
   <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
   <li><a href="../modules/necro.game.vision.SegmentVisibility.html">necro.game.vision.SegmentVisibility</a></li>
   <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
+  <li><a href="../modules/necro.game.vision.Visibility.html">necro.game.vision.Visibility</a></li>
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
@@ -403,7 +404,13 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#get">get (key)</a></td>
+	<td class="name" nowrap><a href="#clearSettingsLayer">clearSettingsLayer (layer)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#get">get (key, layer)</a></td>
 	<td class="summary">
 
 </td>
@@ -493,6 +500,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#getSerializedSettings">getSerializedSettings (layer)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#getTreeKey">getTreeKey (key)</a></td>
 	<td class="summary">
 
@@ -505,7 +518,13 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getVisibility">getVisibility (key)</a></td>
+	<td class="name" nowrap><a href="#getVisibility">getVisibility (key, layer)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isSettableInLayer">isSettableInLayer (key, layer)</a></td>
 	<td class="summary">
 
 </td>
@@ -517,13 +536,25 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#listKeys">listKeys (prefix, scopes)</a></td>
+	<td class="name" nowrap><a href="#listKeys">listKeys (prefix, layer)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#load">load (scopes)</a></td>
+	<td class="name" nowrap><a href="#loadFromFile">loadFromFile (layer)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#overrideSerializedSettings">overrideSerializedSettings (layer, values)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#prettyPrint">prettyPrint (serializedSettingsValues)</a></td>
 	<td class="summary">
 
 </td>
@@ -541,13 +572,13 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#save">save (scopes)</a></td>
+	<td class="name" nowrap><a href="#saveToFile">saveToFile (layer)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#set">set (key, value)</a></td>
+	<td class="name" nowrap><a href="#set">set (key, value, layer)</a></td>
 	<td class="summary">
 
 </td>
@@ -574,8 +605,32 @@
 
     <dl class="function">
     <dt>
+    <a name = "clearSettingsLayer"></a>
+    <strong>clearSettingsLayer (layer)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">layer</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "get"></a>
-    <strong>get (key)</strong>
+    <strong>get (key, layer)</strong>
     </dt>
     <dd>
 
@@ -586,6 +641,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">key</span>
+
+
+
+        </li>
+        <li><span class="parameter">layer</span>
 
 
 
@@ -949,6 +1009,30 @@
 
 </dd>
     <dt>
+    <a name = "getSerializedSettings"></a>
+    <strong>getSerializedSettings (layer)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">layer</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "getTreeKey"></a>
     <strong>getTreeKey (key)</strong>
     </dt>
@@ -998,7 +1082,7 @@
 </dd>
     <dt>
     <a name = "getVisibility"></a>
-    <strong>getVisibility (key)</strong>
+    <strong>getVisibility (key, layer)</strong>
     </dt>
     <dd>
 
@@ -1009,6 +1093,40 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">key</span>
+
+
+
+        </li>
+        <li><span class="parameter">layer</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isSettableInLayer"></a>
+    <strong>isSettableInLayer (key, layer)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+
+
+        </li>
+        <li><span class="parameter">layer</span>
 
 
 
@@ -1046,7 +1164,7 @@
 </dd>
     <dt>
     <a name = "listKeys"></a>
-    <strong>listKeys (prefix, scopes)</strong>
+    <strong>listKeys (prefix, layer)</strong>
     </dt>
     <dd>
 
@@ -1061,7 +1179,7 @@
 
 
         </li>
-        <li><span class="parameter">scopes</span>
+        <li><span class="parameter">layer</span>
 
 
 
@@ -1074,8 +1192,8 @@
 
 </dd>
     <dt>
-    <a name = "load"></a>
-    <strong>load (scopes)</strong>
+    <a name = "loadFromFile"></a>
+    <strong>loadFromFile (layer)</strong>
     </dt>
     <dd>
 
@@ -1085,7 +1203,60 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">scopes</span>
+        <li><span class="parameter">layer</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "overrideSerializedSettings"></a>
+    <strong>overrideSerializedSettings (layer, values)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">layer</span>
+
+
+
+        </li>
+        <li><span class="parameter">values</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "prettyPrint"></a>
+    <strong>prettyPrint (serializedSettingsValues)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">serializedSettingsValues</span>
 
 
 
@@ -1146,8 +1317,8 @@
 
 </dd>
     <dt>
-    <a name = "save"></a>
-    <strong>save (scopes)</strong>
+    <a name = "saveToFile"></a>
+    <strong>saveToFile (layer)</strong>
     </dt>
     <dd>
 
@@ -1157,7 +1328,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">scopes</span>
+        <li><span class="parameter">layer</span>
 
 
 
@@ -1171,7 +1342,7 @@
 </dd>
     <dt>
     <a name = "set"></a>
-    <strong>set (key, value)</strong>
+    <strong>set (key, value, layer)</strong>
     </dt>
     <dd>
 
@@ -1187,6 +1358,11 @@
 
         </li>
         <li><span class="parameter">value</span>
+
+
+
+        </li>
+        <li><span class="parameter">layer</span>
 
 
 

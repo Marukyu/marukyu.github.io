@@ -77,7 +77,7 @@
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
-  <li><a href="../modules/necro.config.SettingsPresets.html">necro.config.SettingsPresets</a></li>
+  <li><strong>necro.config.SettingsPresets</strong></li>
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
@@ -116,7 +116,7 @@
   <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
   <li><a href="../modules/necro.game.character.Team.html">necro.game.character.Team</a></li>
   <li><a href="../modules/necro.game.character.Tickle.html">necro.game.character.Tickle</a></li>
-  <li><strong>necro.game.data.Components</strong></li>
+  <li><a href="../modules/necro.game.data.Components.html">necro.game.data.Components</a></li>
   <li><a href="../modules/necro.game.data.ContentLoader.html">necro.game.data.ContentLoader</a></li>
   <li><a href="../modules/necro.game.data.CustomEntities.html">necro.game.data.CustomEntities</a></li>
   <li><a href="../modules/necro.game.data.DungeonXMLLoader.html">necro.game.data.DungeonXMLLoader</a></li>
@@ -392,7 +392,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.data.Components</code></h1>
+<h1>Module <code>necro.config.SettingsPresets</code></h1>
 <p>
 
 </p>
@@ -404,19 +404,37 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#dependency">dependency (target)</a></td>
+	<td class="name" nowrap><a href="#getDisplayName">getDisplayName (name)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#register">register (components)</a></td>
+	<td class="name" nowrap><a href="#getFileName">getFileName (name)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#registerDependency">registerDependency (source, target)</a></td>
+	<td class="name" nowrap><a href="#list">list ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#load">load (name, layer)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#openDirectory">openDirectory ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#save">save (name, layer)</a></td>
 	<td class="summary">
 
 </td>
@@ -431,8 +449,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "dependency"></a>
-    <strong>dependency (target)</strong>
+    <a name = "getDisplayName"></a>
+    <strong>getDisplayName (name)</strong>
     </dt>
     <dd>
 
@@ -442,7 +460,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">target</span>
+        <li><span class="parameter">name</span>
 
 
 
@@ -455,8 +473,8 @@
 
 </dd>
     <dt>
-    <a name = "register"></a>
-    <strong>register (components)</strong>
+    <a name = "getFileName"></a>
+    <strong>getFileName (name)</strong>
     </dt>
     <dd>
 
@@ -466,7 +484,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">components</span>
+        <li><span class="parameter">name</span>
 
 
 
@@ -479,8 +497,24 @@
 
 </dd>
     <dt>
-    <a name = "registerDependency"></a>
-    <strong>registerDependency (source, target)</strong>
+    <a name = "list"></a>
+    <strong>list ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "load"></a>
+    <strong>load (name, layer)</strong>
     </dt>
     <dd>
 
@@ -490,12 +524,57 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">source</span>
+        <li><span class="parameter">name</span>
 
 
 
         </li>
-        <li><span class="parameter">target</span>
+        <li><span class="parameter">layer</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "openDirectory"></a>
+    <strong>openDirectory ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "save"></a>
+    <strong>save (name, layer)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+
+
+
+        </li>
+        <li><span class="parameter">layer</span>
 
 
 
