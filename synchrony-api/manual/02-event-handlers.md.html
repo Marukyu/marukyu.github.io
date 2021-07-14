@@ -222,6 +222,7 @@
   <li><a href="../modules/necro.render.hud.HUDLayout.html">necro.render.hud.HUDLayout</a></li>
   <li><a href="../modules/necro.render.hud.HeartbeatHUD.html">necro.render.hud.HeartbeatHUD</a></li>
   <li><a href="../modules/necro.render.hud.Minimap.html">necro.render.hud.Minimap</a></li>
+  <li><a href="../modules/necro.render.hud.Subtitles.html">necro.render.hud.Subtitles</a></li>
   <li><a href="../modules/necro.render.hud.inventory.InventoryHUD.html">necro.render.hud.inventory.InventoryHUD</a></li>
   <li><a href="../modules/necro.render.level.Animations.html">necro.render.level.Animations</a></li>
   <li><a href="../modules/necro.render.level.EquipmentSprite.html">necro.render.level.EquipmentSprite</a></li>
@@ -3111,6 +3112,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>castOnProvoke</code></li>
     <li><code>convertOnProvoke</code></li>
     <li><code>deactivateMusicLayer</code></li>
+    <li><code>despawnNecrodancerTraps</code></li>
     <li><code>knockback</code></li>
     <li><code>overrideAI</code></li>
     <li><code>playVoiceLine</code></li>
@@ -3383,6 +3385,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectTileChange</h2>
 
 <ul>
+    <li><code>despawnNecrodancerTraps</code></li>
     <li><code>despawnOnTileChange</code></li>
     <li><code>despawnOnWallRemoval</code></li>
     <li><code>resetNecrodancerDelay</code></li>
@@ -3402,7 +3405,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkPriceTag</code></li>
     <li><code>collectItem</code></li>
     <li><code>itemBans</code></li>
-    <li><code>noLuteForDad</code></li>
     <li><code>playPickupEffects</code></li>
 </ul>
 
@@ -3579,6 +3581,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>modifyPitchGigantism</code></li>
     <li><code>omnipresentVoice</code></li>
     <li><code>playSound</code></li>
+    <li><code>subtitles</code></li>
 </ul>
 
 
@@ -3858,6 +3861,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_Flyaway_nextID</code></li>
     <li><code>4_Marker_markers</code></li>
     <li><code>4_Segment_segments</code></li>
+    <li><code>4_Subtitles_currentText</code></li>
     <li><code>4_Swipe_activeSwipes</code></li>
     <li><code>4_Swipe_activeSwipesBack</code></li>
     <li><code>4_Swipe_nextID</code></li>
@@ -3945,6 +3949,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderSpeedrunTimer</code></li>
     <li><code>renderTargetPointer</code></li>
     <li><code>renderWinCount</code></li>
+    <li><code>subtitles</code></li>
 </ul>
 
 
@@ -4738,7 +4743,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>descendItems</code></li>
     <li><code>despawnBarrierAttachments</code></li>
     <li><code>despawnExpiredScreenShakes</code></li>
-    <li><code>despawnNecrodancerTraps</code></li>
     <li><code>despawnObjects</code></li>
     <li><code>despawnOnTargetLoss</code></li>
     <li><code>dwarfismTickDown</code></li>
