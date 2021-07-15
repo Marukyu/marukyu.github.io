@@ -100,6 +100,7 @@
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
   <li><a href="../modules/necro.game.character.Descent.html">necro.game.character.Descent</a></li>
+  <li><a href="../modules/necro.game.character.Facing.html">necro.game.character.Facing</a></li>
   <li><a href="../modules/necro.game.character.Fear.html">necro.game.character.Fear</a></li>
   <li><a href="../modules/necro.game.character.Follower.html">necro.game.character.Follower</a></li>
   <li><a href="../modules/necro.game.character.Freeze.html">necro.game.character.Freeze</a></li>
@@ -326,6 +327,7 @@
   <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
   <li><a href="../components/ChargeComponents.html">ChargeComponents</a></li>
   <li><a href="../components/ConfusionComponents.html">ConfusionComponents</a></li>
+  <li><a href="../components/FacingComponents.html">FacingComponents</a></li>
   <li><a href="../components/FollowerComponents.html">FollowerComponents</a></li>
   <li><a href="../components/FreezeComponents.html">FreezeComponents</a></li>
   <li><a href="../components/GrabComponents.html">GrabComponents</a></li>
@@ -431,6 +433,7 @@
     <li><code>directionalSpriteChange</code></li>
     <li><code>parrySpriteChange</code></li>
     <li><code>silhouette</code></li>
+    <li><code>facingFrameY</code></li>
     <li><code>equipment</code></li>
     <li><code>cycling</code></li>
     <li><code>randomVariant</code></li>
@@ -1459,6 +1462,7 @@
 <ul>
     <li><code>hasMoved</code></li>
     <li><code>previousPosition</code></li>
+    <li><code>delayOffWallMoves</code></li>
     <li><code>actionDelay</code></li>
     <li><code>frozen</code></li>
     <li><code>descent</code></li>
@@ -1763,6 +1767,7 @@
 
 <ul>
     <li><code>convertSlot</code></li>
+    <li><code>animationCycling</code></li>
     <li><code>facing</code></li>
     <li><code>facingLate</code></li>
     <li><code>trample</code></li>
@@ -1810,9 +1815,9 @@
     <li><code>shield</code></li>
     <li><code>ai</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>tangible</code></li>
     <li><code>resetFields</code></li>
     <li><code>updateCollision</code></li>
-    <li><code>tangible</code></li>
     <li><code>perspective</code></li>
     <li><code>inventory</code></li>
     <li><code>spawnExtras</code></li>
@@ -1839,6 +1844,8 @@
     <li><code>despawnExtras</code></li>
     <li><code>sound</code></li>
     <li><code>slide</code></li>
+    <li><code>shield</code></li>
+    <li><code>beatDelay</code></li>
 </ul>
 
 
@@ -1914,16 +1921,17 @@
 
 <ul>
     <li><code>visibility</code></li>
+    <li><code>facing</code></li>
     <li><code>delete</code></li>
+    <li><code>darkness</code></li>
     <li><code>attributes</code></li>
     <li><code>position</code></li>
     <li><code>overrides</code></li>
     <li><code>healthBonus</code></li>
-    <li><code>apparition</code></li>
     <li><code>homeArea</code></li>
     <li><code>followerCollectGold</code></li>
     <li><code>tangible</code></li>
-    <li><code>facing</code></li>
+    <li><code>apparition</code></li>
     <li><code>ai</code></li>
     <li><code>stasis</code></li>
     <li><code>random</code></li>
@@ -1944,7 +1952,6 @@
     <li><code>upgrade</code></li>
     <li><code>beatDelay</code></li>
     <li><code>objectRowMap</code></li>
-    <li><code>darkness</code></li>
 </ul>
 
 
@@ -2079,6 +2086,7 @@
     <li><code>apparition</code></li>
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
+    <li><code>facing</code></li>
     <li><code>followerCollectGold</code></li>
 </ul>
 
@@ -3014,6 +3022,7 @@
 <ul>
     <li><code>hasMoved</code></li>
     <li><code>previousPosition</code></li>
+    <li><code>delayOffWallMoves</code></li>
     <li><code>actionDelay</code></li>
     <li><code>frozen</code></li>
     <li><code>descent</code></li>
@@ -3318,6 +3327,7 @@
 
 <ul>
     <li><code>convertSlot</code></li>
+    <li><code>animationCycling</code></li>
     <li><code>facing</code></li>
     <li><code>facingLate</code></li>
     <li><code>trample</code></li>
@@ -3365,9 +3375,9 @@
     <li><code>shield</code></li>
     <li><code>ai</code></li>
     <li><code>moveOverride</code></li>
+    <li><code>tangible</code></li>
     <li><code>resetFields</code></li>
     <li><code>updateCollision</code></li>
-    <li><code>tangible</code></li>
     <li><code>perspective</code></li>
     <li><code>inventory</code></li>
     <li><code>spawnExtras</code></li>
@@ -3394,6 +3404,8 @@
     <li><code>despawnExtras</code></li>
     <li><code>sound</code></li>
     <li><code>slide</code></li>
+    <li><code>shield</code></li>
+    <li><code>beatDelay</code></li>
 </ul>
 
 
@@ -3469,16 +3481,17 @@
 
 <ul>
     <li><code>visibility</code></li>
+    <li><code>facing</code></li>
     <li><code>delete</code></li>
+    <li><code>darkness</code></li>
     <li><code>attributes</code></li>
     <li><code>position</code></li>
     <li><code>overrides</code></li>
     <li><code>healthBonus</code></li>
-    <li><code>apparition</code></li>
     <li><code>homeArea</code></li>
     <li><code>followerCollectGold</code></li>
     <li><code>tangible</code></li>
-    <li><code>facing</code></li>
+    <li><code>apparition</code></li>
     <li><code>ai</code></li>
     <li><code>stasis</code></li>
     <li><code>random</code></li>
@@ -3499,7 +3512,6 @@
     <li><code>upgrade</code></li>
     <li><code>beatDelay</code></li>
     <li><code>objectRowMap</code></li>
-    <li><code>darkness</code></li>
 </ul>
 
 
@@ -3634,6 +3646,7 @@
     <li><code>apparition</code></li>
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
+    <li><code>facing</code></li>
     <li><code>followerCollectGold</code></li>
 </ul>
 
@@ -4718,6 +4731,7 @@
     <li><code>levelExit</code></li>
     <li><code>traps</code></li>
     <li><code>trapConversions</code></li>
+    <li><code>autoRotate</code></li>
     <li><code>descendItems</code></li>
     <li><code>beatDelay</code></li>
     <li><code>beatCounter</code></li>
@@ -4793,6 +4807,7 @@
     <li><code>visionRadius</code></li>
     <li><code>visibility</code></li>
     <li><code>minimap</code></li>
+    <li><code>spriteCorrection</code></li>
 </ul>
 
 
