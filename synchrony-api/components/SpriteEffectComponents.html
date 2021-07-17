@@ -154,6 +154,7 @@
   <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
+  <li><a href="../modules/necro.game.level.LowPercent.html">necro.game.level.LowPercent</a></li>
   <li><a href="../modules/necro.game.level.Wire.html">necro.game.level.Wire</a></li>
   <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
   <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
@@ -689,15 +690,15 @@
 
     <ul>
         <li><span class="parameter">intervalOn</span>
-         constant int
-         (<em>default</em> 100000)
+         constant float
+         (<em>default</em> 0.1)
         </li>
         <li><span class="parameter">intervalOff</span>
-         constant int
-         (<em>default</em> 100000)
+         constant float
+         (<em>default</em> 0.1)
         </li>
         <li><span class="parameter">duration</span>
-          int
+          float
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">animationTurn</span>
@@ -747,8 +748,8 @@
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">animationDuration</span>
-         constant int
-         (<em>default</em> 150)
+         constant float
+         (<em>default</em> 0.15)
         </li>
         <li><span class="parameter">animationTurn</span>
           int
@@ -809,8 +810,8 @@
          (<em>default</em> 1.5)
         </li>
         <li><span class="parameter">period</span>
-         constant int
-         (<em>default</em> 1000)
+         constant float
+         (<em>default</em> 1)
         </li>
         <li><span class="parameter">timeStart</span>
           float
@@ -861,8 +862,8 @@
 
     <ul>
         <li><span class="parameter">duration</span>
-         constant int
-         (<em>default</em> 450)
+         constant float
+         (<em>default</em> 0.45)
         </li>
     </ul>
 
@@ -883,8 +884,8 @@
 
     <ul>
         <li><span class="parameter">duration</span>
-         constant int
-         (<em>default</em> 450)
+         constant float
+         (<em>default</em> 0.45)
         </li>
     </ul>
 
@@ -1011,8 +1012,8 @@
          (<em>default</em> 15)
         </li>
         <li><span class="parameter">duration</span>
-          int
-         (<em>default</em> 75)
+          float
+         (<em>default</em> 0.075)
         </li>
         <li><span class="parameter">turn</span>
           int
@@ -1129,15 +1130,15 @@
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">swayDuration</span>
-         constant int
-         (<em>default</em> 1000)
+         constant float
+         (<em>default</em> 1)
         </li>
         <li><span class="parameter">startupDuration</span>
-         constant int
+         constant float
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">decayDuration</span>
-         constant int
+         constant float
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">animationTurn</span>
@@ -1209,8 +1210,12 @@
          (<em>default</em> 6)
         </li>
         <li><span class="parameter">animationDuration</span>
-         constant int
-         (<em>default</em> 50)
+         constant float
+         (<em>default</em> 0.05)
+        </li>
+        <li><span class="parameter">animationDelay</span>
+          float
+         (<em>default</em> 0)
         </li>
         <li><span class="parameter">animationTurn</span>
           int
@@ -1221,10 +1226,6 @@
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">endCrop</span>
-          int
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">animationDelay</span>
           int
          (<em>default</em> 0)
         </li>
@@ -1251,8 +1252,8 @@
          (<em>default</em> 0.6)
         </li>
         <li><span class="parameter">blinkPeriod</span>
-         constant int
-         (<em>default</em> 166667)
+         constant float
+         (<em>default</em> 10 / 60)
         </li>
     </ul>
 
@@ -1277,8 +1278,8 @@
          (<em>default</em> 1.5)
         </li>
         <li><span class="parameter">blinkPeriod</span>
-         constant int
-         (<em>default</em> 166667)
+         constant float
+         (<em>default</em> 10 / 60)
         </li>
     </ul>
 
@@ -1377,8 +1378,8 @@
          (<em>default</em> true)
         </li>
         <li><span class="parameter">period</span>
-         constant int
-         (<em>default</em> 50)
+         constant float
+         (<em>default</em> 0.05)
         </li>
         <li><span class="parameter">x</span>
          constant int

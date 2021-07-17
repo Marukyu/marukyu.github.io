@@ -154,6 +154,7 @@
   <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
+  <li><a href="../modules/necro.game.level.LowPercent.html">necro.game.level.LowPercent</a></li>
   <li><a href="../modules/necro.game.level.Wire.html">necro.game.level.Wire</a></li>
   <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
   <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
@@ -914,10 +915,6 @@
          constant string
          (<em>default</em> "")
         </li>
-        <li><span class="parameter">collisionMask</span>
-         constant int
-         (<em>default</em> collision.mask(collision.Group.SOLID)
-        </li>
     </ul>
 
 
@@ -1568,7 +1565,7 @@
         </li>
         <li><span class="parameter">distance</span>
          constant int
-         (<em>default</em> 0)
+         (<em>default</em> 1)
         </li>
         <li><span class="parameter">moveType</span>
          constant int
@@ -1939,6 +1936,10 @@
          (<em>default</em> {})
         </li>
         <li><span class="parameter">distance</span>
+         constant int
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">diagonalDistanceMalus</span>
          constant int
          (<em>default</em> 0)
         </li>

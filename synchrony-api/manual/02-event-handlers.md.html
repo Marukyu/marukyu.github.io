@@ -154,6 +154,7 @@
   <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
   <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
   <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
+  <li><a href="../modules/necro.game.level.LowPercent.html">necro.game.level.LowPercent</a></li>
   <li><a href="../modules/necro.game.level.Wire.html">necro.game.level.Wire</a></li>
   <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
   <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
@@ -417,6 +418,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>aiAct</h2>
 
 <ul>
+    <li><code>ND2Phase2</code></li>
     <li><code>clone</code></li>
     <li><code>coralRiffPhase1</code></li>
     <li><code>dbFlee</code></li>
@@ -449,7 +451,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyBellAnimations</code></li>
     <li><code>applyBlinkAnimations</code></li>
     <li><code>applyCaptiveAudienceEffect</code></li>
-    <li><code>applyCastSpellAnimations</code></li>
     <li><code>applyChargeAnimations</code></li>
     <li><code>applyClonkTellAnimations</code></li>
     <li><code>applyCongaAnimations</code></li>
@@ -458,6 +459,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyFacingFrameY</code></li>
     <li><code>applyGrabAnimations</code></li>
     <li><code>applyHUDAnimations</code></li>
+    <li><code>applyMoveResultAnimations</code></li>
     <li><code>applyNormalAnimations</code></li>
     <li><code>applyParityAnimations</code></li>
     <li><code>applyParryVulnerabilityAnimations</code></li>
@@ -818,6 +820,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>0.31</code></li>
     <li><code>0.32</code></li>
     <li><code>0.33</code></li>
+    <li><code>0.33-time</code></li>
 </ul>
 
 
@@ -968,7 +971,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadMummy</code></li>
     <li><code>loadMushroom</code></li>
     <li><code>loadMushroomLight</code></li>
-    <li><code>loadNecrodancer</code></li>
+    <li><code>loadNecroDancer1</code></li>
+    <li><code>loadNecroDancer2</code></li>
     <li><code>loadNightmare</code></li>
     <li><code>loadOgre</code></li>
     <li><code>loadOrc</code></li>
@@ -2729,7 +2733,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>amplifyFirstMove</code></li>
     <li><code>applyConfusion</code></li>
     <li><code>attackGrabber</code></li>
-    <li><code>castSpellAnimation</code></li>
     <li><code>castle</code></li>
     <li><code>delayOffWallMoves</code></li>
     <li><code>disallowActionDuringDescent</code></li>
@@ -3035,6 +3038,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>hasActed</code></li>
     <li><code>luteFireBreathing</code></li>
     <li><code>moveOnAttack</code></li>
+    <li><code>moveResultAnimation</code></li>
     <li><code>necroDancerPhase2</code></li>
     <li><code>playerHasActed</code></li>
     <li><code>processAutoCasts</code></li>
@@ -3235,7 +3239,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>innateSpellcasts</code></li>
     <li><code>interceptActionDelay</code></li>
     <li><code>necrodancerCooldown</code></li>
-    <li><code>playSpellcastAnimation</code></li>
     <li><code>resetHasMoved</code></li>
     <li><code>resetPreviousPosition</code></li>
     <li><code>slide</code></li>
@@ -3360,6 +3363,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initializeLightSource</code></li>
     <li><code>markPendingMerge</code></li>
     <li><code>offsetSpriteIfAboveWall</code></li>
+    <li><code>startND2Phase2</code></li>
     <li><code>unlockStairs</code></li>
     <li><code>updateFocusedEntities</code></li>
     <li><code>updateSunken</code></li>
@@ -3866,6 +3870,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_Flyaway_activeFlyaways</code></li>
     <li><code>4_Flyaway_nextID</code></li>
     <li><code>4_Marker_markers</code></li>
+    <li><code>4_NecroDancer2_trapWallCounter</code></li>
+    <li><code>4_NecroDancer2_trapWallX</code></li>
     <li><code>4_Segment_segments</code></li>
     <li><code>4_Subtitles_currentText</code></li>
     <li><code>4_Swipe_activeSwipes</code></li>
@@ -4367,6 +4373,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>radialTarget</code></li>
     <li><code>rectangularTarget</code></li>
     <li><code>spawnMulticastCopies</code></li>
+    <li><code>spellcastTowardsTarget</code></li>
     <li><code>targetHome</code></li>
     <li><code>targetTiles</code></li>
 </ul>
@@ -4779,7 +4786,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetConditionalInvincibility</code></li>
     <li><code>resetGrabbedStatus</code></li>
     <li><code>resetParry</code></li>
-    <li><code>resetSpellcastAnimation</code></li>
     <li><code>resetWeaponParry</code></li>
     <li><code>saveSnapshot</code></li>
     <li><code>sleep</code></li>
@@ -4789,6 +4795,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>startCharge</code></li>
     <li><code>stun</code></li>
     <li><code>togglePlayerSpectatorMode</code></li>
+    <li><code>trapWalls</code></li>
     <li><code>unsuppressItems</code></li>
     <li><code>updateAttachmentEntities</code></li>
     <li><code>updateAutoDespawnBlinkEffect</code></li>
