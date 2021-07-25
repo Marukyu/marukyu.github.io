@@ -601,6 +601,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>beginFastForward</code></li>
     <li><code>markRemoteModsUnloaded</code></li>
     <li><code>resetActionBuffer</code></li>
+    <li><code>updateResourceVersions</code></li>
 </ul>
 
 
@@ -1277,7 +1278,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>gameStateBeginCountdown</h2>
 
 <ul>
-    <li><code>closePauseMenu</code></li>
     <li><code>initCountdownOverlay</code></li>
 </ul>
 
@@ -2287,6 +2287,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>cropFilter</code></li>
     <li><code>grayscaleFilter</code></li>
     <li><code>hsvFilter</code></li>
+</ul>
+
+
+<p><a name="lobbyUpdatePlayers"></a></p>
+<h2>lobbyUpdatePlayers</h2>
+
+<ul>
+    <li><code>addSameRoomPlayers</code></li>
+    <li><code>removeSpectators</code></li>
 </ul>
 
 
@@ -3711,6 +3720,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_audio.soundtrack.theme.lobby</code></li>
     <li><code>1_audio.soundtrack.theme.menu</code></li>
     <li><code>1_audio.soundtrack.vocals</code></li>
+    <li><code>1_autoPause</code></li>
     <li><code>1_beatmap</code></li>
     <li><code>1_beatmap.beatInputTimePersistence</code></li>
     <li><code>1_beatmap.cooldownCumulativeMax</code></li>
@@ -4064,7 +4074,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>changeActionBufferLevel</code></li>
     <li><code>computeTimestamp</code></li>
     <li><code>endReplaySession</code></li>
-    <li><code>randomizeLevelSeed</code></li>
     <li><code>setInitialSpawnCharacters</code></li>
     <li><code>updateLobbyJoinability</code></li>
     <li><code>updateRoom</code></li>
