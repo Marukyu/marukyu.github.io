@@ -480,8 +480,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyWireAnimation</code></li>
     <li><code>customAnimation</code></li>
     <li><code>directionalSpriteChange</code></li>
+    <li><code>frankensteinway</code></li>
+    <li><code>frankensteinwayProp</code></li>
     <li><code>freezeAnimationFrame</code></li>
     <li><code>parrySpriteChange</code></li>
+    <li><code>phaseSpriteChange</code></li>
     <li><code>wiredAnimation</code></li>
 </ul>
 
@@ -531,6 +534,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>gold</code></li>
     <li><code>revealLevel</code></li>
     <li><code>screenFlash</code></li>
+    <li><code>setCamera</code></li>
     <li><code>sound</code></li>
 </ul>
 
@@ -543,6 +547,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deleteStartingRoomEntities</code></li>
     <li><code>moveSpawn</code></li>
     <li><code>revealAll</code></li>
+    <li><code>setCamera</code></li>
     <li><code>sound</code></li>
     <li><code>teleportPlayers</code></li>
 </ul>
@@ -715,6 +720,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>updateAnimationTimeScale</code></li>
     <li><code>updateSpectatorHUD</code></li>
+</ul>
+
+
+<p><a name="collectHUDElements"></a></p>
+<h2>collectHUDElements</h2>
+
+<ul>
+    <li><code>addDefaultElements</code></li>
 </ul>
 
 
@@ -946,6 +959,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadFireElemental</code></li>
     <li><code>loadFortissimole</code></li>
     <li><code>loadFrankensteinway</code></li>
+    <li><code>loadFrankensteinwayProp</code></li>
     <li><code>loadGargoyle</code></li>
     <li><code>loadGhast</code></li>
     <li><code>loadGhost</code></li>
@@ -1168,6 +1182,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>invalidateObjectSelectorEntityEventCache</code></li>
     <li><code>invalidateObjectSelectorItemEventCache</code></li>
     <li><code>inventoryHUDGroups</code></li>
+    <li><code>rebuildHUDLayout</code></li>
     <li><code>reloadMigrations</code></li>
     <li><code>reloadSchemaOnComponentChange</code></li>
     <li><code>reloadSchemaOnEntityChange</code></li>
@@ -2256,6 +2271,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>characterOverrides</code></li>
     <li><code>checkBackgroundWalls</code></li>
     <li><code>congaLine</code></li>
+    <li><code>frankensteinway</code></li>
     <li><code>loadEntities</code></li>
     <li><code>loadLevelTileMap</code></li>
     <li><code>loadSegmentBoundingBoxes</code></li>
@@ -2465,6 +2481,19 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="nextPhase"></a></p>
+<h2>nextPhase</h2>
+
+<ul>
+    <li><code>fswSarcos</code></li>
+    <li><code>fswTeleport</code></li>
+    <li><code>fswTriggers</code></li>
+    <li><code>refillHealth</code></li>
+    <li><code>sound</code></li>
+    <li><code>spawn</code></li>
+</ul>
+
+
 <p><a name="objectApplyDamageImmunity"></a></p>
 <h2>objectApplyDamageImmunity</h2>
 
@@ -2625,6 +2654,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>createTombstone</code></li>
     <li><code>deathSound</code></li>
     <li><code>despawnOtherFlawlessChests</code></li>
+    <li><code>disableFrankenshield</code></li>
     <li><code>dropInventoryItems</code></li>
     <li><code>finalizeObjectTangibility</code></li>
     <li><code>forwardDeathToController</code></li>
@@ -2754,6 +2784,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>delayOffWallMoves</code></li>
     <li><code>disallowActionDuringDescent</code></li>
     <li><code>flyingSeek</code></li>
+    <li><code>frankensteinwayFast</code></li>
     <li><code>inhibitFrozenMovement</code></li>
     <li><code>inhibitOnFacingChange</code></li>
     <li><code>interceptActionDelay</code></li>
@@ -3001,7 +3032,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>gigantismWalkSound</code></li>
     <li><code>hasMoved</code></li>
     <li><code>hola</code></li>
-    <li><code>luteTrample</code></li>
     <li><code>markPendingMerge</code></li>
     <li><code>moveAudioLoop</code></li>
     <li><code>moveCollisionMap</code></li>
@@ -3026,6 +3056,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>stasisWalkSound</code></li>
     <li><code>stepDamage</code></li>
     <li><code>tentacleFacing</code></li>
+    <li><code>trampleOnMove</code></li>
     <li><code>updatePosition</code></li>
     <li><code>updatePreviousPosition</code></li>
     <li><code>updateRadialVision</code></li>
@@ -3332,6 +3363,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>lowHealthConvert</code></li>
     <li><code>luteShield</code></li>
     <li><code>necrodancerShield</code></li>
+    <li><code>nextPhase</code></li>
     <li><code>performParry</code></li>
     <li><code>playShieldBreakSound</code></li>
     <li><code>playShieldHitSound</code></li>
@@ -3350,6 +3382,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>shieldDamageType</code></li>
     <li><code>shieldDodge</code></li>
     <li><code>shieldKnockback</code></li>
+    <li><code>shieldReflectDamage</code></li>
     <li><code>shieldSetBeatDelay</code></li>
     <li><code>shieldedHitVoice</code></li>
     <li><code>spawnMiniboss</code></li>
@@ -3531,6 +3564,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>gigantismAttackableFlags</code></li>
     <li><code>initializeFlags</code></li>
     <li><code>provokable</code></li>
+    <li><code>shieldAttackability</code></li>
     <li><code>stasisAttackability</code></li>
 </ul>
 
@@ -3647,6 +3681,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>faceTarget</code></li>
     <li><code>fear</code></li>
     <li><code>fortissimoleBurrowing</code></li>
+    <li><code>frankensteinwayCharge</code></li>
     <li><code>idleOnPhasing</code></li>
     <li><code>luteBodyForceUp</code></li>
     <li><code>luteHeadFollowsBody</code></li>
@@ -3918,6 +3953,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>attachmentCopySpritePosition</code></li>
     <li><code>drawOverlayAboveHUD</code></li>
     <li><code>drawOverlayBelowHUD</code></li>
+    <li><code>fswTells</code></li>
     <li><code>moveAnimations</code></li>
     <li><code>renderBackLayerSwipes</code></li>
     <li><code>renderBackgroundParticleSystems</code></li>
@@ -4517,6 +4553,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>importSettingsFromSaveFileXML</code></li>
     <li><code>initCollisionMap</code></li>
     <li><code>initGameState</code></li>
+    <li><code>initHUDElements</code></li>
     <li><code>loadGameContent</code></li>
     <li><code>loadMods</code></li>
     <li><code>loadSettings</code></li>
@@ -4536,6 +4573,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>cat</code></li>
     <li><code>dagger</code></li>
     <li><code>drtrail</code></li>
+    <li><code>elecDownFinalWarning</code></li>
+    <li><code>elecDownWarning</code></li>
+    <li><code>elecDownZap</code></li>
+    <li><code>elecFinalWarning</code></li>
+    <li><code>elecWarning</code></li>
+    <li><code>elecZap</code></li>
     <li><code>enemy</code></li>
     <li><code>explosion</code></li>
     <li><code>fireball</code></li>
@@ -4746,6 +4789,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>convert</code></li>
     <li><code>crushTrap</code></li>
     <li><code>descend</code></li>
+    <li><code>disableFrankenshield</code></li>
     <li><code>dropGrooveChain</code></li>
     <li><code>flyaway</code></li>
     <li><code>inflictDamage</code></li>
@@ -4784,6 +4828,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>endSecretRoomFight</code></li>
     <li><code>fearableTickDown</code></li>
     <li><code>followerDamageParentWhileDead</code></li>
+    <li><code>frankensteinwayElectricity</code></li>
     <li><code>freezablePreventActions</code></li>
     <li><code>freezableTickDown</code></li>
     <li><code>gigantismTickDown</code></li>
@@ -4894,6 +4939,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateStackItemSprites</code></li>
     <li><code>vibrateOnActionDelay</code></li>
     <li><code>vibrateOnTell</code></li>
+    <li><code>visbleWhileParentShielded</code></li>
 </ul>
 
 

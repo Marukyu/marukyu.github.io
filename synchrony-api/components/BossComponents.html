@@ -565,6 +565,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#electrifyGround">electrifyGround</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#firstMove">firstMove</a></td>
 	<td class="summary">
 
@@ -584,6 +590,24 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#fortissimoleSpawn">fortissimoleSpawn</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#frankensteinway">frankensteinway</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#frankensteinwayProp">frankensteinwayProp</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#frankensteinwayTell">frankensteinwayTell</a></td>
 	<td class="summary">
 
 </td>
@@ -625,6 +649,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#multiPhase">multiPhase</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#nd2Phase2">nd2Phase2</a></td>
 	<td class="summary">
 
@@ -644,6 +674,18 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#omnipresentVoice">omnipresentVoice</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#phaseSpawn">phaseSpawn</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#phaseSpriteChange">phaseSpriteChange</a></td>
 	<td class="summary">
 
 </td>
@@ -686,6 +728,24 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#resetMetrognomeOnHit">resetMetrognomeOnHit</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#shieldAttackability">shieldAttackability</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#shieldReflectDamage">shieldReflectDamage</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#soundPhaseChange">soundPhaseChange</a></td>
 	<td class="summary">
 
 </td>
@@ -788,6 +848,24 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#throwCancel">throwCancel</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#trampleOnMove">trampleOnMove</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#trapDisableFrankenshield">trapDisableFrankenshield</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#visibleWhileParentShielded">visibleWhileParentShielded</a></td>
 	<td class="summary">
 
 </td>
@@ -1394,6 +1472,56 @@
 
 </dd>
     <dt>
+    <a name = "electrifyGround"></a>
+    <strong>electrifyGround</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">down</span>
+          bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">patterns</span>
+          table
+         (<em>default</em> {})
+        </li>
+        <li><span class="parameter">downPeriod</span>
+         constant int
+         (<em>default</em> 4)
+        </li>
+        <li><span class="parameter">damage</span>
+         constant int
+         (<em>default</em> 2)
+        </li>
+        <li><span class="parameter">attackFlags</span>
+         constant int
+         (<em>default</em> attack.Flag.DEFAULT)
+        </li>
+        <li><span class="parameter">swipes</span>
+         constant table
+         (<em>default</em> {"elecWarning")
+        </li>
+        <li><span class="parameter">downSwipes</span>
+         constant table
+         (<em>default</em> {"elecDownWarning")
+        </li>
+        <li><span class="parameter">sounds</span>
+         constant table
+         (<em>default</em> {"frankFlash1")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "firstMove"></a>
     <strong>firstMove</strong>
     </dt>
@@ -1475,6 +1603,124 @@
         <li><span class="parameter">right</span>
           entityID
          (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "frankensteinway"></a>
+    <strong>frankensteinway</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">direction</span>
+          int
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">distance</span>
+          int
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">fast</span>
+          bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">elecPhase</span>
+         constant int
+         (<em>default</em> 2)
+        </li>
+        <li><span class="parameter">fastPhase</span>
+         constant int
+         (<em>default</em> 3)
+        </li>
+        <li><span class="parameter">sarcoTypes</span>
+         constant table
+         (<em>default</em> {"Sarcophagus")
+        </li>
+        <li><span class="parameter">tellFrameX</span>
+         constant int
+         (<em>default</em> 9)
+        </li>
+        <li><span class="parameter">voiceFast</span>
+         constant string
+         (<em>default</em> "frankDash")
+        </li>
+        <li><span class="parameter">soundFast</span>
+         constant string
+         (<em>default</em> "frankImpact")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "frankensteinwayProp"></a>
+    <strong>frankensteinwayProp</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">target</span>
+          entityID
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">inactiveFrameX</span>
+         constant int
+         (<em>default</em> 16)
+        </li>
+        <li><span class="parameter">soundOn</span>
+         constant string
+         (<em>default</em> "frankBulbActivate")
+        </li>
+        <li><span class="parameter">soundOff</span>
+         constant string
+         (<em>default</em> "frankBulbDeactivate")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "frankensteinwayTell"></a>
+    <strong>frankensteinwayTell</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">texture</span>
+         constant string
+         (<em>default</em> "ext/entities/floor_pulse_move_warning.png")
+        </li>
+        <li><span class="parameter">offsetX</span>
+         constant int
+         (<em>default</em> -9)
+        </li>
+        <li><span class="parameter">offsetY</span>
+         constant int
+         (<em>default</em> -8)
         </li>
     </ul>
 
@@ -1624,6 +1870,36 @@
 
 </dd>
     <dt>
+    <a name = "multiPhase"></a>
+    <strong>multiPhase</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">phaseCount</span>
+         constant int
+         (<em>default</em> 2)
+        </li>
+        <li><span class="parameter">elecPhase</span>
+         constant int
+         (<em>default</em> 3)
+        </li>
+        <li><span class="parameter">phase</span>
+          int
+         (<em>default</em> 1)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "nd2Phase2"></a>
     <strong>nd2Phase2</strong>
     </dt>
@@ -1709,6 +1985,66 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "phaseSpawn"></a>
+    <strong>phaseSpawn</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">spawnTypes</span>
+         constant table
+         (<em>default</em> {"Dragon")
+        </li>
+        <li><span class="parameter">minDistance</span>
+         constant int
+         (<em>default</em> 2)
+        </li>
+        <li><span class="parameter">maxDistance</span>
+         constant int
+         (<em>default</em> 5)
+        </li>
+        <li><span class="parameter">radius</span>
+         constant int
+         (<em>default</em> 4)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "phaseSpriteChange"></a>
+    <strong>phaseSpriteChange</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">frameX</span>
+         constant int
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">maxPhase</span>
+         constant int
+         (<em>default</em> 4)
+        </li>
+    </ul>
 
 
 
@@ -1851,6 +2187,80 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "shieldAttackability"></a>
+    <strong>shieldAttackability</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">add</span>
+         constant int
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">remove</span>
+         constant int
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "shieldReflectDamage"></a>
+    <strong>shieldReflectDamage</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">damage</span>
+         constant int
+         (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">requiredFlags</span>
+         constant int
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "soundPhaseChange"></a>
+    <strong>soundPhaseChange</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">sounds</span>
+         constant table
+         (<em>default</em> {})
+        </li>
+    </ul>
 
 
 
@@ -2164,6 +2574,70 @@
     <dt>
     <a name = "throwCancel"></a>
     <strong>throwCancel</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "trampleOnMove"></a>
+    <strong>trampleOnMove</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">damage</span>
+         constant int
+         (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">type</span>
+         constant int
+         (<em>default</em> damage.Type.PHYSICAL)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "trapDisableFrankenshield"></a>
+    <strong>trapDisableFrankenshield</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">prop</span>
+          entityID
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "visibleWhileParentShielded"></a>
+    <strong>visibleWhileParentShielded</strong>
     </dt>
     <dd>
 
