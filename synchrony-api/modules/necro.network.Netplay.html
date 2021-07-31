@@ -433,6 +433,33 @@
 </td>
 	</tr>
 </table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#MessageType">MessageType</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PlayerAttribute">PlayerAttribute</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Resource">Resource</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RoomAttribute">RoomAttribute</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+</table>
 
 <br/>
 <br/>
@@ -539,6 +566,224 @@
 
 
 
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "MessageType"></a>
+    <strong>MessageType</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">LOGIN</span>
+         1
+        </li>
+        <li><span class="parameter">CLOCK_SYNC</span>
+         2
+        </li>
+        <li><span class="parameter">PLAYER_ATTRIBUTE</span>
+         3
+        </li>
+        <li><span class="parameter">PLAYER_ATTRIBUTE_LIST</span>
+         4
+        </li>
+        <li><span class="parameter">CHAT</span>
+         5
+        </li>
+        <li><span class="parameter">GAME_STATE</span>
+         6
+        </li>
+        <li><span class="parameter">PLAYER_INPUT</span>
+         7
+        </li>
+        <li><span class="parameter">DISCONNECT</span>
+         8
+        </li>
+        <li><span class="parameter">LATENCY_LIST</span>
+         9
+        </li>
+        <li><span class="parameter">RESOURCE</span>
+         10
+        </li>
+        <li><span class="parameter">SEQUENCE_SYNC</span>
+         11
+        </li>
+        <li><span class="parameter">HOST_CHANGE</span>
+         15
+        </li>
+        <li><span class="parameter">ROOM_CHANGE</span>
+         16
+        </li>
+        <li><span class="parameter">FAST_FORWARD</span>
+         17
+        </li>
+        <li><span class="parameter">LOCAL_COOP_ADD_PLAYER</span>
+         18
+        </li>
+        <li><span class="parameter">LOCAL_COOP_REMOVE_PLAYER</span>
+         19
+        </li>
+        <li><span class="parameter">LOCAL_COOP_PLAYER_INPUT</span>
+         20
+        </li>
+        <li><span class="parameter">LOCAL_COOP_PLAYER_ATTRIBUTE</span>
+         21
+        </li>
+        <li><span class="parameter">ROOM_ATTRIBUTE</span>
+         22
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "PlayerAttribute"></a>
+    <strong>PlayerAttribute</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">ID</span>
+         1
+        </li>
+        <li><span class="parameter">CONNECTED</span>
+         2
+        </li>
+        <li><span class="parameter">LOGGED_IN</span>
+         3
+        </li>
+        <li><span class="parameter">CLIENT_ID</span>
+         4
+        </li>
+        <li><span class="parameter">REJOIN_TOKEN</span>
+         5
+        </li>
+        <li><span class="parameter">ROOM_ID</span>
+         6
+        </li>
+        <li><span class="parameter">ACTIVE_ROOM_ID</span>
+         7
+        </li>
+        <li><span class="parameter">NAME</span>
+         8
+        </li>
+        <li><span class="parameter">LATENCY</span>
+         9
+        </li>
+        <li><span class="parameter">CHARACTER</span>
+         10
+        </li>
+        <li><span class="parameter">INIT_CHARACTER</span>
+         11
+        </li>
+        <li><span class="parameter">READY</span>
+         12
+        </li>
+        <li><span class="parameter">RESOURCE_VERSIONS</span>
+         13
+        </li>
+        <li><span class="parameter">FAST_FORWARD_ACTIVE</span>
+         14
+        </li>
+        <li><span class="parameter">LOCAL_COOP_PARENT</span>
+         15
+        </li>
+        <li><span class="parameter">LOCAL_COOP_PREVIOUS_PARENT</span>
+         16
+        </li>
+        <li><span class="parameter">LOCAL_COOP_CHILDREN</span>
+         17
+        </li>
+        <li><span class="parameter">MOD_HASHES</span>
+         18
+        </li>
+        <li><span class="parameter">HIDDEN</span>
+         19
+        </li>
+        <li><span class="parameter">PEER_ID</span>
+         20
+        </li>
+        <li><span class="parameter">PUPPET</span>
+         21
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Resource"></a>
+    <strong>Resource</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">DUNGEON</span>
+         1
+        </li>
+        <li><span class="parameter">GAME_SETTINGS</span>
+         2
+        </li>
+        <li><span class="parameter">MOD_LIST</span>
+         3
+        </li>
+        <li><span class="parameter">RNG_SEED</span>
+         4
+        </li>
+        <li><span class="parameter">REPLAY</span>
+         5
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RoomAttribute"></a>
+    <strong>RoomAttribute</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">TEMPO_MULTIPLIER</span>
+         1
         </li>
     </ul>
 
