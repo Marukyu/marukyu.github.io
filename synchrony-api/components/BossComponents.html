@@ -58,7 +58,6 @@
   <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
   <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
   <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
-  <li><a href="../modules/necro.client.LevelTransition.html">necro.client.LevelTransition</a></li>
   <li><a href="../modules/necro.client.Lobby.html">necro.client.Lobby</a></li>
   <li><a href="../modules/necro.client.LocalCoop.html">necro.client.LocalCoop</a></li>
   <li><a href="../modules/necro.client.NetClock.html">necro.client.NetClock</a></li>
@@ -255,6 +254,7 @@
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.DebugDump.html">system.debug.DebugDump</a></li>
+  <li><a href="../modules/system.debug.Deprecation.html">system.debug.Deprecation</a></li>
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
   <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
@@ -469,7 +469,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#captiveAudienceSpriteChange">captiveAudienceSpriteChange</a></td>
+	<td class="name" nowrap><a href="#captiveAudienceAnimation">captiveAudienceAnimation</a></td>
 	<td class="summary">
 
 </td>
@@ -1079,6 +1079,12 @@
 
 
 
+    <ul>
+        <li><span class="parameter">active</span>
+          bool
+         (<em>default</em> false)
+        </li>
+    </ul>
 
 
 
@@ -1086,8 +1092,8 @@
 
 </dd>
     <dt>
-    <a name = "captiveAudienceSpriteChange"></a>
-    <strong>captiveAudienceSpriteChange</strong>
+    <a name = "captiveAudienceAnimation"></a>
+    <strong>captiveAudienceAnimation</strong>
     </dt>
     <dd>
 
@@ -1096,9 +1102,17 @@
 
 
     <ul>
-        <li><span class="parameter">frameX</span>
-          int
-         (<em>default</em> 0)
+        <li><span class="parameter">hola</span>
+          bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">frames</span>
+         constant table
+         (<em>default</em> {})
+        </li>
+        <li><span class="parameter">variants</span>
+         constant table
+         (<em>default</em> {})
         </li>
     </ul>
 

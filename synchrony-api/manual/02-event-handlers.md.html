@@ -58,7 +58,6 @@
   <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
   <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
   <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
-  <li><a href="../modules/necro.client.LevelTransition.html">necro.client.LevelTransition</a></li>
   <li><a href="../modules/necro.client.Lobby.html">necro.client.Lobby</a></li>
   <li><a href="../modules/necro.client.LocalCoop.html">necro.client.LocalCoop</a></li>
   <li><a href="../modules/necro.client.NetClock.html">necro.client.NetClock</a></li>
@@ -255,6 +254,7 @@
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.DebugDump.html">system.debug.DebugDump</a></li>
+  <li><a href="../modules/system.debug.Deprecation.html">system.debug.Deprecation</a></li>
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
   <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
@@ -550,6 +550,23 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>setCamera</code></li>
     <li><code>sound</code></li>
     <li><code>teleportPlayers</code></li>
+</ul>
+
+
+<p><a name="bossFloorEnter"></a></p>
+<h2>bossFloorEnter</h2>
+
+<ul>
+    <li><code>bossWallOverride</code></li>
+    <li><code>captureAudience</code></li>
+    <li><code>congaLine</code></li>
+    <li><code>createPreBossBarrier</code></li>
+    <li><code>deletePillars</code></li>
+    <li><code>frankensteinway</code></li>
+    <li><code>luteItemReplacements</code></li>
+    <li><code>necroDancers</code></li>
+    <li><code>playIntroSound</code></li>
+    <li><code>prepareEnemies</code></li>
 </ul>
 
 
@@ -1341,8 +1358,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>addLevelTime</code></li>
     <li><code>barrierReset</code></li>
-    <li><code>bossFloor</code></li>
-    <li><code>captureAudience</code></li>
     <li><code>clearMinimapFramebuffer</code></li>
     <li><code>clearObjects</code></li>
     <li><code>confusableReset</code></li>
@@ -2280,16 +2295,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>assignCurrentLevelInfo</code></li>
+    <li><code>bossFloorEnter</code></li>
     <li><code>characterOverrides</code></li>
     <li><code>checkBackgroundWalls</code></li>
-    <li><code>congaLine</code></li>
-    <li><code>frankensteinway</code></li>
     <li><code>loadEntities</code></li>
     <li><code>loadLevelTileMap</code></li>
     <li><code>loadSegmentBoundingBoxes</code></li>
-    <li><code>luteItemReplacements</code></li>
     <li><code>makeWire</code></li>
-    <li><code>necroDancers</code></li>
     <li><code>placeLevelBorder</code></li>
     <li><code>playLevelMusic</code></li>
     <li><code>updateRunState</code></li>
@@ -4831,6 +4843,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyTileIdleDamage</code></li>
     <li><code>autoRotate</code></li>
     <li><code>barrierTickDown</code></li>
+    <li><code>captiveAudiencePreventActions</code></li>
     <li><code>castOnBeatCounter</code></li>
     <li><code>checkTrapTrigger</code></li>
     <li><code>confusableTickDown</code></li>
