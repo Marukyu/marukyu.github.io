@@ -1410,9 +1410,17 @@
 
 
     <ul>
-        <li><span class="parameter">phase</span>
-         constant int
-         (<em>default</em> 0)
+        <li><span class="parameter">types</span>
+         constant table
+         (<em>default</em> {})
+        </li>
+        <li><span class="parameter">minDistances</span>
+         constant table
+         (<em>default</em> { 2)
+        </li>
+        <li><span class="parameter">maxDistances</span>
+         constant table
+         (<em>default</em> { 4)
         </li>
     </ul>
 
@@ -2042,7 +2050,11 @@
 
 
     <ul>
-        <li><span class="parameter">spawnTypes</span>
+        <li><span class="parameter">types</span>
+         constant table
+         (<em>default</em> {"Dragon")
+        </li>
+        <li><span class="parameter">peaceTypes</span>
          constant table
          (<em>default</em> {"Dragon")
         </li>
@@ -2101,6 +2113,12 @@
 
 
 
+    <ul>
+        <li><span class="parameter">active</span>
+          bool
+         (<em>default</em> false)
+        </li>
+    </ul>
 
 
 
