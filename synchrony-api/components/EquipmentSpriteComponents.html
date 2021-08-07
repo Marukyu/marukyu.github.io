@@ -379,6 +379,7 @@
   <li><a href="../components/SpriteComponents.html">SpriteComponents</a></li>
   <li><a href="../components/SpriteEffectComponents.html">SpriteEffectComponents</a></li>
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
+  <li><a href="../components/StealthComponents.html">StealthComponents</a></li>
   <li><a href="../components/SwipeComponents.html">SwipeComponents</a></li>
   <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
   <li><a href="../components/TextLabelComponents.html">TextLabelComponents</a></li>
@@ -476,6 +477,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#itemStackSprite">itemStackSprite</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spriteSheetReset">spriteSheetReset</a></td>
 	<td class="summary">
 
 </td>
@@ -666,13 +673,9 @@
 
 
     <ul>
-        <li><span class="parameter">defaultFrameX</span>
-         constant int
-         (<em>default</em> 1)
-        </li>
-        <li><span class="parameter">comboFrameX</span>
+        <li><span class="parameter">frameXOffsets</span>
          constant table
-         (<em>default</em> {})
+         (<em>default</em> { 0 })
         </li>
         <li><span class="parameter">loop</span>
          constant bool
@@ -696,11 +699,7 @@
 
 
     <ul>
-        <li><span class="parameter">defaultFrameX</span>
-         constant int
-         (<em>default</em> 1)
-        </li>
-        <li><span class="parameter">activeFrameX</span>
+        <li><span class="parameter">frameXOffset</span>
          constant int
          (<em>default</em> 1)
         </li>
@@ -820,6 +819,28 @@
 
 </dd>
     <dt>
+    <a name = "spriteSheetReset"></a>
+    <strong>spriteSheetReset</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">frameX</span>
+         constant int
+         (<em>default</em> 1)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "weaponOverlaySpriteOnConditionalDamage"></a>
     <strong>weaponOverlaySpriteOnConditionalDamage</strong>
     </dt>
@@ -846,13 +867,13 @@
 
 
     <ul>
-        <li><span class="parameter">firstFrameX</span>
-         constant int
-         (<em>default</em> 1)
+        <li><span class="parameter">frameXOffsets</span>
+         constant table
+         (<em>default</em> { 0 })
         </li>
-        <li><span class="parameter">lastFrameX</span>
-         constant int
-         (<em>default</em> 1)
+        <li><span class="parameter">whileDropped</span>
+         constant bool
+         (<em>default</em> true)
         </li>
     </ul>
 
