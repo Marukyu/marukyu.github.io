@@ -145,7 +145,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
-  <li><a href="../modules/necro.game.item.ItemBans.html">necro.game.item.ItemBans</a></li>
+  <li><a href="../modules/necro.game.item.ItemBan.html">necro.game.item.ItemBan</a></li>
   <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
@@ -280,6 +280,9 @@
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
   <li><a href="../modules/system.game.Window.html">system.game.Window</a></li>
+  <li><a href="../modules/system.gfx.GFX.html">system.gfx.GFX</a></li>
+  <li><a href="../modules/system.gfx.TransformationMatrix.html">system.gfx.TransformationMatrix</a></li>
+  <li><a href="../modules/system.gfx.VertexBuffer.html">system.gfx.VertexBuffer</a></li>
   <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
   <li><a href="../modules/system.mod.AssetSubstitutor.html">system.mod.AssetSubstitutor</a></li>
   <li><a href="../modules/system.mod.ModLoader.html">system.mod.ModLoader</a></li>
@@ -348,6 +351,7 @@
   <li><a href="../components/HealthComponents.html">HealthComponents</a></li>
   <li><a href="../components/HealthItemComponents.html">HealthItemComponents</a></li>
   <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
+  <li><a href="../components/ItemBanComponents.html">ItemBanComponents</a></li>
   <li><a href="../components/ItemComponents.html">ItemComponents</a></li>
   <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
   <li><a href="../components/LegacySwipeComponents.html">LegacySwipeComponents</a></li>
@@ -410,6 +414,18 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#particleBarrier">particleBarrier</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#particleFreeze">particleFreeze</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#particlePuff">particlePuff</a></td>
 	<td class="summary">
 
@@ -443,6 +459,118 @@
 
     <dl class="function">
     <dt>
+    <a name = "particleBarrier"></a>
+    <strong>particleBarrier</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">frontTexture</span>
+         constant string
+         (<em>default</em> "ext/spells/shield_front.png")
+        </li>
+        <li><span class="parameter">backTexture</span>
+         constant string
+         (<em>default</em> "ext/spells/shield_back.png")
+        </li>
+        <li><span class="parameter">width</span>
+         constant int
+         (<em>default</em> 34)
+        </li>
+        <li><span class="parameter">height</span>
+         constant int
+         (<em>default</em> 35)
+        </li>
+        <li><span class="parameter">offsetX</span>
+         constant int
+         (<em>default</em> -5)
+        </li>
+        <li><span class="parameter">offsetY</span>
+         constant int
+         (<em>default</em> -7)
+        </li>
+        <li><span class="parameter">frontZ</span>
+         constant float
+         (<em>default</em> 1)
+        </li>
+        <li><span class="parameter">backZ</span>
+         constant float
+         (<em>default</em> -24)
+        </li>
+        <li><span class="parameter">numFrames</span>
+         constant int
+         (<em>default</em> 3)
+        </li>
+        <li><span class="parameter">animationPeriod</span>
+         constant float
+         (<em>default</em> 0.4)
+        </li>
+        <li><span class="parameter">blinkPeriod</span>
+         constant float
+         (<em>default</em> 10 / 60)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "particleFreeze"></a>
+    <strong>particleFreeze</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">texture</span>
+         constant string
+         (<em>default</em> "ext/entities/frozen_feet_medium.png")
+        </li>
+        <li><span class="parameter">width</span>
+         constant int
+         (<em>default</em> 31)
+        </li>
+        <li><span class="parameter">height</span>
+         constant int
+         (<em>default</em> 24)
+        </li>
+        <li><span class="parameter">offsetX</span>
+         constant int
+         (<em>default</em> -2)
+        </li>
+        <li><span class="parameter">offsetY</span>
+         constant int
+         (<em>default</em> 4)
+        </li>
+        <li><span class="parameter">offsetZ</span>
+         constant int
+         (<em>default</em> 4)
+        </li>
+        <li><span class="parameter">silhouette</span>
+         constant bool
+         (<em>default</em> true)
+        </li>
+        <li><span class="parameter">blinkPeriod</span>
+         constant float
+         (<em>default</em> 10 / 60)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "particlePuff"></a>
     <strong>particlePuff</strong>
     </dt>
@@ -457,6 +585,10 @@
          constant string
          (<em>default</em> "ext/particles/TEMP_particle_blood.png")
         </li>
+        <li><span class="parameter">duration</span>
+         constant float
+         (<em>default</em> 2)
+        </li>
         <li><span class="parameter">particleCount</span>
          constant int
          (<em>default</em> 24)
@@ -464,26 +596,6 @@
         <li><span class="parameter">maxHeight</span>
          constant int
          (<em>default</em> 120)
-        </li>
-        <li><span class="parameter">duration</span>
-         constant float
-         (<em>default</em> 2)
-        </li>
-        <li><span class="parameter">turnID</span>
-          int
-         (<em>default</em> -1)
-        </li>
-        <li><span class="parameter">seed</span>
-          int
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">x</span>
-          int
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">y</span>
-          int
-         (<em>default</em> 0)
         </li>
     </ul>
 
@@ -569,14 +681,6 @@
          constant int
          (<em>default</em> 12)
         </li>
-        <li><span class="parameter">offsetX</span>
-         constant int
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">offsetY</span>
-         constant int
-         (<em>default</em> 0)
-        </li>
     </ul>
 
 
@@ -599,6 +703,10 @@
          constant string
          (<em>default</em> "ext/particles/TEMP_particle_white.png")
         </li>
+        <li><span class="parameter">duration</span>
+         constant float
+         (<em>default</em> 0.5)
+        </li>
         <li><span class="parameter">particleCount</span>
          constant int
          (<em>default</em> 144)
@@ -610,26 +718,6 @@
         <li><span class="parameter">radius</span>
          constant int
          (<em>default</em> 36)
-        </li>
-        <li><span class="parameter">duration</span>
-         constant float
-         (<em>default</em> 0.5)
-        </li>
-        <li><span class="parameter">turnID</span>
-          int
-         (<em>default</em> -1)
-        </li>
-        <li><span class="parameter">seed</span>
-          int
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">x</span>
-          int
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">y</span>
-          int
-         (<em>default</em> 0)
         </li>
     </ul>
 

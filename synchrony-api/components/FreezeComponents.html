@@ -145,7 +145,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
-  <li><a href="../modules/necro.game.item.ItemBans.html">necro.game.item.ItemBans</a></li>
+  <li><a href="../modules/necro.game.item.ItemBan.html">necro.game.item.ItemBan</a></li>
   <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
@@ -280,6 +280,9 @@
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
   <li><a href="../modules/system.game.Window.html">system.game.Window</a></li>
+  <li><a href="../modules/system.gfx.GFX.html">system.gfx.GFX</a></li>
+  <li><a href="../modules/system.gfx.TransformationMatrix.html">system.gfx.TransformationMatrix</a></li>
+  <li><a href="../modules/system.gfx.VertexBuffer.html">system.gfx.VertexBuffer</a></li>
   <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
   <li><a href="../modules/system.mod.AssetSubstitutor.html">system.mod.AssetSubstitutor</a></li>
   <li><a href="../modules/system.mod.ModLoader.html">system.mod.ModLoader</a></li>
@@ -348,6 +351,7 @@
   <li><a href="../components/HealthComponents.html">HealthComponents</a></li>
   <li><a href="../components/HealthItemComponents.html">HealthItemComponents</a></li>
   <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
+  <li><a href="../components/ItemBanComponents.html">ItemBanComponents</a></li>
   <li><a href="../components/ItemComponents.html">ItemComponents</a></li>
   <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
   <li><a href="../components/LegacySwipeComponents.html">LegacySwipeComponents</a></li>
@@ -416,12 +420,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#freezableAttachment">freezableAttachment</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#freezablePreventActions">freezablePreventActions</a></td>
 	<td class="summary">
 
@@ -471,30 +469,8 @@
           bool
          (<em>default</em> false)
         </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "freezableAttachment"></a>
-    <strong>freezableAttachment</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
         <li><span class="parameter">type</span>
-         constant string
-         (<em>default</em> "FrozenFeetSmall")
-        </li>
-        <li><span class="parameter">entity</span>
-          entityID
+          int
          (<em>default</em> 0)
         </li>
     </ul>

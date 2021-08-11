@@ -145,7 +145,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
-  <li><a href="../modules/necro.game.item.ItemBans.html">necro.game.item.ItemBans</a></li>
+  <li><a href="../modules/necro.game.item.ItemBan.html">necro.game.item.ItemBan</a></li>
   <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
@@ -280,6 +280,9 @@
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
   <li><a href="../modules/system.game.Window.html">system.game.Window</a></li>
+  <li><a href="../modules/system.gfx.GFX.html">system.gfx.GFX</a></li>
+  <li><a href="../modules/system.gfx.TransformationMatrix.html">system.gfx.TransformationMatrix</a></li>
+  <li><a href="../modules/system.gfx.VertexBuffer.html">system.gfx.VertexBuffer</a></li>
   <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
   <li><a href="../modules/system.mod.AssetSubstitutor.html">system.mod.AssetSubstitutor</a></li>
   <li><a href="../modules/system.mod.ModLoader.html">system.mod.ModLoader</a></li>
@@ -372,6 +375,7 @@
   <li><a href="../components/DefensiveItemComponents.html">DefensiveItemComponents</a></li>
   <li><a href="../components/DigItemComponents.html">DigItemComponents</a></li>
   <li><a href="../components/HealthItemComponents.html">HealthItemComponents</a></li>
+  <li><a href="../components/ItemBanComponents.html">ItemBanComponents</a></li>
   <li><a href="../components/ItemComponents.html">ItemComponents</a></li>
   <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
   <li><a href="../components/MovementItemComponents.html">MovementItemComponents</a></li>
@@ -428,13 +432,13 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#drawBox">drawBox (rect, color)</a></td>
+	<td class="name" nowrap><a href="#drawBox">drawBox (rect, col)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#drawRotatedBox">drawRotatedBox (rect, color, angle, origin)</a></td>
+	<td class="name" nowrap><a href="#drawRotatedBox">drawRotatedBox (rect, col, angle, origin)</a></td>
 	<td class="summary">
 
 </td>
@@ -446,7 +450,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#drawRotatedTintedSprite">drawRotatedTintedSprite (imageName, rect, textureRect, color, angle, origin)</a></td>
+	<td class="name" nowrap><a href="#drawRotatedTintedSprite">drawRotatedTintedSprite (imageName, rect, textureRect, col, angle, origin)</a></td>
 	<td class="summary">
 
 </td>
@@ -458,19 +462,25 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#drawText">drawText (textInfo)</a></td>
+	<td class="name" nowrap><a href="#drawText">drawText (args)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#drawTintedSprite">drawTintedSprite (imageName, rect, textureRect, color)</a></td>
+	<td class="name" nowrap><a href="#drawTintedSprite">drawTintedSprite (imageName, rect, textureRect, col)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#flush">flush ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getBuffer">getBuffer ()</a></td>
 	<td class="summary">
 
 </td>
@@ -506,13 +516,43 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#getTransform">getTransform ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#getWidth">getWidth ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#getZOrder">getZOrder ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#isAvailable">isAvailable ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setBuffer">setBuffer (buffer)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTransform">setTransform (matrix)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setZOrder">setZOrder (z)</a></td>
 	<td class="summary">
 
 </td>
@@ -584,7 +624,7 @@
 </dd>
     <dt>
     <a name = "drawBox"></a>
-    <strong>drawBox (rect, color)</strong>
+    <strong>drawBox (rect, col)</strong>
     </dt>
     <dd>
 
@@ -599,7 +639,7 @@
 
 
         </li>
-        <li><span class="parameter">color</span>
+        <li><span class="parameter">col</span>
 
 
 
@@ -613,7 +653,7 @@
 </dd>
     <dt>
     <a name = "drawRotatedBox"></a>
-    <strong>drawRotatedBox (rect, color, angle, origin)</strong>
+    <strong>drawRotatedBox (rect, col, angle, origin)</strong>
     </dt>
     <dd>
 
@@ -628,7 +668,7 @@
 
 
         </li>
-        <li><span class="parameter">color</span>
+        <li><span class="parameter">col</span>
 
 
 
@@ -696,7 +736,7 @@
 </dd>
     <dt>
     <a name = "drawRotatedTintedSprite"></a>
-    <strong>drawRotatedTintedSprite (imageName, rect, textureRect, color, angle, origin)</strong>
+    <strong>drawRotatedTintedSprite (imageName, rect, textureRect, col, angle, origin)</strong>
     </dt>
     <dd>
 
@@ -721,7 +761,7 @@
 
 
         </li>
-        <li><span class="parameter">color</span>
+        <li><span class="parameter">col</span>
 
 
 
@@ -779,7 +819,7 @@
 </dd>
     <dt>
     <a name = "drawText"></a>
-    <strong>drawText (textInfo)</strong>
+    <strong>drawText (args)</strong>
     </dt>
     <dd>
 
@@ -789,7 +829,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">textInfo</span>
+        <li><span class="parameter">args</span>
 
 
 
@@ -803,7 +843,7 @@
 </dd>
     <dt>
     <a name = "drawTintedSprite"></a>
-    <strong>drawTintedSprite (imageName, rect, textureRect, color)</strong>
+    <strong>drawTintedSprite (imageName, rect, textureRect, col)</strong>
     </dt>
     <dd>
 
@@ -828,7 +868,7 @@
 
 
         </li>
-        <li><span class="parameter">color</span>
+        <li><span class="parameter">col</span>
 
 
 
@@ -843,6 +883,22 @@
     <dt>
     <a name = "flush"></a>
     <strong>flush ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getBuffer"></a>
+    <strong>getBuffer ()</strong>
     </dt>
     <dd>
 
@@ -961,8 +1017,40 @@
 
 </dd>
     <dt>
+    <a name = "getTransform"></a>
+    <strong>getTransform ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "getWidth"></a>
     <strong>getWidth ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getZOrder"></a>
+    <strong>getZOrder ()</strong>
     </dt>
     <dd>
 
@@ -986,6 +1074,78 @@
 
 
 
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setBuffer"></a>
+    <strong>setBuffer (buffer)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">buffer</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTransform"></a>
+    <strong>setTransform (matrix)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">matrix</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setZOrder"></a>
+    <strong>setZOrder (z)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">z</span>
+
+
+
+        </li>
+    </ul>
 
 
 

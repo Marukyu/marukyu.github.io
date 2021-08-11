@@ -145,7 +145,7 @@
   <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
   <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
   <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
-  <li><a href="../modules/necro.game.item.ItemBans.html">necro.game.item.ItemBans</a></li>
+  <li><a href="../modules/necro.game.item.ItemBan.html">necro.game.item.ItemBan</a></li>
   <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
   <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
   <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
@@ -280,6 +280,9 @@
   <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
   <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
   <li><a href="../modules/system.game.Window.html">system.game.Window</a></li>
+  <li><a href="../modules/system.gfx.GFX.html">system.gfx.GFX</a></li>
+  <li><a href="../modules/system.gfx.TransformationMatrix.html">system.gfx.TransformationMatrix</a></li>
+  <li><a href="../modules/system.gfx.VertexBuffer.html">system.gfx.VertexBuffer</a></li>
   <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
   <li><a href="../modules/system.mod.AssetSubstitutor.html">system.mod.AssetSubstitutor</a></li>
   <li><a href="../modules/system.mod.ModLoader.html">system.mod.ModLoader</a></li>
@@ -348,6 +351,7 @@
   <li><a href="../components/HealthComponents.html">HealthComponents</a></li>
   <li><a href="../components/HealthItemComponents.html">HealthItemComponents</a></li>
   <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
+  <li><a href="../components/ItemBanComponents.html">ItemBanComponents</a></li>
   <li><strong>ItemComponents</strong></li>
   <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
   <li><a href="../components/LegacySwipeComponents.html">LegacySwipeComponents</a></li>
@@ -440,18 +444,6 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#inventoryBannedItems">inventoryBannedItems</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#inventoryCursedSlots">inventoryCursedSlots</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#inventoryDropItemsOnDeath">inventoryDropItemsOnDeath</a></td>
 	<td class="summary">
 
@@ -465,72 +457,6 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#itemBag">itemBag</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanAria">itemBanAria</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanDiamond">itemBanDiamond</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanDorian">itemBanDorian</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanEli">itemBanEli</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanHealthlocked">itemBanHealthlocked</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanMary">itemBanMary</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanNoDamage">itemBanNoDamage</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanPacifist">itemBanPacifist</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanPoverty">itemBanPoverty</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanTempo">itemBanTempo</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#itemBanWeaponlocked">itemBanWeaponlocked</a></td>
 	<td class="summary">
 
 </td>
@@ -819,54 +745,6 @@
 
 </dd>
     <dt>
-    <a name = "inventoryBannedItems"></a>
-    <strong>inventoryBannedItems</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">components</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "inventoryCursedSlots"></a>
-    <strong>inventoryCursedSlots</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">slots</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-        <li><span class="parameter">exemptItems</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
     <a name = "inventoryDropItemsOnDeath"></a>
     <strong>inventoryDropItemsOnDeath</strong>
     </dt>
@@ -958,182 +836,6 @@
          (<em>default</em> "ext/gui/hud_slot_action2_empty.png")
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanAria"></a>
-    <strong>itemBanAria</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanDiamond"></a>
-    <strong>itemBanDiamond</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanDorian"></a>
-    <strong>itemBanDorian</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanEli"></a>
-    <strong>itemBanEli</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanHealthlocked"></a>
-    <strong>itemBanHealthlocked</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanMary"></a>
-    <strong>itemBanMary</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanNoDamage"></a>
-    <strong>itemBanNoDamage</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanPacifist"></a>
-    <strong>itemBanPacifist</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanPoverty"></a>
-    <strong>itemBanPoverty</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanTempo"></a>
-    <strong>itemBanTempo</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "itemBanWeaponlocked"></a>
-    <strong>itemBanWeaponlocked</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 
