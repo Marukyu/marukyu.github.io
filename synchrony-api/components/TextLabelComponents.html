@@ -171,6 +171,7 @@
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
+  <li><a href="../modules/necro.game.system.Particle.html">necro.game.system.Particle</a></li>
   <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
   <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
@@ -232,7 +233,6 @@
   <li><a href="../modules/necro.render.level.HealthBar.html">necro.render.level.HealthBar</a></li>
   <li><a href="../modules/necro.render.level.MoveAnimations.html">necro.render.level.MoveAnimations</a></li>
   <li><a href="../modules/necro.render.level.ObjectRenderer.html">necro.render.level.ObjectRenderer</a></li>
-  <li><a href="../modules/necro.render.level.ParticleRenderer.html">necro.render.level.ParticleRenderer</a></li>
   <li><a href="../modules/necro.render.level.SpriteEffects.html">necro.render.level.SpriteEffects</a></li>
   <li><a href="../modules/necro.render.level.TileRenderer.html">necro.render.level.TileRenderer</a></li>
   <li><a href="../modules/necro.render.level.WallVisuals.html">necro.render.level.WallVisuals</a></li>
@@ -450,6 +450,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#priceTagLabelInlineImage">priceTagLabelInlineImage</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#priceTagSuccessFlyaway">priceTagSuccessFlyaway</a></td>
 	<td class="summary">
 
@@ -583,11 +589,11 @@
     <ul>
         <li><span class="parameter">offsetX</span>
          constant float
-         (<em>default</em> 0)
+         (<em>default</em> -2)
         </li>
         <li><span class="parameter">offsetY</span>
          constant float
-         (<em>default</em> -7)
+         (<em>default</em> -2)
         </li>
     </ul>
 
@@ -609,11 +615,11 @@
     <ul>
         <li><span class="parameter">offsetX</span>
          constant float
-         (<em>default</em> 8)
+         (<em>default</em> 0)
         </li>
         <li><span class="parameter">offsetY</span>
          constant float
-         (<em>default</em> -6)
+         (<em>default</em> 0)
         </li>
     </ul>
 
@@ -640,6 +646,32 @@
         <li><span class="parameter">offsetY</span>
          constant float
          (<em>default</em> 26)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "priceTagLabelInlineImage"></a>
+    <strong>priceTagLabelInlineImage</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">costMultiplier</span>
+         constant float
+         (<em>default</em> 0.5)
+        </li>
+        <li><span class="parameter">texture</span>
+         constant string
+         (<em>default</em> "ext/gui/TEMP_mini_heart.png")
         </li>
     </ul>
 
@@ -781,11 +813,11 @@
         </li>
         <li><span class="parameter">offsetX</span>
          constant float
-         (<em>default</em> -1)
+         (<em>default</em> 0)
         </li>
         <li><span class="parameter">offsetY</span>
          constant float
-         (<em>default</em> -7)
+         (<em>default</em> 0)
         </li>
     </ul>
 
@@ -817,9 +849,9 @@
           int
          (<em>default</em> 0)
         </li>
-        <li><span class="parameter">lineSpacing</span>
+        <li><span class="parameter">spacingY</span>
           int
-         (<em>default</em> 6)
+         (<em>default</em> 0)
         </li>
     </ul>
 

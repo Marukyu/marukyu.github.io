@@ -171,6 +171,7 @@
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
+  <li><a href="../modules/necro.game.system.Particle.html">necro.game.system.Particle</a></li>
   <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
   <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
@@ -232,7 +233,6 @@
   <li><a href="../modules/necro.render.level.HealthBar.html">necro.render.level.HealthBar</a></li>
   <li><a href="../modules/necro.render.level.MoveAnimations.html">necro.render.level.MoveAnimations</a></li>
   <li><a href="../modules/necro.render.level.ObjectRenderer.html">necro.render.level.ObjectRenderer</a></li>
-  <li><a href="../modules/necro.render.level.ParticleRenderer.html">necro.render.level.ParticleRenderer</a></li>
   <li><a href="../modules/necro.render.level.SpriteEffects.html">necro.render.level.SpriteEffects</a></li>
   <li><a href="../modules/necro.render.level.TileRenderer.html">necro.render.level.TileRenderer</a></li>
   <li><a href="../modules/necro.render.level.WallVisuals.html">necro.render.level.WallVisuals</a></li>
@@ -495,11 +495,11 @@
         </li>
         <li><span class="parameter">frontZ</span>
          constant float
-         (<em>default</em> 1)
+         (<em>default</em> 11)
         </li>
         <li><span class="parameter">backZ</span>
          constant float
-         (<em>default</em> -24)
+         (<em>default</em> -14)
         </li>
         <li><span class="parameter">numFrames</span>
          constant int
@@ -583,11 +583,15 @@
     <ul>
         <li><span class="parameter">texture</span>
          constant string
-         (<em>default</em> "ext/particles/TEMP_particle_blood.png")
+         (<em>default</em> "ext/particles/TEMP_particle_heal.png")
         </li>
         <li><span class="parameter">duration</span>
          constant float
          (<em>default</em> 2)
+        </li>
+        <li><span class="parameter">offsetZ</span>
+         constant float
+         (<em>default</em> 12)
         </li>
         <li><span class="parameter">particleCount</span>
          constant int
@@ -637,7 +641,7 @@
         </li>
         <li><span class="parameter">radiusY</span>
          constant float
-         (<em>default</em> 4)
+         (<em>default</em> 3.5)
         </li>
         <li><span class="parameter">rotationPeriod</span>
          constant float

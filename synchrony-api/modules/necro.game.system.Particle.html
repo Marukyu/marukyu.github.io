@@ -47,7 +47,7 @@
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
   <li><a href="../modules/necro.audio.Sound.html">necro.audio.Sound</a></li>
   <li><a href="../modules/necro.audio.SoundGroups.html">necro.audio.SoundGroups</a></li>
-  <li><strong>necro.audio.TimeScale</strong></li>
+  <li><a href="../modules/necro.audio.TimeScale.html">necro.audio.TimeScale</a></li>
   <li><a href="../modules/necro.audio.Voice.html">necro.audio.Voice</a></li>
   <li><a href="../modules/necro.client.Chat.html">necro.client.Chat</a></li>
   <li><a href="../modules/necro.client.ClientActionBuffer.html">necro.client.ClientActionBuffer</a></li>
@@ -171,7 +171,7 @@
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
-  <li><a href="../modules/necro.game.system.Particle.html">necro.game.system.Particle</a></li>
+  <li><strong>necro.game.system.Particle</strong></li>
   <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
   <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
@@ -402,7 +402,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.audio.TimeScale</code></h1>
+<h1>Module <code>necro.game.system.Particle</code></h1>
 <p>
 
 </p>
@@ -414,67 +414,19 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#addInfiniteRegion">addInfiniteRegion (startTime, scale, fadeInTime)</a></td>
+	<td class="name" nowrap><a href="#getAll">getAll ()</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#addRegion">addRegion (startTime, duration, scale, fadeInTime, fadeOutTime)</a></td>
+	<td class="name" nowrap><a href="#play">play (entity, component, extraParams)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getRawTimeForScaledTime">getRawTimeForScaledTime (scaledTime)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getRegion">getRegion (regionID)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getRegionIDs">getRegionIDs ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getScalePoints">getScalePoints ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getTimeAndScale">getTimeAndScale (rawTime)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#isValidRegion">isValidRegion (regionID)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#makeRegionInfinite">makeRegionInfinite (regionID)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#removeRegion">removeRegion (regionID)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#reset">reset ()</a></td>
+	<td class="name" nowrap><a href="#playFromTable">playFromTable (params)</a></td>
 	<td class="summary">
 
 </td>
@@ -489,8 +441,24 @@
 
     <dl class="function">
     <dt>
-    <a name = "addInfiniteRegion"></a>
-    <strong>addInfiniteRegion (startTime, scale, fadeInTime)</strong>
+    <a name = "getAll"></a>
+    <strong>getAll ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "play"></a>
+    <strong>play (entity, component, extraParams)</strong>
     </dt>
     <dd>
 
@@ -500,17 +468,17 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">startTime</span>
+        <li><span class="parameter">entity</span>
 
 
 
         </li>
-        <li><span class="parameter">scale</span>
+        <li><span class="parameter">component</span>
 
 
 
         </li>
-        <li><span class="parameter">fadeInTime</span>
+        <li><span class="parameter">extraParams</span>
 
 
 
@@ -523,8 +491,8 @@
 
 </dd>
     <dt>
-    <a name = "addRegion"></a>
-    <strong>addRegion (startTime, duration, scale, fadeInTime, fadeOutTime)</strong>
+    <a name = "playFromTable"></a>
+    <strong>playFromTable (params)</strong>
     </dt>
     <dd>
 
@@ -534,224 +502,12 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">startTime</span>
-
-
-
-        </li>
-        <li><span class="parameter">duration</span>
-
-
-
-        </li>
-        <li><span class="parameter">scale</span>
-
-
-
-        </li>
-        <li><span class="parameter">fadeInTime</span>
-
-
-
-        </li>
-        <li><span class="parameter">fadeOutTime</span>
+        <li><span class="parameter">params</span>
 
 
 
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getRawTimeForScaledTime"></a>
-    <strong>getRawTimeForScaledTime (scaledTime)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">scaledTime</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getRegion"></a>
-    <strong>getRegion (regionID)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">regionID</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getRegionIDs"></a>
-    <strong>getRegionIDs ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getScalePoints"></a>
-    <strong>getScalePoints ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "getTimeAndScale"></a>
-    <strong>getTimeAndScale (rawTime)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">rawTime</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "isValidRegion"></a>
-    <strong>isValidRegion (regionID)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">regionID</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "makeRegionInfinite"></a>
-    <strong>makeRegionInfinite (regionID)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">regionID</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "removeRegion"></a>
-    <strong>removeRegion (regionID)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">regionID</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "reset"></a>
-    <strong>reset ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 

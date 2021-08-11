@@ -171,6 +171,7 @@
   <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
   <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
+  <li><a href="../modules/necro.game.system.Particle.html">necro.game.system.Particle</a></li>
   <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
   <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
@@ -232,7 +233,6 @@
   <li><a href="../modules/necro.render.level.HealthBar.html">necro.render.level.HealthBar</a></li>
   <li><a href="../modules/necro.render.level.MoveAnimations.html">necro.render.level.MoveAnimations</a></li>
   <li><a href="../modules/necro.render.level.ObjectRenderer.html">necro.render.level.ObjectRenderer</a></li>
-  <li><a href="../modules/necro.render.level.ParticleRenderer.html">necro.render.level.ParticleRenderer</a></li>
   <li><a href="../modules/necro.render.level.SpriteEffects.html">necro.render.level.SpriteEffects</a></li>
   <li><a href="../modules/necro.render.level.TileRenderer.html">necro.render.level.TileRenderer</a></li>
   <li><a href="../modules/necro.render.level.WallVisuals.html">necro.render.level.WallVisuals</a></li>
@@ -779,6 +779,7 @@
     <li><code>weaponPostProcess</code></li>
     <li><code>migrations</code></li>
     <li><code>componentDependencies</code></li>
+    <li><code>softDependencies</code></li>
     <li><code>validation</code></li>
     <li><code>finalize</code></li>
 </ul>
@@ -2170,6 +2171,7 @@
     <li><code>checkItem</code></li>
     <li><code>cursedSlot</code></li>
     <li><code>itemBans</code></li>
+    <li><code>checkSlotReplacable</code></li>
     <li><code>priceTag</code></li>
     <li><code>ignoreSingleChoice</code></li>
     <li><code>blockDuplicates</code></li>
@@ -2345,6 +2347,7 @@
     <li><code>conditionalDamage</code></li>
     <li><code>convert</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>animation</code></li>
     <li><code>save</code></li>
 </ul>
 
@@ -2386,6 +2389,7 @@
     <li><code>arena</code></li>
     <li><code>singleChoice</code></li>
     <li><code>markSeen</code></li>
+    <li><code>despawnPriceTag</code></li>
     <li><code>convert</code></li>
     <li><code>damage</code></li>
     <li><code>wire</code></li>
@@ -2467,13 +2471,13 @@
     <li><code>cooldownOpacity</code></li>
     <li><code>opacity</code></li>
     <li><code>item</code></li>
-    <li><code>slotImage</code></li>
     <li><code>spellCooldowns</code></li>
     <li><code>regenKillCount</code></li>
     <li><code>ammoCount</code></li>
     <li><code>stackQuantity</code></li>
     <li><code>keyBindings</code></li>
     <li><code>labels</code></li>
+    <li><code>slotImage</code></li>
 </ul>
 
 
@@ -2535,6 +2539,15 @@
     <li><code>spell</code></li>
     <li><code>consume</code></li>
     <li><code>sound</code></li>
+</ul>
+
+
+<p><a name="itemBanCheck"></a></p>
+<h2>itemBanCheck</h2>
+
+<ul>
+    <li><code>component</code></li>
+    <li><code>slot</code></li>
 </ul>
 
 
@@ -3765,6 +3778,7 @@
     <li><code>checkItem</code></li>
     <li><code>cursedSlot</code></li>
     <li><code>itemBans</code></li>
+    <li><code>checkSlotReplacable</code></li>
     <li><code>priceTag</code></li>
     <li><code>ignoreSingleChoice</code></li>
     <li><code>blockDuplicates</code></li>
@@ -3940,6 +3954,7 @@
     <li><code>conditionalDamage</code></li>
     <li><code>convert</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>animation</code></li>
     <li><code>save</code></li>
 </ul>
 
@@ -3954,6 +3969,11 @@
     <li><code>subtitles</code></li>
     <li><code>sound</code></li>
 </ul>
+
+
+<p><a name="particle"></a></p>
+<h2>particle</h2>
+
 
 
 <p><a name="perspectiveUpdated"></a></p>
@@ -4054,6 +4074,7 @@
 <h2>render</h2>
 
 <ul>
+    <li><code>initLegacyGraphics</code></li>
     <li><code>perspective</code></li>
     <li><code>animationTimer</code></li>
     <li><code>camera</code></li>
@@ -4062,6 +4083,7 @@
     <li><code>spriteEffects</code></li>
     <li><code>spriteDependencies</code></li>
     <li><code>floors</code></li>
+    <li><code>walls</code></li>
     <li><code>decals</code></li>
     <li><code>shadows</code></li>
     <li><code>worldLabels</code></li>
@@ -4081,10 +4103,13 @@
     <li><code>playerNames</code></li>
     <li><code>flyaways</code></li>
     <li><code>particlesFront</code></li>
+    <li><code>particles</code></li>
+    <li><code>endLegacyGraphics</code></li>
     <li><code>overlayBack</code></li>
     <li><code>hud</code></li>
     <li><code>textOverlay</code></li>
     <li><code>overlayFront</code></li>
+    <li><code>overlay</code></li>
 </ul>
 
 
@@ -4156,6 +4181,7 @@
 <h2>renderUI</h2>
 
 <ul>
+    <li><code>initializeBuffers</code></li>
     <li><code>clear</code></li>
     <li><code>fastForward</code></li>
     <li><code>pause</code></li>
@@ -4169,6 +4195,7 @@
     <li><code>countdown</code></li>
     <li><code>keyRebinder</code></li>
     <li><code>debugOverlay</code></li>
+    <li><code>finalizeBuffers</code></li>
     <li><code>errorOverlay</code></li>
 </ul>
 
@@ -4407,6 +4434,7 @@
 <h2>shopkeeperTransaction</h2>
 
 <ul>
+    <li><code>checkItemBan</code></li>
     <li><code>checkItem</code></li>
     <li><code>setPrice</code></li>
     <li><code>checkPrice</code></li>
