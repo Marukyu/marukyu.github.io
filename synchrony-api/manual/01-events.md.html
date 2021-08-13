@@ -161,6 +161,7 @@
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
   <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
+  <li><a href="../modules/necro.game.object.Tangibility.html">necro.game.object.Tangibility</a></li>
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
@@ -198,13 +199,18 @@
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
+  <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
   <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
+  <li><a href="../modules/necro.mod.ModGroup.html">necro.mod.ModGroup</a></li>
   <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
+  <li><a href="../modules/necro.mod.ModLabel.html">necro.mod.ModLabel</a></li>
   <li><a href="../modules/necro.mod.ModListProvider.html">necro.mod.ModListProvider</a></li>
   <li><a href="../modules/necro.mod.ModPortal.html">necro.mod.ModPortal</a></li>
   <li><a href="../modules/necro.mod.ModTemplate.html">necro.mod.ModTemplate</a></li>
+  <li><a href="../modules/necro.mod.ModUpdate.html">necro.mod.ModUpdate</a></li>
   <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
+  <li><a href="../modules/necro.mod.NetworkModDownload.html">necro.mod.NetworkModDownload</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
   <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
   <li><a href="../modules/necro.network.Netplay.html">necro.network.Netplay</a></li>
@@ -439,6 +445,7 @@
     <li><code>directionalSpriteChange</code></li>
     <li><code>parrySpriteChange</code></li>
     <li><code>phaseSpriteChange</code></li>
+    <li><code>musicLayerSpriteChange</code></li>
     <li><code>silhouette</code></li>
     <li><code>facingFrameY</code></li>
     <li><code>equipment</code></li>
@@ -602,6 +609,7 @@
     <li><code>fastForward</code></li>
     <li><code>closeConnection</code></li>
     <li><code>menu</code></li>
+    <li><code>modUpdate</code></li>
     <li><code>mods</code></li>
     <li><code>remoteSettings</code></li>
 </ul>
@@ -1033,6 +1041,8 @@
     <li><code>spawnDad</code></li>
     <li><code>placePlayers</code></li>
     <li><code>damageCountdown</code></li>
+    <li><code>paceShrine</code></li>
+    <li><code>resetBeatCounter</code></li>
     <li><code>input</code></li>
     <li><code>rhythm</code></li>
     <li><code>music</code></li>
@@ -1396,8 +1406,8 @@
     <li><code>animation</code></li>
     <li><code>collision</code></li>
     <li><code>attackable</code></li>
-    <li><code>tangible</code></li>
     <li><code>spectator</code></li>
+    <li><code>tangible</code></li>
     <li><code>contents</code></li>
     <li><code>damage</code></li>
     <li><code>ambush</code></li>
@@ -1409,6 +1419,7 @@
 
 <ul>
     <li><code>descent</code></li>
+    <li><code>exitRequirement</code></li>
     <li><code>duration</code></li>
     <li><code>targetTurn</code></li>
     <li><code>storeCollision</code></li>
@@ -1860,6 +1871,7 @@
     <li><code>attackability</code></li>
     <li><code>facing</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>regenerationKillCounter</code></li>
     <li><code>charge</code></li>
     <li><code>rhythm</code></li>
     <li><code>sound</code></li>
@@ -1883,6 +1895,7 @@
     <li><code>slide</code></li>
     <li><code>shield</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>regenerationKillCounter</code></li>
 </ul>
 
 
@@ -2286,6 +2299,7 @@
 <ul>
     <li><code>item</code></li>
     <li><code>noPlayerCollision</code></li>
+    <li><code>descent</code></li>
     <li><code>setMask</code></li>
 </ul>
 
@@ -2337,6 +2351,19 @@
 </ul>
 
 
+<p><a name="holderUpdateTangibility"></a></p>
+<h2>holderUpdateTangibility</h2>
+
+<ul>
+    <li><code>descent</code></li>
+    <li><code>spectator</code></li>
+    <li><code>killable</code></li>
+    <li><code>item</code></li>
+    <li><code>apparition</code></li>
+    <li><code>follower</code></li>
+</ul>
+
+
 <p><a name="holderUpdateWireLevel"></a></p>
 <h2>holderUpdateWireLevel</h2>
 
@@ -2369,10 +2396,10 @@
 
 <ul>
     <li><code>holster</code></li>
-    <li><code>unmap</code></li>
     <li><code>computeIndices</code></li>
     <li><code>dropSlot</code></li>
     <li><code>attach</code></li>
+    <li><code>unmap</code></li>
     <li><code>attachSlot</code></li>
     <li><code>collect</code></li>
     <li><code>equip</code></li>
@@ -2467,10 +2494,10 @@
 
 <ul>
     <li><code>dimensions</code></li>
-    <li><code>overlay</code></li>
     <li><code>cooldownOpacity</code></li>
     <li><code>opacity</code></li>
     <li><code>item</code></li>
+    <li><code>overlay</code></li>
     <li><code>spellCooldowns</code></li>
     <li><code>regenKillCount</code></li>
     <li><code>ammoCount</code></li>
@@ -2679,6 +2706,7 @@
 <ul>
     <li><code>mods</code></li>
     <li><code>menu</code></li>
+    <li><code>modUpdate</code></li>
 </ul>
 
 
@@ -2687,6 +2715,7 @@
 
 <ul>
     <li><code>menu</code></li>
+    <li><code>modUpdate</code></li>
 </ul>
 
 
@@ -2747,6 +2776,7 @@
     <li><code>boss</code></li>
     <li><code>special</code></li>
     <li><code>extraLayers</code></li>
+    <li><code>lipsync</code></li>
 </ul>
 
 
@@ -3004,8 +3034,8 @@
     <li><code>animation</code></li>
     <li><code>collision</code></li>
     <li><code>attackable</code></li>
-    <li><code>tangible</code></li>
     <li><code>spectator</code></li>
+    <li><code>tangible</code></li>
     <li><code>contents</code></li>
     <li><code>damage</code></li>
     <li><code>ambush</code></li>
@@ -3017,6 +3047,7 @@
 
 <ul>
     <li><code>descent</code></li>
+    <li><code>exitRequirement</code></li>
     <li><code>duration</code></li>
     <li><code>targetTurn</code></li>
     <li><code>storeCollision</code></li>
@@ -3468,6 +3499,7 @@
     <li><code>attackability</code></li>
     <li><code>facing</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>regenerationKillCounter</code></li>
     <li><code>charge</code></li>
     <li><code>rhythm</code></li>
     <li><code>sound</code></li>
@@ -3491,6 +3523,7 @@
     <li><code>slide</code></li>
     <li><code>shield</code></li>
     <li><code>beatDelay</code></li>
+    <li><code>regenerationKillCounter</code></li>
 </ul>
 
 
@@ -3894,6 +3927,7 @@
 <ul>
     <li><code>item</code></li>
     <li><code>noPlayerCollision</code></li>
+    <li><code>descent</code></li>
     <li><code>setMask</code></li>
 </ul>
 
@@ -3942,6 +3976,19 @@
     <li><code>multiply</code></li>
     <li><code>sprite</code></li>
     <li><code>shadow</code></li>
+</ul>
+
+
+<p><a name="objectUpdateTangibility"></a></p>
+<h2>objectUpdateTangibility</h2>
+
+<ul>
+    <li><code>descent</code></li>
+    <li><code>spectator</code></li>
+    <li><code>killable</code></li>
+    <li><code>item</code></li>
+    <li><code>apparition</code></li>
+    <li><code>follower</code></li>
 </ul>
 
 
@@ -4604,6 +4651,7 @@
     <li><code>config</code></li>
     <li><code>savefileImport</code></li>
     <li><code>modPath</code></li>
+    <li><code>modUpdate</code></li>
     <li><code>mods</code></li>
     <li><code>gameContent</code></li>
     <li><code>keyConfig</code></li>
@@ -4649,6 +4697,7 @@
     <li><code>levelTransition</code></li>
     <li><code>lazyLoadResources</code></li>
     <li><code>modPortal</code></li>
+    <li><code>modUpdate</code></li>
     <li><code>networkMods</code></li>
     <li><code>networkClient</code></li>
     <li><code>networkGameState</code></li>

@@ -161,6 +161,7 @@
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
   <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
+  <li><a href="../modules/necro.game.object.Tangibility.html">necro.game.object.Tangibility</a></li>
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
@@ -198,13 +199,18 @@
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
+  <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
   <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
+  <li><a href="../modules/necro.mod.ModGroup.html">necro.mod.ModGroup</a></li>
   <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
+  <li><a href="../modules/necro.mod.ModLabel.html">necro.mod.ModLabel</a></li>
   <li><a href="../modules/necro.mod.ModListProvider.html">necro.mod.ModListProvider</a></li>
   <li><a href="../modules/necro.mod.ModPortal.html">necro.mod.ModPortal</a></li>
   <li><a href="../modules/necro.mod.ModTemplate.html">necro.mod.ModTemplate</a></li>
+  <li><a href="../modules/necro.mod.ModUpdate.html">necro.mod.ModUpdate</a></li>
   <li><strong>necro.mod.Mods</strong></li>
+  <li><a href="../modules/necro.mod.NetworkModDownload.html">necro.mod.NetworkModDownload</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
   <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
   <li><a href="../modules/necro.network.Netplay.html">necro.network.Netplay</a></li>
@@ -456,6 +462,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#getLatestVersion">getLatestVersion (modName, package)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#getMetadata">getMetadata (modName, key)</a></td>
 	<td class="summary">
 
@@ -486,6 +498,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#isValidVersionLoaded">isValidVersionLoaded (modName)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#listAllMods">listAllMods ()</a></td>
 	<td class="summary">
 
@@ -510,7 +528,7 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#load">load (modName, priority, preferPackaged)</a></td>
+	<td class="name" nowrap><a href="#load">load (modName, packaged, priority)</a></td>
 	<td class="summary">
 
 </td>
@@ -535,6 +553,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#unload">unload (modName)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#unloadInvalidVersions">unloadInvalidVersions ()</a></td>
 	<td class="summary">
 
 </td>
@@ -759,6 +783,35 @@
 
 </dd>
     <dt>
+    <a name = "getLatestVersion"></a>
+    <strong>getLatestVersion (modName, package)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modName</span>
+
+
+
+        </li>
+        <li><span class="parameter">package</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "getMetadata"></a>
     <strong>getMetadata (modName, key)</strong>
     </dt>
@@ -884,6 +937,30 @@
 
 </dd>
     <dt>
+    <a name = "isValidVersionLoaded"></a>
+    <strong>isValidVersionLoaded (modName)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">modName</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "listAllMods"></a>
     <strong>listAllMods ()</strong>
     </dt>
@@ -957,7 +1034,7 @@
 </dd>
     <dt>
     <a name = "load"></a>
-    <strong>load (modName, priority, preferPackaged)</strong>
+    <strong>load (modName, packaged, priority)</strong>
     </dt>
     <dd>
 
@@ -972,12 +1049,12 @@
 
 
         </li>
-        <li><span class="parameter">priority</span>
+        <li><span class="parameter">packaged</span>
 
 
 
         </li>
-        <li><span class="parameter">preferPackaged</span>
+        <li><span class="parameter">priority</span>
 
 
 
@@ -1089,6 +1166,22 @@
 
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "unloadInvalidVersions"></a>
+    <strong>unloadInvalidVersions ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 

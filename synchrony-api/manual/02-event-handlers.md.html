@@ -161,6 +161,7 @@
   <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
   <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
+  <li><a href="../modules/necro.game.object.Tangibility.html">necro.game.object.Tangibility</a></li>
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
@@ -198,13 +199,18 @@
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
   <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
+  <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
   <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
+  <li><a href="../modules/necro.mod.ModGroup.html">necro.mod.ModGroup</a></li>
   <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
+  <li><a href="../modules/necro.mod.ModLabel.html">necro.mod.ModLabel</a></li>
   <li><a href="../modules/necro.mod.ModListProvider.html">necro.mod.ModListProvider</a></li>
   <li><a href="../modules/necro.mod.ModPortal.html">necro.mod.ModPortal</a></li>
   <li><a href="../modules/necro.mod.ModTemplate.html">necro.mod.ModTemplate</a></li>
+  <li><a href="../modules/necro.mod.ModUpdate.html">necro.mod.ModUpdate</a></li>
   <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
+  <li><a href="../modules/necro.mod.NetworkModDownload.html">necro.mod.NetworkModDownload</a></li>
   <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
   <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
   <li><a href="../modules/necro.network.Netplay.html">necro.network.Netplay</a></li>
@@ -488,6 +494,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>frankensteinway</code></li>
     <li><code>frankensteinwayProp</code></li>
     <li><code>freezeAnimationFrame</code></li>
+    <li><code>musicLayerSpriteChange</code></li>
     <li><code>parrySpriteChange</code></li>
     <li><code>phaseSpriteChange</code></li>
     <li><code>wiredAnimation</code></li>
@@ -656,6 +663,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>closeConnection</code></li>
     <li><code>disconnectMenu</code></li>
     <li><code>finalizeReplay</code></li>
+    <li><code>loadLatestModVersions</code></li>
     <li><code>markRemoteModsUnloaded</code></li>
     <li><code>reloadLocalMods</code></li>
     <li><code>resetActionBuffer</code></li>
@@ -1398,6 +1406,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>levelStartFrame</code></li>
     <li><code>loadLevel</code></li>
     <li><code>loadReplayLevelData</code></li>
+    <li><code>paceShrine</code></li>
     <li><code>placePlayers</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>randomizeFloorVisuals</code></li>
@@ -2054,6 +2063,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 
 
+<p><a name="holderUpdateTangibility"></a></p>
+<h2>holderUpdateTangibility</h2>
+
+
+
 <p><a name="holderUpdateWireLevel"></a></p>
 <h2>holderUpdateWireLevel</h2>
 
@@ -2443,6 +2457,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>modPortalDownloadCompleted</h2>
 
 <ul>
+    <li><code>recomputeAvailableModUpdates</code></li>
     <li><code>updateModGrid</code></li>
     <li><code>updateModList</code></li>
 </ul>
@@ -2452,6 +2467,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>modPortalReady</h2>
 
 <ul>
+    <li><code>recomputeAvailableModUpdates</code></li>
     <li><code>updateModGrid</code></li>
 </ul>
 
@@ -2510,6 +2526,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>boss</code></li>
     <li><code>coralRiffInstruments</code></li>
     <li><code>fortissimoleRap</code></li>
+    <li><code>loadLipmap</code></li>
     <li><code>special</code></li>
     <li><code>variant</code></li>
     <li><code>zone</code></li>
@@ -2528,6 +2545,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>networkModUpdate</h2>
 
 <ul>
+    <li><code>updateLegacyModList</code></li>
     <li><code>updateModList</code></li>
 </ul>
 
@@ -2767,6 +2785,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>durationOverride</code></li>
     <li><code>enableDamageImmunity</code></li>
     <li><code>enqueueDescentEndAction</code></li>
+    <li><code>exitRequirement</code></li>
     <li><code>fadeMusic</code></li>
     <li><code>grooveChainImmunity</code></li>
     <li><code>persistObject</code></li>
@@ -2774,7 +2793,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playDescentSound</code></li>
     <li><code>playDescentVoice</code></li>
     <li><code>removeFromTargetingTeam</code></li>
-    <li><code>storeTangibility</code></li>
     <li><code>updateAttackability</code></li>
 </ul>
 
@@ -3140,6 +3158,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>luteFireBreathing</code></li>
     <li><code>moveOnAttack</code></li>
     <li><code>moveResultAnimation</code></li>
+    <li><code>musicLayerFlyaway</code></li>
     <li><code>necroDancerPhase2</code></li>
     <li><code>playerHasActed</code></li>
     <li><code>processAutoCasts</code></li>
@@ -3182,7 +3201,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetItemStackQuantity</code></li>
     <li><code>resetPositionalSpriteOffsetX</code></li>
     <li><code>resetPositionalSpriteOffsetY</code></li>
-    <li><code>resetRegenerationKillCounterTotalIncrement</code></li>
     <li><code>resetRowOrderZ</code></li>
     <li><code>resetSpellCooldownKillsRemainingKills</code></li>
     <li><code>resetSpellCooldownTimeRemainingTurns</code></li>
@@ -3197,6 +3215,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnAttachment</code></li>
     <li><code>updateAttackability</code></li>
     <li><code>updateCollision</code></li>
+    <li><code>updateKillCounterTotalIncrement</code></li>
     <li><code>updatePerspective</code></li>
     <li><code>updateRhythm</code></li>
 </ul>
@@ -3212,6 +3231,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>endSlidePreConvert</code></li>
     <li><code>postConvertBeatDelay</code></li>
     <li><code>soundPreConvert</code></li>
+    <li><code>updateKillCounterTotalIncrement</code></li>
 </ul>
 
 
@@ -3352,7 +3372,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>checkExitCondition</code></li>
-    <li><code>inhibitWhileDescending</code></li>
     <li><code>makeIntangible</code></li>
     <li><code>updateEntitySpectatorState</code></li>
     <li><code>updatePlayerSpectatorState</code></li>
@@ -3603,7 +3622,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectUnspectate</h2>
 
 <ul>
-    <li><code>inhibitWhileDescending</code></li>
     <li><code>moveToVacantTile</code></li>
     <li><code>restoreTangibility</code></li>
     <li><code>updateEntitySpectatorState</code></li>
@@ -3630,6 +3648,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectUpdateCollision</h2>
 
 <ul>
+    <li><code>descent</code></li>
     <li><code>lobbyNoPlayerCollision</code></li>
     <li><code>noPlayerCollision</code></li>
     <li><code>setCheckOnAttack</code></li>
@@ -3686,6 +3705,19 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyScaleToSprite</code></li>
     <li><code>spriteDwarfismScale</code></li>
     <li><code>spriteGigantismScale</code></li>
+</ul>
+
+
+<p><a name="objectUpdateTangibility"></a></p>
+<h2>objectUpdateTangibility</h2>
+
+<ul>
+    <li><code>apparition</code></li>
+    <li><code>descent</code></li>
+    <li><code>follower</code></li>
+    <li><code>item</code></li>
+    <li><code>killable</code></li>
+    <li><code>spectator</code></li>
 </ul>
 
 
@@ -3897,14 +3929,21 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_misc</code></li>
     <li><code>1_misc.replay</code></li>
     <li><code>1_mod</code></li>
+    <li><code>1_mod.system</code></li>
     <li><code>1_modCompiler.patchLevel</code></li>
+    <li><code>1_modGrid.enableModGrouping</code></li>
+    <li><code>1_modGrid.showHiddenMods</code></li>
     <li><code>1_modGrid.useLegacyModMenu</code></li>
     <li><code>1_modGrid.viewSettings</code></li>
     <li><code>1_modLoader.auto</code></li>
+    <li><code>1_modLoader.autoUpdate.interval</code></li>
+    <li><code>1_modLoader.autoUpdate.mode</code></li>
+    <li><code>1_modLoader.autoUpdate.showInactiveMods</code></li>
     <li><code>1_modLoader.imageCache</code></li>
     <li><code>1_modLoader.imageCache.remoteCacheRetention</code></li>
     <li><code>1_modLoader.imageCache.remoteCacheRetryDelay</code></li>
     <li><code>1_modLoader.imageCache.remoteCacheTimes</code></li>
+    <li><code>1_modLoader.labels</code></li>
     <li><code>1_modLoader.list</code></li>
     <li><code>1_modLoader.portal</code></li>
     <li><code>1_modLoader.portal.lingerDuration</code></li>
@@ -3917,6 +3956,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_modLoader.portal.url.storage.image</code></li>
     <li><code>1_modLoader.portal.url.storage.package</code></li>
     <li><code>1_modLoader.remote.enabled</code></li>
+    <li><code>1_modLoader.remote.loadMismatchingVersions</code></li>
+    <li><code>1_modLoader.versionPins</code></li>
     <li><code>1_net.enableP2P</code></li>
     <li><code>1_net.host</code></li>
     <li><code>1_net.host.maxPlayers</code></li>
@@ -4639,6 +4680,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initGameState</code></li>
     <li><code>initHUDElements</code></li>
     <li><code>loadGameContent</code></li>
+    <li><code>loadLatestModVersions</code></li>
     <li><code>loadMods</code></li>
     <li><code>loadSettings</code></li>
     <li><code>mountModImageCache</code></li>
@@ -4710,6 +4752,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>applyRhythmSettings</code></li>
+    <li><code>checkForModUpdates</code></li>
     <li><code>checkSongEnd</code></li>
     <li><code>cleanUpFlyawayEntities</code></li>
     <li><code>cleanUpSwipes</code></li>
@@ -4898,6 +4941,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>activatePendingActiveItemConditionalDigStrength</code></li>
+    <li><code>applyDescentCollisionMask</code></li>
     <li><code>applyMissedBeats</code></li>
     <li><code>applyTileIdleDamage</code></li>
     <li><code>autoRotate</code></li>
@@ -4928,6 +4972,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>invincibilityTickDown</code></li>
     <li><code>markSoundsForRollbackStop</code></li>
     <li><code>overrideAnimationTimer</code></li>
+    <li><code>paceDamage</code></li>
     <li><code>pastVisibility</code></li>
     <li><code>postAIFrame</code></li>
     <li><code>preAIFrame</code></li>
@@ -5092,9 +5137,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>windowFocusChanged</h2>
 
 <ul>
+    <li><code>updateLegacyNetworkModList</code></li>
     <li><code>updateModGrid</code></li>
     <li><code>updateMusicVolume</code></li>
-    <li><code>updateNetworkModList</code></li>
 </ul>
 
 
