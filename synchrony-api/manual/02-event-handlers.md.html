@@ -1418,7 +1418,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetItemPickupAnimations</code></li>
     <li><code>resetLevelExitState</code></li>
     <li><code>resetLevelVariables</code></li>
+    <li><code>resetLocalFlyaways</code></li>
     <li><code>resetMissedBeatLockout</code></li>
+    <li><code>resetMusicLayerFlyaways</code></li>
     <li><code>resetRollbackDebugger</code></li>
     <li><code>resetSlides</code></li>
     <li><code>resetSongEnd</code></li>
@@ -1661,6 +1663,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="holderDeath"></a></p>
 <h2>holderDeath</h2>
 
+<ul>
+    <li><code>itemDropOnDeath</code></li>
+</ul>
 
 
 <p><a name="holderDelete"></a></p>
@@ -1843,6 +1848,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>activateDigConditionalInvincibility</code></li>
     <li><code>currencyDrain</code></li>
     <li><code>performDashOnDig</code></li>
+    <li><code>resetItemCombo</code></li>
     <li><code>setRangedFlag</code></li>
 </ul>
 
@@ -2037,7 +2043,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>allTileRevealItem</code></li>
     <li><code>contentsVision</code></li>
-    <li><code>itemHideDescriptiveLabels</code></li>
     <li><code>objectMinimapVisionItem</code></li>
     <li><code>objectSilhouetteItem</code></li>
     <li><code>objectUnsilhouetteItem</code></li>
@@ -2671,6 +2676,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>confusableAIOverride</code></li>
+    <li><code>delayClonkingOnConfuse</code></li>
     <li><code>playConfusionVoice</code></li>
     <li><code>setConfusionTime</code></li>
 </ul>
@@ -2861,7 +2867,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>interceptActionDelay</code></li>
     <li><code>moveGrabbed</code></li>
     <li><code>moveObject</code></li>
-    <li><code>necrodancerFacing</code></li>
     <li><code>parryCooldown</code></li>
     <li><code>parryCounterAttack</code></li>
     <li><code>performInteraction</code></li>
@@ -2870,6 +2875,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetHasMoved</code></li>
     <li><code>setFacing</code></li>
     <li><code>setFacingOnDirection</code></li>
+    <li><code>setFacingOnFlee</code></li>
     <li><code>shakeScreenOnAttack</code></li>
     <li><code>shakeScreenOnWalk</code></li>
     <li><code>slide</code></li>
@@ -3158,7 +3164,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>luteFireBreathing</code></li>
     <li><code>moveOnAttack</code></li>
     <li><code>moveResultAnimation</code></li>
-    <li><code>musicLayerFlyaway</code></li>
     <li><code>necroDancerPhase2</code></li>
     <li><code>playerHasActed</code></li>
     <li><code>processAutoCasts</code></li>
@@ -3434,6 +3439,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>kingCongaTeleport</code></li>
     <li><code>lobbyDamageImmunity</code></li>
     <li><code>lowHealthConvert</code></li>
+    <li><code>luteCopyHealthToBody</code></li>
     <li><code>luteShield</code></li>
     <li><code>multiHitProtection</code></li>
     <li><code>necrodancerShield</code></li>
@@ -4044,7 +4050,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_Boss_spawnCount</code></li>
     <li><code>4_Delay_pendingDelays</code></li>
     <li><code>4_DigMultiHit_accumulators</code></li>
-    <li><code>4_Flyaway_activeFlyaways</code></li>
+    <li><code>4_Flyaway_globalFlyaways</code></li>
     <li><code>4_Flyaway_nextID</code></li>
     <li><code>4_Marker_markers</code></li>
     <li><code>4_NecroDancer2_trapWallCounter</code></li>
@@ -4076,6 +4082,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>fswTells</code></li>
     <li><code>initializeLegacyGraphics</code></li>
     <li><code>moveAnimations</code></li>
+    <li><code>musicLayerFlyaways</code></li>
     <li><code>renderBackgroundParticleSystems</code></li>
     <li><code>renderContents</code></li>
     <li><code>renderEffects</code></li>
@@ -4131,6 +4138,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>renderBeatIndicators</code></li>
+    <li><code>renderGrooveChain</code></li>
     <li><code>renderHeartbeatHUD</code></li>
     <li><code>renderLevelCounter</code></li>
     <li><code>renderMinimap</code></li>
@@ -4156,10 +4164,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>renderPlayerHUD</h2>
 
 <ul>
-    <li><code>renderCurrencyCounters</code></li>
-    <li><code>renderDamageCountdown</code></li>
+    <li><code>damageCountdown</code></li>
+    <li><code>diamondCounter</code></li>
+    <li><code>goldCounter</code></li>
     <li><code>renderEquippedItems</code></li>
-    <li><code>renderGrooveChain</code></li>
     <li><code>renderHealthBar</code></li>
     <li><code>renderHeartbeatIndicatorHUD</code></li>
 </ul>
@@ -4754,11 +4762,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyRhythmSettings</code></li>
     <li><code>checkForModUpdates</code></li>
     <li><code>checkSongEnd</code></li>
-    <li><code>cleanUpFlyawayEntities</code></li>
     <li><code>cleanUpSwipes</code></li>
     <li><code>cleanUpTimedOutOverlays</code></li>
     <li><code>debugDocs</code></li>
     <li><code>debugKeys</code></li>
+    <li><code>deleteExpiredFlyaways</code></li>
     <li><code>fetchGeneratedLevels</code></li>
     <li><code>handleChat</code></li>
     <li><code>lazyLoadModImages</code></li>
@@ -4966,7 +4974,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>freezableTickDown</code></li>
     <li><code>gigantismTickDown</code></li>
     <li><code>handleSongEnd</code></li>
-    <li><code>increaseItemCombo</code></li>
     <li><code>incrementBeatCounter</code></li>
     <li><code>initializePendingObjectList</code></li>
     <li><code>invincibilityTickDown</code></li>
