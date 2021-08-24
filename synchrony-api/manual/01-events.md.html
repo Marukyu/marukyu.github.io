@@ -500,6 +500,7 @@
 <ul>
     <li><code>clearHazards</code></li>
     <li><code>createExitRoom</code></li>
+    <li><code>fixExitRoom</code></li>
     <li><code>flawlessChests</code></li>
     <li><code>revealLevel</code></li>
     <li><code>gold</code></li>
@@ -571,6 +572,7 @@
 
 <ul>
     <li><code>rollbackLimit</code></li>
+    <li><code>turnIDLimit</code></li>
     <li><code>actionBuffer</code></li>
     <li><code>network</code></li>
 </ul>
@@ -950,13 +952,13 @@
     <li><code>itemPickup</code></li>
     <li><code>fieldOfView</code></li>
     <li><code>updateRevealed</code></li>
-    <li><code>tileEffects</code></li>
     <li><code>heal</code></li>
     <li><code>minimap</code></li>
     <li><code>aggro</code></li>
     <li><code>actability</code></li>
     <li><code>flags</code></li>
     <li><code>provoke</code></li>
+    <li><code>tileEffects</code></li>
     <li><code>mergeItemStacks</code></li>
     <li><code>rearmTraps</code></li>
     <li><code>convertObjects</code></li>
@@ -1258,6 +1260,7 @@
     <li><code>frozen</code></li>
     <li><code>descent</code></li>
     <li><code>knockback</code></li>
+    <li><code>provokeOnProximity</code></li>
     <li><code>sunken</code></li>
     <li><code>previousPosition</code></li>
     <li><code>windVoice</code></li>
@@ -1690,13 +1693,13 @@
     <li><code>uncurse</code></li>
     <li><code>gluttony</code></li>
     <li><code>maxHealth</code></li>
-    <li><code>health</code></li>
     <li><code>cursedHealth</code></li>
+    <li><code>cursedLimit</code></li>
+    <li><code>health</code></li>
     <li><code>overhealConsume</code></li>
     <li><code>overhealRounding</code></li>
     <li><code>overheal</code></li>
     <li><code>rounding</code></li>
-    <li><code>cursedLimit</code></li>
     <li><code>limit</code></li>
     <li><code>conditionalDamage</code></li>
 </ul>
@@ -1891,6 +1894,7 @@
     <li><code>multiTile</code></li>
     <li><code>multiCollision</code></li>
     <li><code>intangible</code></li>
+    <li><code>randomizer</code></li>
     <li><code>inventory</code></li>
     <li><code>despawnExtras</code></li>
     <li><code>sound</code></li>
@@ -1917,7 +1921,9 @@
     <li><code>knockback</code></li>
     <li><code>beatDelay</code></li>
     <li><code>preventActions</code></li>
+    <li><code>shield</code></li>
     <li><code>startFight</code></li>
+    <li><code>animation</code></li>
 </ul>
 
 
@@ -2016,7 +2022,7 @@
     <li><code>actionDelay</code></li>
     <li><code>tween</code></li>
     <li><code>idle</code></li>
-    <li><code>previousPosition</code></li>
+    <li><code>custom</code></li>
     <li><code>innate</code></li>
     <li><code>bomb</code></li>
     <li><code>holster</code></li>
@@ -2034,6 +2040,7 @@
     <li><code>slide</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>previousPosition</code></li>
 </ul>
 
 
@@ -2415,6 +2422,7 @@
 <h2>inventoryCollectItem</h2>
 
 <ul>
+    <li><code>boss</code></li>
     <li><code>arena</code></li>
     <li><code>singleChoice</code></li>
     <li><code>markSeen</code></li>
@@ -2576,6 +2584,7 @@
 
 <ul>
     <li><code>component</code></li>
+    <li><code>undroppable</code></li>
     <li><code>slot</code></li>
     <li><code>initialInventory</code></li>
 </ul>
@@ -2632,8 +2641,8 @@
     <li><code>areas</code></li>
     <li><code>segments</code></li>
     <li><code>markers</code></li>
-    <li><code>entities</code></li>
     <li><code>tileConnections</code></li>
+    <li><code>entities</code></li>
     <li><code>music</code></li>
     <li><code>boss</code></li>
 </ul>
@@ -2887,6 +2896,7 @@
     <li><code>frozen</code></li>
     <li><code>descent</code></li>
     <li><code>knockback</code></li>
+    <li><code>provokeOnProximity</code></li>
     <li><code>sunken</code></li>
     <li><code>previousPosition</code></li>
     <li><code>windVoice</code></li>
@@ -3319,13 +3329,13 @@
     <li><code>uncurse</code></li>
     <li><code>gluttony</code></li>
     <li><code>maxHealth</code></li>
-    <li><code>health</code></li>
     <li><code>cursedHealth</code></li>
+    <li><code>cursedLimit</code></li>
+    <li><code>health</code></li>
     <li><code>overhealConsume</code></li>
     <li><code>overhealRounding</code></li>
     <li><code>overheal</code></li>
     <li><code>rounding</code></li>
-    <li><code>cursedLimit</code></li>
     <li><code>limit</code></li>
     <li><code>conditionalDamage</code></li>
 </ul>
@@ -3520,6 +3530,7 @@
     <li><code>multiTile</code></li>
     <li><code>multiCollision</code></li>
     <li><code>intangible</code></li>
+    <li><code>randomizer</code></li>
     <li><code>inventory</code></li>
     <li><code>despawnExtras</code></li>
     <li><code>sound</code></li>
@@ -3546,7 +3557,9 @@
     <li><code>knockback</code></li>
     <li><code>beatDelay</code></li>
     <li><code>preventActions</code></li>
+    <li><code>shield</code></li>
     <li><code>startFight</code></li>
+    <li><code>animation</code></li>
 </ul>
 
 
@@ -3645,7 +3658,7 @@
     <li><code>actionDelay</code></li>
     <li><code>tween</code></li>
     <li><code>idle</code></li>
-    <li><code>previousPosition</code></li>
+    <li><code>custom</code></li>
     <li><code>innate</code></li>
     <li><code>bomb</code></li>
     <li><code>holster</code></li>
@@ -3663,6 +3676,7 @@
     <li><code>slide</code></li>
     <li><code>damageCountdown</code></li>
     <li><code>grooveChain</code></li>
+    <li><code>previousPosition</code></li>
 </ul>
 
 
@@ -4714,6 +4728,7 @@
     <li><code>songEnd</code></li>
     <li><code>multiKeyCombo</code></li>
     <li><code>inputControls</code></li>
+    <li><code>customHotkeys</code></li>
     <li><code>input</code></li>
     <li><code>replayControls</code></li>
     <li><code>spectator</code></li>
@@ -4877,17 +4892,17 @@
     <li><code>resetAnimations</code></li>
     <li><code>invincibility</code></li>
     <li><code>spectator</code></li>
+    <li><code>customActions</code></li>
     <li><code>missedBeat</code></li>
-    <li><code>damageCountdown</code></li>
     <li><code>startCharge</code></li>
     <li><code>controlDad</code></li>
     <li><code>playerActions</code></li>
     <li><code>apparitions</code></li>
     <li><code>frame1</code></li>
+    <li><code>bossFight</code></li>
     <li><code>freezeTickDown</code></li>
     <li><code>freeze</code></li>
     <li><code>stun</code></li>
-    <li><code>bossFight</code></li>
     <li><code>preAIActions</code></li>
     <li><code>aiActions</code></li>
     <li><code>postAIActions</code></li>
@@ -4906,6 +4921,7 @@
     <li><code>unsuppressItemPickup</code></li>
     <li><code>statusEffects</code></li>
     <li><code>currencyDrain</code></li>
+    <li><code>damageCountdown</code></li>
     <li><code>nextTurnEffect</code></li>
     <li><code>priceTags</code></li>
     <li><code>itemPickup</code></li>
@@ -4978,6 +4994,7 @@
     <li><code>visibility</code></li>
     <li><code>minimap</code></li>
     <li><code>spriteCorrection</code></li>
+    <li><code>animationFreeze</code></li>
 </ul>
 
 
