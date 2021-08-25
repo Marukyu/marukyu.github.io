@@ -489,7 +489,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyTellAnimations</code></li>
     <li><code>applyTrapActivationAnimations</code></li>
     <li><code>applyTrapArmedAnimations</code></li>
-    <li><code>applyWireAnimation</code></li>
     <li><code>customAnimation</code></li>
     <li><code>directionalSpriteChange</code></li>
     <li><code>frankensteinway</code></li>
@@ -985,7 +984,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadConductor</code></li>
     <li><code>loadConductorBattery</code></li>
     <li><code>loadConductorProp</code></li>
-    <li><code>loadConductorSarcophagus</code></li>
     <li><code>loadCongaLine</code></li>
     <li><code>loadConjurer</code></li>
     <li><code>loadCoralRiff</code></li>
@@ -2730,6 +2728,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkExitCondition</code></li>
     <li><code>checkKillCredit</code></li>
     <li><code>conditionalCurrencyDrop</code></li>
+    <li><code>conductorBatteryDeath</code></li>
+    <li><code>conductorInstrumentDeath</code></li>
     <li><code>crateLootUpgrade</code></li>
     <li><code>createTombstone</code></li>
     <li><code>deathSound</code></li>
@@ -3249,6 +3249,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>castOnProvoke</code></li>
+    <li><code>conductorPhase2</code></li>
     <li><code>convertOnBossProvoke</code></li>
     <li><code>convertOnProvoke</code></li>
     <li><code>deactivateMusicLayer</code></li>
@@ -3316,6 +3317,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyDepthMultiplier</code></li>
     <li><code>applyZoneDependentActivationRadius</code></li>
     <li><code>castOnSpawn</code></li>
+    <li><code>conductorInstrumentDetectWire</code></li>
     <li><code>convertVocalEntity</code></li>
     <li><code>darkness</code></li>
     <li><code>deleteApparitions</code></li>
@@ -3352,6 +3354,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>shrineInitialContents</code></li>
     <li><code>spawnAttachment</code></li>
     <li><code>spawnBells</code></li>
+    <li><code>spawnConductorFirepigs</code></li>
     <li><code>spawnFollower</code></li>
     <li><code>spawnLuteHead</code></li>
     <li><code>startAudioLoop</code></li>
@@ -3368,6 +3371,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectSpecialAction</h2>
 
 <ul>
+    <li><code>conductorReanimate</code></li>
     <li><code>handleCustomPlayerAction</code></li>
     <li><code>hopInPlaceOnIdle</code></li>
     <li><code>idle</code></li>
@@ -3429,6 +3433,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkShieldDirection</code></li>
     <li><code>checkShieldFrameBypass</code></li>
     <li><code>clearCharm</code></li>
+    <li><code>conductorInstrumentShieldBypass</code></li>
     <li><code>convertOnShieldBreak</code></li>
     <li><code>createShieldFlyaway</code></li>
     <li><code>damageTypeVulnerability</code></li>
@@ -3543,7 +3548,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnOnTileChange</code></li>
     <li><code>despawnOnWallRemoval</code></li>
     <li><code>resetNecrodancerDelay</code></li>
-    <li><code>setWireVisibility</code></li>
     <li><code>teleportOnWallRemoval</code></li>
     <li><code>updateSunken</code></li>
     <li><code>updateWired</code></li>
@@ -3744,6 +3748,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>applyTileWire</code></li>
+    <li><code>help</code></li>
     <li><code>saveWireLevel</code></li>
     <li><code>startWireAnimationTimer</code></li>
 </ul>
@@ -4079,6 +4084,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>4_TimeScale_nextRegionID</code></li>
     <li><code>4_TimeScale_scalePoints</code></li>
     <li><code>4_TimeScale_scaleRegions</code></li>
+    <li><code>4_Wire_wireMap</code></li>
+    <li><code>4_Wire_wireVisualMap</code></li>
 </ul>
 
 
@@ -4097,7 +4104,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initializeLegacyGraphics</code></li>
     <li><code>moveAnimations</code></li>
     <li><code>musicLayerFlyaways</code></li>
-    <li><code>renderBackgroundParticleSystems</code></li>
     <li><code>renderContents</code></li>
     <li><code>renderEffects</code></li>
     <li><code>renderFloors</code></li>
@@ -4108,14 +4114,17 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderItemHintLabels</code></li>
     <li><code>renderItemStackSizes</code></li>
     <li><code>renderLayeredRows</code></li>
+    <li><code>renderParticles</code></li>
     <li><code>renderPlayerNames</code></li>
     <li><code>renderPriceTags</code></li>
     <li><code>renderSecretShopLabels</code></li>
     <li><code>renderShadows</code></li>
+    <li><code>renderShieldAttachments</code></li>
     <li><code>renderShrineHintLabels</code></li>
     <li><code>renderSwipes</code></li>
     <li><code>renderTextOverlay</code></li>
     <li><code>renderWalls</code></li>
+    <li><code>renderWires</code></li>
     <li><code>renderWorldLabels</code></li>
     <li><code>spriteAnimations</code></li>
     <li><code>updateAnimationTimer</code></li>
@@ -4830,6 +4839,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateTargetPointer</code></li>
     <li><code>updateTileMap</code></li>
     <li><code>updateVisMapFlags</code></li>
+    <li><code>updateWireConnectivity</code></li>
 </ul>
 
 
@@ -4865,6 +4875,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateTargetPointer</code></li>
     <li><code>updateTileMap</code></li>
     <li><code>updateVisMap</code></li>
+    <li><code>wireMap</code></li>
 </ul>
 
 
@@ -5083,9 +5094,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>animationFreeze</code></li>
+    <li><code>clearWireList</code></li>
+    <li><code>conductorWireAnimation</code></li>
     <li><code>entityVisibility</code></li>
     <li><code>equipmentSpriteReset</code></li>
     <li><code>equipmentSpriteRow</code></li>
+    <li><code>extraSpriteVisibleWhileShielded</code></li>
     <li><code>minimap</code></li>
     <li><code>segmentVisibility</code></li>
     <li><code>updateComboableItemSprites</code></li>
@@ -5097,7 +5111,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateStackItemSprites</code></li>
     <li><code>vibrateOnActionDelay</code></li>
     <li><code>vibrateOnTell</code></li>
-    <li><code>visbleWhileParentShielded</code></li>
 </ul>
 
 
