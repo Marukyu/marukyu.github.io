@@ -121,7 +121,7 @@
   <li><a href="../modules/necro.game.data.ContentLoader.html">necro.game.data.ContentLoader</a></li>
   <li><a href="../modules/necro.game.data.CustomActions.html">necro.game.data.CustomActions</a></li>
   <li><a href="../modules/necro.game.data.CustomEntities.html">necro.game.data.CustomEntities</a></li>
-  <li><strong>necro.game.data.DungeonXMLLoader</strong></li>
+  <li><a href="../modules/necro.game.data.DungeonXMLLoader.html">necro.game.data.DungeonXMLLoader</a></li>
   <li><a href="../modules/necro.game.data.EntityGenerator.html">necro.game.data.EntityGenerator</a></li>
   <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
   <li><a href="../modules/necro.game.data.EntityPostProcessor.html">necro.game.data.EntityPostProcessor</a></li>
@@ -166,7 +166,7 @@
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
-  <li><a href="../modules/necro.game.system.Ability.html">necro.game.system.Ability</a></li>
+  <li><strong>necro.game.system.Ability</strong></li>
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
   <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
@@ -409,7 +409,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.data.DungeonXMLLoader</code></h1>
+<h1>Module <code>necro.game.system.Ability</code></h1>
 <p>
 
 </p>
@@ -421,13 +421,28 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#loadFromXMLFile">loadFromXMLFile (fileName, levelNumber)</a></td>
+	<td class="name" nowrap><a href="#checkGameplayAction">checkGameplayAction (playerID, actionID, args)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#loadFromXMLString">loadFromXMLString (data, levelNumber)</a></td>
+	<td class="name" nowrap><a href="#getActionFlags">getActionFlags (actionID)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Flag">Flag</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Type">Type</a></td>
 	<td class="summary">
 
 </td>
@@ -442,8 +457,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "loadFromXMLFile"></a>
-    <strong>loadFromXMLFile (fileName, levelNumber)</strong>
+    <a name = "checkGameplayAction"></a>
+    <strong>checkGameplayAction (playerID, actionID, args)</strong>
     </dt>
     <dd>
 
@@ -453,12 +468,17 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">fileName</span>
+        <li><span class="parameter">playerID</span>
 
 
 
         </li>
-        <li><span class="parameter">levelNumber</span>
+        <li><span class="parameter">actionID</span>
+
+
+
+        </li>
+        <li><span class="parameter">args</span>
 
 
 
@@ -471,8 +491,8 @@
 
 </dd>
     <dt>
-    <a name = "loadFromXMLString"></a>
-    <strong>loadFromXMLString (data, levelNumber)</strong>
+    <a name = "getActionFlags"></a>
+    <strong>getActionFlags (actionID)</strong>
     </dt>
     <dd>
 
@@ -482,15 +502,79 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">data</span>
+        <li><span class="parameter">actionID</span>
 
 
 
         </li>
-        <li><span class="parameter">levelNumber</span>
+    </ul>
 
 
 
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Flag"></a>
+    <strong>Flag</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">BEATMAP</span>
+         1
+        </li>
+        <li><span class="parameter">IGNORE_ACTION</span>
+         2
+        </li>
+        <li><span class="parameter">ACTIVATE_OBJECT</span>
+         4
+        </li>
+        <li><span class="parameter">PREEMPT_DELAYS</span>
+         8
+        </li>
+        <li><span class="parameter">ACTION_QUEUE</span>
+         16
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Type"></a>
+    <strong>Type</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">SYSTEM</span>
+         0
+        </li>
+        <li><span class="parameter">IDLE</span>
+         21
+        </li>
+        <li><span class="parameter">SUB_BEAT</span>
+         24
+        </li>
+        <li><span class="parameter">DEFAULT</span>
+         29
         </li>
     </ul>
 

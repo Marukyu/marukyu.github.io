@@ -166,6 +166,7 @@
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
+  <li><a href="../modules/necro.game.system.Ability.html">necro.game.system.Ability</a></li>
   <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
   <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
   <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
@@ -199,7 +200,6 @@
   <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
   <li><a href="../modules/necro.game.vision.Visibility.html">necro.game.vision.Visibility</a></li>
   <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
-  <li><a href="../modules/necro.game.vision.WallLights.html">necro.game.vision.WallLights</a></li>
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
   <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
@@ -433,6 +433,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>ND2Phase2</code></li>
     <li><code>clone</code></li>
+    <li><code>conductorPhase2</code></li>
     <li><code>coralRiffPhase1</code></li>
     <li><code>dbFlee</code></li>
     <li><code>deathMetalPhase4</code></li>
@@ -620,6 +621,20 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="clientAddInput"></a></p>
+<h2>clientAddInput</h2>
+
+<ul>
+    <li><code>addActionToBuffer</code></li>
+    <li><code>applyEntityAttributes</code></li>
+    <li><code>checkBeatmap</code></li>
+    <li><code>checkCustomAction</code></li>
+    <li><code>computeEffectiveTurnID</code></li>
+    <li><code>insertMissedBeat</code></li>
+    <li><code>skipIgnoredActions</code></li>
+</ul>
+
+
 <p><a name="clientAddLocalAction"></a></p>
 <h2>clientAddLocalAction</h2>
 
@@ -766,6 +781,26 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="conductorSpell"></a></p>
+<h2>conductorSpell</h2>
+
+<ul>
+    <li><code>bomb</code></li>
+    <li><code>electricity</code></li>
+    <li><code>miniboss</code></li>
+    <li><code>pulse</code></li>
+</ul>
+
+
+<p><a name="conductorSpellTell"></a></p>
+<h2>conductorSpellTell</h2>
+
+<ul>
+    <li><code>electricity</code></li>
+    <li><code>firepigs</code></li>
+</ul>
+
+
 <p><a name="consoleInput"></a></p>
 <h2>consoleInput</h2>
 
@@ -874,7 +909,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>0.33-time</code></li>
     <li><code>0.35</code></li>
     <li><code>0.36</code></li>
-    <li><code>0.38</code></li>
+    <li><code>0.39</code></li>
 </ul>
 
 
@@ -968,6 +1003,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>crystallizeArmoredSkeleton</code></li>
     <li><code>crystallizeSkeleton</code></li>
     <li><code>crystallizeSkeletonKnight</code></li>
+    <li><code>ignoreConductorSarcophagus</code></li>
     <li><code>loadArmadillo</code></li>
     <li><code>loadArmoredSkeleton</code></li>
     <li><code>loadBanshee</code></li>
@@ -994,6 +1030,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadDevil</code></li>
     <li><code>loadDiamondDealer</code></li>
     <li><code>loadDireBat</code></li>
+    <li><code>loadDoppelganger</code></li>
     <li><code>loadDragon</code></li>
     <li><code>loadElectricMage</code></li>
     <li><code>loadElectricOrb</code></li>
@@ -1034,6 +1071,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadMole</code></li>
     <li><code>loadMommy</code></li>
     <li><code>loadMonkey</code></li>
+    <li><code>loadMotherslime</code></li>
     <li><code>loadMummy</code></li>
     <li><code>loadMushroom</code></li>
     <li><code>loadMushroomLight</code></li>
@@ -1055,15 +1093,20 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadSkeleton</code></li>
     <li><code>loadSkeletonKnight</code></li>
     <li><code>loadSkeletonmage</code></li>
+    <li><code>loadSkeletonspearman</code></li>
+    <li><code>loadSkeletontank</code></li>
     <li><code>loadSkull</code></li>
     <li><code>loadSlime</code></li>
     <li><code>loadSpider</code></li>
     <li><code>loadTarmonster</code></li>
     <li><code>loadTentacle</code></li>
+    <li><code>loadTinyslime</code></li>
+    <li><code>loadToad</code></li>
     <li><code>loadToughsarcophagus</code></li>
     <li><code>loadTransmogrifier</code></li>
     <li><code>loadTrapCauldron</code></li>
     <li><code>loadTrapChest</code></li>
+    <li><code>loadTroll</code></li>
     <li><code>loadWarlock</code></li>
     <li><code>loadWaterBall</code></li>
     <li><code>loadWeaponMaster</code></li>
@@ -1574,6 +1617,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>cancelByItem</code></li>
 </ul>
+
+
+<p><a name="holderCheckAbility"></a></p>
+<h2>holderCheckAbility</h2>
+
 
 
 <p><a name="holderCheckAttack"></a></p>
@@ -2608,10 +2656,21 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="objectCheckAbility"></a></p>
+<h2>objectCheckAbility</h2>
+
+<ul>
+    <li><code>applyActionFilter</code></li>
+    <li><code>applyBeatDelay</code></li>
+    <li><code>bypassBeatDelay</code></li>
+</ul>
+
+
 <p><a name="objectCheckAttack"></a></p>
 <h2>objectCheckAttack</h2>
 
 <ul>
+    <li><code>addConductorBatteries</code></li>
     <li><code>buildElectricityQueue</code></li>
     <li><code>dwarfismSuppressAttack</code></li>
     <li><code>innateWeapon</code></li>
@@ -3158,6 +3217,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>castOnAttackResult</code></li>
     <li><code>castOnMoveResult</code></li>
     <li><code>chargeStopOnResults</code></li>
+    <li><code>conductorAutoCast</code></li>
     <li><code>confusableBeatDelay</code></li>
     <li><code>delayChargeTarget</code></li>
     <li><code>digWall</code></li>
@@ -3371,7 +3431,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectSpecialAction</h2>
 
 <ul>
-    <li><code>conductorReanimate</code></li>
+    <li><code>conductorSpells</code></li>
     <li><code>handleCustomPlayerAction</code></li>
     <li><code>hopInPlaceOnIdle</code></li>
     <li><code>idle</code></li>
@@ -3438,6 +3498,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>createShieldFlyaway</code></li>
     <li><code>damageTypeVulnerability</code></li>
     <li><code>deepBluesTeleport</code></li>
+    <li><code>depleteConductorBattery</code></li>
     <li><code>dismountOnHit</code></li>
     <li><code>drawScreenFlash</code></li>
     <li><code>dropGrooveChain</code></li>
@@ -4106,6 +4167,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>musicLayerFlyaways</code></li>
     <li><code>renderContents</code></li>
     <li><code>renderEffects</code></li>
+    <li><code>renderExtraSprites</code></li>
     <li><code>renderFloors</code></li>
     <li><code>renderFlyaways</code></li>
     <li><code>renderGameObjects</code></li>
@@ -4119,7 +4181,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderPriceTags</code></li>
     <li><code>renderSecretShopLabels</code></li>
     <li><code>renderShadows</code></li>
-    <li><code>renderShieldAttachments</code></li>
     <li><code>renderShrineHintLabels</code></li>
     <li><code>renderSwipes</code></li>
     <li><code>renderTextOverlay</code></li>
@@ -4835,6 +4896,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>createTransformationTimer</code></li>
     <li><code>forwardTileChangeEventsToObjects</code></li>
     <li><code>grass</code></li>
+    <li><code>killBatteryOnWireRemoval</code></li>
     <li><code>updateCollisionMap</code></li>
     <li><code>updateTargetPointer</code></li>
     <li><code>updateTileMap</code></li>
@@ -4901,6 +4963,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>addStoneWall</code></li>
     <li><code>addUnbreakableWall</code></li>
     <li><code>addWireDoors</code></li>
+    <li><code>addWiredFloor</code></li>
     <li><code>addWoodenDoors</code></li>
     <li><code>inheritAbstractTiles</code></li>
 </ul>
@@ -4984,6 +5047,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>captiveAudiencePreventActions</code></li>
     <li><code>castOnBeatCounter</code></li>
     <li><code>charm</code></li>
+    <li><code>checkActionAbilities</code></li>
     <li><code>checkTrapTrigger</code></li>
     <li><code>confusableTickDown</code></li>
     <li><code>controlDad</code></li>
@@ -5012,6 +5076,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>postAIFrame</code></li>
     <li><code>preAIFrame</code></li>
     <li><code>preBossFreeze</code></li>
+    <li><code>precomputeActionMap</code></li>
     <li><code>processAIMovements</code></li>
     <li><code>processApparitions</code></li>
     <li><code>processFirepigs</code></li>
@@ -5095,6 +5160,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>animationFreeze</code></li>
     <li><code>clearWireList</code></li>
+    <li><code>conductorBatteryFrameY</code></li>
     <li><code>conductorWireAnimation</code></li>
     <li><code>entityVisibility</code></li>
     <li><code>equipmentSpriteReset</code></li>
