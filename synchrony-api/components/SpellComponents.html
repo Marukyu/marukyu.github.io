@@ -1250,7 +1250,7 @@
         </li>
         <li><span class="parameter">attackFlags</span>
          constant int
-         (<em>default</em> commonFlags)
+         (<em>default</em> attack.FlagGroup.SPELL)
         </li>
     </ul>
 
@@ -1494,7 +1494,7 @@
         </li>
         <li><span class="parameter">attackFlags</span>
          constant int
-         (<em>default</em> commonFlags)
+         (<em>default</em> attack.FlagGroup.SPELL)
         </li>
     </ul>
 
@@ -1610,7 +1610,7 @@
         </li>
         <li><span class="parameter">attackFlags</span>
          constant int
-         (<em>default</em> commonFlags)
+         (<em>default</em> attack.FlagGroup.SPELL)
         </li>
         <li><span class="parameter">type</span>
          constant int
@@ -2140,7 +2140,7 @@
     <ul>
         <li><span class="parameter">attackFlags</span>
          constant int
-         (<em>default</em> commonFlags + attack.Flag.IGNORE_TEAM)
+         (<em>default</em> attack.Flag.mask(attack.FlagGroup.SPELL)
         </li>
         <li><span class="parameter">moveType</span>
          constant int
