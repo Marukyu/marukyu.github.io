@@ -581,6 +581,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>necroDancers</code></li>
     <li><code>playIntroSound</code></li>
     <li><code>prepareEnemies</code></li>
+    <li><code>splashScreen</code></li>
     <li><code>tempoSarcophagus</code></li>
 </ul>
 
@@ -627,6 +628,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>addActionToBuffer</code></li>
     <li><code>applyEntityAttributes</code></li>
+    <li><code>bossSplashBlockInput</code></li>
     <li><code>checkBeatmap</code></li>
     <li><code>checkCustomAction</code></li>
     <li><code>computeEffectiveTurnID</code></li>
@@ -726,6 +728,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>receiveResource</code></li>
     <li><code>receiveRoomAttribute</code></li>
     <li><code>receiveRoomChange</code></li>
+    <li><code>reconnect</code></li>
     <li><code>syncNetworkClock</code></li>
     <li><code>updateModHashList</code></li>
 </ul>
@@ -1371,6 +1374,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>hiddenUntilProximity</code></li>
     <li><code>mergeItemStacks</code></li>
     <li><code>ozuma</code></li>
+    <li><code>process</code></li>
     <li><code>processDelayedCasts</code></li>
     <li><code>provokeOnWallRemoval</code></li>
     <li><code>rearmTraps</code></li>
@@ -1524,6 +1528,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>gameStateReset</h2>
 
 <ul>
+    <li><code>cancelBossSplash</code></li>
     <li><code>clearActionBuffer</code></li>
     <li><code>clearCurrentLevelInfo</code></li>
     <li><code>clearObjects</code></li>
@@ -2784,6 +2789,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>activateSacrifice</code></li>
     <li><code>bossFightEnd</code></li>
     <li><code>castOnDeath</code></li>
+    <li><code>castOnDeathDelayed</code></li>
     <li><code>checkExitCondition</code></li>
     <li><code>checkKillCredit</code></li>
     <li><code>conditionalCurrencyDrop</code></li>
@@ -3985,6 +3991,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>1_gameSession.startDelay</code></li>
     <li><code>1_gameSession.transitionTimeout</code></li>
     <li><code>1_gameplay</code></li>
+    <li><code>1_gameplay.bossSplash</code></li>
     <li><code>1_gameplay.markSeen</code></li>
     <li><code>1_gameplay.modifiers</code></li>
     <li><code>1_gameplay.modifiers.dancepad</code></li>
@@ -4221,6 +4228,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>renderGlobalHUD</h2>
 
 <ul>
+    <li><code>bossSplash</code></li>
     <li><code>renderBeatIndicators</code></li>
     <li><code>renderGrooveChain</code></li>
     <li><code>renderHeartbeatHUD</code></li>
@@ -4853,6 +4861,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>debugDocs</code></li>
     <li><code>debugKeys</code></li>
     <li><code>deleteExpiredFlyaways</code></li>
+    <li><code>dismissBossSplash</code></li>
     <li><code>fetchGeneratedLevels</code></li>
     <li><code>handleChat</code></li>
     <li><code>lazyLoadModImages</code></li>
