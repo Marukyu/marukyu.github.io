@@ -1323,8 +1323,37 @@
          constant table
          (<em>default</em> {})
         </li>
-        <li><span class="parameter">opt</span>
-        ={
+        <li><span class="parameter">instrumentBreakSounds</span>
+
+<p>  table <br/>
+<em>default</em>:</p>
+<pre><code> {
+     "conductorAngry1",
+     "conductorAngry2",
+     "conductorAngry3",
+     "conductorAngry4",
+     "conductorAngry5",
+     "conductorAngry6",
+     "conductorAngry7",
+ }
+</code></pre>
+
+        </li>
+        <li><span class="parameter">reanimateSounds</span>
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> {"conductorSummon1", "conductorSummon2", "conductorSummon3"}
+</code></pre>
+
+        </li>
+        <li><span class="parameter">spellWarnSound</span>
+         constant string
+         (<em>default</em> "conductorSpellWarning")
+        </li>
+        <li><span class="parameter">spellCastSound</span>
+         constant string
+         (<em>default</em> "conductorCastSpell")
         </li>
     </ul>
 
@@ -1597,12 +1626,20 @@
          (<em>default</em> {})
         </li>
         <li><span class="parameter">minDistances</span>
-         constant table
-         (<em>default</em> { 2)
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> { 2, 2, 3.5, 3.5, 3.5 }
+</code></pre>
+
         </li>
         <li><span class="parameter">maxDistances</span>
-         constant table
-         (<em>default</em> { 4)
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> { 4, 4, 4.5, 4.5, 4.5 }
+</code></pre>
+
         </li>
     </ul>
 
@@ -1707,16 +1744,28 @@
          (<em>default</em> attack.Flag.DEFAULT)
         </li>
         <li><span class="parameter">swipes</span>
-         constant table
-         (<em>default</em> {"elecWarning")
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> {"elecWarning", "elecWarning", "elecFinalWarning", "elecZap"}
+</code></pre>
+
         </li>
         <li><span class="parameter">downSwipes</span>
-         constant table
-         (<em>default</em> {"elecDownWarning")
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> {"elecDownWarning", "elecDownWarning", "elecDownFinalWarning", "elecDownZap"}
+</code></pre>
+
         </li>
         <li><span class="parameter">sounds</span>
-         constant table
-         (<em>default</em> {"frankFlash1")
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> {"frankFlash1", "frankFlash2", "frankFlash3", "frankZap"}
+</code></pre>
+
         </li>
     </ul>
 
@@ -1863,8 +1912,12 @@
          (<em>default</em> 3)
         </li>
         <li><span class="parameter">sarcoTypes</span>
-         constant table
-         (<em>default</em> {"Sarcophagus")
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> {"Sarcophagus", "Sarcophagus2", "Sarcophagus3"}
+</code></pre>
+
         </li>
         <li><span class="parameter">tellFrameX</span>
          constant int
@@ -2265,8 +2318,12 @@
 
     <ul>
         <li><span class="parameter">types</span>
-         constant table
-         (<em>default</em> {"Dragon")
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> {"Dragon", "Dragon2", "Minotaur", "Minotaur2"}
+</code></pre>
+
         </li>
         <li><span class="parameter">minDistance</span>
          constant int
@@ -2563,8 +2620,12 @@
 
     <ul>
         <li><span class="parameter">types</span>
-         constant table
-         (<em>default</em> {"Dragon")
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> {"Dragon", "Dragon2", "Minotaur", "Minotaur2", "Nightmare", "Nightmare2", "BatMiniboss2", "Ogre"}
+</code></pre>
+
         </li>
     </ul>
 

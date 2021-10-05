@@ -528,8 +528,12 @@
          (<em>default</em> ai.Type.IDLE)
         </li>
         <li><span class="parameter">directions</span>
-         constant table
-         (<em>default</em> ai.orthogonals())
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> ai.orthogonals()
+</code></pre>
+
         </li>
         <li><span class="parameter">collision</span>
          constant int
@@ -681,8 +685,15 @@
 
 
     <ul>
-        <li><span class="parameter">opt</span>
-        ={
+        <li><span class="parameter">mapping</span>
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code> {
+     [team.Id.PLAYER] = collision.Type.PLAYER,
+     [team.Id.ENEMY] = collision.mask(collision.Type.ENEMY, collision.Type.ORB
+</code></pre>
+
         </li>
     </ul>
 
