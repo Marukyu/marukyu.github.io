@@ -76,12 +76,14 @@
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
   <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
+  <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
   <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
   <li><a href="../modules/necro.config.SettingsPresets.html">necro.config.SettingsPresets</a></li>
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
+  <li><a href="../modules/necro.cycles.Frame.html">necro.cycles.Frame</a></li>
   <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
   <li><a href="../modules/necro.cycles.RenderUI.html">necro.cycles.RenderUI</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
@@ -97,6 +99,7 @@
   <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
+  <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
@@ -199,6 +202,7 @@
   <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
   <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
   <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
+  <li><a href="../modules/necro.game.tile.TileDamage.html">necro.game.tile.TileDamage</a></li>
   <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
   <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
   <li><a href="../modules/necro.game.trap.Trap.html">necro.game.trap.Trap</a></li>
@@ -328,6 +332,7 @@
   <li><a href="../modules/system.utils.serial.Base64.html">system.utils.serial.Base64</a></li>
   <li><a href="../modules/system.utils.serial.LJBuffer.html">system.utils.serial.LJBuffer</a></li>
   <li><a href="../modules/system.utils.serial.LTN.html">system.utils.serial.LTN</a></li>
+  <li><a href="../modules/system.utils.serial.MessagePack.html">system.utils.serial.MessagePack</a></li>
   <li><a href="../modules/system.utils.serial.Serialization.html">system.utils.serial.Serialization</a></li>
   <li><a href="../modules/system.utils.serial.TypeSerialization.html">system.utils.serial.TypeSerialization</a></li>
   <li><a href="../modules/system.utils.serial.ZStandard.html">system.utils.serial.ZStandard</a></li>
@@ -348,10 +353,11 @@
   <li><a href="../components/BeatDelayComponents.html">BeatDelayComponents</a></li>
   <li><a href="../components/BossComponents.html">BossComponents</a></li>
   <li><a href="../components/CastComponents.html">CastComponents</a></li>
-  <li><strong>CharacterComponents</strong></li>
+  <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
   <li><a href="../components/CharacterSpriteComponents.html">CharacterSpriteComponents</a></li>
   <li><a href="../components/ChargeComponents.html">ChargeComponents</a></li>
   <li><a href="../components/CollisionComponents.html">CollisionComponents</a></li>
+  <li><strong>CommonEnemy</strong></li>
   <li><a href="../components/ConfusionComponents.html">ConfusionComponents</a></li>
   <li><a href="../components/ConsumableComponents.html">ConsumableComponents</a></li>
   <li><a href="../components/CoreComponents.html">CoreComponents</a></li>
@@ -361,6 +367,7 @@
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
   <li><a href="../components/DigComponents.html">DigComponents</a></li>
   <li><a href="../components/DigItemComponents.html">DigItemComponents</a></li>
+  <li><a href="../components/EntityGenerator.html">EntityGenerator</a></li>
   <li><a href="../components/EquipmentSpriteComponents.html">EquipmentSpriteComponents</a></li>
   <li><a href="../components/ExtraModeComponents.html">ExtraModeComponents</a></li>
   <li><a href="../components/FacingComponents.html">FacingComponents</a></li>
@@ -422,7 +429,7 @@
 
 <div id="content">
 
-<h1>Script <code>CharacterComponents</code></h1>
+<h1>Script <code>CommonEnemy</code></h1>
 <p>
 
 </p>
@@ -434,31 +441,145 @@
 <h2><a href="#Components">Components</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#actionFilter">actionFilter</a></td>
+	<td class="name" nowrap><a href="#activationRange">activationRange</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#amplifiedMovement">amplifiedMovement</a></td>
+	<td class="name" nowrap><a href="#aggro">aggro</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#bossFighter">bossFighter</a></td>
+	<td class="name" nowrap><a href="#ai">ai</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#character">character</a></td>
+	<td class="name" nowrap><a href="#aiBasicSeek">aiBasicSeek</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#characterWithAttachment">characterWithAttachment</a></td>
+	<td class="name" nowrap><a href="#aiOverride">aiOverride</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#aiTeamCollision">aiTeamCollision</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#animationFreezeEffect">animationFreezeEffect</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#armadillo">armadillo</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#armoredskeleton">armoredskeleton</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#attackable">attackable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#banshee">banshee</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#bat">bat</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#bat_miniboss">bat_miniboss</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#blademaster">blademaster</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#bossLight">bossLight</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#bounceTweenOnAttack">bounceTweenOnAttack</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#charmable">charmable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#collision">collision</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#collisionCheckOnAttack">collisionCheckOnAttack</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#collisionCheckOnMove">collisionCheckOnMove</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#collisionCheckOnTeleport">collisionCheckOnTeleport</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#conductive">conductive</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#confusable">confusable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#confusableDigStrength">confusableDigStrength</a></td>
 	<td class="summary">
 
 </td>
@@ -470,13 +591,85 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#damageCountdown">damageCountdown</a></td>
+	<td class="name" nowrap><a href="#copyActivation">copyActivation</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#descentCollectCurrency">descentCollectCurrency</a></td>
+	<td class="name" nowrap><a href="#croppedSprite">croppedSprite</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#deaggroOnUnconfuse">deaggroOnUnconfuse</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descent">descent</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentAttackableFlags">descentAttackableFlags</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentCollisionMask">descentCollisionMask</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentDeleteOnCompletion">descentDeleteOnCompletion</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descentLockMovement">descentLockMovement</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#despawnOnBossFightEnd">despawnOnBossFightEnd</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#despawnOnBossFightStart">despawnOnBossFightStart</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#devil">devil</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#directionalSpriteChange">directionalSpriteChange</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dragon">dragon</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#electric_mage">electric_mage</a></td>
 	<td class="summary">
 
 </td>
@@ -488,49 +681,157 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#enemy">enemy</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enemyAILookupTable">enemyAILookupTable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#evileye">evileye</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#facingMirrorX">facingMirrorX</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#fearable">fearable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#focusable">focusable</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hasMoved">hasMoved</a></td>
+	<td class="name" nowrap><a href="#freezable">freezable</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#heavy">heavy</a></td>
+	<td class="name" nowrap><a href="#freezablePreventActions">freezablePreventActions</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hudHealthBar">hudHealthBar</a></td>
+	<td class="name" nowrap><a href="#gigantism">gigantism</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hudHideSlots">hudHideSlots</a></td>
+	<td class="name" nowrap><a href="#gigantismAttackDamageMultiplier">gigantismAttackDamageMultiplier</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hudOpacity">hudOpacity</a></td>
+	<td class="name" nowrap><a href="#gigantismAttackableFlags">gigantismAttackableFlags</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hudTextOverlay">hudTextOverlay</a></td>
+	<td class="name" nowrap><a href="#gigantismDeathCurrencyDropOverride">gigantismDeathCurrencyDropOverride</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#innateSpellcasts">innateSpellcasts</a></td>
+	<td class="name" nowrap><a href="#gigantismDeathItemDropChance">gigantismDeathItemDropChance</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#gigantismHealthMultiplier">gigantismHealthMultiplier</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#gigantismTileUnsinkImmunity">gigantismTileUnsinkImmunity</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#goblin">goblin</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#golem">golem</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#gorgon">gorgon</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#health">health</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#healthBar">healthBar</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#healthBarFullHearts">healthBarFullHearts</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#healthBarHUD">healthBarHUD</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#healthBarHideOnFullHealth">healthBarHideOnFullHealth</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#healthBarHideOnFullHealth">healthBarHideOnFullHealth</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hopTweenOnUnsink">hopTweenOnUnsink</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#inventory">inventory</a></td>
 	<td class="summary">
 
 </td>
@@ -542,13 +843,55 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#lowPercent">lowPercent</a></td>
+	<td class="name" nowrap><a href="#killable">killable</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#monkeyLike">monkeyLike</a></td>
+	<td class="name" nowrap><a href="#knockbackable">knockbackable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#knockbackableOncePerFrame">knockbackableOncePerFrame</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lavable">lavable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lich">lich</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lowHealthConvert">lowHealthConvert</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#metrognome">metrognome</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#minotaur">minotaur</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#monkey">monkey</a></td>
 	<td class="summary">
 
 </td>
@@ -560,61 +903,223 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#multiTile">multiTile</a></td>
+	<td class="name" nowrap><a href="#mushroom">mushroom</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#playableCharacter">playableCharacter</a></td>
+	<td class="name" nowrap><a href="#nightmare">nightmare</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#precomputeSpellTargets">precomputeSpellTargets</a></td>
+	<td class="name" nowrap><a href="#normalAnimation">normalAnimation</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#priority">priority</a></td>
+	<td class="name" nowrap><a href="#orc">orc</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#remappedMovement">remappedMovement</a></td>
+	<td class="name" nowrap><a href="#particleFreeze">particleFreeze</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spawnApparitions">spawnApparitions</a></td>
+	<td class="name" nowrap><a href="#particleRingConfusion">particleRingConfusion</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#spawnWallsOnHit">spawnWallsOnHit</a></td>
+	<td class="name" nowrap><a href="#position">position</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#stasisApproacher">stasisApproacher</a></td>
+	<td class="name" nowrap><a href="#positionalSprite">positionalSprite</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#swapEntitiesOnDeath">swapEntitiesOnDeath</a></td>
+	<td class="name" nowrap><a href="#preBossFreeze">preBossFreeze</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#takeDamageOnUntoggledMovement">takeDamageOnUntoggledMovement</a></td>
+	<td class="name" nowrap><a href="#previousPosition">previousPosition</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#random">random</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#randomWithDiagonals">randomWithDiagonals</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sarcophagus">sarcophagus</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setFacingOnDirection">setFacingOnDirection</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#shadowPosition">shadowPosition</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#shovemonster">shovemonster</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#silhouette">silhouette</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sinkable">sinkable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#skeleton">skeleton</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#skeletonknight">skeletonknight</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#skeletonmage">skeletonmage</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#skull">skull</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#soundDeath">soundDeath</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#soundDescend">soundDescend</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#soundHit">soundHit</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spawnInvincibility">spawnInvincibility</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spawnable">spawnable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spawnableSubstitutions">spawnableSubstitutions</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spriteCropOnDescent">spriteCropOnDescent</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spriteCropOnSink">spriteCropOnSink</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spriteGigantismScale">spriteGigantismScale</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#spriteSheet">spriteSheet</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#target">target</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#targetAttacker">targetAttacker</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#targetNearestHostileEntity">targetNearestHostileEntity</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#targetable">targetable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#team">team</a></td>
 	<td class="summary">
 
 </td>
@@ -626,13 +1131,61 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#teleportingBombs">teleportingBombs</a></td>
+	<td class="name" nowrap><a href="#tickleGrantKillCredit">tickleGrantKillCredit</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#transformable">transformable</a></td>
+	<td class="name" nowrap><a href="#times">times</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#times">times</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#trappable">trappable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tween">tween</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#visibility">visibility</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#visibilityRevealWhenLit">visibilityRevealWhenLit</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#visibilityVisibleOnProximity">visibilityVisibleOnProximity</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#visibleByTelepathy">visibleByTelepathy</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#warlock">warlock</a></td>
 	<td class="summary">
 
 </td>
@@ -647,59 +1200,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "actionFilter"></a>
-    <strong>actionFilter</strong>
-    </dt>
-    <dd>
-
-
-<p><em>default</em>:</p>
-<pre><code>{
-    [action.Direction.UP_RIGHT] = true,
-    [action.Direction.UP_LEFT] = true,
-    [action.Direction.DOWN_LEFT] = true,
-    [action.Direction.DOWN_RIGHT] = true,
-}
-</code></pre>
-
-
-
-    <ul>
-        <li><span class="parameter">ignoreActions</span>
-         constant table
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "amplifiedMovement"></a>
-    <strong>amplifiedMovement</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">distance</span>
-          int
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "bossFighter"></a>
-    <strong>bossFighter</strong>
+    <a name = "activationRange"></a>
+    <strong>activationRange</strong>
     </dt>
     <dd>
 
@@ -714,8 +1216,8 @@
 
 </dd>
     <dt>
-    <a name = "character"></a>
-    <strong>character</strong>
+    <a name = "aggro"></a>
+    <strong>aggro</strong>
     </dt>
     <dd>
 
@@ -723,12 +1225,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">canAct</span>
-          bool
-         (<em>default</em> false)
-        </li>
-    </ul>
 
 
 
@@ -736,8 +1232,8 @@
 
 </dd>
     <dt>
-    <a name = "characterWithAttachment"></a>
-    <strong>characterWithAttachment</strong>
+    <a name = "ai"></a>
+    <strong>ai</strong>
     </dt>
     <dd>
 
@@ -745,16 +1241,342 @@
 
 
 
-    <ul>
-        <li><span class="parameter">attachmentType</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-        <li><span class="parameter">attachmentID</span>
-          entityID
-         (<em>default</em> 0)
-        </li>
-    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "aiBasicSeek"></a>
+    <strong>aiBasicSeek</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "aiOverride"></a>
+    <strong>aiOverride</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "aiTeamCollision"></a>
+    <strong>aiTeamCollision</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "animationFreezeEffect"></a>
+    <strong>animationFreezeEffect</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "armadillo"></a>
+    <strong>armadillo</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "armoredskeleton"></a>
+    <strong>armoredskeleton</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "attackable"></a>
+    <strong>attackable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "banshee"></a>
+    <strong>banshee</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "bat"></a>
+    <strong>bat</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "bat_miniboss"></a>
+    <strong>bat_miniboss</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "blademaster"></a>
+    <strong>blademaster</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "bossLight"></a>
+    <strong>bossLight</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "bounceTweenOnAttack"></a>
+    <strong>bounceTweenOnAttack</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "charmable"></a>
+    <strong>charmable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "collision"></a>
+    <strong>collision</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "collisionCheckOnAttack"></a>
+    <strong>collisionCheckOnAttack</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "collisionCheckOnMove"></a>
+    <strong>collisionCheckOnMove</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "collisionCheckOnTeleport"></a>
+    <strong>collisionCheckOnTeleport</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "conductive"></a>
+    <strong>conductive</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "confusable"></a>
+    <strong>confusable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "confusableDigStrength"></a>
+    <strong>confusableDigStrength</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -771,12 +1593,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">playerID</span>
-          int
-         (<em>default</em> 0)
-        </li>
-    </ul>
 
 
 
@@ -784,8 +1600,8 @@
 
 </dd>
     <dt>
-    <a name = "damageCountdown"></a>
-    <strong>damageCountdown</strong>
+    <a name = "copyActivation"></a>
+    <strong>copyActivation</strong>
     </dt>
     <dd>
 
@@ -793,24 +1609,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">damage</span>
-         constant int
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">type</span>
-         constant int
-         (<em>default</em> damage.Type.SUICIDE)
-        </li>
-        <li><span class="parameter">countdownReset</span>
-         constant int
-         (<em>default</em> 0)
-        </li>
-        <li><span class="parameter">countdown</span>
-          int
-         (<em>default</em> 0)
-        </li>
-    </ul>
 
 
 
@@ -818,8 +1616,8 @@
 
 </dd>
     <dt>
-    <a name = "descentCollectCurrency"></a>
-    <strong>descentCollectCurrency</strong>
+    <a name = "croppedSprite"></a>
+    <strong>croppedSprite</strong>
     </dt>
     <dd>
 
@@ -827,12 +1625,198 @@
 
 
 
-    <ul>
-        <li><span class="parameter">currencyType</span>
-         constant string
-         (<em>default</em> "gold")
-        </li>
-    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "deaggroOnUnconfuse"></a>
+    <strong>deaggroOnUnconfuse</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descent"></a>
+    <strong>descent</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentAttackableFlags"></a>
+    <strong>descentAttackableFlags</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentCollisionMask"></a>
+    <strong>descentCollisionMask</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentDeleteOnCompletion"></a>
+    <strong>descentDeleteOnCompletion</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descentLockMovement"></a>
+    <strong>descentLockMovement</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "despawnOnBossFightEnd"></a>
+    <strong>despawnOnBossFightEnd</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "despawnOnBossFightStart"></a>
+    <strong>despawnOnBossFightStart</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "devil"></a>
+    <strong>devil</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "directionalSpriteChange"></a>
+    <strong>directionalSpriteChange</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dragon"></a>
+    <strong>dragon</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "electric_mage"></a>
+    <strong>electric_mage</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -856,6 +1840,86 @@
 
 </dd>
     <dt>
+    <a name = "enemy"></a>
+    <strong>enemy</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enemyAILookupTable"></a>
+    <strong>enemyAILookupTable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "evileye"></a>
+    <strong>evileye</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "facingMirrorX"></a>
+    <strong>facingMirrorX</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "fearable"></a>
+    <strong>fearable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "focusable"></a>
     <strong>focusable</strong>
     </dt>
@@ -865,12 +1929,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">flags</span>
-          int
-         (<em>default</em> 0)
-        </li>
-    </ul>
 
 
 
@@ -878,30 +1936,8 @@
 
 </dd>
     <dt>
-    <a name = "hasMoved"></a>
-    <strong>hasMoved</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">value</span>
-          bool
-         (<em>default</em> true)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "heavy"></a>
-    <strong>heavy</strong>
+    <a name = "freezable"></a>
+    <strong>freezable</strong>
     </dt>
     <dd>
 
@@ -916,8 +1952,8 @@
 
 </dd>
     <dt>
-    <a name = "hudHealthBar"></a>
-    <strong>hudHealthBar</strong>
+    <a name = "freezablePreventActions"></a>
+    <strong>freezablePreventActions</strong>
     </dt>
     <dd>
 
@@ -925,37 +1961,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">healthTypes</span>
-
-<p> constant table <br/>
-<em>default</em>:</p>
-<pre><code>{
-    {
-        component = "cursedHealth",
-        valueKey = "health",
-        maxValueKey = "health",
-        fullImage = "ext/gui/cursed_heart.png",
-        halfImage = "ext/gui/cursed_heart_half.png",
-        emptyImage = "ext/gui/cursed_heart_empty.png",
-    },
-    {
-        component = "health",
-        valueKey = "health",
-        maxValueKey = "maxHealth",
-        fullImage = "ext/gui/heart.png",
-        halfImage = "ext/gui/heart_half.png",
-        emptyImage = "ext/gui/heart_empty.png",
-    },
-}
-</code></pre>
-
-        </li>
-        <li><span class="parameter">useHalfHearts</span>
-         constant bool
-         (<em>default</em> true)
-        </li>
-    </ul>
 
 
 
@@ -963,8 +1968,8 @@
 
 </dd>
     <dt>
-    <a name = "hudHideSlots"></a>
-    <strong>hudHideSlots</strong>
+    <a name = "gigantism"></a>
+    <strong>gigantism</strong>
     </dt>
     <dd>
 
@@ -972,12 +1977,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">hidden</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
 
 
 
@@ -985,8 +1984,8 @@
 
 </dd>
     <dt>
-    <a name = "hudOpacity"></a>
-    <strong>hudOpacity</strong>
+    <a name = "gigantismAttackDamageMultiplier"></a>
+    <strong>gigantismAttackDamageMultiplier</strong>
     </dt>
     <dd>
 
@@ -994,16 +1993,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">opacity</span>
-         constant float
-         (<em>default</em> 1)
-        </li>
-        <li><span class="parameter">excludedSlots</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
 
 
 
@@ -1011,8 +2000,8 @@
 
 </dd>
     <dt>
-    <a name = "hudTextOverlay"></a>
-    <strong>hudTextOverlay</strong>
+    <a name = "gigantismAttackableFlags"></a>
+    <strong>gigantismAttackableFlags</strong>
     </dt>
     <dd>
 
@@ -1020,12 +2009,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">text</span>
-          string
-         (<em>default</em> "")
-        </li>
-    </ul>
 
 
 
@@ -1033,8 +2016,8 @@
 
 </dd>
     <dt>
-    <a name = "innateSpellcasts"></a>
-    <strong>innateSpellcasts</strong>
+    <a name = "gigantismDeathCurrencyDropOverride"></a>
+    <strong>gigantismDeathCurrencyDropOverride</strong>
     </dt>
     <dd>
 
@@ -1042,12 +2025,230 @@
 
 
 
-    <ul>
-        <li><span class="parameter">mapping</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gigantismDeathItemDropChance"></a>
+    <strong>gigantismDeathItemDropChance</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gigantismHealthMultiplier"></a>
+    <strong>gigantismHealthMultiplier</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gigantismTileUnsinkImmunity"></a>
+    <strong>gigantismTileUnsinkImmunity</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "goblin"></a>
+    <strong>goblin</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "golem"></a>
+    <strong>golem</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gorgon"></a>
+    <strong>gorgon</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "health"></a>
+    <strong>health</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "healthBar"></a>
+    <strong>healthBar</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "healthBarFullHearts"></a>
+    <strong>healthBarFullHearts</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "healthBarHUD"></a>
+    <strong>healthBarHUD</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "healthBarHideOnFullHealth"></a>
+    <strong>healthBarHideOnFullHealth</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "healthBarHideOnFullHealth"></a>
+    <strong>healthBarHideOnFullHealth</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "hopTweenOnUnsink"></a>
+    <strong>hopTweenOnUnsink</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "inventory"></a>
+    <strong>inventory</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -1064,12 +2265,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">mask</span>
-          int
-         (<em>default</em> -1)
-        </li>
-    </ul>
 
 
 
@@ -1077,8 +2272,8 @@
 
 </dd>
     <dt>
-    <a name = "lowPercent"></a>
-    <strong>lowPercent</strong>
+    <a name = "killable"></a>
+    <strong>killable</strong>
     </dt>
     <dd>
 
@@ -1086,12 +2281,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">allowedItems</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
 
 
 
@@ -1099,8 +2288,120 @@
 
 </dd>
     <dt>
-    <a name = "monkeyLike"></a>
-    <strong>monkeyLike</strong>
+    <a name = "knockbackable"></a>
+    <strong>knockbackable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "knockbackableOncePerFrame"></a>
+    <strong>knockbackableOncePerFrame</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lavable"></a>
+    <strong>lavable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lich"></a>
+    <strong>lich</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lowHealthConvert"></a>
+    <strong>lowHealthConvert</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "metrognome"></a>
+    <strong>metrognome</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "minotaur"></a>
+    <strong>minotaur</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "monkey"></a>
+    <strong>monkey</strong>
     </dt>
     <dd>
 
@@ -1124,12 +2425,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">moveType</span>
-         constant int
-         (<em>default</em> move.Type.NORMAL)
-        </li>
-    </ul>
 
 
 
@@ -1137,52 +2432,8 @@
 
 </dd>
     <dt>
-    <a name = "multiTile"></a>
-    <strong>multiTile</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">offsets</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "playableCharacter"></a>
-    <strong>playableCharacter</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">lobbyOrder</span>
-         constant float
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "precomputeSpellTargets"></a>
-    <strong>precomputeSpellTargets</strong>
+    <a name = "mushroom"></a>
+    <strong>mushroom</strong>
     </dt>
     <dd>
 
@@ -1197,96 +2448,8 @@
 
 </dd>
     <dt>
-    <a name = "priority"></a>
-    <strong>priority</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">value</span>
-          int
-         (<em>default</em> 0)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "remappedMovement"></a>
-    <strong>remappedMovement</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">map</span>
-         constant table
-         (<em>default</em> {})
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnApparitions"></a>
-    <strong>spawnApparitions</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">component</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "spawnWallsOnHit"></a>
-    <strong>spawnWallsOnHit</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">active</span>
-          bool
-         (<em>default</em> true)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "stasisApproacher"></a>
-    <strong>stasisApproacher</strong>
+    <a name = "nightmare"></a>
+    <strong>nightmare</strong>
     </dt>
     <dd>
 
@@ -1301,8 +2464,8 @@
 
 </dd>
     <dt>
-    <a name = "swapEntitiesOnDeath"></a>
-    <strong>swapEntitiesOnDeath</strong>
+    <a name = "normalAnimation"></a>
+    <strong>normalAnimation</strong>
     </dt>
     <dd>
 
@@ -1310,20 +2473,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">component</span>
-         constant string
-         (<em>default</em> "item")
-        </li>
-        <li><span class="parameter">sound</span>
-         constant string
-         (<em>default</em> "teleport")
-        </li>
-        <li><span class="parameter">flyaway</span>
-         constant string
-         (<em>default</em> "Teleported!")
-        </li>
-    </ul>
 
 
 
@@ -1331,8 +2480,8 @@
 
 </dd>
     <dt>
-    <a name = "takeDamageOnUntoggledMovement"></a>
-    <strong>takeDamageOnUntoggledMovement</strong>
+    <a name = "orc"></a>
+    <strong>orc</strong>
     </dt>
     <dd>
 
@@ -1340,16 +2489,534 @@
 
 
 
-    <ul>
-        <li><span class="parameter">damage</span>
-         constant int
-         (<em>default</em> 1)
-        </li>
-        <li><span class="parameter">type</span>
-         constant int
-         (<em>default</em> damage.Type.BLOOD)
-        </li>
-    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "particleFreeze"></a>
+    <strong>particleFreeze</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "particleRingConfusion"></a>
+    <strong>particleRingConfusion</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "position"></a>
+    <strong>position</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "positionalSprite"></a>
+    <strong>positionalSprite</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "preBossFreeze"></a>
+    <strong>preBossFreeze</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "previousPosition"></a>
+    <strong>previousPosition</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "random"></a>
+    <strong>random</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "randomWithDiagonals"></a>
+    <strong>randomWithDiagonals</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sarcophagus"></a>
+    <strong>sarcophagus</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setFacingOnDirection"></a>
+    <strong>setFacingOnDirection</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "shadowPosition"></a>
+    <strong>shadowPosition</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "shovemonster"></a>
+    <strong>shovemonster</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "silhouette"></a>
+    <strong>silhouette</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sinkable"></a>
+    <strong>sinkable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "skeleton"></a>
+    <strong>skeleton</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "skeletonknight"></a>
+    <strong>skeletonknight</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "skeletonmage"></a>
+    <strong>skeletonmage</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "skull"></a>
+    <strong>skull</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "soundDeath"></a>
+    <strong>soundDeath</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "soundDescend"></a>
+    <strong>soundDescend</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "soundHit"></a>
+    <strong>soundHit</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spawnInvincibility"></a>
+    <strong>spawnInvincibility</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spawnable"></a>
+    <strong>spawnable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spawnableSubstitutions"></a>
+    <strong>spawnableSubstitutions</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spriteCropOnDescent"></a>
+    <strong>spriteCropOnDescent</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spriteCropOnSink"></a>
+    <strong>spriteCropOnSink</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spriteGigantismScale"></a>
+    <strong>spriteGigantismScale</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "spriteSheet"></a>
+    <strong>spriteSheet</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "target"></a>
+    <strong>target</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "targetAttacker"></a>
+    <strong>targetAttacker</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "targetNearestHostileEntity"></a>
+    <strong>targetNearestHostileEntity</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "targetable"></a>
+    <strong>targetable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "team"></a>
+    <strong>team</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -1366,16 +3033,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">damage</span>
-         constant int
-         (<em>default</em> 999)
-        </li>
-        <li><span class="parameter">type</span>
-         constant int
-         (<em>default</em> damage.Type.PHASING)
-        </li>
-    </ul>
 
 
 
@@ -1383,8 +3040,8 @@
 
 </dd>
     <dt>
-    <a name = "teleportingBombs"></a>
-    <strong>teleportingBombs</strong>
+    <a name = "tickleGrantKillCredit"></a>
+    <strong>tickleGrantKillCredit</strong>
     </dt>
     <dd>
 
@@ -1392,16 +3049,6 @@
 
 
 
-    <ul>
-        <li><span class="parameter">teleportFlags</span>
-         constant int
-         (<em>default</em> attack.Flag.UNDEAD)
-        </li>
-        <li><span class="parameter">suppressFlags</span>
-         constant int
-         (<em>default</em> attack.Flag.mask(attack.Flag.CHARACTER)
-        </li>
-    </ul>
 
 
 
@@ -1409,8 +3056,8 @@
 
 </dd>
     <dt>
-    <a name = "transformable"></a>
-    <strong>transformable</strong>
+    <a name = "times"></a>
+    <strong>times</strong>
     </dt>
     <dd>
 
@@ -1418,16 +3065,134 @@
 
 
 
-    <ul>
-        <li><span class="parameter">targetType</span>
-         constant string
-         (<em>default</em> "")
-        </li>
-        <li><span class="parameter">bloodCost</span>
-         constant int
-         (<em>default</em> 0)
-        </li>
-    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "times"></a>
+    <strong>times</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "trappable"></a>
+    <strong>trappable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "tween"></a>
+    <strong>tween</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "visibility"></a>
+    <strong>visibility</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "visibilityRevealWhenLit"></a>
+    <strong>visibilityRevealWhenLit</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "visibilityVisibleOnProximity"></a>
+    <strong>visibilityVisibleOnProximity</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "visibleByTelepathy"></a>
+    <strong>visibleByTelepathy</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "warlock"></a>
+    <strong>warlock</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
