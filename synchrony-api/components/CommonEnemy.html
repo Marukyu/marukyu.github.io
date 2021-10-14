@@ -45,6 +45,7 @@
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
+  <li><a href="../modules/necro.audio.NoiseControl.html">necro.audio.NoiseControl</a></li>
   <li><a href="../modules/necro.audio.Sound.html">necro.audio.Sound</a></li>
   <li><a href="../modules/necro.audio.SoundGroups.html">necro.audio.SoundGroups</a></li>
   <li><a href="../modules/necro.audio.TimeScale.html">necro.audio.TimeScale</a></li>
@@ -76,7 +77,6 @@
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
   <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
-  <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
   <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
@@ -248,7 +248,6 @@
   <li><a href="../modules/necro.render.hud.Subtitles.html">necro.render.hud.Subtitles</a></li>
   <li><a href="../modules/necro.render.hud.inventory.InventoryHUD.html">necro.render.hud.inventory.InventoryHUD</a></li>
   <li><a href="../modules/necro.render.level.Animations.html">necro.render.level.Animations</a></li>
-  <li><a href="../modules/necro.render.level.EquipmentSprite.html">necro.render.level.EquipmentSprite</a></li>
   <li><a href="../modules/necro.render.level.FloorVisuals.html">necro.render.level.FloorVisuals</a></li>
   <li><a href="../modules/necro.render.level.HealthBar.html">necro.render.level.HealthBar</a></li>
   <li><a href="../modules/necro.render.level.MoveAnimations.html">necro.render.level.MoveAnimations</a></li>
@@ -275,6 +274,7 @@
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
   <li><a href="../modules/system.debug.DebugDump.html">system.debug.DebugDump</a></li>
+  <li><a href="../modules/system.debug.DebugUtilities.html">system.debug.DebugUtilities</a></li>
   <li><a href="../modules/system.debug.Deprecation.html">system.debug.Deprecation</a></li>
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
@@ -317,6 +317,7 @@
   <li><a href="../modules/system.network.ReliablePassthrough.html">system.network.ReliablePassthrough</a></li>
   <li><a href="../modules/system.network.Server.html">system.network.Server</a></li>
   <li><a href="../modules/system.utils.Array.html">system.utils.Array</a></li>
+  <li><a href="../modules/system.utils.BasicOps.html">system.utils.BasicOps</a></li>
   <li><a href="../modules/system.utils.BitUtilities.html">system.utils.BitUtilities</a></li>
   <li><a href="../modules/system.utils.CircularBuffer.html">system.utils.CircularBuffer</a></li>
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
@@ -367,7 +368,6 @@
   <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
   <li><a href="../components/DigComponents.html">DigComponents</a></li>
   <li><a href="../components/DigItemComponents.html">DigItemComponents</a></li>
-  <li><a href="../components/EntityGenerator.html">EntityGenerator</a></li>
   <li><a href="../components/EquipmentSpriteComponents.html">EquipmentSpriteComponents</a></li>
   <li><a href="../components/ExtraModeComponents.html">ExtraModeComponents</a></li>
   <li><a href="../components/FacingComponents.html">FacingComponents</a></li>
@@ -459,6 +459,18 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#ai">ai</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ai">ai</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#aiBasicSeek">aiBasicSeek</a></td>
 	<td class="summary">
 
@@ -537,6 +549,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#castOnMove">castOnMove</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#charmable">charmable</a></td>
 	<td class="summary">
 
@@ -550,6 +568,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#collisionCheckOnAttack">collisionCheckOnAttack</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#collisionCheckOnMove">collisionCheckOnMove</a></td>
 	<td class="summary">
 
 </td>
@@ -598,6 +622,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#croppedSprite">croppedSprite</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#crushTraps">crushTraps</a></td>
 	<td class="summary">
 
 </td>
@@ -855,6 +885,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#knockbackable">knockbackable</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#knockbackableOncePerFrame">knockbackableOncePerFrame</a></td>
 	<td class="summary">
 
@@ -921,7 +957,19 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#offBeat">offBeat</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#orc">orc</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#particleFreeze">particleFreeze</a></td>
 	<td class="summary">
 
 </td>
@@ -963,6 +1011,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#provokeOnWallRemoval">provokeOnWallRemoval</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#random">random</a></td>
 	<td class="summary">
 
@@ -975,6 +1029,18 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#rowOrder">rowOrder</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#rowOrder">rowOrder</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#sarcophagus">sarcophagus</a></td>
 	<td class="summary">
 
@@ -982,6 +1048,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#setFacingOnDirection">setFacingOnDirection</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#shadow">shadow</a></td>
 	<td class="summary">
 
 </td>
@@ -1161,6 +1233,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#unsinkImmunity">unsinkImmunity</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#visibility">visibility</a></td>
 	<td class="summary">
 
@@ -1218,6 +1296,38 @@
     <dt>
     <a name = "aggro"></a>
     <strong>aggro</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ai"></a>
+    <strong>ai</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ai"></a>
+    <strong>ai</strong>
     </dt>
     <dd>
 
@@ -1456,6 +1566,22 @@
 
 </dd>
     <dt>
+    <a name = "castOnMove"></a>
+    <strong>castOnMove</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "charmable"></a>
     <strong>charmable</strong>
     </dt>
@@ -1490,6 +1616,22 @@
     <dt>
     <a name = "collisionCheckOnAttack"></a>
     <strong>collisionCheckOnAttack</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "collisionCheckOnMove"></a>
+    <strong>collisionCheckOnMove</strong>
     </dt>
     <dd>
 
@@ -1618,6 +1760,22 @@
     <dt>
     <a name = "croppedSprite"></a>
     <strong>croppedSprite</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "crushTraps"></a>
+    <strong>crushTraps</strong>
     </dt>
     <dd>
 
@@ -2304,6 +2462,22 @@
 
 </dd>
     <dt>
+    <a name = "knockbackable"></a>
+    <strong>knockbackable</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "knockbackableOncePerFrame"></a>
     <strong>knockbackableOncePerFrame</strong>
     </dt>
@@ -2480,8 +2654,40 @@
 
 </dd>
     <dt>
+    <a name = "offBeat"></a>
+    <strong>offBeat</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "orc"></a>
     <strong>orc</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "particleFreeze"></a>
+    <strong>particleFreeze</strong>
     </dt>
     <dd>
 
@@ -2592,6 +2798,22 @@
 
 </dd>
     <dt>
+    <a name = "provokeOnWallRemoval"></a>
+    <strong>provokeOnWallRemoval</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "random"></a>
     <strong>random</strong>
     </dt>
@@ -2624,6 +2846,38 @@
 
 </dd>
     <dt>
+    <a name = "rowOrder"></a>
+    <strong>rowOrder</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "rowOrder"></a>
+    <strong>rowOrder</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "sarcophagus"></a>
     <strong>sarcophagus</strong>
     </dt>
@@ -2642,6 +2896,22 @@
     <dt>
     <a name = "setFacingOnDirection"></a>
     <strong>setFacingOnDirection</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "shadow"></a>
+    <strong>shadow</strong>
     </dt>
     <dd>
 
@@ -3106,6 +3376,22 @@
     <dt>
     <a name = "tween"></a>
     <strong>tween</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "unsinkImmunity"></a>
+    <strong>unsinkImmunity</strong>
     </dt>
     <dd>
 
