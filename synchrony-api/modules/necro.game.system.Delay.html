@@ -77,6 +77,7 @@
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
   <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
+  <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
   <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
@@ -445,6 +446,7 @@
 	<td class="name" nowrap><a href="#register">register (name, func, flags)</a></td>
 	<td class="summary">flags is a table with fields:
  * processOnPlayerAction: force the delay to occur earlier than planned when the affected player acts
+ * processOnLevelComplete: force the delay to occur earlier than planned when the level ends
  * lazy: allow the delay to occur later than planned if no turns occur (do not create a DELAY turn)</td>
 	</tr>
 </table>
@@ -463,6 +465,7 @@
     <dd>
     flags is a table with fields:
  * processOnPlayerAction: force the delay to occur earlier than planned when the affected player acts
+ * processOnLevelComplete: force the delay to occur earlier than planned when the level ends
  * lazy: allow the delay to occur later than planned if no turns occur (do not create a DELAY turn)
 
 

@@ -77,6 +77,7 @@
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
   <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
+  <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
   <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
@@ -575,6 +576,9 @@
         <li><span class="parameter">OVERRIDABLE</span>
          <code>128</code> - Overrides the action if the entity is currently sliding or charging.
         </li>
+        <li><span class="parameter">BEGIN_BOSS_LEVEL</span>
+         <code>256</code> - Dismisses the boss screen splash and allows enemies in the pre-boss room to move
+        </li>
     </ul>
 
 
@@ -597,14 +601,20 @@
         <li><span class="parameter">SYSTEM</span>
          <code>0</code> - System actions do not have any special properties
         </li>
-        <li><span class="parameter">DEFAULT</span>
-         <code>253</code> - Default flags for directions
-        </li>
-        <li><span class="parameter">SUB_BEAT</span>
-         <code>24</code> - Default flags for sub-beat actions (special abilities that do not consume a turn)
+        <li><span class="parameter">DIRECTION</span>
+         <code>509</code> - Default flags for directions
         </li>
         <li><span class="parameter">SPECIAL</span>
-         <code>245</code> - Default flags for special actions (avoid pre-empting delays)
+         <code>501</code> - Default flags for special actions
+        </li>
+        <li><span class="parameter">IDLE</span>
+         <code>245</code> - Default flags for idling
+        </li>
+        <li><span class="parameter">DEFAULT</span>
+         <code>501</code> - Default flags for custom actions
+        </li>
+        <li><span class="parameter">SUB_BEAT</span>
+         <code>16</code> - Default flags for sub-beat actions (special abilities that do not consume a turn)
         </li>
     </ul>
 

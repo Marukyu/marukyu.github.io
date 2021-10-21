@@ -77,6 +77,7 @@
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
   <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
+  <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
   <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
   <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
   <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
@@ -643,7 +644,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>replayDeferTargetTurn</code></li>
-    <li><code>deferDelayedTurn</code></li>
     <li><code>setTargetTurn</code></li>
     <li><code>deferRollbackTurn</code></li>
     <li><code>addToRollbackDebugger</code></li>
@@ -922,6 +922,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>delayExpired</h2>
 
 <ul>
+    <li><code>completeLevel</code></li>
     <li><code>descentEnd</code></li>
     <li><code>descentMusicFade</code></li>
     <li><code>despawn</code></li>
@@ -1577,6 +1578,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>cancelBossSplash</code></li>
     <li><code>clearFrozenFrames</code></li>
     <li><code>resetChecksums</code></li>
+    <li><code>resetClientPendingDelays</code></li>
     <li><code>resetLazyWireFlashes</code></li>
     <li><code>resetLevelVariables</code></li>
     <li><code>resetLocalFlyaways</code></li>
@@ -1597,6 +1599,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnDad</code></li>
     <li><code>placePlayers</code></li>
     <li><code>resetDamageCountdown</code></li>
+    <li><code>enqueueShrineOfRiskDamage</code></li>
     <li><code>paceShrine</code></li>
     <li><code>resetBeatCounter</code></li>
     <li><code>updateIdleSpectate</code></li>
@@ -2305,6 +2308,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="inventoryCheckEquip"></a></p>
+<h2>inventoryCheckEquip</h2>
+
+<ul>
+    <li><code>itemSlotUser</code></li>
+    <li><code>holderTangibility</code></li>
+</ul>
+
+
 <p><a name="inventoryCollectItem"></a></p>
 <h2>inventoryCollectItem</h2>
 
@@ -2522,6 +2534,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>levelComplete</h2>
 
 <ul>
+    <li><code>processPendingDelays</code></li>
     <li><code>finalizeSpeedrunTimer</code></li>
     <li><code>deathless</code></li>
     <li><code>winScreen</code></li>
@@ -2828,6 +2841,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>autoCastPreventManualCast</code></li>
     <li><code>applyActionDelay</code></li>
     <li><code>applyActionFilter</code></li>
+    <li><code>playerHasActed</code></li>
 </ul>
 
 
@@ -3003,12 +3017,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>restoreVisibility</code></li>
     <li><code>restoreCollisionMask</code></li>
     <li><code>updateAttackability</code></li>
+    <li><code>applySoftGrooveChainImmunity</code></li>
     <li><code>resetSpectatorMode</code></li>
     <li><code>restoreTangibility</code></li>
     <li><code>descentCrateContents</code></li>
     <li><code>inflictDamage</code></li>
     <li><code>createAmbush</code></li>
     <li><code>removeLevelOverlay</code></li>
+    <li><code>fadeInMusic</code></li>
 </ul>
 
 
@@ -3419,7 +3435,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updatePattern</code></li>
     <li><code>patternFacing</code></li>
     <li><code>wiredRotatePost</code></li>
-    <li><code>playerHasActed</code></li>
+    <li><code>inflictShrineOfRiskDamage</code></li>
     <li><code>updateGrooveChain</code></li>
     <li><code>updateHitChain</code></li>
     <li><code>firstMove</code></li>
@@ -4661,7 +4677,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>soundReplay</h2>
 
 <ul>
-    <li><code>increaseVolume</code></li>
     <li><code>unmarkRollback</code></li>
 </ul>
 
@@ -4930,6 +4945,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processSpectatorMode</code></li>
     <li><code>updateFocusedPlayers</code></li>
     <li><code>updateAnimationTimer</code></li>
+    <li><code>processClientPendingDelays</code></li>
     <li><code>rollback</code></li>
     <li><code>processTurns</code></li>
     <li><code>updateVisualObjects</code></li>
@@ -5168,6 +5184,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>postAIFrame</code></li>
     <li><code>sleepWhileUnprovoked</code></li>
     <li><code>handleSongEnd</code></li>
+    <li><code>completeLevel</code></li>
     <li><code>updateAttachmentEntities</code></li>
     <li><code>updateReturningTargetAfterTraps</code></li>
     <li><code>updateAutoDespawnBlinkEffect</code></li>
