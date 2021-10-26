@@ -103,6 +103,7 @@
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
+  <li><a href="../modules/necro.game.character.Ambush.html">necro.game.character.Ambush</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
   <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
@@ -948,9 +949,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deleteDeadEntities</code></li>
     <li><code>updateEntities</code></li>
     <li><code>clearAnimationCache</code></li>
-    <li><code>clearChargeCache</code></li>
     <li><code>clearCurrencyCache</code></li>
     <li><code>clearItemBanCache</code></li>
+    <li><code>clearListToSetCache</code></li>
     <li><code>clearLobbyCharacterCache</code></li>
     <li><code>clearPerspectiveCache</code></li>
     <li><code>clearPlayerEntityListCache</code></li>
@@ -1560,6 +1561,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetTurnID</code></li>
     <li><code>stopMusic</code></li>
     <li><code>skipLevelExit</code></li>
+    <li><code>saveAmbushers</code></li>
     <li><code>clearObjects</code></li>
     <li><code>resetNoiseControl</code></li>
     <li><code>resetSoundEveryBeat</code></li>
@@ -1588,6 +1590,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>respawnOnLevelTransition</code></li>
     <li><code>spawnPlayers</code></li>
     <li><code>loadLevel</code></li>
+    <li><code>createAmbush</code></li>
     <li><code>initializeLobbyLevel</code></li>
     <li><code>introText</code></li>
     <li><code>resetTransitionLockout</code></li>
@@ -3041,7 +3044,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>restoreTangibility</code></li>
     <li><code>descentCrateContents</code></li>
     <li><code>inflictDamage</code></li>
-    <li><code>createAmbush</code></li>
     <li><code>removeLevelOverlay</code></li>
     <li><code>fadeInMusic</code></li>
 </ul>
@@ -3077,7 +3079,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>completeDescent</code></li>
-    <li><code>saveMinibosses</code></li>
+    <li><code>disableAmbush</code></li>
     <li><code>makeIntangible</code></li>
     <li><code>restoreHover</code></li>
     <li><code>allowAscent</code></li>
@@ -4814,6 +4816,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>destroyWalls</code></li>
     <li><code>deathMetalSpawn</code></li>
     <li><code>grantCurrency</code></li>
+    <li><code>grantItem</code></li>
     <li><code>grantRandomItem</code></li>
     <li><code>spawnBombs</code></li>
     <li><code>spawnEntity</code></li>
