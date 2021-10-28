@@ -1,0 +1,913 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Synchrony modding API documentation</title>
+    <link rel="stylesheet" href="../ldoc_new.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>Synchrony</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+
+
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/00-readme.md.html">00-readme</a></li>
+  <li><a href="../manual/01-events.md.html">01-events</a></li>
+  <li><a href="../manual/02-event-handlers.md.html">02-event-handlers</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/necro.audio.AudioFilter.html">necro.audio.AudioFilter</a></li>
+  <li><a href="../modules/necro.audio.AudioLoop.html">necro.audio.AudioLoop</a></li>
+  <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
+  <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
+  <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
+  <li><a href="../modules/necro.audio.NoiseControl.html">necro.audio.NoiseControl</a></li>
+  <li><a href="../modules/necro.audio.Sound.html">necro.audio.Sound</a></li>
+  <li><a href="../modules/necro.audio.SoundGroups.html">necro.audio.SoundGroups</a></li>
+  <li><a href="../modules/necro.audio.TimeScale.html">necro.audio.TimeScale</a></li>
+  <li><a href="../modules/necro.audio.Voice.html">necro.audio.Voice</a></li>
+  <li><a href="../modules/necro.client.Chat.html">necro.client.Chat</a></li>
+  <li><a href="../modules/necro.client.ClientActionBuffer.html">necro.client.ClientActionBuffer</a></li>
+  <li><a href="../modules/necro.client.ClientEvents.html">necro.client.ClientEvents</a></li>
+  <li><strong>necro.client.Cutscene</strong></li>
+  <li><a href="../modules/necro.client.FastForward.html">necro.client.FastForward</a></li>
+  <li><a href="../modules/necro.client.GameClient.html">necro.client.GameClient</a></li>
+  <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
+  <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
+  <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
+  <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
+  <li><a href="../modules/necro.client.Lobby.html">necro.client.Lobby</a></li>
+  <li><a href="../modules/necro.client.LocalCoop.html">necro.client.LocalCoop</a></li>
+  <li><a href="../modules/necro.client.NetClock.html">necro.client.NetClock</a></li>
+  <li><a href="../modules/necro.client.NetRNG.html">necro.client.NetRNG</a></li>
+  <li><a href="../modules/necro.client.PlayerList.html">necro.client.PlayerList</a></li>
+  <li><a href="../modules/necro.client.Resources.html">necro.client.Resources</a></li>
+  <li><a href="../modules/necro.client.Rollback.html">necro.client.Rollback</a></li>
+  <li><a href="../modules/necro.client.Room.html">necro.client.Room</a></li>
+  <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
+  <li><a href="../modules/necro.client.SnapshotRequest.html">necro.client.SnapshotRequest</a></li>
+  <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
+  <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
+  <li><a href="../modules/necro.client.Synchronizer.html">necro.client.Synchronizer</a></li>
+  <li><a href="../modules/necro.client.replay.Replay.html">necro.client.replay.Replay</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayControls.html">necro.client.replay.ReplayControls</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
+  <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
+  <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
+  <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
+  <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
+  <li><a href="../modules/necro.config.RemoteSettings.html">necro.config.RemoteSettings</a></li>
+  <li><a href="../modules/necro.config.Settings.html">necro.config.Settings</a></li>
+  <li><a href="../modules/necro.config.SettingsPresets.html">necro.config.SettingsPresets</a></li>
+  <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
+  <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
+  <li><a href="../modules/necro.cycles.Frame.html">necro.cycles.Frame</a></li>
+  <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
+  <li><a href="../modules/necro.cycles.RenderUI.html">necro.cycles.RenderUI</a></li>
+  <li><a href="../modules/necro.cycles.Startup.html">necro.cycles.Startup</a></li>
+  <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
+  <li><a href="../modules/necro.cycles.Turn.html">necro.cycles.Turn</a></li>
+  <li><a href="../modules/necro.cycles.VisualUpdate.html">necro.cycles.VisualUpdate</a></li>
+  <li><a href="../modules/necro.debug.DebugCommands.html">necro.debug.DebugCommands</a></li>
+  <li><a href="../modules/necro.debug.DebugDrawUtils.html">necro.debug.DebugDrawUtils</a></li>
+  <li><a href="../modules/necro.debug.DebugEval.html">necro.debug.DebugEval</a></li>
+  <li><a href="../modules/necro.debug.DebugNetworking.html">necro.debug.DebugNetworking</a></li>
+  <li><a href="../modules/necro.debug.DebugOverlay.html">necro.debug.DebugOverlay</a></li>
+  <li><a href="../modules/necro.debug.DebugRollback.html">necro.debug.DebugRollback</a></li>
+  <li><a href="../modules/necro.debug.DebugVisuals.html">necro.debug.DebugVisuals</a></li>
+  <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
+  <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
+  <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
+  <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
+  <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
+  <li><a href="../modules/necro.game.character.Ambush.html">necro.game.character.Ambush</a></li>
+  <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
+  <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
+  <li><a href="../modules/necro.game.character.Confusion.html">necro.game.character.Confusion</a></li>
+  <li><a href="../modules/necro.game.character.Descent.html">necro.game.character.Descent</a></li>
+  <li><a href="../modules/necro.game.character.Facing.html">necro.game.character.Facing</a></li>
+  <li><a href="../modules/necro.game.character.Fear.html">necro.game.character.Fear</a></li>
+  <li><a href="../modules/necro.game.character.Focus.html">necro.game.character.Focus</a></li>
+  <li><a href="../modules/necro.game.character.Follower.html">necro.game.character.Follower</a></li>
+  <li><a href="../modules/necro.game.character.Freeze.html">necro.game.character.Freeze</a></li>
+  <li><a href="../modules/necro.game.character.GrooveChain.html">necro.game.character.GrooveChain</a></li>
+  <li><a href="../modules/necro.game.character.Health.html">necro.game.character.Health</a></li>
+  <li><a href="../modules/necro.game.character.Invincibility.html">necro.game.character.Invincibility</a></li>
+  <li><a href="../modules/necro.game.character.Kill.html">necro.game.character.Kill</a></li>
+  <li><a href="../modules/necro.game.character.Player.html">necro.game.character.Player</a></li>
+  <li><a href="../modules/necro.game.character.Provokable.html">necro.game.character.Provokable</a></li>
+  <li><a href="../modules/necro.game.character.Respawn.html">necro.game.character.Respawn</a></li>
+  <li><a href="../modules/necro.game.character.Rhythm.html">necro.game.character.Rhythm</a></li>
+  <li><a href="../modules/necro.game.character.SizeModifier.html">necro.game.character.SizeModifier</a></li>
+  <li><a href="../modules/necro.game.character.Spectator.html">necro.game.character.Spectator</a></li>
+  <li><a href="../modules/necro.game.character.Stasis.html">necro.game.character.Stasis</a></li>
+  <li><a href="../modules/necro.game.character.Team.html">necro.game.character.Team</a></li>
+  <li><a href="../modules/necro.game.character.Tickle.html">necro.game.character.Tickle</a></li>
+  <li><a href="../modules/necro.game.data.Components.html">necro.game.data.Components</a></li>
+  <li><a href="../modules/necro.game.data.ContentLoader.html">necro.game.data.ContentLoader</a></li>
+  <li><a href="../modules/necro.game.data.CustomActions.html">necro.game.data.CustomActions</a></li>
+  <li><a href="../modules/necro.game.data.CustomEntities.html">necro.game.data.CustomEntities</a></li>
+  <li><a href="../modules/necro.game.data.DungeonXMLLoader.html">necro.game.data.DungeonXMLLoader</a></li>
+  <li><a href="../modules/necro.game.data.EntityGenerator.html">necro.game.data.EntityGenerator</a></li>
+  <li><a href="../modules/necro.game.data.EntityNaming.html">necro.game.data.EntityNaming</a></li>
+  <li><a href="../modules/necro.game.data.EntityPostProcessor.html">necro.game.data.EntityPostProcessor</a></li>
+  <li><a href="../modules/necro.game.data.GameXML.html">necro.game.data.GameXML</a></li>
+  <li><a href="../modules/necro.game.data.ProceduralLevel.html">necro.game.data.ProceduralLevel</a></li>
+  <li><a href="../modules/necro.game.data.SavefileXML.html">necro.game.data.SavefileXML</a></li>
+  <li><a href="../modules/necro.game.data.Soundtrack.html">necro.game.data.Soundtrack</a></li>
+  <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
+  <li><a href="../modules/necro.game.data.enemy.CommonEnemy.html">necro.game.data.enemy.CommonEnemy</a></li>
+  <li><a href="../modules/necro.game.data.item.CommonItem.html">necro.game.data.item.CommonItem</a></li>
+  <li><a href="../modules/necro.game.data.item.weapon.CommonWeapon.html">necro.game.data.item.weapon.CommonWeapon</a></li>
+  <li><a href="../modules/necro.game.data.item.weapon.CustomWeapons.html">necro.game.data.item.weapon.CustomWeapons</a></li>
+  <li><a href="../modules/necro.game.data.migration.Migration.html">necro.game.data.migration.Migration</a></li>
+  <li><a href="../modules/necro.game.data.object.CommonShrine.html">necro.game.data.object.CommonShrine</a></li>
+  <li><a href="../modules/necro.game.data.player.PlayableCharacters.html">necro.game.data.player.PlayableCharacters</a></li>
+  <li><a href="../modules/necro.game.data.resource.CutsceneDefinitions.html">necro.game.data.resource.CutsceneDefinitions</a></li>
+  <li><a href="../modules/necro.game.data.spell.CommonSpell.html">necro.game.data.spell.CommonSpell</a></li>
+  <li><a href="../modules/necro.game.data.tile.MinimapTheme.html">necro.game.data.tile.MinimapTheme</a></li>
+  <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
+  <li><a href="../modules/necro.game.enemy.Targeting.html">necro.game.enemy.Targeting</a></li>
+  <li><a href="../modules/necro.game.enemy.ai.AI.html">necro.game.enemy.ai.AI</a></li>
+  <li><a href="../modules/necro.game.enemy.ai.Charge.html">necro.game.enemy.ai.Charge</a></li>
+  <li><a href="../modules/necro.game.item.ActionItem.html">necro.game.item.ActionItem</a></li>
+  <li><a href="../modules/necro.game.item.AffectorItem.html">necro.game.item.AffectorItem</a></li>
+  <li><a href="../modules/necro.game.item.Consumable.html">necro.game.item.Consumable</a></li>
+  <li><a href="../modules/necro.game.item.Currency.html">necro.game.item.Currency</a></li>
+  <li><a href="../modules/necro.game.item.Inventory.html">necro.game.item.Inventory</a></li>
+  <li><a href="../modules/necro.game.item.ItemBan.html">necro.game.item.ItemBan</a></li>
+  <li><a href="../modules/necro.game.item.ItemGeneration.html">necro.game.item.ItemGeneration</a></li>
+  <li><a href="../modules/necro.game.item.ItemPickup.html">necro.game.item.ItemPickup</a></li>
+  <li><a href="../modules/necro.game.item.LowPercent.html">necro.game.item.LowPercent</a></li>
+  <li><a href="../modules/necro.game.item.PriceTag.html">necro.game.item.PriceTag</a></li>
+  <li><a href="../modules/necro.game.item.SpellItem.html">necro.game.item.SpellItem</a></li>
+  <li><a href="../modules/necro.game.level.Boss.html">necro.game.level.Boss</a></li>
+  <li><a href="../modules/necro.game.level.CurrentLevel.html">necro.game.level.CurrentLevel</a></li>
+  <li><a href="../modules/necro.game.level.LevelLoader.html">necro.game.level.LevelLoader</a></li>
+  <li><a href="../modules/necro.game.level.LevelUtils.html">necro.game.level.LevelUtils</a></li>
+  <li><a href="../modules/necro.game.level.Lobby.html">necro.game.level.Lobby</a></li>
+  <li><a href="../modules/necro.game.level.Wire.html">necro.game.level.Wire</a></li>
+  <li><a href="../modules/necro.game.object.Interaction.html">necro.game.object.Interaction</a></li>
+  <li><a href="../modules/necro.game.object.Map.html">necro.game.object.Map</a></li>
+  <li><a href="../modules/necro.game.object.Object.html">necro.game.object.Object</a></li>
+  <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
+  <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
+  <li><a href="../modules/necro.game.object.Tangibility.html">necro.game.object.Tangibility</a></li>
+  <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
+  <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
+  <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
+  <li><a href="../modules/necro.game.system.Ability.html">necro.game.system.Ability</a></li>
+  <li><a href="../modules/necro.game.system.Action.html">necro.game.system.Action</a></li>
+  <li><a href="../modules/necro.game.system.BeatDelay.html">necro.game.system.BeatDelay</a></li>
+  <li><a href="../modules/necro.game.system.Checksum.html">necro.game.system.Checksum</a></li>
+  <li><a href="../modules/necro.game.system.Damage.html">necro.game.system.Damage</a></li>
+  <li><a href="../modules/necro.game.system.Delay.html">necro.game.system.Delay</a></li>
+  <li><a href="../modules/necro.game.system.Flyaway.html">necro.game.system.Flyaway</a></li>
+  <li><a href="../modules/necro.game.system.LineOfSight.html">necro.game.system.LineOfSight</a></li>
+  <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
+  <li><a href="../modules/necro.game.system.Particle.html">necro.game.system.Particle</a></li>
+  <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
+  <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
+  <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
+  <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
+  <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
+  <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
+  <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
+  <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
+  <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
+  <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
+  <li><a href="../modules/necro.game.tile.DigMultiHit.html">necro.game.tile.DigMultiHit</a></li>
+  <li><a href="../modules/necro.game.tile.LevelExit.html">necro.game.tile.LevelExit</a></li>
+  <li><a href="../modules/necro.game.tile.Marker.html">necro.game.tile.Marker</a></li>
+  <li><a href="../modules/necro.game.tile.Minimap.html">necro.game.tile.Minimap</a></li>
+  <li><a href="../modules/necro.game.tile.Segment.html">necro.game.tile.Segment</a></li>
+  <li><a href="../modules/necro.game.tile.Tile.html">necro.game.tile.Tile</a></li>
+  <li><a href="../modules/necro.game.tile.TileDamage.html">necro.game.tile.TileDamage</a></li>
+  <li><a href="../modules/necro.game.tile.TileEvents.html">necro.game.tile.TileEvents</a></li>
+  <li><a href="../modules/necro.game.tile.TileTypes.html">necro.game.tile.TileTypes</a></li>
+  <li><a href="../modules/necro.game.trap.Trap.html">necro.game.trap.Trap</a></li>
+  <li><a href="../modules/necro.game.vision.LightSource.html">necro.game.vision.LightSource</a></li>
+  <li><a href="../modules/necro.game.vision.SegmentVisibility.html">necro.game.vision.SegmentVisibility</a></li>
+  <li><a href="../modules/necro.game.vision.TargetPointer.html">necro.game.vision.TargetPointer</a></li>
+  <li><a href="../modules/necro.game.vision.Visibility.html">necro.game.vision.Visibility</a></li>
+  <li><a href="../modules/necro.game.vision.Vision.html">necro.game.vision.Vision</a></li>
+  <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
+  <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
+  <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
+  <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
+  <li><a href="../modules/necro.mod.ModGroup.html">necro.mod.ModGroup</a></li>
+  <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
+  <li><a href="../modules/necro.mod.ModLabel.html">necro.mod.ModLabel</a></li>
+  <li><a href="../modules/necro.mod.ModListProvider.html">necro.mod.ModListProvider</a></li>
+  <li><a href="../modules/necro.mod.ModPortal.html">necro.mod.ModPortal</a></li>
+  <li><a href="../modules/necro.mod.ModTemplate.html">necro.mod.ModTemplate</a></li>
+  <li><a href="../modules/necro.mod.ModUpdate.html">necro.mod.ModUpdate</a></li>
+  <li><a href="../modules/necro.mod.Mods.html">necro.mod.Mods</a></li>
+  <li><a href="../modules/necro.mod.NetworkModDownload.html">necro.mod.NetworkModDownload</a></li>
+  <li><a href="../modules/necro.mod.NetworkMods.html">necro.mod.NetworkMods</a></li>
+  <li><a href="../modules/necro.network.ActionBuffer.html">necro.network.ActionBuffer</a></li>
+  <li><a href="../modules/necro.network.Netplay.html">necro.network.Netplay</a></li>
+  <li><a href="../modules/necro.render.AnimationTimer.html">necro.render.AnimationTimer</a></li>
+  <li><a href="../modules/necro.render.Camera.html">necro.render.Camera</a></li>
+  <li><a href="../modules/necro.render.CameraTarget.html">necro.render.CameraTarget</a></li>
+  <li><a href="../modules/necro.render.Overlay.html">necro.render.Overlay</a></li>
+  <li><a href="../modules/necro.render.Render.html">necro.render.Render</a></li>
+  <li><a href="../modules/necro.render.ScreenShake.html">necro.render.ScreenShake</a></li>
+  <li><a href="../modules/necro.render.UI.html">necro.render.UI</a></li>
+  <li><a href="../modules/necro.render.WinScreen.html">necro.render.WinScreen</a></li>
+  <li><a href="../modules/necro.render.filter.CommonFilter.html">necro.render.filter.CommonFilter</a></li>
+  <li><a href="../modules/necro.render.filter.CropFilter.html">necro.render.filter.CropFilter</a></li>
+  <li><a href="../modules/necro.render.filter.GrayscaleFilter.html">necro.render.filter.GrayscaleFilter</a></li>
+  <li><a href="../modules/necro.render.filter.HSVFilter.html">necro.render.filter.HSVFilter</a></li>
+  <li><a href="../modules/necro.render.filter.MaterialColorFilter.html">necro.render.filter.MaterialColorFilter</a></li>
+  <li><a href="../modules/necro.render.hud.BeatBarHUD.html">necro.render.hud.BeatBarHUD</a></li>
+  <li><a href="../modules/necro.render.hud.HUD.html">necro.render.hud.HUD</a></li>
+  <li><a href="../modules/necro.render.hud.HUDLayout.html">necro.render.hud.HUDLayout</a></li>
+  <li><a href="../modules/necro.render.hud.HeartbeatHUD.html">necro.render.hud.HeartbeatHUD</a></li>
+  <li><a href="../modules/necro.render.hud.PlayerListHUD.html">necro.render.hud.PlayerListHUD</a></li>
+  <li><a href="../modules/necro.render.hud.Subtitles.html">necro.render.hud.Subtitles</a></li>
+  <li><a href="../modules/necro.render.hud.inventory.InventoryHUD.html">necro.render.hud.inventory.InventoryHUD</a></li>
+  <li><a href="../modules/necro.render.level.Animations.html">necro.render.level.Animations</a></li>
+  <li><a href="../modules/necro.render.level.FloorVisuals.html">necro.render.level.FloorVisuals</a></li>
+  <li><a href="../modules/necro.render.level.HealthBar.html">necro.render.level.HealthBar</a></li>
+  <li><a href="../modules/necro.render.level.MoveAnimations.html">necro.render.level.MoveAnimations</a></li>
+  <li><a href="../modules/necro.render.level.ObjectRenderer.html">necro.render.level.ObjectRenderer</a></li>
+  <li><a href="../modules/necro.render.level.SpriteEffects.html">necro.render.level.SpriteEffects</a></li>
+  <li><a href="../modules/necro.render.level.TileRenderer.html">necro.render.level.TileRenderer</a></li>
+  <li><a href="../modules/necro.render.level.WallVisuals.html">necro.render.level.WallVisuals</a></li>
+  <li><a href="../modules/necro.server.GameServer.html">necro.server.GameServer</a></li>
+  <li><a href="../modules/necro.server.ServerActionBuffer.html">necro.server.ServerActionBuffer</a></li>
+  <li><a href="../modules/necro.server.ServerChat.html">necro.server.ServerChat</a></li>
+  <li><a href="../modules/necro.server.ServerClock.html">necro.server.ServerClock</a></li>
+  <li><a href="../modules/necro.server.ServerCommandLine.html">necro.server.ServerCommandLine</a></li>
+  <li><a href="../modules/necro.server.ServerConductor.html">necro.server.ServerConductor</a></li>
+  <li><a href="../modules/necro.server.ServerEvents.html">necro.server.ServerEvents</a></li>
+  <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
+  <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
+  <li><a href="../modules/necro.server.ServerPlayerList.html">necro.server.ServerPlayerList</a></li>
+  <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
+  <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
+  <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
+  <li><a href="../modules/necro.server.ServerSnapshotRequest.html">necro.server.ServerSnapshotRequest</a></li>
+  <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
+  <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
+  <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
+  <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
+  <li><a href="../modules/system.debug.DebugDump.html">system.debug.DebugDump</a></li>
+  <li><a href="../modules/system.debug.DebugUtilities.html">system.debug.DebugUtilities</a></li>
+  <li><a href="../modules/system.debug.Deprecation.html">system.debug.Deprecation</a></li>
+  <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
+  <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
+  <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
+  <li><a href="../modules/system.debug.StackTrace.html">system.debug.StackTrace</a></li>
+  <li><a href="../modules/system.debug.StackTraceRules.html">system.debug.StackTraceRules</a></li>
+  <li><a href="../modules/system.events.AbstractSelector.html">system.events.AbstractSelector</a></li>
+  <li><a href="../modules/system.events.EntitySelector.html">system.events.EntitySelector</a></li>
+  <li><a href="../modules/system.events.EnumSelector.html">system.events.EnumSelector</a></li>
+  <li><a href="../modules/system.events.Events.html">system.events.Events</a></li>
+  <li><a href="../modules/system.events.MetaEvents.html">system.events.MetaEvents</a></li>
+  <li><a href="../modules/system.events.OrderedSelector.html">system.events.OrderedSelector</a></li>
+  <li><a href="../modules/system.file.Storage.html">system.file.Storage</a></li>
+  <li><a href="../modules/system.game.Audio.html">system.game.Audio</a></li>
+  <li><a href="../modules/system.game.Bitmap.html">system.game.Bitmap</a></li>
+  <li><a href="../modules/system.game.Config.html">system.game.Config</a></li>
+  <li><a href="../modules/system.game.Entities.html">system.game.Entities</a></li>
+  <li><a href="../modules/system.game.EntitySchema.html">system.game.EntitySchema</a></li>
+  <li><a href="../modules/system.game.FileIO.html">system.game.FileIO</a></li>
+  <li><a href="../modules/system.game.Framebuffer.html">system.game.Framebuffer</a></li>
+  <li><a href="../modules/system.game.Graphics.html">system.game.Graphics</a></li>
+  <li><a href="../modules/system.game.Input.html">system.game.Input</a></li>
+  <li><a href="../modules/system.game.Screenshot.html">system.game.Screenshot</a></li>
+  <li><a href="../modules/system.game.Session.html">system.game.Session</a></li>
+  <li><a href="../modules/system.game.Steam.html">system.game.Steam</a></li>
+  <li><a href="../modules/system.game.Window.html">system.game.Window</a></li>
+  <li><a href="../modules/system.gfx.GFX.html">system.gfx.GFX</a></li>
+  <li><a href="../modules/system.gfx.TransformationMatrix.html">system.gfx.TransformationMatrix</a></li>
+  <li><a href="../modules/system.gfx.VertexBuffer.html">system.gfx.VertexBuffer</a></li>
+  <li><a href="../modules/system.gfx.VideoPlayer.html">system.gfx.VideoPlayer</a></li>
+  <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
+  <li><a href="../modules/system.mod.AssetSubstitutor.html">system.mod.AssetSubstitutor</a></li>
+  <li><a href="../modules/system.mod.ModLoader.html">system.mod.ModLoader</a></li>
+  <li><a href="../modules/system.mod.ScriptMetaInfo.html">system.mod.ScriptMetaInfo</a></li>
+  <li><a href="../modules/system.network.Client.html">system.network.Client</a></li>
+  <li><a href="../modules/system.network.Common.html">system.network.Common</a></li>
+  <li><a href="../modules/system.network.HTTP.html">system.network.HTTP</a></li>
+  <li><a href="../modules/system.network.IPC.html">system.network.IPC</a></li>
+  <li><a href="../modules/system.network.LocalTunnel.html">system.network.LocalTunnel</a></li>
+  <li><a href="../modules/system.network.ReliableHandler.html">system.network.ReliableHandler</a></li>
+  <li><a href="../modules/system.network.ReliablePassthrough.html">system.network.ReliablePassthrough</a></li>
+  <li><a href="../modules/system.network.Server.html">system.network.Server</a></li>
+  <li><a href="../modules/system.utils.Array.html">system.utils.Array</a></li>
+  <li><a href="../modules/system.utils.BasicOps.html">system.utils.BasicOps</a></li>
+  <li><a href="../modules/system.utils.BitUtilities.html">system.utils.BitUtilities</a></li>
+  <li><a href="../modules/system.utils.CircularBuffer.html">system.utils.CircularBuffer</a></li>
+  <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
+  <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
+  <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
+  <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
+  <li><a href="../modules/system.utils.Proxy.html">system.utils.Proxy</a></li>
+  <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
+  <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
+  <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
+  <li><a href="../modules/system.utils.Timer.html">system.utils.Timer</a></li>
+  <li><a href="../modules/system.utils.Try.html">system.utils.Try</a></li>
+  <li><a href="../modules/system.utils.Utilities.html">system.utils.Utilities</a></li>
+  <li><a href="../modules/system.utils.serial.Base64.html">system.utils.serial.Base64</a></li>
+  <li><a href="../modules/system.utils.serial.LJBuffer.html">system.utils.serial.LJBuffer</a></li>
+  <li><a href="../modules/system.utils.serial.LTN.html">system.utils.serial.LTN</a></li>
+  <li><a href="../modules/system.utils.serial.MessagePack.html">system.utils.serial.MessagePack</a></li>
+  <li><a href="../modules/system.utils.serial.Serialization.html">system.utils.serial.Serialization</a></li>
+  <li><a href="../modules/system.utils.serial.TypeSerialization.html">system.utils.serial.TypeSerialization</a></li>
+  <li><a href="../modules/system.utils.serial.ZStandard.html">system.utils.serial.ZStandard</a></li>
+  <li><a href="../modules/system.utils.serial.Zlib.html">system.utils.serial.Zlib</a></li>
+</ul>
+<h2>Components</h2>
+<ul class="nowrap">
+  <li><a href="../components/AudioFilterComponents.html">AudioFilterComponents</a></li>
+  <li><a href="../components/AudioLoopComponents.html">AudioLoopComponents</a></li>
+  <li><a href="../components/MusicComponents.html">MusicComponents</a></li>
+  <li><a href="../components/RhythmComponents.html">RhythmComponents</a></li>
+  <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
+  <li><a href="../components/VoiceComponents.html">VoiceComponents</a></li>
+  <li><a href="../components/AIComponents.html">AIComponents</a></li>
+  <li><a href="../components/ActivationComponents.html">ActivationComponents</a></li>
+  <li><a href="../components/ApparitionComponents.html">ApparitionComponents</a></li>
+  <li><a href="../components/AttackComponents.html">AttackComponents</a></li>
+  <li><a href="../components/AutoCastComponents.html">AutoCastComponents</a></li>
+  <li><a href="../components/BeatDelayComponents.html">BeatDelayComponents</a></li>
+  <li><a href="../components/BossComponents.html">BossComponents</a></li>
+  <li><a href="../components/CharacterComponents.html">CharacterComponents</a></li>
+  <li><a href="../components/ChargeComponents.html">ChargeComponents</a></li>
+  <li><a href="../components/ConfusionComponents.html">ConfusionComponents</a></li>
+  <li><a href="../components/FacingComponents.html">FacingComponents</a></li>
+  <li><a href="../components/FollowerComponents.html">FollowerComponents</a></li>
+  <li><a href="../components/FreezeComponents.html">FreezeComponents</a></li>
+  <li><a href="../components/GrabComponents.html">GrabComponents</a></li>
+  <li><a href="../components/GrooveChainComponents.html">GrooveChainComponents</a></li>
+  <li><a href="../components/HealthComponents.html">HealthComponents</a></li>
+  <li><a href="../components/ParryComponents.html">ParryComponents</a></li>
+  <li><a href="../components/PerspectiveComponents.html">PerspectiveComponents</a></li>
+  <li><a href="../components/ProvokableComponents.html">ProvokableComponents</a></li>
+  <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
+  <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
+  <li><a href="../components/SpawnComponents.html">SpawnComponents</a></li>
+  <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
+  <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
+  <li><a href="../components/StealthComponents.html">StealthComponents</a></li>
+  <li><a href="../components/TargetingComponents.html">TargetingComponents</a></li>
+  <li><a href="../components/TickleComponents.html">TickleComponents</a></li>
+  <li><a href="../components/AttachmentComponents.html">AttachmentComponents</a></li>
+  <li><a href="../components/CollisionComponents.html">CollisionComponents</a></li>
+  <li><a href="../components/CoreComponents.html">CoreComponents</a></li>
+  <li><a href="../components/DescentComponents.html">DescentComponents</a></li>
+  <li><a href="../components/ExtraModeComponents.html">ExtraModeComponents</a></li>
+  <li><a href="../components/PositionComponents.html">PositionComponents</a></li>
+  <li><a href="../components/RunStateComponents.html">RunStateComponents</a></li>
+  <li><a href="../components/TileInteractionComponents.html">TileInteractionComponents</a></li>
+  <li><a href="../components/XMLMappingComponents.html">XMLMappingComponents</a></li>
+  <li><a href="../components/AnimationComponents.html">AnimationComponents</a></li>
+  <li><a href="../components/CharacterSpriteComponents.html">CharacterSpriteComponents</a></li>
+  <li><a href="../components/EquipmentSpriteComponents.html">EquipmentSpriteComponents</a></li>
+  <li><a href="../components/LegacySwipeComponents.html">LegacySwipeComponents</a></li>
+  <li><a href="../components/MinimapComponents.html">MinimapComponents</a></li>
+  <li><a href="../components/ParticleComponents.html">ParticleComponents</a></li>
+  <li><a href="../components/SpriteComponents.html">SpriteComponents</a></li>
+  <li><a href="../components/SpriteEffectComponents.html">SpriteEffectComponents</a></li>
+  <li><a href="../components/SwipeComponents.html">SwipeComponents</a></li>
+  <li><a href="../components/TextLabelComponents.html">TextLabelComponents</a></li>
+  <li><a href="../components/TweenComponents.html">TweenComponents</a></li>
+  <li><a href="../components/AffectorItemComponents.html">AffectorItemComponents</a></li>
+  <li><a href="../components/ConsumableComponents.html">ConsumableComponents</a></li>
+  <li><a href="../components/CurrencyComponents.html">CurrencyComponents</a></li>
+  <li><a href="../components/DefensiveItemComponents.html">DefensiveItemComponents</a></li>
+  <li><a href="../components/DigItemComponents.html">DigItemComponents</a></li>
+  <li><a href="../components/HealthItemComponents.html">HealthItemComponents</a></li>
+  <li><a href="../components/ItemBanComponents.html">ItemBanComponents</a></li>
+  <li><a href="../components/ItemComponents.html">ItemComponents</a></li>
+  <li><a href="../components/ItemConversionComponents.html">ItemConversionComponents</a></li>
+  <li><a href="../components/MovementItemComponents.html">MovementItemComponents</a></li>
+  <li><a href="../components/OffensiveItemComponents.html">OffensiveItemComponents</a></li>
+  <li><a href="../components/PerspectiveItemComponents.html">PerspectiveItemComponents</a></li>
+  <li><a href="../components/PriceTagComponents.html">PriceTagComponents</a></li>
+  <li><a href="../components/ProtectiveItemComponents.html">ProtectiveItemComponents</a></li>
+  <li><a href="../components/RhythmItemComponents.html">RhythmItemComponents</a></li>
+  <li><a href="../components/SpellItemComponents.html">SpellItemComponents</a></li>
+  <li><a href="../components/WeaponComponents.html">WeaponComponents</a></li>
+  <li><a href="../components/DigComponents.html">DigComponents</a></li>
+  <li><a href="../components/InteractableComponents.html">InteractableComponents</a></li>
+  <li><a href="../components/LevelGenerationComponents.html">LevelGenerationComponents</a></li>
+  <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
+  <li><a href="../components/TrapComponents.html">TrapComponents</a></li>
+  <li><a href="../components/CastComponents.html">CastComponents</a></li>
+  <li><a href="../components/SpellCheckComponents.html">SpellCheckComponents</a></li>
+  <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
+  <li><a href="../components/LightComponents.html">LightComponents</a></li>
+  <li><a href="../components/VisibilityComponents.html">VisibilityComponents</a></li>
+  <li><a href="../components/VisionComponents.html">VisionComponents</a></li>
+  <li><a href="../components/CommonEnemy.html">CommonEnemy</a></li>
+  <li><a href="../components/CustomWeapons.html">CustomWeapons</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>necro.client.Cutscene</code></h1>
+<p>
+
+</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#fadeOut">fadeOut ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#finish">finish ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getFadeFactor">getFadeFactor ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getLevelEnterCutscenes">getLevelEnterCutscenes (characters, depthNumber, floorNumber, bossID)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getLevelLeaveCutscenes">getLevelLeaveCutscenes ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getPlaybackTime">getPlaybackTime ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getStartupCutscenes">getStartupCutscenes ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isActive">isActive ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isFinished">isFinished ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isPending">isPending ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isPlaying">isPlaying ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#play">play (scene, delay)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#playAll">playAll (scenes, delay)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#skip">skip (abort)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#DisplayMode">DisplayMode</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Type">Type</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "fadeOut"></a>
+    <strong>fadeOut ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "finish"></a>
+    <strong>finish ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getFadeFactor"></a>
+    <strong>getFadeFactor ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getLevelEnterCutscenes"></a>
+    <strong>getLevelEnterCutscenes (characters, depthNumber, floorNumber, bossID)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">characters</span>
+
+
+
+        </li>
+        <li><span class="parameter">depthNumber</span>
+
+
+
+        </li>
+        <li><span class="parameter">floorNumber</span>
+
+
+
+        </li>
+        <li><span class="parameter">bossID</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getLevelLeaveCutscenes"></a>
+    <strong>getLevelLeaveCutscenes ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getPlaybackTime"></a>
+    <strong>getPlaybackTime ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getStartupCutscenes"></a>
+    <strong>getStartupCutscenes ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isActive"></a>
+    <strong>isActive ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isFinished"></a>
+    <strong>isFinished ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isPending"></a>
+    <strong>isPending ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isPlaying"></a>
+    <strong>isPlaying ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "play"></a>
+    <strong>play (scene, delay)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">scene</span>
+
+
+
+        </li>
+        <li><span class="parameter">delay</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "playAll"></a>
+    <strong>playAll (scenes, delay)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">scenes</span>
+
+
+
+        </li>
+        <li><span class="parameter">delay</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "skip"></a>
+    <strong>skip (abort)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">abort</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "DisplayMode"></a>
+    <strong>DisplayMode</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">NEVER</span>
+         <code>1</code>
+        </li>
+        <li><span class="parameter">SINGLE_PLAYER</span>
+         <code>2</code>
+        </li>
+        <li><span class="parameter">ALWAYS</span>
+         <code>3</code>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Type"></a>
+    <strong>Type</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">SPLASH</span>
+         <code>0</code>
+        </li>
+        <li><span class="parameter">INTRO</span>
+         <code>1</code>
+        </li>
+        <li><span class="parameter">STORY</span>
+         <code>2</code>
+        </li>
+        <li><span class="parameter">CREDITS</span>
+         <code>3</code>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

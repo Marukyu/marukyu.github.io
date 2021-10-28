@@ -53,6 +53,7 @@
   <li><a href="../modules/necro.client.Chat.html">necro.client.Chat</a></li>
   <li><a href="../modules/necro.client.ClientActionBuffer.html">necro.client.ClientActionBuffer</a></li>
   <li><a href="../modules/necro.client.ClientEvents.html">necro.client.ClientEvents</a></li>
+  <li><a href="../modules/necro.client.Cutscene.html">necro.client.Cutscene</a></li>
   <li><a href="../modules/necro.client.FastForward.html">necro.client.FastForward</a></li>
   <li><a href="../modules/necro.client.GameClient.html">necro.client.GameClient</a></li>
   <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
@@ -146,6 +147,7 @@
   <li><a href="../modules/necro.game.data.migration.Migration.html">necro.game.data.migration.Migration</a></li>
   <li><a href="../modules/necro.game.data.object.CommonShrine.html">necro.game.data.object.CommonShrine</a></li>
   <li><a href="../modules/necro.game.data.player.PlayableCharacters.html">necro.game.data.player.PlayableCharacters</a></li>
+  <li><a href="../modules/necro.game.data.resource.CutsceneDefinitions.html">necro.game.data.resource.CutsceneDefinitions</a></li>
   <li><a href="../modules/necro.game.data.spell.CommonSpell.html">necro.game.data.spell.CommonSpell</a></li>
   <li><a href="../modules/necro.game.data.tile.MinimapTheme.html">necro.game.data.tile.MinimapTheme</a></li>
   <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
@@ -307,6 +309,7 @@
   <li><a href="../modules/system.gfx.GFX.html">system.gfx.GFX</a></li>
   <li><a href="../modules/system.gfx.TransformationMatrix.html">system.gfx.TransformationMatrix</a></li>
   <li><a href="../modules/system.gfx.VertexBuffer.html">system.gfx.VertexBuffer</a></li>
+  <li><a href="../modules/system.gfx.VideoPlayer.html">system.gfx.VideoPlayer</a></li>
   <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
   <li><a href="../modules/system.mod.AssetSubstitutor.html">system.mod.AssetSubstitutor</a></li>
   <li><a href="../modules/system.mod.ModLoader.html">system.mod.ModLoader</a></li>
@@ -327,6 +330,7 @@
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
   <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
   <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
+  <li><a href="../modules/system.utils.Proxy.html">system.utils.Proxy</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
@@ -819,6 +823,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>clearSynchronizerCache</code></li>
+    <li><code>cutsceneStatus</code></li>
     <li><code>updateAnimationTimeScale</code></li>
     <li><code>updateSpectatorHUD</code></li>
 </ul>
@@ -878,6 +883,59 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadSoundXML</code></li>
     <li><code>entitySchema</code></li>
     <li><code>loadTileTypes</code></li>
+</ul>
+
+
+<p><a name="cutsceneBegin"></a></p>
+<h2>cutsceneBegin</h2>
+
+<ul>
+    <li><code>stopPreviousCutscene</code></li>
+    <li><code>selectCutsceneFiles</code></li>
+    <li><code>loadCutsceneAudio</code></li>
+    <li><code>loadCutsceneVideo</code></li>
+    <li><code>updateCutsceneStatus</code></li>
+    <li><code>updateCutsceneDuration</code></li>
+</ul>
+
+
+<p><a name="cutsceneEnd"></a></p>
+<h2>cutsceneEnd</h2>
+
+<ul>
+    <li><code>updateCutsceneStatus</code></li>
+    <li><code>unloadCutsceneAudio</code></li>
+    <li><code>unloadCutsceneVideo</code></li>
+</ul>
+
+
+<p><a name="cutsceneGameStartup"></a></p>
+<h2>cutsceneGameStartup</h2>
+
+<ul>
+    <li><code>addWarnings</code></li>
+    <li><code>addLogos</code></li>
+    <li><code>addIntroVideo</code></li>
+    <li><code>addTitleScreen</code></li>
+</ul>
+
+
+<p><a name="cutsceneLevelEnter"></a></p>
+<h2>cutsceneLevelEnter</h2>
+
+<ul>
+    <li><code>addCutsceneOnRunStart</code></li>
+    <li><code>addBossIntroCutscene</code></li>
+</ul>
+
+
+<p><a name="cutsceneLevelLeave"></a></p>
+<h2>cutsceneLevelLeave</h2>
+
+<ul>
+    <li><code>addCutsceneOnDepthExit</code></li>
+    <li><code>addBossOutroCutscene</code></li>
+    <li><code>addCreditsOnRunFinish</code></li>
 </ul>
 
 
@@ -1560,6 +1618,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initializeSynchronizer</code></li>
     <li><code>resetTurnID</code></li>
     <li><code>stopMusic</code></li>
+    <li><code>resetCutscenePlaybackState</code></li>
     <li><code>skipLevelExit</code></li>
     <li><code>saveAmbushers</code></li>
     <li><code>clearObjects</code></li>
@@ -1647,9 +1706,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>gameStateMainMenu</h2>
 
 <ul>
-    <li><code>openMainMenu</code></li>
     <li><code>closeInGameLobby</code></li>
     <li><code>resetLobbyLevelState</code></li>
+    <li><code>openMainMenu</code></li>
     <li><code>playMainMenuMusic</code></li>
     <li><code>closeNetworking</code></li>
 </ul>
@@ -2555,6 +2614,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>levelComplete</h2>
 
 <ul>
+    <li><code>playCutscene</code></li>
     <li><code>processPendingDelays</code></li>
     <li><code>finalizeSpeedrunTimer</code></li>
     <li><code>deathless</code></li>
@@ -4326,6 +4386,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderGame</code></li>
     <li><code>winScreen</code></li>
     <li><code>renderLobby</code></li>
+    <li><code>renderCutscene</code></li>
     <li><code>renderMenu</code></li>
     <li><code>renderLatencyCalibrationBeatBars</code></li>
     <li><code>renderMenuOverlay</code></li>
@@ -4878,7 +4939,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadMods</code></li>
     <li><code>loadGameContent</code></li>
     <li><code>initHUDElements</code></li>
-    <li><code>initGameState</code></li>
     <li><code>initCollisionMap</code></li>
     <li><code>startServer</code></li>
 </ul>
@@ -4971,6 +5031,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkSongEnd</code></li>
     <li><code>updateMultiKeyCombos</code></li>
     <li><code>updateInputControls</code></li>
+    <li><code>updateCutscene</code></li>
+    <li><code>updateCutsceneAudioVolume</code></li>
     <li><code>dismissBossSplash</code></li>
     <li><code>customHotkey_PLAYER_LIST</code></li>
     <li><code>playerInput</code></li>

@@ -53,6 +53,7 @@
   <li><a href="../modules/necro.client.Chat.html">necro.client.Chat</a></li>
   <li><a href="../modules/necro.client.ClientActionBuffer.html">necro.client.ClientActionBuffer</a></li>
   <li><a href="../modules/necro.client.ClientEvents.html">necro.client.ClientEvents</a></li>
+  <li><a href="../modules/necro.client.Cutscene.html">necro.client.Cutscene</a></li>
   <li><a href="../modules/necro.client.FastForward.html">necro.client.FastForward</a></li>
   <li><a href="../modules/necro.client.GameClient.html">necro.client.GameClient</a></li>
   <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
@@ -146,6 +147,7 @@
   <li><a href="../modules/necro.game.data.migration.Migration.html">necro.game.data.migration.Migration</a></li>
   <li><a href="../modules/necro.game.data.object.CommonShrine.html">necro.game.data.object.CommonShrine</a></li>
   <li><a href="../modules/necro.game.data.player.PlayableCharacters.html">necro.game.data.player.PlayableCharacters</a></li>
+  <li><a href="../modules/necro.game.data.resource.CutsceneDefinitions.html">necro.game.data.resource.CutsceneDefinitions</a></li>
   <li><a href="../modules/necro.game.data.spell.CommonSpell.html">necro.game.data.spell.CommonSpell</a></li>
   <li><a href="../modules/necro.game.data.tile.MinimapTheme.html">necro.game.data.tile.MinimapTheme</a></li>
   <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
@@ -307,6 +309,7 @@
   <li><a href="../modules/system.gfx.GFX.html">system.gfx.GFX</a></li>
   <li><a href="../modules/system.gfx.TransformationMatrix.html">system.gfx.TransformationMatrix</a></li>
   <li><a href="../modules/system.gfx.VertexBuffer.html">system.gfx.VertexBuffer</a></li>
+  <li><a href="../modules/system.gfx.VideoPlayer.html">system.gfx.VideoPlayer</a></li>
   <li><a href="../modules/system.mod.AssetReloader.html">system.mod.AssetReloader</a></li>
   <li><a href="../modules/system.mod.AssetSubstitutor.html">system.mod.AssetSubstitutor</a></li>
   <li><a href="../modules/system.mod.ModLoader.html">system.mod.ModLoader</a></li>
@@ -327,6 +330,7 @@
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
   <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
   <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
+  <li><a href="../modules/system.utils.Proxy.html">system.utils.Proxy</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
@@ -776,6 +780,59 @@
 </ul>
 
 
+<p><a name="cutsceneBegin"></a></p>
+<h2>cutsceneBegin</h2>
+
+<ul>
+    <li><code>reset</code></li>
+    <li><code>files</code></li>
+    <li><code>audio</code></li>
+    <li><code>video</code></li>
+    <li><code>cutscene</code></li>
+    <li><code>duration</code></li>
+</ul>
+
+
+<p><a name="cutsceneEnd"></a></p>
+<h2>cutsceneEnd</h2>
+
+<ul>
+    <li><code>cutscene</code></li>
+    <li><code>audio</code></li>
+    <li><code>video</code></li>
+</ul>
+
+
+<p><a name="cutsceneGameStartup"></a></p>
+<h2>cutsceneGameStartup</h2>
+
+<ul>
+    <li><code>warnings</code></li>
+    <li><code>logos</code></li>
+    <li><code>introVideo</code></li>
+    <li><code>titleScreen</code></li>
+</ul>
+
+
+<p><a name="cutsceneLevelEnter"></a></p>
+<h2>cutsceneLevelEnter</h2>
+
+<ul>
+    <li><code>runStart</code></li>
+    <li><code>bossIntro</code></li>
+</ul>
+
+
+<p><a name="cutsceneLevelLeave"></a></p>
+<h2>cutsceneLevelLeave</h2>
+
+<ul>
+    <li><code>depthExit</code></li>
+    <li><code>bossOutro</code></li>
+    <li><code>credits</code></li>
+</ul>
+
+
 <p><a name="cycle"></a></p>
 <h2>cycle</h2>
 
@@ -1125,6 +1182,7 @@
     <li><code>levelTransition</code></li>
     <li><code>turnID</code></li>
     <li><code>stopMusic</code></li>
+    <li><code>cutscene</code></li>
     <li><code>skipLevelExit</code></li>
     <li><code>saveAmbushers</code></li>
     <li><code>objects</code></li>
@@ -1199,9 +1257,9 @@
 <h2>gameStateMainMenu</h2>
 
 <ul>
-    <li><code>menu</code></li>
     <li><code>lobby</code></li>
     <li><code>lobbyLevel</code></li>
+    <li><code>menu</code></li>
     <li><code>music</code></li>
     <li><code>disconnect</code></li>
 </ul>
@@ -2821,6 +2879,7 @@
 <h2>levelComplete</h2>
 
 <ul>
+    <li><code>cutscene</code></li>
     <li><code>pendingDelays</code></li>
     <li><code>speedrunTimer</code></li>
     <li><code>deathless</code></li>
@@ -4548,6 +4607,7 @@
     <li><code>renderGame</code></li>
     <li><code>winScreen</code></li>
     <li><code>lobby</code></li>
+    <li><code>cutscene</code></li>
     <li><code>menu</code></li>
     <li><code>menuOverlay</code></li>
     <li><code>lowPercent</code></li>
@@ -5067,6 +5127,7 @@
     <li><code>songEnd</code></li>
     <li><code>multiKeyCombo</code></li>
     <li><code>inputControls</code></li>
+    <li><code>cutscene</code></li>
     <li><code>bossSplash</code></li>
     <li><code>customHotkeys</code></li>
     <li><code>input</code></li>
