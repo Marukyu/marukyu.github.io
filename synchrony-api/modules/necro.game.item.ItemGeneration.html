@@ -463,8 +463,15 @@
  * levelBonus (int): generate items from higher tiers
  * chanceFunction (function entity => int): sets item weights (when set, chanceType and levelBonus are ignored)
  * seenItems (table): acts as a counter for tracking item generation to prevent duplicates, defaults to global counter
+ * depletionLimit (int): items seen that many time will not be generated, defaults to 8
  * transmutedItem (entity): the item being transmuted, if any
  * default (string): if no items match the requirements, this is returned instead</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getSeenCount">getSeenCount (item)</a></td>
+	<td class="summary">
+
+</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#markSeen">markSeen (item, count, seenItems)</a></td>
@@ -527,6 +534,7 @@
  * levelBonus (int): generate items from higher tiers
  * chanceFunction (function entity => int): sets item weights (when set, chanceType and levelBonus are ignored)
  * seenItems (table): acts as a counter for tracking item generation to prevent duplicates, defaults to global counter
+ * depletionLimit (int): items seen that many time will not be generated, defaults to 8
  * transmutedItem (entity): the item being transmuted, if any
  * default (string): if no items match the requirements, this is returned instead
 
@@ -534,6 +542,30 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">args</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getSeenCount"></a>
+    <strong>getSeenCount (item)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
 
 
 
@@ -762,6 +794,9 @@
         </li>
         <li><span class="parameter">ENCHANT</span>
          <code>&quot;itemPoolEnchant&quot;</code>
+        </li>
+        <li><span class="parameter">NEED</span>
+         <code>&quot;itemPoolNeed&quot;</code>
         </li>
     </ul>
 

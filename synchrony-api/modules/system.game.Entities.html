@@ -508,7 +508,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#getEntityTypeName">getEntityTypeName (entity)</a></td>
-	<td class="summary">Deprecated.</td>
+	<td class="summary">Accepts an entity or type name, returns a type name (like entity.name, but also safe on strings)</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#getEntityTypesWithComponents">getEntityTypesWithComponents (componentList)</a></td>
@@ -848,13 +848,13 @@
     <strong>getEntityTypeName (entity)</strong>
     </dt>
     <dd>
-    Deprecated.  Use <code>entity.name</code> to get an entity's type name.
+    Accepts an entity or type name, returns a type name (like entity.name, but also safe on strings)
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">entity</span>
-         Entity
+         Entity|string
         </li>
     </ul>
 
