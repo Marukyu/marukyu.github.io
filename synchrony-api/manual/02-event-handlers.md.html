@@ -87,6 +87,7 @@
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.cycles.Frame.html">necro.cycles.Frame</a></li>
   <li><a href="../modules/necro.cycles.RenderGame.html">necro.cycles.RenderGame</a></li>
+  <li><a href="../modules/necro.cycles.RenderPartial.html">necro.cycles.RenderPartial</a></li>
   <li><a href="../modules/necro.cycles.RenderUI.html">necro.cycles.RenderUI</a></li>
   <li><a href="../modules/necro.cycles.Startup.html">necro.cycles.Startup</a></li>
   <li><a href="../modules/necro.cycles.Tick.html">necro.cycles.Tick</a></li>
@@ -1569,6 +1570,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>convertObjects</code></li>
     <li><code>checkDescentTiles</code></li>
     <li><code>ozuma</code></li>
+    <li><code>renderPartialFrame</code></li>
 </ul>
 
 
@@ -3204,7 +3206,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>inhibitOnFacingChange</code></li>
     <li><code>handleClonking</code></li>
     <li><code>setFacingOnFlee</code></li>
-    <li><code>visualFacingDirection</code></li>
     <li><code>applyConfusion</code></li>
     <li><code>attackGrabber</code></li>
     <li><code>stasisUntilProvoked</code></li>
@@ -3217,7 +3218,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>moveGrabbed</code></li>
     <li><code>moveObject</code></li>
     <li><code>performInteraction</code></li>
-    <li><code>gameplayFacingDirection</code></li>
     <li><code>setFacing</code></li>
     <li><code>parryCooldown</code></li>
     <li><code>shakeScreenOnAttack</code></li>
@@ -3458,6 +3458,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>setMoveTween</code></li>
+    <li><code>setFacingOnMove</code></li>
     <li><code>particleMoleDirt</code></li>
     <li><code>updatePosition</code></li>
     <li><code>updatePreviousPosition</code></li>
@@ -3470,8 +3471,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>moveMultiTileCollision</code></li>
     <li><code>moveFollowers</code></li>
     <li><code>readTileInfo</code></li>
-    <li><code>attackOnPartialMove</code></li>
-    <li><code>digOnPartialMove</code></li>
     <li><code>moveGrabber</code></li>
     <li><code>moveLightSource</code></li>
     <li><code>updateRadialVision</code></li>
@@ -3489,6 +3488,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>redirectCharge</code></li>
     <li><code>castOnCollision</code></li>
     <li><code>castOnMove</code></li>
+    <li><code>attackOnPartialMove</code></li>
+    <li><code>digOnPartialMove</code></li>
     <li><code>handleFocusTeleport</code></li>
     <li><code>gigantismWalkSound</code></li>
     <li><code>parityWalkSound</code></li>
@@ -4349,6 +4350,18 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="renderPartial"></a></p>
+<h2>renderPartial</h2>
+
+<ul>
+    <li><code>adjustCamera</code></li>
+    <li><code>renderBeatIndicators</code></li>
+    <li><code>updateVertexBufferTransforms</code></li>
+    <li><code>display</code></li>
+    <li><code>updateRenderTargetTime</code></li>
+</ul>
+
+
 <p><a name="renderPlayerHUD"></a></p>
 <h2>renderPlayerHUD</h2>
 
@@ -5011,6 +5024,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>updateSettings</code></li>
+    <li><code>updateFrameRenderTime</code></li>
     <li><code>reloadGameContent</code></li>
     <li><code>debugDocs</code></li>
     <li><code>debugKeys</code></li>
