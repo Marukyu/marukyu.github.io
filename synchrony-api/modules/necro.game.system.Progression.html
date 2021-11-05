@@ -193,7 +193,7 @@
   <li><a href="../modules/necro.game.system.Move.html">necro.game.system.Move</a></li>
   <li><a href="../modules/necro.game.system.Particle.html">necro.game.system.Particle</a></li>
   <li><a href="../modules/necro.game.system.Perspective.html">necro.game.system.Perspective</a></li>
-  <li><a href="../modules/necro.game.system.Progression.html">necro.game.system.Progression</a></li>
+  <li><strong>necro.game.system.Progression</strong></li>
   <li><a href="../modules/necro.game.system.RNG.html">necro.game.system.RNG</a></li>
   <li><a href="../modules/necro.game.system.RunState.html">necro.game.system.RunState</a></li>
   <li><a href="../modules/necro.game.system.Shield.html">necro.game.system.Shield</a></li>
@@ -331,7 +331,7 @@
   <li><a href="../modules/system.utils.CircularBuffer.html">system.utils.CircularBuffer</a></li>
   <li><a href="../modules/system.utils.Color.html">system.utils.Color</a></li>
   <li><a href="../modules/system.utils.DynamicGlobal.html">system.utils.DynamicGlobal</a></li>
-  <li><strong>system.utils.Enum</strong></li>
+  <li><a href="../modules/system.utils.Enum.html">system.utils.Enum</a></li>
   <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
   <li><a href="../modules/system.utils.Proxy.html">system.utils.Proxy</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
@@ -440,7 +440,7 @@
 
 <div id="content">
 
-<h1>Module <code>system.utils.Enum</code></h1>
+<h1>Module <code>necro.game.system.Progression</code></h1>
 <p>
 
 </p>
@@ -449,70 +449,25 @@
 </p>
 
 
-<h2><a href="#Classes">Classes</a></h2>
-<table class="function_list">
-	<tr>
-	<td class="name" nowrap><a href="#Enumeration">Enumeration</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#EnumerationBitmask:">EnumerationBitmask:</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-</table>
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#bitmask">bitmask (tbl)</a></td>
-	<td class="summary">Creates a bitmask enumeration from the specified table.</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#data">data (data)</a></td>
+	<td class="name" nowrap><a href="#isLocked">isLocked (name)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#entry">entry (value)</a></td>
+	<td class="name" nowrap><a href="#isUnlocked">isUnlocked (name)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#immutable">immutable (tbl)</a></td>
+	<td class="name" nowrap><a href="#unlock">unlock (name)</a></td>
 	<td class="summary">
 
 </td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#literal">literal (value)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#negativeSequence">negativeSequence (tbl)</a></td>
-	<td class="summary">Creates a negative sequential enumeration.</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#positiveSequence">positiveSequence (tbl)</a></td>
-	<td class="summary">Creates a positive sequential enumeration.</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#protocol">protocol (tbl)</a></td>
-	<td class="summary">Creates a protocol enumeration.</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#sequence">sequence (tbl)</a></td>
-	<td class="summary">Creates a sequential enumeration.</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#string">string (tbl)</a></td>
-	<td class="summary">Creates a string enumeration from the specified table.</td>
 	</tr>
 </table>
 
@@ -520,119 +475,36 @@
 <br/>
 
 
-    <h2 class="section-header "><a name="Classes"></a>Classes</h2>
-
-    <dl class="function">
-    <dt>
-    <a name = "Enumeration"></a>
-    <strong>Enumeration</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <ul>
-        <li><span class="parameter">extend</span>
-         fun(key:string,value:integer|nil):integer
-        </li>
-        <li><span class="parameter">data</span>
-         table<integer,table>
-        </li>
-        <li><span class="parameter">names</span>
-         table<integer,string>
-        </li>
-        <li><span class="parameter">keyList</span>
-         string[]
-        </li>
-        <li><span class="parameter">valueList</span>
-         integer[]
-        </li>
-        <li><span class="parameter">indices</span>
-         table<integer,integer>
-        </li>
-        <li><span class="parameter">builtInMin</span>
-         integer
-        </li>
-        <li><span class="parameter">builtInMax</span>
-         integer
-        </li>
-        <li><span class="parameter">prettyNames</span>
-         table<integer,string>
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "EnumerationBitmask:"></a>
-    <strong>EnumerationBitmask:</strong>
-    </dt>
-    <dd>
-     Enumeration
-
-
-    <ul>
-        <li><span class="parameter">mask</span>
-         fun(v1:integer, v2:integer, ...):integer
-        </li>
-        <li><span class="parameter">unmask</span>
-         fun(v1:integer, v2:integer):integer
-        </li>
-        <li><span class="parameter">check</span>
-         fun(v1:integer, v2:integer):boolean
-        </li>
-        <li><span class="parameter">checkAll</span>
-         fun(v1:integer, v2:integer):boolean
-        </li>
-        <li><span class="parameter">inspect</span>
-         fun(v:integer):string
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-</dl>
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
 
     <dl class="function">
     <dt>
-    <a name = "bitmask"></a>
-    <strong>bitmask (tbl)</strong>
+    <a name = "isLocked"></a>
+    <strong>isLocked (name)</strong>
     </dt>
     <dd>
-    Creates a bitmask enumeration from the specified table.  Entries should be numbered consecutively, starting from
- 0 for a "NONE" value, or from 1 for the first bit value. Values are automatically converted to powers of 2.
- Up to 32 non-zero entries are supported.
+
+
+
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">tbl</span>
-         E
+        <li><span class="parameter">name</span>
+
+
+
         </li>
     </ul>
 
-    <h3>Returns:</h3>
-    <ol>
-
-        E|EnumerationBitmask
-    </ol>
 
 
 
 
 </dd>
     <dt>
-    <a name = "data"></a>
-    <strong>data (data)</strong>
+    <a name = "isUnlocked"></a>
+    <strong>isUnlocked (name)</strong>
     </dt>
     <dd>
 
@@ -642,26 +514,21 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">data</span>
+        <li><span class="parameter">name</span>
 
 
 
         </li>
     </ul>
 
-    <h3>Returns:</h3>
-    <ol>
-
-        number
-    </ol>
 
 
 
 
 </dd>
     <dt>
-    <a name = "entry"></a>
-    <strong>entry (value)</strong>
+    <a name = "unlock"></a>
+    <strong>unlock (name)</strong>
     </dt>
     <dd>
 
@@ -671,196 +538,13 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">value</span>
-         V
+        <li><span class="parameter">name</span>
+
+
+
         </li>
     </ul>
 
-    <h3>Returns:</h3>
-    <ol>
-
-        V
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "immutable"></a>
-    <strong>immutable (tbl)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">tbl</span>
-         E
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        E
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "literal"></a>
-    <strong>literal (value)</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">value</span>
-         V
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        V
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "negativeSequence"></a>
-    <strong>negativeSequence (tbl)</strong>
-    </dt>
-    <dd>
-    Creates a negative sequential enumeration.  Entries can be assigned negative integer values only.
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">tbl</span>
-         E
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        E|Enumeration
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "positiveSequence"></a>
-    <strong>positiveSequence (tbl)</strong>
-    </dt>
-    <dd>
-    Creates a positive sequential enumeration.  Entries can be assigned positive integer values only.
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">tbl</span>
-         E
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        E|Enumeration
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "protocol"></a>
-    <strong>protocol (tbl)</strong>
-    </dt>
-    <dd>
-    Creates a protocol enumeration.  Built-in entries are assigned numeric values, while extended entries use the string
- key as their value.
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">tbl</span>
-         E
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        E|Enumeration
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "sequence"></a>
-    <strong>sequence (tbl)</strong>
-    </dt>
-    <dd>
-    Creates a sequential enumeration.  Entries can be assigned arbitrary integer values.
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">tbl</span>
-         E
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        E|Enumeration
-    </ol>
-
-
-
-
-</dd>
-    <dt>
-    <a name = "string"></a>
-    <strong>string (tbl)</strong>
-    </dt>
-    <dd>
-    Creates a string enumeration from the specified table.  The string keys are simply used as values directly.
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">tbl</span>
-         E
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        E|Enumeration
-    </ol>
 
 
 
