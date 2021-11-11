@@ -105,6 +105,7 @@
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
+  <li><a href="../modules/necro.event.ModEvent.html">necro.event.ModEvent</a></li>
   <li><a href="../modules/necro.game.character.Ambush.html">necro.game.character.Ambush</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
@@ -277,7 +278,7 @@
   <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
   <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
-  <li><a href="../modules/necro.server.ServerSnapshotRequest.html">necro.server.ServerSnapshotRequest</a></li>
+  <li><a href="../modules/necro.server.ServerSnapshot.html">necro.server.ServerSnapshot</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
@@ -2389,7 +2390,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>attachItemToSlot</code></li>
     <li><code>fireCollectEvent</code></li>
     <li><code>fireEquipEvent</code></li>
-    <li><code>updateHoldableRadialLightSource</code></li>
     <li><code>useHUDSprite</code></li>
 </ul>
 
@@ -2428,7 +2428,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>detachItem</code></li>
     <li><code>detachItemFromSlot</code></li>
     <li><code>fireUnequipEvent</code></li>
-    <li><code>updateHoldableRadialLightSource</code></li>
 </ul>
 
 
@@ -2668,6 +2667,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>disableDespawnedRadialLight</code></li>
     <li><code>darkness</code></li>
     <li><code>addNewRadialLight</code></li>
+    <li><code>shadow</code></li>
 </ul>
 
 
@@ -2688,6 +2688,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>illuminate</code></li>
+    <li><code>trainingRooms</code></li>
     <li><code>lockDoors</code></li>
     <li><code>lockStairs</code></li>
     <li><code>shops</code></li>
@@ -2798,6 +2799,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>modUnloaded</h2>
 
 <ul>
+    <li><code>unloadModResource</code></li>
     <li><code>removeModScriptPath</code></li>
     <li><code>unregisterVirtualSettingsGroup</code></li>
     <li><code>invalidateCachedImages</code></li>
@@ -3588,6 +3590,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetMinimapStaticPixelColor</code></li>
     <li><code>resetPositionalSpriteOffsetX</code></li>
     <li><code>resetPositionalSpriteOffsetY</code></li>
+    <li><code>resetPriorityValue</code></li>
     <li><code>resetRowOrderZ</code></li>
     <li><code>resetSpellCooldownKillsRemainingKills</code></li>
     <li><code>resetSpellCooldownTimeRemainingTurns</code></li>
@@ -3598,6 +3601,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetSpriteSheetFrameY</code></li>
     <li><code>resetSpriteTexture</code></li>
     <li><code>resetSpriteWidth</code></li>
+    <li><code>resetTrapImmunity</code></li>
     <li><code>resetWeaponReloadableAmmo</code></li>
     <li><code>updateCollision</code></li>
     <li><code>updatePerspective</code></li>
@@ -3621,6 +3625,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>detachItemBeforeConverting</code></li>
     <li><code>despawnAttachment</code></li>
     <li><code>soundPreConvert</code></li>
+    <li><code>ungrowPreConvert</code></li>
+    <li><code>unshrinkPreConvert</code></li>
     <li><code>endSlidePreConvert</code></li>
     <li><code>disableShield</code></li>
     <li><code>postConvertBeatDelay</code></li>
@@ -4497,6 +4503,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateRoom</code></li>
     <li><code>endReplaySession</code></li>
     <li><code>changeActionBufferLevel</code></li>
+    <li><code>resetSnapshotCache</code></li>
     <li><code>setInitialSpawnCharacters</code></li>
     <li><code>cancelFastForward</code></li>
     <li><code>broadcastStateChange</code></li>
@@ -4538,6 +4545,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkClientVersion</code></li>
     <li><code>checkPlayerLimit</code></li>
     <li><code>checkUsername</code></li>
+</ul>
+
+
+<p><a name="serverCheckPlayerRetention"></a></p>
+<h2>serverCheckPlayerRetention</h2>
+
+<ul>
+    <li><code>applyRoomRetention</code></li>
 </ul>
 
 
@@ -4587,6 +4602,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>sendPlayersToDefaultRoom</code></li>
     <li><code>deleteRoomEntry</code></li>
     <li><code>deleteActionBuffer</code></li>
+    <li><code>resetSnapshotCache</code></li>
 </ul>
 
 

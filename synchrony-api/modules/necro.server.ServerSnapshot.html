@@ -201,7 +201,7 @@
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
-  <li><strong>necro.game.tile.Area</strong></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
   <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
@@ -278,7 +278,7 @@
   <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
   <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
-  <li><a href="../modules/necro.server.ServerSnapshot.html">necro.server.ServerSnapshot</a></li>
+  <li><strong>necro.server.ServerSnapshot</strong></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
@@ -442,7 +442,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.tile.Area</code></h1>
+<h1>Module <code>necro.server.ServerSnapshot</code></h1>
 <p>
 
 </p>
@@ -454,11 +454,19 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#distance">distance (rect, x, y)</a></td>
-	<td class="summary">Maximum relative distance from (x, y) to the area edges.</td>
+	<td class="name" nowrap><a href="#getCachedSnapshot">getCachedSnapshot (roomID)</a></td>
+	<td class="summary">
+
+</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#isHome">isHome (homeOwner, visitor, threshold)</a></td>
+	<td class="name" nowrap><a href="#invalidateCachedSnapshot">invalidateCachedSnapshot (roomID)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sendRequest">sendRequest (playerID, callback, turnID)</a></td>
 	<td class="summary">
 
 </td>
@@ -473,27 +481,18 @@
 
     <dl class="function">
     <dt>
-    <a name = "distance"></a>
-    <strong>distance (rect, x, y)</strong>
+    <a name = "getCachedSnapshot"></a>
+    <strong>getCachedSnapshot (roomID)</strong>
     </dt>
     <dd>
-    Maximum relative distance from (x, y) to the area edges.
- 0 for the area edges, &lt; 0 inside the area, > 0 outside the area.
+
+
+
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">rect</span>
-
-
-
-        </li>
-        <li><span class="parameter">x</span>
-
-
-
-        </li>
-        <li><span class="parameter">y</span>
+        <li><span class="parameter">roomID</span>
 
 
 
@@ -506,8 +505,8 @@
 
 </dd>
     <dt>
-    <a name = "isHome"></a>
-    <strong>isHome (homeOwner, visitor, threshold)</strong>
+    <a name = "invalidateCachedSnapshot"></a>
+    <strong>invalidateCachedSnapshot (roomID)</strong>
     </dt>
     <dd>
 
@@ -517,17 +516,41 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">homeOwner</span>
+        <li><span class="parameter">roomID</span>
 
 
 
         </li>
-        <li><span class="parameter">visitor</span>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sendRequest"></a>
+    <strong>sendRequest (playerID, callback, turnID)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerID</span>
 
 
 
         </li>
-        <li><span class="parameter">threshold</span>
+        <li><span class="parameter">callback</span>
+
+
+
+        </li>
+        <li><span class="parameter">turnID</span>
 
 
 

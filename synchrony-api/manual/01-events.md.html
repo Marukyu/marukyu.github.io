@@ -105,6 +105,7 @@
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
+  <li><a href="../modules/necro.event.ModEvent.html">necro.event.ModEvent</a></li>
   <li><a href="../modules/necro.game.character.Ambush.html">necro.game.character.Ambush</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
@@ -277,7 +278,7 @@
   <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
   <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
-  <li><a href="../modules/necro.server.ServerSnapshotRequest.html">necro.server.ServerSnapshotRequest</a></li>
+  <li><a href="../modules/necro.server.ServerSnapshot.html">necro.server.ServerSnapshot</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
@@ -2152,6 +2153,7 @@
     <li><code>inventory</code></li>
     <li><code>despawnExtras</code></li>
     <li><code>sound</code></li>
+    <li><code>statusEffects</code></li>
     <li><code>slide</code></li>
     <li><code>shield</code></li>
     <li><code>beatDelay</code></li>
@@ -2938,6 +2940,7 @@
     <li><code>despawn</code></li>
     <li><code>darkness</code></li>
     <li><code>new</code></li>
+    <li><code>shadow</code></li>
 </ul>
 
 
@@ -2951,6 +2954,7 @@
 
 <ul>
     <li><code>illuminate</code></li>
+    <li><code>trainingRooms</code></li>
     <li><code>lockDoors</code></li>
     <li><code>lockStairs</code></li>
     <li><code>shops</code></li>
@@ -3022,6 +3026,8 @@
 <h2>modUnloaded</h2>
 
 <ul>
+    <li><code>preUnload</code></li>
+    <li><code>resources</code></li>
     <li><code>scriptProvider</code></li>
     <li><code>settings</code></li>
     <li><code>images</code></li>
@@ -3887,6 +3893,7 @@
     <li><code>inventory</code></li>
     <li><code>despawnExtras</code></li>
     <li><code>sound</code></li>
+    <li><code>statusEffects</code></li>
     <li><code>slide</code></li>
     <li><code>shield</code></li>
     <li><code>beatDelay</code></li>
@@ -4712,6 +4719,7 @@
     <li><code>room</code></li>
     <li><code>replay</code></li>
     <li><code>actionBuffer</code></li>
+    <li><code>snapshotCache</code></li>
     <li><code>characters</code></li>
     <li><code>fastForward</code></li>
     <li><code>broadcast</code></li>
@@ -4761,6 +4769,14 @@
 </ul>
 
 
+<p><a name="serverCheckPlayerRetention"></a></p>
+<h2>serverCheckPlayerRetention</h2>
+
+<ul>
+    <li><code>room</code></li>
+</ul>
+
+
 <p><a name="serverConnect"></a></p>
 <h2>serverConnect</h2>
 
@@ -4793,6 +4809,7 @@
     <li><code>players</code></li>
     <li><code>room</code></li>
     <li><code>actionBuffer</code></li>
+    <li><code>snapshotCache</code></li>
 </ul>
 
 

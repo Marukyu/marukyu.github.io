@@ -105,6 +105,7 @@
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
+  <li><a href="../modules/necro.event.ModEvent.html">necro.event.ModEvent</a></li>
   <li><a href="../modules/necro.game.character.Ambush.html">necro.game.character.Ambush</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
@@ -277,7 +278,7 @@
   <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
   <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
-  <li><a href="../modules/necro.server.ServerSnapshotRequest.html">necro.server.ServerSnapshotRequest</a></li>
+  <li><a href="../modules/necro.server.ServerSnapshot.html">necro.server.ServerSnapshot</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
@@ -620,6 +621,9 @@
         <li><span class="parameter">ELECTRIC</span>
          <code>32768</code> - Depletes the Conductor’s batteries
         </li>
+        <li><span class="parameter">FIRE</span>
+         <code>65536</code> - Melts ice
+        </li>
     </ul>
 
 
@@ -649,7 +653,7 @@
          <code>3</code> - Phasing damage (urf, telefrags)
         </li>
         <li><span class="parameter">EXPLOSIVE</span>
-         <code>144</code> - Damage dealt by explosions (bombs, pixies, goblin bombers)
+         <code>65680</code> - Damage dealt by explosions (bombs, pixies, goblin bombers)
         </li>
         <li><span class="parameter">BLOOD</span>
          <code>67</code> - Blood damage (blood magic, blood shop, equipping pain items)

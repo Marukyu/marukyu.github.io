@@ -105,7 +105,7 @@
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
-  <li><a href="../modules/necro.event.ModEvent.html">necro.event.ModEvent</a></li>
+  <li><strong>necro.event.ModEvent</strong></li>
   <li><a href="../modules/necro.game.character.Ambush.html">necro.game.character.Ambush</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
@@ -201,7 +201,7 @@
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
-  <li><strong>necro.game.tile.Area</strong></li>
+  <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
   <li><a href="../modules/necro.game.tile.Dig.html">necro.game.tile.Dig</a></li>
@@ -442,7 +442,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.game.tile.Area</code></h1>
+<h1>Module <code>necro.event.ModEvent</code></h1>
 <p>
 
 </p>
@@ -454,11 +454,7 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#distance">distance (rect, x, y)</a></td>
-	<td class="summary">Maximum relative distance from (x, y) to the area edges.</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#isHome">isHome (homeOwner, visitor, threshold)</a></td>
+	<td class="name" nowrap><a href="#addUnloadHandler">addUnloadHandler (func)</a></td>
 	<td class="summary">
 
 </td>
@@ -473,41 +469,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "distance"></a>
-    <strong>distance (rect, x, y)</strong>
-    </dt>
-    <dd>
-    Maximum relative distance from (x, y) to the area edges.
- 0 for the area edges, &lt; 0 inside the area, > 0 outside the area.
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">rect</span>
-
-
-
-        </li>
-        <li><span class="parameter">x</span>
-
-
-
-        </li>
-        <li><span class="parameter">y</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "isHome"></a>
-    <strong>isHome (homeOwner, visitor, threshold)</strong>
+    <a name = "addUnloadHandler"></a>
+    <strong>addUnloadHandler (func)</strong>
     </dt>
     <dd>
 
@@ -517,17 +480,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">homeOwner</span>
-
-
-
-        </li>
-        <li><span class="parameter">visitor</span>
-
-
-
-        </li>
-        <li><span class="parameter">threshold</span>
+        <li><span class="parameter">func</span>
 
 
 

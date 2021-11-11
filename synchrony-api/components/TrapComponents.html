@@ -105,6 +105,7 @@
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
   <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
+  <li><a href="../modules/necro.event.ModEvent.html">necro.event.ModEvent</a></li>
   <li><a href="../modules/necro.game.character.Ambush.html">necro.game.character.Ambush</a></li>
   <li><a href="../modules/necro.game.character.Attack.html">necro.game.character.Attack</a></li>
   <li><a href="../modules/necro.game.character.Character.html">necro.game.character.Character</a></li>
@@ -277,7 +278,7 @@
   <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
   <li><a href="../modules/necro.server.ServerResources.html">necro.server.ServerResources</a></li>
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
-  <li><a href="../modules/necro.server.ServerSnapshotRequest.html">necro.server.ServerSnapshotRequest</a></li>
+  <li><a href="../modules/necro.server.ServerSnapshot.html">necro.server.ServerSnapshot</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
@@ -600,6 +601,12 @@
 	<td class="name" nowrap><a href="#trappable">trappable</a></td>
 	<td class="summary">Marks an entity as being potentially vulnerable to trap effects.-- For the entity to actually be trapped, it also needs to pass an attackability check.</td>
 	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#trappableResetOnConvert">trappableResetOnConvert</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
 </table>
 
 <br/>
@@ -666,7 +673,7 @@
     <ul>
         <li><span class="parameter">targetFlags</span>
           int Specifies which entities can trigger the trap and are affected by its effects.
-         (<em>default</em> attack.mask(attack.Flag.TRAP))
+         (<em>default</em> attack.Flag.TRAP)
         </li>
         <li><span class="parameter">triggerDelay</span>
          constant float Specifies the delay (in seconds) upon stepping on the trap after which the its effects trigger.
@@ -1245,10 +1252,26 @@
 
     <ul>
         <li><span class="parameter">immuneTurnID</span>
-          int Trap victims gain trap immunity until their next move. However, to allow stacked traps, further trapstriggering in the same turn bypass this immunity.This field contains the turn ID where the victim gained immunity.0 = no immunity, -1 = immunity ignoring the "same turn" exception
-         (<em>default</em> 0)
+          int Trap victims gain trap immunity until their next move. However, to allow stacked traps, further trapstriggering in the same turn bypass this immunity.This field contains the turn ID where the victim gained immunity.-1 = no immunity, -2 = immunity ignoring the "same turn" exception
+         (<em>default</em> -1)
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "trappableResetOnConvert"></a>
+    <strong>trappableResetOnConvert</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
