@@ -694,6 +694,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>resetActionBuffer</code></li>
+    <li><code>resetGameState</code></li>
     <li><code>markRemoteModsUnloaded</code></li>
     <li><code>beginFastForward</code></li>
     <li><code>updateResourceVersions</code></li>
@@ -1627,6 +1628,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetCutscenePlaybackState</code></li>
     <li><code>skipLevelExit</code></li>
     <li><code>saveAmbushers</code></li>
+    <li><code>disableNoReturn</code></li>
     <li><code>clearObjects</code></li>
     <li><code>resetNoiseControl</code></li>
     <li><code>resetSoundEveryBeat</code></li>
@@ -1698,7 +1700,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateVisMapInstantly</code></li>
     <li><code>resetLevelExitState</code></li>
     <li><code>transitionOverlays</code></li>
-    <li><code>initReturningTarget</code></li>
     <li><code>initialTargeting</code></li>
     <li><code>detachInitialLevelSounds</code></li>
     <li><code>despawnObjects</code></li>
@@ -2126,6 +2127,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>autoCollectCurrencyOnMove</code></li>
     <li><code>damageOnMove</code></li>
     <li><code>damageOnMoveLate</code></li>
+    <li><code>updateNoReturn</code></li>
     <li><code>autoDigSurroundingTiles</code></li>
     <li><code>moveLights</code></li>
     <li><code>damageOnUntoggledMovement</code></li>
@@ -2141,6 +2143,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>setRangedFlag</code></li>
     <li><code>currencyDrain</code></li>
     <li><code>resetItemCombo</code></li>
+    <li><code>updateNoReturn</code></li>
 </ul>
 
 
@@ -4329,9 +4332,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>targetProximityFadeEffect</code></li>
     <li><code>applyTileBrightnessEffect</code></li>
     <li><code>animateHoverEffect</code></li>
-    <li><code>applyNoReturnEffects</code></li>
     <li><code>applySpriteOffsetIfAboveWall</code></li>
     <li><code>applySpriteOffsetIfInsideWall</code></li>
+    <li><code>applyTileCoverEffect</code></li>
     <li><code>applyBlinkEffect</code></li>
     <li><code>updateSpriteScales</code></li>
     <li><code>applyCropOnSinkEffect</code></li>
@@ -5303,7 +5306,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processAIMovements</code></li>
     <li><code>applyTileIdleDamage</code></li>
     <li><code>slideOnSlipperyTile</code></li>
-    <li><code>updateReturningTarget</code></li>
     <li><code>endSecretRoomFight</code></li>
     <li><code>processFirepigs</code></li>
     <li><code>voiceGreeting</code></li>
@@ -5338,7 +5340,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>handleSongEnd</code></li>
     <li><code>completeLevel</code></li>
     <li><code>updateAttachmentEntities</code></li>
-    <li><code>updateReturningTargetAfterTraps</code></li>
     <li><code>updateAutoDespawnBlinkEffect</code></li>
     <li><code>updateConditionalInvincibilityBlink</code></li>
     <li><code>updateStasisFade</code></li>
@@ -5346,7 +5347,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateRhythm</code></li>
     <li><code>despawnExpiredScreenShakes</code></li>
     <li><code>despawnObjects</code></li>
-    <li><code>despawnOnTargetLoss</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>updatePerspective</code></li>
     <li><code>updateChecksums</code></li>
@@ -5430,8 +5430,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>silhouetteShadowed</code></li>
     <li><code>unsilhouetteByPerspective</code></li>
     <li><code>silhouetteByPerspective</code></li>
-    <li><code>visibilityTargetFocus</code></li>
-    <li><code>visibilityHideOnTargetPosition</code></li>
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenByTileBrightness</code></li>
     <li><code>hideEntities</code></li>
@@ -5439,6 +5437,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>segmentVisibility</code></li>
     <li><code>renderRadius</code></li>
     <li><code>unsilhouetteIntangible</code></li>
+    <li><code>visibilityNoReturn</code></li>
     <li><code>fullyVisible</code></li>
     <li><code>healthBarVisibility</code></li>
 </ul>
