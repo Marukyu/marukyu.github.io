@@ -337,6 +337,7 @@
   <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
   <li><a href="../modules/system.utils.Proxy.html">system.utils.Proxy</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
+  <li><a href="../modules/system.utils.Rectangle.html">system.utils.Rectangle</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
   <li><a href="../modules/system.utils.Timer.html">system.utils.Timer</a></li>
@@ -935,6 +936,9 @@
         </li>
         <li><span class="parameter">PAIN</span>
          <code>512</code> - Pain vulnerability flag.  Boots of pain set this flag.  Non-gargoyle cratelikes use this flag.
+        </li>
+        <li><span class="parameter">PLAYER_CONTROLLED</span>
+         <code>1024</code> - Set by player-controlled entities.  Lobby triggers use this flag.
         </li>
         <li><span class="parameter">IGNORE_TEAM</span>
          <code>1073741824</code> - Attacks with this flag will target entities of the same team.  Certain spells, miniboss trampling attacks and Ogre club smashes set this flag.  This is a special flag handled separately, it should never be set in the attackability field.

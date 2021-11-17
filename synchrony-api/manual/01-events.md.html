@@ -337,6 +337,7 @@
   <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
   <li><a href="../modules/system.utils.Proxy.html">system.utils.Proxy</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
+  <li><a href="../modules/system.utils.Rectangle.html">system.utils.Rectangle</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
   <li><a href="../modules/system.utils.Timer.html">system.utils.Timer</a></li>
@@ -939,6 +940,7 @@
     <li><code>sounds</code></li>
     <li><code>overrides</code></li>
     <li><code>namedOverrides</code></li>
+    <li><code>enemyPools</code></li>
     <li><code>mystery</code></li>
     <li><code>upgrades</code></li>
     <li><code>postProcess</code></li>
@@ -1542,6 +1544,7 @@
     <li><code>persistence</code></li>
     <li><code>ai</code></li>
     <li><code>aggro</code></li>
+    <li><code>attackability</code></li>
     <li><code>lobby</code></li>
 </ul>
 
@@ -2031,21 +2034,21 @@
     <li><code>facing</code></li>
     <li><code>particles</code></li>
     <li><code>autoCollect</code></li>
-    <li><code>damage</code></li>
-    <li><code>damageLate</code></li>
     <li><code>position</code></li>
     <li><code>previousPosition</code></li>
     <li><code>objectMapPre</code></li>
     <li><code>objectMap</code></li>
     <li><code>objectMapPost</code></li>
     <li><code>collision</code></li>
+    <li><code>light</code></li>
     <li><code>followers</code></li>
+    <li><code>damage</code></li>
+    <li><code>damageLate</code></li>
     <li><code>autoDig</code></li>
     <li><code>readTileInfo</code></li>
     <li><code>targeting</code></li>
     <li><code>itemPickup</code></li>
     <li><code>attachments</code></li>
-    <li><code>light</code></li>
     <li><code>vision</code></li>
     <li><code>stasis</code></li>
     <li><code>tileEffects</code></li>
@@ -2084,7 +2087,6 @@
     <li><code>ranged</code></li>
     <li><code>hitChain</code></li>
     <li><code>beatDelay</code></li>
-    <li><code>voiceTell</code></li>
     <li><code>stopMoveOverride</code></li>
     <li><code>stopCharge</code></li>
     <li><code>currencyDrain</code></li>
@@ -2092,6 +2094,7 @@
     <li><code>freeze</code></li>
     <li><code>stasis</code></li>
     <li><code>stun</code></li>
+    <li><code>voiceTell</code></li>
     <li><code>moveOnAttack</code></li>
     <li><code>disappearOnCollision</code></li>
     <li><code>convert</code></li>
@@ -2565,6 +2568,7 @@
     <li><code>item</code></li>
     <li><code>descent</code></li>
     <li><code>boss</code></li>
+    <li><code>controllable</code></li>
     <li><code>finalize</code></li>
 </ul>
 
@@ -3283,6 +3287,7 @@
     <li><code>persistence</code></li>
     <li><code>ai</code></li>
     <li><code>aggro</code></li>
+    <li><code>attackability</code></li>
     <li><code>lobby</code></li>
 </ul>
 
@@ -3772,21 +3777,21 @@
     <li><code>facing</code></li>
     <li><code>particles</code></li>
     <li><code>autoCollect</code></li>
-    <li><code>damage</code></li>
-    <li><code>damageLate</code></li>
     <li><code>position</code></li>
     <li><code>previousPosition</code></li>
     <li><code>objectMapPre</code></li>
     <li><code>objectMap</code></li>
     <li><code>objectMapPost</code></li>
     <li><code>collision</code></li>
+    <li><code>light</code></li>
     <li><code>followers</code></li>
+    <li><code>damage</code></li>
+    <li><code>damageLate</code></li>
     <li><code>autoDig</code></li>
     <li><code>readTileInfo</code></li>
     <li><code>targeting</code></li>
     <li><code>itemPickup</code></li>
     <li><code>attachments</code></li>
-    <li><code>light</code></li>
     <li><code>vision</code></li>
     <li><code>stasis</code></li>
     <li><code>tileEffects</code></li>
@@ -3825,7 +3830,6 @@
     <li><code>ranged</code></li>
     <li><code>hitChain</code></li>
     <li><code>beatDelay</code></li>
-    <li><code>voiceTell</code></li>
     <li><code>stopMoveOverride</code></li>
     <li><code>stopCharge</code></li>
     <li><code>currencyDrain</code></li>
@@ -3833,6 +3837,7 @@
     <li><code>freeze</code></li>
     <li><code>stasis</code></li>
     <li><code>stun</code></li>
+    <li><code>voiceTell</code></li>
     <li><code>moveOnAttack</code></li>
     <li><code>disappearOnCollision</code></li>
     <li><code>convert</code></li>
@@ -4306,6 +4311,7 @@
     <li><code>item</code></li>
     <li><code>descent</code></li>
     <li><code>boss</code></li>
+    <li><code>controllable</code></li>
     <li><code>finalize</code></li>
 </ul>
 

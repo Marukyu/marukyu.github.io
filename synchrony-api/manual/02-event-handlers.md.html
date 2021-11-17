@@ -337,6 +337,7 @@
   <li><a href="../modules/system.utils.Fallback.html">system.utils.Fallback</a></li>
   <li><a href="../modules/system.utils.Proxy.html">system.utils.Proxy</a></li>
   <li><a href="../modules/system.utils.Random.html">system.utils.Random</a></li>
+  <li><a href="../modules/system.utils.Rectangle.html">system.utils.Rectangle</a></li>
   <li><a href="../modules/system.utils.SortedList.html">system.utils.SortedList</a></li>
   <li><a href="../modules/system.utils.StringUtilities.html">system.utils.StringUtilities</a></li>
   <li><a href="../modules/system.utils.Timer.html">system.utils.Timer</a></li>
@@ -620,6 +621,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>frankensteinway</code></li>
     <li><code>luteItemReplacements</code></li>
     <li><code>necroDancers</code></li>
+    <li><code>pauseSpeedrunTimer</code></li>
     <li><code>playIntroSound</code></li>
     <li><code>prepareEnemies</code></li>
     <li><code>splashScreen</code></li>
@@ -1113,6 +1115,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>basicEnemyBehavior</code></li>
     <li><code>soundEffects</code></li>
     <li><code>namedEnemyOverrides</code></li>
+    <li><code>enemyPools</code></li>
     <li><code>mystery</code></li>
     <li><code>upgrades</code></li>
     <li><code>addRandomComponent</code></li>
@@ -1287,6 +1290,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadTinyslime</code></li>
     <li><code>loadToad</code></li>
     <li><code>loadToughsarcophagus</code></li>
+    <li><code>loadTrainingSarcophagus</code></li>
     <li><code>loadTransmogrifier</code></li>
     <li><code>loadTrapCauldron</code></li>
     <li><code>loadTrapChest</code></li>
@@ -2125,11 +2129,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>forceSlidingTween</code></li>
     <li><code>autoCollectCurrencyOnMove</code></li>
+    <li><code>updateNoReturn</code></li>
+    <li><code>moveLights</code></li>
     <li><code>damageOnMove</code></li>
     <li><code>damageOnMoveLate</code></li>
-    <li><code>updateNoReturn</code></li>
     <li><code>autoDigSurroundingTiles</code></li>
-    <li><code>moveLights</code></li>
     <li><code>damageOnUntoggledMovement</code></li>
 </ul>
 
@@ -2944,6 +2948,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>autoCastPreventManualCast</code></li>
     <li><code>applyActionDelay</code></li>
     <li><code>applyActionFilter</code></li>
+    <li><code>pawnRules</code></li>
     <li><code>playerHasActed</code></li>
 </ul>
 
@@ -3036,6 +3041,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>playerPersistence</code></li>
     <li><code>toggleAI</code></li>
     <li><code>aggro</code></li>
+    <li><code>updateAttackability</code></li>
 </ul>
 
 
@@ -3490,10 +3496,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>markPendingMerge</code></li>
     <li><code>moveCollisionMap</code></li>
     <li><code>moveMultiTileCollision</code></li>
-    <li><code>moveFollowers</code></li>
-    <li><code>readTileInfo</code></li>
-    <li><code>moveGrabber</code></li>
     <li><code>moveLightSource</code></li>
+    <li><code>moveFollowers</code></li>
+    <li><code>moveGrabber</code></li>
+    <li><code>readTileInfo</code></li>
     <li><code>updateRadialVision</code></li>
     <li><code>updateRaycastVision</code></li>
     <li><code>stasisOnApproach</code></li>
@@ -3553,7 +3559,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateHitChain</code></li>
     <li><code>firstMove</code></li>
     <li><code>resetBeatDelay</code></li>
-    <li><code>voiceTell</code></li>
     <li><code>chargeStopOnResults</code></li>
     <li><code>stopSuperCharge</code></li>
     <li><code>hasActed</code></li>
@@ -3562,6 +3567,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>confusableBeatDelay</code></li>
     <li><code>spawnCapBeatDelay</code></li>
     <li><code>stunOnResults</code></li>
+    <li><code>voiceTell</code></li>
     <li><code>moveOnAttack</code></li>
     <li><code>disappearOnCollision</code></li>
     <li><code>promote</code></li>
@@ -3856,7 +3862,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>activatePain</code></li>
     <li><code>thawFrozenObject</code></li>
     <li><code>provoke</code></li>
-    <li><code>provokeOnProximity</code></li>
     <li><code>startCharge</code></li>
     <li><code>redirectCharge</code></li>
     <li><code>redirectDeadRingerCharge</code></li>
@@ -3883,6 +3888,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>castOnHitDelayed</code></li>
     <li><code>clearCharm</code></li>
     <li><code>deepBluesTeleport</code></li>
+    <li><code>goolemCastOnHit</code></li>
     <li><code>kingCongaTeleport</code></li>
     <li><code>luteCopyHealthToBody</code></li>
     <li><code>resetActionDelayOnHit</code></li>
@@ -4069,6 +4075,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>descentAttackProtection</code></li>
     <li><code>nd2TrapProtection</code></li>
     <li><code>shieldAttackability</code></li>
+    <li><code>playerControlled</code></li>
     <li><code>applyEffectiveFlags</code></li>
 </ul>
 
