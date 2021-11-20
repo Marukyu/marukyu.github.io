@@ -742,6 +742,9 @@
         <li><span class="parameter">NOISE_CONTROL_BYPASS</span>
          <code>65536</code> - Allows sound effects associated with these entities to bypass the noise control system.
         </li>
+        <li><span class="parameter">HIDE_HEALTH_BAR</span>
+         <code>131072</code> - Hides this entity's health bar. Rationale for this flag's inversion is similar to LOCALLY<em>KNOWN</em>PLAYER_NAME.
+        </li>
     </ul>
 
 
@@ -768,13 +771,13 @@
          <code>-1</code> - Represents all flags for locally controlled entities (currently contains all flags)
         </li>
         <li><span class="parameter">SPECTATE_SINGLE</span>
-         <code>-129</code> - Represents all flags for single-target spectating (all regular focus flags, but player names are displayed)
+         <code>-131201</code> - Represents all flags for single-target spectating (all regular focus flags, but player names are displayed)
         </li>
         <li><span class="parameter">SPECTATE_MULTIPLE</span>
-         <code>-65681</code> - Represents all flags for multi-target spectating (reduces visual and auditory noise)
+         <code>-196753</code> - Represents all flags for multi-target spectating (reduces visual and auditory noise)
         </li>
         <li><span class="parameter">INTANGIBLE</span>
-         <code>8</code> - Represents all flags for intangible entities (only their HUD remains visible)
+         <code>8</code> - Represents all flags for intangible entities in local co-op (only their HUD remains visible)
         </li>
         <li><span class="parameter">ALL</span>
          <code>-1</code> - Represents all focus flags
