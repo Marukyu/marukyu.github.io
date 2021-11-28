@@ -96,6 +96,7 @@
   <li><a href="../modules/necro.debug.DebugCommands.html">necro.debug.DebugCommands</a></li>
   <li><a href="../modules/necro.debug.DebugDrawUtils.html">necro.debug.DebugDrawUtils</a></li>
   <li><a href="../modules/necro.debug.DebugEval.html">necro.debug.DebugEval</a></li>
+  <li><a href="../modules/necro.debug.DebugLagOverlay.html">necro.debug.DebugLagOverlay</a></li>
   <li><a href="../modules/necro.debug.DebugNetworking.html">necro.debug.DebugNetworking</a></li>
   <li><a href="../modules/necro.debug.DebugOverlay.html">necro.debug.DebugOverlay</a></li>
   <li><a href="../modules/necro.debug.DebugRollback.html">necro.debug.DebugRollback</a></li>
@@ -103,6 +104,7 @@
   <li><a href="../modules/necro.debug.DebugWatch.html">necro.debug.DebugWatch</a></li>
   <li><a href="../modules/necro.debug.ErrorHandler.html">necro.debug.ErrorHandler</a></li>
   <li><a href="../modules/necro.debug.HUDDebug.html">necro.debug.HUDDebug</a></li>
+  <li><a href="../modules/necro.debug.LagLog.html">necro.debug.LagLog</a></li>
   <li><a href="../modules/necro.event.Event.html">necro.event.Event</a></li>
   <li><a href="../modules/necro.event.EventMigration.html">necro.event.EventMigration</a></li>
   <li><a href="../modules/necro.event.ModEvent.html">necro.event.ModEvent</a></li>
@@ -289,6 +291,7 @@
   <li><a href="../modules/system.debug.Errors.html">system.debug.Errors</a></li>
   <li><a href="../modules/system.debug.Evaluator.html">system.debug.Evaluator</a></li>
   <li><a href="../modules/system.debug.Performance.html">system.debug.Performance</a></li>
+  <li><a href="../modules/system.debug.Profiler.html">system.debug.Profiler</a></li>
   <li><a href="../modules/system.debug.StackTrace.html">system.debug.StackTrace</a></li>
   <li><a href="../modules/system.debug.StackTraceRules.html">system.debug.StackTraceRules</a></li>
   <li><a href="../modules/system.events.AbstractSelector.html">system.events.AbstractSelector</a></li>
@@ -966,6 +969,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadLocalMods</code></li>
     <li><code>loadNetworkMods</code></li>
     <li><code>collectErrors</code></li>
+    <li><code>updateProfilerTick</code></li>
 </ul>
 
 
@@ -1625,6 +1629,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateCurrentLevelInfo</code></li>
     <li><code>addLevelTime</code></li>
     <li><code>startRecordingReplay</code></li>
+    <li><code>initLagLog</code></li>
     <li><code>initializeSynchronizer</code></li>
     <li><code>resetTurnID</code></li>
     <li><code>stopMusic</code></li>
@@ -1747,6 +1752,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>cancelBossSplash</code></li>
     <li><code>resetLocalFlyaways</code></li>
     <li><code>resetRunVariables</code></li>
+    <li><code>resetLagLog</code></li>
     <li><code>closeAllMenus</code></li>
     <li><code>closeInGameLobby</code></li>
     <li><code>clearCurrentLevelInfo</code></li>
@@ -1774,6 +1780,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="gameStateStop"></a></p>
 <h2>gameStateStop</h2>
 
+<ul>
+    <li><code>stopLagLog</code></li>
+</ul>
 
 
 <p><a name="gameStateUnpause"></a></p>
@@ -5129,6 +5138,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateAudioFilter</code></li>
     <li><code>cleanUpTimedOutOverlays</code></li>
     <li><code>updateVisibility</code></li>
+    <li><code>updateLagLog</code></li>
 </ul>
 
 
@@ -5280,6 +5290,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>turn</h2>
 
 <ul>
+    <li><code>lagLogBegin</code></li>
     <li><code>saveSnapshot</code></li>
     <li><code>precomputeActionMap</code></li>
     <li><code>markSoundsForRollbackStop</code></li>
@@ -5361,6 +5372,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updatePerspective</code></li>
     <li><code>updateChecksums</code></li>
     <li><code>clearSynchronizerCache</code></li>
+    <li><code>lagLogEnd</code></li>
 </ul>
 
 
