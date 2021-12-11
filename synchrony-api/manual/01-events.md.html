@@ -59,6 +59,7 @@
   <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
   <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
   <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
+  <li><a href="../modules/necro.client.InputLock.html">necro.client.InputLock</a></li>
   <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
   <li><a href="../modules/necro.client.Lobby.html">necro.client.Lobby</a></li>
   <li><a href="../modules/necro.client.LocalCoop.html">necro.client.LocalCoop</a></li>
@@ -275,6 +276,7 @@
   <li><a href="../modules/necro.server.ServerConductor.html">necro.server.ServerConductor</a></li>
   <li><a href="../modules/necro.server.ServerEvents.html">necro.server.ServerEvents</a></li>
   <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
+  <li><a href="../modules/necro.server.ServerInputLock.html">necro.server.ServerInputLock</a></li>
   <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
   <li><a href="../modules/necro.server.ServerPlayerList.html">necro.server.ServerPlayerList</a></li>
   <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
@@ -282,6 +284,7 @@
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
   <li><a href="../modules/necro.server.ServerSnapshot.html">necro.server.ServerSnapshot</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
+  <li><a href="../modules/necro.server.ServerStateControl.html">necro.server.ServerStateControl</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
@@ -672,6 +675,7 @@
     <li><code>replay</code></li>
     <li><code>reset</code></li>
     <li><code>actionBuffer</code></li>
+    <li><code>inputLock</code></li>
     <li><code>lobby</code></li>
     <li><code>gameSession</code></li>
     <li><code>gameState</code></li>
@@ -720,6 +724,27 @@
 <p><a name="clientPlayerList"></a></p>
 <h2>clientPlayerList</h2>
 
+
+
+<p><a name="clientRejectAction"></a></p>
+<h2>clientRejectAction</h2>
+
+<ul>
+    <li><code>snapshot</code></li>
+    <li><code>requeue</code></li>
+    <li><code>deferRollback</code></li>
+    <li><code>rollback</code></li>
+</ul>
+
+
+<p><a name="clientRequeueAction"></a></p>
+<h2>clientRequeueAction</h2>
+
+<ul>
+    <li><code>actionBuffer</code></li>
+    <li><code>animationTimer</code></li>
+    <li><code>sound</code></li>
+</ul>
 
 
 <p><a name="clientResourcesReady"></a></p>
@@ -1245,6 +1270,7 @@
     <li><code>animations</code></li>
     <li><code>attachments</code></li>
     <li><code>turnSync</code></li>
+    <li><code>inputLock</code></li>
     <li><code>actionBuffer</code></li>
     <li><code>replayLoad</code></li>
     <li><code>camera</code></li>
@@ -4549,6 +4575,7 @@
     <li><code>swipes</code></li>
     <li><code>healthBars</code></li>
     <li><code>playerNames</code></li>
+    <li><code>inputLock</code></li>
     <li><code>flyaways</code></li>
     <li><code>particlesFront</code></li>
     <li><code>particles</code></li>
@@ -4649,6 +4676,7 @@
     <li><code>spectator</code></li>
     <li><code>head</code></li>
     <li><code>sprite</code></li>
+    <li><code>inputLock</code></li>
     <li><code>nameColor</code></li>
     <li><code>name</code></li>
     <li><code>localCoop</code></li>
@@ -4734,6 +4762,7 @@
     <li><code>timestamp</code></li>
     <li><code>random</code></li>
     <li><code>room</code></li>
+    <li><code>inputLock</code></li>
     <li><code>replay</code></li>
     <li><code>actionBuffer</code></li>
     <li><code>snapshotCache</code></li>
@@ -4834,6 +4863,7 @@
 <h2>serverDisconnect</h2>
 
 <ul>
+    <li><code>inputLock</code></li>
     <li><code>localCoop</code></li>
     <li><code>chat</code></li>
     <li><code>room</code></li>
@@ -4897,6 +4927,7 @@
 <ul>
     <li><code>socket</code></li>
     <li><code>playerList</code></li>
+    <li><code>inputLock</code></li>
     <li><code>resources</code></li>
     <li><code>rooms</code></li>
     <li><code>actionBuffer</code></li>
@@ -4935,6 +4966,7 @@
 <ul>
     <li><code>conductor</code></li>
     <li><code>socket</code></li>
+    <li><code>inputLock</code></li>
     <li><code>latency</code></li>
     <li><code>steam</code></li>
 </ul>
@@ -5197,6 +5229,8 @@
     <li><code>synchronizer</code></li>
     <li><code>networkServer</code></li>
     <li><code>gameSession</code></li>
+    <li><code>musicTime</code></li>
+    <li><code>beatmapSkip</code></li>
     <li><code>fastForward</code></li>
     <li><code>replayPlayer</code></li>
     <li><code>turnSync</code></li>
@@ -5217,6 +5251,7 @@
     <li><code>rollback</code></li>
     <li><code>turn</code></li>
     <li><code>updateVisualObjects</code></li>
+    <li><code>inputLock</code></li>
     <li><code>segmentVisibility</code></li>
     <li><code>visibility</code></li>
     <li><code>minimap</code></li>

@@ -59,6 +59,7 @@
   <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
   <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
   <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
+  <li><a href="../modules/necro.client.InputLock.html">necro.client.InputLock</a></li>
   <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
   <li><a href="../modules/necro.client.Lobby.html">necro.client.Lobby</a></li>
   <li><a href="../modules/necro.client.LocalCoop.html">necro.client.LocalCoop</a></li>
@@ -275,6 +276,7 @@
   <li><a href="../modules/necro.server.ServerConductor.html">necro.server.ServerConductor</a></li>
   <li><a href="../modules/necro.server.ServerEvents.html">necro.server.ServerEvents</a></li>
   <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
+  <li><a href="../modules/necro.server.ServerInputLock.html">necro.server.ServerInputLock</a></li>
   <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
   <li><a href="../modules/necro.server.ServerPlayerList.html">necro.server.ServerPlayerList</a></li>
   <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
@@ -282,6 +284,7 @@
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
   <li><a href="../modules/necro.server.ServerSnapshot.html">necro.server.ServerSnapshot</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
+  <li><a href="../modules/necro.server.ServerStateControl.html">necro.server.ServerStateControl</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
@@ -731,6 +734,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetSnapshotRequest</code></li>
     <li><code>resetSynchronizer</code></li>
     <li><code>resetActionBuffer</code></li>
+    <li><code>resetInputLock</code></li>
     <li><code>resetGameSession</code></li>
     <li><code>resetGameState</code></li>
     <li><code>resetFastForward</code></li>
@@ -812,8 +816,30 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearPeerCache</code></li>
     <li><code>clearResourceTransferCache</code></li>
     <li><code>clearSortedPlayerIDs</code></li>
+    <li><code>inputLock</code></li>
     <li><code>updateModHashList</code></li>
     <li><code>updateModHashListCoop</code></li>
+</ul>
+
+
+<p><a name="clientRejectAction"></a></p>
+<h2>clientRejectAction</h2>
+
+<ul>
+    <li><code>deleteSnapshot</code></li>
+    <li><code>requeueRejectedAction</code></li>
+    <li><code>deferRollbackTurn</code></li>
+    <li><code>setRollbackTurn</code></li>
+</ul>
+
+
+<p><a name="clientRequeueAction"></a></p>
+<h2>clientRequeueAction</h2>
+
+<ul>
+    <li><code>performRequeuedAction</code></li>
+    <li><code>adjustAnimationTimer</code></li>
+    <li><code>adjustTurnSoundLists</code></li>
 </ul>
 
 
@@ -1030,6 +1056,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>fullyResetFocusCache</code></li>
     <li><code>initialEquipmentFlag</code></li>
     <li><code>invalidateObjectSelectorCache</code></li>
+    <li><code>skipOverdueBeats</code></li>
     <li><code>updatePlayerCollisions</code></li>
     <li><code>resetSnapshots</code></li>
 </ul>
@@ -1696,6 +1723,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetAnimationTimer</code></li>
     <li><code>resetItemPickupAnimations</code></li>
     <li><code>updateAttachmentEntities</code></li>
+    <li><code>clearInputLockQueue</code></li>
     <li><code>resetRollbackDebugger</code></li>
     <li><code>switchClientActionBuffer</code></li>
     <li><code>loadReplayLevelData</code></li>
@@ -4331,6 +4359,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderSwipes</code></li>
     <li><code>renderHealthBars</code></li>
     <li><code>renderPlayerNames</code></li>
+    <li><code>renderPlayerInputLockIndicators</code></li>
     <li><code>renderFlyaways</code></li>
     <li><code>renderExtraSprites</code></li>
     <li><code>renderParticles</code></li>
@@ -4429,6 +4458,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applySpectatorOpacity</code></li>
     <li><code>useHeadSprite</code></li>
     <li><code>renderSprite</code></li>
+    <li><code>renderInputLockIndicator</code></li>
     <li><code>assignNameColor</code></li>
     <li><code>renderName</code></li>
     <li><code>renderCoopPlayerNumber</code></li>
@@ -4522,6 +4552,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>computeTimestamp</code></li>
     <li><code>updateRoom</code></li>
+    <li><code>disableInputLock</code></li>
     <li><code>endReplaySession</code></li>
     <li><code>changeActionBufferLevel</code></li>
     <li><code>resetSnapshotCache</code></li>
@@ -4631,6 +4662,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>serverDisconnect</h2>
 
 <ul>
+    <li><code>resetInputLock</code></li>
     <li><code>disconnectLocalCoopPlayers</code></li>
     <li><code>sendLeaveMessage</code></li>
     <li><code>removePlayerFromRoom</code></li>
@@ -4694,6 +4726,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>broadcastInputs</code></li>
     <li><code>broadcastResource</code></li>
     <li><code>handleGameStateChange</code></li>
+    <li><code>inputLockTimer</code></li>
     <li><code>receiveLocalCoopPlayerAttribute</code></li>
     <li><code>receiveLocalCoopPlayerInput</code></li>
     <li><code>receivePlayerAttribute</code></li>
@@ -4703,6 +4736,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>snapshotBroadcast</code></li>
     <li><code>snapshotRequest</code></li>
     <li><code>snapshotResponse</code></li>
+    <li><code>unlockInputs</code></li>
 </ul>
 
 
@@ -4712,6 +4746,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>closeSocket</code></li>
     <li><code>clearPlayerList</code></li>
+    <li><code>resetInputLock</code></li>
     <li><code>clearResourceTransferLists</code></li>
     <li><code>resetRooms</code></li>
     <li><code>resetActionBuffer</code></li>
@@ -4752,6 +4787,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>conductor</code></li>
     <li><code>processSocketEvents</code></li>
+    <li><code>updateInputLock</code></li>
     <li><code>updatePlayerLatencyList</code></li>
     <li><code>updateSteamLobby</code></li>
 </ul>
@@ -5106,6 +5142,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>processSynchronizer</code></li>
     <li><code>networkServer</code></li>
     <li><code>processGameSession</code></li>
+    <li><code>updateMusicTime</code></li>
+    <li><code>skipOverdueBeats</code></li>
     <li><code>processFastForward</code></li>
     <li><code>processReplayPlayer</code></li>
     <li><code>applyRhythmSettings</code></li>
@@ -5126,6 +5164,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>rollback</code></li>
     <li><code>processTurns</code></li>
     <li><code>updateVisualObjects</code></li>
+    <li><code>updateInputLock</code></li>
     <li><code>handleChat</code></li>
     <li><code>processMenu</code></li>
     <li><code>updatePlayerListHUDVisibility</code></li>

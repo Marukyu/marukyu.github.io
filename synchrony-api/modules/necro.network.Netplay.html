@@ -59,6 +59,7 @@
   <li><a href="../modules/necro.client.GameSession.html">necro.client.GameSession</a></li>
   <li><a href="../modules/necro.client.GameState.html">necro.client.GameState</a></li>
   <li><a href="../modules/necro.client.Input.html">necro.client.Input</a></li>
+  <li><a href="../modules/necro.client.InputLock.html">necro.client.InputLock</a></li>
   <li><a href="../modules/necro.client.KeyRebinder.html">necro.client.KeyRebinder</a></li>
   <li><a href="../modules/necro.client.Lobby.html">necro.client.Lobby</a></li>
   <li><a href="../modules/necro.client.LocalCoop.html">necro.client.LocalCoop</a></li>
@@ -275,6 +276,7 @@
   <li><a href="../modules/necro.server.ServerConductor.html">necro.server.ServerConductor</a></li>
   <li><a href="../modules/necro.server.ServerEvents.html">necro.server.ServerEvents</a></li>
   <li><a href="../modules/necro.server.ServerFastForward.html">necro.server.ServerFastForward</a></li>
+  <li><a href="../modules/necro.server.ServerInputLock.html">necro.server.ServerInputLock</a></li>
   <li><a href="../modules/necro.server.ServerLocalCoop.html">necro.server.ServerLocalCoop</a></li>
   <li><a href="../modules/necro.server.ServerPlayerList.html">necro.server.ServerPlayerList</a></li>
   <li><a href="../modules/necro.server.ServerReplay.html">necro.server.ServerReplay</a></li>
@@ -282,6 +284,7 @@
   <li><a href="../modules/necro.server.ServerRooms.html">necro.server.ServerRooms</a></li>
   <li><a href="../modules/necro.server.ServerSnapshot.html">necro.server.ServerSnapshot</a></li>
   <li><a href="../modules/necro.server.ServerSocket.html">necro.server.ServerSocket</a></li>
+  <li><a href="../modules/necro.server.ServerStateControl.html">necro.server.ServerStateControl</a></li>
   <li><a href="../modules/necro.server.ServerSteamLobby.html">necro.server.ServerSteamLobby</a></li>
   <li><a href="../modules/system.accel.NecroLevel.html">system.accel.NecroLevel</a></li>
   <li><a href="../modules/system.accel.VisionAccel.html">system.accel.VisionAccel</a></li>
@@ -744,6 +747,9 @@
         <li><span class="parameter">ROOM_ATTRIBUTE</span>
          <code>22</code>
         </li>
+        <li><span class="parameter">INPUT_UNLOCK_REQUEST</span>
+         <code>23</code>
+        </li>
     </ul>
 
 
@@ -832,6 +838,9 @@
         <li><span class="parameter">CUTSCENE_SKIP</span>
          <code>23</code> - Requests for the cutscene with the specified ID to be skipped.
         </li>
+        <li><span class="parameter">INPUT_LOCKED</span>
+         <code>24</code> - Indicates that this player is experiencing networking issues, causing their inputs to be dropped.
+        </li>
     </ul>
 
 
@@ -899,6 +908,9 @@
         </li>
         <li><span class="parameter">READ_ONLY_SETTINGS</span>
          <code>5</code> - If true, the host player is not allowed to edit the game settings or mod list of this room.
+        </li>
+        <li><span class="parameter">INPUT_LOCK_THRESHOLD</span>
+         <code>6</code> - Specifies the minimum turnID for inputs to be accepted.
         </li>
     </ul>
 
