@@ -69,15 +69,18 @@
   <li><a href="../modules/necro.client.Resources.html">necro.client.Resources</a></li>
   <li><a href="../modules/necro.client.Rollback.html">necro.client.Rollback</a></li>
   <li><a href="../modules/necro.client.Room.html">necro.client.Room</a></li>
+  <li><a href="../modules/necro.client.RunSummary.html">necro.client.RunSummary</a></li>
   <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
   <li><a href="../modules/necro.client.SnapshotRequest.html">necro.client.SnapshotRequest</a></li>
   <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
   <li><a href="../modules/necro.client.Synchronizer.html">necro.client.Synchronizer</a></li>
+  <li><a href="../modules/necro.client.replay.InstantReplay.html">necro.client.replay.InstantReplay</a></li>
   <li><a href="../modules/necro.client.replay.Replay.html">necro.client.replay.Replay</a></li>
   <li><a href="../modules/necro.client.replay.ReplayControls.html">necro.client.replay.ReplayControls</a></li>
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
   <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
+  <li><a href="../modules/necro.client.replay.ReplaySeek.html">necro.client.replay.ReplaySeek</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
   <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
@@ -1230,8 +1233,11 @@
     <li><code>synchronizer</code></li>
     <li><code>random</code></li>
     <li><code>levelTransition</code></li>
+    <li><code>menu</code></li>
     <li><code>turnID</code></li>
     <li><code>stopMusic</code></li>
+    <li><code>audioFilter</code></li>
+    <li><code>instantReplay</code></li>
     <li><code>cutscene</code></li>
     <li><code>skipLevelExit</code></li>
     <li><code>saveAmbushers</code></li>
@@ -1298,6 +1304,7 @@
     <li><code>targeting</code></li>
     <li><code>sounds</code></li>
     <li><code>despawnObjects</code></li>
+    <li><code>hud</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>updateVisualObjects</code></li>
     <li><code>snapshots</code></li>
@@ -1639,6 +1646,7 @@
     <li><code>spellcast</code></li>
     <li><code>timeScale</code></li>
     <li><code>runState</code></li>
+    <li><code>runSummary</code></li>
     <li><code>tombstone</code></li>
     <li><code>sacrificeShrine</code></li>
     <li><code>existenceChecks</code></li>
@@ -1688,6 +1696,7 @@
 <h2>holderDescentBegin</h2>
 
 <ul>
+    <li><code>dadForward</code></li>
     <li><code>descent</code></li>
     <li><code>exitRequirement</code></li>
     <li><code>duration</code></li>
@@ -2229,6 +2238,18 @@
     <li><code>startFight</code></li>
     <li><code>boss</code></li>
     <li><code>animation</code></li>
+</ul>
+
+
+<p><a name="holderRespawn"></a></p>
+<h2>holderRespawn</h2>
+
+<ul>
+    <li><code>runSummary</code></li>
+    <li><code>respawnFlag</code></li>
+    <li><code>killableFlag</code></li>
+    <li><code>health</code></li>
+    <li><code>tangible</code></li>
 </ul>
 
 
@@ -2940,12 +2961,14 @@
 <h2>levelComplete</h2>
 
 <ul>
+    <li><code>dad</code></li>
     <li><code>cutscene</code></li>
     <li><code>pendingDelays</code></li>
     <li><code>speedrunTimer</code></li>
     <li><code>deathless</code></li>
     <li><code>winScreen</code></li>
     <li><code>nextLevel</code></li>
+    <li><code>notifyHost</code></li>
 </ul>
 
 
@@ -3382,6 +3405,7 @@
     <li><code>spellcast</code></li>
     <li><code>timeScale</code></li>
     <li><code>runState</code></li>
+    <li><code>runSummary</code></li>
     <li><code>tombstone</code></li>
     <li><code>sacrificeShrine</code></li>
     <li><code>existenceChecks</code></li>
@@ -3431,6 +3455,7 @@
 <h2>objectDescentBegin</h2>
 
 <ul>
+    <li><code>dadForward</code></li>
     <li><code>descent</code></li>
     <li><code>exitRequirement</code></li>
     <li><code>duration</code></li>
@@ -3972,6 +3997,18 @@
     <li><code>startFight</code></li>
     <li><code>boss</code></li>
     <li><code>animation</code></li>
+</ul>
+
+
+<p><a name="objectRespawn"></a></p>
+<h2>objectRespawn</h2>
+
+<ul>
+    <li><code>runSummary</code></li>
+    <li><code>respawnFlag</code></li>
+    <li><code>killableFlag</code></li>
+    <li><code>health</code></li>
+    <li><code>tangible</code></li>
 </ul>
 
 
@@ -4632,6 +4669,7 @@
     <li><code>levelCounter</code></li>
     <li><code>targetPointer</code></li>
     <li><code>subtitles</code></li>
+    <li><code>runSummary</code></li>
     <li><code>spectator</code></li>
     <li><code>textOverlay</code></li>
     <li><code>bossSplash</code></li>
@@ -5253,9 +5291,11 @@
     <li><code>customHotkeys</code></li>
     <li><code>input</code></li>
     <li><code>replayControls</code></li>
+    <li><code>runSummary</code></li>
     <li><code>idleSpectate</code></li>
     <li><code>spectator</code></li>
     <li><code>playerFocus</code></li>
+    <li><code>instantReplay</code></li>
     <li><code>animationTimer</code></li>
     <li><code>pendingDelays</code></li>
     <li><code>rollback</code></li>

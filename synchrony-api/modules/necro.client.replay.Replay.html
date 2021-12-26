@@ -69,15 +69,18 @@
   <li><a href="../modules/necro.client.Resources.html">necro.client.Resources</a></li>
   <li><a href="../modules/necro.client.Rollback.html">necro.client.Rollback</a></li>
   <li><a href="../modules/necro.client.Room.html">necro.client.Room</a></li>
+  <li><a href="../modules/necro.client.RunSummary.html">necro.client.RunSummary</a></li>
   <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
   <li><a href="../modules/necro.client.SnapshotRequest.html">necro.client.SnapshotRequest</a></li>
   <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
   <li><a href="../modules/necro.client.Synchronizer.html">necro.client.Synchronizer</a></li>
+  <li><a href="../modules/necro.client.replay.InstantReplay.html">necro.client.replay.InstantReplay</a></li>
   <li><strong>necro.client.replay.Replay</strong></li>
   <li><a href="../modules/necro.client.replay.ReplayControls.html">necro.client.replay.ReplayControls</a></li>
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
   <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
+  <li><a href="../modules/necro.client.replay.ReplaySeek.html">necro.client.replay.ReplaySeek</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
   <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
@@ -481,6 +484,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#getCurrentSavedReplayFile">getCurrentSavedReplayFile ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#list">list (category)</a></td>
 	<td class="summary">
 
@@ -576,6 +585,22 @@
 
         </li>
     </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getCurrentSavedReplayFile"></a>
+    <strong>getCurrentSavedReplayFile ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
 
 
 
@@ -738,6 +763,9 @@
         </li>
         <li><span class="parameter">RESYNC</span>
          <code>4</code> - Game session was resynchronized (a mod was loaded/unloaded mid-run, or a game setting was changed)
+        </li>
+        <li><span class="parameter">MANUAL</span>
+         <code>5</code> - Replay was saved manually from the run summary screen
         </li>
     </ul>
 

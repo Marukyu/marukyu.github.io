@@ -69,15 +69,18 @@
   <li><a href="../modules/necro.client.Resources.html">necro.client.Resources</a></li>
   <li><a href="../modules/necro.client.Rollback.html">necro.client.Rollback</a></li>
   <li><a href="../modules/necro.client.Room.html">necro.client.Room</a></li>
+  <li><a href="../modules/necro.client.RunSummary.html">necro.client.RunSummary</a></li>
   <li><a href="../modules/necro.client.SinglePlayer.html">necro.client.SinglePlayer</a></li>
   <li><a href="../modules/necro.client.SnapshotRequest.html">necro.client.SnapshotRequest</a></li>
   <li><a href="../modules/necro.client.SpeedrunTimer.html">necro.client.SpeedrunTimer</a></li>
   <li><a href="../modules/necro.client.StateControl.html">necro.client.StateControl</a></li>
   <li><a href="../modules/necro.client.Synchronizer.html">necro.client.Synchronizer</a></li>
+  <li><a href="../modules/necro.client.replay.InstantReplay.html">necro.client.replay.InstantReplay</a></li>
   <li><a href="../modules/necro.client.replay.Replay.html">necro.client.replay.Replay</a></li>
   <li><a href="../modules/necro.client.replay.ReplayControls.html">necro.client.replay.ReplayControls</a></li>
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
   <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
+  <li><a href="../modules/necro.client.replay.ReplaySeek.html">necro.client.replay.ReplaySeek</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
   <li><a href="../modules/necro.config.MultiKeyCombo.html">necro.config.MultiKeyCombo</a></li>
@@ -775,6 +778,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>disconnectMessage</code></li>
     <li><code>fireLocalPlayerAddCallback</code></li>
     <li><code>fireLocalPlayerRemoveCallback</code></li>
+    <li><code>levelCompletionHint</code></li>
     <li><code>receiveChat</code></li>
     <li><code>receiveFastForwardData</code></li>
     <li><code>receiveGameState</code></li>
@@ -1642,7 +1646,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>gameStateEnterLobby</h2>
 
 <ul>
-    <li><code>disableWinScreen</code></li>
     <li><code>initializeLobby</code></li>
     <li><code>resetRoomAttributes</code></li>
     <li><code>closeAllMenus</code></li>
@@ -1669,8 +1672,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>startRecordingReplay</code></li>
     <li><code>initLagLog</code></li>
     <li><code>initializeSynchronizer</code></li>
+    <li><code>closeAllLevelTransitionMenus</code></li>
     <li><code>resetTurnID</code></li>
     <li><code>stopMusic</code></li>
+    <li><code>updateAudioFilter</code></li>
+    <li><code>stopInstantReplay</code></li>
     <li><code>resetCutscenePlaybackState</code></li>
     <li><code>skipLevelExit</code></li>
     <li><code>saveAmbushers</code></li>
@@ -1699,6 +1705,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetLevelVariables</code></li>
     <li><code>resetLocalFlyaways</code></li>
     <li><code>resetMusicLayerFlyaways</code></li>
+    <li><code>resetRunSummary</code></li>
     <li><code>resetTextOverlay</code></li>
     <li><code>respawnOnLevelTransition</code></li>
     <li><code>spawnPlayers</code></li>
@@ -1750,6 +1757,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initialTargeting</code></li>
     <li><code>detachInitialLevelSounds</code></li>
     <li><code>despawnObjects</code></li>
+    <li><code>updateCurrencyCounterHUD</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>createInitialSnapshot</code></li>
     <li><code>resetTickDelta</code></li>
@@ -1784,12 +1792,12 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>gameStateReset</h2>
 
 <ul>
-    <li><code>disableWinScreen</code></li>
     <li><code>enqueueReplayRecordingStart</code></li>
     <li><code>resetReplayPlaybackState</code></li>
     <li><code>saveReplay</code></li>
     <li><code>cancelBossSplash</code></li>
     <li><code>resetLocalFlyaways</code></li>
+    <li><code>resetRunSummary</code></li>
     <li><code>resetRunVariables</code></li>
     <li><code>resetLagLog</code></li>
     <li><code>closeAllMenus</code></li>
@@ -2215,6 +2223,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <p><a name="holderProvoke"></a></p>
 <h2>holderProvoke</h2>
+
+
+
+<p><a name="holderRespawn"></a></p>
+<h2>holderRespawn</h2>
 
 
 
@@ -2672,12 +2685,14 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>levelComplete</h2>
 
 <ul>
+    <li><code>makeAllDadsIntangible</code></li>
     <li><code>playCutscene</code></li>
     <li><code>processPendingDelays</code></li>
     <li><code>finalizeSpeedrunTimer</code></li>
     <li><code>deathless</code></li>
-    <li><code>winScreen</code></li>
+    <li><code>handleRunSummary</code></li>
     <li><code>switchToNextLevel</code></li>
+    <li><code>notifyHostOfLevelCompletion</code></li>
 </ul>
 
 
@@ -2813,6 +2828,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>powerSettings</code></li>
     <li><code>replaySelector</code></li>
     <li><code>retry</code></li>
+    <li><code>runSummary</code></li>
     <li><code>seedEntry</code></li>
     <li><code>settings</code></li>
     <li><code>settingsPresets</code></li>
@@ -3141,6 +3157,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>spawnOnDeath</code></li>
     <li><code>timeScale</code></li>
     <li><code>markShopkeeperDeath</code></li>
+    <li><code>handleRunSummary</code></li>
     <li><code>createTombstone</code></li>
     <li><code>activateSacrifice</code></li>
     <li><code>triggerKillEvent</code></li>
@@ -3191,6 +3208,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectDescentBegin</h2>
 
 <ul>
+    <li><code>forwardDescentToController</code></li>
     <li><code>activateDescent</code></li>
     <li><code>exitRequirement</code></li>
     <li><code>durationOverride</code></li>
@@ -3719,6 +3737,18 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="objectRespawn"></a></p>
+<h2>objectRespawn</h2>
+
+<ul>
+    <li><code>clearRunSummary</code></li>
+    <li><code>removeRespawnFlag</code></li>
+    <li><code>removeKillableFlag</code></li>
+    <li><code>restoreHealth</code></li>
+    <li><code>updateTangibility</code></li>
+</ul>
+
+
 <p><a name="objectReveal"></a></p>
 <h2>objectReveal</h2>
 
@@ -3881,8 +3911,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>checkShieldDamageBypass</code></li>
     <li><code>checkShieldDirection</code></li>
     <li><code>checkShieldFrameBypass</code></li>
-    <li><code>breakShield</code></li>
     <li><code>conductorInstrumentShieldBypass</code></li>
+    <li><code>shieldBreakOnBypass</code></li>
+    <li><code>shieldBreakOnHit</code></li>
     <li><code>applyShield</code></li>
     <li><code>beatDelayShield</code></li>
     <li><code>chargeShield</code></li>
@@ -4420,6 +4451,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>renderLevelCounter</code></li>
     <li><code>renderTargetPointer</code></li>
     <li><code>subtitles</code></li>
+    <li><code>renderRunSummaryPromptHUD</code></li>
     <li><code>renderSpectatorHUD</code></li>
     <li><code>textOverlay</code></li>
     <li><code>bossSplash</code></li>
@@ -4487,7 +4519,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>fastForwardSkipGameRender</code></li>
     <li><code>pauseSkipGameRender</code></li>
     <li><code>renderGame</code></li>
-    <li><code>winScreen</code></li>
     <li><code>renderLobby</code></li>
     <li><code>renderCutscene</code></li>
     <li><code>cutsceneSubtitles</code></li>
@@ -4737,6 +4768,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>broadcastChat</code></li>
     <li><code>broadcastInputs</code></li>
     <li><code>broadcastResource</code></li>
+    <li><code>forwardLevelCompletionNotification</code></li>
     <li><code>handleGameStateChange</code></li>
     <li><code>inputLockTimer</code></li>
     <li><code>receiveLocalCoopPlayerAttribute</code></li>
@@ -4862,6 +4894,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearFocusCache</code></li>
     <li><code>clearPerspectiveCache</code></li>
     <li><code>clearPlayerEntityCache</code></li>
+    <li><code>clearRunSummaryCache</code></li>
     <li><code>updateLevelBounds</code></li>
     <li><code>updateVisMap</code></li>
 </ul>
@@ -5168,9 +5201,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>customHotkey_PLAYER_LIST</code></li>
     <li><code>playerInput</code></li>
     <li><code>processReplayControls</code></li>
+    <li><code>updateRunSummary</code></li>
     <li><code>updateIdleSpectate</code></li>
     <li><code>processSpectatorMode</code></li>
     <li><code>updateFocusedPlayers</code></li>
+    <li><code>updateInstantReplay</code></li>
     <li><code>updateAnimationTimer</code></li>
     <li><code>processClientPendingDelays</code></li>
     <li><code>rollback</code></li>
