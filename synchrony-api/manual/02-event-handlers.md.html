@@ -44,6 +44,7 @@
   <li><a href="../modules/necro.audio.AudioLoop.html">necro.audio.AudioLoop</a></li>
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
+  <li><a href="../modules/necro.audio.MusicChange.html">necro.audio.MusicChange</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
   <li><a href="../modules/necro.audio.NoiseControl.html">necro.audio.NoiseControl</a></li>
   <li><a href="../modules/necro.audio.Sound.html">necro.audio.Sound</a></li>
@@ -162,6 +163,7 @@
   <li><a href="../modules/necro.game.data.object.CommonShrine.html">necro.game.data.object.CommonShrine</a></li>
   <li><a href="../modules/necro.game.data.player.PlayableCharacters.html">necro.game.data.player.PlayableCharacters</a></li>
   <li><a href="../modules/necro.game.data.resource.CutsceneDefinitions.html">necro.game.data.resource.CutsceneDefinitions</a></li>
+  <li><a href="../modules/necro.game.data.resource.GameDLC.html">necro.game.data.resource.GameDLC</a></li>
   <li><a href="../modules/necro.game.data.spell.CommonSpell.html">necro.game.data.spell.CommonSpell</a></li>
   <li><a href="../modules/necro.game.data.tile.MinimapTheme.html">necro.game.data.tile.MinimapTheme</a></li>
   <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
@@ -235,6 +237,7 @@
   <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
   <li><a href="../modules/necro.menu.mod.ModUpdateOverlay.html">necro.menu.mod.ModUpdateOverlay</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
+  <li><a href="../modules/necro.mod.ModDLC.html">necro.mod.ModDLC</a></li>
   <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
   <li><a href="../modules/necro.mod.ModGroup.html">necro.mod.ModGroup</a></li>
   <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
@@ -1223,7 +1226,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>namedItemOverrides</code></li>
     <li><code>weaponPostProcessing</code></li>
     <li><code>itemBans</code></li>
-    <li><code>uncertainty</code></li>
     <li><code>mystery</code></li>
 </ul>
 
@@ -1530,6 +1532,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>saveSettings</code></li>
     <li><code>cleanUpNecroLevelLibrary</code></li>
+    <li><code>saveImageCacheMetadata</code></li>
 </ul>
 
 
@@ -1748,6 +1751,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearMinimapFramebuffer</code></li>
     <li><code>itemHealOnLevelChange</code></li>
     <li><code>grantInvincibility</code></li>
+    <li><code>initMusicChangeData</code></li>
     <li><code>levelStartFrame</code></li>
     <li><code>updateSpectatorModeFlag</code></li>
     <li><code>resetTemporaryLevelVision</code></li>
@@ -2895,6 +2899,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyEntityProximityVolumeModifiers</code></li>
     <li><code>applyTileProximityVolumeModifiers</code></li>
     <li><code>preserveCoralRiffPostMortem</code></li>
+    <li><code>applyMusicChange</code></li>
 </ul>
 
 
@@ -2925,6 +2930,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>special</code></li>
     <li><code>coralRiffInstruments</code></li>
     <li><code>fortissimoleRap</code></li>
+    <li><code>necrodancerPhase2</code></li>
     <li><code>loadLipmap</code></li>
 </ul>
 
@@ -4212,6 +4218,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>subdivisionInnate</code></li>
     <li><code>suspendRhythmWhileSpectating</code></li>
     <li><code>suspendRhythmWhileDead</code></li>
+    <li><code>musicChange</code></li>
 </ul>
 
 
@@ -4584,6 +4591,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>runStateInit</h2>
 
 <ul>
+    <li><code>removeFromBossPool</code></li>
     <li><code>seenItems</code></li>
     <li><code>hardMode</code></li>
 </ul>
@@ -4896,6 +4904,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearPlayerEntityCache</code></li>
     <li><code>clearRunSummaryCache</code></li>
     <li><code>updateLevelBounds</code></li>
+    <li><code>updateMusicChangeActivationState</code></li>
     <li><code>updateVisMap</code></li>
 </ul>
 
@@ -5093,6 +5102,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadSettings</code></li>
     <li><code>importSettingsFromSaveFileXML</code></li>
     <li><code>registerModPortalDownloadPath</code></li>
+    <li><code>initializeGameDLC</code></li>
+    <li><code>initializeModDLC</code></li>
     <li><code>loadLatestModVersions</code></li>
     <li><code>loadMods</code></li>
     <li><code>loadGameContent</code></li>
@@ -5408,7 +5419,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>customPlayerAction_LobbyFadeout</code></li>
     <li><code>applyMissedBeats</code></li>
     <li><code>startCharge</code></li>
-    <li><code>controlDad</code></li>
     <li><code>controlPlayer</code></li>
     <li><code>processApparitions</code></li>
     <li><code>preAIFrame</code></li>
@@ -5498,6 +5508,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>activatePlayableCharacters</code></li>
+    <li><code>preActivateDads</code></li>
     <li><code>globalActivation</code></li>
     <li><code>targetNearestPlayer</code></li>
     <li><code>targetNearestHostileEntity</code></li>

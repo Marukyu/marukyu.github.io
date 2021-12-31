@@ -44,6 +44,7 @@
   <li><a href="../modules/necro.audio.AudioLoop.html">necro.audio.AudioLoop</a></li>
   <li><a href="../modules/necro.audio.Beatmap.html">necro.audio.Beatmap</a></li>
   <li><a href="../modules/necro.audio.Music.html">necro.audio.Music</a></li>
+  <li><a href="../modules/necro.audio.MusicChange.html">necro.audio.MusicChange</a></li>
   <li><a href="../modules/necro.audio.MusicLayers.html">necro.audio.MusicLayers</a></li>
   <li><a href="../modules/necro.audio.NoiseControl.html">necro.audio.NoiseControl</a></li>
   <li><a href="../modules/necro.audio.Sound.html">necro.audio.Sound</a></li>
@@ -162,6 +163,7 @@
   <li><a href="../modules/necro.game.data.object.CommonShrine.html">necro.game.data.object.CommonShrine</a></li>
   <li><a href="../modules/necro.game.data.player.PlayableCharacters.html">necro.game.data.player.PlayableCharacters</a></li>
   <li><a href="../modules/necro.game.data.resource.CutsceneDefinitions.html">necro.game.data.resource.CutsceneDefinitions</a></li>
+  <li><a href="../modules/necro.game.data.resource.GameDLC.html">necro.game.data.resource.GameDLC</a></li>
   <li><a href="../modules/necro.game.data.spell.CommonSpell.html">necro.game.data.spell.CommonSpell</a></li>
   <li><a href="../modules/necro.game.data.tile.MinimapTheme.html">necro.game.data.tile.MinimapTheme</a></li>
   <li><a href="../modules/necro.game.data.trap.CommonTrap.html">necro.game.data.trap.CommonTrap</a></li>
@@ -235,6 +237,7 @@
   <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
   <li><a href="../modules/necro.menu.mod.ModUpdateOverlay.html">necro.menu.mod.ModUpdateOverlay</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
+  <li><a href="../modules/necro.mod.ModDLC.html">necro.mod.ModDLC</a></li>
   <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
   <li><a href="../modules/necro.mod.ModGroup.html">necro.mod.ModGroup</a></li>
   <li><a href="../modules/necro.mod.ModImage.html">necro.mod.ModImage</a></li>
@@ -1084,6 +1087,7 @@
     <li><code>remoteSettings</code></li>
     <li><code>config</code></li>
     <li><code>externalLibraries</code></li>
+    <li><code>imageCache</code></li>
 </ul>
 
 
@@ -1294,6 +1298,7 @@
     <li><code>regeneration</code></li>
     <li><code>grantInvincibility</code></li>
     <li><code>bossFloor</code></li>
+    <li><code>musicChange</code></li>
     <li><code>frame</code></li>
     <li><code>updateSpectatorModeFlag</code></li>
     <li><code>perspective</code></li>
@@ -2682,6 +2687,7 @@
     <li><code>subdivisionItem</code></li>
     <li><code>spectator</code></li>
     <li><code>respawnPending</code></li>
+    <li><code>musicChange</code></li>
 </ul>
 
 
@@ -3126,6 +3132,7 @@
     <li><code>entityProximity</code></li>
     <li><code>tileProximity</code></li>
     <li><code>boss</code></li>
+    <li><code>musicChange</code></li>
 </ul>
 
 
@@ -4441,6 +4448,7 @@
     <li><code>subdivisionItem</code></li>
     <li><code>spectator</code></li>
     <li><code>respawnPending</code></li>
+    <li><code>musicChange</code></li>
 </ul>
 
 
@@ -4798,6 +4806,8 @@
 <h2>runStateInit</h2>
 
 <ul>
+    <li><code>levelGeneration</code></li>
+    <li><code>seenBosses</code></li>
     <li><code>seenItems</code></li>
     <li><code>extraModes</code></li>
 </ul>
@@ -5218,6 +5228,8 @@
     <li><code>window</code></li>
     <li><code>savefileImport</code></li>
     <li><code>modPath</code></li>
+    <li><code>dlc</code></li>
+    <li><code>modDLC</code></li>
     <li><code>modUpdate</code></li>
     <li><code>mods</code></li>
     <li><code>gameContent</code></li>
@@ -5551,6 +5563,7 @@
 <ul>
     <li><code>cachePositions</code></li>
     <li><code>preActivatePlayers</code></li>
+    <li><code>preActivateDads</code></li>
     <li><code>globalActivation</code></li>
     <li><code>targetPlayer</code></li>
     <li><code>targetHostile</code></li>
