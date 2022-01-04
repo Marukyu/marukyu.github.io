@@ -930,7 +930,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>contentLoad</h2>
 
 <ul>
-    <li><code>clearRandomizerChannel</code></li>
     <li><code>loadSoundXML</code></li>
     <li><code>entitySchema</code></li>
     <li><code>loadTileTypes</code></li>
@@ -1151,7 +1150,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>entitySchemaLoadEnemy</h2>
 
 <ul>
-    <li><code>randomizer</code></li>
     <li><code>commonAttributes</code></li>
     <li><code>enemySprite</code></li>
     <li><code>mirroredSprites</code></li>
@@ -1163,7 +1161,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>soundEffects</code></li>
     <li><code>namedEnemyOverrides</code></li>
     <li><code>enemyPools</code></li>
-    <li><code>mystery</code></li>
     <li><code>upgrades</code></li>
     <li><code>addRandomComponent</code></li>
     <li><code>enemyPostProcessing</code></li>
@@ -1226,7 +1223,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>namedItemOverrides</code></li>
     <li><code>weaponPostProcessing</code></li>
     <li><code>itemBans</code></li>
-    <li><code>mystery</code></li>
 </ul>
 
 
@@ -1355,10 +1351,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <p><a name="entitySchemaLoadNamedEntity"></a></p>
 <h2>entitySchemaLoadNamedEntity</h2>
 
-<ul>
-    <li><code>mysteryFireball</code></li>
-    <li><code>mysteryThrone</code></li>
-</ul>
 
 
 <p><a name="entitySchemaLoadNamedItem"></a></p>
@@ -1477,8 +1469,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>addCommonCharacterComponents</code></li>
     <li><code>addCharacterGraphics</code></li>
     <li><code>addCharacterSounds</code></li>
-    <li><code>addNoReturnComponents</code></li>
-    <li><code>addPhasingComponents</code></li>
     <li><code>addCharacterSpecificData</code></li>
     <li><code>dorianDad</code></li>
     <li><code>nocturnaBat</code></li>
@@ -1809,7 +1799,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearCurrentLevelInfo</code></li>
     <li><code>suppressSounds</code></li>
     <li><code>clearObjects</code></li>
-    <li><code>hardMode</code></li>
     <li><code>initializePendingObjectList</code></li>
     <li><code>resetPlayerEntityList</code></li>
     <li><code>resetSpectatorHUD</code></li>
@@ -1867,11 +1856,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>default</code></li>
     <li><code>dancepad</code></li>
     <li><code>deathless</code></li>
-    <li><code>noReturn</code></li>
-    <li><code>hard</code></li>
-    <li><code>phasing</code></li>
-    <li><code>randomizer</code></li>
-    <li><code>mystery</code></li>
 </ul>
 
 
@@ -2721,6 +2705,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>makeWire</code></li>
     <li><code>loadEntities</code></li>
     <li><code>initialItems</code></li>
+    <li><code>fallbackSentries</code></li>
     <li><code>playLevelMusic</code></li>
     <li><code>bossFloorEnter</code></li>
     <li><code>overrideTrainingStairs</code></li>
@@ -3533,8 +3518,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>currencyBase</code></li>
-    <li><code>minimumCurrencyDrop</code></li>
+    <li><code>minimumCurrencyDropEarly</code></li>
     <li><code>currencyMultiply</code></li>
+    <li><code>minimumCurrencyDrop</code></li>
     <li><code>dropCurrencyOnDeath</code></li>
     <li><code>increaseGrooveChain</code></li>
     <li><code>resetDamageCountdown</code></li>
@@ -3703,7 +3689,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectPreConvert</h2>
 
 <ul>
-    <li><code>randomizer</code></li>
     <li><code>detachItemBeforeConverting</code></li>
     <li><code>despawnAttachment</code></li>
     <li><code>soundPreConvert</code></li>
@@ -3839,8 +3824,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyZoneDependentActivationRadius</code></li>
     <li><code>kingCongaThrone</code></li>
     <li><code>makeSecretShop</code></li>
-    <li><code>noReturn</code></li>
-    <li><code>phasing</code></li>
     <li><code>spawnAttachment</code></li>
     <li><code>spawnBells</code></li>
     <li><code>spawnConductorFirepigs</code></li>
@@ -4593,7 +4576,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>removeFromBossPool</code></li>
     <li><code>seenItems</code></li>
-    <li><code>hardMode</code></li>
 </ul>
 
 
@@ -5153,7 +5135,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>trail</code></li>
     <li><code>warhammer</code></li>
     <li><code>whip</code></li>
-    <li><code>mysteryShovel</code></li>
 </ul>
 
 
