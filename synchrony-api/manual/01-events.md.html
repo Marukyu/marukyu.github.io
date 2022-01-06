@@ -91,6 +91,7 @@
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.config.i18n.ScriptTranslationParser.html">necro.config.i18n.ScriptTranslationParser</a></li>
+  <li><a href="../modules/necro.config.i18n.TextPool.html">necro.config.i18n.TextPool</a></li>
   <li><a href="../modules/necro.config.i18n.Translation.html">necro.config.i18n.Translation</a></li>
   <li><a href="../modules/necro.config.i18n.TranslationCSV.html">necro.config.i18n.TranslationCSV</a></li>
   <li><a href="../modules/necro.config.i18n.TranslationTemplate.html">necro.config.i18n.TranslationTemplate</a></li>
@@ -156,6 +157,7 @@
   <li><a href="../modules/necro.game.data.SubtitlesXML.html">necro.game.data.SubtitlesXML</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
   <li><a href="../modules/necro.game.data.enemy.CommonEnemy.html">necro.game.data.enemy.CommonEnemy</a></li>
+  <li><a href="../modules/necro.game.data.i18n.LobbyTextPool.html">necro.game.data.i18n.LobbyTextPool</a></li>
   <li><a href="../modules/necro.game.data.item.CommonItem.html">necro.game.data.item.CommonItem</a></li>
   <li><a href="../modules/necro.game.data.item.weapon.CommonWeapon.html">necro.game.data.item.weapon.CommonWeapon</a></li>
   <li><a href="../modules/necro.game.data.item.weapon.CustomWeapons.html">necro.game.data.item.weapon.CustomWeapons</a></li>
@@ -214,6 +216,7 @@
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.system.WorldLabel.html">necro.game.system.WorldLabel</a></li>
   <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
@@ -938,6 +941,7 @@
     <li><code>deleteDeadEntities</code></li>
     <li><code>updateECS</code></li>
     <li><code>clearCache</code></li>
+    <li><code>postProcessEntities</code></li>
     <li><code>snapshots</code></li>
 </ul>
 
@@ -2330,6 +2334,7 @@
     <li><code>sizeModifier</code></li>
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
+    <li><code>label</code></li>
     <li><code>sound</code></li>
     <li><code>audioLoop</code></li>
     <li><code>activationRange</code></li>
@@ -2711,6 +2716,16 @@
     <li><code>item</code></li>
     <li><code>apparition</code></li>
     <li><code>follower</code></li>
+</ul>
+
+
+<p><a name="holderUpdateTextLabel"></a></p>
+<h2>holderUpdateTextLabel</h2>
+
+<ul>
+    <li><code>entityLookup</code></li>
+    <li><code>localizable</code></li>
+    <li><code>apply</code></li>
 </ul>
 
 
@@ -4092,6 +4107,7 @@
     <li><code>sizeModifier</code></li>
     <li><code>tileEffects</code></li>
     <li><code>sprite</code></li>
+    <li><code>label</code></li>
     <li><code>sound</code></li>
     <li><code>audioLoop</code></li>
     <li><code>activationRange</code></li>
@@ -4473,6 +4489,16 @@
     <li><code>item</code></li>
     <li><code>apparition</code></li>
     <li><code>follower</code></li>
+</ul>
+
+
+<p><a name="objectUpdateTextLabel"></a></p>
+<h2>objectUpdateTextLabel</h2>
+
+<ul>
+    <li><code>entityLookup</code></li>
+    <li><code>localizable</code></li>
+    <li><code>apply</code></li>
 </ul>
 
 
@@ -5061,6 +5087,7 @@
     <li><code>entities</code></li>
     <li><code>globals</code></li>
     <li><code>clearCache</code></li>
+    <li><code>remote</code></li>
 </ul>
 
 
@@ -5071,6 +5098,17 @@
     <li><code>entities</code></li>
     <li><code>globals</code></li>
     <li><code>clearCache</code></li>
+    <li><code>remote</code></li>
+</ul>
+
+
+<p><a name="snapshotResync"></a></p>
+<h2>snapshotResync</h2>
+
+<ul>
+    <li><code>labels</code></li>
+    <li><code>sprites</code></li>
+    <li><code>spriteOverrides</code></li>
 </ul>
 
 
@@ -5081,6 +5119,7 @@
     <li><code>entities</code></li>
     <li><code>globals</code></li>
     <li><code>clearCache</code></li>
+    <li><code>remote</code></li>
 </ul>
 
 
@@ -5265,6 +5304,16 @@
 
 
 
+<p><a name="textPoolUpdate"></a></p>
+<h2>textPoolUpdate</h2>
+
+<ul>
+    <li><code>init</code></li>
+    <li><code>register</code></li>
+    <li><code>finalize</code></li>
+</ul>
+
+
 <p><a name="tick"></a></p>
 <h2>tick</h2>
 
@@ -5430,6 +5479,7 @@
 <ul>
     <li><code>entities</code></li>
     <li><code>settings</code></li>
+    <li><code>textPool</code></li>
 </ul>
 
 

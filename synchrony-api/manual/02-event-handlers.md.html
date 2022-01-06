@@ -91,6 +91,7 @@
   <li><a href="../modules/necro.config.SettingsStorage.html">necro.config.SettingsStorage</a></li>
   <li><a href="../modules/necro.config.Theme.html">necro.config.Theme</a></li>
   <li><a href="../modules/necro.config.i18n.ScriptTranslationParser.html">necro.config.i18n.ScriptTranslationParser</a></li>
+  <li><a href="../modules/necro.config.i18n.TextPool.html">necro.config.i18n.TextPool</a></li>
   <li><a href="../modules/necro.config.i18n.Translation.html">necro.config.i18n.Translation</a></li>
   <li><a href="../modules/necro.config.i18n.TranslationCSV.html">necro.config.i18n.TranslationCSV</a></li>
   <li><a href="../modules/necro.config.i18n.TranslationTemplate.html">necro.config.i18n.TranslationTemplate</a></li>
@@ -156,6 +157,7 @@
   <li><a href="../modules/necro.game.data.SubtitlesXML.html">necro.game.data.SubtitlesXML</a></li>
   <li><a href="../modules/necro.game.data.XMLMapping.html">necro.game.data.XMLMapping</a></li>
   <li><a href="../modules/necro.game.data.enemy.CommonEnemy.html">necro.game.data.enemy.CommonEnemy</a></li>
+  <li><a href="../modules/necro.game.data.i18n.LobbyTextPool.html">necro.game.data.i18n.LobbyTextPool</a></li>
   <li><a href="../modules/necro.game.data.item.CommonItem.html">necro.game.data.item.CommonItem</a></li>
   <li><a href="../modules/necro.game.data.item.weapon.CommonWeapon.html">necro.game.data.item.weapon.CommonWeapon</a></li>
   <li><a href="../modules/necro.game.data.item.weapon.CustomWeapons.html">necro.game.data.item.weapon.CustomWeapons</a></li>
@@ -214,6 +216,7 @@
   <li><a href="../modules/necro.game.system.Snapshot.html">necro.game.system.Snapshot</a></li>
   <li><a href="../modules/necro.game.system.StatusEffect.html">necro.game.system.StatusEffect</a></li>
   <li><a href="../modules/necro.game.system.Swipe.html">necro.game.system.Swipe</a></li>
+  <li><a href="../modules/necro.game.system.WorldLabel.html">necro.game.system.WorldLabel</a></li>
   <li><a href="../modules/necro.game.tile.Area.html">necro.game.tile.Area</a></li>
   <li><a href="../modules/necro.game.tile.Collision.html">necro.game.tile.Collision</a></li>
   <li><a href="../modules/necro.game.tile.Connectivity.html">necro.game.tile.Connectivity</a></li>
@@ -930,6 +933,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>contentLoad</h2>
 
 <ul>
+    <li><code>clearRandomizerChannel</code></li>
     <li><code>loadSoundXML</code></li>
     <li><code>entitySchema</code></li>
     <li><code>loadTileTypes</code></li>
@@ -1073,6 +1077,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>invalidateObjectSelectorCache</code></li>
     <li><code>skipOverdueBeats</code></li>
     <li><code>updatePlayerCollisions</code></li>
+    <li><code>updateWorldLabels</code></li>
     <li><code>resetSnapshots</code></li>
 </ul>
 
@@ -1141,6 +1146,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>components</code></li>
+    <li><code>Amplified_loadAmplifiedXMLData</code></li>
     <li><code>loadEntitesFromGameXML</code></li>
     <li><code>loadCustomEntites</code></li>
 </ul>
@@ -1150,6 +1156,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>entitySchemaLoadEnemy</h2>
 
 <ul>
+    <li><code>randomizer</code></li>
     <li><code>commonAttributes</code></li>
     <li><code>enemySprite</code></li>
     <li><code>mirroredSprites</code></li>
@@ -1161,6 +1168,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>soundEffects</code></li>
     <li><code>namedEnemyOverrides</code></li>
     <li><code>enemyPools</code></li>
+    <li><code>mystery</code></li>
     <li><code>upgrades</code></li>
     <li><code>addRandomComponent</code></li>
     <li><code>enemyPostProcessing</code></li>
@@ -1223,6 +1231,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>namedItemOverrides</code></li>
     <li><code>weaponPostProcessing</code></li>
     <li><code>itemBans</code></li>
+    <li><code>Amplified_uncertainty</code></li>
+    <li><code>mystery</code></li>
 </ul>
 
 
@@ -1345,12 +1355,17 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadWraith</code></li>
     <li><code>loadYeti</code></li>
     <li><code>loadZombie</code></li>
+    <li><code>Amplified_oozeGolemSingleHit</code></li>
 </ul>
 
 
 <p><a name="entitySchemaLoadNamedEntity"></a></p>
 <h2>entitySchemaLoadNamedEntity</h2>
 
+<ul>
+    <li><code>mysteryFireball</code></li>
+    <li><code>mysteryThrone</code></li>
+</ul>
 
 
 <p><a name="entitySchemaLoadNamedItem"></a></p>
@@ -1459,6 +1474,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadGrenade</code></li>
     <li><code>weaponMaterialElectric</code></li>
     <li><code>weaponMaterialJeweled</code></li>
+    <li><code>Amplified_ringOfCourageDamageUp</code></li>
+    <li><code>Amplified_ringOfManaCooldown</code></li>
+    <li><code>Amplified_ringOfWonderGoldDrop</code></li>
 </ul>
 
 
@@ -1469,6 +1487,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>addCommonCharacterComponents</code></li>
     <li><code>addCharacterGraphics</code></li>
     <li><code>addCharacterSounds</code></li>
+    <li><code>addNoReturnComponents</code></li>
+    <li><code>addPhasingComponents</code></li>
     <li><code>addCharacterSpecificData</code></li>
     <li><code>dorianDad</code></li>
     <li><code>nocturnaBat</code></li>
@@ -1799,6 +1819,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearCurrentLevelInfo</code></li>
     <li><code>suppressSounds</code></li>
     <li><code>clearObjects</code></li>
+    <li><code>hardMode</code></li>
     <li><code>initializePendingObjectList</code></li>
     <li><code>resetPlayerEntityList</code></li>
     <li><code>resetSpectatorHUD</code></li>
@@ -1856,6 +1877,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>default</code></li>
     <li><code>dancepad</code></li>
     <li><code>deathless</code></li>
+    <li><code>noReturn</code></li>
+    <li><code>hard</code></li>
+    <li><code>phasing</code></li>
+    <li><code>randomizer</code></li>
+    <li><code>mystery</code></li>
 </ul>
 
 
@@ -2416,6 +2442,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <p><a name="holderUpdateTangibility"></a></p>
 <h2>holderUpdateTangibility</h2>
+
+
+
+<p><a name="holderUpdateTextLabel"></a></p>
+<h2>holderUpdateTextLabel</h2>
 
 
 
@@ -3689,6 +3720,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectPreConvert</h2>
 
 <ul>
+    <li><code>randomizer</code></li>
     <li><code>detachItemBeforeConverting</code></li>
     <li><code>despawnAttachment</code></li>
     <li><code>soundPreConvert</code></li>
@@ -3818,12 +3850,15 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>selectRandomOffset</code></li>
     <li><code>selectRandomOrientation</code></li>
     <li><code>selectRandomSpriteVariant</code></li>
+    <li><code>initializeWorldLabel</code></li>
     <li><code>reveal</code></li>
     <li><code>voiceSpawn</code></li>
     <li><code>startAudioLoop</code></li>
     <li><code>applyZoneDependentActivationRadius</code></li>
     <li><code>kingCongaThrone</code></li>
     <li><code>makeSecretShop</code></li>
+    <li><code>noReturn</code></li>
+    <li><code>phasing</code></li>
     <li><code>spawnAttachment</code></li>
     <li><code>spawnBells</code></li>
     <li><code>spawnConductorFirepigs</code></li>
@@ -4229,6 +4264,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 </ul>
 
 
+<p><a name="objectUpdateTextLabel"></a></p>
+<h2>objectUpdateTextLabel</h2>
+
+<ul>
+    <li><code>performEntityLookup</code></li>
+    <li><code>getLocalizedString</code></li>
+    <li><code>applyText</code></li>
+</ul>
+
+
 <p><a name="objectUpdateWireLevel"></a></p>
 <h2>objectUpdateWireLevel</h2>
 
@@ -4576,6 +4621,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>removeFromBossPool</code></li>
     <li><code>seenItems</code></li>
+    <li><code>hardMode</code></li>
 </ul>
 
 
@@ -4888,6 +4934,17 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateLevelBounds</code></li>
     <li><code>updateMusicChangeActivationState</code></li>
     <li><code>updateVisMap</code></li>
+    <li><code>applyRemotePostProcessing</code></li>
+</ul>
+
+
+<p><a name="snapshotResync"></a></p>
+<h2>snapshotResync</h2>
+
+<ul>
+    <li><code>updateWorldLabels</code></li>
+    <li><code>resetObjectSprites</code></li>
+    <li><code>updateVocalDependentSprites</code></li>
 </ul>
 
 
@@ -5135,6 +5192,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>trail</code></li>
     <li><code>warhammer</code></li>
     <li><code>whip</code></li>
+    <li><code>mysteryShovel</code></li>
 </ul>
 
 
@@ -5152,6 +5210,16 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>reloadCustomEntities</code></li>
     <li><code>reloadTilesTypes</code></li>
+</ul>
+
+
+<p><a name="textPoolUpdate"></a></p>
+<h2>textPoolUpdate</h2>
+
+<ul>
+    <li><code>label.boss.kingConga.introWarning</code></li>
+    <li><code>label.boss.necroDancer1.hintUseAllWalls</code></li>
+    <li><code>label.lobby.</code></li>
 </ul>
 
 
@@ -5336,6 +5404,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>traceLocalizableEntitySchemaStrings</code></li>
     <li><code>traceLocalizableSettings</code></li>
+    <li><code>traceTextPoolEntries</code></li>
 </ul>
 
 
