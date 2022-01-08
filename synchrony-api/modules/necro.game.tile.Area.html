@@ -483,6 +483,10 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#isHome">isHome (homeOwner, visitor, threshold)</a></td>
+	<td class="summary">Returns true if <code>visitor</code> is within <code>homeOwner</code>’s homeArea, false otherwise.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#iterateBorder">iterateBorder (rect, outset)</a></td>
 	<td class="summary">
 
 </td>
@@ -534,9 +538,8 @@
     <strong>isHome (homeOwner, visitor, threshold)</strong>
     </dt>
     <dd>
-
-
-
+    Returns true if <code>visitor</code> is within <code>homeOwner</code>’s homeArea, false otherwise.
+ Excludes the area’s edge by default; use threshold = 1 to include the edges.
 
 
     <h3>Parameters:</h3>
@@ -552,6 +555,35 @@
 
         </li>
         <li><span class="parameter">threshold</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "iterateBorder"></a>
+    <strong>iterateBorder (rect, outset)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">rect</span>
+
+
+
+        </li>
+        <li><span class="parameter">outset</span>
 
 
 
