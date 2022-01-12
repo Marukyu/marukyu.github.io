@@ -496,7 +496,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>deathMetalPhase4</code></li>
     <li><code>flee</code></li>
     <li><code>fleeDigging</code></li>
-    <li><code>fortissimolePhase1</code></li>
     <li><code>goHome</code></li>
     <li><code>linear</code></li>
     <li><code>liquidSeek</code></li>
@@ -1721,6 +1720,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetMusicLayerFlyaways</code></li>
     <li><code>resetRunSummary</code></li>
     <li><code>resetTextOverlay</code></li>
+    <li><code>resetWireFrameYMap</code></li>
     <li><code>respawnOnLevelTransition</code></li>
     <li><code>spawnPlayers</code></li>
     <li><code>loadLevel</code></li>
@@ -1774,6 +1774,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>despawnObjects</code></li>
     <li><code>updateCurrencyCounterHUD</code></li>
     <li><code>processPendingObjects</code></li>
+    <li><code>updateSessionMetadata</code></li>
     <li><code>createInitialSnapshot</code></li>
     <li><code>resetTickDelta</code></li>
 </ul>
@@ -1800,6 +1801,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>pauseLoopingSounds</code></li>
     <li><code>pauseMusic</code></li>
     <li><code>handleReplaySeek</code></li>
+    <li><code>updateSessionMetadata</code></li>
 </ul>
 
 
@@ -1836,6 +1838,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetRhythmSettings</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>unsuppressSounds</code></li>
+    <li><code>updateSessionMetadata</code></li>
 </ul>
 
 
@@ -1856,6 +1859,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resumeLoopingSounds</code></li>
     <li><code>resumeMusic</code></li>
     <li><code>handleReplaySeek</code></li>
+    <li><code>updateSessionMetadata</code></li>
 </ul>
 
 
@@ -3826,6 +3830,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initializeObjectHomePosition</code></li>
     <li><code>initializeObjectPosition</code></li>
     <li><code>initializeObjectPrevPosition</code></li>
+    <li><code>aiFortissimole</code></li>
     <li><code>freezeMonkeyLikes</code></li>
     <li><code>lobbyToggleable</code></li>
     <li><code>setPriceTag</code></li>
@@ -4342,6 +4347,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>trampleAIOverride</code></li>
     <li><code>spawnOnCharge</code></li>
     <li><code>startCharge</code></li>
+    <li><code>fortissimolePhase1</code></li>
     <li><code>attackWhenPossible</code></li>
     <li><code>parryCounterAttack</code></li>
     <li><code>beatDelay</code></li>
@@ -4614,6 +4620,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetInitialPlayerCache</code></li>
     <li><code>updateModList</code></li>
     <li><code>updateResourceVersion</code></li>
+    <li><code>updateSessionMetadataModList</code></li>
 </ul>
 
 
@@ -4815,6 +4822,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>receiveRoomAttribute</code></li>
     <li><code>removeLocalCoopPlayer</code></li>
     <li><code>sequenceSync</code></li>
+    <li><code>serverAttribute</code></li>
     <li><code>snapshotBroadcast</code></li>
     <li><code>snapshotRequest</code></li>
     <li><code>snapshotResponse</code></li>

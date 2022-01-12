@@ -544,6 +544,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#castTrapWalls">castTrapWalls</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#castler">castler</a></td>
 	<td class="summary">DB</td>
 	</tr>
@@ -669,6 +675,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#firstMove">firstMove</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#fortissimoleAI">fortissimoleAI</a></td>
 	<td class="summary">
 
 </td>
@@ -1263,6 +1275,32 @@
 
 </dd>
     <dt>
+    <a name = "castTrapWalls"></a>
+    <strong>castTrapWalls</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">interval</span>
+         constant int
+         (<em>default</em> 16)
+        </li>
+        <li><span class="parameter">counter</span>
+          int
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "castler"></a>
     <strong>castler</strong>
     </dt>
@@ -1681,6 +1719,9 @@
     <dd>
 
 
+<p><em>default</em>:</p>
+<pre><code>{"deadRingerBell1", "deadRingerBell2", "deadRingerBell3", "deadRingerBell4"}
+</code></pre>
 
 
 
@@ -1704,6 +1745,17 @@
         <li><span class="parameter">remainingTurns</span>
           int
          (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">minibosses</span>
+
+<p> constant table <br/>
+<em>default</em>:</p>
+<pre><code>{"Dragon", "Ogre", "Minotaur", "Nightmare"}
+</code></pre>
+
+        </li>
+        <li><span class="parameter">sounds</span>
+         constant table
         </li>
     </ul>
 
@@ -1931,6 +1983,22 @@
 
 </dd>
     <dt>
+    <a name = "fortissimoleAI"></a>
+    <strong>fortissimoleAI</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "fortissimoleBurrowing"></a>
     <strong>fortissimoleBurrowing</strong>
     </dt>
@@ -1979,6 +2047,14 @@
 
 
     <ul>
+        <li><span class="parameter">speakerX</span>
+          int
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">speakerY</span>
+          int
+         (<em>default</em> 0)
+        </li>
         <li><span class="parameter">sound</span>
          constant string
          (<em>default</em> "")
@@ -2537,10 +2613,6 @@
 
 
     <ul>
-        <li><span class="parameter">dy</span>
-         constant int
-         (<em>default</em> 0)
-        </li>
         <li><span class="parameter">targetType</span>
          constant string
          (<em>default</em> "")
