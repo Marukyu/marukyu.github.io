@@ -1746,7 +1746,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>initializeRhythmSettings</code></li>
     <li><code>resetSongEnd</code></li>
     <li><code>syncMusicTime</code></li>
-    <li><code>updateMusicLayerVolumes</code></li>
     <li><code>initPriceTags</code></li>
     <li><code>disableTweens</code></li>
     <li><code>resetGrooveChainImmunity</code></li>
@@ -2154,6 +2153,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>checkGluttony</code></li>
     <li><code>consumeGluttonyItem</code></li>
+    <li><code>disableHealthLoss</code></li>
 </ul>
 
 
@@ -2742,8 +2742,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>loadEntities</code></li>
     <li><code>initialItems</code></li>
     <li><code>fallbackSentries</code></li>
-    <li><code>playLevelMusic</code></li>
     <li><code>bossFloorEnter</code></li>
+    <li><code>playLevelMusic</code></li>
     <li><code>overrideTrainingStairs</code></li>
 </ul>
 
@@ -2929,6 +2929,9 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>musicPlay</h2>
 
 <ul>
+    <li><code>updateMusicLayerVolumes</code></li>
+    <li><code>updateAudioFilter</code></li>
+    <li><code>playAudioStreams</code></li>
     <li><code>resetPlayerBeatmaps</code></li>
 </ul>
 
