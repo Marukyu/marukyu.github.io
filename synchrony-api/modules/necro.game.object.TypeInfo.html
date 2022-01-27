@@ -80,7 +80,7 @@
   <li><a href="../modules/necro.client.replay.Replay.html">necro.client.replay.Replay</a></li>
   <li><a href="../modules/necro.client.replay.ReplayControls.html">necro.client.replay.ReplayControls</a></li>
   <li><a href="../modules/necro.client.replay.ReplayPlayer.html">necro.client.replay.ReplayPlayer</a></li>
-  <li><strong>necro.client.replay.ReplayRecorder</strong></li>
+  <li><a href="../modules/necro.client.replay.ReplayRecorder.html">necro.client.replay.ReplayRecorder</a></li>
   <li><a href="../modules/necro.client.replay.ReplaySeek.html">necro.client.replay.ReplaySeek</a></li>
   <li><a href="../modules/necro.config.Controls.html">necro.config.Controls</a></li>
   <li><a href="../modules/necro.config.GameWindow.html">necro.config.GameWindow</a></li>
@@ -195,7 +195,7 @@
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
   <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
   <li><a href="../modules/necro.game.object.Tangibility.html">necro.game.object.Tangibility</a></li>
-  <li><a href="../modules/necro.game.object.TypeInfo.html">necro.game.object.TypeInfo</a></li>
+  <li><strong>necro.game.object.TypeInfo</strong></li>
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
@@ -467,7 +467,7 @@
 
 <div id="content">
 
-<h1>Module <code>necro.client.replay.ReplayRecorder</code></h1>
+<h1>Module <code>necro.game.object.TypeInfo</code></h1>
 <p>
 
 </p>
@@ -479,55 +479,19 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#beginLevel">beginLevel ()</a></td>
+	<td class="name" nowrap><a href="#getEntityTypeCode">getEntityTypeCode (entityTypeName)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#finalize">finalize ()</a></td>
+	<td class="name" nowrap><a href="#lookUpEntityTypeByCode">lookUpEntityTypeByCode (entityTypeCode)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#finishLevel">finishLevel (inputs)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getDuration">getDuration ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getPlayerCount">getPlayerCount ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#getReplayData">getReplayData ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#isActive">isActive ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#start">start ()</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#stop">stop ()</a></td>
+	<td class="name" nowrap><a href="#updateEntityEventCache">updateEntityEventCache (entity)</a></td>
 	<td class="summary">
 
 </td>
@@ -542,40 +506,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "beginLevel"></a>
-    <strong>beginLevel ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "finalize"></a>
-    <strong>finalize ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "finishLevel"></a>
-    <strong>finishLevel (inputs)</strong>
+    <a name = "getEntityTypeCode"></a>
+    <strong>getEntityTypeCode (entityTypeName)</strong>
     </dt>
     <dd>
 
@@ -585,7 +517,7 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">inputs</span>
+        <li><span class="parameter">entityTypeName</span>
 
 
 
@@ -598,8 +530,8 @@
 
 </dd>
     <dt>
-    <a name = "getDuration"></a>
-    <strong>getDuration ()</strong>
+    <a name = "lookUpEntityTypeByCode"></a>
+    <strong>lookUpEntityTypeByCode (entityTypeCode)</strong>
     </dt>
     <dd>
 
@@ -607,6 +539,14 @@
 
 
 
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entityTypeCode</span>
+
+
+
+        </li>
+    </ul>
 
 
 
@@ -614,8 +554,8 @@
 
 </dd>
     <dt>
-    <a name = "getPlayerCount"></a>
-    <strong>getPlayerCount ()</strong>
+    <a name = "updateEntityEventCache"></a>
+    <strong>updateEntityEventCache (entity)</strong>
     </dt>
     <dd>
 
@@ -623,70 +563,14 @@
 
 
 
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
 
 
 
-
-
-</dd>
-    <dt>
-    <a name = "getReplayData"></a>
-    <strong>getReplayData ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "isActive"></a>
-    <strong>isActive ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "start"></a>
-    <strong>start ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "stop"></a>
-    <strong>stop ()</strong>
-    </dt>
-    <dd>
-
-
-
-
-
+        </li>
+    </ul>
 
 
 

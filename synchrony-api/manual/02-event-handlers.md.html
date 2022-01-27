@@ -195,6 +195,7 @@
   <li><a href="../modules/necro.game.object.ObjectEvents.html">necro.game.object.ObjectEvents</a></li>
   <li><a href="../modules/necro.game.object.ObjectSelector.html">necro.game.object.ObjectSelector</a></li>
   <li><a href="../modules/necro.game.object.Tangibility.html">necro.game.object.Tangibility</a></li>
+  <li><a href="../modules/necro.game.object.TypeInfo.html">necro.game.object.TypeInfo</a></li>
   <li><a href="../modules/necro.game.spell.Spell.html">necro.game.spell.Spell</a></li>
   <li><a href="../modules/necro.game.spell.SpellCheck.html">necro.game.spell.SpellCheck</a></li>
   <li><a href="../modules/necro.game.spell.SpellTargeting.html">necro.game.spell.SpellTargeting</a></li>
@@ -1061,6 +1062,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>deleteDeadEntities</code></li>
+    <li><code>rebuildTypeCodeMap</code></li>
     <li><code>updateEntities</code></li>
     <li><code>clearAnimationCache</code></li>
     <li><code>clearCurrencyCache</code></li>
@@ -1076,6 +1078,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>invalidateObjectSelectorCache</code></li>
     <li><code>skipOverdueBeats</code></li>
     <li><code>updatePlayerCollisions</code></li>
+    <li><code>updateEntityEventCaches</code></li>
     <li><code>updateWorldLabels</code></li>
     <li><code>resetSnapshots</code></li>
 </ul>
@@ -2537,6 +2540,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>equip</code></li>
+    <li><code>addEventCacheKeySegment</code></li>
     <li><code>updateWired</code></li>
     <li><code>updateWiredImmunity</code></li>
     <li><code>updateDwarfism</code></li>
@@ -2629,6 +2633,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>unequip</code></li>
+    <li><code>removeEventCacheKeySegment</code></li>
     <li><code>updateWired</code></li>
     <li><code>updateWiredImmunity</code></li>
     <li><code>disableRadialVision</code></li>
@@ -4949,6 +4954,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>loadEntities</code></li>
+    <li><code>loadObjectMap</code></li>
     <li><code>loadGlobalVariables</code></li>
     <li><code>clearFocusCache</code></li>
     <li><code>clearPerspectiveCache</code></li>
@@ -4977,6 +4983,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>saveEntities</code></li>
+    <li><code>saveObjectMap</code></li>
     <li><code>saveGlobalVariables</code></li>
 </ul>
 
