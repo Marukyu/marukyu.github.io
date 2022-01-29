@@ -483,6 +483,10 @@
 	<td class="summary">Increases the volume of a music layer while the listener is near the entity</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#musicLayerCheckOpenRoom">musicLayerCheckOpenRoom</a></td>
+	<td class="summary">Reduces the volume added by <a href="../components/MusicComponents.html#musicLayerAddVolume">musicLayerAddVolume</a> if the entity is in a separate, closed-off room</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#musicLayerDeactivateOnProvoke">musicLayerDeactivateOnProvoke</a></td>
 	<td class="summary">Upon provocation, disables any active music layer modifiers</td>
 	</tr>
@@ -522,6 +526,10 @@
           bool
          (<em>default</em> true)
         </li>
+        <li><span class="parameter">effective</span>
+          bool
+         (<em>default</em> false)
+        </li>
         <li><span class="parameter">layerTag</span>
          constant int
          (<em>default</em> 0)
@@ -539,6 +547,26 @@
          (<em>default</em> 1)
         </li>
         <li><span class="parameter">outerVolume</span>
+         constant float
+         (<em>default</em> 1)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "musicLayerCheckOpenRoom"></a>
+    <strong>musicLayerCheckOpenRoom</strong>
+    </dt>
+    <dd>
+    Reduces the volume added by <a href="../components/MusicComponents.html#musicLayerAddVolume">musicLayerAddVolume</a> if the entity is in a separate, closed-off room
+
+
+    <ul>
+        <li><span class="parameter">volume</span>
          constant float
          (<em>default</em> 1)
         </li>
