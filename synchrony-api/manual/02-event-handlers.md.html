@@ -240,6 +240,7 @@
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
   <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
   <li><a href="../modules/necro.menu.mod.ModUpdateOverlay.html">necro.menu.mod.ModUpdateOverlay</a></li>
+  <li><a href="../modules/necro.menu.network.MultiplayerMenu.html">necro.menu.network.MultiplayerMenu</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
   <li><a href="../modules/necro.mod.ModDLC.html">necro.mod.ModDLC</a></li>
   <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
@@ -757,6 +758,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetGameState</code></li>
     <li><code>resetFastForward</code></li>
     <li><code>closeConnection</code></li>
+    <li><code>resetNetworkClock</code></li>
     <li><code>disconnectMenu</code></li>
     <li><code>loadLatestModVersions</code></li>
     <li><code>markRemoteModsUnloaded</code></li>
@@ -4611,7 +4613,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>endSoundEffectSuppression</code></li>
     <li><code>updateCamera</code></li>
     <li><code>updateVision</code></li>
-    <li><code>visualUpdate</code></li>
 </ul>
 
 
@@ -4955,11 +4956,13 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>loadEntities</code></li>
     <li><code>loadObjectMap</code></li>
+    <li><code>preprocessWire</code></li>
     <li><code>loadGlobalVariables</code></li>
     <li><code>clearFocusCache</code></li>
     <li><code>clearPerspectiveCache</code></li>
     <li><code>clearPlayerEntityCache</code></li>
     <li><code>clearRunSummaryCache</code></li>
+    <li><code>queueVisualUpdate</code></li>
     <li><code>updateLevelBounds</code></li>
     <li><code>updateMusicChangeActivationState</code></li>
     <li><code>updateVisMap</code></li>
@@ -4985,6 +4988,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>saveEntities</code></li>
     <li><code>saveObjectMap</code></li>
     <li><code>saveGlobalVariables</code></li>
+    <li><code>postprocessWire</code></li>
 </ul>
 
 
@@ -5553,6 +5557,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateAutoDespawnBlinkEffect</code></li>
     <li><code>updateConditionalInvincibilityBlink</code></li>
     <li><code>updateStasisFade</code></li>
+    <li><code>queueVisualUpdate</code></li>
     <li><code>voiceEnemyProximity</code></li>
     <li><code>updateRhythm</code></li>
     <li><code>despawnExpiredScreenShakes</code></li>
@@ -5562,6 +5567,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateChecksums</code></li>
     <li><code>clearSynchronizerCache</code></li>
     <li><code>lagLogEnd</code></li>
+    <li><code>updateCurrentTurnID</code></li>
 </ul>
 
 

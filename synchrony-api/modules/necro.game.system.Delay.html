@@ -240,6 +240,7 @@
   <li><a href="../modules/necro.menu.Menu.html">necro.menu.Menu</a></li>
   <li><a href="../modules/necro.menu.mod.ModGrid.html">necro.menu.mod.ModGrid</a></li>
   <li><a href="../modules/necro.menu.mod.ModUpdateOverlay.html">necro.menu.mod.ModUpdateOverlay</a></li>
+  <li><a href="../modules/necro.menu.network.MultiplayerMenu.html">necro.menu.network.MultiplayerMenu</a></li>
   <li><a href="../modules/necro.menu.settings.SettingsMenu.html">necro.menu.settings.SettingsMenu</a></li>
   <li><a href="../modules/necro.mod.ModDLC.html">necro.mod.ModDLC</a></li>
   <li><a href="../modules/necro.mod.ModDependency.html">necro.mod.ModDependency</a></li>
@@ -479,6 +480,10 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#processPreemptively">processPreemptively (condition)</a></td>
+	<td class="summary">Instantly executes all pending delays matching an optional condition.</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#register">register (name, func, flags)</a></td>
 	<td class="summary">flags is a table with fields:
  * processOnPlayerAction: force the delay to occur earlier than planned when the affected player acts
@@ -494,6 +499,30 @@
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "processPreemptively"></a>
+    <strong>processPreemptively (condition)</strong>
+    </dt>
+    <dd>
+    Instantly executes all pending delays matching an optional condition.
+ Calling this function is usually not necessary or recommended; it should only be used if the game's time-based delay
+ mechanism needs to be bypassed.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">condition</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
     <dt>
     <a name = "register"></a>
     <strong>register (name, func, flags)</strong>
