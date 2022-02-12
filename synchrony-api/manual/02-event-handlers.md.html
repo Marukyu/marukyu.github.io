@@ -457,7 +457,7 @@
   <li><a href="../components/TrapComponents.html">TrapComponents</a></li>
   <li><a href="../components/CastComponents.html">CastComponents</a></li>
   <li><a href="../components/SpellCheckComponents.html">SpellCheckComponents</a></li>
-  <li><a href="../components/SpellComponents.html">SpellComponents</a></li>
+  <li><a href="../components/SpellcastComponents.html">SpellcastComponents</a></li>
   <li><a href="../components/LightComponents.html">LightComponents</a></li>
   <li><a href="../components/VisibilityComponents.html">VisibilityComponents</a></li>
   <li><a href="../components/VisionComponents.html">VisionComponents</a></li>
@@ -700,6 +700,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>computeEffectiveTurnID</code></li>
     <li><code>checkCustomAction</code></li>
     <li><code>addActionToBuffer</code></li>
+    <li><code>insertPickupLimitAction</code></li>
 </ul>
 
 
@@ -1102,7 +1103,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>0.31</code></li>
     <li><code>0.32</code></li>
     <li><code>0.33</code></li>
-    <li><code>0.33-time</code></li>
     <li><code>0.35</code></li>
     <li><code>0.36</code></li>
     <li><code>0.39</code></li>
@@ -1190,6 +1190,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyMigrations</code></li>
     <li><code>componentDependencies</code></li>
     <li><code>shieldSuppressSounds</code></li>
+    <li><code>itemBans</code></li>
     <li><code>applyLocalizableStrings</code></li>
     <li><code>validateComponents</code></li>
 </ul>
@@ -1235,7 +1236,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>itemSlotOverrides</code></li>
     <li><code>namedItemOverrides</code></li>
     <li><code>weaponPostProcessing</code></li>
-    <li><code>itemBans</code></li>
     <li><code>Amplified_uncertainty</code></li>
     <li><code>mystery</code></li>
 </ul>
@@ -1724,6 +1724,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>resetLevelVariables</code></li>
     <li><code>resetLocalFlyaways</code></li>
     <li><code>resetMusicLayerFlyaways</code></li>
+    <li><code>resetPickupLimits</code></li>
     <li><code>resetRunSummary</code></li>
     <li><code>resetTextOverlay</code></li>
     <li><code>resetWireFrameYMap</code></li>
@@ -3728,6 +3729,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>fortissimoleBurrow</code></li>
     <li><code>updateKillCounterTotalIncrement</code></li>
     <li><code>charge</code></li>
+    <li><code>overrideTween</code></li>
     <li><code>updateRhythm</code></li>
     <li><code>soundPostConvert</code></li>
 </ul>
@@ -3836,6 +3838,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>randomInitialFacingDirection</code></li>
     <li><code>wiredRotateInitial</code></li>
     <li><code>deleteApparitions</code></li>
+    <li><code>requireGameObject</code></li>
     <li><code>darkness</code></li>
     <li><code>initializeObjectAttributes</code></li>
     <li><code>initializeObjectHomePosition</code></li>
@@ -4334,7 +4337,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>updateVisMap</code></li>
-    <li><code>updateTargetPointer</code></li>
 </ul>
 
 
@@ -4345,6 +4347,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>sound</code></li>
     <li><code>flyaway</code></li>
     <li><code>animation</code></li>
+    <li><code>limit</code></li>
 </ul>
 
 
@@ -5144,8 +5147,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>grantBarrier</code></li>
     <li><code>grantInvincibility</code></li>
     <li><code>inflictConfusion</code></li>
-    <li><code>inflictFear</code></li>
     <li><code>inflictFreeze</code></li>
+    <li><code>inflictStatusEffect</code></li>
     <li><code>modifySize</code></li>
     <li><code>teleport</code></li>
     <li><code>descent</code></li>
@@ -5337,7 +5340,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateCollisionMap</code></li>
     <li><code>forwardTileChangeEventsToObjects</code></li>
     <li><code>createTransformationTimer</code></li>
-    <li><code>updateTargetPointer</code></li>
     <li><code>grass</code></li>
     <li><code>killBatteryOnWireRemoval</code></li>
     <li><code>updateWireConnectivity</code></li>
@@ -5376,7 +5378,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updateMinimap</code></li>
     <li><code>resetObjectMap</code></li>
     <li><code>updateCollisionMap</code></li>
-    <li><code>updateTargetPointer</code></li>
 </ul>
 
 
@@ -5552,6 +5553,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>updatePriceTags</code></li>
     <li><code>playLockedStairsEffects</code></li>
     <li><code>postAIFrame</code></li>
+    <li><code>applyPickupLimits</code></li>
     <li><code>sleepWhileUnprovoked</code></li>
     <li><code>handleSongEnd</code></li>
     <li><code>completeLevel</code></li>
