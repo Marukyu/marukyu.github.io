@@ -583,9 +583,13 @@
 
 
     <ul>
-        <li><span class="parameter">sourceTween</span>
-         constant int
-         (<em>default</em> moveAnimations.Type.SLIDE)
+        <li><span class="parameter">maxHeight</span>
+         constant float
+         (<em>default</em> 12)
+        </li>
+        <li><span class="parameter">exponent</span>
+         constant float
+         (<em>default</em> 1)
         </li>
     </ul>
 
@@ -613,8 +617,20 @@
          constant float
          (<em>default</em> 0.167)
         </li>
-        <li><span class="parameter">activeTweenType</span>
-          int
+        <li><span class="parameter">multiPart</span>
+          bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">bounciness</span>
+          float
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">maxHeight</span>
+          float
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">exponent</span>
+          float
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">turnID</span>

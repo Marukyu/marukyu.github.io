@@ -3104,7 +3104,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>stasisOnMove</code></li>
     <li><code>applyDefaultResult</code></li>
     <li><code>bounceTweenOnFail</code></li>
-    <li><code>multiHopTween</code></li>
 </ul>
 
 
@@ -3170,6 +3169,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>forwardToCaster</code></li>
     <li><code>stealGoldOnAttack</code></li>
     <li><code>teleportingBombs</code></li>
+    <li><code>applyDamageToTarget</code></li>
 </ul>
 
 
@@ -3592,10 +3592,10 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <h2>objectMove</h2>
 
 <ul>
-    <li><code>setMoveTween</code></li>
     <li><code>setFacingOnMove</code></li>
     <li><code>particleMoleDirt</code></li>
     <li><code>updatePosition</code></li>
+    <li><code>setMoveTween</code></li>
     <li><code>updatePreviousPosition</code></li>
     <li><code>removeMultiTileObjectMapEntry</code></li>
     <li><code>moveObjectMapEntry</code></li>
@@ -3629,7 +3629,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>gigantismWalkSound</code></li>
     <li><code>parityWalkSound</code></li>
     <li><code>stasisWalkSound</code></li>
-    <li><code>voiceFirstMove</code></li>
     <li><code>walkSound</code></li>
     <li><code>moveAudioLoop</code></li>
     <li><code>fortissimoleSpawn</code></li>
@@ -5509,6 +5508,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>startCharge</code></li>
     <li><code>controlPlayer</code></li>
     <li><code>processApparitions</code></li>
+    <li><code>releasePickupLimits</code></li>
     <li><code>preAIFrame</code></li>
     <li><code>dismissBossSplash</code></li>
     <li><code>preBossFreeze</code></li>
