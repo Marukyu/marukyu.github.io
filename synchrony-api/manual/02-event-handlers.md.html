@@ -407,6 +407,7 @@
   <li><a href="../components/ProvokableComponents.html">ProvokableComponents</a></li>
   <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
+  <li><a href="../components/SlideComponents.html">SlideComponents</a></li>
   <li><a href="../components/SpawnComponents.html">SpawnComponents</a></li>
   <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
   <li><a href="../components/StasisComponents.html">StasisComponents</a></li>
@@ -530,6 +531,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>applyChargeAnimations</code></li>
     <li><code>applyGrabAnimations</code></li>
     <li><code>applyActionDelayAnimations</code></li>
+    <li><code>applyBellRingingAnimations</code></li>
     <li><code>applyClonkTellAnimations</code></li>
     <li><code>applyMoveResultAnimations</code></li>
     <li><code>applySpawnPrepAnimations</code></li>
@@ -1779,6 +1781,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>detachInitialLevelSounds</code></li>
     <li><code>despawnObjects</code></li>
     <li><code>updateCurrencyCounterHUD</code></li>
+    <li><code>idleOnLevelStart</code></li>
     <li><code>processPendingObjects</code></li>
     <li><code>updateSessionMetadata</code></li>
     <li><code>createInitialSnapshot</code></li>
@@ -3021,7 +3024,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>charge</code></li>
-    <li><code>enableRhythmAutoPlay</code></li>
     <li><code>chargeSprite</code></li>
     <li><code>playChargeSound</code></li>
     <li><code>playChargeVoice</code></li>
@@ -3034,7 +3036,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 <ul>
     <li><code>enableSubBeatActions</code></li>
     <li><code>playSlideVoice</code></li>
-    <li><code>enableRhythmAutoPlay</code></li>
     <li><code>startSwayAnimation</code></li>
 </ul>
 
@@ -3239,8 +3240,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>restoreTangibility</code></li>
     <li><code>descentCrateContents</code></li>
     <li><code>inflictDamage</code></li>
-    <li><code>removeLevelOverlay</code></li>
-    <li><code>fadeInMusic</code></li>
 </ul>
 
 
@@ -3375,7 +3374,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>endCharge</code></li>
-    <li><code>disableRhythmAutoPlay</code></li>
     <li><code>chargeSprite</code></li>
     <li><code>playChargeStopSound</code></li>
     <li><code>stunOnChargeStop</code></li>
@@ -3387,7 +3385,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
 
 <ul>
     <li><code>disableSubBeatActions</code></li>
-    <li><code>disableRhythmAutoPlay</code></li>
     <li><code>endSwayAnimation</code></li>
 </ul>
 
@@ -3768,8 +3765,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>provokableFearability</code></li>
     <li><code>convertOnBossProvoke</code></li>
     <li><code>convertOnProvoke</code></li>
-    <li><code>setBeatDelay</code></li>
     <li><code>preventActions</code></li>
+    <li><code>setBeatDelay</code></li>
     <li><code>provokableShieldBreak</code></li>
     <li><code>spawnNecroDancerMiniboss</code></li>
     <li><code>startShrinerFight</code></li>
@@ -4252,7 +4249,8 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>ignoreRhythmInnate</code></li>
     <li><code>lobbyIgnoreRhythm</code></li>
     <li><code>ignoreRhythmTemporarily</code></li>
-    <li><code>autoPlay</code></li>
+    <li><code>chargeAutoPlay</code></li>
+    <li><code>slideAutoPlay</code></li>
     <li><code>skipEveryNth</code></li>
     <li><code>subdivisionInnate</code></li>
     <li><code>suspendRhythmWhileSpectating</code></li>

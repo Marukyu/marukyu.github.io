@@ -440,6 +440,7 @@
   <li><a href="../components/ShieldComponents.html">ShieldComponents</a></li>
   <li><a href="../components/ShrineComponents.html">ShrineComponents</a></li>
   <li><a href="../components/SizeModifierComponents.html">SizeModifierComponents</a></li>
+  <li><a href="../components/SlideComponents.html">SlideComponents</a></li>
   <li><a href="../components/SoundComponents.html">SoundComponents</a></li>
   <li><a href="../components/SpawnComponents.html">SpawnComponents</a></li>
   <li><a href="../components/SpectatorComponents.html">SpectatorComponents</a></li>
@@ -507,6 +508,12 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#bellAnimation">bellAnimation</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#bellRingingAnimation">bellRingingAnimation</a></td>
 	<td class="summary">
 
 </td>
@@ -780,12 +787,6 @@
 	<tr>
 	<td class="name" nowrap><a href="#necrodancer">necrodancer</a></td>
 	<td class="summary">ND</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#ogreClonking">ogreClonking</a></td>
-	<td class="summary">
-
-</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#omnipresentVoice">omnipresentVoice</a></td>
@@ -1142,6 +1143,30 @@
         </li>
         <li><span class="parameter">variants</span>
          constant table Variant key is <code>true</code> when the bell is being targeted by DR
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "bellRingingAnimation"></a>
+    <strong>bellRingingAnimation</strong>
+    </dt>
+    <dd>
+
+
+<p><em>default</em>:</p>
+<pre><code>{}
+</code></pre>
+
+
+
+    <ul>
+        <li><span class="parameter">frames</span>
+         constant table
         </li>
     </ul>
 
@@ -1699,13 +1724,25 @@
     <strong>deadRinger</strong>
     </dt>
     <dd>
-    DR
+
+<p>DR
+<em>default</em>:</p>
+<pre><code>{}
+</code></pre>
+
 
 
     <ul>
         <li><span class="parameter">currentBell</span>
           int
          (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">isRinging</span>
+          bool
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">ringingSprite</span>
+         constant table
         </li>
     </ul>
 
@@ -2464,22 +2501,6 @@
          constant table
         </li>
     </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "ogreClonking"></a>
-    <strong>ogreClonking</strong>
-    </dt>
-    <dd>
-
-
-
-
-
 
 
 
