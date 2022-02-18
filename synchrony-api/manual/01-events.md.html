@@ -696,6 +696,7 @@
 <ul>
     <li><code>replay</code></li>
     <li><code>reset</code></li>
+    <li><code>dailyChallenge</code></li>
     <li><code>actionBuffer</code></li>
     <li><code>inputLock</code></li>
     <li><code>lobby</code></li>
@@ -783,6 +784,29 @@
 <p><a name="clientRoomAttribute"></a></p>
 <h2>clientRoomAttribute</h2>
 
+
+
+<p><a name="clientSessionLockBegin"></a></p>
+<h2>clientSessionLockBegin</h2>
+
+<ul>
+    <li><code>dailyChallenge</code></li>
+    <li><code>room</code></li>
+    <li><code>singlePlayer</code></li>
+    <li><code>settings</code></li>
+    <li><code>mods</code></li>
+</ul>
+
+
+<p><a name="clientSessionLockEnd"></a></p>
+<h2>clientSessionLockEnd</h2>
+
+<ul>
+    <li><code>dailyChallenge</code></li>
+    <li><code>room</code></li>
+    <li><code>singlePlayer</code></li>
+    <li><code>mods</code></li>
+</ul>
 
 
 <p><a name="clientSnapshotReceive"></a></p>
@@ -1218,6 +1242,7 @@
 <ul>
     <li><code>init</code></li>
     <li><code>room</code></li>
+    <li><code>dailyChallenge</code></li>
     <li><code>regenerateDungeon</code></li>
     <li><code>menu</code></li>
     <li><code>music</code></li>
@@ -1364,6 +1389,7 @@
     <li><code>resetRunVariables</code></li>
     <li><code>lagLog</code></li>
     <li><code>gameSession</code></li>
+    <li><code>dailyChallenge</code></li>
     <li><code>menu</code></li>
     <li><code>lobby</code></li>
     <li><code>currentLevel</code></li>
@@ -1440,6 +1466,7 @@
     <li><code>phasing</code></li>
     <li><code>randomizer</code></li>
     <li><code>mystery</code></li>
+    <li><code>dailyChallenge</code></li>
 </ul>
 
 
@@ -1519,13 +1546,8 @@
     <li><code>dwarfism</code></li>
     <li><code>weapon</code></li>
     <li><code>damageModifiers</code></li>
-    <li><code>resetKillEffects</code></li>
     <li><code>buildElectricityQueue</code></li>
     <li><code>modifyElectricityQueue</code></li>
-    <li><code>performAttack</code></li>
-    <li><code>processElectricityQueue</code></li>
-    <li><code>conditionalInvincibility</code></li>
-    <li><code>killDash</code></li>
 </ul>
 
 
@@ -1576,6 +1598,15 @@
     <li><code>multiplier</code></li>
     <li><code>blood</code></li>
     <li><code>consume</code></li>
+</ul>
+
+
+<p><a name="holderComputeDamage"></a></p>
+<h2>holderComputeDamage</h2>
+
+<ul>
+    <li><code>innateAttack</code></li>
+    <li><code>weapon</code></li>
 </ul>
 
 
@@ -2183,6 +2214,23 @@
     <li><code>flyaway</code></li>
     <li><code>sound</code></li>
     <li><code>suppressDamage</code></li>
+</ul>
+
+
+<p><a name="holderPerformAttack"></a></p>
+<h2>holderPerformAttack</h2>
+
+<ul>
+    <li><code>resetKillEffects</code></li>
+    <li><code>savePosition</code></li>
+    <li><code>inflictDamage</code></li>
+    <li><code>processElectricityQueue</code></li>
+    <li><code>move</code></li>
+    <li><code>throw</code></li>
+    <li><code>swipe</code></li>
+    <li><code>performAttack</code></li>
+    <li><code>conditionalInvincibility</code></li>
+    <li><code>killDash</code></li>
 </ul>
 
 
@@ -2939,6 +2987,11 @@
 </ul>
 
 
+<p><a name="invokeLater"></a></p>
+<h2>invokeLater</h2>
+
+
+
 <p><a name="ipcMessageReceived"></a></p>
 <h2>ipcMessageReceived</h2>
 
@@ -3301,13 +3354,8 @@
     <li><code>dwarfism</code></li>
     <li><code>weapon</code></li>
     <li><code>damageModifiers</code></li>
-    <li><code>resetKillEffects</code></li>
     <li><code>buildElectricityQueue</code></li>
     <li><code>modifyElectricityQueue</code></li>
-    <li><code>performAttack</code></li>
-    <li><code>processElectricityQueue</code></li>
-    <li><code>conditionalInvincibility</code></li>
-    <li><code>killDash</code></li>
 </ul>
 
 
@@ -3358,6 +3406,15 @@
     <li><code>multiplier</code></li>
     <li><code>blood</code></li>
     <li><code>consume</code></li>
+</ul>
+
+
+<p><a name="objectComputeDamage"></a></p>
+<h2>objectComputeDamage</h2>
+
+<ul>
+    <li><code>innateAttack</code></li>
+    <li><code>weapon</code></li>
 </ul>
 
 
@@ -3965,6 +4022,23 @@
     <li><code>flyaway</code></li>
     <li><code>sound</code></li>
     <li><code>suppressDamage</code></li>
+</ul>
+
+
+<p><a name="objectPerformAttack"></a></p>
+<h2>objectPerformAttack</h2>
+
+<ul>
+    <li><code>resetKillEffects</code></li>
+    <li><code>savePosition</code></li>
+    <li><code>inflictDamage</code></li>
+    <li><code>processElectricityQueue</code></li>
+    <li><code>move</code></li>
+    <li><code>throw</code></li>
+    <li><code>swipe</code></li>
+    <li><code>performAttack</code></li>
+    <li><code>conditionalInvincibility</code></li>
+    <li><code>killDash</code></li>
 </ul>
 
 
@@ -5284,6 +5358,7 @@
     <li><code>inflictDamage</code></li>
     <li><code>createWalls</code></li>
     <li><code>inflictEarthquake</code></li>
+    <li><code>destroyWire</code></li>
     <li><code>shrine</code></li>
     <li><code>apparition</code></li>
     <li><code>reveal</code></li>
@@ -5711,6 +5786,7 @@
     <li><code>hiddenByPickupSuppression</code></li>
     <li><code>hiddenByTileBrightness</code></li>
     <li><code>hideEntities</code></li>
+    <li><code>hiddenByClientState</code></li>
     <li><code>visibilityCopyFromParent</code></li>
     <li><code>segmentVisibility</code></li>
     <li><code>renderRadius</code></li>

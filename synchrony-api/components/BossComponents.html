@@ -519,6 +519,12 @@
 </td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#bellRingingSprite">bellRingingSprite</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#boss">boss</a></td>
 	<td class="summary">Common</td>
 	</tr>
@@ -1176,6 +1182,44 @@
 
 </dd>
     <dt>
+    <a name = "bellRingingSprite"></a>
+    <strong>bellRingingSprite</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <ul>
+        <li><span class="parameter">texture</span>
+         constant string
+         (<em>default</em> "")
+        </li>
+        <li><span class="parameter">width</span>
+         constant int
+         (<em>default</em> 24)
+        </li>
+        <li><span class="parameter">height</span>
+         constant int
+         (<em>default</em> 24)
+        </li>
+        <li><span class="parameter">offsetX</span>
+         constant float
+         (<em>default</em> 0)
+        </li>
+        <li><span class="parameter">offsetY</span>
+         constant float
+         (<em>default</em> 0)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "boss"></a>
     <strong>boss</strong>
     </dt>
@@ -1724,12 +1768,7 @@
     <strong>deadRinger</strong>
     </dt>
     <dd>
-
-<p>DR
-<em>default</em>:</p>
-<pre><code>{}
-</code></pre>
-
+    DR
 
 
     <ul>
@@ -1741,8 +1780,17 @@
           bool
          (<em>default</em> false)
         </li>
-        <li><span class="parameter">ringingSprite</span>
-         constant table
+        <li><span class="parameter">voiceWindup</span>
+         constant string
+         (<em>default</em> "deadRingerWindup")
+        </li>
+        <li><span class="parameter">soundWindup</span>
+         constant string
+         (<em>default</em> "deadRingerWindup2")
+        </li>
+        <li><span class="parameter">voiceStrikeBell</span>
+         constant string
+         (<em>default</em> "deadRingerHammer")
         </li>
     </ul>
 
@@ -2941,6 +2989,12 @@
 
 
 
+    <ul>
+        <li><span class="parameter">active</span>
+          bool
+         (<em>default</em> false)
+        </li>
+    </ul>
 
 
 
