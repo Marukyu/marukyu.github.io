@@ -701,7 +701,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>computeEffectiveTurnID</code></li>
     <li><code>checkCustomAction</code></li>
     <li><code>addActionToBuffer</code></li>
-    <li><code>insertPickupLimitAction</code></li>
 </ul>
 
 
@@ -1734,7 +1733,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>clearCharm</code></li>
     <li><code>confusableReset</code></li>
     <li><code>dwarfismReset</code></li>
-    <li><code>fearableReset</code></li>
+    <li><code>fearsomeReset</code></li>
     <li><code>freezableReset</code></li>
     <li><code>gigantismReset</code></li>
     <li><code>invincibilityReset</code></li>
@@ -5592,6 +5591,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>freezablePreventActions</code></li>
     <li><code>resetGrabbedStatus</code></li>
     <li><code>stun</code></li>
+    <li><code>buildFearCache</code></li>
     <li><code>frankensteinwayElectricity</code></li>
     <li><code>updateStealth</code></li>
     <li><code>processAIMovements</code></li>
@@ -5610,7 +5610,7 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>barrierTickDown</code></li>
     <li><code>confusableTickDown</code></li>
     <li><code>dwarfismTickDown</code></li>
-    <li><code>fearableTickDown</code></li>
+    <li><code>fearsomeTickDown</code></li>
     <li><code>gigantismTickDown</code></li>
     <li><code>reduceDeadRingerBellCooldown</code></li>
     <li><code>reduceDamageCountdown</code></li>
@@ -5752,6 +5752,11 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>dadThrowCancel</code></li>
     <li><code>checkCollision</code></li>
     <li><code>applyDirectionalAttack</code></li>
+    <li><code>dash</code></li>
+    <li><code>addExtraSwipes</code></li>
+    <li><code>addSwipeTrailRayCast</code></li>
+    <li><code>coreSwipe</code></li>
+    <li><code>multiSwipe</code></li>
     <li><code>handleLoadedAttack</code></li>
     <li><code>throwHolder</code></li>
     <li><code>handleThrowAttack</code></li>
@@ -5762,8 +5767,6 @@ event.objectTakeDamage.override(<span class="string">"hitSound"</span>, {sequenc
     <li><code>weaponCastOnAttack</code></li>
     <li><code>weaponShove</code></li>
     <li><code>tickleTargets</code></li>
-    <li><code>addExtraSwipes</code></li>
-    <li><code>addSwipeTrailRayCast</code></li>
     <li><code>grooveChainSwipeRow</code></li>
     <li><code>swipeMaterial</code></li>
     <li><code>sound</code></li>
