@@ -505,37 +505,51 @@
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getReferencedAnimationFactor">getReferencedAnimationFactor (entityID, turnID, name, duration)</a></td>
+	<td class="name" nowrap><a href="#getFactor">getFactor (entityID, animationName, duration)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getReferencedAnimationFactorClamped">getReferencedAnimationFactorClamped (entityID, turnID, name, duration)</a></td>
+	<td class="name" nowrap><a href="#getFactorClamped">getFactorClamped (entityID, animationName, duration)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getReferencedAnimationTime">getReferencedAnimationTime (entityID, turnID, name)</a></td>
+	<td class="name" nowrap><a href="#getReferencedAnimationFactor">getReferencedAnimationFactor (entityID, turnID, animationName, duration)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getReferencedAnimationFactorClamped">getReferencedAnimationFactorClamped (entityID, turnID, animationName, duration)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getReferencedAnimationTime">getReferencedAnimationTime (entityID, turnID, animationName)</a></td>
+	<td class="summary">Similar to AnimationTimer.getTime, but requires passing the turnID manually.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTime">getTime (entityID, animationName)</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#play">play (entityID, animationName)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#playAnimation">playAnimation (entityID)</a></td>
-	<td class="summary">
-
-</td>
+	<td class="summary">Deprecated aliases</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#playNamedAnimation">playNamedAnimation (entityID, name)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#playReferencedAnimation">playReferencedAnimation (entityID, turnID, name)</a></td>
+	<td class="name" nowrap><a href="#playReferencedAnimation">playReferencedAnimation (entityID, _, animationName)</a></td>
 	<td class="summary">
 
 </td>
@@ -662,8 +676,76 @@
 
 </dd>
     <dt>
+    <a name = "getFactor"></a>
+    <strong>getFactor (entityID, animationName, duration)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entityID</span>
+
+
+
+        </li>
+        <li><span class="parameter">animationName</span>
+
+
+
+        </li>
+        <li><span class="parameter">duration</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getFactorClamped"></a>
+    <strong>getFactorClamped (entityID, animationName, duration)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entityID</span>
+
+
+
+        </li>
+        <li><span class="parameter">animationName</span>
+
+
+
+        </li>
+        <li><span class="parameter">duration</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
     <a name = "getReferencedAnimationFactor"></a>
-    <strong>getReferencedAnimationFactor (entityID, turnID, name, duration)</strong>
+    <strong>getReferencedAnimationFactor (entityID, turnID, animationName, duration)</strong>
     </dt>
     <dd>
 
@@ -683,7 +765,7 @@
 
 
         </li>
-        <li><span class="parameter">name</span>
+        <li><span class="parameter">animationName</span>
 
 
 
@@ -702,7 +784,7 @@
 </dd>
     <dt>
     <a name = "getReferencedAnimationFactorClamped"></a>
-    <strong>getReferencedAnimationFactorClamped (entityID, turnID, name, duration)</strong>
+    <strong>getReferencedAnimationFactorClamped (entityID, turnID, animationName, duration)</strong>
     </dt>
     <dd>
 
@@ -722,7 +804,7 @@
 
 
         </li>
-        <li><span class="parameter">name</span>
+        <li><span class="parameter">animationName</span>
 
 
 
@@ -741,12 +823,11 @@
 </dd>
     <dt>
     <a name = "getReferencedAnimationTime"></a>
-    <strong>getReferencedAnimationTime (entityID, turnID, name)</strong>
+    <strong>getReferencedAnimationTime (entityID, turnID, animationName)</strong>
     </dt>
     <dd>
-
-
-
+    Similar to AnimationTimer.getTime, but requires passing the turnID manually.
+ Slightly faster since it avoids a lookup, but less convenient.
 
 
     <h3>Parameters:</h3>
@@ -761,7 +842,65 @@
 
 
         </li>
-        <li><span class="parameter">name</span>
+        <li><span class="parameter">animationName</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getTime"></a>
+    <strong>getTime (entityID, animationName)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entityID</span>
+
+
+
+        </li>
+        <li><span class="parameter">animationName</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "play"></a>
+    <strong>play (entityID, animationName)</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entityID</span>
+
+
+
+        </li>
+        <li><span class="parameter">animationName</span>
 
 
 
@@ -778,43 +917,12 @@
     <strong>playAnimation (entityID)</strong>
     </dt>
     <dd>
-
-
-
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">entityID</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "playNamedAnimation"></a>
-    <strong>playNamedAnimation (entityID, name)</strong>
-    </dt>
-    <dd>
-
-
-
+    Deprecated aliases
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">entityID</span>
-
-
-
-        </li>
-        <li><span class="parameter">name</span>
 
 
 
@@ -828,7 +936,7 @@
 </dd>
     <dt>
     <a name = "playReferencedAnimation"></a>
-    <strong>playReferencedAnimation (entityID, turnID, name)</strong>
+    <strong>playReferencedAnimation (entityID, _, animationName)</strong>
     </dt>
     <dd>
 
@@ -843,12 +951,12 @@
 
 
         </li>
-        <li><span class="parameter">turnID</span>
+        <li><span class="parameter">_</span>
 
 
 
         </li>
-        <li><span class="parameter">name</span>
+        <li><span class="parameter">animationName</span>
 
 
 
